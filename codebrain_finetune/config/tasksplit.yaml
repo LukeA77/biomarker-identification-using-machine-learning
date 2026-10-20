@@ -1,0 +1,185 @@
+# codebrain_finetune/config/tasksplit.yaml
+# ---------------------------------------------------------------------------
+# Within-patient TASK-SPLIT experiment (supervisor-suggested, 2026-07-30).
+#
+# Design: inside ONE patient, train on the windows of one ADL task (tea/kettle)
+# and test on the windows of the other (toast), using that patient's existing
+# session-level ON/OFF labels. Run both directions and average. This is an
+# ADDITIONAL experiment alongside the LOPO arms — it does not replace them.
+#
+# Why the task split is interesting: LOPO failed on CALIBRATION, not ordering
+# (inter-subject offset swamps the within-subject levodopa shift — EXPERIMENTS.md
+# §4b/11e). Training and testing inside one patient removes the between-subject
+# offset entirely, so if a within-subject levodopa signature exists at all, this
+# is the design most likely to see it.
+#
+# Why the split must be by TASK and not by TIME: a within-session temporal split
+# reintroduces the elapsed-time / session-duration confound already documented in
+# EXPERIMENTS.md §10c-10d (recording length ALONE scores 0.614 bal-acc with no
+# EEG). Splitting on task type is only free of that confound if each task occurs
+# in BOTH the ON and the OFF session — otherwise "task" silently re-encodes
+# "session", and with it the ordering/duration confound, just relabelled.
+# That is exactly what the pre-flight gates below enforce, fail-loud.
+# ---------------------------------------------------------------------------
+
+# ---- Task grouping ---------------------------------------------------------
+# Verbatim task strings as they appear in the drive's annotation CSVs
+# (<session>/annotation/*.csv, header "Tasks,Start,End"). Enumerated from a
+# full-cohort scan of all 92 sessions — the complete observed vocabulary is:
+#   4m Walk (89), Kettel Task (88), Balance (86), Sit to Stand (86),
+#   Sit on Bed (60), Toast Task1 (60), Toast Task2 (58), Suspine Measure (44),
+#   Standing Still (44), Toast Task (28), UPDRS (6)
+# "Kettel" is the dataset's own (mis)spelling of kettle — do NOT "fix" it, the
+# strings must match the CSVs byte-for-byte.
+task_groups:
+  # "tea" = making a cup of tea (the kettle task).
+  tea:
+    - "Kettel Task"
+  # "toast" = making toast. Logged either as one row ("Toast Task", older
+  # sessions) or split into two consecutive rows ("Toast Task1"/"Toast Task2",
+  # newer sessions). All are the SAME task type and are unioned into one group;
+  # a session using the split form contributes both segments.
+  toast:
+    - "Toast Task"
+    - "Toast Task1"
+    - "Toast Task2"
+
+# ---- Alignment ------------------------------------------------------------
+# Task timestamps and the EEG live on two independent clocks (a documented
+# BST/DST logging bug; 0/89 sessions have any usable native trigger marker —
+# RAW_CSV_TRIGGER_AUDIT_REPORT.md §c). The shift that maps task-clock onto
+# recording-clock is recovered by the same dense search the cohort-wide audit
+# validated against sub-131/sub-134 ground truth; these values reproduce it.
+alignment:
+  search_half_range_s: 14400   # +/- 4 h coarse scan
+  coarse_step_s: 2.0
+  refine_half_range_s: 2.0
+  refine_step_s: 0.05
+  fit_slack_s: 5.0             # a task "fits" if it lands inside the recording +/- this
+  # Cross-check every re-derived alignment against the stored cohort audit
+  # (raw_csv_edf_trigger_audit_results.json). Divergence means the raw CSV picked
+  # here differs from the one the audit used, which would silently map task times
+  # onto the wrong recording -> abort rather than guess.
+  crosscheck_audit: true
+  crosscheck_max_shift_delta_s: 0.5
+  crosscheck_max_duration_delta_s: 1.0
+
+# ---- Window -> task assignment --------------------------------------------
+assignment:
+  # A window belongs to a task only if it is WHOLLY inside that task's span
+  # (start >= task_start AND end <= task_end). Containment, not overlap: a
+  # window straddling a task boundary contains data from another activity and
+  # would blur the split the experiment is built on.
+  mode: containment
+
+# ---- Pre-flight gates (ALL are fail-loud; no patient is silently dropped) --
+preflight:
+  # G1/G2: both task groups must be RECOVERABLE in BOTH sessions of the patient.
+  # This is the confound gate the supervisor asked for. If a task type only ever
+  # appears in one session type, task is confounded with ON/OFF and the design is
+  # invalid for that patient.
+  require_both_tasks_in_both_sessions: true
+
+  # G3: within a session, the tea span and the toast span must be DISJOINT.
+  # Not hypothetical: sub-53-c's annotation CSV logs "Kettel Task" and
+  # "Toast Task" with byte-identical Start/End (the same corruption behind its
+  # known "continuous target not monotonic within session" pipeline failure).
+  # Without this gate the two "tasks" would be the same windows and the split
+  # would be meaningless.
+  require_disjoint_task_spans: true
+  max_task_span_overlap_s: 0.0
+
+  # G4: usable data volume. Counted on the EVAL (non-overlap, 10 s stride)
+  # subset, per session, per task group — the scarcest unit in the design.
+  # Below this a per-patient balanced accuracy is too noisy to interpret at all.
+  min_eval_windows_per_session_task: 5
+  # Both ON and OFF must be present on each side of the split, or balanced
+  # accuracy is undefined for that direction.
+  require_both_conditions: true
+
+# ---- Experiment protocol --------------------------------------------------
+protocol:
+  # Both directions, then averaged per patient (the supervisor's spec).
+  directions: [tea_to_toast, toast_to_tea]
+
+  # Early stopping needs a validation set. It is carved out of the TRAIN TASK
+  # only — never the test task — by holding out a fraction of the train-task
+  # windows, stratified by session so both ON and OFF are represented.
+  # (There are no held-out patients to validate on: this is a within-patient
+  # design, so the LOPO inner-GroupKFold-on-patient scheme does not apply.)
+  val_frac: 0.25
+  val_stratify_by_session: true
+
+  # Early stopping monitors WINDOW-level balanced accuracy, not the session-level
+  # metric the LOPO arms use. A within-patient validation set spans only that one
+  # patient's two sessions, so session-level balanced accuracy could take just
+  # three values (0 / 0.5 / 1) — far too coarse to choose a stopping epoch.
+  # (train.py resolves the "window_" infix; the LOPO default is unchanged.)
+  early_stopping_monitor: inner_val_window_balanced_accuracy
+
+  # Train on the full overlapping (5 s stride) window set for the train task —
+  # free augmentation, and per-patient N is small. Evaluate on the non-overlap
+  # (10 s stride) subset only, so window-level metrics are not inflated by
+  # autocorrelated overlapping windows. Same convention as the LOPO arms.
+  train_nonoverlap_only: false
+  eval_nonoverlap_only: true
+
+  # Optional duration matching on the EVAL side: force exactly K non-overlap
+  # windows per (session, task) so a session's aggregate score cannot encode how
+  # long that task took. null = off (report unmatched). EXPERIMENTS.md §10c-10d
+  # showed duration alone scores 0.614 at session level, so this matters — but
+  # per-task window counts are small, so matching is offered as a SECONDARY
+  # variant rather than forced as the primary.
+  eval_match_k: null
+  eval_match_where: middle    # {first, middle, last}
+
+# ---- Model arms -----------------------------------------------------------
+# Same three arms as the LOPO experiments, for direct comparability. HPs are NOT
+# re-searched: the within-patient training sets are far too small to support a
+# search, and re-searching would make the arms incomparable to the LOPO numbers.
+# We reuse the LoRA config the pooled 35-patient search selected (r=4, lr=5e-4,
+# dropout=0.1 — recorded in results/nested_lora/hp_search.json) and read it from
+# that file at run time, falling back to these literals if it is absent.
+arms:
+  frozen_probe:
+    enabled: true
+    # Frozen backbone + logistic regression on pooled features (probe.* in
+    # finetune.yaml governs pooling/classifier/C).
+  lora:
+    enabled: true
+    reuse_hp_from: results/nested_lora/hp_search.json
+    fallback: {r: 4, lr: 5.0e-4, dropout: 0.1}
+  full_ft:
+    enabled: true
+    # lr comes from train.lr_full_ft in finetune.yaml (1e-4), as in the LOPO arm.
+
+# ---- Statistics -----------------------------------------------------------
+# Patient is treated as the unit of analysis / random effect. Per-patient
+# balanced accuracies are NOT pooled naively over windows: per-patient N is
+# small and unequal, so window pooling would weight long recordings more and
+# would understate the between-patient variance the CI has to cover.
+stats:
+  # Primary: mean of the per-patient (direction-averaged) balanced accuracies,
+  # with a patient-level bootstrap CI (resample patients with replacement).
+  bootstrap:
+    n_resamples: 5000
+    ci: 0.95
+  # Paired test against the 0.5 chance line, on the per-patient values.
+  # Wilcoxon signed-rank is the paired, distribution-free choice for N~21;
+  # a sign test is also reported because it makes no symmetry assumption.
+  tests:
+    wilcoxon_vs_chance: true
+    sign_test_vs_chance: true
+    chance_level: 0.5
+  # Secondary, fully non-parametric readout: within each patient x direction,
+  # does the OFF session's mean P(OFF) exceed the ON session's? Pooled over
+  # patients this is an exact binomial (ordering) test that never touches the
+  # 0.5 probability threshold, so it is immune to the calibration failure that
+  # dominated the LOPO result (EXPERIMENTS.md §4a).
+  ordering_test: true
+
+# ---- Output ---------------------------------------------------------------
+output:
+  results_subdir: within_patient_tasksplit
+  sidecar: results/within_patient_tasksplit/task_windows.parquet
+  preflight_report: logs/tasksplit_preflight.md

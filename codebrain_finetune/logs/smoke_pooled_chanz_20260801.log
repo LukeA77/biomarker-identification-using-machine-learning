@@ -1,0 +1,82 @@
+10:36:34 INFO livinglab_codebrain.dataset: Manifest validated: 43822 windows, 41 patients, sfreq=200, label map A=0/C=1 consistent.
+10:36:34 WARNING livinglab_codebrain.dataset: Exclusion list names patients absent from the manifest: ['sub-82', 'sub-100', 'sub-111', 'sub-130']
+10:36:34 INFO livinglab_codebrain.dataset: Applying cohort exclusions (loud):
+10:36:34 INFO livinglab_codebrain.dataset:     EXCLUDE sub-80    ->  1109 windows dropped
+10:36:34 INFO livinglab_codebrain.dataset:     EXCLUDE sub-82    ->     0 windows dropped
+10:36:34 INFO livinglab_codebrain.dataset:     EXCLUDE sub-97    ->   700 windows dropped
+10:36:34 INFO livinglab_codebrain.dataset:     EXCLUDE sub-98    ->   910 windows dropped
+10:36:34 INFO livinglab_codebrain.dataset:     EXCLUDE sub-99    ->  1494 windows dropped
+10:36:34 INFO livinglab_codebrain.dataset:     EXCLUDE sub-100   ->     0 windows dropped
+10:36:34 INFO livinglab_codebrain.dataset:     EXCLUDE sub-105   ->   850 windows dropped
+10:36:34 INFO livinglab_codebrain.dataset:     EXCLUDE sub-108   ->  1585 windows dropped
+10:36:34 INFO livinglab_codebrain.dataset:     EXCLUDE sub-111   ->     0 windows dropped
+10:36:34 INFO livinglab_codebrain.dataset:     EXCLUDE sub-130   ->     0 windows dropped
+10:36:34 INFO livinglab_codebrain.dataset: Cohort after exclusions: 35 patients (was 41), 37174 windows (was 43822).
+10:36:34 WARNING pooled_tasksplit: SMOKE TEST: restricted to 3 patient(s): ['sub-103', 'sub-106', 'sub-107']
+10:36:34 INFO pooled_tasksplit: Pooled design over 3/35 eligible patients: ['sub-103', 'sub-106', 'sub-107']
+10:36:34 INFO pooled_tasksplit: LoRA HPs reused from results/nested_lora/hp_search.json: {'r': 4, 'lr': 0.0005, 'dropout': 0.1}
+10:36:34 INFO pooled_tasksplit: Input normalisation: chan_z (rescaled to cohort-median window std 0.662742)
+10:36:38 INFO pooled_tasksplit: ==========================================================================
+10:36:38 INFO pooled_tasksplit: DIRECTION tea_to_toast (pooled over 3 patients)
+10:36:38 INFO pooled_tasksplit:   train: 431 windows (3 patients) | test: 495 windows (3 patients)
+10:36:38 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+10:36:43 INFO pooled_tasksplit: Pooled probe features: train (431, 200), test (495, 200)
+10:36:43 INFO pooled_tasksplit:   tea_to_toast/frozen_probe | pooled window bal-acc 0.715 | pooled session bal-acc 0.833 | patient-mean 0.687 [0.484, 0.849] (3 patients) | ordering 2/3
+10:36:43 INFO codebrain_ft.tracking: Saved run -> smoke_pooled_chanz_20260801T093643Z.json (+ master CSV row)
+10:36:43 INFO codebrain_ft.control_features: Computing control features ['chanamp'] for 431 windows | norm=chan_z | 24 chunk(s) x 24 job(s) | aperiodic estimator=specparam
+10:36:50 INFO codebrain_ft.control_features: Computing control features ['chanamp'] for 495 windows | norm=chan_z | 24 chunk(s) x 24 job(s) | aperiodic estimator=specparam
+10:36:51 INFO pooled_tasksplit:   tea_to_toast/chanamp | pooled window bal-acc 0.501 | pooled session bal-acc 0.500 | patient-mean 0.526 [0.461, 0.561] (3 patients) | ordering 2/3
+10:36:51 INFO codebrain_ft.tracking: Saved run -> smoke_pooled_chanz_20260801T093651Z.json (+ master CSV row)
+10:36:51 INFO pooled_tasksplit: ==========================================================================
+10:36:51 INFO pooled_tasksplit: DIRECTION toast_to_tea (pooled over 3 patients)
+10:36:51 INFO pooled_tasksplit:   train: 992 windows (3 patients) | test: 216 windows (3 patients)
+10:36:51 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+10:36:55 INFO pooled_tasksplit: Pooled probe features: train (992, 200), test (216, 200)
+10:36:56 INFO pooled_tasksplit:   toast_to_tea/frozen_probe | pooled window bal-acc 0.668 | pooled session bal-acc 0.667 | patient-mean 0.609 [0.484, 0.766] (3 patients) | ordering 3/3
+10:36:56 INFO codebrain_ft.tracking: Saved run -> smoke_pooled_chanz_20260801T093656Z.json (+ master CSV row)
+10:36:56 INFO codebrain_ft.control_features: Computing control features ['chanamp'] for 992 windows | norm=chan_z | 24 chunk(s) x 24 job(s) | aperiodic estimator=specparam
+10:36:56 INFO codebrain_ft.control_features: Computing control features ['chanamp'] for 216 windows | norm=chan_z | 24 chunk(s) x 24 job(s) | aperiodic estimator=specparam
+10:36:56 INFO pooled_tasksplit:   toast_to_tea/chanamp | pooled window bal-acc 0.499 | pooled session bal-acc 0.500 | patient-mean 0.489 [0.472, 0.512] (3 patients) | ordering 0/3
+10:36:56 INFO codebrain_ft.tracking: Saved run -> smoke_pooled_chanz_20260801T093656Z.json (+ master CSV row)
+10:36:56 INFO pooled_tasksplit: Done. Results under C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\codebrain_finetune\results\smoke_pooled_chanz
+21:25:25 INFO livinglab_codebrain.dataset: Manifest validated: 43822 windows, 41 patients, sfreq=200, label map A=0/C=1 consistent.
+21:25:25 WARNING livinglab_codebrain.dataset: Exclusion list names patients absent from the manifest: ['sub-82', 'sub-100', 'sub-111', 'sub-130']
+21:25:25 INFO livinglab_codebrain.dataset: Applying cohort exclusions (loud):
+21:25:25 INFO livinglab_codebrain.dataset:     EXCLUDE sub-80    ->  1109 windows dropped
+21:25:25 INFO livinglab_codebrain.dataset:     EXCLUDE sub-82    ->     0 windows dropped
+21:25:25 INFO livinglab_codebrain.dataset:     EXCLUDE sub-97    ->   700 windows dropped
+21:25:25 INFO livinglab_codebrain.dataset:     EXCLUDE sub-98    ->   910 windows dropped
+21:25:25 INFO livinglab_codebrain.dataset:     EXCLUDE sub-99    ->  1494 windows dropped
+21:25:25 INFO livinglab_codebrain.dataset:     EXCLUDE sub-100   ->     0 windows dropped
+21:25:25 INFO livinglab_codebrain.dataset:     EXCLUDE sub-105   ->   850 windows dropped
+21:25:25 INFO livinglab_codebrain.dataset:     EXCLUDE sub-108   ->  1585 windows dropped
+21:25:25 INFO livinglab_codebrain.dataset:     EXCLUDE sub-111   ->     0 windows dropped
+21:25:25 INFO livinglab_codebrain.dataset:     EXCLUDE sub-130   ->     0 windows dropped
+21:25:25 INFO livinglab_codebrain.dataset: Cohort after exclusions: 35 patients (was 41), 37174 windows (was 43822).
+21:25:25 WARNING pooled_tasksplit: SMOKE TEST: restricted to 3 patient(s): ['sub-103', 'sub-106', 'sub-107']
+21:25:25 INFO pooled_tasksplit: Pooled design over 3/35 eligible patients: ['sub-103', 'sub-106', 'sub-107']
+21:25:25 INFO pooled_tasksplit: LoRA HPs reused from results/nested_lora/hp_search.json: {'r': 4, 'lr': 0.0005, 'dropout': 0.1}
+21:25:31 INFO pooled_tasksplit: Input normalisation: chan_z (rescaled to cohort-median window std 0.662742)
+21:25:54 INFO pooled_tasksplit: ==========================================================================
+21:25:54 INFO pooled_tasksplit: DIRECTION tea_to_toast (pooled over 3 patients)
+21:25:54 INFO pooled_tasksplit:   train: 431 windows (3 patients) | test: 495 windows (3 patients)
+21:25:54 INFO pooled_tasksplit: Pooled lora: train 322 windows / val 109 windows (across 3 patients)
+21:25:54 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+21:25:54 INFO codebrain_ft.model: LoRA applied: target=attention r=4 alpha=8 dropout=0.1
+21:25:54 INFO codebrain_ft.train: Training: 89729 trainable params, 6 steps/epoch, up to 2 epochs (lr=5.0e-04).
+21:26:07 INFO codebrain_ft.train: epoch 0 | loss 0.7022 | inner-val bal-acc 0.500 | auc 0.889
+21:26:09 INFO codebrain_ft.train: epoch 1 | loss 0.6893 | inner-val bal-acc 0.667 | auc 0.889
+21:26:20 INFO pooled_tasksplit:   tea_to_toast/lora | pooled window bal-acc 0.588 | pooled session bal-acc 0.667 | patient-mean 0.617 [0.543, 0.764] (3 patients) | ordering 2/3
+21:26:20 INFO codebrain_ft.tracking: Saved run -> smoke_pooled_chanz_20260801T202620Z.json (+ master CSV row)
+21:26:20 INFO pooled_tasksplit: ==========================================================================
+21:26:20 INFO pooled_tasksplit: DIRECTION toast_to_tea (pooled over 3 patients)
+21:26:20 INFO pooled_tasksplit:   train: 992 windows (3 patients) | test: 216 windows (3 patients)
+21:26:20 INFO pooled_tasksplit: Pooled lora: train 744 windows / val 248 windows (across 3 patients)
+21:26:20 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+21:26:20 INFO codebrain_ft.model: LoRA applied: target=attention r=4 alpha=8 dropout=0.1
+21:26:20 INFO codebrain_ft.train: Training: 89729 trainable params, 12 steps/epoch, up to 2 epochs (lr=5.0e-04).
+21:26:33 INFO codebrain_ft.train: epoch 0 | loss 0.6938 | inner-val bal-acc 0.833 | auc 0.667
+21:26:36 INFO codebrain_ft.train: epoch 1 | loss 0.6866 | inner-val bal-acc 0.500 | auc 0.667
+21:26:38 INFO pooled_tasksplit:   toast_to_tea/lora | pooled window bal-acc 0.597 | pooled session bal-acc 0.667 | patient-mean 0.617 [0.571, 0.690] (3 patients) | ordering 3/3
+21:26:38 INFO codebrain_ft.tracking: Saved run -> smoke_pooled_chanz_20260801T202638Z.json (+ master CSV row)
+21:26:38 INFO pooled_tasksplit: Done. Results under C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\codebrain_finetune\results\smoke_pooled_chanz

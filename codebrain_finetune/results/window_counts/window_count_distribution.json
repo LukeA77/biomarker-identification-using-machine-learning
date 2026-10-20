@@ -1,0 +1,511 @@
+{
+  "source_sidecar": "results\\within_patient_tasksplit\\task_windows.parquet",
+  "n_patients": 27,
+  "n_cells": 108,
+  "n_windows_all_stride5": 9963,
+  "n_windows_eval_nonoverlap": 4980,
+  "distribution_eval": {
+    "overall": {
+      "n": 108,
+      "mean": 46.111111111111114,
+      "sd": 25.19283881832011,
+      "min": 15.0,
+      "p05": 21.0,
+      "p25": 27.0,
+      "median": 36.5,
+      "p75": 63.0,
+      "p95": 84.24999999999996,
+      "max": 150.0
+    },
+    "by_task": {
+      "tea": {
+        "n": 54,
+        "mean": 29.203703703703702,
+        "sd": 9.165932884676884,
+        "min": 15.0,
+        "p05": 20.65,
+        "p25": 24.0,
+        "median": 27.0,
+        "p75": 30.0,
+        "p95": 50.04999999999998,
+        "max": 60.0
+      },
+      "toast": {
+        "n": 54,
+        "mean": 63.01851851851852,
+        "sd": 24.79538205692155,
+        "min": 26.0,
+        "p05": 30.0,
+        "p25": 44.5,
+        "median": 63.0,
+        "p75": 73.0,
+        "p95": 94.89999999999992,
+        "max": 150.0
+      }
+    },
+    "by_task_state": {
+      "tea|ON": {
+        "n": 27,
+        "mean": 29.555555555555557,
+        "sd": 7.7127932350854245,
+        "min": 21.0,
+        "p05": 21.6,
+        "p25": 25.5,
+        "median": 28.0,
+        "p75": 31.0,
+        "p95": 39.5,
+        "max": 60.0
+      },
+      "tea|OFF": {
+        "n": 27,
+        "mean": 28.85185185185185,
+        "sd": 10.560097987976699,
+        "min": 15.0,
+        "p05": 18.6,
+        "p25": 22.0,
+        "median": 26.0,
+        "p75": 30.0,
+        "p95": 51.099999999999994,
+        "max": 59.0
+      },
+      "toast|ON": {
+        "n": 27,
+        "mean": 64.81481481481481,
+        "sd": 23.748744156330645,
+        "min": 26.0,
+        "p05": 30.0,
+        "p25": 49.0,
+        "median": 66.0,
+        "p75": 74.5,
+        "p95": 84.5,
+        "max": 149.0
+      },
+      "toast|OFF": {
+        "n": 27,
+        "mean": 61.22222222222222,
+        "sd": 26.125927783795593,
+        "min": 30.0,
+        "p05": 33.6,
+        "p25": 41.5,
+        "median": 59.0,
+        "p75": 70.0,
+        "p95": 99.79999999999998,
+        "max": 150.0
+      }
+    }
+  },
+  "distribution_all": {
+    "overall": {
+      "n": 108,
+      "mean": 92.25,
+      "sd": 50.3743231210757,
+      "min": 31.0,
+      "p05": 43.0,
+      "p25": 54.0,
+      "median": 74.0,
+      "p75": 126.25,
+      "p95": 168.49999999999991,
+      "max": 300.0
+    },
+    "by_task": {
+      "tea": {
+        "n": 54,
+        "mean": 58.46296296296296,
+        "sd": 18.10109239168143,
+        "min": 31.0,
+        "p05": 40.95,
+        "p25": 48.0,
+        "median": 54.0,
+        "p75": 60.0,
+        "p95": 99.74999999999997,
+        "max": 119.0
+      },
+      "toast": {
+        "n": 54,
+        "mean": 126.03703703703704,
+        "sd": 49.69072764305948,
+        "min": 51.0,
+        "p05": 60.0,
+        "p25": 88.25,
+        "median": 126.5,
+        "p75": 146.75,
+        "p95": 190.44999999999985,
+        "max": 300.0
+      }
+    }
+  },
+  "asymmetry_eval": {
+    "tea": {
+      "diff_off_minus_on": {
+        "n": 27,
+        "mean": -0.7037037037037037,
+        "sd": 9.037591641475215,
+        "min": -13.0,
+        "p05": -10.4,
+        "p25": -6.0,
+        "median": -3.0,
+        "p75": 1.5,
+        "p95": 20.299999999999994,
+        "max": 24.0
+      },
+      "ratio_off_over_on": {
+        "n": 27,
+        "mean": 0.9883529922320275,
+        "sd": 0.3162152520142964,
+        "min": 0.6176470588235294,
+        "p05": 0.7195121951219512,
+        "p25": 0.7712418300653594,
+        "median": 0.9,
+        "p75": 1.0652173913043477,
+        "p95": 1.7399999999999998,
+        "max": 1.8846153846153846
+      },
+      "imbalance_frac": {
+        "n": 27,
+        "mean": 0.1843709577253297,
+        "sd": 0.13099081846822067,
+        "min": 0.0,
+        "p05": 0.005000000000000001,
+        "p25": 0.09,
+        "median": 0.1724137931034483,
+        "p75": 0.2582010582010582,
+        "p95": 0.4377828054298642,
+        "max": 0.46938775510204084
+      }
+    },
+    "toast": {
+      "diff_off_minus_on": {
+        "n": 27,
+        "mean": -3.5925925925925926,
+        "sd": 16.752173818204238,
+        "min": -38.0,
+        "p05": -28.5,
+        "p25": -15.0,
+        "median": -2.0,
+        "p75": 3.5,
+        "p95": 24.199999999999996,
+        "max": 33.0
+      },
+      "ratio_off_over_on": {
+        "n": 27,
+        "mean": 0.9855333953721132,
+        "sd": 0.357848566773619,
+        "min": 0.5238095238095238,
+        "p05": 0.556604938271605,
+        "p25": 0.7308189655172415,
+        "median": 0.9523809523809523,
+        "p75": 1.0468637346791636,
+        "p95": 1.7157342657342656,
+        "max": 2.1
+      },
+      "imbalance_frac": {
+        "n": 27,
+        "mean": 0.1933978216534133,
+        "sd": 0.1703837718944253,
+        "min": 0.0,
+        "p05": 0.0020000000000000005,
+        "p25": 0.04880952380952381,
+        "median": 0.13333333333333333,
+        "p75": 0.326153483992467,
+        "p95": 0.47407407407407404,
+        "max": 0.5238095238095238
+      }
+    }
+  },
+  "count_alone_classifier_eval": {
+    "tea": {
+      "n_patients": 27,
+      "n_off_longer": 8,
+      "n_on_longer": 17,
+      "n_tie": 2,
+      "sign_test_p": 0.10775214433670044,
+      "within_patient_longer_is_off_bal_acc": 0.3333333333333333,
+      "loo_absolute_threshold_bal_acc": 0.6111111111111112,
+      "median_diff_off_minus_on": -3.0,
+      "median_ratio_off_over_on": 0.9,
+      "median_imbalance_frac": 0.1724137931034483
+    },
+    "toast": {
+      "n_patients": 27,
+      "n_off_longer": 10,
+      "n_on_longer": 15,
+      "n_tie": 2,
+      "sign_test_p": 0.42435622215270996,
+      "within_patient_longer_is_off_bal_acc": 0.4074074074074074,
+      "loo_absolute_threshold_bal_acc": 0.5,
+      "median_diff_off_minus_on": -2.0,
+      "median_ratio_off_over_on": 0.9523809523809523,
+      "median_imbalance_frac": 0.13333333333333333
+    }
+  },
+  "matching_options_eval": {
+    "global": {
+      "k": {
+        "all": 15
+      },
+      "n_cells": 108,
+      "kept": 1620,
+      "retained_frac": 0.3253012048192771,
+      "binding_cell": {
+        "patient_id": "sub-131",
+        "condition": "C",
+        "task_group": "tea"
+      }
+    },
+    "per_task": {
+      "k": {
+        "tea": 15,
+        "toast": 26
+      },
+      "kept": 2214,
+      "retained_frac": 0.44457831325301206
+    },
+    "per_patient": {
+      "k": {
+        "sub-103": 59,
+        "sub-106": 21,
+        "sub-107": 22,
+        "sub-114": 27,
+        "sub-115": 22,
+        "sub-116": 26,
+        "sub-119": 26,
+        "sub-121": 28,
+        "sub-123": 27,
+        "sub-125": 23,
+        "sub-129": 28,
+        "sub-131": 15,
+        "sub-134": 24,
+        "sub-135": 30,
+        "sub-51": 27,
+        "sub-62": 21,
+        "sub-70": 30,
+        "sub-71": 30,
+        "sub-72": 20,
+        "sub-76": 30,
+        "sub-77": 26,
+        "sub-81": 26,
+        "sub-84": 25,
+        "sub-90": 21,
+        "sub-92": 23,
+        "sub-94": 18,
+        "sub-96": 26
+      },
+      "k_min": 15,
+      "k_median": 26.0,
+      "k_max": 59,
+      "kept": 2804,
+      "retained_frac": 0.5630522088353414
+    },
+    "per_patient_task": {
+      "k": {
+        "sub-103|tea": 59,
+        "sub-103|toast": 149,
+        "sub-106|tea": 21,
+        "sub-106|toast": 41,
+        "sub-107|tea": 22,
+        "sub-107|toast": 33,
+        "sub-114|tea": 27,
+        "sub-114|toast": 73,
+        "sub-115|tea": 22,
+        "sub-115|toast": 44,
+        "sub-116|tea": 26,
+        "sub-116|toast": 47,
+        "sub-119|tea": 26,
+        "sub-119|toast": 76,
+        "sub-121|tea": 28,
+        "sub-121|toast": 30,
+        "sub-123|tea": 27,
+        "sub-123|toast": 43,
+        "sub-125|tea": 23,
+        "sub-125|toast": 59,
+        "sub-129|tea": 28,
+        "sub-129|toast": 78,
+        "sub-131|tea": 15,
+        "sub-131|toast": 80,
+        "sub-134|tea": 24,
+        "sub-134|toast": 66,
+        "sub-135|tea": 30,
+        "sub-135|toast": 86,
+        "sub-51|tea": 27,
+        "sub-51|toast": 42,
+        "sub-62|tea": 21,
+        "sub-62|toast": 35,
+        "sub-70|tea": 30,
+        "sub-70|toast": 40,
+        "sub-71|tea": 30,
+        "sub-71|toast": 58,
+        "sub-72|tea": 20,
+        "sub-72|toast": 49,
+        "sub-76|tea": 30,
+        "sub-76|toast": 70,
+        "sub-77|tea": 26,
+        "sub-77|toast": 68,
+        "sub-81|tea": 26,
+        "sub-81|toast": 67,
+        "sub-84|tea": 25,
+        "sub-84|toast": 64,
+        "sub-90|tea": 21,
+        "sub-90|toast": 26,
+        "sub-92|tea": 23,
+        "sub-92|toast": 38,
+        "sub-94|tea": 18,
+        "sub-94|toast": 37,
+        "sub-96|tea": 26,
+        "sub-96|toast": 30
+      },
+      "k_min": 15,
+      "k_median": 30.0,
+      "k_max": 149,
+      "kept": 4460,
+      "retained_frac": 0.8955823293172691,
+      "by_task": {
+        "tea": {
+          "k_min": 15,
+          "k_median": 26.0,
+          "k_max": 59
+        },
+        "toast": {
+          "k_min": 26,
+          "k_median": 49.0,
+          "k_max": 149
+        }
+      }
+    },
+    "_total_windows": 4980
+  },
+  "matching_options_all": {
+    "global": {
+      "k": {
+        "all": 31
+      },
+      "n_cells": 108,
+      "kept": 3348,
+      "retained_frac": 0.33604336043360433,
+      "binding_cell": {
+        "patient_id": "sub-131",
+        "condition": "C",
+        "task_group": "tea"
+      }
+    },
+    "per_task": {
+      "k": {
+        "tea": 31,
+        "toast": 51
+      },
+      "kept": 4428,
+      "retained_frac": 0.4444444444444444
+    },
+    "per_patient": {
+      "k": {
+        "sub-103": 117,
+        "sub-106": 43,
+        "sub-107": 44,
+        "sub-114": 54,
+        "sub-115": 43,
+        "sub-116": 53,
+        "sub-119": 52,
+        "sub-121": 55,
+        "sub-123": 54,
+        "sub-125": 47,
+        "sub-129": 57,
+        "sub-131": 31,
+        "sub-134": 48,
+        "sub-135": 60,
+        "sub-51": 53,
+        "sub-62": 43,
+        "sub-70": 60,
+        "sub-71": 60,
+        "sub-72": 39,
+        "sub-76": 59,
+        "sub-77": 51,
+        "sub-81": 52,
+        "sub-84": 50,
+        "sub-90": 43,
+        "sub-92": 45,
+        "sub-94": 36,
+        "sub-96": 53
+      },
+      "k_min": 31,
+      "k_median": 52.0,
+      "k_max": 117,
+      "kept": 5608,
+      "retained_frac": 0.5628826658636956
+    },
+    "per_patient_task": {
+      "k": {
+        "sub-103|tea": 117,
+        "sub-103|toast": 298,
+        "sub-106|tea": 43,
+        "sub-106|toast": 83,
+        "sub-107|tea": 44,
+        "sub-107|toast": 66,
+        "sub-114|tea": 54,
+        "sub-114|toast": 147,
+        "sub-115|tea": 43,
+        "sub-115|toast": 87,
+        "sub-116|tea": 53,
+        "sub-116|toast": 94,
+        "sub-119|tea": 52,
+        "sub-119|toast": 153,
+        "sub-121|tea": 55,
+        "sub-121|toast": 60,
+        "sub-123|tea": 54,
+        "sub-123|toast": 86,
+        "sub-125|tea": 47,
+        "sub-125|toast": 119,
+        "sub-129|tea": 57,
+        "sub-129|toast": 157,
+        "sub-131|tea": 31,
+        "sub-131|toast": 161,
+        "sub-134|tea": 48,
+        "sub-134|toast": 131,
+        "sub-135|tea": 60,
+        "sub-135|toast": 174,
+        "sub-51|tea": 53,
+        "sub-51|toast": 85,
+        "sub-62|tea": 43,
+        "sub-62|toast": 71,
+        "sub-70|tea": 60,
+        "sub-70|toast": 79,
+        "sub-71|tea": 60,
+        "sub-71|toast": 116,
+        "sub-72|tea": 39,
+        "sub-72|toast": 97,
+        "sub-76|tea": 59,
+        "sub-76|toast": 139,
+        "sub-77|tea": 51,
+        "sub-77|toast": 137,
+        "sub-81|tea": 52,
+        "sub-81|toast": 133,
+        "sub-84|tea": 50,
+        "sub-84|toast": 128,
+        "sub-90|tea": 43,
+        "sub-90|toast": 51,
+        "sub-92|tea": 45,
+        "sub-92|toast": 77,
+        "sub-94|tea": 36,
+        "sub-94|toast": 75,
+        "sub-96|tea": 53,
+        "sub-96|toast": 59
+      },
+      "k_min": 31,
+      "k_median": 60.0,
+      "k_max": 298,
+      "kept": 8930,
+      "retained_frac": 0.8963163705711131,
+      "by_task": {
+        "tea": {
+          "k_min": 31,
+          "k_median": 52.0,
+          "k_max": 117
+        },
+        "toast": {
+          "k_min": 51,
+          "k_median": 97.0,
+          "k_max": 298
+        }
+      }
+    },
+    "_total_windows": 9963
+  }
+}

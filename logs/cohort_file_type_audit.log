@@ -1,0 +1,78 @@
+=== PER-SUBJECT SUMMARY ===
+patient_id    session A                             session C                             overall             
+--------------------------------------------------------------------------------------------------------------
+sub-34        MIXED [edf=1,task_csv=1,dsi=1,raw_signal_csv=2]MIXED [edf=1,task_csv=2,dsi=1,raw_signal_csv=2]COMPLETE_RECOVERABLE
+sub-42        MIXED [edf=1,task_csv=1,dsi=1,raw_signal_csv=2]MIXED [edf=2,task_csv=1,dsi=2,raw_signal_csv=4]COMPLETE_RECOVERABLE
+sub-48        MIXED [edf=1,task_csv=1,dsi=1,raw_signal_csv=2]MIXED [edf=1,task_csv=1,dsi=1,raw_signal_csv=2]COMPLETE_RECOVERABLE
+sub-51        MIXED [edf=1,task_csv=1,dsi=1,raw_signal_csv=2]MIXED [edf=1,task_csv=1,dsi=1,raw_signal_csv=2]COMPLETE_RECOVERABLE
+sub-53        MIXED [edf=1,task_csv=1,dsi=1,raw_signal_csv=2]MIXED [edf=1,task_csv=1,dsi=1,raw_signal_csv=2]COMPLETE_RECOVERABLE
+sub-62        MIXED [task_csv=1,dsi=1,raw_signal_csv=2]MIXED [task_csv=1,dsi=1,raw_signal_csv=2]COMPLETE_RECOVERABLE
+sub-69        INCOMPLETE_EXPORT [task_csv=1,raw_signal_csv=2]INCOMPLETE_EXPORT [task_csv=1,raw_signal_csv=2]NEEDS_REVIEW        
+sub-70        MIXED [task_csv=1,dsi=1,raw_signal_csv=1]MIXED [edf=1,task_csv=1,dsi=1,raw_signal_csv=3]COMPLETE_RECOVERABLE
+sub-71        MIXED [edf=1,task_csv=1,dsi=1,raw_signal_csv=2]MIXED [task_csv=1,dsi=1,raw_signal_csv=2]COMPLETE_RECOVERABLE
+sub-72        MIXED [task_csv=1,dsi=1,raw_signal_csv=2]MIXED [task_csv=1,dsi=1,raw_signal_csv=2]COMPLETE_RECOVERABLE
+sub-73        MIXED [task_csv=1,dsi=1,raw_signal_csv=2]MIXED [task_csv=1,dsi=1,raw_signal_csv=2]COMPLETE_RECOVERABLE
+sub-76        MIXED [task_csv=1,dsi=1,raw_signal_csv=2]MIXED [task_csv=1,dsi=1,raw_signal_csv=2]COMPLETE_RECOVERABLE
+sub-77        MIXED [task_csv=1,dsi=1,raw_signal_csv=2]MIXED [task_csv=1,dsi=1,raw_signal_csv=2]COMPLETE_RECOVERABLE
+sub-78        MIXED [task_csv=1,dsi=1,raw_signal_csv=2]MIXED [task_csv=1,dsi=3,raw_signal_csv=6]COMPLETE_RECOVERABLE
+sub-80        MIXED [task_csv=1,dsi=1,raw_signal_csv=2]MIXED [task_csv=1,dsi=1,raw_signal_csv=2]COMPLETE_RECOVERABLE
+sub-81        MIXED [task_csv=1,dsi=1,raw_signal_csv=2]MIXED [task_csv=1,dsi=1,raw_signal_csv=2]COMPLETE_RECOVERABLE
+sub-82        INCOMPLETE_EXPORT [task_csv=1]        MIXED [task_csv=1,dsi=1,raw_signal_csv=2]NEEDS_REVIEW        
+sub-84        MIXED [task_csv=1,dsi=1,raw_signal_csv=2]MIXED [task_csv=1,dsi=1,raw_signal_csv=2]COMPLETE_RECOVERABLE
+sub-90        MIXED [task_csv=1,dsi=1,raw_signal_csv=2]MIXED [task_csv=1,dsi=1,raw_signal_csv=2]COMPLETE_RECOVERABLE
+sub-92        MIXED [task_csv=1,dsi=1,raw_signal_csv=2]MIXED [task_csv=1,dsi=1,raw_signal_csv=2]COMPLETE_RECOVERABLE
+sub-93        MIXED [task_csv=1,dsi=1,raw_signal_csv=2]MIXED [task_csv=1,dsi=1,raw_signal_csv=2]COMPLETE_RECOVERABLE
+sub-94        MIXED [task_csv=1,dsi=1,raw_signal_csv=2]MIXED [task_csv=1,dsi=1,raw_signal_csv=2]COMPLETE_RECOVERABLE
+sub-96        MIXED [task_csv=1,dsi=1,raw_signal_csv=2]MIXED [task_csv=1,dsi=1,raw_signal_csv=2]COMPLETE_RECOVERABLE
+sub-97        MIXED [task_csv=1,dsi=1,raw_signal_csv=2]MIXED [task_csv=1,dsi=1,raw_signal_csv=2]COMPLETE_RECOVERABLE
+sub-98        MIXED [task_csv=1,dsi=1,raw_signal_csv=2]MIXED [task_csv=1,dsi=1,raw_signal_csv=2]COMPLETE_RECOVERABLE
+sub-99        MIXED [task_csv=1,dsi=1,raw_signal_csv=2]MIXED [task_csv=1,dsi=1,raw_signal_csv=2]COMPLETE_RECOVERABLE
+sub-100       INCOMPLETE_EXPORT [task_csv=1]        MIXED [task_csv=1,dsi=1,raw_signal_csv=2]NEEDS_REVIEW        
+sub-103       MIXED [task_csv=1,dsi=1,raw_signal_csv=2]MIXED [task_csv=1,dsi=1,raw_signal_csv=2]COMPLETE_RECOVERABLE
+sub-105       MIXED [task_csv=1,dsi=1,raw_signal_csv=2]MIXED [task_csv=1,dsi=1,raw_signal_csv=2]COMPLETE_RECOVERABLE
+sub-106       MIXED [task_csv=1,dsi=1,raw_signal_csv=2]MIXED [task_csv=1,dsi=1,raw_signal_csv=2]COMPLETE_RECOVERABLE
+sub-107       MIXED [task_csv=1,dsi=1,raw_signal_csv=2]MIXED [task_csv=1,dsi=1,raw_signal_csv=2]COMPLETE_RECOVERABLE
+sub-108       MIXED [task_csv=1,dsi=1,raw_signal_csv=2]MIXED [task_csv=1,dsi=1,raw_signal_csv=2]COMPLETE_RECOVERABLE
+sub-111       MIXED [edf=1,task_csv=1,dsi=1,raw_signal_csv=1]MIXED [edf=1,task_csv=1,dsi=1,raw_signal_csv=1]COMPLETE_RECOVERABLE
+sub-114       MIXED [edf=1,task_csv=1,dsi=1,raw_signal_csv=1]MIXED [edf=1,task_csv=1,dsi=1,raw_signal_csv=1]COMPLETE_RECOVERABLE
+sub-115       MIXED [edf=1,task_csv=1,dsi=1,raw_signal_csv=1]MIXED [edf=1,task_csv=1,dsi=1,raw_signal_csv=1]COMPLETE_RECOVERABLE
+sub-116       MIXED [edf=1,task_csv=1,dsi=1,raw_signal_csv=1]MIXED [edf=1,task_csv=1,dsi=1,raw_signal_csv=1]COMPLETE_RECOVERABLE
+sub-117       MIXED [edf=1,task_csv=1,dsi=1,raw_signal_csv=1]MIXED [edf=1,task_csv=1,dsi=1,raw_signal_csv=1]COMPLETE_RECOVERABLE
+sub-119       MIXED [edf=1,task_csv=1,dsi=1,raw_signal_csv=1]MIXED [edf=1,task_csv=1,dsi=1,raw_signal_csv=1]COMPLETE_RECOVERABLE
+sub-121       MIXED [edf=2,task_csv=1,dsi=2,raw_signal_csv=2]MIXED [edf=1,task_csv=1,dsi=1,raw_signal_csv=1]COMPLETE_RECOVERABLE
+sub-123       MIXED [edf=1,task_csv=1,dsi=1,raw_signal_csv=1]MIXED [edf=1,task_csv=1,dsi=1,raw_signal_csv=1]COMPLETE_RECOVERABLE
+sub-125       MIXED [edf=1,task_csv=1,dsi=1,raw_signal_csv=1]MIXED [edf=1,task_csv=1,dsi=1,raw_signal_csv=1]COMPLETE_RECOVERABLE
+sub-129       MIXED [edf=1,task_csv=1,dsi=1,raw_signal_csv=1]MIXED [edf=1,task_csv=1,dsi=1,raw_signal_csv=1]COMPLETE_RECOVERABLE
+sub-130       MIXED [edf=1,task_csv=1,dsi=1,raw_signal_csv=1]INCOMPLETE_EXPORT [task_csv=1]        NEEDS_REVIEW        
+sub-131       MIXED [edf=1,task_csv=1,dsi=1,raw_signal_csv=1]MIXED [edf=1,task_csv=1,dsi=1,raw_signal_csv=1]COMPLETE_RECOVERABLE
+sub-134       MIXED [edf=1,task_csv=1,dsi=1,raw_signal_csv=1]MIXED [edf=1,task_csv=1,dsi=1,raw_signal_csv=1]COMPLETE_RECOVERABLE
+sub-135       MIXED [edf=1,task_csv=1,dsi=1,raw_signal_csv=1]MIXED [edf=1,task_csv=1,dsi=1,raw_signal_csv=1]COMPLETE_RECOVERABLE
+
+=== LOUD FLAGS (non-standard naming, ambiguous classification) ===
+  none -- all top-level entries matched the expected folder pattern
+  [sub-69 session A] has_edf=False has_task_csv=True has_dsi=False -- doesn't fit a clean category, flagged for manual review
+  [sub-69 session C] has_edf=False has_task_csv=True has_dsi=False -- doesn't fit a clean category, flagged for manual review
+  [sub-69 OVERALL] one or both sessions are INCOMPLETE_EXPORT (see per-session notes)
+  [sub-82 session A] has_edf=False has_task_csv=True has_dsi=False -- doesn't fit a clean category, flagged for manual review
+  [sub-82 OVERALL] one or both sessions are INCOMPLETE_EXPORT (see per-session notes)
+  [sub-100 session A] has_edf=False has_task_csv=True has_dsi=False -- doesn't fit a clean category, flagged for manual review
+  [sub-100 OVERALL] one or both sessions are INCOMPLETE_EXPORT (see per-session notes)
+  [sub-130 session C] has_edf=False has_task_csv=True has_dsi=False -- doesn't fit a clean category, flagged for manual review
+  [sub-130 OVERALL] one or both sessions are INCOMPLETE_EXPORT (see per-session notes)
+
+=== COUNTS BY OVERALL STATUS ===
+  COMPLETE_EXPORTED      0
+  COMPLETE_RECOVERABLE   42
+  PARTIAL                0
+  INCONSISTENT           0
+  EMPTY                  0
+  NEEDS_REVIEW           4
+
+  TOTAL usable (COMPLETE_EXPORTED + COMPLETE_RECOVERABLE) = 42
+  (INCONSISTENT subjects [0] also have usable data in both sessions, just of different types -- not included in the total above per your stated formula; consider whether you want to fold them in.)
+
+  Total subjects found: 46
+
+  Reminder: this is a file-listing audit, NOT an enrollment record. Cross-reference the CSV against your enrollment list before treating any count here as the final cohort.
+
+[cohort_file_type_audit] wrote cohort_file_type_audit.csv

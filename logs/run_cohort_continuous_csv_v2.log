@@ -1,0 +1,954 @@
+[run_csv_continuous] config_hash=1369195d89561183 git_sha=2a1f9e6980392ab51d447f5853a2278e06d167b2
+[run_csv_continuous] ica.enabled=True -> run_dir=C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica
+[run_csv_continuous] found 76/76 recordings under C:\Data\LivingLab_PD
+[provenance] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\provenance.json
+
+[run_csv_continuous] === (1/76) sub-34-a (A) ===
+[stage1a] sub-34-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-34-a: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 1/18 total (iclabel=[], eog-frontal-corr=[1])
+[stage1a] sub-34-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-34-a: PSD OK | pass1-40=1.01 low<0.3=0.178 high>75.0=0.0466 notch@50.0=1.02
+[stage6-continuous] sub-34-a: 684 windows (342 non-overlap subset) over whole recording [0,685215), shape (18, 2000)
+[stage7] sub-34-a: y_cond=0 (A), t_cont 5.0..3420.0s, cont_valid=True
+[stage8] sub-34-a: rejection disabled, kept all 684
+[stage9] sub-34-a: wrote 684 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-34
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-34-a.json
+[run_csv_continuous] sub-34-a: done in 47.3s, 684 windows
+
+[run_csv_continuous] === (2/76) sub-34-c (C) ===
+[stage1a] sub-34-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-34-c: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 5/18 total (iclabel=[1, 4, 6, 14], eog-frontal-corr=[3])
+[stage1a] sub-34-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-34-c: PSD OK | pass1-40=0.81 low<0.3=0.096 high>75.0=0.0481 notch@50.0=0.86
+[stage6-continuous] sub-34-c: 98 windows (49 non-overlap subset) over whole recording [0,99269), shape (18, 2000)
+[stage7] sub-34-c: y_cond=1 (C), t_cont 5.0..490.0s, cont_valid=True
+[stage8] sub-34-c: rejection disabled, kept all 98
+[stage9] sub-34-c: wrote 98 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-34
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-34-c.json
+[run_csv_continuous] sub-34-c: done in 13.7s, 98 windows
+
+[run_csv_continuous] === (3/76) sub-48-a (A) ===
+[csv_signal] sub-48-a: WARNING dropping 1/466159 non-finite row(s) (benign truncated-line artifact) from C:\Data\LivingLab_PD\sub-48-a\eeg\living-lab-tasks\sub-48-a_raw.csv
+[stage1a] sub-48-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-48-a: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 2/18 total (iclabel=[], eog-frontal-corr=[1, 3])
+[csv_signal] sub-48-a: WARNING dropping 1/466159 non-finite row(s) (benign truncated-line artifact) from C:\Data\LivingLab_PD\sub-48-a\eeg\living-lab-tasks\sub-48-a_raw.csv
+[stage1a] sub-48-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-48-a: PSD OK | pass1-40=0.90 low<0.3=0.185 high>75.0=0.0474 notch@50.0=0.95
+[stage6-continuous] sub-48-a: 309 windows (155 non-overlap subset) over whole recording [0,310772), shape (18, 2000)
+[stage7] sub-48-a: y_cond=0 (A), t_cont 5.0..1545.0s, cont_valid=True
+[stage8] sub-48-a: rejection disabled, kept all 309
+[stage9] sub-48-a: wrote 309 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-48
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-48-a.json
+[run_csv_continuous] sub-48-a: done in 24.3s, 309 windows
+
+[run_csv_continuous] === (4/76) sub-48-c (C) ===
+[csv_signal] sub-48-c: WARNING dropping 1/315260 non-finite row(s) (benign truncated-line artifact) from C:\Data\LivingLab_PD\sub-48-c\eeg\living-lab-tasks\sub-48-c_raw.csv
+[stage1a] sub-48-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-48-c: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 2/18 total (iclabel=[10], eog-frontal-corr=[5])
+[csv_signal] sub-48-c: WARNING dropping 1/315260 non-finite row(s) (benign truncated-line artifact) from C:\Data\LivingLab_PD\sub-48-c\eeg\living-lab-tasks\sub-48-c_raw.csv
+[stage1a] sub-48-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-48-c: PSD OK | pass1-40=0.77 low<0.3=0.164 high>75.0=0.0395 notch@50.0=1.09
+[stage6-continuous] sub-48-c: 209 windows (105 non-overlap subset) over whole recording [0,210173), shape (18, 2000)
+[stage7] sub-48-c: y_cond=1 (C), t_cont 5.0..1045.0s, cont_valid=True
+[stage8] sub-48-c: rejection disabled, kept all 209
+[stage9] sub-48-c: wrote 209 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-48
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-48-c.json
+[run_csv_continuous] sub-48-c: done in 19.8s, 209 windows
+
+[run_csv_continuous] === (5/76) sub-51-a (A) ===
+[stage1a] sub-51-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-51-a: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 2/18 total (iclabel=[], eog-frontal-corr=[1, 5])
+[stage1a] sub-51-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-51-a: PSD OK | pass1-40=0.50 low<0.3=0.163 high>75.0=0.0242 notch@50.0=0.97
+[stage6-continuous] sub-51-a: 830 windows (415 non-overlap subset) over whole recording [0,831253), shape (18, 2000)
+[stage7] sub-51-a: y_cond=0 (A), t_cont 5.0..4150.0s, cont_valid=True
+[stage8] sub-51-a: rejection disabled, kept all 830
+[stage9] sub-51-a: wrote 830 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-51
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-51-a.json
+[run_csv_continuous] sub-51-a: done in 50.7s, 830 windows
+
+[run_csv_continuous] === (6/76) sub-51-c (C) ===
+[stage1a] sub-51-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-51-c: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 1/18 total (iclabel=[], eog-frontal-corr=[0])
+[stage1a] sub-51-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-51-c: PSD WARN | pass1-40=0.17 low<0.3=0.205 high>75.0=0.0281 notch@50.0=2.32
+[stage4] WARNING: sub-51-c PSD fingerprint off expected (check C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\psd\sub-51-c.png)
+[stage6-continuous] sub-51-c: 327 windows (164 non-overlap subset) over whole recording [0,328670), shape (18, 2000)
+[stage7] sub-51-c: y_cond=1 (C), t_cont 5.0..1635.0s, cont_valid=True
+[stage8] sub-51-c: rejection disabled, kept all 327
+[stage9] sub-51-c: wrote 327 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-51
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-51-c.json
+[run_csv_continuous] sub-51-c: done in 26.0s, 327 windows
+
+[run_csv_continuous] === (7/76) sub-53-a (A) ===
+[stage1a] sub-53-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-53-a: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 3/18 total (iclabel=[10], eog-frontal-corr=[0, 2])
+[stage1a] sub-53-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-53-a: PSD OK | pass1-40=0.97 low<0.3=0.188 high>75.0=0.0538 notch@50.0=0.92
+[stage6-continuous] sub-53-a: 545 windows (273 non-overlap subset) over whole recording [0,546558), shape (18, 2000)
+[stage7] sub-53-a: y_cond=0 (A), t_cont 5.0..2725.0s, cont_valid=True
+[stage8] sub-53-a: rejection disabled, kept all 545
+[stage9] sub-53-a: wrote 545 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-53
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-53-a.json
+[run_csv_continuous] sub-53-a: done in 37.8s, 545 windows
+
+[run_csv_continuous] === (8/76) sub-53-c (C) ===
+[stage1a] sub-53-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-53-c: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 3/18 total (iclabel=[], eog-frontal-corr=[0, 1, 3])
+[stage1a] sub-53-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-53-c: PSD WARN | pass1-40=0.18 low<0.3=0.099 high>75.0=0.0046 notch@50.0=1.19
+[stage4] WARNING: sub-53-c PSD fingerprint off expected (check C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\psd\sub-53-c.png)
+[stage6-continuous] sub-53-c: 265 windows (133 non-overlap subset) over whole recording [0,266204), shape (18, 2000)
+[stage7] sub-53-c: y_cond=1 (C), t_cont 5.0..1325.0s, cont_valid=True
+[stage8] sub-53-c: rejection disabled, kept all 265
+[stage9] sub-53-c: wrote 265 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-53
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-53-c.json
+[run_csv_continuous] sub-53-c: done in 25.3s, 265 windows
+
+[run_csv_continuous] === (9/76) sub-62-a (A) ===
+[stage1a] sub-62-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-62-a: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 2/18 total (iclabel=[], eog-frontal-corr=[11, 17])
+[stage1a] sub-62-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-62-a: PSD OK | pass1-40=0.99 low<0.3=0.236 high>75.0=0.0514 notch@50.0=0.82
+[stage6-continuous] sub-62-a: 398 windows (199 non-overlap subset) over whole recording [0,399558), shape (18, 2000)
+[stage7] sub-62-a: y_cond=0 (A), t_cont 5.0..1990.0s, cont_valid=True
+[stage8] sub-62-a: rejection disabled, kept all 398
+[stage9] sub-62-a: wrote 398 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-62
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-62-a.json
+[run_csv_continuous] sub-62-a: done in 31.9s, 398 windows
+
+[run_csv_continuous] === (10/76) sub-62-c (C) ===
+[stage1a] sub-62-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-62-c: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 2/18 total (iclabel=[], eog-frontal-corr=[8, 13])
+[stage1a] sub-62-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-62-c: PSD OK | pass1-40=0.94 low<0.3=0.244 high>75.0=0.0411 notch@50.0=1.45
+[stage6-continuous] sub-62-c: 438 windows (219 non-overlap subset) over whole recording [0,439172), shape (18, 2000)
+[stage7] sub-62-c: y_cond=1 (C), t_cont 5.0..2190.0s, cont_valid=True
+[stage8] sub-62-c: rejection disabled, kept all 438
+[stage9] sub-62-c: wrote 438 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-62
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-62-c.json
+[run_csv_continuous] sub-62-c: done in 32.4s, 438 windows
+
+[run_csv_continuous] === (11/76) sub-69-a (A) ===
+[stage1a] sub-69-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-69-a: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 2/18 total (iclabel=[], eog-frontal-corr=[3, 16])
+[stage1a] sub-69-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-69-a: PSD OK | pass1-40=0.99 low<0.3=0.193 high>75.0=0.0505 notch@50.0=1.00
+[stage6-continuous] sub-69-a: 412 windows (206 non-overlap subset) over whole recording [0,413044), shape (18, 2000)
+[stage7] sub-69-a: y_cond=0 (A), t_cont 5.0..2060.0s, cont_valid=True
+[stage8] sub-69-a: rejection disabled, kept all 412
+[stage9] sub-69-a: wrote 412 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-69
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-69-a.json
+[run_csv_continuous] sub-69-a: done in 38.6s, 412 windows
+
+[run_csv_continuous] === (12/76) sub-69-c (C) ===
+[stage1a] sub-69-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-69-c: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 2/18 total (iclabel=[1], eog-frontal-corr=[0])
+[stage1a] sub-69-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-69-c: PSD WARN | pass1-40=0.40 low<0.3=0.222 high>75.0=0.0122 notch@50.0=4.38
+[stage4] WARNING: sub-69-c PSD fingerprint off expected (check C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\psd\sub-69-c.png)
+[stage6-continuous] sub-69-c: 334 windows (167 non-overlap subset) over whole recording [0,335271), shape (18, 2000)
+[stage7] sub-69-c: y_cond=1 (C), t_cont 5.0..1670.0s, cont_valid=True
+[stage8] sub-69-c: rejection disabled, kept all 334
+[stage9] sub-69-c: wrote 334 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-69
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-69-c.json
+[run_csv_continuous] sub-69-c: done in 24.8s, 334 windows
+
+[run_csv_continuous] === (13/76) sub-71-a (A) ===
+[stage1a] sub-71-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-71-a: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 1/18 total (iclabel=[], eog-frontal-corr=[10])
+[stage1a] sub-71-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-71-a: PSD WARN | pass1-40=0.99 low<0.3=0.258 high>75.0=0.0502 notch@50.0=7.81
+[stage4] WARNING: sub-71-a PSD fingerprint off expected (check C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\psd\sub-71-a.png)
+[stage6-continuous] sub-71-a: 272 windows (136 non-overlap subset) over whole recording [0,273079), shape (18, 2000)
+[stage7] sub-71-a: y_cond=0 (A), t_cont 5.0..1360.0s, cont_valid=True
+[stage8] sub-71-a: rejection disabled, kept all 272
+[stage9] sub-71-a: wrote 272 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-71
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-71-a.json
+[run_csv_continuous] sub-71-a: done in 21.3s, 272 windows
+
+[run_csv_continuous] === (14/76) sub-71-c (C) ===
+[stage1a] sub-71-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-71-c: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 2/18 total (iclabel=[], eog-frontal-corr=[7, 9])
+[stage1a] sub-71-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-71-c: PSD WARN | pass1-40=1.00 low<0.3=0.259 high>75.0=0.0519 notch@50.0=4.22
+[stage4] WARNING: sub-71-c PSD fingerprint off expected (check C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\psd\sub-71-c.png)
+[stage6-continuous] sub-71-c: 478 windows (239 non-overlap subset) over whole recording [0,479933), shape (18, 2000)
+[stage7] sub-71-c: y_cond=1 (C), t_cont 5.0..2390.0s, cont_valid=True
+[stage8] sub-71-c: rejection disabled, kept all 478
+[stage9] sub-71-c: wrote 478 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-71
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-71-c.json
+[run_csv_continuous] sub-71-c: done in 34.9s, 478 windows
+
+[run_csv_continuous] === (15/76) sub-72-a (A) ===
+[stage1a] sub-72-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-72-a: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 2/18 total (iclabel=[], eog-frontal-corr=[8, 10])
+[stage1a] sub-72-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-72-a: PSD OK | pass1-40=0.98 low<0.3=0.233 high>75.0=0.0495 notch@50.0=1.11
+[stage6-continuous] sub-72-a: 532 windows (266 non-overlap subset) over whole recording [0,533945), shape (18, 2000)
+[stage7] sub-72-a: y_cond=0 (A), t_cont 5.0..2660.0s, cont_valid=True
+[stage8] sub-72-a: rejection disabled, kept all 532
+[stage9] sub-72-a: wrote 532 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-72
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-72-a.json
+[run_csv_continuous] sub-72-a: done in 35.6s, 532 windows
+
+[run_csv_continuous] === (16/76) sub-72-c (C) ===
+[stage1a] sub-72-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-72-c: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 2/18 total (iclabel=[7], eog-frontal-corr=[6])
+[stage1a] sub-72-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-72-c: PSD OK | pass1-40=0.53 low<0.3=0.234 high>75.0=0.0320 notch@50.0=0.96
+[stage6-continuous] sub-72-c: 667 windows (334 non-overlap subset) over whole recording [0,668009), shape (18, 2000)
+[stage7] sub-72-c: y_cond=1 (C), t_cont 5.0..3335.0s, cont_valid=True
+[stage8] sub-72-c: rejection disabled, kept all 667
+[stage9] sub-72-c: wrote 667 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-72
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-72-c.json
+[run_csv_continuous] sub-72-c: done in 46.4s, 667 windows
+
+[run_csv_continuous] === (17/76) sub-73-a (A) ===
+[stage1a] sub-73-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-73-a: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 2/18 total (iclabel=[], eog-frontal-corr=[8, 12])
+[stage1a] sub-73-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-73-a: PSD OK | pass1-40=0.80 low<0.3=0.245 high>75.0=0.0387 notch@50.0=0.95
+[stage6-continuous] sub-73-a: 457 windows (229 non-overlap subset) over whole recording [0,458880), shape (18, 2000)
+[stage7] sub-73-a: y_cond=0 (A), t_cont 5.0..2285.0s, cont_valid=True
+[stage8] sub-73-a: rejection disabled, kept all 457
+[stage9] sub-73-a: wrote 457 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-73
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-73-a.json
+[run_csv_continuous] sub-73-a: done in 33.8s, 457 windows
+
+[run_csv_continuous] === (18/76) sub-73-c (C) ===
+[stage1a] sub-73-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-73-c: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 1/18 total (iclabel=[], eog-frontal-corr=[0])
+[stage1a] sub-73-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-73-c: PSD WARN | pass1-40=0.01 low<0.3=0.131 high>75.0=0.0005 notch@50.0=0.99
+[stage4] WARNING: sub-73-c PSD fingerprint off expected (check C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\psd\sub-73-c.png)
+[stage6-continuous] sub-73-c: 701 windows (351 non-overlap subset) over whole recording [0,702999), shape (18, 2000)
+[stage7] sub-73-c: y_cond=1 (C), t_cont 5.0..3505.0s, cont_valid=True
+[stage8] sub-73-c: rejection disabled, kept all 701
+[stage9] sub-73-c: wrote 701 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-73
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-73-c.json
+[run_csv_continuous] sub-73-c: done in 46.1s, 701 windows
+
+[run_csv_continuous] === (19/76) sub-76-a (A) ===
+[stage1a] sub-76-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-76-a: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 3/18 total (iclabel=[6, 12], eog-frontal-corr=[1])
+[stage1a] sub-76-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-76-a: PSD OK | pass1-40=0.93 low<0.3=0.199 high>75.0=0.0507 notch@50.0=1.01
+[stage6-continuous] sub-76-a: 783 windows (392 non-overlap subset) over whole recording [0,784341), shape (18, 2000)
+[stage7] sub-76-a: y_cond=0 (A), t_cont 5.0..3915.0s, cont_valid=True
+[stage8] sub-76-a: rejection disabled, kept all 783
+[stage9] sub-76-a: wrote 783 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-76
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-76-a.json
+[run_csv_continuous] sub-76-a: done in 50.7s, 783 windows
+
+[run_csv_continuous] === (20/76) sub-76-c (C) ===
+[stage1a] sub-76-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-76-c: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 3/18 total (iclabel=[4, 15], eog-frontal-corr=[1])
+[stage1a] sub-76-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-76-c: PSD OK | pass1-40=0.53 low<0.3=0.193 high>75.0=0.0286 notch@50.0=0.95
+[stage6-continuous] sub-76-c: 622 windows (311 non-overlap subset) over whole recording [0,623758), shape (18, 2000)
+[stage7] sub-76-c: y_cond=1 (C), t_cont 5.0..3110.0s, cont_valid=True
+[stage8] sub-76-c: rejection disabled, kept all 622
+[stage9] sub-76-c: wrote 622 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-76
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-76-c.json
+[run_csv_continuous] sub-76-c: done in 39.7s, 622 windows
+
+[run_csv_continuous] === (21/76) sub-77-a (A) ===
+[stage1a] sub-77-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-77-a: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 4/18 total (iclabel=[7, 11], eog-frontal-corr=[4, 6])
+[stage1a] sub-77-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-77-a: PSD OK | pass1-40=0.87 low<0.3=0.165 high>75.0=0.0423 notch@50.0=0.97
+[stage6-continuous] sub-77-a: 612 windows (306 non-overlap subset) over whole recording [0,613395), shape (18, 2000)
+[stage7] sub-77-a: y_cond=0 (A), t_cont 5.0..3060.0s, cont_valid=True
+[stage8] sub-77-a: rejection disabled, kept all 612
+[stage9] sub-77-a: wrote 612 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-77
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-77-a.json
+[run_csv_continuous] sub-77-a: done in 40.8s, 612 windows
+
+[run_csv_continuous] === (22/76) sub-77-c (C) ===
+[stage1a] sub-77-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-77-c: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 3/18 total (iclabel=[7, 17], eog-frontal-corr=[1])
+[stage1a] sub-77-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-77-c: PSD OK | pass1-40=0.64 low<0.3=0.144 high>75.0=0.0343 notch@50.0=1.01
+[stage6-continuous] sub-77-c: 444 windows (222 non-overlap subset) over whole recording [0,445635), shape (18, 2000)
+[stage7] sub-77-c: y_cond=1 (C), t_cont 5.0..2220.0s, cont_valid=True
+[stage8] sub-77-c: rejection disabled, kept all 444
+[stage9] sub-77-c: wrote 444 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-77
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-77-c.json
+[run_csv_continuous] sub-77-c: done in 32.0s, 444 windows
+
+[run_csv_continuous] === (23/76) sub-80-a (A) ===
+[stage1a] sub-80-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-80-a: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 3/18 total (iclabel=[14], eog-frontal-corr=[10, 11])
+[stage1a] sub-80-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-80-a: PSD WARN | pass1-40=0.96 low<0.3=0.206 high>75.0=0.0476 notch@50.0=6.70
+[stage4] WARNING: sub-80-a PSD fingerprint off expected (check C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\psd\sub-80-a.png)
+[stage6-continuous] sub-80-a: 694 windows (347 non-overlap subset) over whole recording [0,695694), shape (18, 2000)
+[stage7] sub-80-a: y_cond=0 (A), t_cont 5.0..3470.0s, cont_valid=True
+[stage8] sub-80-a: rejection disabled, kept all 694
+[stage9] sub-80-a: wrote 694 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-80
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-80-a.json
+[run_csv_continuous] sub-80-a: done in 45.8s, 694 windows
+
+[run_csv_continuous] === (24/76) sub-80-c (C) ===
+[stage1a] sub-80-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-80-c: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 4/18 total (iclabel=[9, 17], eog-frontal-corr=[5, 8])
+[stage1a] sub-80-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-80-c: PSD WARN | pass1-40=0.91 low<0.3=0.184 high>75.0=0.0532 notch@50.0=5.05
+[stage4] WARNING: sub-80-c PSD fingerprint off expected (check C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\psd\sub-80-c.png)
+[stage6-continuous] sub-80-c: 415 windows (208 non-overlap subset) over whole recording [0,416423), shape (18, 2000)
+[stage7] sub-80-c: y_cond=1 (C), t_cont 5.0..2075.0s, cont_valid=True
+[stage8] sub-80-c: rejection disabled, kept all 415
+[stage9] sub-80-c: wrote 415 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-80
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-80-c.json
+[run_csv_continuous] sub-80-c: done in 30.9s, 415 windows
+
+[run_csv_continuous] === (25/76) sub-81-a (A) ===
+[stage1a] sub-81-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-81-a: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 1/18 total (iclabel=[], eog-frontal-corr=[7])
+[stage1a] sub-81-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-81-a: PSD OK | pass1-40=0.84 low<0.3=0.246 high>75.0=0.0348 notch@50.0=1.04
+[stage6-continuous] sub-81-a: 576 windows (288 non-overlap subset) over whole recording [0,577156), shape (18, 2000)
+[stage7] sub-81-a: y_cond=0 (A), t_cont 5.0..2880.0s, cont_valid=True
+[stage8] sub-81-a: rejection disabled, kept all 576
+[stage9] sub-81-a: wrote 576 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-81
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-81-a.json
+[run_csv_continuous] sub-81-a: done in 37.3s, 576 windows
+
+[run_csv_continuous] === (26/76) sub-81-c (C) ===
+[stage1a] sub-81-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-81-c: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 1/18 total (iclabel=[], eog-frontal-corr=[10])
+[stage1a] sub-81-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-81-c: PSD OK | pass1-40=0.94 low<0.3=0.217 high>75.0=0.0494 notch@50.0=0.93
+[stage6-continuous] sub-81-c: 588 windows (294 non-overlap subset) over whole recording [0,589427), shape (18, 2000)
+[stage7] sub-81-c: y_cond=1 (C), t_cont 5.0..2940.0s, cont_valid=True
+[stage8] sub-81-c: rejection disabled, kept all 588
+[stage9] sub-81-c: wrote 588 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-81
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-81-c.json
+[run_csv_continuous] sub-81-c: done in 37.8s, 588 windows
+
+[run_csv_continuous] === (27/76) sub-84-a (A) ===
+[stage1a] sub-84-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-84-a: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 2/18 total (iclabel=[17], eog-frontal-corr=[1])
+[stage1a] sub-84-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-84-a: PSD OK | pass1-40=0.90 low<0.3=0.151 high>75.0=0.0509 notch@50.0=0.94
+[stage6-continuous] sub-84-a: 925 windows (463 non-overlap subset) over whole recording [0,926677), shape (18, 2000)
+[stage7] sub-84-a: y_cond=0 (A), t_cont 5.0..4625.0s, cont_valid=True
+[stage8] sub-84-a: rejection disabled, kept all 925
+[stage9] sub-84-a: wrote 925 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-84
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-84-a.json
+[run_csv_continuous] sub-84-a: done in 63.7s, 925 windows
+
+[run_csv_continuous] === (28/76) sub-84-c (C) ===
+[stage1a] sub-84-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-84-c: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 5/18 total (iclabel=[1], eog-frontal-corr=[0, 2, 4, 9])
+[stage1a] sub-84-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-84-c: PSD WARN | pass1-40=0.14 low<0.3=0.106 high>75.0=0.0048 notch@50.0=1.69
+[stage4] WARNING: sub-84-c PSD fingerprint off expected (check C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\psd\sub-84-c.png)
+[stage6-continuous] sub-84-c: 486 windows (243 non-overlap subset) over whole recording [0,487086), shape (18, 2000)
+[stage7] sub-84-c: y_cond=1 (C), t_cont 5.0..2430.0s, cont_valid=True
+[stage8] sub-84-c: rejection disabled, kept all 486
+[stage9] sub-84-c: wrote 486 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-84
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-84-c.json
+[run_csv_continuous] sub-84-c: done in 30.9s, 486 windows
+
+[run_csv_continuous] === (29/76) sub-90-a (A) ===
+[stage1a] sub-90-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-90-a: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 3/18 total (iclabel=[], eog-frontal-corr=[0, 2, 12])
+[stage1a] sub-90-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-90-a: PSD WARN | pass1-40=0.03 low<0.3=0.102 high>75.0=0.0218 notch@50.0=0.97
+[stage4] WARNING: sub-90-a PSD fingerprint off expected (check C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\psd\sub-90-a.png)
+[stage6-continuous] sub-90-a: 377 windows (189 non-overlap subset) over whole recording [0,378541), shape (18, 2000)
+[stage7] sub-90-a: y_cond=0 (A), t_cont 5.0..1885.0s, cont_valid=True
+[stage8] sub-90-a: rejection disabled, kept all 377
+[stage9] sub-90-a: wrote 377 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-90
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-90-a.json
+[run_csv_continuous] sub-90-a: done in 30.7s, 377 windows
+
+[run_csv_continuous] === (30/76) sub-90-c (C) ===
+[stage1a] sub-90-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-90-c: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 2/18 total (iclabel=[7], eog-frontal-corr=[4])
+[stage1a] sub-90-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-90-c: PSD OK | pass1-40=0.78 low<0.3=0.194 high>75.0=0.0394 notch@50.0=0.98
+[stage6-continuous] sub-90-c: 637 windows (319 non-overlap subset) over whole recording [0,638228), shape (18, 2000)
+[stage7] sub-90-c: y_cond=1 (C), t_cont 5.0..3185.0s, cont_valid=True
+[stage8] sub-90-c: rejection disabled, kept all 637
+[stage9] sub-90-c: wrote 637 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-90
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-90-c.json
+[run_csv_continuous] sub-90-c: done in 40.9s, 637 windows
+
+[run_csv_continuous] === (31/76) sub-92-a (A) ===
+[stage1a] sub-92-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-92-a: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 5/18 total (iclabel=[7, 10, 16], eog-frontal-corr=[12, 13])
+[stage1a] sub-92-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-92-a: PSD OK | pass1-40=1.00 low<0.3=0.304 high>75.0=0.0583 notch@50.0=1.61
+[stage6-continuous] sub-92-a: 472 windows (236 non-overlap subset) over whole recording [0,473801), shape (18, 2000)
+[stage7] sub-92-a: y_cond=0 (A), t_cont 5.0..2360.0s, cont_valid=True
+[stage8] sub-92-a: rejection disabled, kept all 472
+[stage9] sub-92-a: wrote 472 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-92
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-92-a.json
+[run_csv_continuous] sub-92-a: done in 49.2s, 472 windows
+
+[run_csv_continuous] === (32/76) sub-92-c (C) ===
+[stage1a] sub-92-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-92-c: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 3/18 total (iclabel=[], eog-frontal-corr=[9, 10, 13])
+[stage1a] sub-92-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-92-c: PSD OK | pass1-40=0.92 low<0.3=0.191 high>75.0=0.0481 notch@50.0=0.98
+[stage6-continuous] sub-92-c: 483 windows (242 non-overlap subset) over whole recording [0,484068), shape (18, 2000)
+[stage7] sub-92-c: y_cond=1 (C), t_cont 5.0..2415.0s, cont_valid=True
+[stage8] sub-92-c: rejection disabled, kept all 483
+[stage9] sub-92-c: wrote 483 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-92
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-92-c.json
+[run_csv_continuous] sub-92-c: done in 39.6s, 483 windows
+
+[run_csv_continuous] === (33/76) sub-93-a (A) ===
+[stage1a] sub-93-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-93-a: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 5/18 total (iclabel=[5, 9], eog-frontal-corr=[6, 11, 12])
+[stage1a] sub-93-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-93-a: PSD WARN | pass1-40=0.38 low<0.3=0.181 high>75.0=0.0315 notch@50.0=0.95
+[stage4] WARNING: sub-93-a PSD fingerprint off expected (check C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\psd\sub-93-a.png)
+[stage6-continuous] sub-93-a: 805 windows (403 non-overlap subset) over whole recording [0,806167), shape (18, 2000)
+[stage7] sub-93-a: y_cond=0 (A), t_cont 5.0..4025.0s, cont_valid=True
+[stage8] sub-93-a: rejection disabled, kept all 805
+[stage9] sub-93-a: wrote 805 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-93
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-93-a.json
+[run_csv_continuous] sub-93-a: done in 52.2s, 805 windows
+
+[run_csv_continuous] === (34/76) sub-93-c (C) ===
+[stage1a] sub-93-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-93-c: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 2/18 total (iclabel=[], eog-frontal-corr=[7, 9])
+[stage1a] sub-93-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-93-c: PSD OK | pass1-40=0.97 low<0.3=0.183 high>75.0=0.0519 notch@50.0=0.93
+[stage6-continuous] sub-93-c: 596 windows (298 non-overlap subset) over whole recording [0,597229), shape (18, 2000)
+[stage7] sub-93-c: y_cond=1 (C), t_cont 5.0..2980.0s, cont_valid=True
+[stage8] sub-93-c: rejection disabled, kept all 596
+[stage9] sub-93-c: wrote 596 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-93
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-93-c.json
+[run_csv_continuous] sub-93-c: done in 41.5s, 596 windows
+
+[run_csv_continuous] === (35/76) sub-94-a (A) ===
+[stage1a] sub-94-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-94-a: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 3/18 total (iclabel=[17], eog-frontal-corr=[5, 8])
+[stage1a] sub-94-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-94-a: PSD OK | pass1-40=0.94 low<0.3=0.192 high>75.0=0.0491 notch@50.0=1.01
+[stage6-continuous] sub-94-a: 575 windows (288 non-overlap subset) over whole recording [0,576575), shape (18, 2000)
+[stage7] sub-94-a: y_cond=0 (A), t_cont 5.0..2875.0s, cont_valid=True
+[stage8] sub-94-a: rejection disabled, kept all 575
+[stage9] sub-94-a: wrote 575 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-94
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-94-a.json
+[run_csv_continuous] sub-94-a: done in 37.1s, 575 windows
+
+[run_csv_continuous] === (36/76) sub-94-c (C) ===
+[stage1a] sub-94-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-94-c: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 1/18 total (iclabel=[], eog-frontal-corr=[5])
+[stage1a] sub-94-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-94-c: PSD OK | pass1-40=0.98 low<0.3=0.150 high>75.0=0.0511 notch@50.0=0.98
+[stage6-continuous] sub-94-c: 594 windows (297 non-overlap subset) over whole recording [0,595983), shape (18, 2000)
+[stage7] sub-94-c: y_cond=1 (C), t_cont 5.0..2970.0s, cont_valid=True
+[stage8] sub-94-c: rejection disabled, kept all 594
+[stage9] sub-94-c: wrote 594 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-94
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-94-c.json
+[run_csv_continuous] sub-94-c: done in 40.5s, 594 windows
+
+[run_csv_continuous] === (37/76) sub-96-a (A) ===
+[stage1a] sub-96-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-96-a: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 4/18 total (iclabel=[13], eog-frontal-corr=[6, 8, 11])
+[stage1a] sub-96-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-96-a: PSD OK | pass1-40=0.92 low<0.3=0.158 high>75.0=0.0485 notch@50.0=0.96
+[stage6-continuous] sub-96-a: 420 windows (210 non-overlap subset) over whole recording [0,421609), shape (18, 2000)
+[stage7] sub-96-a: y_cond=0 (A), t_cont 5.0..2100.0s, cont_valid=True
+[stage8] sub-96-a: rejection disabled, kept all 420
+[stage9] sub-96-a: wrote 420 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-96
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-96-a.json
+[run_csv_continuous] sub-96-a: done in 29.2s, 420 windows
+
+[run_csv_continuous] === (38/76) sub-96-c (C) ===
+[stage1a] sub-96-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-96-c: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 4/18 total (iclabel=[], eog-frontal-corr=[4, 9, 10, 16])
+[stage1a] sub-96-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-96-c: PSD OK | pass1-40=0.90 low<0.3=0.302 high>75.0=0.0596 notch@50.0=1.04
+[stage6-continuous] sub-96-c: 393 windows (197 non-overlap subset) over whole recording [0,394724), shape (18, 2000)
+[stage7] sub-96-c: y_cond=1 (C), t_cont 5.0..1965.0s, cont_valid=True
+[stage8] sub-96-c: rejection disabled, kept all 393
+[stage9] sub-96-c: wrote 393 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-96
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-96-c.json
+[run_csv_continuous] sub-96-c: done in 50.4s, 393 windows
+
+[run_csv_continuous] === (39/76) sub-97-a (A) ===
+[stage1a] sub-97-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-97-a: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 3/18 total (iclabel=[], eog-frontal-corr=[8, 9, 13])
+[stage1a] sub-97-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-97-a: PSD OK | pass1-40=1.00 low<0.3=0.282 high>75.0=0.0511 notch@50.0=1.63
+[stage6-continuous] sub-97-a: 473 windows (237 non-overlap subset) over whole recording [0,474649), shape (18, 2000)
+[stage7] sub-97-a: y_cond=0 (A), t_cont 5.0..2365.0s, cont_valid=True
+[stage8] sub-97-a: rejection disabled, kept all 473
+[stage9] sub-97-a: wrote 473 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-97
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-97-a.json
+[run_csv_continuous] sub-97-a: done in 41.7s, 473 windows
+
+[run_csv_continuous] === (40/76) sub-97-c (C) ===
+[stage1a] sub-97-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-97-c: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 2/18 total (iclabel=[], eog-frontal-corr=[6, 14])
+[stage1a] sub-97-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-97-c: PSD OK | pass1-40=1.00 low<0.3=0.228 high>75.0=0.0523 notch@50.0=1.37
+[stage6-continuous] sub-97-c: 227 windows (114 non-overlap subset) over whole recording [0,228091), shape (18, 2000)
+[stage7] sub-97-c: y_cond=1 (C), t_cont 5.0..1135.0s, cont_valid=True
+[stage8] sub-97-c: rejection disabled, kept all 227
+[stage9] sub-97-c: wrote 227 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-97
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-97-c.json
+[run_csv_continuous] sub-97-c: done in 23.4s, 227 windows
+
+[run_csv_continuous] === (41/76) sub-98-a (A) ===
+[stage1a] sub-98-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-98-a: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 1/18 total (iclabel=[], eog-frontal-corr=[4])
+[stage1a] sub-98-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-98-a: PSD OK | pass1-40=0.95 low<0.3=0.197 high>75.0=0.0513 notch@50.0=0.97
+[stage6-continuous] sub-98-a: 470 windows (235 non-overlap subset) over whole recording [0,471286), shape (18, 2000)
+[stage7] sub-98-a: y_cond=0 (A), t_cont 5.0..2350.0s, cont_valid=True
+[stage8] sub-98-a: rejection disabled, kept all 470
+[stage9] sub-98-a: wrote 470 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-98
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-98-a.json
+[run_csv_continuous] sub-98-a: done in 40.3s, 470 windows
+
+[run_csv_continuous] === (42/76) sub-98-c (C) ===
+[stage1a] sub-98-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-98-c: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 3/18 total (iclabel=[], eog-frontal-corr=[7, 8, 9])
+[stage1a] sub-98-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-98-c: PSD OK | pass1-40=0.87 low<0.3=0.158 high>75.0=0.0468 notch@50.0=0.91
+[stage6-continuous] sub-98-c: 440 windows (220 non-overlap subset) over whole recording [0,441511), shape (18, 2000)
+[stage7] sub-98-c: y_cond=1 (C), t_cont 5.0..2200.0s, cont_valid=True
+[stage8] sub-98-c: rejection disabled, kept all 440
+[stage9] sub-98-c: wrote 440 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-98
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-98-c.json
+[run_csv_continuous] sub-98-c: done in 33.7s, 440 windows
+
+[run_csv_continuous] === (43/76) sub-99-a (A) ===
+[stage1a] sub-99-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-99-a: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 2/18 total (iclabel=[15], eog-frontal-corr=[0])
+[stage1a] sub-99-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-99-a: PSD WARN | pass1-40=0.05 low<0.3=0.135 high>75.0=0.0135 notch@50.0=0.93
+[stage4] WARNING: sub-99-a PSD fingerprint off expected (check C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\psd\sub-99-a.png)
+[stage6-continuous] sub-99-a: 742 windows (371 non-overlap subset) over whole recording [0,743911), shape (18, 2000)
+[stage7] sub-99-a: y_cond=0 (A), t_cont 5.0..3710.0s, cont_valid=True
+[stage8] sub-99-a: rejection disabled, kept all 742
+[stage9] sub-99-a: wrote 742 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-99
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-99-a.json
+[run_csv_continuous] sub-99-a: done in 53.1s, 742 windows
+
+[run_csv_continuous] === (44/76) sub-99-c (C) ===
+[stage1a] sub-99-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-99-c: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 1/18 total (iclabel=[], eog-frontal-corr=[0])
+[stage1a] sub-99-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-99-c: PSD WARN | pass1-40=0.17 low<0.3=0.147 high>75.0=0.0278 notch@50.0=0.95
+[stage4] WARNING: sub-99-c PSD fingerprint off expected (check C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\psd\sub-99-c.png)
+[stage6-continuous] sub-99-c: 752 windows (376 non-overlap subset) over whole recording [0,753348), shape (18, 2000)
+[stage7] sub-99-c: y_cond=1 (C), t_cont 5.0..3760.0s, cont_valid=True
+[stage8] sub-99-c: rejection disabled, kept all 752
+[stage9] sub-99-c: wrote 752 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-99
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-99-c.json
+[run_csv_continuous] sub-99-c: done in 50.7s, 752 windows
+
+[run_csv_continuous] === (45/76) sub-103-a (A) ===
+[stage1a] sub-103-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-103-a: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 2/18 total (iclabel=[], eog-frontal-corr=[2, 8])
+[stage1a] sub-103-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-103-a: PSD WARN | pass1-40=0.14 low<0.3=0.177 high>75.0=0.0165 notch@50.0=0.96
+[stage4] WARNING: sub-103-a PSD fingerprint off expected (check C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\psd\sub-103-a.png)
+[stage6-continuous] sub-103-a: 819 windows (410 non-overlap subset) over whole recording [0,820424), shape (18, 2000)
+[stage7] sub-103-a: y_cond=0 (A), t_cont 5.0..4095.0s, cont_valid=True
+[stage8] sub-103-a: rejection disabled, kept all 819
+[stage9] sub-103-a: wrote 819 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-103
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-103-a.json
+[run_csv_continuous] sub-103-a: done in 51.7s, 819 windows
+
+[run_csv_continuous] === (46/76) sub-103-c (C) ===
+[stage1a] sub-103-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-103-c: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 4/18 total (iclabel=[15], eog-frontal-corr=[4, 8, 10])
+[stage1a] sub-103-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-103-c: PSD WARN | pass1-40=0.29 low<0.3=0.180 high>75.0=0.0229 notch@50.0=0.98
+[stage4] WARNING: sub-103-c PSD fingerprint off expected (check C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\psd\sub-103-c.png)
+[stage6-continuous] sub-103-c: 610 windows (305 non-overlap subset) over whole recording [0,611607), shape (18, 2000)
+[stage7] sub-103-c: y_cond=1 (C), t_cont 5.0..3050.0s, cont_valid=True
+[stage8] sub-103-c: rejection disabled, kept all 610
+[stage9] sub-103-c: wrote 610 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-103
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-103-c.json
+[run_csv_continuous] sub-103-c: done in 38.3s, 610 windows
+
+[run_csv_continuous] === (47/76) sub-105-a (A) ===
+[stage1a] sub-105-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-105-a: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 5/18 total (iclabel=[11, 15], eog-frontal-corr=[5, 8, 13])
+[stage1a] sub-105-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-105-a: PSD WARN | pass1-40=0.41 low<0.3=0.153 high>75.0=0.0230 notch@50.0=0.96
+[stage4] WARNING: sub-105-a PSD fingerprint off expected (check C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\psd\sub-105-a.png)
+[stage6-continuous] sub-105-a: 441 windows (221 non-overlap subset) over whole recording [0,442871), shape (18, 2000)
+[stage7] sub-105-a: y_cond=0 (A), t_cont 5.0..2205.0s, cont_valid=True
+[stage8] sub-105-a: rejection disabled, kept all 441
+[stage9] sub-105-a: wrote 441 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-105
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-105-a.json
+[run_csv_continuous] sub-105-a: done in 31.5s, 441 windows
+
+[run_csv_continuous] === (48/76) sub-105-c (C) ===
+[stage1a] sub-105-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-105-c: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 4/18 total (iclabel=[], eog-frontal-corr=[6, 8, 11, 15])
+[stage1a] sub-105-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-105-c: PSD WARN | pass1-40=0.41 low<0.3=0.168 high>75.0=0.0264 notch@50.0=0.96
+[stage4] WARNING: sub-105-c PSD fingerprint off expected (check C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\psd\sub-105-c.png)
+[stage6-continuous] sub-105-c: 409 windows (205 non-overlap subset) over whole recording [0,410134), shape (18, 2000)
+[stage7] sub-105-c: y_cond=1 (C), t_cont 5.0..2045.0s, cont_valid=True
+[stage8] sub-105-c: rejection disabled, kept all 409
+[stage9] sub-105-c: wrote 409 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-105
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-105-c.json
+[run_csv_continuous] sub-105-c: done in 29.5s, 409 windows
+
+[run_csv_continuous] === (49/76) sub-106-a (A) ===
+[stage1a] sub-106-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-106-a: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 1/18 total (iclabel=[], eog-frontal-corr=[0])
+[stage1a] sub-106-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-106-a: PSD WARN | pass1-40=0.00 low<0.3=0.000 high>75.0=0.0000 notch@50.0=1.32
+[stage4] WARNING: sub-106-a PSD fingerprint off expected (check C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\psd\sub-106-a.png)
+[stage6-continuous] sub-106-a: 637 windows (319 non-overlap subset) over whole recording [0,638902), shape (18, 2000)
+[stage7] sub-106-a: y_cond=0 (A), t_cont 5.0..3185.0s, cont_valid=True
+[stage8] sub-106-a: rejection disabled, kept all 637
+[stage9] sub-106-a: wrote 637 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-106
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-106-a.json
+[run_csv_continuous] sub-106-a: done in 39.9s, 637 windows
+
+[run_csv_continuous] === (50/76) sub-106-c (C) ===
+[stage1a] sub-106-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-106-c: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 2/18 total (iclabel=[12, 13], eog-frontal-corr=[12])
+[stage1a] sub-106-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-106-c: PSD WARN | pass1-40=1.00 low<0.3=0.243 high>75.0=0.0524 notch@50.0=2.17
+[stage4] WARNING: sub-106-c PSD fingerprint off expected (check C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\psd\sub-106-c.png)
+[stage6-continuous] sub-106-c: 383 windows (192 non-overlap subset) over whole recording [0,384615), shape (18, 2000)
+[stage7] sub-106-c: y_cond=1 (C), t_cont 5.0..1915.0s, cont_valid=True
+[stage8] sub-106-c: rejection disabled, kept all 383
+[stage9] sub-106-c: wrote 383 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-106
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-106-c.json
+[run_csv_continuous] sub-106-c: done in 31.4s, 383 windows
+
+[run_csv_continuous] === (51/76) sub-107-a (A) ===
+[stage1a] sub-107-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-107-a: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 2/18 total (iclabel=[16], eog-frontal-corr=[0])
+[stage1a] sub-107-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-107-a: PSD WARN | pass1-40=0.06 low<0.3=0.154 high>75.0=0.0144 notch@50.0=0.96
+[stage4] WARNING: sub-107-a PSD fingerprint off expected (check C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\psd\sub-107-a.png)
+[stage6-continuous] sub-107-a: 583 windows (292 non-overlap subset) over whole recording [0,584142), shape (18, 2000)
+[stage7] sub-107-a: y_cond=0 (A), t_cont 5.0..2915.0s, cont_valid=True
+[stage8] sub-107-a: rejection disabled, kept all 583
+[stage9] sub-107-a: wrote 583 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-107
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-107-a.json
+[run_csv_continuous] sub-107-a: done in 36.8s, 583 windows
+
+[run_csv_continuous] === (52/76) sub-107-c (C) ===
+[stage1a] sub-107-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-107-c: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 1/18 total (iclabel=[], eog-frontal-corr=[1])
+[stage1a] sub-107-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-107-c: PSD OK | pass1-40=0.97 low<0.3=0.303 high>75.0=0.0402 notch@50.0=1.56
+[stage6-continuous] sub-107-c: 326 windows (163 non-overlap subset) over whole recording [0,327542), shape (18, 2000)
+[stage7] sub-107-c: y_cond=1 (C), t_cont 5.0..1630.0s, cont_valid=True
+[stage8] sub-107-c: rejection disabled, kept all 326
+[stage9] sub-107-c: wrote 326 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-107
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-107-c.json
+[run_csv_continuous] sub-107-c: done in 32.4s, 326 windows
+
+[run_csv_continuous] === (53/76) sub-108-a (A) ===
+[stage1a] sub-108-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-108-a: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 2/18 total (iclabel=[0], eog-frontal-corr=[0, 2])
+[stage1a] sub-108-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-108-a: PSD WARN | pass1-40=0.04 low<0.3=0.203 high>75.0=0.0020 notch@50.0=0.96
+[stage4] WARNING: sub-108-a PSD fingerprint off expected (check C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\psd\sub-108-a.png)
+[stage6-continuous] sub-108-a: 938 windows (469 non-overlap subset) over whole recording [0,939367), shape (18, 2000)
+[stage7] sub-108-a: y_cond=0 (A), t_cont 5.0..4690.0s, cont_valid=True
+[stage8] sub-108-a: rejection disabled, kept all 938
+[stage9] sub-108-a: wrote 938 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-108
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-108-a.json
+[run_csv_continuous] sub-108-a: done in 84.3s, 938 windows
+
+[run_csv_continuous] === (54/76) sub-108-c (C) ===
+[stage1a] sub-108-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-108-c: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 4/18 total (iclabel=[13, 16], eog-frontal-corr=[3, 9])
+[stage1a] sub-108-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-108-c: PSD WARN | pass1-40=0.16 low<0.3=0.184 high>75.0=0.0161 notch@50.0=0.96
+[stage4] WARNING: sub-108-c PSD fingerprint off expected (check C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\psd\sub-108-c.png)
+[stage6-continuous] sub-108-c: 647 windows (324 non-overlap subset) over whole recording [0,648047), shape (18, 2000)
+[stage7] sub-108-c: y_cond=1 (C), t_cont 5.0..3235.0s, cont_valid=True
+[stage8] sub-108-c: rejection disabled, kept all 647
+[stage9] sub-108-c: wrote 647 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-108
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-108-c.json
+[run_csv_continuous] sub-108-c: done in 39.7s, 647 windows
+
+[run_csv_continuous] === (55/76) sub-114-a (A) ===
+[stage1a] sub-114-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-114-a: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 6/18 total (iclabel=[5, 9, 10, 12, 14], eog-frontal-corr=[6])
+[stage1a] sub-114-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-114-a: PSD WARN | pass1-40=0.45 low<0.3=0.142 high>75.0=0.0200 notch@50.0=1.00
+[stage4] WARNING: sub-114-a PSD fingerprint off expected (check C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\psd\sub-114-a.png)
+[stage6-continuous] sub-114-a: 658 windows (329 non-overlap subset) over whole recording [0,659494), shape (18, 2000)
+[stage7] sub-114-a: y_cond=0 (A), t_cont 5.0..3290.0s, cont_valid=True
+[stage8] sub-114-a: rejection disabled, kept all 658
+[stage9] sub-114-a: wrote 658 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-114
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-114-a.json
+[run_csv_continuous] sub-114-a: done in 43.3s, 658 windows
+
+[run_csv_continuous] === (56/76) sub-114-c (C) ===
+[stage1a] sub-114-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-114-c: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 3/18 total (iclabel=[], eog-frontal-corr=[4, 5, 16])
+[stage1a] sub-114-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-114-c: PSD OK | pass1-40=0.99 low<0.3=0.200 high>75.0=0.0632 notch@50.0=0.97
+[stage6-continuous] sub-114-c: 1141 windows (571 non-overlap subset) over whole recording [0,1142484), shape (18, 2000)
+[stage7] sub-114-c: y_cond=1 (C), t_cont 5.0..5705.0s, cont_valid=True
+[stage8] sub-114-c: rejection disabled, kept all 1141
+[stage9] sub-114-c: wrote 1141 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-114
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-114-c.json
+[run_csv_continuous] sub-114-c: done in 64.1s, 1141 windows
+
+[run_csv_continuous] === (57/76) sub-115-a (A) ===
+[stage1a] sub-115-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-115-a: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 2/18 total (iclabel=[], eog-frontal-corr=[3, 4])
+[stage1a] sub-115-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-115-a: PSD WARN | pass1-40=0.92 low<0.3=0.176 high>75.0=0.0423 notch@50.0=3.00
+[stage4] WARNING: sub-115-a PSD fingerprint off expected (check C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\psd\sub-115-a.png)
+[stage6-continuous] sub-115-a: 606 windows (303 non-overlap subset) over whole recording [0,607600), shape (18, 2000)
+[stage7] sub-115-a: y_cond=0 (A), t_cont 5.0..3030.0s, cont_valid=True
+[stage8] sub-115-a: rejection disabled, kept all 606
+[stage9] sub-115-a: wrote 606 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-115
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-115-a.json
+[run_csv_continuous] sub-115-a: done in 43.5s, 606 windows
+
+[run_csv_continuous] === (58/76) sub-115-c (C) ===
+[stage1a] sub-115-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-115-c: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 2/18 total (iclabel=[], eog-frontal-corr=[9, 17])
+[stage1a] sub-115-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-115-c: PSD OK | pass1-40=0.96 low<0.3=0.222 high>75.0=0.0494 notch@50.0=0.99
+[stage6-continuous] sub-115-c: 439 windows (220 non-overlap subset) over whole recording [0,440385), shape (18, 2000)
+[stage7] sub-115-c: y_cond=1 (C), t_cont 5.0..2195.0s, cont_valid=True
+[stage8] sub-115-c: rejection disabled, kept all 439
+[stage9] sub-115-c: wrote 439 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-115
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-115-c.json
+[run_csv_continuous] sub-115-c: done in 31.0s, 439 windows
+
+[run_csv_continuous] === (59/76) sub-116-a (A) ===
+[stage1a] sub-116-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-116-a: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 2/18 total (iclabel=[], eog-frontal-corr=[16, 17])
+[stage1a] sub-116-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-116-a: PSD OK | pass1-40=0.98 low<0.3=0.227 high>75.0=0.0472 notch@50.0=0.94
+[stage6-continuous] sub-116-a: 717 windows (359 non-overlap subset) over whole recording [0,718316), shape (18, 2000)
+[stage7] sub-116-a: y_cond=0 (A), t_cont 5.0..3585.0s, cont_valid=True
+[stage8] sub-116-a: rejection disabled, kept all 717
+[stage9] sub-116-a: wrote 717 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-116
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-116-a.json
+[run_csv_continuous] sub-116-a: done in 54.9s, 717 windows
+
+[run_csv_continuous] === (60/76) sub-116-c (C) ===
+[stage1a] sub-116-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-116-c: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 2/18 total (iclabel=[16], eog-frontal-corr=[16, 17])
+[stage1a] sub-116-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-116-c: PSD OK | pass1-40=1.00 low<0.3=0.211 high>75.0=0.0509 notch@50.0=1.61
+[stage6-continuous] sub-116-c: 513 windows (257 non-overlap subset) over whole recording [0,514891), shape (18, 2000)
+[stage7] sub-116-c: y_cond=1 (C), t_cont 5.0..2565.0s, cont_valid=True
+[stage8] sub-116-c: rejection disabled, kept all 513
+[stage9] sub-116-c: wrote 513 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-116
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-116-c.json
+[run_csv_continuous] sub-116-c: done in 34.0s, 513 windows
+
+[run_csv_continuous] === (61/76) sub-117-a (A) ===
+[stage1a] sub-117-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-117-a: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 1/18 total (iclabel=[], eog-frontal-corr=[6])
+[stage1a] sub-117-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-117-a: PSD OK | pass1-40=1.04 low<0.3=0.249 high>75.0=0.0531 notch@50.0=1.23
+[stage6-continuous] sub-117-a: 480 windows (240 non-overlap subset) over whole recording [0,481497), shape (18, 2000)
+[stage7] sub-117-a: y_cond=0 (A), t_cont 5.0..2400.0s, cont_valid=True
+[stage8] sub-117-a: rejection disabled, kept all 480
+[stage9] sub-117-a: wrote 480 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-117
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-117-a.json
+[run_csv_continuous] sub-117-a: done in 34.2s, 480 windows
+
+[run_csv_continuous] === (62/76) sub-117-c (C) ===
+[stage1a] sub-117-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-117-c: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 2/18 total (iclabel=[16], eog-frontal-corr=[5])
+[stage1a] sub-117-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-117-c: PSD WARN | pass1-40=0.96 low<0.3=0.268 high>75.0=0.0374 notch@50.0=2.76
+[stage4] WARNING: sub-117-c PSD fingerprint off expected (check C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\psd\sub-117-c.png)
+[stage6-continuous] sub-117-c: 111 windows (56 non-overlap subset) over whole recording [0,112870), shape (18, 2000)
+[stage7] sub-117-c: y_cond=1 (C), t_cont 5.0..555.0s, cont_valid=True
+[stage8] sub-117-c: rejection disabled, kept all 111
+[stage9] sub-117-c: wrote 111 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-117
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-117-c.json
+[run_csv_continuous] sub-117-c: done in 14.7s, 111 windows
+
+[run_csv_continuous] === (63/76) sub-119-a (A) ===
+[stage1a] sub-119-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-119-a: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 2/18 total (iclabel=[], eog-frontal-corr=[14, 17])
+[stage1a] sub-119-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-119-a: PSD WARN | pass1-40=0.99 low<0.3=0.248 high>75.0=0.0505 notch@50.0=2.30
+[stage4] WARNING: sub-119-a PSD fingerprint off expected (check C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\psd\sub-119-a.png)
+[stage6-continuous] sub-119-a: 469 windows (235 non-overlap subset) over whole recording [0,470122), shape (18, 2000)
+[stage7] sub-119-a: y_cond=0 (A), t_cont 5.0..2345.0s, cont_valid=True
+[stage8] sub-119-a: rejection disabled, kept all 469
+[stage9] sub-119-a: wrote 469 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-119
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-119-a.json
+[run_csv_continuous] sub-119-a: done in 32.8s, 469 windows
+
+[run_csv_continuous] === (64/76) sub-119-c (C) ===
+[stage1a] sub-119-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-119-c: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 2/18 total (iclabel=[], eog-frontal-corr=[14, 15])
+[stage1a] sub-119-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-119-c: PSD OK | pass1-40=0.94 low<0.3=0.251 high>75.0=0.0478 notch@50.0=1.23
+[stage6-continuous] sub-119-c: 608 windows (304 non-overlap subset) over whole recording [0,609187), shape (18, 2000)
+[stage7] sub-119-c: y_cond=1 (C), t_cont 5.0..3040.0s, cont_valid=True
+[stage8] sub-119-c: rejection disabled, kept all 608
+[stage9] sub-119-c: wrote 608 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-119
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-119-c.json
+[run_csv_continuous] sub-119-c: done in 41.8s, 608 windows
+
+[run_csv_continuous] === (65/76) sub-123-a (A) ===
+[stage1a] sub-123-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-123-a: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 2/18 total (iclabel=[], eog-frontal-corr=[9, 12])
+[stage1a] sub-123-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-123-a: PSD WARN | pass1-40=0.95 low<0.3=0.210 high>75.0=0.0490 notch@50.0=2.88
+[stage4] WARNING: sub-123-a PSD fingerprint off expected (check C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\psd\sub-123-a.png)
+[stage6-continuous] sub-123-a: 515 windows (258 non-overlap subset) over whole recording [0,516364), shape (18, 2000)
+[stage7] sub-123-a: y_cond=0 (A), t_cont 5.0..2575.0s, cont_valid=True
+[stage8] sub-123-a: rejection disabled, kept all 515
+[stage9] sub-123-a: wrote 515 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-123
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-123-a.json
+[run_csv_continuous] sub-123-a: done in 40.5s, 515 windows
+
+[run_csv_continuous] === (66/76) sub-123-c (C) ===
+[stage1a] sub-123-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-123-c: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 1/18 total (iclabel=[], eog-frontal-corr=[14])
+[stage1a] sub-123-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-123-c: PSD OK | pass1-40=0.99 low<0.3=0.209 high>75.0=0.0501 notch@50.0=0.88
+[stage6-continuous] sub-123-c: 398 windows (199 non-overlap subset) over whole recording [0,399371), shape (18, 2000)
+[stage7] sub-123-c: y_cond=1 (C), t_cont 5.0..1990.0s, cont_valid=True
+[stage8] sub-123-c: rejection disabled, kept all 398
+[stage9] sub-123-c: wrote 398 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-123
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-123-c.json
+[run_csv_continuous] sub-123-c: done in 28.9s, 398 windows
+
+[run_csv_continuous] === (67/76) sub-125-a (A) ===
+[stage1a] sub-125-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-125-a: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 1/18 total (iclabel=[], eog-frontal-corr=[1])
+[stage1a] sub-125-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-125-a: PSD OK | pass1-40=0.93 low<0.3=0.257 high>75.0=0.0468 notch@50.0=1.12
+[stage6-continuous] sub-125-a: 644 windows (322 non-overlap subset) over whole recording [0,645628), shape (18, 2000)
+[stage7] sub-125-a: y_cond=0 (A), t_cont 5.0..3220.0s, cont_valid=True
+[stage8] sub-125-a: rejection disabled, kept all 644
+[stage9] sub-125-a: wrote 644 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-125
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-125-a.json
+[run_csv_continuous] sub-125-a: done in 50.7s, 644 windows
+
+[run_csv_continuous] === (68/76) sub-125-c (C) ===
+[stage1a] sub-125-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-125-c: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 1/18 total (iclabel=[], eog-frontal-corr=[3])
+[stage1a] sub-125-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-125-c: PSD OK | pass1-40=0.87 low<0.3=0.228 high>75.0=0.0431 notch@50.0=0.98
+[stage6-continuous] sub-125-c: 475 windows (238 non-overlap subset) over whole recording [0,476476), shape (18, 2000)
+[stage7] sub-125-c: y_cond=1 (C), t_cont 5.0..2375.0s, cont_valid=True
+[stage8] sub-125-c: rejection disabled, kept all 475
+[stage9] sub-125-c: wrote 475 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-125
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-125-c.json
+[run_csv_continuous] sub-125-c: done in 33.2s, 475 windows
+
+[run_csv_continuous] === (69/76) sub-129-a (A) ===
+[stage1a] sub-129-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-129-a: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 1/18 total (iclabel=[], eog-frontal-corr=[5])
+[stage1a] sub-129-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-129-a: PSD OK | pass1-40=0.90 low<0.3=0.221 high>75.0=0.0498 notch@50.0=0.94
+[stage6-continuous] sub-129-a: 477 windows (239 non-overlap subset) over whole recording [0,478315), shape (18, 2000)
+[stage7] sub-129-a: y_cond=0 (A), t_cont 5.0..2385.0s, cont_valid=True
+[stage8] sub-129-a: rejection disabled, kept all 477
+[stage9] sub-129-a: wrote 477 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-129
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-129-a.json
+[run_csv_continuous] sub-129-a: done in 37.8s, 477 windows
+
+[run_csv_continuous] === (70/76) sub-129-c (C) ===
+[stage1a] sub-129-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-129-c: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 1/18 total (iclabel=[], eog-frontal-corr=[12])
+[stage1a] sub-129-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-129-c: PSD OK | pass1-40=0.98 low<0.3=0.214 high>75.0=0.0482 notch@50.0=1.01
+[stage6-continuous] sub-129-c: 575 windows (288 non-overlap subset) over whole recording [0,576313), shape (18, 2000)
+[stage7] sub-129-c: y_cond=1 (C), t_cont 5.0..2875.0s, cont_valid=True
+[stage8] sub-129-c: rejection disabled, kept all 575
+[stage9] sub-129-c: wrote 575 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-129
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-129-c.json
+[run_csv_continuous] sub-129-c: done in 39.4s, 575 windows
+
+[run_csv_continuous] === (71/76) sub-131-a (A) ===
+[stage1a] sub-131-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-131-a: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 3/18 total (iclabel=[], eog-frontal-corr=[14, 15, 16])
+[stage1a] sub-131-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-131-a: PSD OK | pass1-40=0.91 low<0.3=0.188 high>75.0=0.0432 notch@50.0=1.00
+[stage6-continuous] sub-131-a: 601 windows (301 non-overlap subset) over whole recording [0,602457), shape (18, 2000)
+[stage7] sub-131-a: y_cond=0 (A), t_cont 5.0..3005.0s, cont_valid=True
+[stage8] sub-131-a: rejection disabled, kept all 601
+[stage9] sub-131-a: wrote 601 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-131
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-131-a.json
+[run_csv_continuous] sub-131-a: done in 38.7s, 601 windows
+
+[run_csv_continuous] === (72/76) sub-131-c (C) ===
+[stage1a] sub-131-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-131-c: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 2/18 total (iclabel=[], eog-frontal-corr=[13, 14])
+[stage1a] sub-131-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-131-c: PSD OK | pass1-40=0.93 low<0.3=0.206 high>75.0=0.0449 notch@50.0=0.99
+[stage6-continuous] sub-131-c: 429 windows (215 non-overlap subset) over whole recording [0,430471), shape (18, 2000)
+[stage7] sub-131-c: y_cond=1 (C), t_cont 5.0..2145.0s, cont_valid=True
+[stage8] sub-131-c: rejection disabled, kept all 429
+[stage9] sub-131-c: wrote 429 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-131
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-131-c.json
+[run_csv_continuous] sub-131-c: done in 33.1s, 429 windows
+
+[run_csv_continuous] === (73/76) sub-134-a (A) ===
+[stage1a] sub-134-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-134-a: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 2/18 total (iclabel=[], eog-frontal-corr=[16, 17])
+[stage1a] sub-134-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-134-a: PSD OK | pass1-40=1.00 low<0.3=0.252 high>75.0=0.0509 notch@50.0=1.02
+[stage6-continuous] sub-134-a: 631 windows (316 non-overlap subset) over whole recording [0,632489), shape (18, 2000)
+[stage7] sub-134-a: y_cond=0 (A), t_cont 5.0..3155.0s, cont_valid=True
+[stage8] sub-134-a: rejection disabled, kept all 631
+[stage9] sub-134-a: wrote 631 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-134
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-134-a.json
+[run_csv_continuous] sub-134-a: done in 43.3s, 631 windows
+
+[run_csv_continuous] === (74/76) sub-134-c (C) ===
+[stage1a] sub-134-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-134-c: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 2/18 total (iclabel=[], eog-frontal-corr=[16, 17])
+[stage1a] sub-134-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-134-c: PSD OK | pass1-40=1.00 low<0.3=0.252 high>75.0=0.0494 notch@50.0=0.92
+[stage6-continuous] sub-134-c: 641 windows (321 non-overlap subset) over whole recording [0,642413), shape (18, 2000)
+[stage7] sub-134-c: y_cond=1 (C), t_cont 5.0..3205.0s, cont_valid=True
+[stage8] sub-134-c: rejection disabled, kept all 641
+[stage9] sub-134-c: wrote 641 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-134
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-134-c.json
+[run_csv_continuous] sub-134-c: done in 41.0s, 641 windows
+
+[run_csv_continuous] === (75/76) sub-135-a (A) ===
+[stage1a] sub-135-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-135-a: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 2/18 total (iclabel=[], eog-frontal-corr=[13, 14])
+[stage1a] sub-135-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-135-a: PSD OK | pass1-40=0.99 low<0.3=0.216 high>75.0=0.0484 notch@50.0=1.53
+[stage6-continuous] sub-135-a: 539 windows (270 non-overlap subset) over whole recording [0,540909), shape (18, 2000)
+[stage7] sub-135-a: y_cond=0 (A), t_cont 5.0..2695.0s, cont_valid=True
+[stage8] sub-135-a: rejection disabled, kept all 539
+[stage9] sub-135-a: wrote 539 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-135
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-135-a.json
+[run_csv_continuous] sub-135-a: done in 35.4s, 539 windows
+
+[run_csv_continuous] === (76/76) sub-135-c (C) ===
+[stage1a] sub-135-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-135-c: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 2/18 total (iclabel=[], eog-frontal-corr=[13, 14])
+[stage1a] sub-135-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-135-c: PSD OK | pass1-40=0.98 low<0.3=0.221 high>75.0=0.0452 notch@50.0=1.94
+[stage6-continuous] sub-135-c: 686 windows (343 non-overlap subset) over whole recording [0,687875), shape (18, 2000)
+[stage7] sub-135-c: y_cond=1 (C), t_cont 5.0..3430.0s, cont_valid=True
+[stage8] sub-135-c: rejection disabled, kept all 686
+[stage9] sub-135-c: wrote 686 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\windows\sub-135
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\ica_report_sub-135-c.json
+[run_csv_continuous] sub-135-c: done in 42.3s, 686 windows
+[stage9] manifest: 40703 rows -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\manifest.parquet
+[report] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\run_summary.md
+[report] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\_reports\limitations.md
+
+[run_csv_continuous] manifest -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica\manifest.parquet
+
+[run_csv_continuous] 76/76 recordings succeeded, 40703 total windows, 2928.5s elapsed

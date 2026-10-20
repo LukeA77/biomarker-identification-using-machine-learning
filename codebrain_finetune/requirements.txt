@@ -1,0 +1,21 @@
+# Stage 1+ (fine-tuning) dependencies. Install these on top of the repository-root
+# requirements.txt, which covers the Stage-0 preprocessing pipeline.
+#
+# Do NOT install the upstream CodeBrain repo's own requirements.txt. Its pins are
+# destructive on this hardware: torch==2.4.1 has no sm_120 (Blackwell) support, and
+# numpy==1.24.4 reintroduces the numpy-1.x/scikit-learn binary incompatibility that
+# logs/stage1_env_setup_20260721.md documents. Versions below are the ones the runs
+# were actually executed against.
+
+torch==2.11.0+cu128        # CUDA 12.8 build; required for sm_120. Install from the
+                           # PyTorch CUDA 12.8 index, not from PyPI defaults.
+transformers==5.14.1
+peft==0.19.1
+accelerate==1.14.0
+huggingface_hub==1.20.1
+safetensors==0.8.0
+
+scikit-learn==1.9.0        # 1.3.2 is a numpy-1.x binary and crashes under numpy 2
+pandas==3.0.3
+pyarrow==25.0.0            # manifest.parquet reader
+joblib==1.5.3

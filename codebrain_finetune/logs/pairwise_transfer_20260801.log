@@ -1,0 +1,64 @@
+22:09:06 INFO livinglab_codebrain.dataset: Manifest validated: 43822 windows, 41 patients, sfreq=200, label map A=0/C=1 consistent.
+22:09:06 WARNING livinglab_codebrain.dataset: Exclusion list names patients absent from the manifest: ['sub-82', 'sub-100', 'sub-111', 'sub-130']
+22:09:06 INFO livinglab_codebrain.dataset: Applying cohort exclusions (loud):
+22:09:06 INFO livinglab_codebrain.dataset:     EXCLUDE sub-80    ->  1109 windows dropped
+22:09:06 INFO livinglab_codebrain.dataset:     EXCLUDE sub-82    ->     0 windows dropped
+22:09:06 INFO livinglab_codebrain.dataset:     EXCLUDE sub-97    ->   700 windows dropped
+22:09:06 INFO livinglab_codebrain.dataset:     EXCLUDE sub-98    ->   910 windows dropped
+22:09:06 INFO livinglab_codebrain.dataset:     EXCLUDE sub-99    ->  1494 windows dropped
+22:09:06 INFO livinglab_codebrain.dataset:     EXCLUDE sub-100   ->     0 windows dropped
+22:09:06 INFO livinglab_codebrain.dataset:     EXCLUDE sub-105   ->   850 windows dropped
+22:09:06 INFO livinglab_codebrain.dataset:     EXCLUDE sub-108   ->  1585 windows dropped
+22:09:06 INFO livinglab_codebrain.dataset:     EXCLUDE sub-111   ->     0 windows dropped
+22:09:06 INFO livinglab_codebrain.dataset:     EXCLUDE sub-130   ->     0 windows dropped
+22:09:06 INFO livinglab_codebrain.dataset: Cohort after exclusions: 35 patients (was 41), 37174 windows (was 43822).
+22:09:06 INFO codebrain_ft.backbone_cache: Backbone feature cache HIT features_none_43c76bba71cb.npz ((9963, 200))
+22:09:06 INFO pairwise_transfer: Frozen-backbone features for norm=none: (9963, 200) (hit)
+22:09:11 INFO pairwise_transfer: Observed matrix built in 4.9 s (27 x 27)
+22:09:11 INFO pairwise_transfer: Diagonal check PASSED: rebuilt within-patient mean 0.8831 vs stored 0.8834 (mean |delta| 0.0005, max 0.0077 over 27 patients — bf16 batch-composition level, see JSON note).
+22:09:11 INFO pairwise_transfer: Null of the maximum: 200 permutations (within-patient sign flip, source models REFIT each time)...
+22:10:24 INFO pairwise_transfer:   permutation 25/200 (72.3 s elapsed, null max so far 0.987)
+22:11:37 INFO pairwise_transfer:   permutation 50/200 (145.3 s elapsed, null max so far 0.987)
+22:12:50 INFO pairwise_transfer:   permutation 75/200 (218.6 s elapsed, null max so far 0.987)
+22:14:03 INFO pairwise_transfer:   permutation 100/200 (291.7 s elapsed, null max so far 0.987)
+22:15:26 INFO pairwise_transfer:   permutation 125/200 (374.5 s elapsed, null max so far 0.987)
+22:16:39 INFO pairwise_transfer:   permutation 150/200 (447.8 s elapsed, null max so far 0.987)
+22:18:00 INFO pairwise_transfer:   permutation 175/200 (528.4 s elapsed, null max so far 0.987)
+22:19:17 INFO pairwise_transfer:   permutation 200/200 (605.9 s elapsed, null max so far 0.987)
+22:19:17 INFO pairwise_transfer: Wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\codebrain_finetune\results\pairwise_transfer\transfer_matrix_balanced_accuracy_none.csv
+22:19:17 INFO pairwise_transfer: Wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\codebrain_finetune\results\pairwise_transfer\transfer_matrix_auc_none.csv
+22:19:20 INFO pairwise_transfer: Wrote figure C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\codebrain_finetune\logs\figures\fig_pairwise_transfer_none.{png,pdf}
+22:19:20 INFO pairwise_transfer: ==============================================================================
+22:19:20 INFO pairwise_transfer: PAIRWISE TRANSFER (frozen_probe, norm=none) — 702 ordered pairs
+22:19:20 INFO pairwise_transfer:   diagonal (within-patient, leaky) mean : 0.883
+22:19:20 INFO pairwise_transfer:   off-diagonal mean                     : 0.496  (null 0.500 +/- 0.006, p=0.776)
+22:19:20 INFO pairwise_transfer:   off-diagonal MAX                      : 0.984  (sub-103 -> sub-106)
+22:19:20 INFO pairwise_transfer:   null distribution OF THE MAX          : mean 0.980, sd 0.010, 95th pct 0.987, observed range [0.963, 0.987]
+22:19:20 INFO pairwise_transfer:   >>> p(max) = 0.7363  <<<
+22:19:20 INFO pairwise_transfer:   best row-mean per source              : 0.520  (p=0.970) — does any ONE model generalise broadly?
+22:19:20 INFO pairwise_transfer: ==============================================================================
+22:19:20 INFO codebrain_ft.backbone_cache: Backbone feature cache HIT features_chan_z_cdaffbdd0455.npz ((9963, 200))
+22:19:20 INFO pairwise_transfer: Frozen-backbone features for norm=chan_z: (9963, 200) (hit)
+22:19:29 INFO pairwise_transfer: Observed matrix built in 8.3 s (27 x 27)
+22:19:29 INFO pairwise_transfer: Null of the maximum: 200 permutations (within-patient sign flip, source models REFIT each time)...
+22:21:08 INFO pairwise_transfer:   permutation 25/200 (98.8 s elapsed, null max so far 0.920)
+22:22:34 INFO pairwise_transfer:   permutation 50/200 (185.1 s elapsed, null max so far 0.920)
+22:24:10 INFO pairwise_transfer:   permutation 75/200 (280.7 s elapsed, null max so far 0.920)
+22:25:47 INFO pairwise_transfer:   permutation 100/200 (378.6 s elapsed, null max so far 0.920)
+22:27:19 INFO pairwise_transfer:   permutation 125/200 (470.6 s elapsed, null max so far 0.920)
+22:28:56 INFO pairwise_transfer:   permutation 150/200 (567.3 s elapsed, null max so far 0.920)
+22:30:32 INFO pairwise_transfer:   permutation 175/200 (663.1 s elapsed, null max so far 0.920)
+22:31:55 INFO pairwise_transfer:   permutation 200/200 (746.2 s elapsed, null max so far 0.920)
+22:31:55 INFO pairwise_transfer: Wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\codebrain_finetune\results\pairwise_transfer\transfer_matrix_balanced_accuracy_chan_z.csv
+22:31:55 INFO pairwise_transfer: Wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\codebrain_finetune\results\pairwise_transfer\transfer_matrix_auc_chan_z.csv
+22:31:57 INFO pairwise_transfer: Wrote figure C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\codebrain_finetune\logs\figures\fig_pairwise_transfer_chan_z.{png,pdf}
+22:31:57 INFO pairwise_transfer: ==============================================================================
+22:31:57 INFO pairwise_transfer: PAIRWISE TRANSFER (frozen_probe, norm=chan_z) — 702 ordered pairs
+22:31:57 INFO pairwise_transfer:   diagonal (within-patient, leaky) mean : 0.811
+22:31:57 INFO pairwise_transfer:   off-diagonal mean                     : 0.500  (null 0.499 +/- 0.004, p=0.388)
+22:31:57 INFO pairwise_transfer:   off-diagonal MAX                      : 0.856  (sub-72 -> sub-77)
+22:31:57 INFO pairwise_transfer:   null distribution OF THE MAX          : mean 0.902, sd 0.022, 95th pct 0.920, observed range [0.844, 0.920]
+22:31:57 INFO pairwise_transfer:   >>> p(max) = 0.9652  <<<
+22:31:57 INFO pairwise_transfer:   best row-mean per source              : 0.555  (p=0.075) — does any ONE model generalise broadly?
+22:31:57 INFO pairwise_transfer: ==============================================================================
+22:32:01 INFO pairwise_transfer: Wrote markdown report -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\codebrain_finetune\logs\pairwise_transfer_report.md

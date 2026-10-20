@@ -1,0 +1,88 @@
+# QC audit config: PSD / aperiodic (1/f) / impedance checks (see qc_signal_quality
+# deliverables). ADDITIVE DIAGNOSTICS ONLY -- this file and the qc_*.py modules
+# that read it never modify config/pipeline.yaml, never touch `processed/` or
+# `processed_csv_continuous/`, and never re-enable amplitude rejection or any
+# window-exclusion logic. Every threshold/path/subject-list used by the audit
+# lives here; no literal may appear in qc_*.py.
+
+source:
+  # Root of the shared LivingLab_PD drive -- same one run_cohort_continuous_csv.py
+  # reads (see its --root argument in logs/run_cohort_continuous_csv_v2.log).
+  drive_root: "C:\\Data\\LivingLab_PD"
+  # processed_dir name matching run_cohort_continuous_csv.py's NEW_PROCESSED_DIR_NAME,
+  # so this audit inspects exactly the run the dissertation will fine-tune on (the
+  # continuous, non-task-locked, CSV-sourced 38-patient/76-session cohort).
+  processed_dir_name: processed_csv_continuous
+
+output:
+  # NEW, separate output root -- never written to by any preprocessing script.
+  dir: qc_signal_quality
+
+representative_sessions:
+  # A small, fixed, documented sample (brief Sec.2A: "3-5 subjects, spanning
+  # both conditions") used for the psd_examples/ and psd_before_after_examples/
+  # plot deliverables -- NOT the full cohort. sub-131/sub-134 are the original
+  # 2-patient pilot subjects (known-good ICA determinism, see PROGRESS.md);
+  # sub-34/sub-51/sub-93 add spread across the patient-ID range.
+  patients: [sub-34, sub-51, sub-93, sub-131, sub-134]
+
+impedance_inventory_sample:
+  # Handful of sessions inspected to establish whether impedance data exists
+  # anywhere on disk (raw-CSV header, EDF header/annotations, .dsi binary)
+  # before deciding whether/how to run the check at cohort scale (brief
+  # Sec.2C: "check a handful of subjects to establish the actual pattern").
+  # Mix of plain sessions, a session with a known benign CSV artifact
+  # (sub-48-a, truncated final row), and a session with a matching .dsi file
+  # available alongside the CSV (sub-131-a) so the .dsi binary scan runs too.
+  sessions:
+    - {patient: sub-34, condition: a}
+    - {patient: sub-48, condition: a}
+    - {patient: sub-51, condition: c}
+    - {patient: sub-131, condition: a}
+    - {patient: sub-111, condition: c}
+
+psd:
+  # Welch parameters for the per-channel-per-session PSD (Part A). 4 s @ 200 Hz
+  # = 800-sample segments -> 0.25 Hz resolution, with 50% overlap (standard
+  # Welch default) for a stable estimate; every session in this cohort is at
+  # least several minutes long (shortest ~8 min), so this yields >=100 averaged
+  # segments even for the shortest recording.
+  welch_segment_s: 4.0
+  welch_overlap_frac: 0.5
+  # "Flat PSD" heuristic (Part A), independent of the FOOOF/specparam fit
+  # (Part B): mean power in a low band vs a high band, in dB. Real 1/f scalp
+  # EEG typically shows >15 dB of low/high decline; 6 dB is a conservative
+  # floor chosen to flag only genuinely shapeless spectra, not merely "less
+  # steep than typical".
+  flat_low_band_hz: [1.0, 4.0]
+  flat_high_band_hz: [30.0, 45.0]
+  flat_ratio_db_threshold: 6.0
+
+aperiodic:
+  # FOOOF/specparam fit range: avoids the 50 Hz notch and its filter skirt
+  # (bandpass upper edge is 75 Hz but the notch dominates 45-55 Hz).
+  fit_freq_range_hz: [1.0, 45.0]
+  peak_width_limits_hz: [1.0, 8.0]
+  max_n_peaks: 6
+  min_peak_height: 0.05
+  peak_threshold: 2.0
+  # Parkinsonian motor beta band -- sanity reference only (levodopa-related
+  # beta suppression is well-established; not something this audit forces a
+  # result toward, see brief Sec.2B).
+  beta_band_hz: [13.0, 30.0]
+  # |exponent| below this = "no real 1/f decline" (the numeric version of a
+  # flat PSD). R^2 below this = poor model fit. Both are documented, chosen
+  # cutoffs for flagging -- not a claim about what's "acceptable" physiologically.
+  exponent_near_zero_threshold: 0.2
+  r2_poor_threshold: 0.90
+  # Follow-up triage (separate from the two flags above): a patient is a
+  # "persistent low-exponent" candidate if at least this fraction of channels
+  # has exponent < flat_candidate_exponent_threshold in BOTH the ON and the
+  # OFF session -- a same-patient, both-sessions pattern is much more likely
+  # to reflect a genuine whole-cap contact/impedance problem for that patient
+  # than an isolated noisy channel or a single-session artifact.
+  flat_candidate_exponent_threshold: 0.5
+  flat_candidate_min_fraction: 0.25
+
+plots:
+  dpi: 110

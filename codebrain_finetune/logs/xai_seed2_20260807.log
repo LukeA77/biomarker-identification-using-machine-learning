@@ -1,0 +1,85 @@
+12:59:25 INFO pooled_tasksplit: Seed base overridden: 2
+12:59:25 INFO livinglab_codebrain.dataset: Manifest validated: 43822 windows, 41 patients, sfreq=200, label map A=0/C=1 consistent.
+12:59:25 WARNING livinglab_codebrain.dataset: Exclusion list names patients absent from the manifest: ['sub-82', 'sub-100', 'sub-111', 'sub-130']
+12:59:25 INFO livinglab_codebrain.dataset: Applying cohort exclusions (loud):
+12:59:25 INFO livinglab_codebrain.dataset:     EXCLUDE sub-80    ->  1109 windows dropped
+12:59:25 INFO livinglab_codebrain.dataset:     EXCLUDE sub-82    ->     0 windows dropped
+12:59:25 INFO livinglab_codebrain.dataset:     EXCLUDE sub-97    ->   700 windows dropped
+12:59:25 INFO livinglab_codebrain.dataset:     EXCLUDE sub-98    ->   910 windows dropped
+12:59:25 INFO livinglab_codebrain.dataset:     EXCLUDE sub-99    ->  1494 windows dropped
+12:59:25 INFO livinglab_codebrain.dataset:     EXCLUDE sub-100   ->     0 windows dropped
+12:59:25 INFO livinglab_codebrain.dataset:     EXCLUDE sub-105   ->   850 windows dropped
+12:59:25 INFO livinglab_codebrain.dataset:     EXCLUDE sub-108   ->  1585 windows dropped
+12:59:25 INFO livinglab_codebrain.dataset:     EXCLUDE sub-111   ->     0 windows dropped
+12:59:25 INFO livinglab_codebrain.dataset:     EXCLUDE sub-130   ->     0 windows dropped
+12:59:25 INFO livinglab_codebrain.dataset: Cohort after exclusions: 35 patients (was 41), 37174 windows (was 43822).
+12:59:25 INFO pooled_tasksplit: Pooled design over 27/35 eligible patients: ['sub-103', 'sub-106', 'sub-107', 'sub-114', 'sub-115', 'sub-116', 'sub-119', 'sub-121', 'sub-123', 'sub-125', 'sub-129', 'sub-131', 'sub-134', 'sub-135', 'sub-51', 'sub-62', 'sub-70', 'sub-71', 'sub-72', 'sub-76', 'sub-77', 'sub-81', 'sub-84', 'sub-90', 'sub-92', 'sub-94', 'sub-96']
+12:59:25 INFO pooled_tasksplit: LoRA HPs reused from results/nested_lora/hp_search.json: {'r': 4, 'lr': 0.0005, 'dropout': 0.1}
+12:59:29 INFO pooled_tasksplit: Input normalisation: chan_z (rescaled to cohort-median window std 0.629726)
+12:59:33 INFO pooled_tasksplit: Duration matching ON: level=patient_task k=None where=uniform (applied to BOTH train and test)
+12:59:33 INFO pooled_tasksplit: ==========================================================================
+12:59:33 INFO pooled_tasksplit: DIRECTION tea_to_toast (pooled over 27 patients)
+12:59:33 INFO codebrain_ft.tasksplit: duration_match(level=patient_task, k=None, where=uniform): 3157 -> 2804 windows (88.8%), K in [31, 117] over 27 patient x task cells
+12:59:33 INFO codebrain_ft.tasksplit: duration_match(level=patient_task, k=None, where=uniform): 3403 -> 3058 windows (89.9%), K in [26, 149] over 27 patient x task cells
+12:59:33 INFO pooled_tasksplit:   matched train 3157->2804 (88.8%), test 3403->3058 (89.9%)
+12:59:33 INFO pooled_tasksplit:   train: 2804 windows (27 patients) | test: 3058 windows (27 patients)
+12:59:33 INFO pooled_tasksplit: Pooled full_ft: train 2100 windows / val 704 windows (across 27 patients)
+12:59:33 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+12:59:33 INFO codebrain_ft.train: Training: 15180329 trainable params, 33 steps/epoch, up to 20 epochs (lr=1.0e-04).
+12:59:47 INFO codebrain_ft.train: epoch 0 | loss 0.6947 | inner-val bal-acc 0.574 | auc 0.567
+12:59:57 INFO codebrain_ft.train: epoch 1 | loss 0.6899 | inner-val bal-acc 0.481 | auc 0.562
+13:00:08 INFO codebrain_ft.train: epoch 2 | loss 0.6847 | inner-val bal-acc 0.500 | auc 0.706
+13:00:17 INFO codebrain_ft.train: epoch 3 | loss 0.6647 | inner-val bal-acc 0.685 | auc 0.767
+13:00:26 INFO codebrain_ft.train: epoch 4 | loss 0.6130 | inner-val bal-acc 0.667 | auc 0.866
+13:00:36 INFO codebrain_ft.train: epoch 5 | loss 0.5589 | inner-val bal-acc 0.778 | auc 0.889
+13:00:46 INFO codebrain_ft.train: epoch 6 | loss 0.5079 | inner-val bal-acc 0.667 | auc 0.870
+13:00:56 INFO codebrain_ft.train: epoch 7 | loss 0.4426 | inner-val bal-acc 0.796 | auc 0.914
+13:01:06 INFO codebrain_ft.train: epoch 8 | loss 0.3839 | inner-val bal-acc 0.870 | auc 0.941
+13:01:17 INFO codebrain_ft.train: epoch 9 | loss 0.3565 | inner-val bal-acc 0.870 | auc 0.962
+13:01:27 INFO codebrain_ft.train: epoch 10 | loss 0.3145 | inner-val bal-acc 0.889 | auc 0.936
+13:01:36 INFO codebrain_ft.train: epoch 11 | loss 0.2852 | inner-val bal-acc 0.870 | auc 0.964
+13:01:46 INFO codebrain_ft.train: epoch 12 | loss 0.2479 | inner-val bal-acc 0.926 | auc 0.979
+13:01:55 INFO codebrain_ft.train: epoch 13 | loss 0.2224 | inner-val bal-acc 0.815 | auc 0.971
+13:02:05 INFO codebrain_ft.train: epoch 14 | loss 0.1987 | inner-val bal-acc 0.926 | auc 0.974
+13:02:14 INFO codebrain_ft.train: epoch 15 | loss 0.1904 | inner-val bal-acc 0.926 | auc 0.985
+13:02:23 INFO codebrain_ft.train: epoch 16 | loss 0.1544 | inner-val bal-acc 0.907 | auc 0.988
+13:02:33 INFO codebrain_ft.train: epoch 17 | loss 0.1489 | inner-val bal-acc 0.870 | auc 0.985
+13:02:43 INFO codebrain_ft.train: epoch 18 | loss 0.1429 | inner-val bal-acc 0.889 | auc 0.986
+13:02:52 INFO codebrain_ft.train: epoch 19 | loss 0.1345 | inner-val bal-acc 0.907 | auc 0.986
+13:02:52 INFO codebrain_ft.train: Early stopping at epoch 19 (best epoch 15, inner_val_window_balanced_accuracy=0.812).
+13:03:00 INFO pooled_tasksplit:   saved checkpoint -> xai_seed2__tea_to_toast__full_ft__seed2.pt (60.9 MB)
+13:03:00 INFO pooled_tasksplit:   tea_to_toast/full_ft | pooled window bal-acc 0.696 | pooled session bal-acc 0.833 | patient-mean 0.698 [0.660, 0.737] (27 patients) | ordering 27/27
+13:03:00 INFO codebrain_ft.tracking: Saved run -> xai_seed2_20260807T120300Z.json (+ master CSV row)
+13:03:00 INFO pooled_tasksplit: ==========================================================================
+13:03:00 INFO pooled_tasksplit: DIRECTION toast_to_tea (pooled over 27 patients)
+13:03:00 INFO codebrain_ft.tasksplit: duration_match(level=patient_task, k=None, where=uniform): 6806 -> 6126 windows (90.0%), K in [51, 298] over 27 patient x task cells
+13:03:00 INFO codebrain_ft.tasksplit: duration_match(level=patient_task, k=None, where=uniform): 1577 -> 1402 windows (88.9%), K in [15, 59] over 27 patient x task cells
+13:03:00 INFO pooled_tasksplit:   matched train 6806->6126 (90.0%), test 1577->1402 (88.9%)
+13:03:00 INFO pooled_tasksplit:   train: 6126 windows (27 patients) | test: 1402 windows (27 patients)
+13:03:00 INFO pooled_tasksplit: Pooled full_ft: train 4592 windows / val 1534 windows (across 27 patients)
+13:03:00 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+13:03:00 INFO codebrain_ft.train: Training: 15180329 trainable params, 72 steps/epoch, up to 20 epochs (lr=1.0e-04).
+13:03:24 INFO codebrain_ft.train: epoch 0 | loss 0.6977 | inner-val bal-acc 0.667 | auc 0.638
+13:03:45 INFO codebrain_ft.train: epoch 1 | loss 0.6831 | inner-val bal-acc 0.500 | auc 0.590
+13:04:05 INFO codebrain_ft.train: epoch 2 | loss 0.6738 | inner-val bal-acc 0.574 | auc 0.727
+13:04:26 INFO codebrain_ft.train: epoch 3 | loss 0.6177 | inner-val bal-acc 0.593 | auc 0.905
+13:04:47 INFO codebrain_ft.train: epoch 4 | loss 0.5418 | inner-val bal-acc 0.870 | auc 0.926
+13:05:07 INFO codebrain_ft.train: epoch 5 | loss 0.4501 | inner-val bal-acc 0.852 | auc 0.945
+13:05:28 INFO codebrain_ft.train: epoch 6 | loss 0.3502 | inner-val bal-acc 0.926 | auc 0.966
+13:05:49 INFO codebrain_ft.train: epoch 7 | loss 0.3002 | inner-val bal-acc 0.907 | auc 0.973
+13:06:11 INFO codebrain_ft.train: epoch 8 | loss 0.2327 | inner-val bal-acc 0.907 | auc 0.977
+13:06:32 INFO codebrain_ft.train: epoch 9 | loss 0.2114 | inner-val bal-acc 0.907 | auc 0.996
+13:06:54 INFO codebrain_ft.train: epoch 10 | loss 0.1833 | inner-val bal-acc 0.926 | auc 0.978
+13:07:17 INFO codebrain_ft.train: epoch 11 | loss 0.1269 | inner-val bal-acc 0.833 | auc 0.999
+13:07:38 INFO codebrain_ft.train: epoch 12 | loss 0.1047 | inner-val bal-acc 0.981 | auc 0.996
+13:07:59 INFO codebrain_ft.train: epoch 13 | loss 0.0860 | inner-val bal-acc 0.944 | auc 0.996
+13:08:19 INFO codebrain_ft.train: epoch 14 | loss 0.0632 | inner-val bal-acc 1.000 | auc 1.000
+13:08:40 INFO codebrain_ft.train: epoch 15 | loss 0.0623 | inner-val bal-acc 1.000 | auc 1.000
+13:09:01 INFO codebrain_ft.train: epoch 16 | loss 0.0441 | inner-val bal-acc 0.981 | auc 0.999
+13:09:21 INFO codebrain_ft.train: epoch 17 | loss 0.0383 | inner-val bal-acc 1.000 | auc 1.000
+13:09:43 INFO codebrain_ft.train: epoch 18 | loss 0.0327 | inner-val bal-acc 0.981 | auc 1.000
+13:10:03 INFO codebrain_ft.train: epoch 19 | loss 0.0290 | inner-val bal-acc 1.000 | auc 1.000
+13:10:07 INFO pooled_tasksplit:   saved checkpoint -> xai_seed2__toast_to_tea__full_ft__seed2.pt (60.9 MB)
+13:10:07 INFO pooled_tasksplit:   toast_to_tea/full_ft | pooled window bal-acc 0.810 | pooled session bal-acc 0.926 | patient-mean 0.810 [0.764, 0.853] (27 patients) | ordering 27/27
+13:10:07 INFO codebrain_ft.tracking: Saved run -> xai_seed2_20260807T121007Z.json (+ master CSV row)
+13:10:07 INFO pooled_tasksplit: Done. Results under C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\codebrain_finetune\results\xai_seed2

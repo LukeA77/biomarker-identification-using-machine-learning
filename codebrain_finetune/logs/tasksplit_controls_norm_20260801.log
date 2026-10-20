@@ -1,0 +1,67 @@
+10:31:30 INFO tasksplit_controls: recid target vs ON/OFF label: identical (up to a label flip) for 27/27 patients.
+10:31:30 INFO livinglab_codebrain.dataset: Manifest validated: 43822 windows, 41 patients, sfreq=200, label map A=0/C=1 consistent.
+10:31:30 WARNING livinglab_codebrain.dataset: Exclusion list names patients absent from the manifest: ['sub-82', 'sub-100', 'sub-111', 'sub-130']
+10:31:30 INFO livinglab_codebrain.dataset: Applying cohort exclusions (loud):
+10:31:30 INFO livinglab_codebrain.dataset:     EXCLUDE sub-80    ->  1109 windows dropped
+10:31:31 INFO livinglab_codebrain.dataset:     EXCLUDE sub-82    ->     0 windows dropped
+10:31:31 INFO livinglab_codebrain.dataset:     EXCLUDE sub-97    ->   700 windows dropped
+10:31:31 INFO livinglab_codebrain.dataset:     EXCLUDE sub-98    ->   910 windows dropped
+10:31:31 INFO livinglab_codebrain.dataset:     EXCLUDE sub-99    ->  1494 windows dropped
+10:31:31 INFO livinglab_codebrain.dataset:     EXCLUDE sub-100   ->     0 windows dropped
+10:31:31 INFO livinglab_codebrain.dataset:     EXCLUDE sub-105   ->   850 windows dropped
+10:31:31 INFO livinglab_codebrain.dataset:     EXCLUDE sub-108   ->  1585 windows dropped
+10:31:31 INFO livinglab_codebrain.dataset:     EXCLUDE sub-111   ->     0 windows dropped
+10:31:31 INFO livinglab_codebrain.dataset:     EXCLUDE sub-130   ->     0 windows dropped
+10:31:31 INFO livinglab_codebrain.dataset: Cohort after exclusions: 35 patients (was 41), 37174 windows (was 43822).
+10:31:31 INFO tasksplit_controls: Input normalisation rescale target (cohort-median window std) = 0.662742
+10:31:31 INFO tasksplit_controls: Controls ['amp1', 'crude3', 'chanamp', 'relbp', 'aperiodic', 'recid'] x norms ['none', 'chan_z'] over 27 patients x 2 directions (CPU, no model).
+10:31:31 INFO tasksplit_controls: ==============================================================================
+10:31:31 INFO tasksplit_controls: NORMALISATION: none
+10:31:31 INFO codebrain_ft.control_features: Computing control features for 9963 windows | norm=none | 24 chunk(s) x 24 job(s) | aperiodic estimator=specparam
+10:33:37 INFO codebrain_ft.control_features: Wrote feature cache C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\codebrain_finetune\results\within_patient_tasksplit\control_features\features_none.npz
+10:33:39 INFO tasksplit_controls:   transfer amp1      | within 0.598 (19/27) -> cross-LOPO 0.476 (6/27) | drop 0.122 | per-recording FINGERPRINT
+10:33:39 INFO tasksplit_controls: CONTROL amp1      norm=none    | bal-acc 0.598 [0.547, 0.651] | above chance 19/27 | AUC mean 0.641 max 1.000 | ordering 40/54 (p=0.000268)
+10:33:39 INFO codebrain_ft.tracking: Saved run -> tasksplit_controls_norm_none_20260801T093339Z.json (+ master CSV row)
+10:33:41 INFO tasksplit_controls:   transfer crude3    | within 0.624 (19/27) -> cross-LOPO 0.499 (9/27) | drop 0.125 | per-recording FINGERPRINT
+10:33:41 INFO tasksplit_controls: CONTROL crude3    norm=none    | bal-acc 0.624 [0.569, 0.680] | above chance 19/27 | AUC mean 0.671 max 1.000 | ordering 42/54 (p=2.6e-05)
+10:33:41 INFO codebrain_ft.tracking: Saved run -> tasksplit_controls_norm_none_20260801T093341Z.json (+ master CSV row)
+10:33:45 INFO tasksplit_controls:   transfer chanamp   | within 0.934 (27/27) -> cross-LOPO 0.495 (14/27) | drop 0.440 | per-recording FINGERPRINT
+10:33:45 INFO tasksplit_controls: CONTROL chanamp   norm=none    | bal-acc 0.934 [0.901, 0.961] | above chance 27/27 | AUC mean 0.956 max 1.000 | ordering 54/54 (p=5.55e-17)
+10:33:45 INFO codebrain_ft.tracking: Saved run -> tasksplit_controls_norm_none_20260801T093345Z.json (+ master CSV row)
+10:33:56 INFO tasksplit_controls:   transfer relbp     | within 0.910 (27/27) -> cross-LOPO 0.558 (19/27) | drop 0.352 | transfers across patients — may carry a genuine effect; re-examine
+10:33:56 INFO tasksplit_controls: CONTROL relbp     norm=none    | bal-acc 0.910 [0.875, 0.941] | above chance 27/27 | AUC mean 0.959 max 1.000 | ordering 54/54 (p=5.55e-17)
+10:33:56 INFO codebrain_ft.tracking: Saved run -> tasksplit_controls_norm_none_20260801T093356Z.json (+ master CSV row)
+10:34:02 INFO tasksplit_controls:   transfer aperiodic | within 0.970 (27/27) -> cross-LOPO 0.518 (15/27) | drop 0.452 | per-recording FINGERPRINT
+10:34:02 INFO tasksplit_controls: CONTROL aperiodic norm=none    | bal-acc 0.970 [0.955, 0.982] | above chance 27/27 | AUC mean 0.992 max 1.000 | ordering 54/54 (p=5.55e-17)
+10:34:02 INFO codebrain_ft.tracking: Saved run -> tasksplit_controls_norm_none_20260801T093402Z.json (+ master CSV row)
+10:34:04 INFO tasksplit_controls: CONTROL recid     norm=none    | bal-acc 0.963 [0.946, 0.978] | above chance 27/27 | AUC mean 0.986 max 1.000 | ordering 54/54 (p=5.55e-17)
+10:34:05 INFO codebrain_ft.tracking: Saved run -> tasksplit_controls_norm_none_20260801T093405Z.json (+ master CSV row)
+10:34:05 INFO tasksplit_controls: ==============================================================================
+10:34:05 INFO tasksplit_controls: NORMALISATION: chan_z
+10:34:05 INFO codebrain_ft.control_features: Computing control features for 9963 windows | norm=chan_z | 24 chunk(s) x 24 job(s) | aperiodic estimator=specparam
+10:35:13 INFO codebrain_ft.control_features: Wrote feature cache C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\codebrain_finetune\results\within_patient_tasksplit\control_features\features_chan_z.npz
+10:35:14 INFO tasksplit_controls:   transfer amp1      | within 0.518 (15/27) -> cross-LOPO 0.509 (15/27) | drop 0.009 | per-recording FINGERPRINT
+10:35:14 INFO tasksplit_controls: CONTROL amp1      norm=chan_z  | bal-acc 0.518 [0.492, 0.547] | above chance 15/27 | AUC mean 0.521 max 0.780 | ordering 28/54 (p=0.446)
+10:35:14 INFO codebrain_ft.tracking: Saved run -> tasksplit_controls_norm_chan_z_20260801T093514Z.json (+ master CSV row)
+10:35:16 INFO tasksplit_controls:   transfer crude3    | within 0.522 (19/27) -> cross-LOPO 0.495 (14/27) | drop 0.027 | per-recording FINGERPRINT
+10:35:16 INFO tasksplit_controls: CONTROL crude3    norm=chan_z  | bal-acc 0.522 [0.501, 0.544] | above chance 19/27 | AUC mean 0.531 max 0.773 | ordering 36/54 (p=0.00992)
+10:35:16 INFO codebrain_ft.tracking: Saved run -> tasksplit_controls_norm_chan_z_20260801T093516Z.json (+ master CSV row)
+10:35:19 INFO tasksplit_controls:   transfer chanamp   | within 0.609 (24/27) -> cross-LOPO 0.521 (17/27) | drop 0.088 | per-recording FINGERPRINT
+10:35:19 INFO tasksplit_controls: CONTROL chanamp   norm=chan_z  | bal-acc 0.609 [0.578, 0.641] | above chance 24/27 | AUC mean 0.646 max 0.897 | ordering 46/54 (p=6.92e-08)
+10:35:19 INFO codebrain_ft.tracking: Saved run -> tasksplit_controls_norm_chan_z_20260801T093519Z.json (+ master CSV row)
+10:35:31 INFO tasksplit_controls:   transfer relbp     | within 0.910 (27/27) -> cross-LOPO 0.558 (19/27) | drop 0.352 | transfers across patients — may carry a genuine effect; re-examine
+10:35:31 INFO tasksplit_controls: CONTROL relbp     norm=chan_z  | bal-acc 0.910 [0.875, 0.941] | above chance 27/27 | AUC mean 0.959 max 1.000 | ordering 54/54 (p=5.55e-17)
+10:35:31 INFO codebrain_ft.tracking: Saved run -> tasksplit_controls_norm_chan_z_20260801T093531Z.json (+ master CSV row)
+10:35:35 INFO tasksplit_controls:   transfer aperiodic | within 0.886 (27/27) -> cross-LOPO 0.533 (19/27) | drop 0.352 | per-recording FINGERPRINT
+10:35:35 INFO tasksplit_controls: CONTROL aperiodic norm=chan_z  | bal-acc 0.886 [0.846, 0.920] | above chance 27/27 | AUC mean 0.945 max 1.000 | ordering 54/54 (p=5.55e-17)
+10:35:35 INFO codebrain_ft.tracking: Saved run -> tasksplit_controls_norm_chan_z_20260801T093535Z.json (+ master CSV row)
+10:35:38 INFO tasksplit_controls: CONTROL recid     norm=chan_z  | bal-acc 0.924 [0.893, 0.952] | above chance 27/27 | AUC mean 0.969 max 1.000 | ordering 54/54 (p=5.55e-17)
+10:35:38 INFO codebrain_ft.tracking: Saved run -> tasksplit_controls_norm_chan_z_20260801T093538Z.json (+ master CSV row)
+10:35:41 INFO tasksplit_controls: Wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\codebrain_finetune\results\within_patient_tasksplit\controls_norm_summary.json
+10:35:41 INFO tasksplit_controls: Wrote markdown report -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\codebrain_finetune\logs\tasksplit_controls_norm_report.md
+10:35:41 INFO tasksplit_controls: 
+10:35:41 INFO tasksplit_controls: VERDICT norm=none: strongest non-neural control is aperiodic at 0.970; recid (direct 'which recording' readout) = 0.963
+10:35:41 WARNING tasksplit_controls: norm=none: recid is 0.963, WELL ABOVE CHANCE — normalisation has NOT closed the design. The two recordings remain directly identifiable from features with no neural levodopa content, and within a patient recording identity IS the ON/OFF label. Every task-split number under this normalisation is an UPPER BOUND that includes the leak.
+10:35:41 INFO tasksplit_controls: VERDICT norm=chan_z: strongest non-neural control is recid at 0.924; recid (direct 'which recording' readout) = 0.924
+10:35:41 WARNING tasksplit_controls: norm=chan_z: recid is 0.924, WELL ABOVE CHANCE — normalisation has NOT closed the design. The two recordings remain directly identifiable from features with no neural levodopa content, and within a patient recording identity IS the ON/OFF label. Every task-split number under this normalisation is an UPPER BOUND that includes the leak.
+10:35:41 INFO tasksplit_controls: Done in 4.2 min.

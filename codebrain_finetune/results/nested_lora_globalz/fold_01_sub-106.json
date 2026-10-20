@@ -1,0 +1,190 @@
+{
+  "run_tag": "nested_lora_globalz",
+  "git_sha": "2a1f9e6980392ab51d447f5853a2278e06d167b2",
+  "checkpoint_sha256": "d9714b8732c9883a04d022ee66254cd578ae1fa27f5458e6ab7f1aa96e9a7352",
+  "env": {
+    "torch": "2.11.0+cu128",
+    "numpy": "2.4.6",
+    "peft": "0.19.1",
+    "transformers": "5.14.1",
+    "sklearn": "1.9.0"
+  },
+  "cohort": {
+    "patients": 35,
+    "windows": 37174
+  },
+  "lora_target": "attention",
+  "input_norm": "global_z",
+  "norm_scale": 0.6627418398857117,
+  "stage": "outer_fold",
+  "fold_index": 1,
+  "test_patient": "sub-106",
+  "mode": "lora",
+  "config": {
+    "r": 16,
+    "lr": 0.002,
+    "dropout": 0.0
+  },
+  "lr": 0.002,
+  "seed": 2,
+  "inner_train_patients": [
+    "sub-77",
+    "sub-121",
+    "sub-81",
+    "sub-92",
+    "sub-73",
+    "sub-119",
+    "sub-76",
+    "sub-34",
+    "sub-69",
+    "sub-129",
+    "sub-134",
+    "sub-71",
+    "sub-42",
+    "sub-48",
+    "sub-94",
+    "sub-114",
+    "sub-131",
+    "sub-103",
+    "sub-93",
+    "sub-51",
+    "sub-62",
+    "sub-125",
+    "sub-117",
+    "sub-70",
+    "sub-90",
+    "sub-116",
+    "sub-107"
+  ],
+  "inner_val_patients": [
+    "sub-72",
+    "sub-84",
+    "sub-96",
+    "sub-53",
+    "sub-135",
+    "sub-115",
+    "sub-123"
+  ],
+  "best_epoch": 5,
+  "best_inner_val_monitor": 0.5714285714285714,
+  "history": [
+    {
+      "epoch": 0,
+      "train_loss": 0.6544571182462904,
+      "inner_val_balanced_accuracy": 0.35714285714285715,
+      "inner_val_auc": 0.14285714285714285,
+      "lr": 0.001002222222222222
+    },
+    {
+      "epoch": 1,
+      "train_loss": 0.4507188732094235,
+      "inner_val_balanced_accuracy": 0.5,
+      "inner_val_auc": 0.5918367346938775,
+      "lr": 0.002
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.3098615877164735,
+      "inner_val_balanced_accuracy": 0.5,
+      "inner_val_auc": 0.4489795918367347,
+      "lr": 0.001984807753012208
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.2731437754465474,
+      "inner_val_balanced_accuracy": 0.42857142857142855,
+      "inner_val_auc": 0.2857142857142857,
+      "lr": 0.0019396926207859084
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.26705182681481043,
+      "inner_val_balanced_accuracy": 0.21428571428571427,
+      "inner_val_auc": 0.16326530612244897,
+      "lr": 0.001866025403784439
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.26442473803957306,
+      "inner_val_balanced_accuracy": 0.5714285714285714,
+      "inner_val_auc": 0.6326530612244897,
+      "lr": 0.001766044443118978
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.2653118382063177,
+      "inner_val_balanced_accuracy": 0.3571428571428571,
+      "inner_val_auc": 0.16326530612244897,
+      "lr": 0.0016427876096865393
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.24510716203186247,
+      "inner_val_balanced_accuracy": 0.5,
+      "inner_val_auc": 0.4489795918367347,
+      "lr": 0.0015
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.24655109759834076,
+      "inner_val_balanced_accuracy": 0.4285714285714286,
+      "inner_val_auc": 0.5102040816326531,
+      "lr": 0.0013420201433256688
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.3036384807361497,
+      "inner_val_balanced_accuracy": 0.5,
+      "inner_val_auc": 0.673469387755102,
+      "lr": 0.0011736481776669307
+    }
+  ],
+  "train_seconds": 892.3496286869049,
+  "trainable_params": 320129,
+  "wall_seconds": 894.8389494419098,
+  "peak_vram_bytes": 2692694016,
+  "window": {
+    "balanced_accuracy": 0.3579627089864159,
+    "accuracy": 0.37573385518590996,
+    "auc": 0.28603382967607105,
+    "sensitivity": 0.2864583333333333,
+    "specificity": 0.42946708463949845,
+    "macro_f1": 0.35923379599602195,
+    "n": 511,
+    "n_pos": 192,
+    "n_neg": 319
+  },
+  "session": {
+    "balanced_accuracy": 0.0,
+    "accuracy": 0.0,
+    "auc": 0.0,
+    "sensitivity": 0.0,
+    "specificity": 0.0,
+    "macro_f1": 0.0,
+    "n": 2,
+    "n_pos": 1,
+    "n_neg": 1
+  },
+  "session_scores": {
+    "sessions": [
+      "sub-106|A",
+      "sub-106|C"
+    ],
+    "patients": [
+      "sub-106",
+      "sub-106"
+    ],
+    "prob": [
+      0.5424572610541547,
+      0.306349247765714
+    ],
+    "y_true": [
+      0,
+      1
+    ],
+    "n_windows": [
+      319,
+      192
+    ]
+  }
+}

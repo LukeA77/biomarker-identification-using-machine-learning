@@ -1,0 +1,753 @@
+{
+  "run_tag": "stage4e_nested_classical",
+  "arm": "classical_nested",
+  "git_sha": "2a1f9e6980392ab51d447f5853a2278e06d167b2",
+  "env": {
+    "torch": "2.11.0+cu128",
+    "numpy": "2.4.6",
+    "peft": "0.19.1",
+    "transformers": "5.14.1",
+    "sklearn": "1.9.0"
+  },
+  "candidates": [
+    "logabs",
+    "rel",
+    "rel_nogamma",
+    "beta",
+    "logabs+rel"
+  ],
+  "selection_counts": {
+    "rel_nogamma": 19,
+    "rel": 15,
+    "beta": 1
+  },
+  "aggregate": {
+    "balanced_accuracy": 0.6285714285714286,
+    "accuracy": 0.6285714285714286,
+    "auc": 0.6195918367346939,
+    "sensitivity": 0.5428571428571428,
+    "specificity": 0.7142857142857143,
+    "macro_f1": 0.6258223684210527,
+    "n": 70,
+    "n_pos": 35,
+    "n_neg": 35
+  },
+  "bootstrap": {
+    "metric": "balanced_accuracy",
+    "point": 0.6285714285714286,
+    "ci_low": 0.5428571428571428,
+    "ci_high": 0.7142857142857143,
+    "ci": 0.95,
+    "n_valid_resamples": 2000
+  },
+  "permutation": {
+    "observed_balanced_accuracy": 0.6285714285714286,
+    "null_mean": 0.4948571428571429,
+    "null_std": 0.05052863403203035,
+    "p_value": 0.004975124378109453,
+    "n_permutations": 200
+  },
+  "ordering_correct": 24,
+  "per_fold": [
+    {
+      "fold": 0,
+      "test_patient": "sub-103",
+      "selected": "rel_nogamma",
+      "inner_scores": {
+        "logabs": 0.5333333333333334,
+        "rel": 0.6023809523809524,
+        "rel_nogamma": 0.6166666666666666,
+        "beta": 0.5261904761904762,
+        "logabs+rel": 0.48809523809523814
+      },
+      "prob": [
+        0.4642,
+        0.2932
+      ],
+      "y_true": [
+        0,
+        1
+      ]
+    },
+    {
+      "fold": 1,
+      "test_patient": "sub-106",
+      "selected": "rel_nogamma",
+      "inner_scores": {
+        "logabs": 0.5,
+        "rel": 0.5857142857142856,
+        "rel_nogamma": 0.6166666666666666,
+        "beta": 0.5261904761904762,
+        "logabs+rel": 0.5
+      },
+      "prob": [
+        0.326,
+        0.2463
+      ],
+      "y_true": [
+        0,
+        1
+      ]
+    },
+    {
+      "fold": 2,
+      "test_patient": "sub-107",
+      "selected": "rel_nogamma",
+      "inner_scores": {
+        "logabs": 0.48809523809523814,
+        "rel": 0.6,
+        "rel_nogamma": 0.6142857142857142,
+        "beta": 0.5119047619047619,
+        "logabs+rel": 0.5166666666666667
+      },
+      "prob": [
+        0.3538,
+        0.5263
+      ],
+      "y_true": [
+        0,
+        1
+      ]
+    },
+    {
+      "fold": 3,
+      "test_patient": "sub-114",
+      "selected": "rel_nogamma",
+      "inner_scores": {
+        "logabs": 0.45714285714285713,
+        "rel": 0.5714285714285714,
+        "rel_nogamma": 0.5857142857142856,
+        "beta": 0.469047619047619,
+        "logabs+rel": 0.5047619047619047
+      },
+      "prob": [
+        0.3176,
+        0.6366
+      ],
+      "y_true": [
+        0,
+        1
+      ]
+    },
+    {
+      "fold": 4,
+      "test_patient": "sub-115",
+      "selected": "rel_nogamma",
+      "inner_scores": {
+        "logabs": 0.5166666666666666,
+        "rel": 0.5976190476190475,
+        "rel_nogamma": 0.6285714285714286,
+        "beta": 0.49523809523809526,
+        "logabs+rel": 0.5023809523809524
+      },
+      "prob": [
+        0.4406,
+        0.3793
+      ],
+      "y_true": [
+        0,
+        1
+      ]
+    },
+    {
+      "fold": 5,
+      "test_patient": "sub-116",
+      "selected": "rel_nogamma",
+      "inner_scores": {
+        "logabs": 0.5023809523809524,
+        "rel": 0.6142857142857142,
+        "rel_nogamma": 0.6452380952380953,
+        "beta": 0.5238095238095238,
+        "logabs+rel": 0.5166666666666667
+      },
+      "prob": [
+        0.562,
+        0.3903
+      ],
+      "y_true": [
+        0,
+        1
+      ]
+    },
+    {
+      "fold": 6,
+      "test_patient": "sub-117",
+      "selected": "rel_nogamma",
+      "inner_scores": {
+        "logabs": 0.5333333333333334,
+        "rel": 0.645238095238095,
+        "rel_nogamma": 0.6595238095238095,
+        "beta": 0.5571428571428572,
+        "logabs+rel": 0.5
+      },
+      "prob": [
+        0.5957,
+        0.4894
+      ],
+      "y_true": [
+        0,
+        1
+      ]
+    },
+    {
+      "fold": 7,
+      "test_patient": "sub-119",
+      "selected": "rel",
+      "inner_scores": {
+        "logabs": 0.5166666666666666,
+        "rel": 0.6309523809523808,
+        "rel_nogamma": 0.6166666666666666,
+        "beta": 0.5380952380952381,
+        "logabs+rel": 0.5023809523809524
+      },
+      "prob": [
+        0.5725,
+        0.728
+      ],
+      "y_true": [
+        0,
+        1
+      ]
+    },
+    {
+      "fold": 8,
+      "test_patient": "sub-121",
+      "selected": "rel",
+      "inner_scores": {
+        "logabs": 0.5166666666666666,
+        "rel": 0.6166666666666666,
+        "rel_nogamma": 0.6023809523809524,
+        "beta": 0.4976190476190475,
+        "logabs+rel": 0.45714285714285713
+      },
+      "prob": [
+        0.4231,
+        0.4684
+      ],
+      "y_true": [
+        0,
+        1
+      ]
+    },
+    {
+      "fold": 9,
+      "test_patient": "sub-123",
+      "selected": "rel_nogamma",
+      "inner_scores": {
+        "logabs": 0.5333333333333333,
+        "rel": 0.6023809523809524,
+        "rel_nogamma": 0.6309523809523808,
+        "beta": 0.46904761904761905,
+        "logabs+rel": 0.5785714285714285
+      },
+      "prob": [
+        0.3468,
+        0.4852
+      ],
+      "y_true": [
+        0,
+        1
+      ]
+    },
+    {
+      "fold": 10,
+      "test_patient": "sub-125",
+      "selected": "rel_nogamma",
+      "inner_scores": {
+        "logabs": 0.48571428571428577,
+        "rel": 0.588095238095238,
+        "rel_nogamma": 0.6023809523809524,
+        "beta": 0.4523809523809524,
+        "logabs+rel": 0.5476190476190477
+      },
+      "prob": [
+        0.4961,
+        0.4995
+      ],
+      "y_true": [
+        0,
+        1
+      ]
+    },
+    {
+      "fold": 11,
+      "test_patient": "sub-129",
+      "selected": "rel",
+      "inner_scores": {
+        "logabs": 0.4976190476190475,
+        "rel": 0.5833333333333333,
+        "rel_nogamma": 0.569047619047619,
+        "beta": 0.5071428571428571,
+        "logabs+rel": 0.5595238095238095
+      },
+      "prob": [
+        0.4745,
+        0.5848
+      ],
+      "y_true": [
+        0,
+        1
+      ]
+    },
+    {
+      "fold": 12,
+      "test_patient": "sub-131",
+      "selected": "rel_nogamma",
+      "inner_scores": {
+        "logabs": 0.46904761904761905,
+        "rel": 0.5857142857142856,
+        "rel_nogamma": 0.6,
+        "beta": 0.5,
+        "logabs+rel": 0.5
+      },
+      "prob": [
+        0.4547,
+        0.5075
+      ],
+      "y_true": [
+        0,
+        1
+      ]
+    },
+    {
+      "fold": 13,
+      "test_patient": "sub-134",
+      "selected": "rel_nogamma",
+      "inner_scores": {
+        "logabs": 0.5119047619047619,
+        "rel": 0.6023809523809524,
+        "rel_nogamma": 0.6166666666666667,
+        "beta": 0.5119047619047619,
+        "logabs+rel": 0.5261904761904762
+      },
+      "prob": [
+        0.6241,
+        0.6778
+      ],
+      "y_true": [
+        0,
+        1
+      ]
+    },
+    {
+      "fold": 14,
+      "test_patient": "sub-135",
+      "selected": "rel",
+      "inner_scores": {
+        "logabs": 0.5261904761904762,
+        "rel": 0.6309523809523809,
+        "rel_nogamma": 0.6142857142857142,
+        "beta": 0.5095238095238096,
+        "logabs+rel": 0.5119047619047619
+      },
+      "prob": [
+        0.4216,
+        0.4627
+      ],
+      "y_true": [
+        0,
+        1
+      ]
+    },
+    {
+      "fold": 15,
+      "test_patient": "sub-34",
+      "selected": "rel",
+      "inner_scores": {
+        "logabs": 0.4976190476190475,
+        "rel": 0.6,
+        "rel_nogamma": 0.6,
+        "beta": 0.49523809523809526,
+        "logabs+rel": 0.5404761904761904
+      },
+      "prob": [
+        0.4545,
+        0.5681
+      ],
+      "y_true": [
+        0,
+        1
+      ]
+    },
+    {
+      "fold": 16,
+      "test_patient": "sub-42",
+      "selected": "rel",
+      "inner_scores": {
+        "logabs": 0.5166666666666666,
+        "rel": 0.6452380952380953,
+        "rel_nogamma": 0.6166666666666667,
+        "beta": 0.5309523809523808,
+        "logabs+rel": 0.5452380952380953
+      },
+      "prob": [
+        0.5143,
+        0.8675
+      ],
+      "y_true": [
+        0,
+        1
+      ]
+    },
+    {
+      "fold": 17,
+      "test_patient": "sub-48",
+      "selected": "rel",
+      "inner_scores": {
+        "logabs": 0.5452380952380953,
+        "rel": 0.5857142857142856,
+        "rel_nogamma": 0.5714285714285714,
+        "beta": 0.4976190476190475,
+        "logabs+rel": 0.5738095238095238
+      },
+      "prob": [
+        0.3904,
+        0.534
+      ],
+      "y_true": [
+        0,
+        1
+      ]
+    },
+    {
+      "fold": 18,
+      "test_patient": "sub-51",
+      "selected": "rel_nogamma",
+      "inner_scores": {
+        "logabs": 0.48571428571428577,
+        "rel": 0.5714285714285714,
+        "rel_nogamma": 0.5857142857142856,
+        "beta": 0.46428571428571425,
+        "logabs+rel": 0.5428571428571429
+      },
+      "prob": [
+        0.3939,
+        0.4397
+      ],
+      "y_true": [
+        0,
+        1
+      ]
+    },
+    {
+      "fold": 19,
+      "test_patient": "sub-53",
+      "selected": "rel",
+      "inner_scores": {
+        "logabs": 0.4833333333333333,
+        "rel": 0.5571428571428572,
+        "rel_nogamma": 0.5571428571428572,
+        "beta": 0.5,
+        "logabs+rel": 0.5095238095238096
+      },
+      "prob": [
+        0.4536,
+        0.5172
+      ],
+      "y_true": [
+        0,
+        1
+      ]
+    },
+    {
+      "fold": 20,
+      "test_patient": "sub-62",
+      "selected": "rel",
+      "inner_scores": {
+        "logabs": 0.4523809523809524,
+        "rel": 0.5595238095238095,
+        "rel_nogamma": 0.5595238095238095,
+        "beta": 0.48571428571428577,
+        "logabs+rel": 0.5095238095238096
+      },
+      "prob": [
+        0.6481,
+        0.5043
+      ],
+      "y_true": [
+        0,
+        1
+      ]
+    },
+    {
+      "fold": 21,
+      "test_patient": "sub-69",
+      "selected": "rel",
+      "inner_scores": {
+        "logabs": 0.4833333333333333,
+        "rel": 0.588095238095238,
+        "rel_nogamma": 0.588095238095238,
+        "beta": 0.5428571428571428,
+        "logabs+rel": 0.5547619047619047
+      },
+      "prob": [
+        0.5318,
+        0.5234
+      ],
+      "y_true": [
+        0,
+        1
+      ]
+    },
+    {
+      "fold": 22,
+      "test_patient": "sub-70",
+      "selected": "beta",
+      "inner_scores": {
+        "logabs": 0.4928571428571429,
+        "rel": 0.5452380952380953,
+        "rel_nogamma": 0.5595238095238095,
+        "beta": 0.6142857142857142,
+        "logabs+rel": 0.569047619047619
+      },
+      "prob": [
+        0.4934,
+        0.2553
+      ],
+      "y_true": [
+        0,
+        1
+      ]
+    },
+    {
+      "fold": 23,
+      "test_patient": "sub-71",
+      "selected": "rel_nogamma",
+      "inner_scores": {
+        "logabs": 0.45476190476190476,
+        "rel": 0.5880952380952381,
+        "rel_nogamma": 0.6023809523809525,
+        "beta": 0.5119047619047618,
+        "logabs+rel": 0.5547619047619047
+      },
+      "prob": [
+        0.5119,
+        0.5579
+      ],
+      "y_true": [
+        0,
+        1
+      ]
+    },
+    {
+      "fold": 24,
+      "test_patient": "sub-72",
+      "selected": "rel_nogamma",
+      "inner_scores": {
+        "logabs": 0.4261904761904762,
+        "rel": 0.5595238095238095,
+        "rel_nogamma": 0.5738095238095238,
+        "beta": 0.46904761904761905,
+        "logabs+rel": 0.5571428571428572
+      },
+      "prob": [
+        0.4543,
+        0.4332
+      ],
+      "y_true": [
+        0,
+        1
+      ]
+    },
+    {
+      "fold": 25,
+      "test_patient": "sub-73",
+      "selected": "rel",
+      "inner_scores": {
+        "logabs": 0.46904761904761905,
+        "rel": 0.5857142857142856,
+        "rel_nogamma": 0.5714285714285714,
+        "beta": 0.569047619047619,
+        "logabs+rel": 0.569047619047619
+      },
+      "prob": [
+        0.4465,
+        0.5526
+      ],
+      "y_true": [
+        0,
+        1
+      ]
+    },
+    {
+      "fold": 26,
+      "test_patient": "sub-76",
+      "selected": "rel",
+      "inner_scores": {
+        "logabs": 0.5142857142857142,
+        "rel": 0.6,
+        "rel_nogamma": 0.5857142857142856,
+        "beta": 0.5428571428571429,
+        "logabs+rel": 0.5571428571428572
+      },
+      "prob": [
+        0.2889,
+        0.3813
+      ],
+      "y_true": [
+        0,
+        1
+      ]
+    },
+    {
+      "fold": 27,
+      "test_patient": "sub-77",
+      "selected": "rel_nogamma",
+      "inner_scores": {
+        "logabs": 0.45476190476190476,
+        "rel": 0.5714285714285714,
+        "rel_nogamma": 0.588095238095238,
+        "beta": 0.5119047619047619,
+        "logabs+rel": 0.5261904761904762
+      },
+      "prob": [
+        0.4061,
+        0.6017
+      ],
+      "y_true": [
+        0,
+        1
+      ]
+    },
+    {
+      "fold": 28,
+      "test_patient": "sub-81",
+      "selected": "rel",
+      "inner_scores": {
+        "logabs": 0.5142857142857142,
+        "rel": 0.6166666666666667,
+        "rel_nogamma": 0.6023809523809524,
+        "beta": 0.5261904761904762,
+        "logabs+rel": 0.5261904761904762
+      },
+      "prob": [
+        0.4544,
+        0.6959
+      ],
+      "y_true": [
+        0,
+        1
+      ]
+    },
+    {
+      "fold": 29,
+      "test_patient": "sub-84",
+      "selected": "rel",
+      "inner_scores": {
+        "logabs": 0.5285714285714286,
+        "rel": 0.588095238095238,
+        "rel_nogamma": 0.588095238095238,
+        "beta": 0.4976190476190475,
+        "logabs+rel": 0.5119047619047619
+      },
+      "prob": [
+        0.4399,
+        0.6432
+      ],
+      "y_true": [
+        0,
+        1
+      ]
+    },
+    {
+      "fold": 30,
+      "test_patient": "sub-90",
+      "selected": "rel",
+      "inner_scores": {
+        "logabs": 0.588095238095238,
+        "rel": 0.6190476190476191,
+        "rel_nogamma": 0.619047619047619,
+        "beta": 0.6023809523809524,
+        "logabs+rel": 0.5595238095238095
+      },
+      "prob": [
+        0.3663,
+        0.288
+      ],
+      "y_true": [
+        0,
+        1
+      ]
+    },
+    {
+      "fold": 31,
+      "test_patient": "sub-92",
+      "selected": "rel_nogamma",
+      "inner_scores": {
+        "logabs": 0.5595238095238095,
+        "rel": 0.588095238095238,
+        "rel_nogamma": 0.6047619047619047,
+        "beta": 0.5261904761904762,
+        "logabs+rel": 0.5571428571428572
+      },
+      "prob": [
+        0.3445,
+        0.4065
+      ],
+      "y_true": [
+        0,
+        1
+      ]
+    },
+    {
+      "fold": 32,
+      "test_patient": "sub-93",
+      "selected": "rel_nogamma",
+      "inner_scores": {
+        "logabs": 0.5023809523809524,
+        "rel": 0.5857142857142857,
+        "rel_nogamma": 0.6142857142857142,
+        "beta": 0.5261904761904761,
+        "logabs+rel": 0.5571428571428572
+      },
+      "prob": [
+        0.5896,
+        0.8809
+      ],
+      "y_true": [
+        0,
+        1
+      ]
+    },
+    {
+      "fold": 33,
+      "test_patient": "sub-94",
+      "selected": "rel_nogamma",
+      "inner_scores": {
+        "logabs": 0.5285714285714286,
+        "rel": 0.6023809523809525,
+        "rel_nogamma": 0.6190476190476191,
+        "beta": 0.4976190476190475,
+        "logabs+rel": 0.5428571428571429
+      },
+      "prob": [
+        0.5805,
+        0.5902
+      ],
+      "y_true": [
+        0,
+        1
+      ]
+    },
+    {
+      "fold": 34,
+      "test_patient": "sub-96",
+      "selected": "rel_nogamma",
+      "inner_scores": {
+        "logabs": 0.5,
+        "rel": 0.6023809523809524,
+        "rel_nogamma": 0.619047619047619,
+        "beta": 0.5738095238095238,
+        "logabs+rel": 0.5142857142857143
+      },
+      "prob": [
+        0.359,
+        0.2264
+      ],
+      "y_true": [
+        0,
+        1
+      ]
+    }
+  ]
+}

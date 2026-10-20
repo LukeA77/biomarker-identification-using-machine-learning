@@ -1,0 +1,381 @@
+14:21:18 INFO livinglab_codebrain.dataset: Manifest validated: 43822 windows, 41 patients, sfreq=200, label map A=0/C=1 consistent.
+14:21:18 WARNING livinglab_codebrain.dataset: Exclusion list names patients absent from the manifest: ['sub-82', 'sub-100', 'sub-111', 'sub-130']
+14:21:18 INFO livinglab_codebrain.dataset: Applying cohort exclusions (loud):
+14:21:18 INFO livinglab_codebrain.dataset:     EXCLUDE sub-80    ->  1109 windows dropped
+14:21:18 INFO livinglab_codebrain.dataset:     EXCLUDE sub-82    ->     0 windows dropped
+14:21:18 INFO livinglab_codebrain.dataset:     EXCLUDE sub-97    ->   700 windows dropped
+14:21:18 INFO livinglab_codebrain.dataset:     EXCLUDE sub-98    ->   910 windows dropped
+14:21:18 INFO livinglab_codebrain.dataset:     EXCLUDE sub-99    ->  1494 windows dropped
+14:21:18 INFO livinglab_codebrain.dataset:     EXCLUDE sub-100   ->     0 windows dropped
+14:21:18 INFO livinglab_codebrain.dataset:     EXCLUDE sub-105   ->   850 windows dropped
+14:21:18 INFO livinglab_codebrain.dataset:     EXCLUDE sub-108   ->  1585 windows dropped
+14:21:18 INFO livinglab_codebrain.dataset:     EXCLUDE sub-111   ->     0 windows dropped
+14:21:18 INFO livinglab_codebrain.dataset:     EXCLUDE sub-130   ->     0 windows dropped
+14:21:18 INFO livinglab_codebrain.dataset: Cohort after exclusions: 35 patients (was 41), 37174 windows (was 43822).
+14:21:18 INFO lopo_tasksplit: LoRA HPs reused from results/nested_lora/hp_search.json: {'r': 4, 'lr': 0.0005, 'dropout': 0.1} (NOT re-searched).
+14:21:18 INFO codebrain_ft.backbone_cache: Backbone feature cache HIT features_none_43c76bba71cb.npz ((9963, 200))
+14:21:18 INFO lopo_tasksplit: Frozen-backbone features: (9963, 200) (hit)
+14:21:19 INFO codebrain_ft.control_features: Feature cache HIT features_none_f231980ce8fb.npz (9963 windows)
+14:21:19 INFO lopo_tasksplit: Run 'lopo_tasksplit_none' | arms=['frozen_probe', 'lora', 'full_ft', 'chanamp', 'relbp', 'aperiodic'] | 27 folds x 2 directions | input_norm=none | max_epochs=20
+14:21:39 INFO lopo_tasksplit: frozen_probe sub-103   tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:21:39 INFO lopo_tasksplit: frozen_probe sub-103   toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:21:39 INFO lopo_tasksplit: frozen_probe sub-106   tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:21:39 INFO lopo_tasksplit: frozen_probe sub-106   toast->tea    | RESUME (exists) | session bal-acc 1.000
+14:21:39 INFO lopo_tasksplit: frozen_probe sub-107   tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:21:39 INFO lopo_tasksplit: frozen_probe sub-107   toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:21:39 INFO lopo_tasksplit: frozen_probe sub-114   tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:21:39 INFO lopo_tasksplit: frozen_probe sub-114   toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:21:39 INFO lopo_tasksplit: frozen_probe sub-115   tea->toast  | RESUME (exists) | session bal-acc 1.000
+14:21:39 INFO lopo_tasksplit: frozen_probe sub-115   toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:21:39 INFO lopo_tasksplit: frozen_probe sub-116   tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:21:39 INFO lopo_tasksplit: frozen_probe sub-116   toast->tea    | RESUME (exists) | session bal-acc 0.000
+14:21:39 INFO lopo_tasksplit: frozen_probe sub-119   tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:21:39 INFO lopo_tasksplit: frozen_probe sub-119   toast->tea    | RESUME (exists) | session bal-acc 1.000
+14:21:39 INFO lopo_tasksplit: frozen_probe sub-121   tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:21:39 INFO lopo_tasksplit: frozen_probe sub-121   toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:21:40 INFO lopo_tasksplit: frozen_probe sub-123   tea->toast  | RESUME (exists) | session bal-acc 1.000
+14:21:40 INFO lopo_tasksplit: frozen_probe sub-123   toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:21:40 INFO lopo_tasksplit: frozen_probe sub-125   tea->toast  | RESUME (exists) | session bal-acc 1.000
+14:21:40 INFO lopo_tasksplit: frozen_probe sub-125   toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:21:40 INFO lopo_tasksplit: frozen_probe sub-129   tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:21:40 INFO lopo_tasksplit: frozen_probe sub-129   toast->tea    | RESUME (exists) | session bal-acc 0.000
+14:21:40 INFO lopo_tasksplit: frozen_probe sub-131   tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:21:40 INFO lopo_tasksplit: frozen_probe sub-131   toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:21:40 INFO lopo_tasksplit: frozen_probe sub-134   tea->toast  | RESUME (exists) | session bal-acc 0.000
+14:21:40 INFO lopo_tasksplit: frozen_probe sub-134   toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:21:40 INFO lopo_tasksplit: frozen_probe sub-135   tea->toast  | RESUME (exists) | session bal-acc 1.000
+14:21:40 INFO lopo_tasksplit: frozen_probe sub-135   toast->tea    | RESUME (exists) | session bal-acc 0.000
+14:21:40 INFO lopo_tasksplit: frozen_probe sub-51    tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:21:40 INFO lopo_tasksplit: frozen_probe sub-51    toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:21:40 INFO lopo_tasksplit: frozen_probe sub-62    tea->toast  | RESUME (exists) | session bal-acc 1.000
+14:21:40 INFO lopo_tasksplit: frozen_probe sub-62    toast->tea    | RESUME (exists) | session bal-acc 1.000
+14:21:40 INFO lopo_tasksplit: frozen_probe sub-70    tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:21:40 INFO lopo_tasksplit: frozen_probe sub-70    toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:21:40 INFO lopo_tasksplit: frozen_probe sub-71    tea->toast  | RESUME (exists) | session bal-acc 0.000
+14:21:40 INFO lopo_tasksplit: frozen_probe sub-71    toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:21:40 INFO lopo_tasksplit: frozen_probe sub-72    tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:21:40 INFO lopo_tasksplit: frozen_probe sub-72    toast->tea    | RESUME (exists) | session bal-acc 1.000
+14:21:40 INFO lopo_tasksplit: frozen_probe sub-76    tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:21:40 INFO lopo_tasksplit: frozen_probe sub-76    toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:21:40 INFO lopo_tasksplit: frozen_probe sub-77    tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:21:40 INFO lopo_tasksplit: frozen_probe sub-77    toast->tea    | RESUME (exists) | session bal-acc 0.000
+14:21:40 INFO lopo_tasksplit: frozen_probe sub-81    tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:21:40 INFO lopo_tasksplit: frozen_probe sub-81    toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:21:40 INFO lopo_tasksplit: frozen_probe sub-84    tea->toast  | RESUME (exists) | session bal-acc 0.000
+14:21:40 INFO lopo_tasksplit: frozen_probe sub-84    toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:21:40 INFO lopo_tasksplit: frozen_probe sub-90    tea->toast  | RESUME (exists) | session bal-acc 1.000
+14:21:40 INFO lopo_tasksplit: frozen_probe sub-90    toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:21:40 INFO lopo_tasksplit: frozen_probe sub-92    tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:21:40 INFO lopo_tasksplit: frozen_probe sub-92    toast->tea    | RESUME (exists) | session bal-acc 0.000
+14:21:40 INFO lopo_tasksplit: frozen_probe sub-94    tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:21:40 INFO lopo_tasksplit: frozen_probe sub-94    toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:21:40 INFO lopo_tasksplit: frozen_probe sub-96    tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:21:40 INFO lopo_tasksplit: frozen_probe sub-96    toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:21:48 INFO lopo_tasksplit: ARM frozen_probe tea_to_toast             | 54 sessions | bal-acc 0.556 [0.444, 0.667] | AUC 0.484 | perm p=0.244 (null 0.498)
+14:21:48 INFO codebrain_ft.tracking: Saved run -> lopo_tasksplit_none_20260802T132148Z.json (+ master CSV row)
+14:21:55 INFO lopo_tasksplit: ARM frozen_probe toast_to_tea             | 54 sessions | bal-acc 0.481 [0.370, 0.593] | AUC 0.479 | perm p=0.776 (null 0.505)
+14:21:55 INFO codebrain_ft.tracking: Saved run -> lopo_tasksplit_none_20260802T132155Z.json (+ master CSV row)
+14:22:03 INFO lopo_tasksplit: ARM frozen_probe both_directions_pooled   | 108 sessions | bal-acc 0.519 [0.444, 0.602] | AUC 0.484 | perm p=0.363 (null 0.499)
+14:22:03 INFO codebrain_ft.tracking: Saved run -> lopo_tasksplit_none_20260802T132203Z.json (+ master CSV row)
+14:22:03 INFO lopo_tasksplit: lora         sub-103   tea->toast  | RESUME (exists) | session bal-acc 1.000
+14:22:03 INFO lopo_tasksplit: lora         sub-103   toast->tea    | RESUME (exists) | session bal-acc 0.000
+14:22:03 INFO lopo_tasksplit: lora         sub-106   tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:22:03 INFO lopo_tasksplit: lora         sub-106   toast->tea    | RESUME (exists) | session bal-acc 1.000
+14:22:03 INFO lopo_tasksplit: lora         sub-107   tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:22:03 INFO lopo_tasksplit: lora         sub-107   toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:22:03 INFO lopo_tasksplit: lora         sub-114   tea->toast  | RESUME (exists) | session bal-acc 0.000
+14:22:03 INFO lopo_tasksplit: lora         sub-114   toast->tea    | RESUME (exists) | session bal-acc 0.000
+14:22:03 INFO lopo_tasksplit: lora         sub-115   tea->toast  | RESUME (exists) | session bal-acc 1.000
+14:22:03 INFO lopo_tasksplit: lora         sub-115   toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:22:03 INFO lopo_tasksplit: lora         sub-116   tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:22:03 INFO lopo_tasksplit: lora         sub-116   toast->tea    | RESUME (exists) | session bal-acc 0.000
+14:22:03 INFO lopo_tasksplit: lora         sub-119   tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:22:03 INFO lopo_tasksplit: lora         sub-119   toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:22:03 INFO lopo_tasksplit: lora         sub-121   tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:22:03 INFO lopo_tasksplit: lora         sub-121   toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:22:03 INFO lopo_tasksplit: lora         sub-123   tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:22:03 INFO lopo_tasksplit: lora         sub-123   toast->tea    | RESUME (exists) | session bal-acc 0.000
+14:22:03 INFO lopo_tasksplit: lora         sub-125   tea->toast  | RESUME (exists) | session bal-acc 1.000
+14:22:03 INFO lopo_tasksplit: lora         sub-125   toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:22:03 INFO lopo_tasksplit: lora         sub-129   tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:22:03 INFO lopo_tasksplit: lora         sub-129   toast->tea    | RESUME (exists) | session bal-acc 0.000
+14:22:03 INFO lopo_tasksplit: lora         sub-131   tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:22:03 INFO lopo_tasksplit: lora         sub-131   toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:22:04 INFO lopo_tasksplit: lora         sub-134   tea->toast  | RESUME (exists) | session bal-acc 0.000
+14:22:04 INFO lopo_tasksplit: lora         sub-134   toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:22:04 INFO lopo_tasksplit: lora         sub-135   tea->toast  | RESUME (exists) | session bal-acc 0.000
+14:22:04 INFO lopo_tasksplit: lora         sub-135   toast->tea    | RESUME (exists) | session bal-acc 0.000
+14:22:04 INFO lopo_tasksplit: lora         sub-51    tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:22:04 INFO lopo_tasksplit: lora         sub-51    toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:22:04 INFO lopo_tasksplit: lora         sub-62    tea->toast  | RESUME (exists) | session bal-acc 1.000
+14:22:04 INFO lopo_tasksplit: lora         sub-62    toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:22:04 INFO lopo_tasksplit: lora         sub-70    tea->toast  | RESUME (exists) | session bal-acc 0.000
+14:22:04 INFO lopo_tasksplit: lora         sub-70    toast->tea    | RESUME (exists) | session bal-acc 0.000
+14:22:04 INFO lopo_tasksplit: lora         sub-71    tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:22:04 INFO lopo_tasksplit: lora         sub-71    toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:22:04 INFO lopo_tasksplit: lora         sub-72    tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:22:04 INFO lopo_tasksplit: lora         sub-72    toast->tea    | RESUME (exists) | session bal-acc 1.000
+14:22:04 INFO lopo_tasksplit: lora         sub-76    tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:22:04 INFO lopo_tasksplit: lora         sub-76    toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:22:04 INFO lopo_tasksplit: lora         sub-77    tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:22:04 INFO lopo_tasksplit: lora         sub-77    toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:22:04 INFO lopo_tasksplit: lora         sub-81    tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:22:04 INFO lopo_tasksplit: lora         sub-81    toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:22:04 INFO lopo_tasksplit: lora         sub-84    tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:22:04 INFO lopo_tasksplit: lora         sub-84    toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:22:04 INFO lopo_tasksplit: lora         sub-90    tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:22:04 INFO lopo_tasksplit: lora         sub-90    toast->tea    | RESUME (exists) | session bal-acc 1.000
+14:22:04 INFO lopo_tasksplit: lora         sub-92    tea->toast  | RESUME (exists) | session bal-acc 0.000
+14:22:04 INFO lopo_tasksplit: lora         sub-92    toast->tea    | RESUME (exists) | session bal-acc 0.000
+14:22:04 INFO lopo_tasksplit: lora         sub-94    tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:22:04 INFO lopo_tasksplit: lora         sub-94    toast->tea    | RESUME (exists) | session bal-acc 0.000
+14:22:04 INFO lopo_tasksplit: lora         sub-96    tea->toast  | RESUME (exists) | session bal-acc 0.000
+14:22:04 INFO lopo_tasksplit: lora         sub-96    toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:22:12 INFO lopo_tasksplit: ARM lora         tea_to_toast             | 54 sessions | bal-acc 0.463 [0.352, 0.574] | AUC 0.440 | perm p=0.846 (null 0.501)
+14:22:12 INFO codebrain_ft.tracking: Saved run -> lopo_tasksplit_none_20260802T132212Z.json (+ master CSV row)
+14:22:19 INFO lopo_tasksplit: ARM lora         toast_to_tea             | 54 sessions | bal-acc 0.389 [0.278, 0.500] | AUC 0.377 | perm p=0.965 (null 0.502)
+14:22:19 INFO codebrain_ft.tracking: Saved run -> lopo_tasksplit_none_20260802T132219Z.json (+ master CSV row)
+14:22:27 INFO lopo_tasksplit: ARM lora         both_directions_pooled   | 108 sessions | bal-acc 0.426 [0.333, 0.519] | AUC 0.401 | perm p=0.955 (null 0.496)
+14:22:27 INFO codebrain_ft.tracking: Saved run -> lopo_tasksplit_none_20260802T132227Z.json (+ master CSV row)
+14:22:27 INFO lopo_tasksplit: full_ft      sub-103   tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:22:27 INFO lopo_tasksplit: full_ft      sub-103   toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:22:27 INFO lopo_tasksplit: full_ft      sub-106   tea->toast  | RESUME (exists) | session bal-acc 0.000
+14:22:27 INFO lopo_tasksplit: full_ft      sub-106   toast->tea    | RESUME (exists) | session bal-acc 1.000
+14:22:27 INFO lopo_tasksplit: full_ft      sub-107   tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:22:27 INFO lopo_tasksplit: full_ft      sub-107   toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:22:27 INFO lopo_tasksplit: full_ft      sub-114   tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:22:27 INFO lopo_tasksplit: full_ft      sub-114   toast->tea    | RESUME (exists) | session bal-acc 0.000
+14:22:27 INFO lopo_tasksplit: full_ft      sub-115   tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:22:27 INFO lopo_tasksplit: full_ft      sub-115   toast->tea    | RESUME (exists) | session bal-acc 0.000
+14:22:27 INFO lopo_tasksplit: full_ft      sub-116   tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:22:27 INFO lopo_tasksplit: full_ft      sub-116   toast->tea    | RESUME (exists) | session bal-acc 0.000
+14:22:27 INFO lopo_tasksplit: full_ft      sub-119   tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:22:27 INFO lopo_tasksplit: full_ft      sub-119   toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:22:27 INFO lopo_tasksplit: full_ft      sub-121   tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:22:27 INFO lopo_tasksplit: full_ft      sub-121   toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:22:27 INFO lopo_tasksplit: full_ft      sub-123   tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:22:27 INFO lopo_tasksplit: full_ft      sub-123   toast->tea    | RESUME (exists) | session bal-acc 0.000
+14:22:27 INFO lopo_tasksplit: full_ft      sub-125   tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:22:27 INFO lopo_tasksplit: full_ft      sub-125   toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:22:27 INFO lopo_tasksplit: full_ft      sub-129   tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:22:27 INFO lopo_tasksplit: full_ft      sub-129   toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:22:27 INFO lopo_tasksplit: full_ft      sub-131   tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:22:27 INFO lopo_tasksplit: full_ft      sub-131   toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:22:27 INFO lopo_tasksplit: full_ft      sub-134   tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:22:27 INFO lopo_tasksplit: full_ft      sub-134   toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:22:27 INFO lopo_tasksplit: full_ft      sub-135   tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:22:27 INFO lopo_tasksplit: full_ft      sub-135   toast->tea    | RESUME (exists) | session bal-acc 0.000
+14:22:27 INFO lopo_tasksplit: full_ft      sub-51    tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:22:27 INFO lopo_tasksplit: full_ft      sub-51    toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:22:27 INFO lopo_tasksplit: full_ft      sub-62    tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:22:27 INFO lopo_tasksplit: full_ft      sub-62    toast->tea    | RESUME (exists) | session bal-acc 1.000
+14:22:27 INFO lopo_tasksplit: full_ft      sub-70    tea->toast  | RESUME (exists) | session bal-acc 0.000
+14:22:27 INFO lopo_tasksplit: full_ft      sub-70    toast->tea    | RESUME (exists) | session bal-acc 0.000
+14:22:27 INFO lopo_tasksplit: full_ft      sub-71    tea->toast  | RESUME (exists) | session bal-acc 1.000
+14:22:27 INFO lopo_tasksplit: full_ft      sub-71    toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:22:27 INFO lopo_tasksplit: full_ft      sub-72    tea->toast  | RESUME (exists) | session bal-acc 1.000
+14:22:27 INFO lopo_tasksplit: full_ft      sub-72    toast->tea    | RESUME (exists) | session bal-acc 1.000
+14:22:27 INFO lopo_tasksplit: full_ft      sub-76    tea->toast  | RESUME (exists) | session bal-acc 1.000
+14:22:27 INFO lopo_tasksplit: full_ft      sub-76    toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:22:27 INFO lopo_tasksplit: full_ft      sub-77    tea->toast  | RESUME (exists) | session bal-acc 1.000
+14:22:27 INFO lopo_tasksplit: full_ft      sub-77    toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:22:27 INFO lopo_tasksplit: full_ft      sub-81    tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:22:27 INFO lopo_tasksplit: full_ft      sub-81    toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:22:27 INFO lopo_tasksplit: full_ft      sub-84    tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:22:27 INFO lopo_tasksplit: full_ft      sub-84    toast->tea    | RESUME (exists) | session bal-acc 1.000
+14:22:27 INFO lopo_tasksplit: full_ft      sub-90    tea->toast  | RESUME (exists) | session bal-acc 0.000
+14:22:27 INFO lopo_tasksplit: full_ft      sub-90    toast->tea    | RESUME (exists) | session bal-acc 0.000
+14:22:27 INFO lopo_tasksplit: full_ft      sub-92    tea->toast  | RESUME (exists) | session bal-acc 0.000
+14:22:27 INFO lopo_tasksplit: full_ft      sub-92    toast->tea    | RESUME (exists) | session bal-acc 0.000
+14:22:27 INFO lopo_tasksplit: full_ft      sub-94    tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:22:27 INFO lopo_tasksplit: full_ft      sub-94    toast->tea    | RESUME (exists) | session bal-acc 0.000
+14:22:27 INFO lopo_tasksplit: full_ft      sub-96    tea->toast  | RESUME (exists) | session bal-acc 0.000
+14:22:27 INFO lopo_tasksplit: full_ft      sub-96    toast->tea    | RESUME (exists) | session bal-acc 0.000
+14:22:35 INFO lopo_tasksplit: ARM full_ft      tea_to_toast             | 54 sessions | bal-acc 0.481 [0.370, 0.593] | AUC 0.458 | perm p=0.741 (null 0.498)
+14:22:35 INFO codebrain_ft.tracking: Saved run -> lopo_tasksplit_none_20260802T132235Z.json (+ master CSV row)
+14:22:43 INFO lopo_tasksplit: ARM full_ft      toast_to_tea             | 54 sessions | bal-acc 0.389 [0.259, 0.519] | AUC 0.376 | perm p=0.965 (null 0.503)
+14:22:43 INFO codebrain_ft.tracking: Saved run -> lopo_tasksplit_none_20260802T132243Z.json (+ master CSV row)
+14:22:51 INFO lopo_tasksplit: ARM full_ft      both_directions_pooled   | 108 sessions | bal-acc 0.435 [0.343, 0.528] | AUC 0.413 | perm p=0.945 (null 0.497)
+14:22:51 INFO codebrain_ft.tracking: Saved run -> lopo_tasksplit_none_20260802T132251Z.json (+ master CSV row)
+14:22:51 INFO lopo_tasksplit: chanamp      sub-103   tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:22:51 INFO lopo_tasksplit: chanamp      sub-103   toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:22:51 INFO lopo_tasksplit: chanamp      sub-106   tea->toast  | RESUME (exists) | session bal-acc 0.000
+14:22:51 INFO lopo_tasksplit: chanamp      sub-106   toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:22:51 INFO lopo_tasksplit: chanamp      sub-107   tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:22:51 INFO lopo_tasksplit: chanamp      sub-107   toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:22:51 INFO lopo_tasksplit: chanamp      sub-114   tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:22:51 INFO lopo_tasksplit: chanamp      sub-114   toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:22:51 INFO lopo_tasksplit: chanamp      sub-115   tea->toast  | RESUME (exists) | session bal-acc 1.000
+14:22:51 INFO lopo_tasksplit: chanamp      sub-115   toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:22:51 INFO lopo_tasksplit: chanamp      sub-116   tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:22:51 INFO lopo_tasksplit: chanamp      sub-116   toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:22:51 INFO lopo_tasksplit: chanamp      sub-119   tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:22:51 INFO lopo_tasksplit: chanamp      sub-119   toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:22:51 INFO lopo_tasksplit: chanamp      sub-121   tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:22:51 INFO lopo_tasksplit: chanamp      sub-121   toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:22:51 INFO lopo_tasksplit: chanamp      sub-123   tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:22:51 INFO lopo_tasksplit: chanamp      sub-123   toast->tea    | RESUME (exists) | session bal-acc 1.000
+14:22:51 INFO lopo_tasksplit: chanamp      sub-125   tea->toast  | RESUME (exists) | session bal-acc 1.000
+14:22:51 INFO lopo_tasksplit: chanamp      sub-125   toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:22:51 INFO lopo_tasksplit: chanamp      sub-129   tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:22:51 INFO lopo_tasksplit: chanamp      sub-129   toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:22:51 INFO lopo_tasksplit: chanamp      sub-131   tea->toast  | RESUME (exists) | session bal-acc 0.000
+14:22:51 INFO lopo_tasksplit: chanamp      sub-131   toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:22:51 INFO lopo_tasksplit: chanamp      sub-134   tea->toast  | RESUME (exists) | session bal-acc 0.000
+14:22:51 INFO lopo_tasksplit: chanamp      sub-134   toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:22:51 INFO lopo_tasksplit: chanamp      sub-135   tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:22:51 INFO lopo_tasksplit: chanamp      sub-135   toast->tea    | RESUME (exists) | session bal-acc 0.000
+14:22:51 INFO lopo_tasksplit: chanamp      sub-51    tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:22:51 INFO lopo_tasksplit: chanamp      sub-51    toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:22:51 INFO lopo_tasksplit: chanamp      sub-62    tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:22:51 INFO lopo_tasksplit: chanamp      sub-62    toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:22:51 INFO lopo_tasksplit: chanamp      sub-70    tea->toast  | RESUME (exists) | session bal-acc 0.000
+14:22:51 INFO lopo_tasksplit: chanamp      sub-70    toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:22:51 INFO lopo_tasksplit: chanamp      sub-71    tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:22:51 INFO lopo_tasksplit: chanamp      sub-71    toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:22:51 INFO lopo_tasksplit: chanamp      sub-72    tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:22:51 INFO lopo_tasksplit: chanamp      sub-72    toast->tea    | RESUME (exists) | session bal-acc 1.000
+14:22:51 INFO lopo_tasksplit: chanamp      sub-76    tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:22:51 INFO lopo_tasksplit: chanamp      sub-76    toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:22:51 INFO lopo_tasksplit: chanamp      sub-77    tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:22:51 INFO lopo_tasksplit: chanamp      sub-77    toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:22:51 INFO lopo_tasksplit: chanamp      sub-81    tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:22:51 INFO lopo_tasksplit: chanamp      sub-81    toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:22:51 INFO lopo_tasksplit: chanamp      sub-84    tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:22:51 INFO lopo_tasksplit: chanamp      sub-84    toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:22:51 INFO lopo_tasksplit: chanamp      sub-90    tea->toast  | RESUME (exists) | session bal-acc 0.000
+14:22:51 INFO lopo_tasksplit: chanamp      sub-90    toast->tea    | RESUME (exists) | session bal-acc 0.000
+14:22:51 INFO lopo_tasksplit: chanamp      sub-92    tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:22:51 INFO lopo_tasksplit: chanamp      sub-92    toast->tea    | RESUME (exists) | session bal-acc 1.000
+14:22:51 INFO lopo_tasksplit: chanamp      sub-94    tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:22:51 INFO lopo_tasksplit: chanamp      sub-94    toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:22:51 INFO lopo_tasksplit: chanamp      sub-96    tea->toast  | RESUME (exists) | session bal-acc 0.000
+14:22:51 INFO lopo_tasksplit: chanamp      sub-96    toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:22:59 INFO lopo_tasksplit: ARM chanamp      tea_to_toast             | 54 sessions | bal-acc 0.426 [0.333, 0.519] | AUC 0.420 | perm p=0.950 (null 0.497)
+14:22:59 INFO codebrain_ft.tracking: Saved run -> lopo_tasksplit_none_20260802T132259Z.json (+ master CSV row)
+14:23:07 INFO lopo_tasksplit: ARM chanamp      toast_to_tea             | 54 sessions | bal-acc 0.519 [0.444, 0.593] | AUC 0.534 | perm p=0.493 (null 0.497)
+14:23:07 INFO codebrain_ft.tracking: Saved run -> lopo_tasksplit_none_20260802T132307Z.json (+ master CSV row)
+14:23:15 INFO lopo_tasksplit: ARM chanamp      both_directions_pooled   | 108 sessions | bal-acc 0.472 [0.407, 0.537] | AUC 0.480 | perm p=0.856 (null 0.502)
+14:23:15 INFO codebrain_ft.tracking: Saved run -> lopo_tasksplit_none_20260802T132315Z.json (+ master CSV row)
+14:23:15 INFO lopo_tasksplit: relbp        sub-103   tea->toast  | RESUME (exists) | session bal-acc 0.000
+14:23:15 INFO lopo_tasksplit: relbp        sub-103   toast->tea    | RESUME (exists) | session bal-acc 0.000
+14:23:15 INFO lopo_tasksplit: relbp        sub-106   tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:23:15 INFO lopo_tasksplit: relbp        sub-106   toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:23:15 INFO lopo_tasksplit: relbp        sub-107   tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:23:15 INFO lopo_tasksplit: relbp        sub-107   toast->tea    | RESUME (exists) | session bal-acc 1.000
+14:23:15 INFO lopo_tasksplit: relbp        sub-114   tea->toast  | RESUME (exists) | session bal-acc 1.000
+14:23:15 INFO lopo_tasksplit: relbp        sub-114   toast->tea    | RESUME (exists) | session bal-acc 1.000
+14:23:15 INFO lopo_tasksplit: relbp        sub-115   tea->toast  | RESUME (exists) | session bal-acc 0.000
+14:23:15 INFO lopo_tasksplit: relbp        sub-115   toast->tea    | RESUME (exists) | session bal-acc 1.000
+14:23:15 INFO lopo_tasksplit: relbp        sub-116   tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:23:15 INFO lopo_tasksplit: relbp        sub-116   toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:23:15 INFO lopo_tasksplit: relbp        sub-119   tea->toast  | RESUME (exists) | session bal-acc 1.000
+14:23:15 INFO lopo_tasksplit: relbp        sub-119   toast->tea    | RESUME (exists) | session bal-acc 1.000
+14:23:15 INFO lopo_tasksplit: relbp        sub-121   tea->toast  | RESUME (exists) | session bal-acc 1.000
+14:23:15 INFO lopo_tasksplit: relbp        sub-121   toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:23:15 INFO lopo_tasksplit: relbp        sub-123   tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:23:15 INFO lopo_tasksplit: relbp        sub-123   toast->tea    | RESUME (exists) | session bal-acc 1.000
+14:23:15 INFO lopo_tasksplit: relbp        sub-125   tea->toast  | RESUME (exists) | session bal-acc 1.000
+14:23:15 INFO lopo_tasksplit: relbp        sub-125   toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:23:15 INFO lopo_tasksplit: relbp        sub-129   tea->toast  | RESUME (exists) | session bal-acc 1.000
+14:23:15 INFO lopo_tasksplit: relbp        sub-129   toast->tea    | RESUME (exists) | session bal-acc 1.000
+14:23:15 INFO lopo_tasksplit: relbp        sub-131   tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:23:15 INFO lopo_tasksplit: relbp        sub-131   toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:23:15 INFO lopo_tasksplit: relbp        sub-134   tea->toast  | RESUME (exists) | session bal-acc 0.000
+14:23:15 INFO lopo_tasksplit: relbp        sub-134   toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:23:15 INFO lopo_tasksplit: relbp        sub-135   tea->toast  | RESUME (exists) | session bal-acc 1.000
+14:23:15 INFO lopo_tasksplit: relbp        sub-135   toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:23:15 INFO lopo_tasksplit: relbp        sub-51    tea->toast  | RESUME (exists) | session bal-acc 0.000
+14:23:15 INFO lopo_tasksplit: relbp        sub-51    toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:23:15 INFO lopo_tasksplit: relbp        sub-62    tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:23:15 INFO lopo_tasksplit: relbp        sub-62    toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:23:15 INFO lopo_tasksplit: relbp        sub-70    tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:23:15 INFO lopo_tasksplit: relbp        sub-70    toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:23:15 INFO lopo_tasksplit: relbp        sub-71    tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:23:15 INFO lopo_tasksplit: relbp        sub-71    toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:23:15 INFO lopo_tasksplit: relbp        sub-72    tea->toast  | RESUME (exists) | session bal-acc 1.000
+14:23:15 INFO lopo_tasksplit: relbp        sub-72    toast->tea    | RESUME (exists) | session bal-acc 1.000
+14:23:15 INFO lopo_tasksplit: relbp        sub-76    tea->toast  | RESUME (exists) | session bal-acc 1.000
+14:23:15 INFO lopo_tasksplit: relbp        sub-76    toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:23:15 INFO lopo_tasksplit: relbp        sub-77    tea->toast  | RESUME (exists) | session bal-acc 1.000
+14:23:15 INFO lopo_tasksplit: relbp        sub-77    toast->tea    | RESUME (exists) | session bal-acc 1.000
+14:23:15 INFO lopo_tasksplit: relbp        sub-81    tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:23:15 INFO lopo_tasksplit: relbp        sub-81    toast->tea    | RESUME (exists) | session bal-acc 1.000
+14:23:15 INFO lopo_tasksplit: relbp        sub-84    tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:23:15 INFO lopo_tasksplit: relbp        sub-84    toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:23:15 INFO lopo_tasksplit: relbp        sub-90    tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:23:15 INFO lopo_tasksplit: relbp        sub-90    toast->tea    | RESUME (exists) | session bal-acc 1.000
+14:23:15 INFO lopo_tasksplit: relbp        sub-92    tea->toast  | RESUME (exists) | session bal-acc 0.000
+14:23:15 INFO lopo_tasksplit: relbp        sub-92    toast->tea    | RESUME (exists) | session bal-acc 1.000
+14:23:15 INFO lopo_tasksplit: relbp        sub-94    tea->toast  | RESUME (exists) | session bal-acc 0.000
+14:23:15 INFO lopo_tasksplit: relbp        sub-94    toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:23:15 INFO lopo_tasksplit: relbp        sub-96    tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:23:15 INFO lopo_tasksplit: relbp        sub-96    toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:23:23 INFO lopo_tasksplit: ARM relbp        tea_to_toast             | 54 sessions | bal-acc 0.556 [0.407, 0.704] | AUC 0.604 | perm p=0.308 (null 0.499)
+14:23:23 INFO codebrain_ft.tracking: Saved run -> lopo_tasksplit_none_20260802T132323Z.json (+ master CSV row)
+14:23:31 INFO lopo_tasksplit: ARM relbp        toast_to_tea             | 54 sessions | bal-acc 0.685 [0.574, 0.778] | AUC 0.701 | perm p=0.010 (null 0.495)
+14:23:31 INFO codebrain_ft.tracking: Saved run -> lopo_tasksplit_none_20260802T132331Z.json (+ master CSV row)
+14:23:39 INFO lopo_tasksplit: ARM relbp        both_directions_pooled   | 108 sessions | bal-acc 0.620 [0.519, 0.713] | AUC 0.645 | perm p=0.005 (null 0.502)
+14:23:39 INFO codebrain_ft.tracking: Saved run -> lopo_tasksplit_none_20260802T132339Z.json (+ master CSV row)
+14:23:39 INFO lopo_tasksplit: aperiodic    sub-103   tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:23:39 INFO lopo_tasksplit: aperiodic    sub-103   toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:23:39 INFO lopo_tasksplit: aperiodic    sub-106   tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:23:39 INFO lopo_tasksplit: aperiodic    sub-106   toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:23:39 INFO lopo_tasksplit: aperiodic    sub-107   tea->toast  | RESUME (exists) | session bal-acc 0.000
+14:23:39 INFO lopo_tasksplit: aperiodic    sub-107   toast->tea    | RESUME (exists) | session bal-acc 0.000
+14:23:39 INFO lopo_tasksplit: aperiodic    sub-114   tea->toast  | RESUME (exists) | session bal-acc 0.000
+14:23:39 INFO lopo_tasksplit: aperiodic    sub-114   toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:23:39 INFO lopo_tasksplit: aperiodic    sub-115   tea->toast  | RESUME (exists) | session bal-acc 1.000
+14:23:39 INFO lopo_tasksplit: aperiodic    sub-115   toast->tea    | RESUME (exists) | session bal-acc 1.000
+14:23:39 INFO lopo_tasksplit: aperiodic    sub-116   tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:23:39 INFO lopo_tasksplit: aperiodic    sub-116   toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:23:39 INFO lopo_tasksplit: aperiodic    sub-119   tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:23:39 INFO lopo_tasksplit: aperiodic    sub-119   toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:23:39 INFO lopo_tasksplit: aperiodic    sub-121   tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:23:39 INFO lopo_tasksplit: aperiodic    sub-121   toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:23:39 INFO lopo_tasksplit: aperiodic    sub-123   tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:23:39 INFO lopo_tasksplit: aperiodic    sub-123   toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:23:39 INFO lopo_tasksplit: aperiodic    sub-125   tea->toast  | RESUME (exists) | session bal-acc 1.000
+14:23:39 INFO lopo_tasksplit: aperiodic    sub-125   toast->tea    | RESUME (exists) | session bal-acc 1.000
+14:23:39 INFO lopo_tasksplit: aperiodic    sub-129   tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:23:39 INFO lopo_tasksplit: aperiodic    sub-129   toast->tea    | RESUME (exists) | session bal-acc 0.000
+14:23:39 INFO lopo_tasksplit: aperiodic    sub-131   tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:23:39 INFO lopo_tasksplit: aperiodic    sub-131   toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:23:39 INFO lopo_tasksplit: aperiodic    sub-134   tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:23:39 INFO lopo_tasksplit: aperiodic    sub-134   toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:23:39 INFO lopo_tasksplit: aperiodic    sub-135   tea->toast  | RESUME (exists) | session bal-acc 0.000
+14:23:39 INFO lopo_tasksplit: aperiodic    sub-135   toast->tea    | RESUME (exists) | session bal-acc 0.000
+14:23:39 INFO lopo_tasksplit: aperiodic    sub-51    tea->toast  | RESUME (exists) | session bal-acc 1.000
+14:23:39 INFO lopo_tasksplit: aperiodic    sub-51    toast->tea    | RESUME (exists) | session bal-acc 1.000
+14:23:39 INFO lopo_tasksplit: aperiodic    sub-62    tea->toast  | RESUME (exists) | session bal-acc 1.000
+14:23:39 INFO lopo_tasksplit: aperiodic    sub-62    toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:23:39 INFO lopo_tasksplit: aperiodic    sub-70    tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:23:39 INFO lopo_tasksplit: aperiodic    sub-70    toast->tea    | RESUME (exists) | session bal-acc 0.000
+14:23:39 INFO lopo_tasksplit: aperiodic    sub-71    tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:23:39 INFO lopo_tasksplit: aperiodic    sub-71    toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:23:39 INFO lopo_tasksplit: aperiodic    sub-72    tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:23:39 INFO lopo_tasksplit: aperiodic    sub-72    toast->tea    | RESUME (exists) | session bal-acc 1.000
+14:23:39 INFO lopo_tasksplit: aperiodic    sub-76    tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:23:39 INFO lopo_tasksplit: aperiodic    sub-76    toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:23:39 INFO lopo_tasksplit: aperiodic    sub-77    tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:23:39 INFO lopo_tasksplit: aperiodic    sub-77    toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:23:39 INFO lopo_tasksplit: aperiodic    sub-81    tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:23:39 INFO lopo_tasksplit: aperiodic    sub-81    toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:23:39 INFO lopo_tasksplit: aperiodic    sub-84    tea->toast  | RESUME (exists) | session bal-acc 1.000
+14:23:39 INFO lopo_tasksplit: aperiodic    sub-84    toast->tea    | RESUME (exists) | session bal-acc 1.000
+14:23:39 INFO lopo_tasksplit: aperiodic    sub-90    tea->toast  | RESUME (exists) | session bal-acc 1.000
+14:23:39 INFO lopo_tasksplit: aperiodic    sub-90    toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:23:39 INFO lopo_tasksplit: aperiodic    sub-92    tea->toast  | RESUME (exists) | session bal-acc 0.000
+14:23:39 INFO lopo_tasksplit: aperiodic    sub-92    toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:23:39 INFO lopo_tasksplit: aperiodic    sub-94    tea->toast  | RESUME (exists) | session bal-acc 0.500
+14:23:39 INFO lopo_tasksplit: aperiodic    sub-94    toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:23:39 INFO lopo_tasksplit: aperiodic    sub-96    tea->toast  | RESUME (exists) | session bal-acc 0.000
+14:23:39 INFO lopo_tasksplit: aperiodic    sub-96    toast->tea    | RESUME (exists) | session bal-acc 0.500
+14:23:47 INFO lopo_tasksplit: ARM aperiodic    tea_to_toast             | 54 sessions | bal-acc 0.519 [0.389, 0.630] | AUC 0.495 | perm p=0.532 (null 0.502)
+14:23:47 INFO codebrain_ft.tracking: Saved run -> lopo_tasksplit_none_20260802T132347Z.json (+ master CSV row)
+14:23:55 INFO lopo_tasksplit: ARM aperiodic    toast_to_tea             | 54 sessions | bal-acc 0.519 [0.407, 0.630] | AUC 0.519 | perm p=0.542 (null 0.501)
+14:23:55 INFO codebrain_ft.tracking: Saved run -> lopo_tasksplit_none_20260802T132355Z.json (+ master CSV row)
+14:24:03 INFO lopo_tasksplit: ARM aperiodic    both_directions_pooled   | 108 sessions | bal-acc 0.519 [0.407, 0.620] | AUC 0.505 | perm p=0.458 (null 0.501)
+14:24:03 INFO codebrain_ft.tracking: Saved run -> lopo_tasksplit_none_20260802T132403Z.json (+ master CSV row)
+14:24:03 INFO lopo_tasksplit: Wrote markdown report -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\codebrain_finetune\logs\lopo_tasksplit_none_report.md
+14:24:03 INFO lopo_tasksplit: Done in 2.4 min. Results under C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\codebrain_finetune\results\lopo_tasksplit_none

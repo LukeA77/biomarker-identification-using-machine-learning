@@ -1,0 +1,231 @@
+{
+  "run_tag": "lopo_tasksplit_heuristics",
+  "input_norm": "none (no EEG features used)",
+  "generated": "2026-08-21 20:09:14",
+  "note": "Task-split-restricted, N=27 recomputation of the two no-EEG heuristic floors reported at N=35 in stage4f_leakage_checks.json (elapsed_time, there 'time_only') and stage4g_duration_confound.json (window_count, there 'duration_only'). Same LOPO+task-split fold structure and statistics (patient-cluster bootstrap, 2000 resamples) as lopo_tasksplit_none_summary.json, so directly comparable to those six arms.",
+  "arms": {
+    "window_count|tea_to_toast": {
+      "arm": "window_count",
+      "direction": "tea_to_toast",
+      "n_sessions": 54,
+      "aggregate": {
+        "balanced_accuracy": 0.537037037037037,
+        "accuracy": 0.5370370370370371,
+        "auc": 0.5555555555555556,
+        "sensitivity": 0.5555555555555556,
+        "specificity": 0.5185185185185185,
+        "macro_f1": 0.5368782161234991,
+        "n": 54,
+        "n_pos": 27,
+        "n_neg": 27
+      },
+      "bootstrap": {
+        "metric": "balanced_accuracy",
+        "point": 0.537037037037037,
+        "ci_low": 0.4629629629629629,
+        "ci_high": 0.6111111111111112,
+        "ci": 0.95,
+        "n_valid_resamples": 2000
+      },
+      "permutation": {
+        "observed_balanced_accuracy": 0.537037037037037,
+        "null_mean": 0.4981481481481481,
+        "null_std": 0.03528251645047713,
+        "p_value": 0.29850746268656714,
+        "n_permutations": 200
+      }
+    },
+    "window_count|toast_to_tea": {
+      "arm": "window_count",
+      "direction": "toast_to_tea",
+      "n_sessions": 54,
+      "aggregate": {
+        "balanced_accuracy": 0.5555555555555556,
+        "accuracy": 0.5555555555555556,
+        "auc": 0.5459533607681756,
+        "sensitivity": 0.7037037037037037,
+        "specificity": 0.4074074074074074,
+        "macro_f1": 0.5455820476858345,
+        "n": 54,
+        "n_pos": 27,
+        "n_neg": 27
+      },
+      "bootstrap": {
+        "metric": "balanced_accuracy",
+        "point": 0.5555555555555556,
+        "ci_low": 0.4444444444444444,
+        "ci_high": 0.6666666666666666,
+        "ci": 0.95,
+        "n_valid_resamples": 2000
+      },
+      "permutation": {
+        "observed_balanced_accuracy": 0.5555555555555556,
+        "null_mean": 0.5024074074074073,
+        "null_std": 0.05562680616201156,
+        "p_value": 0.25870646766169153,
+        "n_permutations": 200
+      }
+    },
+    "window_count|both_directions_pooled": {
+      "arm": "window_count",
+      "direction": "both_directions_pooled",
+      "n_sessions": 108,
+      "aggregate": {
+        "balanced_accuracy": 0.5462962962962963,
+        "accuracy": 0.5462962962962963,
+        "auc": 0.5476680384087791,
+        "sensitivity": 0.6296296296296297,
+        "specificity": 0.46296296296296297,
+        "macro_f1": 0.5431235431235432,
+        "n": 108,
+        "n_pos": 54,
+        "n_neg": 54
+      },
+      "bootstrap": {
+        "metric": "balanced_accuracy",
+        "point": 0.5462962962962963,
+        "ci_low": 0.48148148148148145,
+        "ci_high": 0.6203703703703705,
+        "ci": 0.95,
+        "n_valid_resamples": 2000
+      },
+      "permutation": {
+        "observed_balanced_accuracy": 0.5462962962962963,
+        "null_mean": 0.4998148148148148,
+        "null_std": 0.04182029291938096,
+        "p_value": 0.21393034825870647,
+        "n_permutations": 200
+      }
+    },
+    "elapsed_time|tea_to_toast": {
+      "arm": "elapsed_time",
+      "direction": "tea_to_toast",
+      "n_sessions": 54,
+      "aggregate": {
+        "balanced_accuracy": 0.4444444444444444,
+        "accuracy": 0.4444444444444444,
+        "auc": 0.4403292181069958,
+        "sensitivity": 0.07407407407407407,
+        "specificity": 0.8148148148148148,
+        "macro_f1": 0.35612082670906203,
+        "n": 54,
+        "n_pos": 27,
+        "n_neg": 27
+      },
+      "bootstrap": {
+        "metric": "balanced_accuracy",
+        "point": 0.4444444444444444,
+        "ci_low": 0.37037037037037035,
+        "ci_high": 0.5185185185185185,
+        "ci": 0.95,
+        "n_valid_resamples": 2000
+      },
+      "permutation": {
+        "observed_balanced_accuracy": 0.4444444444444444,
+        "null_mean": 0.4994444444444444,
+        "null_std": 0.04270958168405406,
+        "p_value": 0.9651741293532339,
+        "n_permutations": 200
+      }
+    },
+    "elapsed_time|toast_to_tea": {
+      "arm": "elapsed_time",
+      "direction": "toast_to_tea",
+      "n_sessions": 54,
+      "aggregate": {
+        "balanced_accuracy": 0.5185185185185185,
+        "accuracy": 0.5185185185185185,
+        "auc": 0.6063100137174211,
+        "sensitivity": 0.8888888888888888,
+        "specificity": 0.14814814814814814,
+        "macro_f1": 0.4419713831478538,
+        "n": 54,
+        "n_pos": 27,
+        "n_neg": 27
+      },
+      "bootstrap": {
+        "metric": "balanced_accuracy",
+        "point": 0.5185185185185185,
+        "ci_low": 0.42592592592592593,
+        "ci_high": 0.6111111111111112,
+        "ci": 0.95,
+        "n_valid_resamples": 2000
+      },
+      "permutation": {
+        "observed_balanced_accuracy": 0.5185185185185185,
+        "null_mean": 0.5070370370370371,
+        "null_std": 0.04587063577428864,
+        "p_value": 0.5472636815920398,
+        "n_permutations": 200
+      }
+    },
+    "elapsed_time|both_directions_pooled": {
+      "arm": "elapsed_time",
+      "direction": "both_directions_pooled",
+      "n_sessions": 108,
+      "aggregate": {
+        "balanced_accuracy": 0.48148148148148145,
+        "accuracy": 0.48148148148148145,
+        "auc": 0.513031550068587,
+        "sensitivity": 0.48148148148148145,
+        "specificity": 0.48148148148148145,
+        "macro_f1": 0.48148148148148145,
+        "n": 108,
+        "n_pos": 54,
+        "n_neg": 54
+      },
+      "bootstrap": {
+        "metric": "balanced_accuracy",
+        "point": 0.48148148148148145,
+        "ci_low": 0.42592592592592593,
+        "ci_high": 0.5370370370370371,
+        "ci": 0.95,
+        "n_valid_resamples": 2000
+      },
+      "permutation": {
+        "observed_balanced_accuracy": 0.48148148148148145,
+        "null_mean": 0.49601851851851847,
+        "null_std": 0.05341164197010225,
+        "p_value": 0.6766169154228856,
+        "n_permutations": 200
+      }
+    }
+  },
+  "eligible_patients": [
+    "sub-103",
+    "sub-106",
+    "sub-107",
+    "sub-114",
+    "sub-115",
+    "sub-116",
+    "sub-119",
+    "sub-121",
+    "sub-123",
+    "sub-125",
+    "sub-129",
+    "sub-131",
+    "sub-134",
+    "sub-135",
+    "sub-51",
+    "sub-62",
+    "sub-70",
+    "sub-71",
+    "sub-72",
+    "sub-76",
+    "sub-77",
+    "sub-81",
+    "sub-84",
+    "sub-90",
+    "sub-92",
+    "sub-94",
+    "sub-96"
+  ],
+  "git_sha": "2a1f9e6980392ab51d447f5853a2278e06d167b2",
+  "env": {
+    "torch": "2.11.0+cu128",
+    "numpy": "2.4.6",
+    "peft": "0.19.1",
+    "transformers": "5.14.1",
+    "sklearn": "1.9.0"
+  }
+}

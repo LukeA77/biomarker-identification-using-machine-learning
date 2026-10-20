@@ -1,0 +1,91 @@
+{
+  "run_tag": "lopo_tasksplit_chan_z",
+  "git_sha": "2a1f9e6980392ab51d447f5853a2278e06d167b2",
+  "checkpoint_sha256": "d9714b8732c9883a04d022ee66254cd578ae1fa27f5458e6ab7f1aa96e9a7352",
+  "env": {
+    "torch": "2.11.0+cu128",
+    "numpy": "2.4.6",
+    "peft": "0.19.1",
+    "transformers": "5.14.1",
+    "sklearn": "1.9.0"
+  },
+  "cohort": {
+    "patients": 35,
+    "windows": 37174
+  },
+  "experiment": "lopo_tasksplit",
+  "lora_target": "attention",
+  "lora_hp": {
+    "r": 4,
+    "lr": 0.0005,
+    "dropout": 0.1
+  },
+  "preflight": {
+    "n_eligible": 27,
+    "n_cohort": 35
+  },
+  "arm": "lora",
+  "test_patient": "sub-62",
+  "n_train_patients": 26,
+  "train_task": "tea",
+  "test_task": "toast",
+  "direction": "tea_to_toast",
+  "seed": 964,
+  "n_train_windows": 2285,
+  "n_val_windows": 762,
+  "n_test_windows": 84,
+  "window": {
+    "balanced_accuracy": 0.4897959183673469,
+    "accuracy": 0.4523809523809524,
+    "auc": 0.577259475218659,
+    "sensitivity": 0.7142857142857143,
+    "specificity": 0.2653061224489796,
+    "macro_f1": 0.4409722222222222,
+    "n": 84,
+    "n_pos": 35,
+    "n_neg": 49
+  },
+  "session": {
+    "balanced_accuracy": 0.5,
+    "accuracy": 0.5,
+    "auc": 1.0,
+    "sensitivity": 1.0,
+    "specificity": 0.0,
+    "macro_f1": 0.3333333333333333,
+    "n": 2,
+    "n_pos": 1,
+    "n_neg": 1
+  },
+  "session_scores": {
+    "sessions": [
+      "sub-62|A",
+      "sub-62|C"
+    ],
+    "patients": [
+      "sub-62",
+      "sub-62"
+    ],
+    "prob": [
+      0.6356534793668863,
+      0.6765237742236683
+    ],
+    "y_true": [
+      0,
+      1
+    ],
+    "n_windows": [
+      49,
+      35
+    ]
+  },
+  "input_norm": "chan_z",
+  "norm_scale": 0.6627418398857117,
+  "wall_seconds": 169.21212458610535,
+  "peak_vram_bytes": 2689097216,
+  "best_epoch": 16,
+  "best_val_monitor": 0.7105788904427619,
+  "monitor": "inner_val_window_balanced_accuracy",
+  "trainable_params": 89729,
+  "lr": 0.0005,
+  "train_seconds": 167.67358827590942
+}

@@ -1,0 +1,1137 @@
+18:47:31 INFO livinglab_codebrain.dataset: Manifest validated: 43822 windows, 41 patients, sfreq=200, label map A=0/C=1 consistent.
+18:47:31 WARNING livinglab_codebrain.dataset: Exclusion list names patients absent from the manifest: ['sub-82', 'sub-100', 'sub-111', 'sub-130']
+18:47:31 INFO livinglab_codebrain.dataset: Applying cohort exclusions (loud):
+18:47:31 INFO livinglab_codebrain.dataset:     EXCLUDE sub-80    ->  1109 windows dropped
+18:47:31 INFO livinglab_codebrain.dataset:     EXCLUDE sub-82    ->     0 windows dropped
+18:47:31 INFO livinglab_codebrain.dataset:     EXCLUDE sub-97    ->   700 windows dropped
+18:47:31 INFO livinglab_codebrain.dataset:     EXCLUDE sub-98    ->   910 windows dropped
+18:47:31 INFO livinglab_codebrain.dataset:     EXCLUDE sub-99    ->  1494 windows dropped
+18:47:31 INFO livinglab_codebrain.dataset:     EXCLUDE sub-100   ->     0 windows dropped
+18:47:31 INFO livinglab_codebrain.dataset:     EXCLUDE sub-105   ->   850 windows dropped
+18:47:31 INFO livinglab_codebrain.dataset:     EXCLUDE sub-108   ->  1585 windows dropped
+18:47:31 INFO livinglab_codebrain.dataset:     EXCLUDE sub-111   ->     0 windows dropped
+18:47:31 INFO livinglab_codebrain.dataset:     EXCLUDE sub-130   ->     0 windows dropped
+18:47:31 INFO livinglab_codebrain.dataset: Cohort after exclusions: 35 patients (was 41), 37174 windows (was 43822).
+18:47:31 INFO nested_lopo: Cohort: 35 patients, 37174 windows, balance={'A': 20122, 'C': 17052}
+18:47:31 INFO livinglab_codebrain.loader: Built 35 LOPO folds over 35 patients.
+18:47:31 INFO nested_lopo: Run 'nested_lora_globalz' | mode=lora | 35 outer folds | search: 10 configs x 5 inner | max_epochs=20
+18:47:31 INFO nested_lopo: Input normalisation: global_z (rescaled to cohort-median window std 0.6627)
+18:47:35 INFO nested_lopo: HP search: 10 configs x 5 inner GroupKFold folds over 35 patients (pooled-once).
+18:47:35 INFO nested_lopo:   NOTE: pooled-once selection — mild optimism (test patients seen during HP choice); confirmed with Luke, standard for small-N nested CV.
+18:47:35 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+18:47:35 INFO codebrain_ft.model: LoRA applied: target=attention r=4 alpha=8 dropout=0.1
+18:47:35 INFO codebrain_ft.train: Training: 89729 trainable params, 465 steps/epoch, up to 20 epochs (lr=5.0e-04).
+18:49:12 INFO codebrain_ft.train: epoch 0 | loss 0.6879 | inner-val bal-acc 0.500 | auc 0.408
+18:50:49 INFO codebrain_ft.train: epoch 1 | loss 0.6305 | inner-val bal-acc 0.214 | auc 0.184
+18:52:23 INFO codebrain_ft.train: epoch 2 | loss 0.4859 | inner-val bal-acc 0.571 | auc 0.633
+18:53:57 INFO codebrain_ft.train: epoch 3 | loss 0.3520 | inner-val bal-acc 0.643 | auc 0.571
+18:55:31 INFO codebrain_ft.train: epoch 4 | loss 0.2618 | inner-val bal-acc 0.500 | auc 0.653
+18:57:04 INFO codebrain_ft.train: epoch 5 | loss 0.2249 | inner-val bal-acc 0.571 | auc 0.551
+18:58:38 INFO codebrain_ft.train: epoch 6 | loss 0.1906 | inner-val bal-acc 0.500 | auc 0.531
+19:00:12 INFO codebrain_ft.train: epoch 7 | loss 0.1607 | inner-val bal-acc 0.429 | auc 0.510
+19:00:12 INFO codebrain_ft.train: Early stopping at epoch 7 (best epoch 3, inner_val_balanced_accuracy=0.643).
+19:00:20 INFO nested_lopo:   config 1/10 {'r': 4, 'lr': 0.0005, 'dropout': 0.1} | inner fold 1/5 | val bal-acc 0.643 | peak 2.7 GB
+19:00:20 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+19:00:20 INFO codebrain_ft.model: LoRA applied: target=attention r=4 alpha=8 dropout=0.1
+19:00:20 INFO codebrain_ft.train: Training: 89729 trainable params, 451 steps/epoch, up to 20 epochs (lr=5.0e-04).
+19:01:55 INFO codebrain_ft.train: epoch 0 | loss 0.6807 | inner-val bal-acc 0.500 | auc 0.449
+19:03:27 INFO codebrain_ft.train: epoch 1 | loss 0.6047 | inner-val bal-acc 0.571 | auc 0.571
+19:04:57 INFO codebrain_ft.train: epoch 2 | loss 0.4629 | inner-val bal-acc 0.500 | auc 0.551
+19:06:28 INFO codebrain_ft.train: epoch 3 | loss 0.3387 | inner-val bal-acc 0.429 | auc 0.551
+19:07:58 INFO codebrain_ft.train: epoch 4 | loss 0.2623 | inner-val bal-acc 0.571 | auc 0.408
+19:09:27 INFO codebrain_ft.train: epoch 5 | loss 0.2172 | inner-val bal-acc 0.500 | auc 0.469
+19:09:27 INFO codebrain_ft.train: Early stopping at epoch 5 (best epoch 1, inner_val_balanced_accuracy=0.571).
+19:09:36 INFO nested_lopo:   config 1/10 {'r': 4, 'lr': 0.0005, 'dropout': 0.1} | inner fold 2/5 | val bal-acc 0.571 | peak 2.7 GB
+19:09:36 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+19:09:36 INFO codebrain_ft.model: LoRA applied: target=attention r=4 alpha=8 dropout=0.1
+19:09:36 INFO codebrain_ft.train: Training: 89729 trainable params, 469 steps/epoch, up to 20 epochs (lr=5.0e-04).
+19:11:11 INFO codebrain_ft.train: epoch 0 | loss 0.6862 | inner-val bal-acc 0.571 | auc 0.429
+19:12:44 INFO codebrain_ft.train: epoch 1 | loss 0.6119 | inner-val bal-acc 0.571 | auc 0.449
+19:14:17 INFO codebrain_ft.train: epoch 2 | loss 0.4463 | inner-val bal-acc 0.286 | auc 0.429
+19:15:48 INFO codebrain_ft.train: epoch 3 | loss 0.3210 | inner-val bal-acc 0.500 | auc 0.510
+19:17:50 INFO codebrain_ft.train: epoch 4 | loss 0.2594 | inner-val bal-acc 0.571 | auc 0.592
+19:17:50 INFO codebrain_ft.train: Early stopping at epoch 4 (best epoch 0, inner_val_balanced_accuracy=0.571).
+19:18:29 INFO nested_lopo:   config 1/10 {'r': 4, 'lr': 0.0005, 'dropout': 0.1} | inner fold 3/5 | val bal-acc 0.571 | peak 2.7 GB
+19:18:29 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+19:18:29 INFO codebrain_ft.model: LoRA applied: target=attention r=4 alpha=8 dropout=0.1
+19:18:29 INFO codebrain_ft.train: Training: 89729 trainable params, 477 steps/epoch, up to 20 epochs (lr=5.0e-04).
+19:28:15 INFO codebrain_ft.train: epoch 0 | loss 0.6855 | inner-val bal-acc 0.500 | auc 0.531
+19:29:50 INFO codebrain_ft.train: epoch 1 | loss 0.6389 | inner-val bal-acc 0.429 | auc 0.429
+19:31:26 INFO codebrain_ft.train: epoch 2 | loss 0.4684 | inner-val bal-acc 0.714 | auc 0.673
+19:33:03 INFO codebrain_ft.train: epoch 3 | loss 0.3297 | inner-val bal-acc 0.643 | auc 0.776
+19:34:40 INFO codebrain_ft.train: epoch 4 | loss 0.2587 | inner-val bal-acc 0.571 | auc 0.612
+19:36:16 INFO codebrain_ft.train: epoch 5 | loss 0.2197 | inner-val bal-acc 0.643 | auc 0.673
+19:37:53 INFO codebrain_ft.train: epoch 6 | loss 0.1922 | inner-val bal-acc 0.571 | auc 0.776
+19:37:53 INFO codebrain_ft.train: Early stopping at epoch 6 (best epoch 2, inner_val_balanced_accuracy=0.714).
+19:38:00 INFO nested_lopo:   config 1/10 {'r': 4, 'lr': 0.0005, 'dropout': 0.1} | inner fold 4/5 | val bal-acc 0.714 | peak 2.7 GB
+19:38:00 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+19:38:00 INFO codebrain_ft.model: LoRA applied: target=attention r=4 alpha=8 dropout=0.1
+19:38:00 INFO codebrain_ft.train: Training: 89729 trainable params, 463 steps/epoch, up to 20 epochs (lr=5.0e-04).
+19:40:32 INFO codebrain_ft.train: epoch 0 | loss 0.6864 | inner-val bal-acc 0.357 | auc 0.531
+19:42:03 INFO codebrain_ft.train: epoch 1 | loss 0.6003 | inner-val bal-acc 0.357 | auc 0.347
+19:43:38 INFO codebrain_ft.train: epoch 2 | loss 0.4015 | inner-val bal-acc 0.214 | auc 0.367
+19:45:09 INFO codebrain_ft.train: epoch 3 | loss 0.2849 | inner-val bal-acc 0.286 | auc 0.367
+19:46:43 INFO codebrain_ft.train: epoch 4 | loss 0.2272 | inner-val bal-acc 0.357 | auc 0.347
+19:46:43 INFO codebrain_ft.train: Early stopping at epoch 4 (best epoch 0, inner_val_balanced_accuracy=0.357).
+19:46:50 INFO nested_lopo:   config 1/10 {'r': 4, 'lr': 0.0005, 'dropout': 0.1} | inner fold 5/5 | val bal-acc 0.357 | peak 2.7 GB
+19:46:50 INFO nested_lopo:   config 1/10 {'r': 4, 'lr': 0.0005, 'dropout': 0.1} -> mean inner-val bal-acc 0.571
+19:46:50 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+19:46:51 INFO codebrain_ft.model: LoRA applied: target=attention r=4 alpha=8 dropout=0.1
+19:46:51 INFO codebrain_ft.train: Training: 89729 trainable params, 465 steps/epoch, up to 20 epochs (lr=2.0e-03).
+19:48:25 INFO codebrain_ft.train: epoch 0 | loss 0.6624 | inner-val bal-acc 0.500 | auc 0.265
+19:49:59 INFO codebrain_ft.train: epoch 1 | loss 0.4695 | inner-val bal-acc 0.429 | auc 0.367
+19:51:34 INFO codebrain_ft.train: epoch 2 | loss 0.3178 | inner-val bal-acc 0.286 | auc 0.224
+19:53:07 INFO codebrain_ft.train: epoch 3 | loss 0.2378 | inner-val bal-acc 0.571 | auc 0.429
+19:54:40 INFO codebrain_ft.train: epoch 4 | loss 0.2012 | inner-val bal-acc 0.429 | auc 0.469
+19:56:11 INFO codebrain_ft.train: epoch 5 | loss 0.1754 | inner-val bal-acc 0.500 | auc 0.571
+19:57:44 INFO codebrain_ft.train: epoch 6 | loss 0.1631 | inner-val bal-acc 0.429 | auc 0.367
+19:59:17 INFO codebrain_ft.train: epoch 7 | loss 0.1427 | inner-val bal-acc 0.500 | auc 0.592
+19:59:17 INFO codebrain_ft.train: Early stopping at epoch 7 (best epoch 3, inner_val_balanced_accuracy=0.571).
+19:59:24 INFO nested_lopo:   config 2/10 {'r': 4, 'lr': 0.002, 'dropout': 0.1} | inner fold 1/5 | val bal-acc 0.571 | peak 2.7 GB
+19:59:24 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+19:59:24 INFO codebrain_ft.model: LoRA applied: target=attention r=4 alpha=8 dropout=0.1
+19:59:24 INFO codebrain_ft.train: Training: 89729 trainable params, 451 steps/epoch, up to 20 epochs (lr=2.0e-03).
+20:00:54 INFO codebrain_ft.train: epoch 0 | loss 0.6531 | inner-val bal-acc 0.571 | auc 0.510
+20:02:27 INFO codebrain_ft.train: epoch 1 | loss 0.4675 | inner-val bal-acc 0.429 | auc 0.469
+20:03:57 INFO codebrain_ft.train: epoch 2 | loss 0.3282 | inner-val bal-acc 0.500 | auc 0.408
+20:05:29 INFO codebrain_ft.train: epoch 3 | loss 0.2450 | inner-val bal-acc 0.429 | auc 0.388
+20:06:59 INFO codebrain_ft.train: epoch 4 | loss 0.2065 | inner-val bal-acc 0.286 | auc 0.408
+20:06:59 INFO codebrain_ft.train: Early stopping at epoch 4 (best epoch 0, inner_val_balanced_accuracy=0.571).
+20:07:08 INFO nested_lopo:   config 2/10 {'r': 4, 'lr': 0.002, 'dropout': 0.1} | inner fold 2/5 | val bal-acc 0.571 | peak 2.7 GB
+20:07:08 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+20:07:08 INFO codebrain_ft.model: LoRA applied: target=attention r=4 alpha=8 dropout=0.1
+20:07:08 INFO codebrain_ft.train: Training: 89729 trainable params, 469 steps/epoch, up to 20 epochs (lr=2.0e-03).
+20:08:40 INFO codebrain_ft.train: epoch 0 | loss 0.6632 | inner-val bal-acc 0.357 | auc 0.429
+20:10:15 INFO codebrain_ft.train: epoch 1 | loss 0.4499 | inner-val bal-acc 0.643 | auc 0.551
+20:11:46 INFO codebrain_ft.train: epoch 2 | loss 0.3198 | inner-val bal-acc 0.357 | auc 0.469
+20:13:20 INFO codebrain_ft.train: epoch 3 | loss 0.2433 | inner-val bal-acc 0.571 | auc 0.490
+20:14:54 INFO codebrain_ft.train: epoch 4 | loss 0.2104 | inner-val bal-acc 0.571 | auc 0.490
+20:16:25 INFO codebrain_ft.train: epoch 5 | loss 0.1772 | inner-val bal-acc 0.571 | auc 0.571
+20:16:25 INFO codebrain_ft.train: Early stopping at epoch 5 (best epoch 1, inner_val_balanced_accuracy=0.643).
+20:16:32 INFO nested_lopo:   config 2/10 {'r': 4, 'lr': 0.002, 'dropout': 0.1} | inner fold 3/5 | val bal-acc 0.643 | peak 2.7 GB
+20:16:32 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+20:16:32 INFO codebrain_ft.model: LoRA applied: target=attention r=4 alpha=8 dropout=0.1
+20:16:32 INFO codebrain_ft.train: Training: 89729 trainable params, 477 steps/epoch, up to 20 epochs (lr=2.0e-03).
+20:18:06 INFO codebrain_ft.train: epoch 0 | loss 0.6706 | inner-val bal-acc 0.500 | auc 0.531
+20:19:39 INFO codebrain_ft.train: epoch 1 | loss 0.4909 | inner-val bal-acc 0.357 | auc 0.449
+20:21:12 INFO codebrain_ft.train: epoch 2 | loss 0.3318 | inner-val bal-acc 0.643 | auc 0.653
+20:22:46 INFO codebrain_ft.train: epoch 3 | loss 0.2636 | inner-val bal-acc 0.714 | auc 0.755
+20:24:19 INFO codebrain_ft.train: epoch 4 | loss 0.2203 | inner-val bal-acc 0.714 | auc 0.673
+20:25:52 INFO codebrain_ft.train: epoch 5 | loss 0.1845 | inner-val bal-acc 0.714 | auc 0.714
+20:27:26 INFO codebrain_ft.train: epoch 6 | loss 0.1725 | inner-val bal-acc 0.643 | auc 0.714
+20:29:00 INFO codebrain_ft.train: epoch 7 | loss 0.1567 | inner-val bal-acc 0.643 | auc 0.673
+20:29:00 INFO codebrain_ft.train: Early stopping at epoch 7 (best epoch 3, inner_val_balanced_accuracy=0.714).
+20:29:07 INFO nested_lopo:   config 2/10 {'r': 4, 'lr': 0.002, 'dropout': 0.1} | inner fold 4/5 | val bal-acc 0.714 | peak 2.7 GB
+20:29:07 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+20:29:07 INFO codebrain_ft.model: LoRA applied: target=attention r=4 alpha=8 dropout=0.1
+20:29:07 INFO codebrain_ft.train: Training: 89729 trainable params, 463 steps/epoch, up to 20 epochs (lr=2.0e-03).
+20:30:38 INFO codebrain_ft.train: epoch 0 | loss 0.6613 | inner-val bal-acc 0.429 | auc 0.429
+20:32:10 INFO codebrain_ft.train: epoch 1 | loss 0.4378 | inner-val bal-acc 0.286 | auc 0.306
+20:33:41 INFO codebrain_ft.train: epoch 2 | loss 0.2880 | inner-val bal-acc 0.357 | auc 0.327
+20:35:12 INFO codebrain_ft.train: epoch 3 | loss 0.2201 | inner-val bal-acc 0.429 | auc 0.286
+20:36:43 INFO codebrain_ft.train: epoch 4 | loss 0.1769 | inner-val bal-acc 0.286 | auc 0.306
+20:36:43 INFO codebrain_ft.train: Early stopping at epoch 4 (best epoch 0, inner_val_balanced_accuracy=0.429).
+20:36:50 INFO nested_lopo:   config 2/10 {'r': 4, 'lr': 0.002, 'dropout': 0.1} | inner fold 5/5 | val bal-acc 0.429 | peak 2.7 GB
+20:36:50 INFO nested_lopo:   config 2/10 {'r': 4, 'lr': 0.002, 'dropout': 0.1} -> mean inner-val bal-acc 0.586
+20:36:51 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+20:36:51 INFO codebrain_ft.model: LoRA applied: target=attention r=8 alpha=16 dropout=0.0
+20:36:51 INFO codebrain_ft.train: Training: 166529 trainable params, 465 steps/epoch, up to 20 epochs (lr=2.0e-03).
+20:38:22 INFO codebrain_ft.train: epoch 0 | loss 0.6592 | inner-val bal-acc 0.571 | auc 0.265
+20:39:53 INFO codebrain_ft.train: epoch 1 | loss 0.4576 | inner-val bal-acc 0.500 | auc 0.429
+20:41:25 INFO codebrain_ft.train: epoch 2 | loss 0.3023 | inner-val bal-acc 0.571 | auc 0.531
+20:42:56 INFO codebrain_ft.train: epoch 3 | loss 0.2412 | inner-val bal-acc 0.500 | auc 0.408
+20:44:27 INFO codebrain_ft.train: epoch 4 | loss 0.2010 | inner-val bal-acc 0.429 | auc 0.510
+20:44:27 INFO codebrain_ft.train: Early stopping at epoch 4 (best epoch 0, inner_val_balanced_accuracy=0.571).
+20:44:35 INFO nested_lopo:   config 3/10 {'r': 8, 'lr': 0.002, 'dropout': 0.0} | inner fold 1/5 | val bal-acc 0.571 | peak 2.7 GB
+20:44:35 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+20:44:35 INFO codebrain_ft.model: LoRA applied: target=attention r=8 alpha=16 dropout=0.0
+20:44:35 INFO codebrain_ft.train: Training: 166529 trainable params, 451 steps/epoch, up to 20 epochs (lr=2.0e-03).
+20:46:05 INFO codebrain_ft.train: epoch 0 | loss 0.6482 | inner-val bal-acc 0.571 | auc 0.633
+20:47:35 INFO codebrain_ft.train: epoch 1 | loss 0.4658 | inner-val bal-acc 0.500 | auc 0.592
+20:49:05 INFO codebrain_ft.train: epoch 2 | loss 0.3241 | inner-val bal-acc 0.500 | auc 0.490
+20:50:35 INFO codebrain_ft.train: epoch 3 | loss 0.2540 | inner-val bal-acc 0.286 | auc 0.449
+20:52:06 INFO codebrain_ft.train: epoch 4 | loss 0.2063 | inner-val bal-acc 0.357 | auc 0.388
+20:52:06 INFO codebrain_ft.train: Early stopping at epoch 4 (best epoch 0, inner_val_balanced_accuracy=0.571).
+20:52:14 INFO nested_lopo:   config 3/10 {'r': 8, 'lr': 0.002, 'dropout': 0.0} | inner fold 2/5 | val bal-acc 0.571 | peak 2.7 GB
+20:52:14 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+20:52:14 INFO codebrain_ft.model: LoRA applied: target=attention r=8 alpha=16 dropout=0.0
+20:52:14 INFO codebrain_ft.train: Training: 166529 trainable params, 469 steps/epoch, up to 20 epochs (lr=2.0e-03).
+20:53:47 INFO codebrain_ft.train: epoch 0 | loss 0.6480 | inner-val bal-acc 0.500 | auc 0.571
+20:55:21 INFO codebrain_ft.train: epoch 1 | loss 0.4299 | inner-val bal-acc 0.357 | auc 0.449
+20:56:57 INFO codebrain_ft.train: epoch 2 | loss 0.2904 | inner-val bal-acc 0.429 | auc 0.408
+20:58:32 INFO codebrain_ft.train: epoch 3 | loss 0.2407 | inner-val bal-acc 0.429 | auc 0.551
+21:00:07 INFO codebrain_ft.train: epoch 4 | loss 0.1951 | inner-val bal-acc 0.500 | auc 0.531
+21:00:07 INFO codebrain_ft.train: Early stopping at epoch 4 (best epoch 0, inner_val_balanced_accuracy=0.500).
+21:00:15 INFO nested_lopo:   config 3/10 {'r': 8, 'lr': 0.002, 'dropout': 0.0} | inner fold 3/5 | val bal-acc 0.500 | peak 2.7 GB
+21:00:15 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+21:00:15 INFO codebrain_ft.model: LoRA applied: target=attention r=8 alpha=16 dropout=0.0
+21:00:15 INFO codebrain_ft.train: Training: 166529 trainable params, 477 steps/epoch, up to 20 epochs (lr=2.0e-03).
+21:01:52 INFO codebrain_ft.train: epoch 0 | loss 0.6628 | inner-val bal-acc 0.571 | auc 0.469
+21:03:28 INFO codebrain_ft.train: epoch 1 | loss 0.4462 | inner-val bal-acc 0.643 | auc 0.612
+21:05:04 INFO codebrain_ft.train: epoch 2 | loss 0.3029 | inner-val bal-acc 0.714 | auc 0.837
+21:06:37 INFO codebrain_ft.train: epoch 3 | loss 0.2485 | inner-val bal-acc 0.571 | auc 0.714
+21:08:13 INFO codebrain_ft.train: epoch 4 | loss 0.2210 | inner-val bal-acc 0.571 | auc 0.714
+21:09:46 INFO codebrain_ft.train: epoch 5 | loss 0.1910 | inner-val bal-acc 0.643 | auc 0.755
+21:11:19 INFO codebrain_ft.train: epoch 6 | loss 0.1782 | inner-val bal-acc 0.571 | auc 0.755
+21:11:19 INFO codebrain_ft.train: Early stopping at epoch 6 (best epoch 2, inner_val_balanced_accuracy=0.714).
+21:11:27 INFO nested_lopo:   config 3/10 {'r': 8, 'lr': 0.002, 'dropout': 0.0} | inner fold 4/5 | val bal-acc 0.714 | peak 2.7 GB
+21:11:27 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+21:11:28 INFO codebrain_ft.model: LoRA applied: target=attention r=8 alpha=16 dropout=0.0
+21:11:28 INFO codebrain_ft.train: Training: 166529 trainable params, 463 steps/epoch, up to 20 epochs (lr=2.0e-03).
+21:12:58 INFO codebrain_ft.train: epoch 0 | loss 0.6460 | inner-val bal-acc 0.429 | auc 0.367
+21:14:29 INFO codebrain_ft.train: epoch 1 | loss 0.3866 | inner-val bal-acc 0.286 | auc 0.327
+21:16:02 INFO codebrain_ft.train: epoch 2 | loss 0.2695 | inner-val bal-acc 0.357 | auc 0.306
+21:17:35 INFO codebrain_ft.train: epoch 3 | loss 0.2075 | inner-val bal-acc 0.357 | auc 0.347
+21:19:06 INFO codebrain_ft.train: epoch 4 | loss 0.1802 | inner-val bal-acc 0.214 | auc 0.184
+21:19:06 INFO codebrain_ft.train: Early stopping at epoch 4 (best epoch 0, inner_val_balanced_accuracy=0.429).
+21:19:14 INFO nested_lopo:   config 3/10 {'r': 8, 'lr': 0.002, 'dropout': 0.0} | inner fold 5/5 | val bal-acc 0.429 | peak 2.7 GB
+21:19:14 INFO nested_lopo:   config 3/10 {'r': 8, 'lr': 0.002, 'dropout': 0.0} -> mean inner-val bal-acc 0.557
+21:19:14 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+21:19:14 INFO codebrain_ft.model: LoRA applied: target=attention r=16 alpha=32 dropout=0.25
+21:19:14 INFO codebrain_ft.train: Training: 320129 trainable params, 465 steps/epoch, up to 20 epochs (lr=1.0e-03).
+21:20:47 INFO codebrain_ft.train: epoch 0 | loss 0.6675 | inner-val bal-acc 0.286 | auc 0.286
+21:22:18 INFO codebrain_ft.train: epoch 1 | loss 0.4507 | inner-val bal-acc 0.571 | auc 0.551
+21:23:52 INFO codebrain_ft.train: epoch 2 | loss 0.2771 | inner-val bal-acc 0.429 | auc 0.449
+21:25:24 INFO codebrain_ft.train: epoch 3 | loss 0.2025 | inner-val bal-acc 0.571 | auc 0.592
+21:26:57 INFO codebrain_ft.train: epoch 4 | loss 0.1664 | inner-val bal-acc 0.429 | auc 0.531
+21:28:32 INFO codebrain_ft.train: epoch 5 | loss 0.1341 | inner-val bal-acc 0.571 | auc 0.510
+21:28:32 INFO codebrain_ft.train: Early stopping at epoch 5 (best epoch 1, inner_val_balanced_accuracy=0.571).
+21:28:39 INFO nested_lopo:   config 4/10 {'r': 16, 'lr': 0.001, 'dropout': 0.25} | inner fold 1/5 | val bal-acc 0.571 | peak 2.7 GB
+21:28:39 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+21:28:39 INFO codebrain_ft.model: LoRA applied: target=attention r=16 alpha=32 dropout=0.25
+21:28:39 INFO codebrain_ft.train: Training: 320129 trainable params, 451 steps/epoch, up to 20 epochs (lr=1.0e-03).
+21:30:09 INFO codebrain_ft.train: epoch 0 | loss 0.6603 | inner-val bal-acc 0.500 | auc 0.551
+21:31:43 INFO codebrain_ft.train: epoch 1 | loss 0.4703 | inner-val bal-acc 0.571 | auc 0.510
+21:33:14 INFO codebrain_ft.train: epoch 2 | loss 0.3160 | inner-val bal-acc 0.429 | auc 0.449
+21:34:43 INFO codebrain_ft.train: epoch 3 | loss 0.2202 | inner-val bal-acc 0.429 | auc 0.449
+21:36:12 INFO codebrain_ft.train: epoch 4 | loss 0.1770 | inner-val bal-acc 0.429 | auc 0.367
+21:37:45 INFO codebrain_ft.train: epoch 5 | loss 0.1508 | inner-val bal-acc 0.357 | auc 0.245
+21:37:45 INFO codebrain_ft.train: Early stopping at epoch 5 (best epoch 1, inner_val_balanced_accuracy=0.571).
+21:37:53 INFO nested_lopo:   config 4/10 {'r': 16, 'lr': 0.001, 'dropout': 0.25} | inner fold 2/5 | val bal-acc 0.571 | peak 2.7 GB
+21:37:54 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+21:37:54 INFO codebrain_ft.model: LoRA applied: target=attention r=16 alpha=32 dropout=0.25
+21:37:54 INFO codebrain_ft.train: Training: 320129 trainable params, 469 steps/epoch, up to 20 epochs (lr=1.0e-03).
+21:39:26 INFO codebrain_ft.train: epoch 0 | loss 0.6690 | inner-val bal-acc 0.643 | auc 0.490
+21:40:59 INFO codebrain_ft.train: epoch 1 | loss 0.4363 | inner-val bal-acc 0.357 | auc 0.388
+21:42:31 INFO codebrain_ft.train: epoch 2 | loss 0.2825 | inner-val bal-acc 0.571 | auc 0.449
+21:44:06 INFO codebrain_ft.train: epoch 3 | loss 0.2132 | inner-val bal-acc 0.500 | auc 0.531
+21:45:38 INFO codebrain_ft.train: epoch 4 | loss 0.1734 | inner-val bal-acc 0.500 | auc 0.469
+21:45:38 INFO codebrain_ft.train: Early stopping at epoch 4 (best epoch 0, inner_val_balanced_accuracy=0.643).
+21:45:45 INFO nested_lopo:   config 4/10 {'r': 16, 'lr': 0.001, 'dropout': 0.25} | inner fold 3/5 | val bal-acc 0.643 | peak 2.7 GB
+21:45:45 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+21:45:45 INFO codebrain_ft.model: LoRA applied: target=attention r=16 alpha=32 dropout=0.25
+21:45:46 INFO codebrain_ft.train: Training: 320129 trainable params, 477 steps/epoch, up to 20 epochs (lr=1.0e-03).
+21:47:19 INFO codebrain_ft.train: epoch 0 | loss 0.6711 | inner-val bal-acc 0.500 | auc 0.531
+21:48:54 INFO codebrain_ft.train: epoch 1 | loss 0.4739 | inner-val bal-acc 0.643 | auc 0.694
+21:50:27 INFO codebrain_ft.train: epoch 2 | loss 0.2850 | inner-val bal-acc 0.643 | auc 0.735
+21:52:05 INFO codebrain_ft.train: epoch 3 | loss 0.2107 | inner-val bal-acc 0.714 | auc 0.633
+21:53:44 INFO codebrain_ft.train: epoch 4 | loss 0.1736 | inner-val bal-acc 0.643 | auc 0.796
+21:55:21 INFO codebrain_ft.train: epoch 5 | loss 0.1476 | inner-val bal-acc 0.643 | auc 0.796
+21:56:56 INFO codebrain_ft.train: epoch 6 | loss 0.1330 | inner-val bal-acc 0.643 | auc 0.776
+21:58:30 INFO codebrain_ft.train: epoch 7 | loss 0.1115 | inner-val bal-acc 0.643 | auc 0.755
+21:58:30 INFO codebrain_ft.train: Early stopping at epoch 7 (best epoch 3, inner_val_balanced_accuracy=0.714).
+21:58:36 INFO nested_lopo:   config 4/10 {'r': 16, 'lr': 0.001, 'dropout': 0.25} | inner fold 4/5 | val bal-acc 0.714 | peak 2.7 GB
+21:58:37 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+21:58:37 INFO codebrain_ft.model: LoRA applied: target=attention r=16 alpha=32 dropout=0.25
+21:58:37 INFO codebrain_ft.train: Training: 320129 trainable params, 463 steps/epoch, up to 20 epochs (lr=1.0e-03).
+22:00:12 INFO codebrain_ft.train: epoch 0 | loss 0.6694 | inner-val bal-acc 0.429 | auc 0.469
+22:01:43 INFO codebrain_ft.train: epoch 1 | loss 0.4283 | inner-val bal-acc 0.357 | auc 0.347
+22:03:16 INFO codebrain_ft.train: epoch 2 | loss 0.2548 | inner-val bal-acc 0.214 | auc 0.367
+22:04:50 INFO codebrain_ft.train: epoch 3 | loss 0.1840 | inner-val bal-acc 0.214 | auc 0.265
+22:06:21 INFO codebrain_ft.train: epoch 4 | loss 0.1482 | inner-val bal-acc 0.357 | auc 0.286
+22:06:21 INFO codebrain_ft.train: Early stopping at epoch 4 (best epoch 0, inner_val_balanced_accuracy=0.429).
+22:06:29 INFO nested_lopo:   config 4/10 {'r': 16, 'lr': 0.001, 'dropout': 0.25} | inner fold 5/5 | val bal-acc 0.429 | peak 2.7 GB
+22:06:29 INFO nested_lopo:   config 4/10 {'r': 16, 'lr': 0.001, 'dropout': 0.25} -> mean inner-val bal-acc 0.586
+22:06:29 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+22:06:29 INFO codebrain_ft.model: LoRA applied: target=attention r=16 alpha=32 dropout=0.25
+22:06:29 INFO codebrain_ft.train: Training: 320129 trainable params, 465 steps/epoch, up to 20 epochs (lr=2.0e-03).
+22:08:01 INFO codebrain_ft.train: epoch 0 | loss 0.6520 | inner-val bal-acc 0.357 | auc 0.265
+22:09:34 INFO codebrain_ft.train: epoch 1 | loss 0.4596 | inner-val bal-acc 0.357 | auc 0.286
+22:11:06 INFO codebrain_ft.train: epoch 2 | loss 0.3334 | inner-val bal-acc 0.429 | auc 0.306
+22:12:43 INFO codebrain_ft.train: epoch 3 | loss 0.2977 | inner-val bal-acc 0.429 | auc 0.449
+22:14:14 INFO codebrain_ft.train: epoch 4 | loss 0.3095 | inner-val bal-acc 0.357 | auc 0.327
+22:15:46 INFO codebrain_ft.train: epoch 5 | loss 0.3144 | inner-val bal-acc 0.429 | auc 0.327
+22:17:17 INFO codebrain_ft.train: epoch 6 | loss 0.2982 | inner-val bal-acc 0.500 | auc 0.388
+22:18:49 INFO codebrain_ft.train: epoch 7 | loss 0.2896 | inner-val bal-acc 0.429 | auc 0.224
+22:20:20 INFO codebrain_ft.train: epoch 8 | loss 0.2517 | inner-val bal-acc 0.429 | auc 0.306
+22:21:52 INFO codebrain_ft.train: epoch 9 | loss 0.2387 | inner-val bal-acc 0.429 | auc 0.265
+22:23:23 INFO codebrain_ft.train: epoch 10 | loss 0.2185 | inner-val bal-acc 0.357 | auc 0.265
+22:23:23 INFO codebrain_ft.train: Early stopping at epoch 10 (best epoch 6, inner_val_balanced_accuracy=0.500).
+22:23:30 INFO nested_lopo:   config 5/10 {'r': 16, 'lr': 0.002, 'dropout': 0.25} | inner fold 1/5 | val bal-acc 0.500 | peak 2.7 GB
+22:23:30 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+22:23:30 INFO codebrain_ft.model: LoRA applied: target=attention r=16 alpha=32 dropout=0.25
+22:23:30 INFO codebrain_ft.train: Training: 320129 trainable params, 451 steps/epoch, up to 20 epochs (lr=2.0e-03).
+22:25:01 INFO codebrain_ft.train: epoch 0 | loss 0.6384 | inner-val bal-acc 0.500 | auc 0.551
+22:26:30 INFO codebrain_ft.train: epoch 1 | loss 0.4605 | inner-val bal-acc 0.500 | auc 0.633
+22:28:00 INFO codebrain_ft.train: epoch 2 | loss 0.3699 | inner-val bal-acc 0.643 | auc 0.510
+22:29:30 INFO codebrain_ft.train: epoch 3 | loss 0.3126 | inner-val bal-acc 0.571 | auc 0.449
+22:31:00 INFO codebrain_ft.train: epoch 4 | loss 0.3027 | inner-val bal-acc 0.429 | auc 0.429
+22:32:29 INFO codebrain_ft.train: epoch 5 | loss 0.3106 | inner-val bal-acc 0.357 | auc 0.408
+22:33:59 INFO codebrain_ft.train: epoch 6 | loss 0.3101 | inner-val bal-acc 0.357 | auc 0.449
+22:33:59 INFO codebrain_ft.train: Early stopping at epoch 6 (best epoch 2, inner_val_balanced_accuracy=0.643).
+22:34:08 INFO nested_lopo:   config 5/10 {'r': 16, 'lr': 0.002, 'dropout': 0.25} | inner fold 2/5 | val bal-acc 0.643 | peak 2.7 GB
+22:34:08 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+22:34:08 INFO codebrain_ft.model: LoRA applied: target=attention r=16 alpha=32 dropout=0.25
+22:34:08 INFO codebrain_ft.train: Training: 320129 trainable params, 469 steps/epoch, up to 20 epochs (lr=2.0e-03).
+22:35:39 INFO codebrain_ft.train: epoch 0 | loss 0.6513 | inner-val bal-acc 0.429 | auc 0.408
+22:37:11 INFO codebrain_ft.train: epoch 1 | loss 0.4291 | inner-val bal-acc 0.643 | auc 0.490
+22:38:44 INFO codebrain_ft.train: epoch 2 | loss 0.3327 | inner-val bal-acc 0.643 | auc 0.551
+22:40:19 INFO codebrain_ft.train: epoch 3 | loss 0.2756 | inner-val bal-acc 0.500 | auc 0.551
+22:41:55 INFO codebrain_ft.train: epoch 4 | loss 0.2704 | inner-val bal-acc 0.500 | auc 0.531
+22:43:30 INFO codebrain_ft.train: epoch 5 | loss 0.2722 | inner-val bal-acc 0.500 | auc 0.449
+22:43:30 INFO codebrain_ft.train: Early stopping at epoch 5 (best epoch 1, inner_val_balanced_accuracy=0.643).
+22:43:37 INFO nested_lopo:   config 5/10 {'r': 16, 'lr': 0.002, 'dropout': 0.25} | inner fold 3/5 | val bal-acc 0.643 | peak 2.7 GB
+22:43:38 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+22:43:38 INFO codebrain_ft.model: LoRA applied: target=attention r=16 alpha=32 dropout=0.25
+22:43:38 INFO codebrain_ft.train: Training: 320129 trainable params, 477 steps/epoch, up to 20 epochs (lr=2.0e-03).
+22:45:13 INFO codebrain_ft.train: epoch 0 | loss 0.6506 | inner-val bal-acc 0.643 | auc 0.571
+22:46:47 INFO codebrain_ft.train: epoch 1 | loss 0.4299 | inner-val bal-acc 0.786 | auc 0.755
+22:48:22 INFO codebrain_ft.train: epoch 2 | loss 0.3339 | inner-val bal-acc 0.571 | auc 0.714
+22:49:57 INFO codebrain_ft.train: epoch 3 | loss 0.2840 | inner-val bal-acc 0.571 | auc 0.776
+22:51:30 INFO codebrain_ft.train: epoch 4 | loss 0.2733 | inner-val bal-acc 0.571 | auc 0.633
+22:53:07 INFO codebrain_ft.train: epoch 5 | loss 0.2839 | inner-val bal-acc 0.571 | auc 0.571
+22:53:07 INFO codebrain_ft.train: Early stopping at epoch 5 (best epoch 1, inner_val_balanced_accuracy=0.786).
+22:53:15 INFO nested_lopo:   config 5/10 {'r': 16, 'lr': 0.002, 'dropout': 0.25} | inner fold 4/5 | val bal-acc 0.786 | peak 2.7 GB
+22:53:15 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+22:53:15 INFO codebrain_ft.model: LoRA applied: target=attention r=16 alpha=32 dropout=0.25
+22:53:15 INFO codebrain_ft.train: Training: 320129 trainable params, 463 steps/epoch, up to 20 epochs (lr=2.0e-03).
+22:54:51 INFO codebrain_ft.train: epoch 0 | loss 0.6273 | inner-val bal-acc 0.429 | auc 0.490
+22:56:23 INFO codebrain_ft.train: epoch 1 | loss 0.3754 | inner-val bal-acc 0.429 | auc 0.306
+22:57:56 INFO codebrain_ft.train: epoch 2 | loss 0.2793 | inner-val bal-acc 0.286 | auc 0.224
+22:59:29 INFO codebrain_ft.train: epoch 3 | loss 0.2510 | inner-val bal-acc 0.357 | auc 0.429
+23:01:01 INFO codebrain_ft.train: epoch 4 | loss 0.2301 | inner-val bal-acc 0.357 | auc 0.224
+23:01:01 INFO codebrain_ft.train: Early stopping at epoch 4 (best epoch 0, inner_val_balanced_accuracy=0.429).
+23:01:09 INFO nested_lopo:   config 5/10 {'r': 16, 'lr': 0.002, 'dropout': 0.25} | inner fold 5/5 | val bal-acc 0.429 | peak 2.7 GB
+23:01:09 INFO nested_lopo:   config 5/10 {'r': 16, 'lr': 0.002, 'dropout': 0.25} -> mean inner-val bal-acc 0.600
+23:01:09 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+23:01:09 INFO codebrain_ft.model: LoRA applied: target=attention r=16 alpha=32 dropout=0.25
+23:01:09 INFO codebrain_ft.train: Training: 320129 trainable params, 465 steps/epoch, up to 20 epochs (lr=5.0e-04).
+23:02:44 INFO codebrain_ft.train: epoch 0 | loss 0.6800 | inner-val bal-acc 0.500 | auc 0.245
+23:04:16 INFO codebrain_ft.train: epoch 1 | loss 0.5685 | inner-val bal-acc 0.429 | auc 0.490
+23:05:50 INFO codebrain_ft.train: epoch 2 | loss 0.3436 | inner-val bal-acc 0.571 | auc 0.449
+23:07:21 INFO codebrain_ft.train: epoch 3 | loss 0.2237 | inner-val bal-acc 0.429 | auc 0.429
+23:08:53 INFO codebrain_ft.train: epoch 4 | loss 0.1657 | inner-val bal-acc 0.500 | auc 0.551
+23:10:27 INFO codebrain_ft.train: epoch 5 | loss 0.1365 | inner-val bal-acc 0.643 | auc 0.551
+23:11:59 INFO codebrain_ft.train: epoch 6 | loss 0.1103 | inner-val bal-acc 0.571 | auc 0.510
+23:13:30 INFO codebrain_ft.train: epoch 7 | loss 0.0953 | inner-val bal-acc 0.571 | auc 0.531
+23:15:01 INFO codebrain_ft.train: epoch 8 | loss 0.0830 | inner-val bal-acc 0.429 | auc 0.490
+23:16:32 INFO codebrain_ft.train: epoch 9 | loss 0.0701 | inner-val bal-acc 0.571 | auc 0.571
+23:16:32 INFO codebrain_ft.train: Early stopping at epoch 9 (best epoch 5, inner_val_balanced_accuracy=0.643).
+23:16:39 INFO nested_lopo:   config 6/10 {'r': 16, 'lr': 0.0005, 'dropout': 0.25} | inner fold 1/5 | val bal-acc 0.643 | peak 2.7 GB
+23:16:40 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+23:16:40 INFO codebrain_ft.model: LoRA applied: target=attention r=16 alpha=32 dropout=0.25
+23:16:40 INFO codebrain_ft.train: Training: 320129 trainable params, 451 steps/epoch, up to 20 epochs (lr=5.0e-04).
+23:18:10 INFO codebrain_ft.train: epoch 0 | loss 0.6700 | inner-val bal-acc 0.500 | auc 0.510
+23:19:41 INFO codebrain_ft.train: epoch 1 | loss 0.5258 | inner-val bal-acc 0.500 | auc 0.673
+23:21:13 INFO codebrain_ft.train: epoch 2 | loss 0.3412 | inner-val bal-acc 0.429 | auc 0.347
+23:22:44 INFO codebrain_ft.train: epoch 3 | loss 0.2276 | inner-val bal-acc 0.429 | auc 0.408
+23:24:14 INFO codebrain_ft.train: epoch 4 | loss 0.1767 | inner-val bal-acc 0.500 | auc 0.429
+23:24:14 INFO codebrain_ft.train: Early stopping at epoch 4 (best epoch 0, inner_val_balanced_accuracy=0.500).
+23:24:23 INFO nested_lopo:   config 6/10 {'r': 16, 'lr': 0.0005, 'dropout': 0.25} | inner fold 2/5 | val bal-acc 0.500 | peak 2.7 GB
+23:24:23 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+23:24:23 INFO codebrain_ft.model: LoRA applied: target=attention r=16 alpha=32 dropout=0.25
+23:24:23 INFO codebrain_ft.train: Training: 320129 trainable params, 469 steps/epoch, up to 20 epochs (lr=5.0e-04).
+23:25:57 INFO codebrain_ft.train: epoch 0 | loss 0.6787 | inner-val bal-acc 0.500 | auc 0.469
+23:27:29 INFO codebrain_ft.train: epoch 1 | loss 0.5403 | inner-val bal-acc 0.500 | auc 0.449
+23:29:03 INFO codebrain_ft.train: epoch 2 | loss 0.3357 | inner-val bal-acc 0.500 | auc 0.490
+23:30:34 INFO codebrain_ft.train: epoch 3 | loss 0.2310 | inner-val bal-acc 0.500 | auc 0.531
+23:32:05 INFO codebrain_ft.train: epoch 4 | loss 0.1737 | inner-val bal-acc 0.429 | auc 0.551
+23:32:05 INFO codebrain_ft.train: Early stopping at epoch 4 (best epoch 0, inner_val_balanced_accuracy=0.500).
+23:32:12 INFO nested_lopo:   config 6/10 {'r': 16, 'lr': 0.0005, 'dropout': 0.25} | inner fold 3/5 | val bal-acc 0.500 | peak 2.7 GB
+23:32:12 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+23:32:12 INFO codebrain_ft.model: LoRA applied: target=attention r=16 alpha=32 dropout=0.25
+23:32:12 INFO codebrain_ft.train: Training: 320129 trainable params, 477 steps/epoch, up to 20 epochs (lr=5.0e-04).
+23:33:45 INFO codebrain_ft.train: epoch 0 | loss 0.6825 | inner-val bal-acc 0.429 | auc 0.490
+23:35:17 INFO codebrain_ft.train: epoch 1 | loss 0.5372 | inner-val bal-acc 0.714 | auc 0.755
+23:36:50 INFO codebrain_ft.train: epoch 2 | loss 0.3321 | inner-val bal-acc 0.571 | auc 0.776
+23:38:25 INFO codebrain_ft.train: epoch 3 | loss 0.2365 | inner-val bal-acc 0.643 | auc 0.633
+23:40:01 INFO codebrain_ft.train: epoch 4 | loss 0.1936 | inner-val bal-acc 0.857 | auc 0.735
+23:41:37 INFO codebrain_ft.train: epoch 5 | loss 0.1647 | inner-val bal-acc 0.714 | auc 0.714
+23:43:12 INFO codebrain_ft.train: epoch 6 | loss 0.1359 | inner-val bal-acc 0.571 | auc 0.694
+23:44:48 INFO codebrain_ft.train: epoch 7 | loss 0.1194 | inner-val bal-acc 0.857 | auc 0.714
+23:46:23 INFO codebrain_ft.train: epoch 8 | loss 0.1029 | inner-val bal-acc 0.786 | auc 0.837
+23:46:23 INFO codebrain_ft.train: Early stopping at epoch 8 (best epoch 4, inner_val_balanced_accuracy=0.857).
+23:46:30 INFO nested_lopo:   config 6/10 {'r': 16, 'lr': 0.0005, 'dropout': 0.25} | inner fold 4/5 | val bal-acc 0.857 | peak 2.7 GB
+23:46:31 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+23:46:31 INFO codebrain_ft.model: LoRA applied: target=attention r=16 alpha=32 dropout=0.25
+23:46:31 INFO codebrain_ft.train: Training: 320129 trainable params, 463 steps/epoch, up to 20 epochs (lr=5.0e-04).
+23:48:05 INFO codebrain_ft.train: epoch 0 | loss 0.6787 | inner-val bal-acc 0.500 | auc 0.551
+23:49:39 INFO codebrain_ft.train: epoch 1 | loss 0.4985 | inner-val bal-acc 0.214 | auc 0.367
+23:51:12 INFO codebrain_ft.train: epoch 2 | loss 0.2860 | inner-val bal-acc 0.357 | auc 0.408
+23:52:46 INFO codebrain_ft.train: epoch 3 | loss 0.1950 | inner-val bal-acc 0.357 | auc 0.367
+23:54:20 INFO codebrain_ft.train: epoch 4 | loss 0.1477 | inner-val bal-acc 0.286 | auc 0.367
+23:54:20 INFO codebrain_ft.train: Early stopping at epoch 4 (best epoch 0, inner_val_balanced_accuracy=0.500).
+23:54:28 INFO nested_lopo:   config 6/10 {'r': 16, 'lr': 0.0005, 'dropout': 0.25} | inner fold 5/5 | val bal-acc 0.500 | peak 2.7 GB
+23:54:28 INFO nested_lopo:   config 6/10 {'r': 16, 'lr': 0.0005, 'dropout': 0.25} -> mean inner-val bal-acc 0.600
+23:54:29 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+23:54:29 INFO codebrain_ft.model: LoRA applied: target=attention r=8 alpha=16 dropout=0.1
+23:54:29 INFO codebrain_ft.train: Training: 166529 trainable params, 465 steps/epoch, up to 20 epochs (lr=2.0e-03).
+23:56:03 INFO codebrain_ft.train: epoch 0 | loss 0.6556 | inner-val bal-acc 0.357 | auc 0.041
+23:57:37 INFO codebrain_ft.train: epoch 1 | loss 0.4538 | inner-val bal-acc 0.714 | auc 0.694
+23:59:11 INFO codebrain_ft.train: epoch 2 | loss 0.3024 | inner-val bal-acc 0.500 | auc 0.469
+00:00:45 INFO codebrain_ft.train: epoch 3 | loss 0.2270 | inner-val bal-acc 0.500 | auc 0.571
+00:02:20 INFO codebrain_ft.train: epoch 4 | loss 0.1922 | inner-val bal-acc 0.571 | auc 0.408
+00:03:54 INFO codebrain_ft.train: epoch 5 | loss 0.1755 | inner-val bal-acc 0.571 | auc 0.429
+00:03:54 INFO codebrain_ft.train: Early stopping at epoch 5 (best epoch 1, inner_val_balanced_accuracy=0.714).
+00:04:02 INFO nested_lopo:   config 7/10 {'r': 8, 'lr': 0.002, 'dropout': 0.1} | inner fold 1/5 | val bal-acc 0.714 | peak 2.7 GB
+00:04:02 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+00:04:02 INFO codebrain_ft.model: LoRA applied: target=attention r=8 alpha=16 dropout=0.1
+00:04:02 INFO codebrain_ft.train: Training: 166529 trainable params, 451 steps/epoch, up to 20 epochs (lr=2.0e-03).
+00:05:34 INFO codebrain_ft.train: epoch 0 | loss 0.6453 | inner-val bal-acc 0.429 | auc 0.469
+00:07:07 INFO codebrain_ft.train: epoch 1 | loss 0.4493 | inner-val bal-acc 0.500 | auc 0.367
+00:08:40 INFO codebrain_ft.train: epoch 2 | loss 0.3091 | inner-val bal-acc 0.429 | auc 0.469
+00:10:13 INFO codebrain_ft.train: epoch 3 | loss 0.2421 | inner-val bal-acc 0.571 | auc 0.429
+00:11:45 INFO codebrain_ft.train: epoch 4 | loss 0.2037 | inner-val bal-acc 0.429 | auc 0.408
+00:13:18 INFO codebrain_ft.train: epoch 5 | loss 0.1742 | inner-val bal-acc 0.429 | auc 0.408
+00:14:51 INFO codebrain_ft.train: epoch 6 | loss 0.1569 | inner-val bal-acc 0.286 | auc 0.306
+00:16:24 INFO codebrain_ft.train: epoch 7 | loss 0.1413 | inner-val bal-acc 0.357 | auc 0.388
+00:16:24 INFO codebrain_ft.train: Early stopping at epoch 7 (best epoch 3, inner_val_balanced_accuracy=0.571).
+00:16:33 INFO nested_lopo:   config 7/10 {'r': 8, 'lr': 0.002, 'dropout': 0.1} | inner fold 2/5 | val bal-acc 0.571 | peak 2.7 GB
+00:16:33 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+00:16:33 INFO codebrain_ft.model: LoRA applied: target=attention r=8 alpha=16 dropout=0.1
+00:16:33 INFO codebrain_ft.train: Training: 166529 trainable params, 469 steps/epoch, up to 20 epochs (lr=2.0e-03).
+00:18:08 INFO codebrain_ft.train: epoch 0 | loss 0.6590 | inner-val bal-acc 0.643 | auc 0.612
+00:19:43 INFO codebrain_ft.train: epoch 1 | loss 0.4463 | inner-val bal-acc 0.429 | auc 0.449
+00:21:19 INFO codebrain_ft.train: epoch 2 | loss 0.3117 | inner-val bal-acc 0.571 | auc 0.531
+00:22:54 INFO codebrain_ft.train: epoch 3 | loss 0.2358 | inner-val bal-acc 0.429 | auc 0.592
+00:24:29 INFO codebrain_ft.train: epoch 4 | loss 0.1985 | inner-val bal-acc 0.357 | auc 0.510
+00:24:29 INFO codebrain_ft.train: Early stopping at epoch 4 (best epoch 0, inner_val_balanced_accuracy=0.643).
+00:24:36 INFO nested_lopo:   config 7/10 {'r': 8, 'lr': 0.002, 'dropout': 0.1} | inner fold 3/5 | val bal-acc 0.643 | peak 2.7 GB
+00:24:37 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+00:24:37 INFO codebrain_ft.model: LoRA applied: target=attention r=8 alpha=16 dropout=0.1
+00:24:37 INFO codebrain_ft.train: Training: 166529 trainable params, 477 steps/epoch, up to 20 epochs (lr=2.0e-03).
+00:26:13 INFO codebrain_ft.train: epoch 0 | loss 0.6591 | inner-val bal-acc 0.429 | auc 0.429
+00:27:49 INFO codebrain_ft.train: epoch 1 | loss 0.4554 | inner-val bal-acc 0.643 | auc 0.714
+00:29:25 INFO codebrain_ft.train: epoch 2 | loss 0.3183 | inner-val bal-acc 0.714 | auc 0.816
+00:31:02 INFO codebrain_ft.train: epoch 3 | loss 0.2444 | inner-val bal-acc 0.643 | auc 0.796
+00:32:38 INFO codebrain_ft.train: epoch 4 | loss 0.2101 | inner-val bal-acc 0.643 | auc 0.755
+00:34:14 INFO codebrain_ft.train: epoch 5 | loss 0.1927 | inner-val bal-acc 0.500 | auc 0.673
+00:35:50 INFO codebrain_ft.train: epoch 6 | loss 0.1776 | inner-val bal-acc 0.571 | auc 0.776
+00:35:50 INFO codebrain_ft.train: Early stopping at epoch 6 (best epoch 2, inner_val_balanced_accuracy=0.714).
+00:35:57 INFO nested_lopo:   config 7/10 {'r': 8, 'lr': 0.002, 'dropout': 0.1} | inner fold 4/5 | val bal-acc 0.714 | peak 2.7 GB
+00:35:58 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+00:35:58 INFO codebrain_ft.model: LoRA applied: target=attention r=8 alpha=16 dropout=0.1
+00:35:58 INFO codebrain_ft.train: Training: 166529 trainable params, 463 steps/epoch, up to 20 epochs (lr=2.0e-03).
+00:37:32 INFO codebrain_ft.train: epoch 0 | loss 0.6538 | inner-val bal-acc 0.429 | auc 0.388
+00:39:07 INFO codebrain_ft.train: epoch 1 | loss 0.4092 | inner-val bal-acc 0.214 | auc 0.224
+00:40:41 INFO codebrain_ft.train: epoch 2 | loss 0.2718 | inner-val bal-acc 0.357 | auc 0.224
+00:42:16 INFO codebrain_ft.train: epoch 3 | loss 0.2085 | inner-val bal-acc 0.429 | auc 0.347
+00:43:51 INFO codebrain_ft.train: epoch 4 | loss 0.1766 | inner-val bal-acc 0.357 | auc 0.286
+00:45:25 INFO codebrain_ft.train: epoch 5 | loss 0.1495 | inner-val bal-acc 0.286 | auc 0.286
+00:46:59 INFO codebrain_ft.train: epoch 6 | loss 0.1354 | inner-val bal-acc 0.286 | auc 0.306
+00:48:34 INFO codebrain_ft.train: epoch 7 | loss 0.1214 | inner-val bal-acc 0.214 | auc 0.184
+00:48:34 INFO codebrain_ft.train: Early stopping at epoch 7 (best epoch 3, inner_val_balanced_accuracy=0.429).
+00:48:42 INFO nested_lopo:   config 7/10 {'r': 8, 'lr': 0.002, 'dropout': 0.1} | inner fold 5/5 | val bal-acc 0.429 | peak 2.7 GB
+00:48:42 INFO nested_lopo:   config 7/10 {'r': 8, 'lr': 0.002, 'dropout': 0.1} -> mean inner-val bal-acc 0.614
+00:48:42 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+00:48:42 INFO codebrain_ft.model: LoRA applied: target=attention r=16 alpha=32 dropout=0.1
+00:48:42 INFO codebrain_ft.train: Training: 320129 trainable params, 465 steps/epoch, up to 20 epochs (lr=2.0e-03).
+00:50:17 INFO codebrain_ft.train: epoch 0 | loss 0.6489 | inner-val bal-acc 0.286 | auc 0.306
+00:51:52 INFO codebrain_ft.train: epoch 1 | loss 0.4327 | inner-val bal-acc 0.571 | auc 0.510
+00:53:27 INFO codebrain_ft.train: epoch 2 | loss 0.3150 | inner-val bal-acc 0.571 | auc 0.327
+00:55:02 INFO codebrain_ft.train: epoch 3 | loss 0.2669 | inner-val bal-acc 0.357 | auc 0.347
+00:56:37 INFO codebrain_ft.train: epoch 4 | loss 0.2565 | inner-val bal-acc 0.500 | auc 0.204
+00:58:12 INFO codebrain_ft.train: epoch 5 | loss 0.2829 | inner-val bal-acc 0.500 | auc 0.429
+00:58:12 INFO codebrain_ft.train: Early stopping at epoch 5 (best epoch 1, inner_val_balanced_accuracy=0.571).
+00:58:20 INFO nested_lopo:   config 8/10 {'r': 16, 'lr': 0.002, 'dropout': 0.1} | inner fold 1/5 | val bal-acc 0.571 | peak 2.7 GB
+00:58:20 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+00:58:20 INFO codebrain_ft.model: LoRA applied: target=attention r=16 alpha=32 dropout=0.1
+00:58:21 INFO codebrain_ft.train: Training: 320129 trainable params, 451 steps/epoch, up to 20 epochs (lr=2.0e-03).
+00:59:54 INFO codebrain_ft.train: epoch 0 | loss 0.6309 | inner-val bal-acc 0.500 | auc 0.531
+01:01:27 INFO codebrain_ft.train: epoch 1 | loss 0.4300 | inner-val bal-acc 0.429 | auc 0.265
+01:03:00 INFO codebrain_ft.train: epoch 2 | loss 0.3246 | inner-val bal-acc 0.357 | auc 0.429
+01:04:33 INFO codebrain_ft.train: epoch 3 | loss 0.2789 | inner-val bal-acc 0.500 | auc 0.531
+01:06:06 INFO codebrain_ft.train: epoch 4 | loss 0.2657 | inner-val bal-acc 0.500 | auc 0.469
+01:06:06 INFO codebrain_ft.train: Early stopping at epoch 4 (best epoch 0, inner_val_balanced_accuracy=0.500).
+01:06:15 INFO nested_lopo:   config 8/10 {'r': 16, 'lr': 0.002, 'dropout': 0.1} | inner fold 2/5 | val bal-acc 0.500 | peak 2.7 GB
+01:06:15 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+01:06:15 INFO codebrain_ft.model: LoRA applied: target=attention r=16 alpha=32 dropout=0.1
+01:06:15 INFO codebrain_ft.train: Training: 320129 trainable params, 469 steps/epoch, up to 20 epochs (lr=2.0e-03).
+01:07:51 INFO codebrain_ft.train: epoch 0 | loss 0.6484 | inner-val bal-acc 0.429 | auc 0.449
+01:09:26 INFO codebrain_ft.train: epoch 1 | loss 0.4409 | inner-val bal-acc 0.500 | auc 0.367
+01:11:01 INFO codebrain_ft.train: epoch 2 | loss 0.3361 | inner-val bal-acc 0.429 | auc 0.388
+01:12:36 INFO codebrain_ft.train: epoch 3 | loss 0.3079 | inner-val bal-acc 0.571 | auc 0.408
+01:14:12 INFO codebrain_ft.train: epoch 4 | loss 0.3158 | inner-val bal-acc 0.571 | auc 0.469
+01:15:47 INFO codebrain_ft.train: epoch 5 | loss 0.2833 | inner-val bal-acc 0.571 | auc 0.612
+01:17:22 INFO codebrain_ft.train: epoch 6 | loss 0.3123 | inner-val bal-acc 0.571 | auc 0.571
+01:18:58 INFO codebrain_ft.train: epoch 7 | loss 0.3008 | inner-val bal-acc 0.571 | auc 0.571
+01:18:58 INFO codebrain_ft.train: Early stopping at epoch 7 (best epoch 3, inner_val_balanced_accuracy=0.571).
+01:19:05 INFO nested_lopo:   config 8/10 {'r': 16, 'lr': 0.002, 'dropout': 0.1} | inner fold 3/5 | val bal-acc 0.571 | peak 2.7 GB
+01:19:05 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+01:19:06 INFO codebrain_ft.model: LoRA applied: target=attention r=16 alpha=32 dropout=0.1
+01:19:06 INFO codebrain_ft.train: Training: 320129 trainable params, 477 steps/epoch, up to 20 epochs (lr=2.0e-03).
+01:20:42 INFO codebrain_ft.train: epoch 0 | loss 0.6504 | inner-val bal-acc 0.429 | auc 0.490
+01:22:18 INFO codebrain_ft.train: epoch 1 | loss 0.4317 | inner-val bal-acc 0.500 | auc 0.694
+01:32:44 INFO codebrain_ft.train: epoch 2 | loss 0.3398 | inner-val bal-acc 0.786 | auc 0.776
+01:34:20 INFO codebrain_ft.train: epoch 3 | loss 0.2887 | inner-val bal-acc 0.714 | auc 0.796
+01:35:54 INFO codebrain_ft.train: epoch 4 | loss 0.2833 | inner-val bal-acc 0.643 | auc 0.735
+01:37:27 INFO codebrain_ft.train: epoch 5 | loss 0.3061 | inner-val bal-acc 0.714 | auc 0.633
+01:39:00 INFO codebrain_ft.train: epoch 6 | loss 0.2877 | inner-val bal-acc 0.714 | auc 0.755
+01:39:00 INFO codebrain_ft.train: Early stopping at epoch 6 (best epoch 2, inner_val_balanced_accuracy=0.786).
+01:39:08 INFO nested_lopo:   config 8/10 {'r': 16, 'lr': 0.002, 'dropout': 0.1} | inner fold 4/5 | val bal-acc 0.786 | peak 2.7 GB
+01:39:08 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+01:39:08 INFO codebrain_ft.model: LoRA applied: target=attention r=16 alpha=32 dropout=0.1
+01:39:08 INFO codebrain_ft.train: Training: 320129 trainable params, 463 steps/epoch, up to 20 epochs (lr=2.0e-03).
+01:41:39 INFO codebrain_ft.train: epoch 0 | loss 0.6447 | inner-val bal-acc 0.500 | auc 0.388
+01:43:11 INFO codebrain_ft.train: epoch 1 | loss 0.4020 | inner-val bal-acc 0.357 | auc 0.265
+01:44:46 INFO codebrain_ft.train: epoch 2 | loss 0.3081 | inner-val bal-acc 0.286 | auc 0.204
+01:46:17 INFO codebrain_ft.train: epoch 3 | loss 0.2594 | inner-val bal-acc 0.357 | auc 0.204
+01:47:50 INFO codebrain_ft.train: epoch 4 | loss 0.2535 | inner-val bal-acc 0.286 | auc 0.265
+01:47:50 INFO codebrain_ft.train: Early stopping at epoch 4 (best epoch 0, inner_val_balanced_accuracy=0.500).
+01:47:58 INFO nested_lopo:   config 8/10 {'r': 16, 'lr': 0.002, 'dropout': 0.1} | inner fold 5/5 | val bal-acc 0.500 | peak 2.7 GB
+01:47:58 INFO nested_lopo:   config 8/10 {'r': 16, 'lr': 0.002, 'dropout': 0.1} -> mean inner-val bal-acc 0.586
+01:47:58 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+01:47:58 INFO codebrain_ft.model: LoRA applied: target=attention r=8 alpha=16 dropout=0.25
+01:47:58 INFO codebrain_ft.train: Training: 166529 trainable params, 465 steps/epoch, up to 20 epochs (lr=2.0e-03).
+01:49:29 INFO codebrain_ft.train: epoch 0 | loss 0.6536 | inner-val bal-acc 0.500 | auc 0.204
+01:51:03 INFO codebrain_ft.train: epoch 1 | loss 0.4485 | inner-val bal-acc 0.429 | auc 0.510
+01:52:35 INFO codebrain_ft.train: epoch 2 | loss 0.3063 | inner-val bal-acc 0.500 | auc 0.531
+01:54:09 INFO codebrain_ft.train: epoch 3 | loss 0.2356 | inner-val bal-acc 0.571 | auc 0.367
+01:55:43 INFO codebrain_ft.train: epoch 4 | loss 0.1957 | inner-val bal-acc 0.500 | auc 0.367
+01:57:19 INFO codebrain_ft.train: epoch 5 | loss 0.1688 | inner-val bal-acc 0.500 | auc 0.429
+01:58:54 INFO codebrain_ft.train: epoch 6 | loss 0.1571 | inner-val bal-acc 0.500 | auc 0.490
+02:00:26 INFO codebrain_ft.train: epoch 7 | loss 0.1425 | inner-val bal-acc 0.429 | auc 0.551
+02:00:26 INFO codebrain_ft.train: Early stopping at epoch 7 (best epoch 3, inner_val_balanced_accuracy=0.571).
+02:00:33 INFO nested_lopo:   config 9/10 {'r': 8, 'lr': 0.002, 'dropout': 0.25} | inner fold 1/5 | val bal-acc 0.571 | peak 2.7 GB
+02:00:34 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+02:00:34 INFO codebrain_ft.model: LoRA applied: target=attention r=8 alpha=16 dropout=0.25
+02:00:34 INFO codebrain_ft.train: Training: 166529 trainable params, 451 steps/epoch, up to 20 epochs (lr=2.0e-03).
+02:02:07 INFO codebrain_ft.train: epoch 0 | loss 0.6571 | inner-val bal-acc 0.500 | auc 0.571
+02:03:40 INFO codebrain_ft.train: epoch 1 | loss 0.4651 | inner-val bal-acc 0.571 | auc 0.571
+02:05:13 INFO codebrain_ft.train: epoch 2 | loss 0.3154 | inner-val bal-acc 0.500 | auc 0.347
+02:06:47 INFO codebrain_ft.train: epoch 3 | loss 0.2380 | inner-val bal-acc 0.357 | auc 0.306
+02:08:20 INFO codebrain_ft.train: epoch 4 | loss 0.2038 | inner-val bal-acc 0.357 | auc 0.327
+02:09:53 INFO codebrain_ft.train: epoch 5 | loss 0.1820 | inner-val bal-acc 0.500 | auc 0.327
+02:09:53 INFO codebrain_ft.train: Early stopping at epoch 5 (best epoch 1, inner_val_balanced_accuracy=0.571).
+02:10:02 INFO nested_lopo:   config 9/10 {'r': 8, 'lr': 0.002, 'dropout': 0.25} | inner fold 2/5 | val bal-acc 0.571 | peak 2.7 GB
+02:10:02 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+02:10:02 INFO codebrain_ft.model: LoRA applied: target=attention r=8 alpha=16 dropout=0.25
+02:10:02 INFO codebrain_ft.train: Training: 166529 trainable params, 469 steps/epoch, up to 20 epochs (lr=2.0e-03).
+02:11:37 INFO codebrain_ft.train: epoch 0 | loss 0.6553 | inner-val bal-acc 0.571 | auc 0.551
+02:13:12 INFO codebrain_ft.train: epoch 1 | loss 0.4267 | inner-val bal-acc 0.571 | auc 0.429
+02:14:45 INFO codebrain_ft.train: epoch 2 | loss 0.3091 | inner-val bal-acc 0.500 | auc 0.531
+02:16:18 INFO codebrain_ft.train: epoch 3 | loss 0.2385 | inner-val bal-acc 0.571 | auc 0.490
+02:17:50 INFO codebrain_ft.train: epoch 4 | loss 0.2041 | inner-val bal-acc 0.500 | auc 0.551
+02:17:50 INFO codebrain_ft.train: Early stopping at epoch 4 (best epoch 0, inner_val_balanced_accuracy=0.571).
+02:17:57 INFO nested_lopo:   config 9/10 {'r': 8, 'lr': 0.002, 'dropout': 0.25} | inner fold 3/5 | val bal-acc 0.571 | peak 2.7 GB
+02:17:58 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+02:17:58 INFO codebrain_ft.model: LoRA applied: target=attention r=8 alpha=16 dropout=0.25
+02:17:58 INFO codebrain_ft.train: Training: 166529 trainable params, 477 steps/epoch, up to 20 epochs (lr=2.0e-03).
+02:19:33 INFO codebrain_ft.train: epoch 0 | loss 0.6543 | inner-val bal-acc 0.357 | auc 0.490
+02:21:09 INFO codebrain_ft.train: epoch 1 | loss 0.4432 | inner-val bal-acc 0.571 | auc 0.755
+02:22:42 INFO codebrain_ft.train: epoch 2 | loss 0.3218 | inner-val bal-acc 0.857 | auc 0.837
+02:24:16 INFO codebrain_ft.train: epoch 3 | loss 0.2472 | inner-val bal-acc 0.571 | auc 0.776
+02:25:55 INFO codebrain_ft.train: epoch 4 | loss 0.2107 | inner-val bal-acc 0.643 | auc 0.735
+02:27:29 INFO codebrain_ft.train: epoch 5 | loss 0.1853 | inner-val bal-acc 0.571 | auc 0.816
+02:29:03 INFO codebrain_ft.train: epoch 6 | loss 0.1733 | inner-val bal-acc 0.571 | auc 0.714
+02:29:03 INFO codebrain_ft.train: Early stopping at epoch 6 (best epoch 2, inner_val_balanced_accuracy=0.857).
+02:29:09 INFO nested_lopo:   config 9/10 {'r': 8, 'lr': 0.002, 'dropout': 0.25} | inner fold 4/5 | val bal-acc 0.857 | peak 2.7 GB
+02:29:10 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+02:29:10 INFO codebrain_ft.model: LoRA applied: target=attention r=8 alpha=16 dropout=0.25
+02:29:10 INFO codebrain_ft.train: Training: 166529 trainable params, 463 steps/epoch, up to 20 epochs (lr=2.0e-03).
+02:30:44 INFO codebrain_ft.train: epoch 0 | loss 0.6536 | inner-val bal-acc 0.357 | auc 0.367
+02:32:20 INFO codebrain_ft.train: epoch 1 | loss 0.4131 | inner-val bal-acc 0.429 | auc 0.367
+02:33:54 INFO codebrain_ft.train: epoch 2 | loss 0.2940 | inner-val bal-acc 0.214 | auc 0.367
+02:35:26 INFO codebrain_ft.train: epoch 3 | loss 0.2352 | inner-val bal-acc 0.357 | auc 0.347
+02:36:57 INFO codebrain_ft.train: epoch 4 | loss 0.1881 | inner-val bal-acc 0.286 | auc 0.306
+02:38:28 INFO codebrain_ft.train: epoch 5 | loss 0.1705 | inner-val bal-acc 0.357 | auc 0.347
+02:38:28 INFO codebrain_ft.train: Early stopping at epoch 5 (best epoch 1, inner_val_balanced_accuracy=0.429).
+02:38:36 INFO nested_lopo:   config 9/10 {'r': 8, 'lr': 0.002, 'dropout': 0.25} | inner fold 5/5 | val bal-acc 0.429 | peak 2.7 GB
+02:38:36 INFO nested_lopo:   config 9/10 {'r': 8, 'lr': 0.002, 'dropout': 0.25} -> mean inner-val bal-acc 0.600
+02:38:36 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+02:38:36 INFO codebrain_ft.model: LoRA applied: target=attention r=16 alpha=32 dropout=0.0
+02:38:36 INFO codebrain_ft.train: Training: 320129 trainable params, 465 steps/epoch, up to 20 epochs (lr=2.0e-03).
+02:40:08 INFO codebrain_ft.train: epoch 0 | loss 0.6446 | inner-val bal-acc 0.357 | auc 0.245
+02:41:39 INFO codebrain_ft.train: epoch 1 | loss 0.4286 | inner-val bal-acc 0.429 | auc 0.429
+02:43:11 INFO codebrain_ft.train: epoch 2 | loss 0.3159 | inner-val bal-acc 0.357 | auc 0.408
+02:44:42 INFO codebrain_ft.train: epoch 3 | loss 0.2650 | inner-val bal-acc 0.500 | auc 0.286
+02:46:14 INFO codebrain_ft.train: epoch 4 | loss 0.2589 | inner-val bal-acc 0.571 | auc 0.408
+02:47:48 INFO codebrain_ft.train: epoch 5 | loss 0.2782 | inner-val bal-acc 0.357 | auc 0.367
+02:49:21 INFO codebrain_ft.train: epoch 6 | loss 0.3164 | inner-val bal-acc 0.571 | auc 0.551
+02:50:52 INFO codebrain_ft.train: epoch 7 | loss 0.3042 | inner-val bal-acc 0.500 | auc 0.449
+02:52:25 INFO codebrain_ft.train: epoch 8 | loss 0.2939 | inner-val bal-acc 0.429 | auc 0.510
+02:52:25 INFO codebrain_ft.train: Early stopping at epoch 8 (best epoch 4, inner_val_balanced_accuracy=0.571).
+02:52:33 INFO nested_lopo:   config 10/10 {'r': 16, 'lr': 0.002, 'dropout': 0.0} | inner fold 1/5 | val bal-acc 0.571 | peak 2.7 GB
+02:52:33 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+02:52:33 INFO codebrain_ft.model: LoRA applied: target=attention r=16 alpha=32 dropout=0.0
+02:52:33 INFO codebrain_ft.train: Training: 320129 trainable params, 451 steps/epoch, up to 20 epochs (lr=2.0e-03).
+02:54:03 INFO codebrain_ft.train: epoch 0 | loss 0.6472 | inner-val bal-acc 0.500 | auc 0.510
+02:55:38 INFO codebrain_ft.train: epoch 1 | loss 0.4770 | inner-val bal-acc 0.643 | auc 0.592
+02:57:10 INFO codebrain_ft.train: epoch 2 | loss 0.3647 | inner-val bal-acc 0.500 | auc 0.408
+02:58:42 INFO codebrain_ft.train: epoch 3 | loss 0.3164 | inner-val bal-acc 0.643 | auc 0.449
+03:00:12 INFO codebrain_ft.train: epoch 4 | loss 0.2933 | inner-val bal-acc 0.357 | auc 0.449
+03:01:43 INFO codebrain_ft.train: epoch 5 | loss 0.3149 | inner-val bal-acc 0.500 | auc 0.469
+03:01:43 INFO codebrain_ft.train: Early stopping at epoch 5 (best epoch 1, inner_val_balanced_accuracy=0.643).
+03:01:52 INFO nested_lopo:   config 10/10 {'r': 16, 'lr': 0.002, 'dropout': 0.0} | inner fold 2/5 | val bal-acc 0.643 | peak 2.7 GB
+03:01:52 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+03:01:52 INFO codebrain_ft.model: LoRA applied: target=attention r=16 alpha=32 dropout=0.0
+03:01:52 INFO codebrain_ft.train: Training: 320129 trainable params, 469 steps/epoch, up to 20 epochs (lr=2.0e-03).
+03:03:28 INFO codebrain_ft.train: epoch 0 | loss 0.6548 | inner-val bal-acc 0.429 | auc 0.449
+03:05:02 INFO codebrain_ft.train: epoch 1 | loss 0.4558 | inner-val bal-acc 0.500 | auc 0.469
+03:06:33 INFO codebrain_ft.train: epoch 2 | loss 0.3380 | inner-val bal-acc 0.429 | auc 0.408
+03:08:08 INFO codebrain_ft.train: epoch 3 | loss 0.3041 | inner-val bal-acc 0.571 | auc 0.429
+03:09:43 INFO codebrain_ft.train: epoch 4 | loss 0.3038 | inner-val bal-acc 0.571 | auc 0.653
+03:11:18 INFO codebrain_ft.train: epoch 5 | loss 0.3406 | inner-val bal-acc 0.571 | auc 0.612
+03:12:52 INFO codebrain_ft.train: epoch 6 | loss 0.3288 | inner-val bal-acc 0.500 | auc 0.571
+03:14:25 INFO codebrain_ft.train: epoch 7 | loss 0.3227 | inner-val bal-acc 0.500 | auc 0.510
+03:14:25 INFO codebrain_ft.train: Early stopping at epoch 7 (best epoch 3, inner_val_balanced_accuracy=0.571).
+03:14:32 INFO nested_lopo:   config 10/10 {'r': 16, 'lr': 0.002, 'dropout': 0.0} | inner fold 3/5 | val bal-acc 0.571 | peak 2.7 GB
+03:14:33 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+03:14:33 INFO codebrain_ft.model: LoRA applied: target=attention r=16 alpha=32 dropout=0.0
+03:14:33 INFO codebrain_ft.train: Training: 320129 trainable params, 477 steps/epoch, up to 20 epochs (lr=2.0e-03).
+03:16:09 INFO codebrain_ft.train: epoch 0 | loss 0.6599 | inner-val bal-acc 0.500 | auc 0.408
+03:17:42 INFO codebrain_ft.train: epoch 1 | loss 0.4713 | inner-val bal-acc 0.643 | auc 0.714
+03:19:15 INFO codebrain_ft.train: epoch 2 | loss 0.3408 | inner-val bal-acc 0.714 | auc 0.796
+03:20:49 INFO codebrain_ft.train: epoch 3 | loss 0.2962 | inner-val bal-acc 0.429 | auc 0.776
+03:22:23 INFO codebrain_ft.train: epoch 4 | loss 0.3077 | inner-val bal-acc 0.786 | auc 0.837
+03:23:56 INFO codebrain_ft.train: epoch 5 | loss 0.3029 | inner-val bal-acc 0.500 | auc 0.714
+03:25:29 INFO codebrain_ft.train: epoch 6 | loss 0.3592 | inner-val bal-acc 0.643 | auc 0.796
+03:27:02 INFO codebrain_ft.train: epoch 7 | loss 0.3311 | inner-val bal-acc 0.857 | auc 0.816
+03:34:47 INFO codebrain_ft.train: epoch 8 | loss 0.3532 | inner-val bal-acc 0.714 | auc 0.776
+03:38:57 INFO codebrain_ft.train: epoch 9 | loss 0.3264 | inner-val bal-acc 0.429 | auc 0.673
+03:40:30 INFO codebrain_ft.train: epoch 10 | loss 0.2738 | inner-val bal-acc 0.500 | auc 0.694
+03:42:03 INFO codebrain_ft.train: epoch 11 | loss 0.2542 | inner-val bal-acc 0.571 | auc 0.755
+03:42:03 INFO codebrain_ft.train: Early stopping at epoch 11 (best epoch 7, inner_val_balanced_accuracy=0.857).
+03:42:10 INFO nested_lopo:   config 10/10 {'r': 16, 'lr': 0.002, 'dropout': 0.0} | inner fold 4/5 | val bal-acc 0.857 | peak 2.7 GB
+03:42:10 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+03:42:10 INFO codebrain_ft.model: LoRA applied: target=attention r=16 alpha=32 dropout=0.0
+03:42:10 INFO codebrain_ft.train: Training: 320129 trainable params, 463 steps/epoch, up to 20 epochs (lr=2.0e-03).
+03:44:39 INFO codebrain_ft.train: epoch 0 | loss 0.6295 | inner-val bal-acc 0.500 | auc 0.449
+03:46:13 INFO codebrain_ft.train: epoch 1 | loss 0.3661 | inner-val bal-acc 0.357 | auc 0.347
+03:47:47 INFO codebrain_ft.train: epoch 2 | loss 0.2901 | inner-val bal-acc 0.429 | auc 0.306
+03:49:20 INFO codebrain_ft.train: epoch 3 | loss 0.2421 | inner-val bal-acc 0.286 | auc 0.245
+03:50:52 INFO codebrain_ft.train: epoch 4 | loss 0.2306 | inner-val bal-acc 0.286 | auc 0.245
+03:50:52 INFO codebrain_ft.train: Early stopping at epoch 4 (best epoch 0, inner_val_balanced_accuracy=0.500).
+03:51:01 INFO nested_lopo:   config 10/10 {'r': 16, 'lr': 0.002, 'dropout': 0.0} | inner fold 5/5 | val bal-acc 0.500 | peak 2.7 GB
+03:51:01 INFO nested_lopo:   config 10/10 {'r': 16, 'lr': 0.002, 'dropout': 0.0} -> mean inner-val bal-acc 0.629
+03:51:01 INFO nested_lopo: HP search complete. Best config {'r': 16, 'lr': 0.002, 'dropout': 0.0} (mean inner-val bal-acc 0.629).
+03:51:01 INFO nested_lopo: HP search wall-clock: 543.4 min
+03:51:01 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+03:51:01 INFO codebrain_ft.model: LoRA applied: target=attention r=16 alpha=32 dropout=0.0
+03:51:01 INFO codebrain_ft.train: Training: 320129 trainable params, 443 steps/epoch, up to 20 epochs (lr=2.0e-03).
+03:52:31 INFO codebrain_ft.train: epoch 0 | loss 0.6372 | inner-val bal-acc 0.286 | auc 0.163
+03:54:02 INFO codebrain_ft.train: epoch 1 | loss 0.4217 | inner-val bal-acc 0.357 | auc 0.286
+03:55:32 INFO codebrain_ft.train: epoch 2 | loss 0.3232 | inner-val bal-acc 0.429 | auc 0.286
+03:57:03 INFO codebrain_ft.train: epoch 3 | loss 0.2689 | inner-val bal-acc 0.286 | auc 0.286
+03:58:34 INFO codebrain_ft.train: epoch 4 | loss 0.2527 | inner-val bal-acc 0.286 | auc 0.286
+04:00:05 INFO codebrain_ft.train: epoch 5 | loss 0.2480 | inner-val bal-acc 0.429 | auc 0.367
+04:01:32 INFO codebrain_ft.train: epoch 6 | loss 0.2467 | inner-val bal-acc 0.286 | auc 0.306
+04:01:32 INFO codebrain_ft.train: Early stopping at epoch 6 (best epoch 2, inner_val_balanced_accuracy=0.429).
+04:01:35 INFO nested_lopo: fold  0 sub-103   | session bal-acc 0.000 auc 0.000 | best@2 | 634s | peak 2.7 GB
+04:01:35 INFO nested_lopo:     session sub-103|A        P(OFF)=0.951 true=0 (410 windows)
+04:01:35 INFO nested_lopo:     session sub-103|C        P(OFF)=0.031 true=1 (305 windows)
+04:01:35 INFO nested_lopo:   progress: 1/35 folds | ~10.6 min/fold | ETA 359.3 min
+04:01:35 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+04:01:35 INFO codebrain_ft.model: LoRA applied: target=attention r=16 alpha=32 dropout=0.0
+04:01:35 INFO codebrain_ft.train: Training: 320129 trainable params, 450 steps/epoch, up to 20 epochs (lr=2.0e-03).
+04:03:05 INFO codebrain_ft.train: epoch 0 | loss 0.6545 | inner-val bal-acc 0.357 | auc 0.143
+04:04:36 INFO codebrain_ft.train: epoch 1 | loss 0.4507 | inner-val bal-acc 0.500 | auc 0.592
+04:06:05 INFO codebrain_ft.train: epoch 2 | loss 0.3099 | inner-val bal-acc 0.500 | auc 0.449
+04:07:32 INFO codebrain_ft.train: epoch 3 | loss 0.2731 | inner-val bal-acc 0.429 | auc 0.286
+04:09:01 INFO codebrain_ft.train: epoch 4 | loss 0.2671 | inner-val bal-acc 0.214 | auc 0.163
+04:10:29 INFO codebrain_ft.train: epoch 5 | loss 0.2644 | inner-val bal-acc 0.571 | auc 0.633
+04:11:58 INFO codebrain_ft.train: epoch 6 | loss 0.2653 | inner-val bal-acc 0.357 | auc 0.163
+04:13:26 INFO codebrain_ft.train: epoch 7 | loss 0.2451 | inner-val bal-acc 0.500 | auc 0.449
+04:14:55 INFO codebrain_ft.train: epoch 8 | loss 0.2466 | inner-val bal-acc 0.429 | auc 0.510
+04:16:27 INFO codebrain_ft.train: epoch 9 | loss 0.3036 | inner-val bal-acc 0.500 | auc 0.673
+04:16:27 INFO codebrain_ft.train: Early stopping at epoch 9 (best epoch 5, inner_val_balanced_accuracy=0.571).
+04:16:30 INFO nested_lopo: fold  1 sub-106   | session bal-acc 0.000 auc 0.000 | best@5 | 895s | peak 2.7 GB
+04:16:30 INFO nested_lopo:     session sub-106|A        P(OFF)=0.542 true=0 (319 windows)
+04:16:30 INFO nested_lopo:     session sub-106|C        P(OFF)=0.306 true=1 (192 windows)
+04:16:30 INFO nested_lopo:   progress: 2/35 folds | ~12.7 min/fold | ETA 420.4 min
+04:16:30 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+04:16:30 INFO codebrain_ft.model: LoRA applied: target=attention r=16 alpha=32 dropout=0.0
+04:16:30 INFO codebrain_ft.train: Training: 320129 trainable params, 451 steps/epoch, up to 20 epochs (lr=2.0e-03).
+04:18:00 INFO codebrain_ft.train: epoch 0 | loss 0.6588 | inner-val bal-acc 0.357 | auc 0.143
+04:19:30 INFO codebrain_ft.train: epoch 1 | loss 0.4580 | inner-val bal-acc 0.357 | auc 0.265
+04:20:58 INFO codebrain_ft.train: epoch 2 | loss 0.3411 | inner-val bal-acc 0.500 | auc 0.408
+04:22:26 INFO codebrain_ft.train: epoch 3 | loss 0.2885 | inner-val bal-acc 0.286 | auc 0.408
+04:23:54 INFO codebrain_ft.train: epoch 4 | loss 0.2950 | inner-val bal-acc 0.429 | auc 0.286
+04:25:23 INFO codebrain_ft.train: epoch 5 | loss 0.3022 | inner-val bal-acc 0.429 | auc 0.204
+04:26:52 INFO codebrain_ft.train: epoch 6 | loss 0.2716 | inner-val bal-acc 0.500 | auc 0.408
+04:26:52 INFO codebrain_ft.train: Early stopping at epoch 6 (best epoch 2, inner_val_balanced_accuracy=0.500).
+04:26:53 INFO nested_lopo: fold  2 sub-107   | session bal-acc 0.000 auc 0.000 | best@2 | 624s | peak 2.7 GB
+04:26:53 INFO nested_lopo:     session sub-107|A        P(OFF)=0.771 true=0 (292 windows)
+04:26:53 INFO nested_lopo:     session sub-107|C        P(OFF)=0.398 true=1 (163 windows)
+04:26:53 INFO nested_lopo:   progress: 3/35 folds | ~12.0 min/fold | ETA 382.7 min
+04:26:54 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+04:26:54 INFO codebrain_ft.model: LoRA applied: target=attention r=16 alpha=32 dropout=0.0
+04:26:54 INFO codebrain_ft.train: Training: 320129 trainable params, 437 steps/epoch, up to 20 epochs (lr=2.0e-03).
+04:28:21 INFO codebrain_ft.train: epoch 0 | loss 0.6513 | inner-val bal-acc 0.500 | auc 0.612
+04:29:50 INFO codebrain_ft.train: epoch 1 | loss 0.4754 | inner-val bal-acc 0.429 | auc 0.510
+04:31:19 INFO codebrain_ft.train: epoch 2 | loss 0.3385 | inner-val bal-acc 0.500 | auc 0.388
+04:32:49 INFO codebrain_ft.train: epoch 3 | loss 0.2779 | inner-val bal-acc 0.429 | auc 0.571
+04:34:15 INFO codebrain_ft.train: epoch 4 | loss 0.2542 | inner-val bal-acc 0.500 | auc 0.653
+04:34:15 INFO codebrain_ft.train: Early stopping at epoch 4 (best epoch 0, inner_val_balanced_accuracy=0.500).
+04:34:18 INFO nested_lopo: fold  3 sub-114   | session bal-acc 0.000 auc 0.000 | best@0 | 444s | peak 2.7 GB
+04:34:18 INFO nested_lopo:     session sub-114|A        P(OFF)=0.661 true=0 (329 windows)
+04:34:18 INFO nested_lopo:     session sub-114|C        P(OFF)=0.418 true=1 (571 windows)
+04:34:18 INFO nested_lopo:   progress: 4/35 folds | ~10.8 min/fold | ETA 335.4 min
+04:34:18 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+04:34:18 INFO codebrain_ft.model: LoRA applied: target=attention r=16 alpha=32 dropout=0.0
+04:34:18 INFO codebrain_ft.train: Training: 320129 trainable params, 437 steps/epoch, up to 20 epochs (lr=2.0e-03).
+04:35:46 INFO codebrain_ft.train: epoch 0 | loss 0.6480 | inner-val bal-acc 0.286 | auc 0.245
+04:37:15 INFO codebrain_ft.train: epoch 1 | loss 0.4599 | inner-val bal-acc 0.500 | auc 0.612
+04:38:43 INFO codebrain_ft.train: epoch 2 | loss 0.3361 | inner-val bal-acc 0.500 | auc 0.551
+04:40:12 INFO codebrain_ft.train: epoch 3 | loss 0.2901 | inner-val bal-acc 0.429 | auc 0.449
+04:41:40 INFO codebrain_ft.train: epoch 4 | loss 0.2794 | inner-val bal-acc 0.500 | auc 0.429
+04:43:06 INFO codebrain_ft.train: epoch 5 | loss 0.2926 | inner-val bal-acc 0.357 | auc 0.469
+04:43:06 INFO codebrain_ft.train: Early stopping at epoch 5 (best epoch 1, inner_val_balanced_accuracy=0.500).
+04:43:07 INFO nested_lopo: fold  4 sub-115   | session bal-acc 1.000 auc 1.000 | best@1 | 530s | peak 2.7 GB
+04:43:07 INFO nested_lopo:     session sub-115|A        P(OFF)=0.409 true=0 (303 windows)
+04:43:07 INFO nested_lopo:     session sub-115|C        P(OFF)=0.523 true=1 (220 windows)
+04:43:07 INFO nested_lopo:   progress: 5/35 folds | ~10.4 min/fold | ETA 312.7 min
+04:43:08 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+04:43:08 INFO codebrain_ft.model: LoRA applied: target=attention r=16 alpha=32 dropout=0.0
+04:43:08 INFO codebrain_ft.train: Training: 320129 trainable params, 434 steps/epoch, up to 20 epochs (lr=2.0e-03).
+04:44:37 INFO codebrain_ft.train: epoch 0 | loss 0.6411 | inner-val bal-acc 0.500 | auc 0.449
+04:46:03 INFO codebrain_ft.train: epoch 1 | loss 0.4496 | inner-val bal-acc 0.571 | auc 0.469
+04:47:29 INFO codebrain_ft.train: epoch 2 | loss 0.3329 | inner-val bal-acc 0.643 | auc 0.571
+04:48:56 INFO codebrain_ft.train: epoch 3 | loss 0.2644 | inner-val bal-acc 0.571 | auc 0.449
+04:50:22 INFO codebrain_ft.train: epoch 4 | loss 0.2350 | inner-val bal-acc 0.357 | auc 0.469
+04:51:48 INFO codebrain_ft.train: epoch 5 | loss 0.2254 | inner-val bal-acc 0.286 | auc 0.408
+04:53:14 INFO codebrain_ft.train: epoch 6 | loss 0.2246 | inner-val bal-acc 0.357 | auc 0.449
+04:53:14 INFO codebrain_ft.train: Early stopping at epoch 6 (best epoch 2, inner_val_balanced_accuracy=0.643).
+04:53:17 INFO nested_lopo: fold  5 sub-116   | session bal-acc 0.000 auc 0.000 | best@2 | 609s | peak 2.7 GB
+04:53:17 INFO nested_lopo:     session sub-116|A        P(OFF)=0.529 true=0 (359 windows)
+04:53:17 INFO nested_lopo:     session sub-116|C        P(OFF)=0.472 true=1 (257 windows)
+04:53:17 INFO nested_lopo:   progress: 6/35 folds | ~10.4 min/fold | ETA 301.0 min
+04:53:17 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+04:53:17 INFO codebrain_ft.model: LoRA applied: target=attention r=16 alpha=32 dropout=0.0
+04:53:17 INFO codebrain_ft.train: Training: 320129 trainable params, 444 steps/epoch, up to 20 epochs (lr=2.0e-03).
+04:54:46 INFO codebrain_ft.train: epoch 0 | loss 0.6504 | inner-val bal-acc 0.429 | auc 0.224
+04:56:16 INFO codebrain_ft.train: epoch 1 | loss 0.4589 | inner-val bal-acc 0.500 | auc 0.449
+04:57:47 INFO codebrain_ft.train: epoch 2 | loss 0.3444 | inner-val bal-acc 0.429 | auc 0.469
+04:59:19 INFO codebrain_ft.train: epoch 3 | loss 0.2813 | inner-val bal-acc 0.357 | auc 0.429
+05:00:48 INFO codebrain_ft.train: epoch 4 | loss 0.2558 | inner-val bal-acc 0.500 | auc 0.469
+05:02:16 INFO codebrain_ft.train: epoch 5 | loss 0.2441 | inner-val bal-acc 0.500 | auc 0.306
+05:02:16 INFO codebrain_ft.train: Early stopping at epoch 5 (best epoch 1, inner_val_balanced_accuracy=0.500).
+05:02:17 INFO nested_lopo: fold  6 sub-117   | session bal-acc 0.500 auc 1.000 | best@1 | 540s | peak 2.7 GB
+05:02:17 INFO nested_lopo:     session sub-117|A        P(OFF)=0.548 true=0 (240 windows)
+05:02:17 INFO nested_lopo:     session sub-117|C        P(OFF)=0.599 true=1 (56 windows)
+05:02:17 INFO nested_lopo:   progress: 7/35 folds | ~10.2 min/fold | ETA 285.1 min
+05:02:17 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+05:02:17 INFO codebrain_ft.model: LoRA applied: target=attention r=16 alpha=32 dropout=0.0
+05:02:17 INFO codebrain_ft.train: Training: 320129 trainable params, 437 steps/epoch, up to 20 epochs (lr=2.0e-03).
+05:03:48 INFO codebrain_ft.train: epoch 0 | loss 0.6582 | inner-val bal-acc 0.500 | auc 0.286
+05:05:18 INFO codebrain_ft.train: epoch 1 | loss 0.4666 | inner-val bal-acc 0.429 | auc 0.388
+05:06:49 INFO codebrain_ft.train: epoch 2 | loss 0.3487 | inner-val bal-acc 0.286 | auc 0.347
+05:08:19 INFO codebrain_ft.train: epoch 3 | loss 0.2961 | inner-val bal-acc 0.286 | auc 0.245
+05:09:49 INFO codebrain_ft.train: epoch 4 | loss 0.2686 | inner-val bal-acc 0.214 | auc 0.306
+05:09:49 INFO codebrain_ft.train: Early stopping at epoch 4 (best epoch 0, inner_val_balanced_accuracy=0.500).
+05:09:52 INFO nested_lopo: fold  7 sub-119   | session bal-acc 0.500 auc 1.000 | best@0 | 455s | peak 2.7 GB
+05:09:52 INFO nested_lopo:     session sub-119|A        P(OFF)=0.322 true=0 (235 windows)
+05:09:52 INFO nested_lopo:     session sub-119|C        P(OFF)=0.379 true=1 (304 windows)
+05:09:52 INFO nested_lopo:   progress: 8/35 folds | ~9.9 min/fold | ETA 266.1 min
+05:09:52 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+05:09:52 INFO codebrain_ft.model: LoRA applied: target=attention r=16 alpha=32 dropout=0.0
+05:09:52 INFO codebrain_ft.train: Training: 320129 trainable params, 438 steps/epoch, up to 20 epochs (lr=2.0e-03).
+05:11:22 INFO codebrain_ft.train: epoch 0 | loss 0.6549 | inner-val bal-acc 0.429 | auc 0.429
+05:12:50 INFO codebrain_ft.train: epoch 1 | loss 0.4893 | inner-val bal-acc 0.429 | auc 0.469
+05:14:21 INFO codebrain_ft.train: epoch 2 | loss 0.3653 | inner-val bal-acc 0.643 | auc 0.571
+05:15:52 INFO codebrain_ft.train: epoch 3 | loss 0.2938 | inner-val bal-acc 0.571 | auc 0.612
+05:17:19 INFO codebrain_ft.train: epoch 4 | loss 0.2732 | inner-val bal-acc 0.429 | auc 0.429
+05:18:46 INFO codebrain_ft.train: epoch 5 | loss 0.2939 | inner-val bal-acc 0.429 | auc 0.592
+05:20:16 INFO codebrain_ft.train: epoch 6 | loss 0.3224 | inner-val bal-acc 0.643 | auc 0.571
+05:20:16 INFO codebrain_ft.train: Early stopping at epoch 6 (best epoch 2, inner_val_balanced_accuracy=0.643).
+05:20:18 INFO nested_lopo: fold  8 sub-121   | session bal-acc 0.500 auc 1.000 | best@2 | 626s | peak 2.7 GB
+05:20:18 INFO nested_lopo:     session sub-121|A        P(OFF)=0.725 true=0 (150 windows)
+05:20:18 INFO nested_lopo:     session sub-121|C        P(OFF)=0.886 true=1 (365 windows)
+05:20:18 INFO nested_lopo:   progress: 9/35 folds | ~9.9 min/fold | ETA 257.9 min
+05:20:18 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+05:20:18 INFO codebrain_ft.model: LoRA applied: target=attention r=16 alpha=32 dropout=0.0
+05:20:18 INFO codebrain_ft.train: Training: 320129 trainable params, 438 steps/epoch, up to 20 epochs (lr=2.0e-03).
+05:21:49 INFO codebrain_ft.train: epoch 0 | loss 0.6493 | inner-val bal-acc 0.429 | auc 0.408
+05:23:18 INFO codebrain_ft.train: epoch 1 | loss 0.4629 | inner-val bal-acc 0.429 | auc 0.469
+05:24:46 INFO codebrain_ft.train: epoch 2 | loss 0.3454 | inner-val bal-acc 0.571 | auc 0.510
+05:26:12 INFO codebrain_ft.train: epoch 3 | loss 0.2803 | inner-val bal-acc 0.500 | auc 0.531
+05:27:39 INFO codebrain_ft.train: epoch 4 | loss 0.2651 | inner-val bal-acc 0.429 | auc 0.347
+05:29:09 INFO codebrain_ft.train: epoch 5 | loss 0.2603 | inner-val bal-acc 0.357 | auc 0.469
+05:30:36 INFO codebrain_ft.train: epoch 6 | loss 0.2805 | inner-val bal-acc 0.643 | auc 0.592
+05:32:04 INFO codebrain_ft.train: epoch 7 | loss 0.2939 | inner-val bal-acc 0.714 | auc 0.531
+05:33:34 INFO codebrain_ft.train: epoch 8 | loss 0.2800 | inner-val bal-acc 0.357 | auc 0.449
+05:35:04 INFO codebrain_ft.train: epoch 9 | loss 0.2657 | inner-val bal-acc 0.500 | auc 0.633
+05:36:33 INFO codebrain_ft.train: epoch 10 | loss 0.2263 | inner-val bal-acc 0.500 | auc 0.551
+05:38:01 INFO codebrain_ft.train: epoch 11 | loss 0.2105 | inner-val bal-acc 0.714 | auc 0.653
+05:38:01 INFO codebrain_ft.train: Early stopping at epoch 11 (best epoch 7, inner_val_balanced_accuracy=0.714).
+05:38:03 INFO nested_lopo: fold  9 sub-123   | session bal-acc 0.500 auc 0.000 | best@7 | 1065s | peak 2.7 GB
+05:38:03 INFO nested_lopo:     session sub-123|A        P(OFF)=0.669 true=0 (258 windows)
+05:38:03 INFO nested_lopo:     session sub-123|C        P(OFF)=0.649 true=1 (199 windows)
+05:38:03 INFO nested_lopo:   progress: 10/35 folds | ~10.7 min/fold | ETA 267.6 min
+05:38:03 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+05:38:04 INFO codebrain_ft.model: LoRA applied: target=attention r=16 alpha=32 dropout=0.0
+05:38:04 INFO codebrain_ft.train: Training: 320129 trainable params, 434 steps/epoch, up to 20 epochs (lr=2.0e-03).
+05:39:32 INFO codebrain_ft.train: epoch 0 | loss 0.6538 | inner-val bal-acc 0.429 | auc 0.265
+05:41:03 INFO codebrain_ft.train: epoch 1 | loss 0.4636 | inner-val bal-acc 0.500 | auc 0.469
+05:42:30 INFO codebrain_ft.train: epoch 2 | loss 0.3389 | inner-val bal-acc 0.500 | auc 0.367
+05:44:00 INFO codebrain_ft.train: epoch 3 | loss 0.2878 | inner-val bal-acc 0.500 | auc 0.306
+05:45:26 INFO codebrain_ft.train: epoch 4 | loss 0.2719 | inner-val bal-acc 0.286 | auc 0.347
+05:46:53 INFO codebrain_ft.train: epoch 5 | loss 0.2763 | inner-val bal-acc 0.429 | auc 0.429
+05:46:53 INFO codebrain_ft.train: Early stopping at epoch 5 (best epoch 1, inner_val_balanced_accuracy=0.500).
+05:46:55 INFO nested_lopo: fold 10 sub-125   | session bal-acc 0.500 auc 1.000 | best@1 | 531s | peak 2.7 GB
+05:46:55 INFO nested_lopo:     session sub-125|A        P(OFF)=0.056 true=0 (322 windows)
+05:46:55 INFO nested_lopo:     session sub-125|C        P(OFF)=0.105 true=1 (238 windows)
+05:46:55 INFO nested_lopo:   progress: 11/35 folds | ~10.5 min/fold | ETA 252.9 min
+05:46:55 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+05:46:55 INFO codebrain_ft.model: LoRA applied: target=attention r=16 alpha=32 dropout=0.0
+05:46:55 INFO codebrain_ft.train: Training: 320129 trainable params, 435 steps/epoch, up to 20 epochs (lr=2.0e-03).
+05:48:24 INFO codebrain_ft.train: epoch 0 | loss 0.6428 | inner-val bal-acc 0.286 | auc 0.265
+05:49:53 INFO codebrain_ft.train: epoch 1 | loss 0.4573 | inner-val bal-acc 0.429 | auc 0.612
+05:51:26 INFO codebrain_ft.train: epoch 2 | loss 0.3382 | inner-val bal-acc 0.500 | auc 0.490
+05:52:52 INFO codebrain_ft.train: epoch 3 | loss 0.2787 | inner-val bal-acc 0.357 | auc 0.490
+05:54:18 INFO codebrain_ft.train: epoch 4 | loss 0.2555 | inner-val bal-acc 0.643 | auc 0.551
+05:55:45 INFO codebrain_ft.train: epoch 5 | loss 0.2723 | inner-val bal-acc 0.571 | auc 0.408
+05:57:13 INFO codebrain_ft.train: epoch 6 | loss 0.2732 | inner-val bal-acc 0.643 | auc 0.551
+05:58:42 INFO codebrain_ft.train: epoch 7 | loss 0.2766 | inner-val bal-acc 0.429 | auc 0.429
+06:00:11 INFO codebrain_ft.train: epoch 8 | loss 0.2721 | inner-val bal-acc 0.357 | auc 0.429
+06:00:11 INFO codebrain_ft.train: Early stopping at epoch 8 (best epoch 4, inner_val_balanced_accuracy=0.643).
+06:00:14 INFO nested_lopo: fold 11 sub-129   | session bal-acc 0.500 auc 0.000 | best@4 | 799s | peak 2.7 GB
+06:00:14 INFO nested_lopo:     session sub-129|A        P(OFF)=0.897 true=0 (239 windows)
+06:00:14 INFO nested_lopo:     session sub-129|C        P(OFF)=0.821 true=1 (288 windows)
+06:00:14 INFO nested_lopo:   progress: 12/35 folds | ~10.8 min/fold | ETA 247.7 min
+06:00:14 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+06:00:14 INFO codebrain_ft.model: LoRA applied: target=attention r=16 alpha=32 dropout=0.0
+06:00:14 INFO codebrain_ft.train: Training: 320129 trainable params, 436 steps/epoch, up to 20 epochs (lr=2.0e-03).
+06:01:43 INFO codebrain_ft.train: epoch 0 | loss 0.6491 | inner-val bal-acc 0.357 | auc 0.347
+06:03:11 INFO codebrain_ft.train: epoch 1 | loss 0.4617 | inner-val bal-acc 0.500 | auc 0.531
+06:04:38 INFO codebrain_ft.train: epoch 2 | loss 0.3529 | inner-val bal-acc 0.571 | auc 0.449
+06:06:07 INFO codebrain_ft.train: epoch 3 | loss 0.2829 | inner-val bal-acc 0.571 | auc 0.469
+06:07:37 INFO codebrain_ft.train: epoch 4 | loss 0.2628 | inner-val bal-acc 0.571 | auc 0.531
+06:09:06 INFO codebrain_ft.train: epoch 5 | loss 0.2808 | inner-val bal-acc 0.286 | auc 0.510
+06:10:37 INFO codebrain_ft.train: epoch 6 | loss 0.2965 | inner-val bal-acc 0.571 | auc 0.571
+06:10:37 INFO codebrain_ft.train: Early stopping at epoch 6 (best epoch 2, inner_val_balanced_accuracy=0.571).
+06:10:38 INFO nested_lopo: fold 12 sub-131   | session bal-acc 0.500 auc 0.000 | best@2 | 624s | peak 2.7 GB
+06:10:38 INFO nested_lopo:     session sub-131|A        P(OFF)=0.948 true=0 (301 windows)
+06:10:38 INFO nested_lopo:     session sub-131|C        P(OFF)=0.612 true=1 (215 windows)
+06:10:38 INFO nested_lopo:   progress: 13/35 folds | ~10.7 min/fold | ETA 236.3 min
+06:10:38 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+06:10:38 INFO codebrain_ft.model: LoRA applied: target=attention r=16 alpha=32 dropout=0.0
+06:10:38 INFO codebrain_ft.train: Training: 320129 trainable params, 432 steps/epoch, up to 20 epochs (lr=2.0e-03).
+06:12:08 INFO codebrain_ft.train: epoch 0 | loss 0.6514 | inner-val bal-acc 0.357 | auc 0.367
+06:13:38 INFO codebrain_ft.train: epoch 1 | loss 0.4729 | inner-val bal-acc 0.571 | auc 0.388
+06:15:08 INFO codebrain_ft.train: epoch 2 | loss 0.3440 | inner-val bal-acc 0.571 | auc 0.571
+06:16:36 INFO codebrain_ft.train: epoch 3 | loss 0.2825 | inner-val bal-acc 0.429 | auc 0.306
+06:18:04 INFO codebrain_ft.train: epoch 4 | loss 0.2810 | inner-val bal-acc 0.571 | auc 0.469
+06:19:31 INFO codebrain_ft.train: epoch 5 | loss 0.2824 | inner-val bal-acc 0.286 | auc 0.245
+06:19:31 INFO codebrain_ft.train: Early stopping at epoch 5 (best epoch 1, inner_val_balanced_accuracy=0.571).
+06:19:33 INFO nested_lopo: fold 13 sub-134   | session bal-acc 0.500 auc 0.000 | best@1 | 535s | peak 2.7 GB
+06:19:33 INFO nested_lopo:     session sub-134|A        P(OFF)=0.641 true=0 (316 windows)
+06:19:33 INFO nested_lopo:     session sub-134|C        P(OFF)=0.559 true=1 (321 windows)
+06:19:33 INFO nested_lopo:   progress: 14/35 folds | ~10.6 min/fold | ETA 222.8 min
+06:19:33 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+06:19:33 INFO codebrain_ft.model: LoRA applied: target=attention r=16 alpha=32 dropout=0.0
+06:19:33 INFO codebrain_ft.train: Training: 320129 trainable params, 432 steps/epoch, up to 20 epochs (lr=2.0e-03).
+06:21:00 INFO codebrain_ft.train: epoch 0 | loss 0.6451 | inner-val bal-acc 0.500 | auc 0.327
+06:22:28 INFO codebrain_ft.train: epoch 1 | loss 0.4697 | inner-val bal-acc 0.357 | auc 0.490
+06:23:54 INFO codebrain_ft.train: epoch 2 | loss 0.3410 | inner-val bal-acc 0.571 | auc 0.510
+06:25:20 INFO codebrain_ft.train: epoch 3 | loss 0.2817 | inner-val bal-acc 0.357 | auc 0.245
+06:26:50 INFO codebrain_ft.train: epoch 4 | loss 0.2740 | inner-val bal-acc 0.429 | auc 0.449
+06:28:20 INFO codebrain_ft.train: epoch 5 | loss 0.3037 | inner-val bal-acc 0.571 | auc 0.531
+06:29:52 INFO codebrain_ft.train: epoch 6 | loss 0.2833 | inner-val bal-acc 0.500 | auc 0.490
+06:29:52 INFO codebrain_ft.train: Early stopping at epoch 6 (best epoch 2, inner_val_balanced_accuracy=0.571).
+06:29:54 INFO nested_lopo: fold 14 sub-135   | session bal-acc 0.500 auc 1.000 | best@2 | 621s | peak 2.7 GB
+06:29:54 INFO nested_lopo:     session sub-135|A        P(OFF)=0.404 true=0 (270 windows)
+06:29:54 INFO nested_lopo:     session sub-135|C        P(OFF)=0.479 true=1 (343 windows)
+06:29:54 INFO nested_lopo:   progress: 15/35 folds | ~10.6 min/fold | ETA 211.9 min
+06:29:54 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+06:29:54 INFO codebrain_ft.model: LoRA applied: target=attention r=16 alpha=32 dropout=0.0
+06:29:54 INFO codebrain_ft.train: Training: 320129 trainable params, 439 steps/epoch, up to 20 epochs (lr=2.0e-03).
+06:31:26 INFO codebrain_ft.train: epoch 0 | loss 0.6471 | inner-val bal-acc 0.500 | auc 0.469
+06:32:56 INFO codebrain_ft.train: epoch 1 | loss 0.4592 | inner-val bal-acc 0.357 | auc 0.612
+06:34:24 INFO codebrain_ft.train: epoch 2 | loss 0.3292 | inner-val bal-acc 0.429 | auc 0.429
+06:35:52 INFO codebrain_ft.train: epoch 3 | loss 0.2768 | inner-val bal-acc 0.429 | auc 0.388
+06:37:22 INFO codebrain_ft.train: epoch 4 | loss 0.2595 | inner-val bal-acc 0.429 | auc 0.367
+06:37:22 INFO codebrain_ft.train: Early stopping at epoch 4 (best epoch 0, inner_val_balanced_accuracy=0.500).
+06:37:23 INFO nested_lopo: fold 15 sub-34    | session bal-acc 0.500 auc 0.000 | best@0 | 449s | peak 2.7 GB
+06:37:23 INFO nested_lopo:     session sub-34|A         P(OFF)=0.454 true=0 (342 windows)
+06:37:23 INFO nested_lopo:     session sub-34|C         P(OFF)=0.433 true=1 (49 windows)
+06:37:23 INFO nested_lopo:   progress: 16/35 folds | ~10.4 min/fold | ETA 197.6 min
+06:37:23 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+06:37:23 INFO codebrain_ft.model: LoRA applied: target=attention r=16 alpha=32 dropout=0.0
+06:37:23 INFO codebrain_ft.train: Training: 320129 trainable params, 437 steps/epoch, up to 20 epochs (lr=2.0e-03).
+06:38:53 INFO codebrain_ft.train: epoch 0 | loss 0.6378 | inner-val bal-acc 0.429 | auc 0.327
+06:40:20 INFO codebrain_ft.train: epoch 1 | loss 0.4681 | inner-val bal-acc 0.429 | auc 0.306
+06:41:46 INFO codebrain_ft.train: epoch 2 | loss 0.3399 | inner-val bal-acc 0.429 | auc 0.388
+06:43:13 INFO codebrain_ft.train: epoch 3 | loss 0.2777 | inner-val bal-acc 0.643 | auc 0.612
+06:44:41 INFO codebrain_ft.train: epoch 4 | loss 0.2615 | inner-val bal-acc 0.643 | auc 0.469
+06:46:14 INFO codebrain_ft.train: epoch 5 | loss 0.2570 | inner-val bal-acc 0.500 | auc 0.490
+06:47:43 INFO codebrain_ft.train: epoch 6 | loss 0.2807 | inner-val bal-acc 0.571 | auc 0.490
+06:49:10 INFO codebrain_ft.train: epoch 7 | loss 0.3093 | inner-val bal-acc 0.429 | auc 0.429
+06:49:10 INFO codebrain_ft.train: Early stopping at epoch 7 (best epoch 3, inner_val_balanced_accuracy=0.643).
+06:49:11 INFO nested_lopo: fold 16 sub-42    | session bal-acc 0.000 auc 0.000 | best@3 | 708s | peak 2.7 GB
+06:49:11 INFO nested_lopo:     session sub-42|A         P(OFF)=0.825 true=0 (338 windows)
+06:49:11 INFO nested_lopo:     session sub-42|C         P(OFF)=0.392 true=1 (109 windows)
+06:49:11 INFO nested_lopo:   progress: 17/35 folds | ~10.5 min/fold | ETA 188.7 min
+06:49:11 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+06:49:11 INFO codebrain_ft.model: LoRA applied: target=attention r=16 alpha=32 dropout=0.0
+06:49:11 INFO codebrain_ft.train: Training: 320129 trainable params, 443 steps/epoch, up to 20 epochs (lr=2.0e-03).
+06:50:41 INFO codebrain_ft.train: epoch 0 | loss 0.6532 | inner-val bal-acc 0.429 | auc 0.245
+06:52:12 INFO codebrain_ft.train: epoch 1 | loss 0.5089 | inner-val bal-acc 0.357 | auc 0.408
+06:53:41 INFO codebrain_ft.train: epoch 2 | loss 0.3708 | inner-val bal-acc 0.571 | auc 0.551
+06:55:13 INFO codebrain_ft.train: epoch 3 | loss 0.3381 | inner-val bal-acc 0.357 | auc 0.510
+06:56:45 INFO codebrain_ft.train: epoch 4 | loss 0.3522 | inner-val bal-acc 0.429 | auc 0.265
+06:58:15 INFO codebrain_ft.train: epoch 5 | loss 0.3419 | inner-val bal-acc 0.571 | auc 0.388
+06:59:45 INFO codebrain_ft.train: epoch 6 | loss 0.3162 | inner-val bal-acc 0.500 | auc 0.367
+06:59:45 INFO codebrain_ft.train: Early stopping at epoch 6 (best epoch 2, inner_val_balanced_accuracy=0.571).
+06:59:46 INFO nested_lopo: fold 17 sub-48    | session bal-acc 1.000 auc 1.000 | best@2 | 635s | peak 2.7 GB
+06:59:46 INFO nested_lopo:     session sub-48|A         P(OFF)=0.273 true=0 (155 windows)
+06:59:46 INFO nested_lopo:     session sub-48|C         P(OFF)=0.576 true=1 (105 windows)
+06:59:46 INFO nested_lopo:   progress: 18/35 folds | ~10.5 min/fold | ETA 178.3 min
+06:59:46 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+06:59:46 INFO codebrain_ft.model: LoRA applied: target=attention r=16 alpha=32 dropout=0.0
+06:59:46 INFO codebrain_ft.train: Training: 320129 trainable params, 433 steps/epoch, up to 20 epochs (lr=2.0e-03).
+07:01:18 INFO codebrain_ft.train: epoch 0 | loss 0.6447 | inner-val bal-acc 0.429 | auc 0.408
+07:02:45 INFO codebrain_ft.train: epoch 1 | loss 0.4990 | inner-val bal-acc 0.571 | auc 0.694
+07:04:13 INFO codebrain_ft.train: epoch 2 | loss 0.3670 | inner-val bal-acc 0.500 | auc 0.469
+07:05:42 INFO codebrain_ft.train: epoch 3 | loss 0.2963 | inner-val bal-acc 0.286 | auc 0.367
+07:07:11 INFO codebrain_ft.train: epoch 4 | loss 0.2708 | inner-val bal-acc 0.429 | auc 0.490
+07:08:39 INFO codebrain_ft.train: epoch 5 | loss 0.2612 | inner-val bal-acc 0.357 | auc 0.408
+07:08:39 INFO codebrain_ft.train: Early stopping at epoch 5 (best epoch 1, inner_val_balanced_accuracy=0.571).
+07:08:40 INFO nested_lopo: fold 18 sub-51    | session bal-acc 0.000 auc 0.000 | best@1 | 534s | peak 2.7 GB
+07:08:40 INFO nested_lopo:     session sub-51|A         P(OFF)=0.612 true=0 (415 windows)
+07:08:40 INFO nested_lopo:     session sub-51|C         P(OFF)=0.315 true=1 (164 windows)
+07:08:40 INFO nested_lopo:   progress: 19/35 folds | ~10.4 min/fold | ETA 166.4 min
+07:08:40 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+07:08:40 INFO codebrain_ft.model: LoRA applied: target=attention r=16 alpha=32 dropout=0.0
+07:08:40 INFO codebrain_ft.train: Training: 320129 trainable params, 433 steps/epoch, up to 20 epochs (lr=2.0e-03).
+07:10:07 INFO codebrain_ft.train: epoch 0 | loss 0.6519 | inner-val bal-acc 0.429 | auc 0.551
+07:11:36 INFO codebrain_ft.train: epoch 1 | loss 0.4954 | inner-val bal-acc 0.429 | auc 0.429
+07:13:04 INFO codebrain_ft.train: epoch 2 | loss 0.3829 | inner-val bal-acc 0.500 | auc 0.449
+07:14:34 INFO codebrain_ft.train: epoch 3 | loss 0.3273 | inner-val bal-acc 0.500 | auc 0.531
+07:16:02 INFO codebrain_ft.train: epoch 4 | loss 0.3192 | inner-val bal-acc 0.500 | auc 0.469
+07:17:31 INFO codebrain_ft.train: epoch 5 | loss 0.3781 | inner-val bal-acc 0.643 | auc 0.449
+07:18:59 INFO codebrain_ft.train: epoch 6 | loss 0.3392 | inner-val bal-acc 0.429 | auc 0.449
+07:20:28 INFO codebrain_ft.train: epoch 7 | loss 0.3572 | inner-val bal-acc 0.500 | auc 0.490
+07:21:55 INFO codebrain_ft.train: epoch 8 | loss 0.3228 | inner-val bal-acc 0.643 | auc 0.449
+07:23:26 INFO codebrain_ft.train: epoch 9 | loss 0.2797 | inner-val bal-acc 0.500 | auc 0.510
+07:23:26 INFO codebrain_ft.train: Early stopping at epoch 9 (best epoch 5, inner_val_balanced_accuracy=0.643).
+07:23:28 INFO nested_lopo: fold 19 sub-53    | session bal-acc 0.000 auc 0.000 | best@5 | 888s | peak 2.7 GB
+07:23:28 INFO nested_lopo:     session sub-53|A         P(OFF)=0.510 true=0 (273 windows)
+07:23:28 INFO nested_lopo:     session sub-53|C         P(OFF)=0.367 true=1 (133 windows)
+07:23:28 INFO nested_lopo:   progress: 20/35 folds | ~10.6 min/fold | ETA 159.3 min
+07:23:28 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+07:23:28 INFO codebrain_ft.model: LoRA applied: target=attention r=16 alpha=32 dropout=0.0
+07:23:28 INFO codebrain_ft.train: Training: 320129 trainable params, 433 steps/epoch, up to 20 epochs (lr=2.0e-03).
+07:25:00 INFO codebrain_ft.train: epoch 0 | loss 0.6450 | inner-val bal-acc 0.429 | auc 0.531
+07:26:28 INFO codebrain_ft.train: epoch 1 | loss 0.4572 | inner-val bal-acc 0.571 | auc 0.510
+07:27:56 INFO codebrain_ft.train: epoch 2 | loss 0.3355 | inner-val bal-acc 0.429 | auc 0.429
+07:29:23 INFO codebrain_ft.train: epoch 3 | loss 0.2763 | inner-val bal-acc 0.571 | auc 0.490
+07:30:50 INFO codebrain_ft.train: epoch 4 | loss 0.2686 | inner-val bal-acc 0.500 | auc 0.388
+07:32:17 INFO codebrain_ft.train: epoch 5 | loss 0.2569 | inner-val bal-acc 0.429 | auc 0.551
+07:32:17 INFO codebrain_ft.train: Early stopping at epoch 5 (best epoch 1, inner_val_balanced_accuracy=0.571).
+07:32:18 INFO nested_lopo: fold 20 sub-62    | session bal-acc 1.000 auc 1.000 | best@1 | 529s | peak 2.7 GB
+07:32:18 INFO nested_lopo:     session sub-62|A         P(OFF)=0.489 true=0 (199 windows)
+07:32:18 INFO nested_lopo:     session sub-62|C         P(OFF)=0.525 true=1 (219 windows)
+07:32:18 INFO nested_lopo:   progress: 21/35 folds | ~10.5 min/fold | ETA 147.5 min
+07:32:18 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+07:32:18 INFO codebrain_ft.model: LoRA applied: target=attention r=16 alpha=32 dropout=0.0
+07:32:18 INFO codebrain_ft.train: Training: 320129 trainable params, 434 steps/epoch, up to 20 epochs (lr=2.0e-03).
+07:33:45 INFO codebrain_ft.train: epoch 0 | loss 0.6531 | inner-val bal-acc 0.357 | auc 0.347
+07:35:12 INFO codebrain_ft.train: epoch 1 | loss 0.4818 | inner-val bal-acc 0.500 | auc 0.469
+07:36:39 INFO codebrain_ft.train: epoch 2 | loss 0.3717 | inner-val bal-acc 0.500 | auc 0.388
+07:38:06 INFO codebrain_ft.train: epoch 3 | loss 0.2996 | inner-val bal-acc 0.286 | auc 0.408
+07:39:34 INFO codebrain_ft.train: epoch 4 | loss 0.2849 | inner-val bal-acc 0.429 | auc 0.306
+07:41:01 INFO codebrain_ft.train: epoch 5 | loss 0.2850 | inner-val bal-acc 0.429 | auc 0.408
+07:41:01 INFO codebrain_ft.train: Early stopping at epoch 5 (best epoch 1, inner_val_balanced_accuracy=0.500).
+07:41:03 INFO nested_lopo: fold 21 sub-69    | session bal-acc 1.000 auc 1.000 | best@1 | 525s | peak 2.7 GB
+07:41:03 INFO nested_lopo:     session sub-69|A         P(OFF)=0.405 true=0 (206 windows)
+07:41:03 INFO nested_lopo:     session sub-69|C         P(OFF)=0.761 true=1 (167 windows)
+07:41:03 INFO nested_lopo:   progress: 22/35 folds | ~10.5 min/fold | ETA 135.9 min
+07:41:03 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+07:41:03 INFO codebrain_ft.model: LoRA applied: target=attention r=16 alpha=32 dropout=0.0
+07:41:03 INFO codebrain_ft.train: Training: 320129 trainable params, 427 steps/epoch, up to 20 epochs (lr=2.0e-03).
+07:42:29 INFO codebrain_ft.train: epoch 0 | loss 0.6470 | inner-val bal-acc 0.571 | auc 0.510
+07:43:54 INFO codebrain_ft.train: epoch 1 | loss 0.4476 | inner-val bal-acc 0.429 | auc 0.592
+07:45:22 INFO codebrain_ft.train: epoch 2 | loss 0.3367 | inner-val bal-acc 0.429 | auc 0.347
+07:46:48 INFO codebrain_ft.train: epoch 3 | loss 0.2723 | inner-val bal-acc 0.714 | auc 0.510
+07:48:14 INFO codebrain_ft.train: epoch 4 | loss 0.2601 | inner-val bal-acc 0.429 | auc 0.510
+07:49:41 INFO codebrain_ft.train: epoch 5 | loss 0.2655 | inner-val bal-acc 0.500 | auc 0.429
+07:51:07 INFO codebrain_ft.train: epoch 6 | loss 0.2724 | inner-val bal-acc 0.429 | auc 0.347
+07:52:32 INFO codebrain_ft.train: epoch 7 | loss 0.2468 | inner-val bal-acc 0.500 | auc 0.571
+07:52:32 INFO codebrain_ft.train: Early stopping at epoch 7 (best epoch 3, inner_val_balanced_accuracy=0.714).
+07:52:33 INFO nested_lopo: fold 22 sub-70    | session bal-acc 0.500 auc 0.000 | best@3 | 691s | peak 2.7 GB
+07:52:33 INFO nested_lopo:     session sub-70|A         P(OFF)=0.353 true=0 (393 windows)
+07:52:33 INFO nested_lopo:     session sub-70|C         P(OFF)=0.033 true=1 (205 windows)
+07:52:33 INFO nested_lopo:   progress: 23/35 folds | ~10.5 min/fold | ETA 126.0 min
+07:52:33 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+07:52:33 INFO codebrain_ft.model: LoRA applied: target=attention r=16 alpha=32 dropout=0.0
+07:52:33 INFO codebrain_ft.train: Training: 320129 trainable params, 434 steps/epoch, up to 20 epochs (lr=2.0e-03).
+07:54:01 INFO codebrain_ft.train: epoch 0 | loss 0.6582 | inner-val bal-acc 0.429 | auc 0.388
+07:55:29 INFO codebrain_ft.train: epoch 1 | loss 0.5083 | inner-val bal-acc 0.571 | auc 0.510
+07:56:58 INFO codebrain_ft.train: epoch 2 | loss 0.3925 | inner-val bal-acc 0.429 | auc 0.510
+07:58:28 INFO codebrain_ft.train: epoch 3 | loss 0.3379 | inner-val bal-acc 0.500 | auc 0.469
+07:59:58 INFO codebrain_ft.train: epoch 4 | loss 0.3294 | inner-val bal-acc 0.357 | auc 0.469
+08:01:30 INFO codebrain_ft.train: epoch 5 | loss 0.3550 | inner-val bal-acc 0.429 | auc 0.551
+08:01:30 INFO codebrain_ft.train: Early stopping at epoch 5 (best epoch 1, inner_val_balanced_accuracy=0.571).
+08:01:31 INFO nested_lopo: fold 23 sub-71    | session bal-acc 0.500 auc 1.000 | best@1 | 538s | peak 2.7 GB
+08:01:31 INFO nested_lopo:     session sub-71|A         P(OFF)=0.266 true=0 (136 windows)
+08:01:31 INFO nested_lopo:     session sub-71|C         P(OFF)=0.483 true=1 (239 windows)
+08:01:31 INFO nested_lopo:   progress: 24/35 folds | ~10.4 min/fold | ETA 114.8 min
+08:01:31 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+08:01:31 INFO codebrain_ft.model: LoRA applied: target=attention r=16 alpha=32 dropout=0.0
+08:01:31 INFO codebrain_ft.train: Training: 320129 trainable params, 434 steps/epoch, up to 20 epochs (lr=2.0e-03).
+08:02:58 INFO codebrain_ft.train: epoch 0 | loss 0.6499 | inner-val bal-acc 0.429 | auc 0.306
+08:04:26 INFO codebrain_ft.train: epoch 1 | loss 0.4839 | inner-val bal-acc 0.357 | auc 0.388
+08:05:53 INFO codebrain_ft.train: epoch 2 | loss 0.3530 | inner-val bal-acc 0.643 | auc 0.714
+08:07:20 INFO codebrain_ft.train: epoch 3 | loss 0.2908 | inner-val bal-acc 0.500 | auc 0.429
+08:08:46 INFO codebrain_ft.train: epoch 4 | loss 0.2780 | inner-val bal-acc 0.571 | auc 0.673
+08:10:15 INFO codebrain_ft.train: epoch 5 | loss 0.2915 | inner-val bal-acc 0.643 | auc 0.531
+08:11:41 INFO codebrain_ft.train: epoch 6 | loss 0.2868 | inner-val bal-acc 0.500 | auc 0.429
+08:11:41 INFO codebrain_ft.train: Early stopping at epoch 6 (best epoch 2, inner_val_balanced_accuracy=0.643).
+08:11:43 INFO nested_lopo: fold 24 sub-72    | session bal-acc 1.000 auc 1.000 | best@2 | 612s | peak 2.7 GB
+08:11:43 INFO nested_lopo:     session sub-72|A         P(OFF)=0.149 true=0 (266 windows)
+08:11:43 INFO nested_lopo:     session sub-72|C         P(OFF)=0.551 true=1 (334 windows)
+08:11:43 INFO nested_lopo:   progress: 25/35 folds | ~10.4 min/fold | ETA 104.3 min
+08:11:43 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+08:11:43 INFO codebrain_ft.model: LoRA applied: target=attention r=16 alpha=32 dropout=0.0
+08:11:43 INFO codebrain_ft.train: Training: 320129 trainable params, 435 steps/epoch, up to 20 epochs (lr=2.0e-03).
+08:13:11 INFO codebrain_ft.train: epoch 0 | loss 0.6546 | inner-val bal-acc 0.500 | auc 0.429
+08:14:40 INFO codebrain_ft.train: epoch 1 | loss 0.5268 | inner-val bal-acc 0.643 | auc 0.490
+08:16:09 INFO codebrain_ft.train: epoch 2 | loss 0.4083 | inner-val bal-acc 0.429 | auc 0.367
+08:17:36 INFO codebrain_ft.train: epoch 3 | loss 0.3854 | inner-val bal-acc 0.500 | auc 0.449
+08:19:05 INFO codebrain_ft.train: epoch 4 | loss 0.3759 | inner-val bal-acc 0.643 | auc 0.592
+08:20:31 INFO codebrain_ft.train: epoch 5 | loss 0.3279 | inner-val bal-acc 0.429 | auc 0.306
+08:20:31 INFO codebrain_ft.train: Early stopping at epoch 5 (best epoch 1, inner_val_balanced_accuracy=0.643).
+08:20:32 INFO nested_lopo: fold 25 sub-73    | session bal-acc 0.500 auc 1.000 | best@1 | 529s | peak 2.7 GB
+08:20:32 INFO nested_lopo:     session sub-73|A         P(OFF)=0.847 true=0 (229 windows)
+08:20:32 INFO nested_lopo:     session sub-73|C         P(OFF)=0.901 true=1 (351 windows)
+08:20:32 INFO nested_lopo:   progress: 26/35 folds | ~10.4 min/fold | ETA 93.3 min
+08:20:32 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+08:20:32 INFO codebrain_ft.model: LoRA applied: target=attention r=16 alpha=32 dropout=0.0
+08:20:32 INFO codebrain_ft.train: Training: 320129 trainable params, 431 steps/epoch, up to 20 epochs (lr=2.0e-03).
+08:21:59 INFO codebrain_ft.train: epoch 0 | loss 0.6423 | inner-val bal-acc 0.500 | auc 0.388
+08:23:26 INFO codebrain_ft.train: epoch 1 | loss 0.4805 | inner-val bal-acc 0.500 | auc 0.408
+08:24:51 INFO codebrain_ft.train: epoch 2 | loss 0.3596 | inner-val bal-acc 0.429 | auc 0.347
+08:26:20 INFO codebrain_ft.train: epoch 3 | loss 0.2923 | inner-val bal-acc 0.643 | auc 0.490
+08:27:49 INFO codebrain_ft.train: epoch 4 | loss 0.2813 | inner-val bal-acc 0.429 | auc 0.327
+08:29:15 INFO codebrain_ft.train: epoch 5 | loss 0.2898 | inner-val bal-acc 0.429 | auc 0.367
+08:30:42 INFO codebrain_ft.train: epoch 6 | loss 0.3188 | inner-val bal-acc 0.500 | auc 0.408
+08:32:10 INFO codebrain_ft.train: epoch 7 | loss 0.3036 | inner-val bal-acc 0.500 | auc 0.531
+08:32:10 INFO codebrain_ft.train: Early stopping at epoch 7 (best epoch 3, inner_val_balanced_accuracy=0.643).
+08:32:12 INFO nested_lopo: fold 26 sub-76    | session bal-acc 0.500 auc 1.000 | best@3 | 700s | peak 2.7 GB
+08:32:12 INFO nested_lopo:     session sub-76|A         P(OFF)=0.542 true=0 (392 windows)
+08:32:12 INFO nested_lopo:     session sub-76|C         P(OFF)=0.876 true=1 (311 windows)
+08:32:12 INFO nested_lopo:   progress: 27/35 folds | ~10.4 min/fold | ETA 83.3 min
+08:32:12 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+08:32:12 INFO codebrain_ft.model: LoRA applied: target=attention r=16 alpha=32 dropout=0.0
+08:32:12 INFO codebrain_ft.train: Training: 320129 trainable params, 436 steps/epoch, up to 20 epochs (lr=2.0e-03).
+08:33:41 INFO codebrain_ft.train: epoch 0 | loss 0.6572 | inner-val bal-acc 0.571 | auc 0.633
+08:35:08 INFO codebrain_ft.train: epoch 1 | loss 0.4959 | inner-val bal-acc 0.357 | auc 0.490
+08:36:35 INFO codebrain_ft.train: epoch 2 | loss 0.3643 | inner-val bal-acc 0.643 | auc 0.612
+08:38:02 INFO codebrain_ft.train: epoch 3 | loss 0.3168 | inner-val bal-acc 0.500 | auc 0.510
+08:39:29 INFO codebrain_ft.train: epoch 4 | loss 0.3041 | inner-val bal-acc 0.500 | auc 0.551
+08:40:56 INFO codebrain_ft.train: epoch 5 | loss 0.3080 | inner-val bal-acc 0.571 | auc 0.551
+08:42:23 INFO codebrain_ft.train: epoch 6 | loss 0.3199 | inner-val bal-acc 0.571 | auc 0.551
+08:42:23 INFO codebrain_ft.train: Early stopping at epoch 6 (best epoch 2, inner_val_balanced_accuracy=0.643).
+08:42:25 INFO nested_lopo: fold 27 sub-77    | session bal-acc 0.500 auc 1.000 | best@2 | 614s | peak 2.7 GB
+08:42:25 INFO nested_lopo:     session sub-77|A         P(OFF)=0.464 true=0 (306 windows)
+08:42:25 INFO nested_lopo:     session sub-77|C         P(OFF)=0.490 true=1 (222 windows)
+08:42:25 INFO nested_lopo:   progress: 28/35 folds | ~10.4 min/fold | ETA 72.9 min
+08:42:26 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+08:42:26 INFO codebrain_ft.model: LoRA applied: target=attention r=16 alpha=32 dropout=0.0
+08:42:26 INFO codebrain_ft.train: Training: 320129 trainable params, 435 steps/epoch, up to 20 epochs (lr=2.0e-03).
+08:43:52 INFO codebrain_ft.train: epoch 0 | loss 0.6606 | inner-val bal-acc 0.500 | auc 0.531
+08:45:21 INFO codebrain_ft.train: epoch 1 | loss 0.4845 | inner-val bal-acc 0.571 | auc 0.469
+08:46:51 INFO codebrain_ft.train: epoch 2 | loss 0.3504 | inner-val bal-acc 0.429 | auc 0.490
+08:48:22 INFO codebrain_ft.train: epoch 3 | loss 0.2941 | inner-val bal-acc 0.429 | auc 0.510
+08:49:51 INFO codebrain_ft.train: epoch 4 | loss 0.2895 | inner-val bal-acc 0.429 | auc 0.367
+08:51:18 INFO codebrain_ft.train: epoch 5 | loss 0.2736 | inner-val bal-acc 0.643 | auc 0.612
+08:52:49 INFO codebrain_ft.train: epoch 6 | loss 0.2769 | inner-val bal-acc 0.429 | auc 0.551
+08:54:19 INFO codebrain_ft.train: epoch 7 | loss 0.2613 | inner-val bal-acc 0.429 | auc 0.388
+08:55:47 INFO codebrain_ft.train: epoch 8 | loss 0.2943 | inner-val bal-acc 0.643 | auc 0.612
+08:57:19 INFO codebrain_ft.train: epoch 9 | loss 0.2720 | inner-val bal-acc 0.571 | auc 0.633
+08:57:19 INFO codebrain_ft.train: Early stopping at epoch 9 (best epoch 5, inner_val_balanced_accuracy=0.643).
+08:57:21 INFO nested_lopo: fold 28 sub-81    | session bal-acc 0.500 auc 1.000 | best@5 | 895s | peak 2.7 GB
+08:57:21 INFO nested_lopo:     session sub-81|A         P(OFF)=0.361 true=0 (288 windows)
+08:57:21 INFO nested_lopo:     session sub-81|C         P(OFF)=0.373 true=1 (294 windows)
+08:57:21 INFO nested_lopo:   progress: 29/35 folds | ~10.6 min/fold | ETA 63.4 min
+08:57:21 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+08:57:21 INFO codebrain_ft.model: LoRA applied: target=attention r=16 alpha=32 dropout=0.0
+08:57:21 INFO codebrain_ft.train: Training: 320129 trainable params, 435 steps/epoch, up to 20 epochs (lr=2.0e-03).
+08:58:50 INFO codebrain_ft.train: epoch 0 | loss 0.6563 | inner-val bal-acc 0.571 | auc 0.571
+09:00:21 INFO codebrain_ft.train: epoch 1 | loss 0.4889 | inner-val bal-acc 0.500 | auc 0.327
+09:01:50 INFO codebrain_ft.train: epoch 2 | loss 0.3837 | inner-val bal-acc 0.500 | auc 0.429
+09:03:22 INFO codebrain_ft.train: epoch 3 | loss 0.3131 | inner-val bal-acc 0.357 | auc 0.224
+09:04:49 INFO codebrain_ft.train: epoch 4 | loss 0.3014 | inner-val bal-acc 0.500 | auc 0.510
+09:04:49 INFO codebrain_ft.train: Early stopping at epoch 4 (best epoch 0, inner_val_balanced_accuracy=0.571).
+09:04:51 INFO nested_lopo: fold 29 sub-84    | session bal-acc 1.000 auc 1.000 | best@0 | 450s | peak 2.7 GB
+09:04:51 INFO nested_lopo:     session sub-84|A         P(OFF)=0.426 true=0 (463 windows)
+09:04:51 INFO nested_lopo:     session sub-84|C         P(OFF)=0.609 true=1 (243 windows)
+09:04:51 INFO nested_lopo:   progress: 30/35 folds | ~10.5 min/fold | ETA 52.3 min
+09:04:51 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+09:04:51 INFO codebrain_ft.model: LoRA applied: target=attention r=16 alpha=32 dropout=0.0
+09:04:51 INFO codebrain_ft.train: Training: 320129 trainable params, 441 steps/epoch, up to 20 epochs (lr=2.0e-03).
+09:06:18 INFO codebrain_ft.train: epoch 0 | loss 0.6458 | inner-val bal-acc 0.500 | auc 0.551
+09:07:48 INFO codebrain_ft.train: epoch 1 | loss 0.4274 | inner-val bal-acc 0.500 | auc 0.469
+09:09:17 INFO codebrain_ft.train: epoch 2 | loss 0.3169 | inner-val bal-acc 0.500 | auc 0.429
+09:10:45 INFO codebrain_ft.train: epoch 3 | loss 0.2649 | inner-val bal-acc 0.429 | auc 0.408
+09:12:13 INFO codebrain_ft.train: epoch 4 | loss 0.2474 | inner-val bal-acc 0.500 | auc 0.551
+09:12:13 INFO codebrain_ft.train: Early stopping at epoch 4 (best epoch 0, inner_val_balanced_accuracy=0.500).
+09:12:15 INFO nested_lopo: fold 30 sub-90    | session bal-acc 0.500 auc 0.000 | best@0 | 445s | peak 2.7 GB
+09:12:15 INFO nested_lopo:     session sub-90|A         P(OFF)=0.482 true=0 (189 windows)
+09:12:15 INFO nested_lopo:     session sub-90|C         P(OFF)=0.132 true=1 (319 windows)
+09:12:15 INFO nested_lopo:   progress: 31/35 folds | ~10.4 min/fold | ETA 41.5 min
+09:12:16 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+09:12:16 INFO codebrain_ft.model: LoRA applied: target=attention r=16 alpha=32 dropout=0.0
+09:12:16 INFO codebrain_ft.train: Training: 320129 trainable params, 442 steps/epoch, up to 20 epochs (lr=2.0e-03).
+09:13:46 INFO codebrain_ft.train: epoch 0 | loss 0.6486 | inner-val bal-acc 0.643 | auc 0.653
+09:15:17 INFO codebrain_ft.train: epoch 1 | loss 0.4548 | inner-val bal-acc 0.500 | auc 0.429
+09:16:49 INFO codebrain_ft.train: epoch 2 | loss 0.3592 | inner-val bal-acc 0.500 | auc 0.551
+09:18:20 INFO codebrain_ft.train: epoch 3 | loss 0.3135 | inner-val bal-acc 0.429 | auc 0.510
+09:19:51 INFO codebrain_ft.train: epoch 4 | loss 0.3146 | inner-val bal-acc 0.500 | auc 0.490
+09:19:51 INFO codebrain_ft.train: Early stopping at epoch 4 (best epoch 0, inner_val_balanced_accuracy=0.643).
+09:19:53 INFO nested_lopo: fold 31 sub-92    | session bal-acc 0.000 auc 0.000 | best@0 | 458s | peak 2.7 GB
+09:19:53 INFO nested_lopo:     session sub-92|A         P(OFF)=0.987 true=0 (236 windows)
+09:19:53 INFO nested_lopo:     session sub-92|C         P(OFF)=0.371 true=1 (242 windows)
+09:19:53 INFO nested_lopo:   progress: 32/35 folds | ~10.3 min/fold | ETA 30.8 min
+09:19:53 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+09:19:53 INFO codebrain_ft.model: LoRA applied: target=attention r=16 alpha=32 dropout=0.0
+09:19:53 INFO codebrain_ft.train: Training: 320129 trainable params, 435 steps/epoch, up to 20 epochs (lr=2.0e-03).
+09:21:21 INFO codebrain_ft.train: epoch 0 | loss 0.6417 | inner-val bal-acc 0.714 | auc 0.633
+09:22:49 INFO codebrain_ft.train: epoch 1 | loss 0.4333 | inner-val bal-acc 0.357 | auc 0.490
+09:24:15 INFO codebrain_ft.train: epoch 2 | loss 0.3418 | inner-val bal-acc 0.429 | auc 0.388
+09:25:45 INFO codebrain_ft.train: epoch 3 | loss 0.2919 | inner-val bal-acc 0.571 | auc 0.531
+09:27:14 INFO codebrain_ft.train: epoch 4 | loss 0.2876 | inner-val bal-acc 0.500 | auc 0.490
+09:27:14 INFO codebrain_ft.train: Early stopping at epoch 4 (best epoch 0, inner_val_balanced_accuracy=0.714).
+09:27:16 INFO nested_lopo: fold 32 sub-93    | session bal-acc 0.000 auc 0.000 | best@0 | 443s | peak 2.7 GB
+09:27:16 INFO nested_lopo:     session sub-93|A         P(OFF)=0.729 true=0 (403 windows)
+09:27:16 INFO nested_lopo:     session sub-93|C         P(OFF)=0.278 true=1 (298 windows)
+09:27:16 INFO nested_lopo:   progress: 33/35 folds | ~10.2 min/fold | ETA 20.4 min
+09:27:16 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+09:27:16 INFO codebrain_ft.model: LoRA applied: target=attention r=16 alpha=32 dropout=0.0
+09:27:16 INFO codebrain_ft.train: Training: 320129 trainable params, 438 steps/epoch, up to 20 epochs (lr=2.0e-03).
+09:28:46 INFO codebrain_ft.train: epoch 0 | loss 0.6400 | inner-val bal-acc 0.429 | auc 0.469
+09:30:14 INFO codebrain_ft.train: epoch 1 | loss 0.4532 | inner-val bal-acc 0.571 | auc 0.633
+09:31:44 INFO codebrain_ft.train: epoch 2 | loss 0.3456 | inner-val bal-acc 0.500 | auc 0.408
+09:33:11 INFO codebrain_ft.train: epoch 3 | loss 0.2785 | inner-val bal-acc 0.429 | auc 0.429
+09:34:38 INFO codebrain_ft.train: epoch 4 | loss 0.2718 | inner-val bal-acc 0.429 | auc 0.510
+09:36:06 INFO codebrain_ft.train: epoch 5 | loss 0.2888 | inner-val bal-acc 0.500 | auc 0.306
+09:36:06 INFO codebrain_ft.train: Early stopping at epoch 5 (best epoch 1, inner_val_balanced_accuracy=0.571).
+09:36:07 INFO nested_lopo: fold 33 sub-94    | session bal-acc 0.500 auc 1.000 | best@1 | 531s | peak 2.7 GB
+09:36:07 INFO nested_lopo:     session sub-94|A         P(OFF)=0.702 true=0 (288 windows)
+09:36:07 INFO nested_lopo:     session sub-94|C         P(OFF)=0.849 true=1 (297 windows)
+09:36:07 INFO nested_lopo:   progress: 34/35 folds | ~10.2 min/fold | ETA 10.2 min
+09:36:07 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+09:36:07 INFO codebrain_ft.model: LoRA applied: target=attention r=16 alpha=32 dropout=0.0
+09:36:08 INFO codebrain_ft.train: Training: 320129 trainable params, 438 steps/epoch, up to 20 epochs (lr=2.0e-03).
+09:37:36 INFO codebrain_ft.train: epoch 0 | loss 0.6513 | inner-val bal-acc 0.571 | auc 0.551
+09:39:04 INFO codebrain_ft.train: epoch 1 | loss 0.4537 | inner-val bal-acc 0.500 | auc 0.429
+09:40:33 INFO codebrain_ft.train: epoch 2 | loss 0.3298 | inner-val bal-acc 0.500 | auc 0.429
+09:42:02 INFO codebrain_ft.train: epoch 3 | loss 0.2871 | inner-val bal-acc 0.571 | auc 0.306
+09:43:30 INFO codebrain_ft.train: epoch 4 | loss 0.2814 | inner-val bal-acc 0.500 | auc 0.429
+09:43:30 INFO codebrain_ft.train: Early stopping at epoch 4 (best epoch 0, inner_val_balanced_accuracy=0.571).
+09:43:30 INFO nested_lopo: fold 34 sub-96    | session bal-acc 0.500 auc 1.000 | best@0 | 443s | peak 2.7 GB
+09:43:30 INFO nested_lopo:     session sub-96|A         P(OFF)=0.535 true=0 (210 windows)
+09:43:30 INFO nested_lopo:     session sub-96|C         P(OFF)=0.680 true=1 (197 windows)
+09:43:30 INFO nested_lopo:   progress: 35/35 folds | ~10.1 min/fold | ETA 0.0 min
+09:43:38 INFO nested_lopo: ==========================================================================
+09:43:38 INFO nested_lopo: NESTED LOPO (lora) — pooled over 35 folds / 70 sessions
+09:43:38 INFO nested_lopo:   best config: {'r': 16, 'lr': 0.002, 'dropout': 0.0}
+09:43:38 INFO nested_lopo:   balanced_accuracy = 0.443  (bootstrap 95% CI [0.329, 0.557])
+09:43:38 INFO nested_lopo:   AUC=0.424  sens(OFF)=0.457  spec(ON)=0.429  macro_f1=0.443  acc=0.443
+09:43:38 INFO nested_lopo:   permutation p-value = 0.8706 (null mean 0.491)
+09:43:38 INFO nested_lopo:   vs FROZEN PROBE: bal-acc 0.443 (CI [0.357, 0.529]), AUC 0.482, perm p 0.95
+09:43:38 INFO nested_lopo: ==========================================================================
+09:43:38 INFO nested_lopo: Wrote markdown report -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\codebrain_finetune\logs\stage5_lora_nested_20260725.md
+09:43:38 INFO codebrain_ft.tracking: Saved run -> nested_lora_globalz_summary_20260726T084338Z.json (+ master CSV row)
+09:43:38 INFO nested_lopo: Done. Summary JSON + master CSV row written under C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\codebrain_finetune\results\nested_lora_globalz

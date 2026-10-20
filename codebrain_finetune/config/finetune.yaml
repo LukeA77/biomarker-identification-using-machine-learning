@@ -1,0 +1,147 @@
+# codebrain_finetune/config/finetune.yaml
+# ---------------------------------------------------------------------------
+# Configuration for the CodeBrain fine-tuning experiments (Stages 4-5+):
+#   - Stage 4: frozen linear-probe baseline
+#   - Stage 5: LoRA fine-tuning
+#   - full fine-tuning comparison arm
+#   - nested LOPO protocol, metrics, tracking, seeding
+#
+# This is the single source of truth for every fine-tuning tunable. No magic
+# numbers in code. Data/cohort/window parameters live in dataloader.yaml; paths
+# in paths.yaml. See FINE_TUNING_PLAN.md §4-8 and the Stage-2/3 audit for the
+# verified contract these values sit on top of.
+# ---------------------------------------------------------------------------
+
+# ---- Reproducibility -------------------------------------------------------
+seed:
+  base: 1                     # project convention (ICA determinism used seed=1)
+  # Derived seeds (never set directly): per-fold = base + fold_index;
+  #                                     per-permutation = base + 10000 + perm_index.
+  permutation_offset: 10000
+  # Full CUDA determinism is slower and some SGConv/FFT ops lack deterministic
+  # kernels on Blackwell. Seed-only for the HP search; deterministic for the
+  # final reported runs (FINE_TUNING_PLAN OQ-7).
+  deterministic: false
+
+# ---- Model / head ----------------------------------------------------------
+model:
+  # Backbone build args are FIXED by CodeBrain's model_for_tuab.py (TUAB=binary,
+  # our analog) and the verified checkpoint — do not change without re-running
+  # the Stage-2 forward-pass gate. Kept here so the run record is self-contained.
+  backbone:
+    in_channels: 200
+    res_channels: 200
+    skip_channels: 200
+    out_channels: 200
+    num_res_layers: 8
+    diffusion_step_embed_dim_in: 200
+    diffusion_step_embed_dim_mid: 200
+    diffusion_step_embed_dim_out: 200
+    s4_lmax: 570
+    s4_d_state: 64
+    s4_dropout: 0.1
+    s4_bidirectional: true
+    s4_layernorm: true
+    codebook_size_t: 4096
+    codebook_size_f: 4096
+    if_codebook: false        # downstream: tokenizer/codebooks NOT used
+  head:
+    # Two head designs (see stage45 log — the flatten head badly overfits at N=35):
+    #   flatten_mlp : CodeBrain's TUAB head. Flatten 18*10*200=36000 -> 2000 -> 200
+    #                 -> 1. The first layer alone is 72M params (~99.8% of trainable);
+    #                 memorises the training patients, no transfer. Kept for the
+    #                 full-FT "reproduce the paper" arm and comparison.
+    #   pool_mlp    : mean-pool channels x patches -> 200-d, then 200 -> pool_hidden
+    #                 -> 1 (~13k params). Small, regularised, appropriate for N=35.
+    type: pool_mlp           # {pool_mlp, flatten_mlp}
+    hidden1: 2000            # flatten_mlp only
+    hidden2: 200             # flatten_mlp only
+    pool_hidden: 64          # pool_mlp only
+    dropout: 0.3             # raised for small-N regularisation; searchable
+
+# ---- LoRA (Stage 5) --------------------------------------------------------
+lora:
+  # TARGET-MODULE DECISION (verified live 2026-07-22 against named_modules()):
+  #   The 8 SWA blocks are nn.MultiheadAttention at
+  #   residual_layer.residual_blocks.{0..7}.attention. q/k/v are FUSED in
+  #   in_proj_weight (a raw Parameter, not nn.Linear); out_proj is the only
+  #   standard nn.Linear.
+  #   * target = "attention"  -> peft 0.19's dedicated MultiheadAttention LoRA
+  #     layer adapts q/k/v AND out_proj (verified: builds, 1.0% trainable @ r=8,
+  #     forwards on GPU batch 2). DEFAULT — the standard full-attention surface.
+  #   * target = "out_proj"   -> LoRA on the 8 output projections only (0.34% @
+  #     r=8). Safe fallback; fewer params.
+  # SGConv kernels + tokenizer path (spectral_proj, lm_head_t/f) stay frozen
+  # (get_peft_model freezes everything that isn't a LoRA target).
+  target: "attention"         # {"attention", "out_proj"}
+  r: 8                        # searchable {4, 8, 16}. Model width D=200 here (NOT
+                              #   the codebook's 32) so r=8-16 is genuinely low-rank.
+  alpha_ratio: 2              # lora_alpha = alpha_ratio * r (moves with r)
+  dropout: 0.1                # searchable {0.0, 0.1, 0.25}
+  bias: "none"
+
+# ---- Training --------------------------------------------------------------
+train:
+  optimizer: adamw
+  weight_decay: 0.01
+  lr: 1.0e-3                  # LoRA adapters + head. searchable {5e-4, 1e-3, 2e-3}
+  lr_full_ft: 1.0e-4         # full-FT arm needs a much smaller LR (do NOT reuse LoRA's)
+  batch_size: 64             # windows; inherited default from dataloader.yaml loader
+  max_epochs: 20
+  warmup_frac: 0.1           # cosine schedule with warmup (fraction of total steps)
+  precision: bf16            # bf16 autocast (supported on the 5090)
+  grad_clip: 1.0
+  early_stopping:
+    monitor: inner_val_balanced_accuracy
+    mode: max
+    patience: 4              # 3-5 per plan
+    min_delta: 0.0
+
+# ---- Frozen linear probe (Stage 4) ----------------------------------------
+probe:
+  pooling: mean              # {"mean", "flatten"} over channels x patches.
+                            #   mean -> 200-d feature; flatten -> 36000-d.
+  classifier: logreg        # {"logreg", "linear_svm"}
+  C: 1.0                    # inverse regularisation strength
+  max_iter: 2000
+  standardize: true         # z-score features on train stats before fitting
+
+# ---- Nested LOPO protocol (FINE_TUNING_PLAN §4) ---------------------------
+nested_lopo:
+  # Outer: 35-fold LOPO (one per patient) — driven by the locked cohort.
+  # Inner: 5-fold GroupKFold (grouped on patient_id) within each 34-patient
+  #        training set, for HP selection.
+  inner_folds: 5
+  inner_search:
+    method: random          # small random search, not a full grid
+    n_configs: 10           # ~8-12 configs over {r, lr, dropout}
+    space:
+      r: [4, 8, 16]
+      lr: [5.0e-4, 1.0e-3, 2.0e-3]
+      dropout: [0.0, 0.1, 0.25]
+
+# ---- Per-session volume balancing (FINE_TUNING_PLAN §3) -------------------
+sampler:
+  # One session can carry ~11x another's windows; without control, high-volume
+  # patients dominate the gradient. Weighted sampling equalises per-session
+  # contribution. Off for the first prototype fold; a searchable lever when scaling.
+  session_balanced: false
+
+# ---- Evaluation / metrics (FINE_TUNING_PLAN §7) ---------------------------
+eval:
+  # Patient-level aggregation: mean predicted probability over the held-out
+  # patient's non-overlap windows, then threshold at 0.5.
+  patient_agg: mean_prob
+  threshold: 0.5
+  primary_metric: balanced_accuracy
+  bootstrap:
+    n_resamples: 2000       # bootstrap CI over the 35 patients
+    ci: 0.95
+  permutation:
+    n_permutations: 200     # global patient-level label-permutation test
+    # per-perm seed = seed.base + seed.permutation_offset + perm_index
+
+# ---- Output / tracking (FINE_TUNING_PLAN §8) ------------------------------
+tracking:
+  results_dir: results      # under codebrain_finetune/ ; per-run JSON + master CSV
+  master_csv: results/runs_master.csv

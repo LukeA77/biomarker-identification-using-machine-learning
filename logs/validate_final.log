@@ -1,0 +1,13 @@
+[cli] config_hash=1369195d89561183 git_sha=c7f85f4960549b93bb2475746791c91909064a0a
+
+[validate] === STAGE 12 checks ===
+[validate] PASS  shape uniformity (18, len_s, 200)                sampled 200 windows, expected (18, 2000)
+[validate] PASS  scale is uV (not Volts / not /100)               median max|X|=1012.53 uV (rejection disabled; scale-sanity only)
+[validate] PASS  window width == samples_per_window               all widths == 2000
+[validate] PASS  train-stride grid within task                    (start-min) % 1000 == 0
+[validate] PASS  non-overlap subset flag consistent               disjoint residues mod spw
+[validate] PASS  both y_cond classes present overall              present=[np.int64(0), np.int64(1)] expected=[0, 1]
+[validate] PASS  continuous_label_valid windows kept (masked not dropped) 101 masked windows retained in manifest
+[validate] PASS  determinism (manifest hash)                      hash=865ffa034fe02079 (matches previous 865ffa034fe02079)
+[validate] ALL 8 CHECKS PASSED (7414 windows).
+

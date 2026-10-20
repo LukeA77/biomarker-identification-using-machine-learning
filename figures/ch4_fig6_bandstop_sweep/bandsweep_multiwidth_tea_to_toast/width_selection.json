@@ -1,0 +1,130 @@
+{
+  "direction": "tea_to_toast",
+  "rows": [
+    {
+      "width": 5.0,
+      "lo": 23.0,
+      "hi": 28.0,
+      "dba": 0.005645818115646706,
+      "interior": true,
+      "clear": false
+    },
+    {
+      "width": 6.0,
+      "lo": 26.0,
+      "hi": 32.0,
+      "dba": 0.008531821623840474,
+      "interior": true,
+      "clear": false
+    },
+    {
+      "width": 7.0,
+      "lo": 21.0,
+      "hi": 28.0,
+      "dba": 0.011525945612931432,
+      "interior": true,
+      "clear": false
+    },
+    {
+      "width": 8.0,
+      "lo": 1.0,
+      "hi": 9.0,
+      "dba": 0.020144341955359746,
+      "interior": false,
+      "clear": false
+    },
+    {
+      "width": 9.0,
+      "lo": 1.0,
+      "hi": 10.0,
+      "dba": 0.02244089506528928,
+      "interior": false,
+      "clear": false
+    },
+    {
+      "width": 10.0,
+      "lo": 1.0,
+      "hi": 11.0,
+      "dba": 0.026006206447599343,
+      "interior": false,
+      "clear": false
+    },
+    {
+      "width": 11.0,
+      "lo": 1.0,
+      "hi": 12.0,
+      "dba": 0.02963081888645336,
+      "interior": false,
+      "clear": false
+    },
+    {
+      "width": 12.0,
+      "lo": 21.0,
+      "hi": 33.0,
+      "dba": 0.03377606515880871,
+      "interior": true,
+      "clear": true
+    },
+    {
+      "width": 13.0,
+      "lo": 20.0,
+      "hi": 33.0,
+      "dba": 0.03967110342352385,
+      "interior": true,
+      "clear": true
+    },
+    {
+      "width": 14.0,
+      "lo": 19.0,
+      "hi": 33.0,
+      "dba": 0.044865735276972886,
+      "interior": true,
+      "clear": true
+    },
+    {
+      "width": 15.0,
+      "lo": 18.0,
+      "hi": 33.0,
+      "dba": 0.04997148160353495,
+      "interior": true,
+      "clear": true
+    },
+    {
+      "width": 16.0,
+      "lo": 20.0,
+      "hi": 36.0,
+      "dba": 0.05422132026098072,
+      "interior": true,
+      "clear": true
+    },
+    {
+      "width": 17.0,
+      "lo": 21.0,
+      "hi": 38.0,
+      "dba": 0.05882138870906099,
+      "interior": true,
+      "clear": true
+    },
+    {
+      "width": 18.0,
+      "lo": 21.0,
+      "hi": 39.0,
+      "dba": 0.06310316480771754,
+      "interior": true,
+      "clear": true
+    }
+  ],
+  "noise_floor": 0.02283607542144306,
+  "base_ba_mean": 0.7097993831599935,
+  "chosen": {
+    "width": 12.0,
+    "lo": 21.0,
+    "hi": 33.0,
+    "dba": 0.03377606515880871,
+    "interior": true,
+    "clear": true
+  },
+  "fallback": false,
+  "n_patients": 27,
+  "n_windows": 3058
+}

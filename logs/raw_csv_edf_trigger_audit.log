@@ -1,0 +1,890 @@
+[2026-07-14T10:50:24] [INFO] ====================================================================================================
+[2026-07-14T10:50:24] [INFO] Audit run started. DATA_ROOT=C:\Data\LivingLab_PD
+[2026-07-14T10:50:24] [INFO] Discovered 11 session folders to process.
+[2026-07-14T10:50:24] [INFO] --- [1/11] Processing sub-100-a ---
+[2026-07-14T10:50:24] [INFO] sub-100-a: confirmed empty living-lab task folder (matches known list)
+[2026-07-14T10:50:24] [INFO] --- [2/11] Processing sub-121-a ---
+[2026-07-14T10:50:24] [INFO] sub-121-a: scanned sub-121-a_0001_raw.csv (30.4 MB, 172381 rows, 0.33s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:50:25] [INFO] sub-121-a: read EDF header sub-121-a_0001_raw.edf (9.7 MB, 171600 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T10:50:25] [INFO] sub-121-a: scanned sub-121-a_raw.csv (78.8 MB, 452343 rows, 0.87s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:50:25] [INFO] sub-121-a: read EDF header sub-121-a_raw.edf (25.6 MB, 451800 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T10:50:26] [INFO] --- [3/11] Processing sub-130-c ---
+[2026-07-14T10:50:26] [INFO] sub-130-c: confirmed empty living-lab task folder (matches known list)
+[2026-07-14T10:50:26] [INFO] --- [4/11] Processing sub-131-a ---
+[2026-07-14T10:50:27] [INFO] sub-131-a: scanned sub-131-a_raw.csv (170.6 MB, 903686 rows, 1.72s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:50:27] [INFO] sub-131-a: read EDF header sub-131-a_raw.edf (51.1 MB, 903000 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T10:50:27] [INFO] --- [5/11] Processing sub-131-c ---
+[2026-07-14T10:50:29] [INFO] sub-131-c: scanned sub-131-c_raw.csv (114.6 MB, 645707 rows, 1.19s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:50:29] [INFO] sub-131-c: read EDF header sub-131-c_raw.edf (36.5 MB, 645000 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T10:50:29] [INFO] --- [6/11] Processing sub-134-c ---
+[2026-07-14T10:50:31] [INFO] sub-134-c: scanned sub-134-c_0001_raw.csv (174.0 MB, 963620 rows, 1.84s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:50:31] [INFO] sub-134-c: read EDF header sub-134-c_0001_raw.edf (54.5 MB, 963000 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T10:50:31] [INFO] --- [7/11] Processing sub-42-a ---
+[2026-07-14T10:50:33] [INFO] sub-42-a: scanned sub-42-a_raw.csv (175.2 MB, 1015522 rows, 1.85s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:50:33] [INFO] sub-42-a: read EDF header sub-42-a-living lab_raw.edf (52.8 MB, 1014600 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=None)
+[2026-07-14T10:50:33] [INFO] --- [8/11] Processing sub-48-a ---
+[2026-07-14T10:50:34] [INFO] sub-48-a: scanned sub-48-a_raw.csv (85.7 MB, 466158 rows, 0.86s) -- trigger_nonzero=0 event_nonzero=0 malformed=1
+[2026-07-14T10:50:34] [ERROR] sub-48-a: FAILED reading EDF C:\Data\LivingLab_PD\sub-48-a\eeg\living-lab-tasks\sub-48a_living_lab_raw.edf: C:\Data\LivingLab_PD\sub-48-a\eeg\living-lab-tasks\sub-48a_living_lab_raw.edf: the file is not EDF(+) or BDF(+) compliant (Filesize)
+[2026-07-14T10:50:34] [ERROR] Traceback (most recent call last):
+  File "C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\raw_csv_edf_trigger_audit.py", line 574, in process_session
+    edf_info = inspect_edf(edf_p)
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\raw_csv_edf_trigger_audit.py", line 338, in inspect_edf
+    f = pyedflib.EdfReader(str(path))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pyedflib/_extensions/_pyedflib.pyx", line 147, in pyedflib._extensions._pyedflib.CyEdfReader.__init__
+  File "pyedflib/_extensions/_pyedflib.pyx", line 210, in pyedflib._extensions._pyedflib.CyEdfReader.open
+  File "pyedflib/_extensions/_pyedflib.pyx", line 182, in pyedflib._extensions._pyedflib.CyEdfReader.check_open_ok
+OSError: C:\Data\LivingLab_PD\sub-48-a\eeg\living-lab-tasks\sub-48a_living_lab_raw.edf: the file is not EDF(+) or BDF(+) compliant (Filesize)
+
+[2026-07-14T10:50:34] [INFO] --- [9/11] Processing sub-70-c ---
+[2026-07-14T10:50:36] [INFO] sub-70-c: scanned sub-70-a-living-lab_raw.csv (224.0 MB, 1180891 rows, 2.2s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:50:36] [INFO] sub-70-c: read EDF header sub-70-b-living lab_raw.edf (32.1 MB, 616800 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=None)
+[2026-07-14T10:50:37] [INFO] sub-70-c: scanned sub-70-c_raw.csv (117.0 MB, 617449 rows, 1.2s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:50:37] [INFO] --- [10/11] Processing sub-78-c ---
+[2026-07-14T10:50:38] [INFO] sub-78-c: scanned sub-78-b2_0001_raw.csv (27.1 MB, 154922 rows, 0.3s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:50:38] [INFO] sub-78-c: scanned sub-78-b2_raw.csv (0.5 MB, 2860 rows, 0.01s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:50:39] [INFO] sub-78-c: scanned sub-78-b_raw.csv (112.3 MB, 628561 rows, 1.15s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:50:39] [INFO] --- [11/11] Processing sub-82-a ---
+[2026-07-14T10:50:39] [INFO] sub-82-a: confirmed empty living-lab task folder (matches known list)
+[2026-07-14T10:50:39] [INFO] Done processing 11 sessions in 14.8s.
+[2026-07-14T10:50:39] [INFO] Wrote full results to C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\raw_csv_edf_trigger_audit_results.json
+[2026-07-14T10:50:39] [INFO] Wrote flat summary to C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\raw_csv_edf_trigger_audit_sessions.csv
+[2026-07-14T10:53:26] [INFO] ====================================================================================================
+[2026-07-14T10:53:26] [INFO] Audit run started. DATA_ROOT=C:\Data\LivingLab_PD
+[2026-07-14T10:53:26] [INFO] Discovered 5 session folders to process.
+[2026-07-14T10:53:26] [INFO] --- [1/5] Processing sub-131-a ---
+[2026-07-14T10:53:28] [INFO] sub-131-a: scanned sub-131-a_raw.csv (170.6 MB, 903686 rows, 1.7s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:53:28] [INFO] sub-131-a: read EDF header sub-131-a_raw.edf (51.1 MB, 903000 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T10:53:28] [INFO] --- [2/5] Processing sub-131-c ---
+[2026-07-14T10:53:29] [INFO] sub-131-c: scanned sub-131-c_raw.csv (114.6 MB, 645707 rows, 1.2s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:53:30] [INFO] sub-131-c: read EDF header sub-131-c_raw.edf (36.5 MB, 645000 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T10:53:30] [INFO] --- [3/5] Processing sub-134-c ---
+[2026-07-14T10:53:31] [INFO] sub-134-c: scanned sub-134-c_0001_raw.csv (174.0 MB, 963620 rows, 1.81s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:53:31] [INFO] sub-134-c: read EDF header sub-134-c_0001_raw.edf (54.5 MB, 963000 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T10:53:32] [INFO] --- [4/5] Processing sub-42-a ---
+[2026-07-14T10:53:33] [INFO] sub-42-a: scanned sub-42-a_raw.csv (175.2 MB, 1015522 rows, 1.86s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:53:33] [INFO] sub-42-a: read EDF header sub-42-a-living lab_raw.edf (52.8 MB, 1014600 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=None)
+[2026-07-14T10:53:33] [INFO] --- [5/5] Processing sub-70-c ---
+[2026-07-14T10:53:36] [INFO] sub-70-c: scanned sub-70-a-living-lab_raw.csv (224.0 MB, 1180891 rows, 2.22s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:53:36] [INFO] sub-70-c: read EDF header sub-70-b-living lab_raw.edf (32.1 MB, 616800 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=None)
+[2026-07-14T10:53:37] [INFO] sub-70-c: scanned sub-70-c_raw.csv (117.0 MB, 617449 rows, 1.16s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:53:37] [INFO] Done processing 5 sessions in 10.5s.
+[2026-07-14T10:53:37] [INFO] Wrote full results to C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\raw_csv_edf_trigger_audit_results.json
+[2026-07-14T10:53:37] [INFO] Wrote flat summary to C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\raw_csv_edf_trigger_audit_sessions.csv
+[2026-07-14T10:56:25] [INFO] ====================================================================================================
+[2026-07-14T10:56:25] [INFO] Audit run started. DATA_ROOT=C:\Data\LivingLab_PD
+[2026-07-14T10:56:25] [INFO] Discovered 4 session folders to process.
+[2026-07-14T10:56:25] [INFO] --- [1/4] Processing sub-131-a ---
+[2026-07-14T10:56:26] [INFO] sub-131-a: scanned sub-131-a_raw.csv (170.6 MB, 903686 rows, 1.66s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:56:27] [INFO] sub-131-a: read EDF header sub-131-a_raw.edf (51.1 MB, 903000 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T10:56:27] [INFO] --- [2/4] Processing sub-131-c ---
+[2026-07-14T10:56:28] [INFO] sub-131-c: scanned sub-131-c_raw.csv (114.6 MB, 645707 rows, 1.19s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:56:28] [INFO] sub-131-c: read EDF header sub-131-c_raw.edf (36.5 MB, 645000 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T10:56:28] [INFO] --- [3/4] Processing sub-134-a ---
+[2026-07-14T10:56:30] [INFO] sub-134-a: scanned sub-134-a_raw.csv (174.2 MB, 948733 rows, 1.81s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:56:30] [INFO] sub-134-a: read EDF header sub-134-a_raw.edf (53.7 MB, 948000 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T10:56:30] [INFO] --- [4/4] Processing sub-134-c ---
+[2026-07-14T10:56:32] [INFO] sub-134-c: scanned sub-134-c_0001_raw.csv (174.0 MB, 963620 rows, 1.73s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:56:32] [INFO] sub-134-c: read EDF header sub-134-c_0001_raw.edf (54.5 MB, 963000 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T10:56:32] [INFO] Done processing 4 sessions in 7.0s.
+[2026-07-14T10:56:32] [INFO] Wrote full results to C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\raw_csv_edf_trigger_audit_results.json
+[2026-07-14T10:56:32] [INFO] Wrote flat summary to C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\raw_csv_edf_trigger_audit_sessions.csv
+[2026-07-14T10:56:49] [INFO] ====================================================================================================
+[2026-07-14T10:56:49] [INFO] Audit run started. DATA_ROOT=C:\Data\LivingLab_PD
+[2026-07-14T10:56:49] [INFO] Discovered 92 session folders to process.
+[2026-07-14T10:56:49] [INFO] --- [1/92] Processing sub-100-a ---
+[2026-07-14T10:56:49] [INFO] sub-100-a: confirmed empty living-lab task folder (matches known list)
+[2026-07-14T10:56:49] [INFO] --- [2/92] Processing sub-100-c ---
+[2026-07-14T10:56:51] [INFO] sub-100-c: scanned sub-100-c_raw.csv (173.5 MB, 1035023 rows, 1.99s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:56:51] [INFO] --- [3/92] Processing sub-103-a ---
+[2026-07-14T10:56:53] [INFO] sub-103-a: scanned sub-103-a_raw.csv (211.0 MB, 1230636 rows, 2.23s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:56:53] [INFO] --- [4/92] Processing sub-103-c ---
+[2026-07-14T10:56:55] [INFO] sub-103-c: scanned sub-103-c_raw.csv (158.3 MB, 917410 rows, 1.64s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:56:55] [INFO] --- [5/92] Processing sub-105-a ---
+[2026-07-14T10:56:56] [INFO] sub-105-a: scanned sub-105-a_raw.csv (116.3 MB, 664306 rows, 1.21s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:56:56] [INFO] --- [6/92] Processing sub-105-c ---
+[2026-07-14T10:56:57] [INFO] sub-105-c: scanned sub-105-c_raw.csv (104.4 MB, 615201 rows, 1.11s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:56:58] [INFO] --- [7/92] Processing sub-106-a ---
+[2026-07-14T10:56:59] [INFO] sub-106-a: scanned sub-106-a_raw.csv (167.5 MB, 958353 rows, 1.72s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:56:59] [INFO] --- [8/92] Processing sub-106-c ---
+[2026-07-14T10:57:00] [INFO] sub-106-c: scanned sub-106-c_0001_raw.csv (104.1 MB, 576922 rows, 1.11s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:57:00] [INFO] --- [9/92] Processing sub-107-a ---
+[2026-07-14T10:57:02] [INFO] sub-107-a: scanned sub-107-a_raw.csv (152.1 MB, 876213 rows, 1.57s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:57:02] [INFO] --- [10/92] Processing sub-107-c ---
+[2026-07-14T10:57:03] [INFO] sub-107-c: scanned sub-107-c_raw.csv (83.9 MB, 491313 rows, 0.88s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:57:03] [INFO] --- [11/92] Processing sub-108-a ---
+[2026-07-14T10:57:06] [INFO] sub-108-a: scanned sub-108-a_raw.csv (244.6 MB, 1409050 rows, 2.58s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:57:06] [INFO] --- [12/92] Processing sub-108-c ---
+[2026-07-14T10:57:07] [INFO] sub-108-c: scanned sub-108-c_raw.csv (165.8 MB, 972070 rows, 1.75s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:57:07] [INFO] --- [13/92] Processing sub-111-a ---
+[2026-07-14T10:57:09] [INFO] sub-111-a: scanned sub-111_raw.csv (67.4 MB, 871177 rows, 1.1s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:57:09] [INFO] sub-111-a: read EDF header sub-111_raw.edf (19.7 MB, 870600 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T10:57:09] [WARN] sub-111-a: NO raw CSV filename contains the session id 'sub-111-a'; falling back to largest file (sub-111_raw.csv) as primary -- treat alignment result for this session with extra caution
+[2026-07-14T10:57:09] [INFO] --- [14/92] Processing sub-111-c ---
+[2026-07-14T10:57:09] [INFO] sub-111-c: scanned sub-111-c_raw.csv (26.9 MB, 346164 rows, 0.44s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:57:09] [INFO] sub-111-c: read EDF header sub-111-c_raw.edf (7.8 MB, 345600 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T10:57:09] [INFO] --- [15/92] Processing sub-114-a ---
+[2026-07-14T10:57:11] [INFO] sub-114-a: scanned sub-114-a_raw.csv (166.8 MB, 989241 rows, 1.79s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:57:11] [INFO] sub-114-a: read EDF header sub-114-a_raw.edf (55.9 MB, 988200 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T10:57:11] [INFO] --- [16/92] Processing sub-114-c ---
+[2026-07-14T10:57:14] [INFO] sub-114-c: scanned sub-114-c_raw.csv (307.1 MB, 1713726 rows, 3.16s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:57:15] [INFO] sub-114-c: read EDF header sub-114-c_raw.edf (97.0 MB, 1713000 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T10:57:15] [INFO] --- [17/92] Processing sub-115-a ---
+[2026-07-14T10:57:16] [INFO] sub-115-a: scanned sub-115-a_raw.csv (166.4 MB, 911399 rows, 1.7s) -- trigger_nonzero=0 event_nonzero=0 malformed=1
+[2026-07-14T10:57:17] [INFO] sub-115-a: read EDF header sub-115-a_raw.edf (53.2 MB, 940200 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T10:57:17] [INFO] --- [18/92] Processing sub-115-c ---
+[2026-07-14T10:57:18] [INFO] sub-115-c: scanned sub-115-c_raw.csv (120.3 MB, 660578 rows, 1.21s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:57:18] [INFO] sub-115-c: read EDF header sub-115-c_raw.edf (37.4 MB, 660000 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T10:57:18] [INFO] --- [19/92] Processing sub-116-a ---
+[2026-07-14T10:57:20] [INFO] sub-116-a: scanned sub-116-a_raw.csv (200.2 MB, 1077474 rows, 2.0s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:57:20] [INFO] sub-116-a: read EDF header sub-116-a_raw.edf (60.9 MB, 1076400 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T10:57:20] [INFO] --- [20/92] Processing sub-116-c ---
+[2026-07-14T10:57:22] [INFO] sub-116-c: scanned sub-116-c_raw.csv (149.0 MB, 772336 rows, 1.45s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:57:22] [INFO] sub-116-c: read EDF header sub-116-c_raw.edf (43.7 MB, 771600 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T10:57:22] [INFO] --- [21/92] Processing sub-117-a ---
+[2026-07-14T10:57:23] [INFO] sub-117-a: scanned sub-117-a_raw.csv (131.3 MB, 722246 rows, 1.37s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:57:23] [INFO] sub-117-a: read EDF header sub-117-a_raw.edf (40.8 MB, 721200 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T10:57:23] [INFO] --- [22/92] Processing sub-117-c ---
+[2026-07-14T10:57:24] [INFO] sub-117-c: scanned sub-117-c_raw.csv (28.2 MB, 169305 rows, 0.3s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:57:24] [INFO] sub-117-c: read EDF header sub-117-c_raw.edf (9.6 MB, 168600 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T10:57:24] [INFO] --- [23/92] Processing sub-119-a ---
+[2026-07-14T10:57:25] [INFO] sub-119-a: scanned sub-119-a_raw.csv (124.4 MB, 705183 rows, 1.29s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:57:25] [INFO] sub-119-a: read EDF header sub-119-a_raw.edf (39.9 MB, 704400 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T10:57:25] [INFO] --- [24/92] Processing sub-119-c ---
+[2026-07-14T10:57:27] [INFO] sub-119-c: scanned sub-119-c_raw.csv (157.8 MB, 913780 rows, 1.67s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:57:27] [INFO] sub-119-c: read EDF header sub-119-c_raw.edf (51.7 MB, 913200 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T10:57:27] [INFO] --- [25/92] Processing sub-121-a ---
+[2026-07-14T10:57:27] [INFO] sub-121-a: scanned sub-121-a_0001_raw.csv (30.4 MB, 172381 rows, 0.31s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:57:27] [INFO] sub-121-a: read EDF header sub-121-a_0001_raw.edf (9.7 MB, 171600 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T10:57:28] [INFO] sub-121-a: scanned sub-121-a_raw.csv (78.8 MB, 452343 rows, 0.82s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:57:28] [INFO] sub-121-a: read EDF header sub-121-a_raw.edf (25.6 MB, 451800 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T10:57:28] [WARN] sub-121-a: multiple raw CSVs match session name; picked largest (sub-121-a_raw.csv) among ['sub-121-a_0001_raw.csv', 'sub-121-a_raw.csv']
+[2026-07-14T10:57:28] [INFO] --- [26/92] Processing sub-121-c ---
+[2026-07-14T10:57:30] [INFO] sub-121-c: scanned sub-121-c_raw.csv (190.2 MB, 1097075 rows, 2.01s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:57:31] [INFO] sub-121-c: read EDF header sub-121-c_raw.edf (62.1 MB, 1096200 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T10:57:31] [INFO] --- [27/92] Processing sub-123-a ---
+[2026-07-14T10:57:32] [INFO] sub-123-a: scanned sub-123-a_raw.csv (139.9 MB, 774546 rows, 1.46s) -- trigger_nonzero=1 event_nonzero=0 malformed=0
+[2026-07-14T10:57:32] [INFO] sub-123-a: read EDF header sub-123-a_raw.edf (43.8 MB, 774000 samples @ 300.0 Hz, trigger_unique=[0.0, 255.0], event_unique=[0.0])
+[2026-07-14T10:57:32] [INFO] --- [28/92] Processing sub-123-c ---
+[2026-07-14T10:57:33] [INFO] sub-123-c: scanned sub-123-c_raw.csv (106.2 MB, 599057 rows, 1.1s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:57:33] [INFO] sub-123-c: read EDF header sub-123-c_raw.edf (33.9 MB, 598200 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T10:57:34] [INFO] --- [29/92] Processing sub-125-a ---
+[2026-07-14T10:57:35] [INFO] sub-125-a: scanned sub-125-a_raw.csv (175.6 MB, 968442 rows, 1.79s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:57:36] [INFO] sub-125-a: read EDF header sub-125-a_raw.edf (54.8 MB, 967800 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T10:57:36] [INFO] --- [30/92] Processing sub-125-c ---
+[2026-07-14T10:57:37] [INFO] sub-125-c: scanned sub-125-c_raw.csv (134.0 MB, 714714 rows, 1.31s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:57:37] [INFO] sub-125-c: read EDF header sub-125-c_raw.edf (40.4 MB, 714000 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T10:57:37] [INFO] --- [31/92] Processing sub-129-a ---
+[2026-07-14T10:57:38] [INFO] sub-129-a: scanned sub-129-a_raw.csv (120.5 MB, 717473 rows, 1.3s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:57:38] [INFO] sub-129-a: read EDF header sub-129-a_raw.edf (40.6 MB, 716400 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T10:57:39] [INFO] --- [32/92] Processing sub-129-c ---
+[2026-07-14T10:57:40] [INFO] sub-129-c: scanned sub-129-c_raw.csv (153.3 MB, 864469 rows, 1.58s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:57:40] [INFO] sub-129-c: read EDF header sub-129-c_raw.edf (48.9 MB, 863400 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T10:57:40] [INFO] --- [33/92] Processing sub-130-a ---
+[2026-07-14T10:57:42] [INFO] sub-130-a: scanned sub-130-a_raw.csv (207.1 MB, 1187230 rows, 2.17s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:57:43] [INFO] sub-130-a: read EDF header sub-130-a_raw.edf (67.1 MB, 1186200 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T10:57:43] [INFO] --- [34/92] Processing sub-130-c ---
+[2026-07-14T10:57:43] [INFO] sub-130-c: confirmed empty living-lab task folder (matches known list)
+[2026-07-14T10:57:43] [INFO] --- [35/92] Processing sub-131-a ---
+[2026-07-14T10:57:44] [INFO] sub-131-a: scanned sub-131-a_raw.csv (170.6 MB, 903686 rows, 1.6s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:57:44] [INFO] sub-131-a: read EDF header sub-131-a_raw.edf (51.1 MB, 903000 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T10:57:44] [INFO] --- [36/92] Processing sub-131-c ---
+[2026-07-14T10:57:46] [INFO] sub-131-c: scanned sub-131-c_raw.csv (114.6 MB, 645707 rows, 1.16s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:57:46] [INFO] sub-131-c: read EDF header sub-131-c_raw.edf (36.5 MB, 645000 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T10:57:46] [INFO] --- [37/92] Processing sub-134-a ---
+[2026-07-14T10:57:47] [INFO] sub-134-a: scanned sub-134-a_raw.csv (174.2 MB, 948733 rows, 1.68s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:57:48] [INFO] sub-134-a: read EDF header sub-134-a_raw.edf (53.7 MB, 948000 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T10:57:48] [INFO] --- [38/92] Processing sub-134-c ---
+[2026-07-14T10:57:49] [INFO] sub-134-c: scanned sub-134-c_0001_raw.csv (174.0 MB, 963620 rows, 1.73s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:57:49] [INFO] sub-134-c: read EDF header sub-134-c_0001_raw.edf (54.5 MB, 963000 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T10:57:49] [INFO] --- [39/92] Processing sub-135-a ---
+[2026-07-14T10:57:51] [INFO] sub-135-a: scanned sub-135-a_raw.csv (149.8 MB, 811363 rows, 1.6s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:57:51] [INFO] sub-135-a: read EDF header sub-135-a_raw.edf (45.9 MB, 810600 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T10:57:51] [INFO] --- [40/92] Processing sub-135-c ---
+[2026-07-14T10:57:53] [INFO] sub-135-c: scanned sub-135-c_raw.csv (201.0 MB, 1031813 rows, 2.0s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:57:53] [INFO] sub-135-c: read EDF header sub-135-c_raw.edf (58.4 MB, 1030800 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T10:57:53] [INFO] --- [41/92] Processing sub-34-a ---
+[2026-07-14T10:57:55] [INFO] sub-34-a: scanned sub-34_living-lab_raw.csv (179.1 MB, 1027823 rows, 2.04s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:57:56] [INFO] sub-34-a: read EDF header sub-34_living-lab_raw.edf (53.4 MB, 1027200 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=None)
+[2026-07-14T10:57:56] [WARN] sub-34-a: NO raw CSV filename contains the session id 'sub-34-a'; falling back to largest file (sub-34_living-lab_raw.csv) as primary -- treat alignment result for this session with extra caution
+[2026-07-14T10:57:56] [INFO] --- [42/92] Processing sub-34-c ---
+[2026-07-14T10:57:56] [INFO] sub-34-c: scanned sub_34_c_raw.csv (24.9 MB, 148904 rows, 0.27s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:57:56] [INFO] sub-34-c: read EDF header sub_34_c_raw.edf (7.7 MB, 148200 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=None)
+[2026-07-14T10:57:56] [WARN] Rejected non-task-shaped CSV in annotation/ (first line: 'Tasks,Start'): C:\Data\LivingLab_PD\sub-34-c\annotation\sub_34_c_13_01_2023_to_2.csv
+[2026-07-14T10:57:56] [INFO] --- [43/92] Processing sub-42-a ---
+[2026-07-14T10:57:58] [INFO] sub-42-a: scanned sub-42-a_raw.csv (175.2 MB, 1015522 rows, 1.83s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:57:58] [INFO] sub-42-a: read EDF header sub-42-a-living lab_raw.edf (52.8 MB, 1014600 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=None)
+[2026-07-14T10:57:58] [INFO] --- [44/92] Processing sub-42-c ---
+[2026-07-14T10:57:59] [INFO] sub-42-c: scanned sub-42-c_UPDRS_raw.csv (87.3 MB, 473950 rows, 0.88s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:57:59] [INFO] sub-42-c: read EDF header sub-42-c_UPDRS_raw.edf (24.6 MB, 472800 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=None)
+[2026-07-14T10:58:00] [INFO] sub-42-c: scanned sub-42-c_raw.csv (56.7 MB, 328497 rows, 0.63s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:58:00] [INFO] sub-42-c: read EDF header sub-42-c_living_lab_raw.edf (17.0 MB, 327600 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=None)
+[2026-07-14T10:58:00] [WARN] sub-42-c: multiple raw CSVs match session name; picked largest (sub-42-c_UPDRS_raw.csv) among ['sub-42-c_UPDRS_raw.csv', 'sub-42-c_raw.csv']
+[2026-07-14T10:58:00] [INFO] --- [45/92] Processing sub-48-a ---
+[2026-07-14T10:58:00] [INFO] sub-48-a: scanned sub-48-a_raw.csv (85.7 MB, 466158 rows, 0.82s) -- trigger_nonzero=0 event_nonzero=0 malformed=1
+[2026-07-14T10:58:00] [ERROR] sub-48-a: FAILED reading EDF C:\Data\LivingLab_PD\sub-48-a\eeg\living-lab-tasks\sub-48a_living_lab_raw.edf: C:\Data\LivingLab_PD\sub-48-a\eeg\living-lab-tasks\sub-48a_living_lab_raw.edf: the file is not EDF(+) or BDF(+) compliant (Filesize)
+[2026-07-14T10:58:00] [ERROR] Traceback (most recent call last):
+  File "C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\raw_csv_edf_trigger_audit.py", line 574, in process_session
+    edf_info = inspect_edf(edf_p)
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\raw_csv_edf_trigger_audit.py", line 338, in inspect_edf
+    f = pyedflib.EdfReader(str(path))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pyedflib/_extensions/_pyedflib.pyx", line 147, in pyedflib._extensions._pyedflib.CyEdfReader.__init__
+  File "pyedflib/_extensions/_pyedflib.pyx", line 210, in pyedflib._extensions._pyedflib.CyEdfReader.open
+  File "pyedflib/_extensions/_pyedflib.pyx", line 182, in pyedflib._extensions._pyedflib.CyEdfReader.check_open_ok
+OSError: C:\Data\LivingLab_PD\sub-48-a\eeg\living-lab-tasks\sub-48a_living_lab_raw.edf: the file is not EDF(+) or BDF(+) compliant (Filesize)
+
+[2026-07-14T10:58:00] [INFO] --- [46/92] Processing sub-48-c ---
+[2026-07-14T10:58:01] [INFO] sub-48-c: scanned sub-48-c_raw.csv (61.2 MB, 315259 rows, 0.6s) -- trigger_nonzero=0 event_nonzero=0 malformed=1
+[2026-07-14T10:58:01] [ERROR] sub-48-c: FAILED reading EDF C:\Data\LivingLab_PD\sub-48-c\eeg\living-lab-tasks\sub-48-c_living_lab_raw.edf: C:\Data\LivingLab_PD\sub-48-c\eeg\living-lab-tasks\sub-48-c_living_lab_raw.edf: the file is not EDF(+) or BDF(+) compliant (Filesize)
+[2026-07-14T10:58:01] [ERROR] Traceback (most recent call last):
+  File "C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\raw_csv_edf_trigger_audit.py", line 574, in process_session
+    edf_info = inspect_edf(edf_p)
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\raw_csv_edf_trigger_audit.py", line 338, in inspect_edf
+    f = pyedflib.EdfReader(str(path))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pyedflib/_extensions/_pyedflib.pyx", line 147, in pyedflib._extensions._pyedflib.CyEdfReader.__init__
+  File "pyedflib/_extensions/_pyedflib.pyx", line 210, in pyedflib._extensions._pyedflib.CyEdfReader.open
+  File "pyedflib/_extensions/_pyedflib.pyx", line 182, in pyedflib._extensions._pyedflib.CyEdfReader.check_open_ok
+OSError: C:\Data\LivingLab_PD\sub-48-c\eeg\living-lab-tasks\sub-48-c_living_lab_raw.edf: the file is not EDF(+) or BDF(+) compliant (Filesize)
+
+[2026-07-14T10:58:01] [INFO] --- [47/92] Processing sub-51-a ---
+[2026-07-14T10:58:03] [INFO] sub-51-a: scanned sub-51-a_raw.csv (222.7 MB, 1246879 rows, 2.29s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:58:04] [INFO] sub-51-a: read EDF header sub_51a_raw.edf (64.8 MB, 1246200 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=None)
+[2026-07-14T10:58:04] [INFO] --- [48/92] Processing sub-51-c ---
+[2026-07-14T10:58:05] [INFO] sub-51-c: scanned sub-51-c_raw.csv (91.1 MB, 493005 rows, 0.91s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:58:05] [INFO] sub-51-c: read EDF header sub-51c_raw.edf (25.6 MB, 492000 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=None)
+[2026-07-14T10:58:05] [INFO] --- [49/92] Processing sub-53-a ---
+[2026-07-14T10:58:06] [INFO] sub-53-a: scanned sub-53-a_raw.csv (145.7 MB, 819837 rows, 1.51s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:58:06] [INFO] sub-53-a: read EDF header sub-53-a_raw.edf (42.6 MB, 819000 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=None)
+[2026-07-14T10:58:06] [INFO] --- [50/92] Processing sub-53-c ---
+[2026-07-14T10:58:07] [INFO] sub-53-c: scanned sub-53-c_raw.csv (80.6 MB, 399306 rows, 0.77s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:58:07] [INFO] sub-53-c: read EDF header sub-53-c_raw.edf (20.7 MB, 398400 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=None)
+[2026-07-14T10:58:07] [INFO] --- [51/92] Processing sub-62-a ---
+[2026-07-14T10:58:08] [INFO] sub-62-a: scanned sub-62-a_raw.csv (111.9 MB, 599337 rows, 1.09s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:58:08] [INFO] --- [52/92] Processing sub-62-c ---
+[2026-07-14T10:58:10] [INFO] sub-62-c: scanned sub-62-c_raw.csv (126.0 MB, 658758 rows, 1.23s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:58:10] [INFO] --- [53/92] Processing sub-69-a ---
+[2026-07-14T10:58:11] [INFO] sub-69-a: scanned sub-69-a_raw.csv (115.2 MB, 619566 rows, 1.13s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:58:11] [INFO] --- [54/92] Processing sub-69-c ---
+[2026-07-14T10:58:12] [INFO] sub-69-c: scanned sub-69-c_raw.csv (95.4 MB, 502907 rows, 0.93s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:58:12] [INFO] --- [55/92] Processing sub-70-a ---
+[2026-07-14T10:58:14] [INFO] sub-70-a: scanned sub-70-a_raw.csv (224.0 MB, 1180891 rows, 2.2s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:58:14] [INFO] --- [56/92] Processing sub-70-c ---
+[2026-07-14T10:58:16] [INFO] sub-70-c: scanned sub-70-a-living-lab_raw.csv (224.0 MB, 1180891 rows, 2.16s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:58:16] [INFO] sub-70-c: read EDF header sub-70-b-living lab_raw.edf (32.1 MB, 616800 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=None)
+[2026-07-14T10:58:17] [INFO] sub-70-c: scanned sub-70-c_raw.csv (117.0 MB, 617449 rows, 1.15s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:58:17] [INFO] --- [57/92] Processing sub-71-a ---
+[2026-07-14T10:58:18] [INFO] sub-71-a: scanned sub-71-a_raw.csv (78.1 MB, 409618 rows, 0.82s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:58:18] [INFO] sub-71-a: read EDF header sub-71-a-livinglab_raw.edf (21.3 MB, 408600 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=None)
+[2026-07-14T10:58:18] [INFO] --- [58/92] Processing sub-71-c ---
+[2026-07-14T10:58:20] [INFO] sub-71-c: scanned sub-71-c_raw.csv (144.1 MB, 719900 rows, 1.37s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:58:20] [INFO] --- [59/92] Processing sub-72-a ---
+[2026-07-14T10:58:21] [INFO] sub-72-a: scanned sub-72-a_raw.csv (144.6 MB, 800918 rows, 1.48s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:58:21] [INFO] --- [60/92] Processing sub-72-c ---
+[2026-07-14T10:58:23] [INFO] sub-72-c: scanned sub-72-c_raw.csv (174.1 MB, 1002013 rows, 1.85s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:58:23] [INFO] --- [61/92] Processing sub-73-a ---
+[2026-07-14T10:58:24] [INFO] sub-73-a: scanned sub-73-a_raw.csv (123.9 MB, 688320 rows, 1.29s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:58:24] [INFO] --- [62/92] Processing sub-73-c ---
+[2026-07-14T10:58:26] [INFO] sub-73-c: scanned sub-73-c_raw.csv (194.3 MB, 1054498 rows, 1.95s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:58:26] [INFO] --- [63/92] Processing sub-76-a ---
+[2026-07-14T10:58:29] [INFO] sub-76-a: scanned sub-76-a_raw.csv (214.1 MB, 1176511 rows, 2.16s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:58:29] [INFO] --- [64/92] Processing sub-76-c ---
+[2026-07-14T10:58:30] [INFO] sub-76-c: scanned sub-76-c_raw.csv (168.2 MB, 935637 rows, 1.71s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:58:30] [INFO] --- [65/92] Processing sub-77-a ---
+[2026-07-14T10:58:32] [INFO] sub-77-a: scanned sub-77-a_raw.csv (166.3 MB, 920092 rows, 1.68s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:58:32] [INFO] --- [66/92] Processing sub-77-c ---
+[2026-07-14T10:58:33] [INFO] sub-77-c: scanned sub-77-c_raw.csv (114.4 MB, 668453 rows, 1.24s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:58:33] [INFO] --- [67/92] Processing sub-78-a ---
+[2026-07-14T10:58:35] [INFO] sub-78-a: scanned sub-78-a_raw.csv (164.6 MB, 895924 rows, 1.66s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:58:35] [INFO] --- [68/92] Processing sub-78-c ---
+[2026-07-14T10:58:35] [INFO] sub-78-c: scanned sub-78-b2_0001_raw.csv (27.1 MB, 154922 rows, 0.27s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:58:35] [INFO] sub-78-c: scanned sub-78-b2_raw.csv (0.5 MB, 2860 rows, 0.01s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:58:37] [INFO] sub-78-c: scanned sub-78-b_raw.csv (112.3 MB, 628561 rows, 1.09s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:58:37] [WARN] sub-78-c: NO raw CSV filename contains the session id 'sub-78-c'; falling back to largest file (sub-78-b_raw.csv) as primary -- treat alignment result for this session with extra caution
+[2026-07-14T10:58:37] [INFO] --- [69/92] Processing sub-80-a ---
+[2026-07-14T10:58:39] [INFO] sub-80-a: scanned sub-80-a_raw.csv (190.3 MB, 1043541 rows, 1.95s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:58:39] [INFO] --- [70/92] Processing sub-80-c ---
+[2026-07-14T10:58:40] [INFO] sub-80-c: scanned sub-80-c_raw.csv (108.7 MB, 624635 rows, 1.14s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:58:40] [INFO] --- [71/92] Processing sub-81-a ---
+[2026-07-14T10:58:41] [INFO] sub-81-a: scanned sub-81-a_raw.csv (166.2 MB, 865734 rows, 1.65s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:58:41] [INFO] --- [72/92] Processing sub-81-c ---
+[2026-07-14T10:58:43] [INFO] sub-81-c: scanned sub-81-c_raw.csv (164.5 MB, 884140 rows, 1.64s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:58:43] [INFO] --- [73/92] Processing sub-82-a ---
+[2026-07-14T10:58:43] [INFO] sub-82-a: confirmed empty living-lab task folder (matches known list)
+[2026-07-14T10:58:43] [INFO] --- [74/92] Processing sub-82-c ---
+[2026-07-14T10:58:45] [INFO] sub-82-c: scanned sub-82-c_raw.csv (160.8 MB, 887168 rows, 1.61s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:58:45] [INFO] --- [75/92] Processing sub-84-a ---
+[2026-07-14T10:58:47] [INFO] sub-84-a: scanned sub-84-a_raw.csv (246.2 MB, 1390016 rows, 2.55s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:58:47] [INFO] --- [76/92] Processing sub-84-c ---
+[2026-07-14T10:58:49] [INFO] sub-84-c: scanned sub-84-c_raw.csv (127.7 MB, 730629 rows, 1.34s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:58:49] [INFO] --- [77/92] Processing sub-90-a ---
+[2026-07-14T10:58:50] [INFO] sub-90-a: scanned sub-90-a_raw.csv (105.5 MB, 567811 rows, 1.06s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:58:50] [INFO] --- [78/92] Processing sub-90-c ---
+[2026-07-14T10:58:52] [INFO] sub-90-c: scanned sub-90-c_raw.csv (170.9 MB, 957342 rows, 1.78s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:58:52] [INFO] --- [79/92] Processing sub-92-a ---
+[2026-07-14T10:58:53] [INFO] sub-92-a: scanned sub-92-a_raw.csv (130.3 MB, 710702 rows, 1.35s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:58:53] [INFO] --- [80/92] Processing sub-92-c ---
+[2026-07-14T10:58:54] [INFO] sub-92-c: scanned sub-92-c_raw.csv (125.7 MB, 726102 rows, 1.29s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:58:54] [INFO] --- [81/92] Processing sub-93-a ---
+[2026-07-14T10:58:57] [INFO] sub-93-a: scanned sub-93-a_raw.csv (208.8 MB, 1209251 rows, 2.18s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:58:57] [INFO] --- [82/92] Processing sub-93-c ---
+[2026-07-14T10:58:58] [INFO] sub-93-c: scanned sub-93-c_raw.csv (153.3 MB, 895844 rows, 1.69s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:58:58] [INFO] --- [83/92] Processing sub-94-a ---
+[2026-07-14T10:59:00] [INFO] sub-94-a: scanned sub-94-a_raw.csv (149.0 MB, 864862 rows, 1.56s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:59:00] [INFO] --- [84/92] Processing sub-94-c ---
+[2026-07-14T10:59:02] [INFO] sub-94-c: scanned sub-94-c_raw.csv (154.4 MB, 893974 rows, 1.65s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:59:02] [INFO] --- [85/92] Processing sub-96-a ---
+[2026-07-14T10:59:03] [INFO] sub-96-a: scanned sub-96-a_raw.csv (110.8 MB, 632413 rows, 1.18s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:59:03] [INFO] --- [86/92] Processing sub-96-c ---
+[2026-07-14T10:59:04] [INFO] sub-96-c: scanned sub-96-c_raw.csv (103.5 MB, 592086 rows, 1.07s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:59:04] [INFO] --- [87/92] Processing sub-97-a ---
+[2026-07-14T10:59:05] [INFO] sub-97-a: scanned sub-97-a_raw.csv (125.3 MB, 711973 rows, 1.31s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:59:05] [INFO] --- [88/92] Processing sub-97-c ---
+[2026-07-14T10:59:06] [INFO] sub-97-c: scanned sub-97-c_raw.csv (60.4 MB, 342136 rows, 0.63s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:59:06] [INFO] --- [89/92] Processing sub-98-a ---
+[2026-07-14T10:59:07] [INFO] sub-98-a: scanned sub-98-a_raw.csv (124.6 MB, 706929 rows, 1.3s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:59:08] [INFO] --- [90/92] Processing sub-98-c ---
+[2026-07-14T10:59:09] [INFO] sub-98-c: scanned sub-98-c_raw.csv (112.8 MB, 662267 rows, 1.19s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:59:09] [INFO] --- [91/92] Processing sub-99-a ---
+[2026-07-14T10:59:11] [INFO] sub-99-a: scanned sub-99-a_raw.csv (194.0 MB, 1115866 rows, 2.05s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:59:11] [INFO] --- [92/92] Processing sub-99-c ---
+[2026-07-14T10:59:13] [INFO] sub-99-c: scanned sub-99-c_raw.csv (191.2 MB, 1130022 rows, 2.02s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:59:13] [INFO] Done processing 92 sessions in 143.8s.
+[2026-07-14T10:59:13] [INFO] Wrote full results to C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\raw_csv_edf_trigger_audit_results.json
+[2026-07-14T10:59:13] [INFO] Wrote flat summary to C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\raw_csv_edf_trigger_audit_sessions.csv
+[2026-07-14T10:59:53] [INFO] ====================================================================================================
+[2026-07-14T10:59:53] [INFO] Audit run started. DATA_ROOT=C:\Data\LivingLab_PD
+[2026-07-14T10:59:53] [INFO] Discovered 92 session folders to process.
+[2026-07-14T10:59:53] [INFO] --- [1/92] Processing sub-100-a ---
+[2026-07-14T10:59:53] [INFO] sub-100-a: confirmed empty living-lab task folder (matches known list)
+[2026-07-14T10:59:53] [INFO] --- [2/92] Processing sub-100-c ---
+[2026-07-14T10:59:55] [INFO] sub-100-c: scanned sub-100-c_raw.csv (173.5 MB, 1035023 rows, 1.88s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:59:55] [INFO] --- [3/92] Processing sub-103-a ---
+[2026-07-14T10:59:57] [INFO] sub-103-a: scanned sub-103-a_raw.csv (211.0 MB, 1230636 rows, 2.17s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:59:57] [INFO] --- [4/92] Processing sub-103-c ---
+[2026-07-14T10:59:58] [INFO] sub-103-c: scanned sub-103-c_raw.csv (158.3 MB, 917410 rows, 1.63s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T10:59:58] [INFO] --- [5/92] Processing sub-105-a ---
+[2026-07-14T11:00:00] [INFO] sub-105-a: scanned sub-105-a_raw.csv (116.3 MB, 664306 rows, 1.18s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:00:00] [INFO] --- [6/92] Processing sub-105-c ---
+[2026-07-14T11:00:01] [INFO] sub-105-c: scanned sub-105-c_raw.csv (104.4 MB, 615201 rows, 1.09s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:00:01] [INFO] --- [7/92] Processing sub-106-a ---
+[2026-07-14T11:00:02] [INFO] sub-106-a: scanned sub-106-a_raw.csv (167.5 MB, 958353 rows, 1.69s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:00:02] [INFO] --- [8/92] Processing sub-106-c ---
+[2026-07-14T11:00:03] [INFO] sub-106-c: scanned sub-106-c_0001_raw.csv (104.1 MB, 576922 rows, 1.1s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:00:03] [INFO] --- [9/92] Processing sub-107-a ---
+[2026-07-14T11:00:05] [INFO] sub-107-a: scanned sub-107-a_raw.csv (152.1 MB, 876213 rows, 1.56s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:00:05] [INFO] --- [10/92] Processing sub-107-c ---
+[2026-07-14T11:00:06] [INFO] sub-107-c: scanned sub-107-c_raw.csv (83.9 MB, 491313 rows, 0.87s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:00:06] [INFO] --- [11/92] Processing sub-108-a ---
+[2026-07-14T11:00:08] [INFO] sub-108-a: scanned sub-108-a_raw.csv (244.6 MB, 1409050 rows, 2.51s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:00:08] [INFO] --- [12/92] Processing sub-108-c ---
+[2026-07-14T11:00:10] [INFO] sub-108-c: scanned sub-108-c_raw.csv (165.8 MB, 972070 rows, 1.76s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:00:10] [INFO] --- [13/92] Processing sub-111-a ---
+[2026-07-14T11:00:11] [INFO] sub-111-a: scanned sub-111_raw.csv (67.4 MB, 871177 rows, 1.11s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:00:11] [INFO] sub-111-a: read EDF header sub-111_raw.edf (19.7 MB, 870600 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T11:00:11] [WARN] sub-111-a: NO raw CSV filename contains the session id 'sub-111-a'; falling back to largest file (sub-111_raw.csv) as primary -- treat alignment result for this session with extra caution
+[2026-07-14T11:00:12] [INFO] --- [14/92] Processing sub-111-c ---
+[2026-07-14T11:00:12] [INFO] sub-111-c: scanned sub-111-c_raw.csv (26.9 MB, 346164 rows, 0.45s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:00:12] [INFO] sub-111-c: read EDF header sub-111-c_raw.edf (7.8 MB, 345600 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T11:00:12] [INFO] --- [15/92] Processing sub-114-a ---
+[2026-07-14T11:00:14] [INFO] sub-114-a: scanned sub-114-a_raw.csv (166.8 MB, 989241 rows, 1.78s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:00:14] [INFO] sub-114-a: read EDF header sub-114-a_raw.edf (55.9 MB, 988200 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T11:00:14] [INFO] --- [16/92] Processing sub-114-c ---
+[2026-07-14T11:00:17] [INFO] sub-114-c: scanned sub-114-c_raw.csv (307.1 MB, 1713726 rows, 3.11s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:00:17] [INFO] sub-114-c: read EDF header sub-114-c_raw.edf (97.0 MB, 1713000 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T11:00:17] [INFO] --- [17/92] Processing sub-115-a ---
+[2026-07-14T11:00:19] [INFO] sub-115-a: scanned sub-115-a_raw.csv (166.4 MB, 911399 rows, 1.66s) -- trigger_nonzero=0 event_nonzero=0 malformed=1
+[2026-07-14T11:00:19] [INFO] sub-115-a: read EDF header sub-115-a_raw.edf (53.2 MB, 940200 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T11:00:19] [INFO] --- [18/92] Processing sub-115-c ---
+[2026-07-14T11:00:20] [INFO] sub-115-c: scanned sub-115-c_raw.csv (120.3 MB, 660578 rows, 1.2s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:00:20] [INFO] sub-115-c: read EDF header sub-115-c_raw.edf (37.4 MB, 660000 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T11:00:20] [INFO] --- [19/92] Processing sub-116-a ---
+[2026-07-14T11:00:22] [INFO] sub-116-a: scanned sub-116-a_raw.csv (200.2 MB, 1077474 rows, 1.99s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:00:22] [INFO] sub-116-a: read EDF header sub-116-a_raw.edf (60.9 MB, 1076400 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T11:00:23] [INFO] --- [20/92] Processing sub-116-c ---
+[2026-07-14T11:00:24] [INFO] sub-116-c: scanned sub-116-c_raw.csv (149.0 MB, 772336 rows, 1.45s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:00:24] [INFO] sub-116-c: read EDF header sub-116-c_raw.edf (43.7 MB, 771600 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T11:00:24] [INFO] --- [21/92] Processing sub-117-a ---
+[2026-07-14T11:00:25] [INFO] sub-117-a: scanned sub-117-a_raw.csv (131.3 MB, 722246 rows, 1.33s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:00:25] [INFO] sub-117-a: read EDF header sub-117-a_raw.edf (40.8 MB, 721200 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T11:00:25] [INFO] --- [22/92] Processing sub-117-c ---
+[2026-07-14T11:00:26] [INFO] sub-117-c: scanned sub-117-c_raw.csv (28.2 MB, 169305 rows, 0.3s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:00:26] [INFO] sub-117-c: read EDF header sub-117-c_raw.edf (9.6 MB, 168600 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T11:00:26] [INFO] --- [23/92] Processing sub-119-a ---
+[2026-07-14T11:00:27] [INFO] sub-119-a: scanned sub-119-a_raw.csv (124.4 MB, 705183 rows, 1.27s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:00:27] [INFO] sub-119-a: read EDF header sub-119-a_raw.edf (39.9 MB, 704400 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T11:00:27] [INFO] --- [24/92] Processing sub-119-c ---
+[2026-07-14T11:00:29] [INFO] sub-119-c: scanned sub-119-c_raw.csv (157.8 MB, 913780 rows, 1.63s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:00:29] [INFO] sub-119-c: read EDF header sub-119-c_raw.edf (51.7 MB, 913200 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T11:00:29] [INFO] --- [25/92] Processing sub-121-a ---
+[2026-07-14T11:00:29] [INFO] sub-121-a: scanned sub-121-a_0001_raw.csv (30.4 MB, 172381 rows, 0.32s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:00:29] [INFO] sub-121-a: read EDF header sub-121-a_0001_raw.edf (9.7 MB, 171600 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T11:00:30] [INFO] sub-121-a: scanned sub-121-a_raw.csv (78.8 MB, 452343 rows, 0.81s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:00:30] [INFO] sub-121-a: read EDF header sub-121-a_raw.edf (25.6 MB, 451800 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T11:00:30] [WARN] sub-121-a: multiple raw CSVs match session name; picked largest non-decoy (sub-121-a_raw.csv) among ['sub-121-a_0001_raw.csv', 'sub-121-a_raw.csv']
+[2026-07-14T11:00:30] [INFO] --- [26/92] Processing sub-121-c ---
+[2026-07-14T11:00:32] [INFO] sub-121-c: scanned sub-121-c_raw.csv (190.2 MB, 1097075 rows, 1.96s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:00:32] [INFO] sub-121-c: read EDF header sub-121-c_raw.edf (62.1 MB, 1096200 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T11:00:32] [INFO] --- [27/92] Processing sub-123-a ---
+[2026-07-14T11:00:34] [INFO] sub-123-a: scanned sub-123-a_raw.csv (139.9 MB, 774546 rows, 1.41s) -- trigger_nonzero=1 event_nonzero=0 malformed=0
+[2026-07-14T11:00:34] [INFO] sub-123-a: read EDF header sub-123-a_raw.edf (43.8 MB, 774000 samples @ 300.0 Hz, trigger_unique=[0.0, 255.0], event_unique=[0.0])
+[2026-07-14T11:00:34] [INFO] --- [28/92] Processing sub-123-c ---
+[2026-07-14T11:00:35] [INFO] sub-123-c: scanned sub-123-c_raw.csv (106.2 MB, 599057 rows, 1.08s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:00:35] [INFO] sub-123-c: read EDF header sub-123-c_raw.edf (33.9 MB, 598200 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T11:00:35] [INFO] --- [29/92] Processing sub-125-a ---
+[2026-07-14T11:00:37] [INFO] sub-125-a: scanned sub-125-a_raw.csv (175.6 MB, 968442 rows, 1.76s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:00:37] [INFO] sub-125-a: read EDF header sub-125-a_raw.edf (54.8 MB, 967800 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T11:00:37] [INFO] --- [30/92] Processing sub-125-c ---
+[2026-07-14T11:00:38] [INFO] sub-125-c: scanned sub-125-c_raw.csv (134.0 MB, 714714 rows, 1.32s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:00:38] [INFO] sub-125-c: read EDF header sub-125-c_raw.edf (40.4 MB, 714000 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T11:00:38] [INFO] --- [31/92] Processing sub-129-a ---
+[2026-07-14T11:00:40] [INFO] sub-129-a: scanned sub-129-a_raw.csv (120.5 MB, 717473 rows, 1.29s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:00:40] [INFO] sub-129-a: read EDF header sub-129-a_raw.edf (40.6 MB, 716400 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T11:00:40] [INFO] --- [32/92] Processing sub-129-c ---
+[2026-07-14T11:00:41] [INFO] sub-129-c: scanned sub-129-c_raw.csv (153.3 MB, 864469 rows, 1.54s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:00:41] [INFO] sub-129-c: read EDF header sub-129-c_raw.edf (48.9 MB, 863400 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T11:00:41] [INFO] --- [33/92] Processing sub-130-a ---
+[2026-07-14T11:00:44] [INFO] sub-130-a: scanned sub-130-a_raw.csv (207.1 MB, 1187230 rows, 2.13s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:00:44] [INFO] sub-130-a: read EDF header sub-130-a_raw.edf (67.1 MB, 1186200 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T11:00:44] [INFO] --- [34/92] Processing sub-130-c ---
+[2026-07-14T11:00:44] [INFO] sub-130-c: confirmed empty living-lab task folder (matches known list)
+[2026-07-14T11:00:44] [INFO] --- [35/92] Processing sub-131-a ---
+[2026-07-14T11:00:45] [INFO] sub-131-a: scanned sub-131-a_raw.csv (170.6 MB, 903686 rows, 1.65s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:00:45] [INFO] sub-131-a: read EDF header sub-131-a_raw.edf (51.1 MB, 903000 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T11:00:45] [INFO] --- [36/92] Processing sub-131-c ---
+[2026-07-14T11:00:47] [INFO] sub-131-c: scanned sub-131-c_raw.csv (114.6 MB, 645707 rows, 1.19s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:00:47] [INFO] sub-131-c: read EDF header sub-131-c_raw.edf (36.5 MB, 645000 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T11:00:47] [INFO] --- [37/92] Processing sub-134-a ---
+[2026-07-14T11:00:48] [INFO] sub-134-a: scanned sub-134-a_raw.csv (174.2 MB, 948733 rows, 1.72s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:00:49] [INFO] sub-134-a: read EDF header sub-134-a_raw.edf (53.7 MB, 948000 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T11:00:49] [INFO] --- [38/92] Processing sub-134-c ---
+[2026-07-14T11:00:50] [INFO] sub-134-c: scanned sub-134-c_0001_raw.csv (174.0 MB, 963620 rows, 1.74s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:00:50] [INFO] sub-134-c: read EDF header sub-134-c_0001_raw.edf (54.5 MB, 963000 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T11:00:50] [INFO] --- [39/92] Processing sub-135-a ---
+[2026-07-14T11:00:52] [INFO] sub-135-a: scanned sub-135-a_raw.csv (149.8 MB, 811363 rows, 1.48s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:00:52] [INFO] sub-135-a: read EDF header sub-135-a_raw.edf (45.9 MB, 810600 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T11:00:52] [INFO] --- [40/92] Processing sub-135-c ---
+[2026-07-14T11:00:54] [INFO] sub-135-c: scanned sub-135-c_raw.csv (201.0 MB, 1031813 rows, 1.9s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:00:54] [INFO] sub-135-c: read EDF header sub-135-c_raw.edf (58.4 MB, 1030800 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T11:00:54] [INFO] --- [41/92] Processing sub-34-a ---
+[2026-07-14T11:00:56] [INFO] sub-34-a: scanned sub-34_living-lab_raw.csv (179.1 MB, 1027823 rows, 1.83s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:00:56] [INFO] sub-34-a: read EDF header sub-34_living-lab_raw.edf (53.4 MB, 1027200 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=None)
+[2026-07-14T11:00:56] [WARN] sub-34-a: NO raw CSV filename contains the session id 'sub-34-a'; falling back to largest file (sub-34_living-lab_raw.csv) as primary -- treat alignment result for this session with extra caution
+[2026-07-14T11:00:56] [INFO] --- [42/92] Processing sub-34-c ---
+[2026-07-14T11:00:56] [INFO] sub-34-c: scanned sub_34_c_raw.csv (24.9 MB, 148904 rows, 0.26s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:00:56] [INFO] sub-34-c: read EDF header sub_34_c_raw.edf (7.7 MB, 148200 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=None)
+[2026-07-14T11:00:56] [WARN] Rejected non-task-shaped CSV in annotation/ (first line: 'Tasks,Start'): C:\Data\LivingLab_PD\sub-34-c\annotation\sub_34_c_13_01_2023_to_2.csv
+[2026-07-14T11:00:56] [INFO] --- [43/92] Processing sub-42-a ---
+[2026-07-14T11:00:58] [INFO] sub-42-a: scanned sub-42-a_raw.csv (175.2 MB, 1015522 rows, 1.8s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:00:58] [INFO] sub-42-a: read EDF header sub-42-a-living lab_raw.edf (52.8 MB, 1014600 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=None)
+[2026-07-14T11:00:58] [INFO] --- [44/92] Processing sub-42-c ---
+[2026-07-14T11:00:59] [INFO] sub-42-c: scanned sub-42-c_UPDRS_raw.csv (87.3 MB, 473950 rows, 0.86s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:00:59] [INFO] sub-42-c: read EDF header sub-42-c_UPDRS_raw.edf (24.6 MB, 472800 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=None)
+[2026-07-14T11:01:00] [INFO] sub-42-c: scanned sub-42-c_raw.csv (56.7 MB, 328497 rows, 0.59s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:01:00] [INFO] sub-42-c: read EDF header sub-42-c_living_lab_raw.edf (17.0 MB, 327600 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=None)
+[2026-07-14T11:01:00] [WARN] sub-42-c: multiple raw CSVs match session name; picked largest non-decoy (sub-42-c_raw.csv) among ['sub-42-c_UPDRS_raw.csv', 'sub-42-c_raw.csv']
+[2026-07-14T11:01:00] [INFO] --- [45/92] Processing sub-48-a ---
+[2026-07-14T11:01:01] [INFO] sub-48-a: scanned sub-48-a_raw.csv (85.7 MB, 466158 rows, 0.86s) -- trigger_nonzero=0 event_nonzero=0 malformed=1
+[2026-07-14T11:01:01] [ERROR] sub-48-a: FAILED reading EDF C:\Data\LivingLab_PD\sub-48-a\eeg\living-lab-tasks\sub-48a_living_lab_raw.edf: C:\Data\LivingLab_PD\sub-48-a\eeg\living-lab-tasks\sub-48a_living_lab_raw.edf: the file is not EDF(+) or BDF(+) compliant (Filesize)
+[2026-07-14T11:01:01] [ERROR] Traceback (most recent call last):
+  File "C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\raw_csv_edf_trigger_audit.py", line 574, in process_session
+    edf_info = inspect_edf(edf_p)
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\raw_csv_edf_trigger_audit.py", line 338, in inspect_edf
+    f = pyedflib.EdfReader(str(path))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pyedflib/_extensions/_pyedflib.pyx", line 147, in pyedflib._extensions._pyedflib.CyEdfReader.__init__
+  File "pyedflib/_extensions/_pyedflib.pyx", line 210, in pyedflib._extensions._pyedflib.CyEdfReader.open
+  File "pyedflib/_extensions/_pyedflib.pyx", line 182, in pyedflib._extensions._pyedflib.CyEdfReader.check_open_ok
+OSError: C:\Data\LivingLab_PD\sub-48-a\eeg\living-lab-tasks\sub-48a_living_lab_raw.edf: the file is not EDF(+) or BDF(+) compliant (Filesize)
+
+[2026-07-14T11:01:01] [INFO] --- [46/92] Processing sub-48-c ---
+[2026-07-14T11:01:01] [INFO] sub-48-c: scanned sub-48-c_raw.csv (61.2 MB, 315259 rows, 0.58s) -- trigger_nonzero=0 event_nonzero=0 malformed=1
+[2026-07-14T11:01:01] [ERROR] sub-48-c: FAILED reading EDF C:\Data\LivingLab_PD\sub-48-c\eeg\living-lab-tasks\sub-48-c_living_lab_raw.edf: C:\Data\LivingLab_PD\sub-48-c\eeg\living-lab-tasks\sub-48-c_living_lab_raw.edf: the file is not EDF(+) or BDF(+) compliant (Filesize)
+[2026-07-14T11:01:01] [ERROR] Traceback (most recent call last):
+  File "C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\raw_csv_edf_trigger_audit.py", line 574, in process_session
+    edf_info = inspect_edf(edf_p)
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\raw_csv_edf_trigger_audit.py", line 338, in inspect_edf
+    f = pyedflib.EdfReader(str(path))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pyedflib/_extensions/_pyedflib.pyx", line 147, in pyedflib._extensions._pyedflib.CyEdfReader.__init__
+  File "pyedflib/_extensions/_pyedflib.pyx", line 210, in pyedflib._extensions._pyedflib.CyEdfReader.open
+  File "pyedflib/_extensions/_pyedflib.pyx", line 182, in pyedflib._extensions._pyedflib.CyEdfReader.check_open_ok
+OSError: C:\Data\LivingLab_PD\sub-48-c\eeg\living-lab-tasks\sub-48-c_living_lab_raw.edf: the file is not EDF(+) or BDF(+) compliant (Filesize)
+
+[2026-07-14T11:01:01] [INFO] --- [47/92] Processing sub-51-a ---
+[2026-07-14T11:01:03] [INFO] sub-51-a: scanned sub-51-a_raw.csv (222.7 MB, 1246879 rows, 2.24s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:01:04] [INFO] sub-51-a: read EDF header sub_51a_raw.edf (64.8 MB, 1246200 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=None)
+[2026-07-14T11:01:04] [INFO] --- [48/92] Processing sub-51-c ---
+[2026-07-14T11:01:04] [INFO] sub-51-c: scanned sub-51-c_raw.csv (91.1 MB, 493005 rows, 0.9s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:01:04] [INFO] sub-51-c: read EDF header sub-51c_raw.edf (25.6 MB, 492000 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=None)
+[2026-07-14T11:01:04] [INFO] --- [49/92] Processing sub-53-a ---
+[2026-07-14T11:01:06] [INFO] sub-53-a: scanned sub-53-a_raw.csv (145.7 MB, 819837 rows, 1.46s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:01:06] [INFO] sub-53-a: read EDF header sub-53-a_raw.edf (42.6 MB, 819000 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=None)
+[2026-07-14T11:01:06] [INFO] --- [50/92] Processing sub-53-c ---
+[2026-07-14T11:01:07] [INFO] sub-53-c: scanned sub-53-c_raw.csv (80.6 MB, 399306 rows, 0.77s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:01:07] [INFO] sub-53-c: read EDF header sub-53-c_raw.edf (20.7 MB, 398400 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=None)
+[2026-07-14T11:01:07] [INFO] --- [51/92] Processing sub-62-a ---
+[2026-07-14T11:01:08] [INFO] sub-62-a: scanned sub-62-a_raw.csv (111.9 MB, 599337 rows, 1.1s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:01:08] [INFO] --- [52/92] Processing sub-62-c ---
+[2026-07-14T11:01:09] [INFO] sub-62-c: scanned sub-62-c_raw.csv (126.0 MB, 658758 rows, 1.21s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:01:09] [INFO] --- [53/92] Processing sub-69-a ---
+[2026-07-14T11:01:10] [INFO] sub-69-a: scanned sub-69-a_raw.csv (115.2 MB, 619566 rows, 1.12s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:01:10] [INFO] --- [54/92] Processing sub-69-c ---
+[2026-07-14T11:01:11] [INFO] sub-69-c: scanned sub-69-c_raw.csv (95.4 MB, 502907 rows, 0.93s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:01:11] [INFO] --- [55/92] Processing sub-70-a ---
+[2026-07-14T11:01:13] [INFO] sub-70-a: scanned sub-70-a_raw.csv (224.0 MB, 1180891 rows, 2.17s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:01:13] [INFO] --- [56/92] Processing sub-70-c ---
+[2026-07-14T11:01:16] [INFO] sub-70-c: scanned sub-70-a-living-lab_raw.csv (224.0 MB, 1180891 rows, 2.15s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:01:16] [INFO] sub-70-c: read EDF header sub-70-b-living lab_raw.edf (32.1 MB, 616800 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=None)
+[2026-07-14T11:01:17] [INFO] sub-70-c: scanned sub-70-c_raw.csv (117.0 MB, 617449 rows, 1.13s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:01:17] [INFO] --- [57/92] Processing sub-71-a ---
+[2026-07-14T11:01:17] [INFO] sub-71-a: scanned sub-71-a_raw.csv (78.1 MB, 409618 rows, 0.75s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:01:17] [INFO] sub-71-a: read EDF header sub-71-a-livinglab_raw.edf (21.3 MB, 408600 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=None)
+[2026-07-14T11:01:17] [INFO] --- [58/92] Processing sub-71-c ---
+[2026-07-14T11:01:19] [INFO] sub-71-c: scanned sub-71-c_raw.csv (144.1 MB, 719900 rows, 1.38s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:01:19] [INFO] --- [59/92] Processing sub-72-a ---
+[2026-07-14T11:01:20] [INFO] sub-72-a: scanned sub-72-a_raw.csv (144.6 MB, 800918 rows, 1.45s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:01:20] [INFO] --- [60/92] Processing sub-72-c ---
+[2026-07-14T11:01:22] [INFO] sub-72-c: scanned sub-72-c_raw.csv (174.1 MB, 1002013 rows, 1.8s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:01:22] [INFO] --- [61/92] Processing sub-73-a ---
+[2026-07-14T11:01:23] [INFO] sub-73-a: scanned sub-73-a_raw.csv (123.9 MB, 688320 rows, 1.25s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:01:23] [INFO] --- [62/92] Processing sub-73-c ---
+[2026-07-14T11:01:25] [INFO] sub-73-c: scanned sub-73-c_raw.csv (194.3 MB, 1054498 rows, 1.92s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:01:25] [INFO] --- [63/92] Processing sub-76-a ---
+[2026-07-14T11:01:27] [INFO] sub-76-a: scanned sub-76-a_raw.csv (214.1 MB, 1176511 rows, 2.11s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:01:27] [INFO] --- [64/92] Processing sub-76-c ---
+[2026-07-14T11:01:29] [INFO] sub-76-c: scanned sub-76-c_raw.csv (168.2 MB, 935637 rows, 1.68s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:01:29] [INFO] --- [65/92] Processing sub-77-a ---
+[2026-07-14T11:01:31] [INFO] sub-77-a: scanned sub-77-a_raw.csv (166.3 MB, 920092 rows, 1.64s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:01:31] [INFO] --- [66/92] Processing sub-77-c ---
+[2026-07-14T11:01:32] [INFO] sub-77-c: scanned sub-77-c_raw.csv (114.4 MB, 668453 rows, 1.18s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:01:32] [INFO] --- [67/92] Processing sub-78-a ---
+[2026-07-14T11:01:34] [INFO] sub-78-a: scanned sub-78-a_raw.csv (164.6 MB, 895924 rows, 1.63s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:01:34] [INFO] --- [68/92] Processing sub-78-c ---
+[2026-07-14T11:01:34] [INFO] sub-78-c: scanned sub-78-b2_0001_raw.csv (27.1 MB, 154922 rows, 0.27s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:01:34] [INFO] sub-78-c: scanned sub-78-b2_raw.csv (0.5 MB, 2860 rows, 0.0s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:01:35] [INFO] sub-78-c: scanned sub-78-b_raw.csv (112.3 MB, 628561 rows, 1.13s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:01:35] [WARN] sub-78-c: NO raw CSV filename contains the session id 'sub-78-c'; falling back to largest file (sub-78-b_raw.csv) as primary -- treat alignment result for this session with extra caution
+[2026-07-14T11:01:35] [INFO] --- [69/92] Processing sub-80-a ---
+[2026-07-14T11:01:37] [INFO] sub-80-a: scanned sub-80-a_raw.csv (190.3 MB, 1043541 rows, 1.9s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:01:37] [INFO] --- [70/92] Processing sub-80-c ---
+[2026-07-14T11:01:38] [INFO] sub-80-c: scanned sub-80-c_raw.csv (108.7 MB, 624635 rows, 1.13s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:01:38] [INFO] --- [71/92] Processing sub-81-a ---
+[2026-07-14T11:01:40] [INFO] sub-81-a: scanned sub-81-a_raw.csv (166.2 MB, 865734 rows, 1.61s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:01:40] [INFO] --- [72/92] Processing sub-81-c ---
+[2026-07-14T11:01:41] [INFO] sub-81-c: scanned sub-81-c_raw.csv (164.5 MB, 884140 rows, 1.62s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:01:41] [INFO] --- [73/92] Processing sub-82-a ---
+[2026-07-14T11:01:41] [INFO] sub-82-a: confirmed empty living-lab task folder (matches known list)
+[2026-07-14T11:01:41] [INFO] --- [74/92] Processing sub-82-c ---
+[2026-07-14T11:01:43] [INFO] sub-82-c: scanned sub-82-c_raw.csv (160.8 MB, 887168 rows, 1.59s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:01:43] [INFO] --- [75/92] Processing sub-84-a ---
+[2026-07-14T11:01:45] [INFO] sub-84-a: scanned sub-84-a_raw.csv (246.2 MB, 1390016 rows, 2.5s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:01:45] [INFO] --- [76/92] Processing sub-84-c ---
+[2026-07-14T11:01:47] [INFO] sub-84-c: scanned sub-84-c_raw.csv (127.7 MB, 730629 rows, 1.31s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:01:47] [INFO] --- [77/92] Processing sub-90-a ---
+[2026-07-14T11:01:48] [INFO] sub-90-a: scanned sub-90-a_raw.csv (105.5 MB, 567811 rows, 1.05s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:01:48] [INFO] --- [78/92] Processing sub-90-c ---
+[2026-07-14T11:01:49] [INFO] sub-90-c: scanned sub-90-c_raw.csv (170.9 MB, 957342 rows, 1.73s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:01:49] [INFO] --- [79/92] Processing sub-92-a ---
+[2026-07-14T11:01:51] [INFO] sub-92-a: scanned sub-92-a_raw.csv (130.3 MB, 710702 rows, 1.32s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:01:51] [INFO] --- [80/92] Processing sub-92-c ---
+[2026-07-14T11:01:52] [INFO] sub-92-c: scanned sub-92-c_raw.csv (125.7 MB, 726102 rows, 1.28s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:01:52] [INFO] --- [81/92] Processing sub-93-a ---
+[2026-07-14T11:01:54] [INFO] sub-93-a: scanned sub-93-a_raw.csv (208.8 MB, 1209251 rows, 2.14s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:01:54] [INFO] --- [82/92] Processing sub-93-c ---
+[2026-07-14T11:01:56] [INFO] sub-93-c: scanned sub-93-c_raw.csv (153.3 MB, 895844 rows, 1.58s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:01:56] [INFO] --- [83/92] Processing sub-94-a ---
+[2026-07-14T11:01:57] [INFO] sub-94-a: scanned sub-94-a_raw.csv (149.0 MB, 864862 rows, 1.51s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:01:57] [INFO] --- [84/92] Processing sub-94-c ---
+[2026-07-14T11:01:59] [INFO] sub-94-c: scanned sub-94-c_raw.csv (154.4 MB, 893974 rows, 1.6s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:01:59] [INFO] --- [85/92] Processing sub-96-a ---
+[2026-07-14T11:02:00] [INFO] sub-96-a: scanned sub-96-a_raw.csv (110.8 MB, 632413 rows, 1.13s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:02:00] [INFO] --- [86/92] Processing sub-96-c ---
+[2026-07-14T11:02:01] [INFO] sub-96-c: scanned sub-96-c_raw.csv (103.5 MB, 592086 rows, 1.05s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:02:01] [INFO] --- [87/92] Processing sub-97-a ---
+[2026-07-14T11:02:02] [INFO] sub-97-a: scanned sub-97-a_raw.csv (125.3 MB, 711973 rows, 1.27s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:02:02] [INFO] --- [88/92] Processing sub-97-c ---
+[2026-07-14T11:02:03] [INFO] sub-97-c: scanned sub-97-c_raw.csv (60.4 MB, 342136 rows, 0.62s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:02:03] [INFO] --- [89/92] Processing sub-98-a ---
+[2026-07-14T11:02:04] [INFO] sub-98-a: scanned sub-98-a_raw.csv (124.6 MB, 706929 rows, 1.26s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:02:04] [INFO] --- [90/92] Processing sub-98-c ---
+[2026-07-14T11:02:06] [INFO] sub-98-c: scanned sub-98-c_raw.csv (112.8 MB, 662267 rows, 1.19s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:02:06] [INFO] --- [91/92] Processing sub-99-a ---
+[2026-07-14T11:02:07] [INFO] sub-99-a: scanned sub-99-a_raw.csv (194.0 MB, 1115866 rows, 1.97s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:02:08] [INFO] --- [92/92] Processing sub-99-c ---
+[2026-07-14T11:02:10] [INFO] sub-99-c: scanned sub-99-c_raw.csv (191.2 MB, 1130022 rows, 2.03s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:02:10] [INFO] Done processing 92 sessions in 136.8s.
+[2026-07-14T11:02:10] [INFO] Wrote full results to C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\raw_csv_edf_trigger_audit_results.json
+[2026-07-14T11:02:10] [INFO] Wrote flat summary to C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\raw_csv_edf_trigger_audit_sessions.csv
+[2026-07-14T11:08:57] [INFO] ====================================================================================================
+[2026-07-14T11:08:57] [INFO] Audit run started. DATA_ROOT=C:\Data\LivingLab_PD
+[2026-07-14T11:08:57] [INFO] Discovered 92 session folders to process.
+[2026-07-14T11:08:57] [INFO] --- [1/92] Processing sub-100-a ---
+[2026-07-14T11:08:57] [INFO] sub-100-a: confirmed empty living-lab task folder (matches known list)
+[2026-07-14T11:08:57] [INFO] --- [2/92] Processing sub-100-c ---
+[2026-07-14T11:08:58] [INFO] sub-100-c: scanned sub-100-c_raw.csv (173.5 MB, 1035023 rows, 1.81s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:08:59] [INFO] --- [3/92] Processing sub-103-a ---
+[2026-07-14T11:09:01] [INFO] sub-103-a: scanned sub-103-a_raw.csv (211.0 MB, 1230636 rows, 2.1s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:09:01] [INFO] --- [4/92] Processing sub-103-c ---
+[2026-07-14T11:09:02] [INFO] sub-103-c: scanned sub-103-c_raw.csv (158.3 MB, 917410 rows, 1.54s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:09:02] [INFO] --- [5/92] Processing sub-105-a ---
+[2026-07-14T11:09:04] [INFO] sub-105-a: scanned sub-105-a_raw.csv (116.3 MB, 664306 rows, 1.13s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:09:04] [INFO] --- [6/92] Processing sub-105-c ---
+[2026-07-14T11:09:05] [INFO] sub-105-c: scanned sub-105-c_raw.csv (104.4 MB, 615201 rows, 1.04s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:09:05] [INFO] --- [7/92] Processing sub-106-a ---
+[2026-07-14T11:09:06] [INFO] sub-106-a: scanned sub-106-a_raw.csv (167.5 MB, 958353 rows, 1.63s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:09:07] [INFO] --- [8/92] Processing sub-106-c ---
+[2026-07-14T11:09:08] [INFO] sub-106-c: scanned sub-106-c_0001_raw.csv (104.1 MB, 576922 rows, 1.06s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:09:08] [INFO] --- [9/92] Processing sub-107-a ---
+[2026-07-14T11:09:09] [INFO] sub-107-a: scanned sub-107-a_raw.csv (152.1 MB, 876213 rows, 1.5s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:09:09] [INFO] --- [10/92] Processing sub-107-c ---
+[2026-07-14T11:09:10] [INFO] sub-107-c: scanned sub-107-c_raw.csv (83.9 MB, 491313 rows, 0.84s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:09:10] [INFO] --- [11/92] Processing sub-108-a ---
+[2026-07-14T11:09:13] [INFO] sub-108-a: scanned sub-108-a_raw.csv (244.6 MB, 1409050 rows, 2.46s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:09:13] [INFO] --- [12/92] Processing sub-108-c ---
+[2026-07-14T11:09:15] [INFO] sub-108-c: scanned sub-108-c_raw.csv (165.8 MB, 972070 rows, 1.69s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:09:15] [INFO] --- [13/92] Processing sub-111-a ---
+[2026-07-14T11:09:16] [INFO] sub-111-a: scanned sub-111_raw.csv (67.4 MB, 871177 rows, 1.08s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:09:16] [INFO] sub-111-a: read EDF header sub-111_raw.edf (19.7 MB, 870600 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T11:09:16] [WARN] sub-111-a: NO raw CSV filename contains the session id 'sub-111-a'; falling back to largest file (sub-111_raw.csv) as primary -- treat alignment result for this session with extra caution
+[2026-07-14T11:09:16] [INFO] --- [14/92] Processing sub-111-c ---
+[2026-07-14T11:09:17] [INFO] sub-111-c: scanned sub-111-c_raw.csv (26.9 MB, 346164 rows, 0.42s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:09:17] [INFO] sub-111-c: read EDF header sub-111-c_raw.edf (7.8 MB, 345600 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T11:09:17] [INFO] --- [15/92] Processing sub-114-a ---
+[2026-07-14T11:09:18] [INFO] sub-114-a: scanned sub-114-a_raw.csv (166.8 MB, 989241 rows, 1.68s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:09:18] [INFO] sub-114-a: read EDF header sub-114-a_raw.edf (55.9 MB, 988200 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T11:09:19] [INFO] --- [16/92] Processing sub-114-c ---
+[2026-07-14T11:09:22] [INFO] sub-114-c: scanned sub-114-c_raw.csv (307.1 MB, 1713726 rows, 2.97s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:09:22] [INFO] sub-114-c: read EDF header sub-114-c_raw.edf (97.0 MB, 1713000 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T11:09:22] [INFO] --- [17/92] Processing sub-115-a ---
+[2026-07-14T11:09:24] [INFO] sub-115-a: scanned sub-115-a_raw.csv (166.4 MB, 911399 rows, 1.59s) -- trigger_nonzero=0 event_nonzero=0 malformed=1
+[2026-07-14T11:09:24] [INFO] sub-115-a: read EDF header sub-115-a_raw.edf (53.2 MB, 940200 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T11:09:24] [INFO] --- [18/92] Processing sub-115-c ---
+[2026-07-14T11:09:25] [INFO] sub-115-c: scanned sub-115-c_raw.csv (120.3 MB, 660578 rows, 1.15s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:09:25] [INFO] sub-115-c: read EDF header sub-115-c_raw.edf (37.4 MB, 660000 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T11:09:25] [INFO] --- [19/92] Processing sub-116-a ---
+[2026-07-14T11:09:27] [INFO] sub-116-a: scanned sub-116-a_raw.csv (200.2 MB, 1077474 rows, 1.91s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:09:27] [INFO] sub-116-a: read EDF header sub-116-a_raw.edf (60.9 MB, 1076400 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T11:09:27] [INFO] --- [20/92] Processing sub-116-c ---
+[2026-07-14T11:09:29] [INFO] sub-116-c: scanned sub-116-c_raw.csv (149.0 MB, 772336 rows, 1.38s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:09:29] [INFO] sub-116-c: read EDF header sub-116-c_raw.edf (43.7 MB, 771600 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T11:09:29] [INFO] --- [21/92] Processing sub-117-a ---
+[2026-07-14T11:09:30] [INFO] sub-117-a: scanned sub-117-a_raw.csv (131.3 MB, 722246 rows, 1.26s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:09:30] [INFO] sub-117-a: read EDF header sub-117-a_raw.edf (40.8 MB, 721200 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T11:09:30] [INFO] --- [22/92] Processing sub-117-c ---
+[2026-07-14T11:09:31] [INFO] sub-117-c: scanned sub-117-c_raw.csv (28.2 MB, 169305 rows, 0.29s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:09:31] [INFO] sub-117-c: read EDF header sub-117-c_raw.edf (9.6 MB, 168600 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T11:09:31] [INFO] --- [23/92] Processing sub-119-a ---
+[2026-07-14T11:09:32] [INFO] sub-119-a: scanned sub-119-a_raw.csv (124.4 MB, 705183 rows, 1.21s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:09:32] [INFO] sub-119-a: read EDF header sub-119-a_raw.edf (39.9 MB, 704400 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T11:09:32] [INFO] --- [24/92] Processing sub-119-c ---
+[2026-07-14T11:09:34] [INFO] sub-119-c: scanned sub-119-c_raw.csv (157.8 MB, 913780 rows, 1.56s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:09:34] [INFO] sub-119-c: read EDF header sub-119-c_raw.edf (51.7 MB, 913200 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T11:09:34] [INFO] --- [25/92] Processing sub-121-a ---
+[2026-07-14T11:09:34] [INFO] sub-121-a: scanned sub-121-a_0001_raw.csv (30.4 MB, 172381 rows, 0.3s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:09:34] [INFO] sub-121-a: read EDF header sub-121-a_0001_raw.edf (9.7 MB, 171600 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T11:09:35] [INFO] sub-121-a: scanned sub-121-a_raw.csv (78.8 MB, 452343 rows, 0.78s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:09:35] [INFO] sub-121-a: read EDF header sub-121-a_raw.edf (25.6 MB, 451800 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T11:09:35] [WARN] sub-121-a: multiple raw CSVs match session name; picked largest non-decoy (sub-121-a_raw.csv) among ['sub-121-a_0001_raw.csv', 'sub-121-a_raw.csv']
+[2026-07-14T11:09:35] [INFO] --- [26/92] Processing sub-121-c ---
+[2026-07-14T11:09:37] [INFO] sub-121-c: scanned sub-121-c_raw.csv (190.2 MB, 1097075 rows, 1.88s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:09:37] [INFO] sub-121-c: read EDF header sub-121-c_raw.edf (62.1 MB, 1096200 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T11:09:37] [INFO] --- [27/92] Processing sub-123-a ---
+[2026-07-14T11:09:39] [INFO] sub-123-a: scanned sub-123-a_raw.csv (139.9 MB, 774546 rows, 1.37s) -- trigger_nonzero=1 event_nonzero=0 malformed=0
+[2026-07-14T11:09:39] [INFO] sub-123-a: read EDF header sub-123-a_raw.edf (43.8 MB, 774000 samples @ 300.0 Hz, trigger_unique=[0.0, 255.0], event_unique=[0.0])
+[2026-07-14T11:09:39] [INFO] --- [28/92] Processing sub-123-c ---
+[2026-07-14T11:09:40] [INFO] sub-123-c: scanned sub-123-c_raw.csv (106.2 MB, 599057 rows, 1.05s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:09:40] [INFO] sub-123-c: read EDF header sub-123-c_raw.edf (33.9 MB, 598200 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T11:09:40] [INFO] --- [29/92] Processing sub-125-a ---
+[2026-07-14T11:09:42] [INFO] sub-125-a: scanned sub-125-a_raw.csv (175.6 MB, 968442 rows, 1.69s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:09:42] [INFO] sub-125-a: read EDF header sub-125-a_raw.edf (54.8 MB, 967800 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T11:09:42] [INFO] --- [30/92] Processing sub-125-c ---
+[2026-07-14T11:09:43] [INFO] sub-125-c: scanned sub-125-c_raw.csv (134.0 MB, 714714 rows, 1.23s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:09:43] [INFO] sub-125-c: read EDF header sub-125-c_raw.edf (40.4 MB, 714000 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T11:09:44] [INFO] --- [31/92] Processing sub-129-a ---
+[2026-07-14T11:09:45] [INFO] sub-129-a: scanned sub-129-a_raw.csv (120.5 MB, 717473 rows, 1.24s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:09:45] [INFO] sub-129-a: read EDF header sub-129-a_raw.edf (40.6 MB, 716400 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T11:09:45] [INFO] --- [32/92] Processing sub-129-c ---
+[2026-07-14T11:09:47] [INFO] sub-129-c: scanned sub-129-c_raw.csv (153.3 MB, 864469 rows, 1.51s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:09:47] [INFO] sub-129-c: read EDF header sub-129-c_raw.edf (48.9 MB, 863400 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T11:09:47] [INFO] --- [33/92] Processing sub-130-a ---
+[2026-07-14T11:09:49] [INFO] sub-130-a: scanned sub-130-a_raw.csv (207.1 MB, 1187230 rows, 2.04s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:09:49] [INFO] sub-130-a: read EDF header sub-130-a_raw.edf (67.1 MB, 1186200 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T11:09:49] [INFO] --- [34/92] Processing sub-130-c ---
+[2026-07-14T11:09:49] [INFO] sub-130-c: confirmed empty living-lab task folder (matches known list)
+[2026-07-14T11:09:49] [INFO] --- [35/92] Processing sub-131-a ---
+[2026-07-14T11:09:51] [INFO] sub-131-a: scanned sub-131-a_raw.csv (170.6 MB, 903686 rows, 1.59s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:09:51] [INFO] sub-131-a: read EDF header sub-131-a_raw.edf (51.1 MB, 903000 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T11:09:51] [INFO] --- [36/92] Processing sub-131-c ---
+[2026-07-14T11:09:52] [INFO] sub-131-c: scanned sub-131-c_raw.csv (114.6 MB, 645707 rows, 1.12s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:09:52] [INFO] sub-131-c: read EDF header sub-131-c_raw.edf (36.5 MB, 645000 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T11:09:52] [INFO] --- [37/92] Processing sub-134-a ---
+[2026-07-14T11:09:54] [INFO] sub-134-a: scanned sub-134-a_raw.csv (174.2 MB, 948733 rows, 1.67s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:09:54] [INFO] sub-134-a: read EDF header sub-134-a_raw.edf (53.7 MB, 948000 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T11:09:54] [INFO] --- [38/92] Processing sub-134-c ---
+[2026-07-14T11:09:56] [INFO] sub-134-c: scanned sub-134-c_0001_raw.csv (174.0 MB, 963620 rows, 1.69s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:09:56] [INFO] sub-134-c: read EDF header sub-134-c_0001_raw.edf (54.5 MB, 963000 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T11:09:56] [INFO] --- [39/92] Processing sub-135-a ---
+[2026-07-14T11:09:58] [INFO] sub-135-a: scanned sub-135-a_raw.csv (149.8 MB, 811363 rows, 1.49s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:09:58] [INFO] sub-135-a: read EDF header sub-135-a_raw.edf (45.9 MB, 810600 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T11:09:58] [INFO] --- [40/92] Processing sub-135-c ---
+[2026-07-14T11:10:00] [INFO] sub-135-c: scanned sub-135-c_raw.csv (201.0 MB, 1031813 rows, 1.84s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:10:00] [INFO] sub-135-c: read EDF header sub-135-c_raw.edf (58.4 MB, 1030800 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=[0.0])
+[2026-07-14T11:10:00] [INFO] --- [41/92] Processing sub-34-a ---
+[2026-07-14T11:10:02] [INFO] sub-34-a: scanned sub-34_living-lab_raw.csv (179.1 MB, 1027823 rows, 1.76s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:10:02] [INFO] sub-34-a: read EDF header sub-34_living-lab_raw.edf (53.4 MB, 1027200 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=None)
+[2026-07-14T11:10:02] [WARN] sub-34-a: NO raw CSV filename contains the session id 'sub-34-a'; falling back to largest file (sub-34_living-lab_raw.csv) as primary -- treat alignment result for this session with extra caution
+[2026-07-14T11:10:02] [INFO] --- [42/92] Processing sub-34-c ---
+[2026-07-14T11:10:02] [INFO] sub-34-c: scanned sub_34_c_raw.csv (24.9 MB, 148904 rows, 0.25s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:10:02] [INFO] sub-34-c: read EDF header sub_34_c_raw.edf (7.7 MB, 148200 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=None)
+[2026-07-14T11:10:02] [WARN] Rejected non-task-shaped CSV in annotation/ (first line: 'Tasks,Start'): C:\Data\LivingLab_PD\sub-34-c\annotation\sub_34_c_13_01_2023_to_2.csv
+[2026-07-14T11:10:02] [INFO] --- [43/92] Processing sub-42-a ---
+[2026-07-14T11:10:04] [INFO] sub-42-a: scanned sub-42-a_raw.csv (175.2 MB, 1015522 rows, 1.74s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:10:04] [INFO] sub-42-a: read EDF header sub-42-a-living lab_raw.edf (52.8 MB, 1014600 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=None)
+[2026-07-14T11:10:04] [INFO] --- [44/92] Processing sub-42-c ---
+[2026-07-14T11:10:05] [INFO] sub-42-c: scanned sub-42-c_UPDRS_raw.csv (87.3 MB, 473950 rows, 0.84s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:10:05] [INFO] sub-42-c: read EDF header sub-42-c_UPDRS_raw.edf (24.6 MB, 472800 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=None)
+[2026-07-14T11:10:06] [INFO] sub-42-c: scanned sub-42-c_raw.csv (56.7 MB, 328497 rows, 0.57s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:10:06] [INFO] sub-42-c: read EDF header sub-42-c_living_lab_raw.edf (17.0 MB, 327600 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=None)
+[2026-07-14T11:10:06] [WARN] sub-42-c: multiple raw CSVs match session name; picked largest non-decoy (sub-42-c_raw.csv) among ['sub-42-c_UPDRS_raw.csv', 'sub-42-c_raw.csv']
+[2026-07-14T11:10:06] [INFO] --- [45/92] Processing sub-48-a ---
+[2026-07-14T11:10:07] [INFO] sub-48-a: scanned sub-48-a_raw.csv (85.7 MB, 466158 rows, 0.8s) -- trigger_nonzero=0 event_nonzero=0 malformed=1
+[2026-07-14T11:10:07] [ERROR] sub-48-a: FAILED reading EDF C:\Data\LivingLab_PD\sub-48-a\eeg\living-lab-tasks\sub-48a_living_lab_raw.edf: C:\Data\LivingLab_PD\sub-48-a\eeg\living-lab-tasks\sub-48a_living_lab_raw.edf: the file is not EDF(+) or BDF(+) compliant (Filesize)
+[2026-07-14T11:10:07] [ERROR] Traceback (most recent call last):
+  File "C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\raw_csv_edf_trigger_audit.py", line 574, in process_session
+    edf_info = inspect_edf(edf_p)
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\raw_csv_edf_trigger_audit.py", line 338, in inspect_edf
+    f = pyedflib.EdfReader(str(path))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pyedflib/_extensions/_pyedflib.pyx", line 147, in pyedflib._extensions._pyedflib.CyEdfReader.__init__
+  File "pyedflib/_extensions/_pyedflib.pyx", line 210, in pyedflib._extensions._pyedflib.CyEdfReader.open
+  File "pyedflib/_extensions/_pyedflib.pyx", line 182, in pyedflib._extensions._pyedflib.CyEdfReader.check_open_ok
+OSError: C:\Data\LivingLab_PD\sub-48-a\eeg\living-lab-tasks\sub-48a_living_lab_raw.edf: the file is not EDF(+) or BDF(+) compliant (Filesize)
+
+[2026-07-14T11:10:07] [INFO] --- [46/92] Processing sub-48-c ---
+[2026-07-14T11:10:07] [INFO] sub-48-c: scanned sub-48-c_raw.csv (61.2 MB, 315259 rows, 0.55s) -- trigger_nonzero=0 event_nonzero=0 malformed=1
+[2026-07-14T11:10:07] [ERROR] sub-48-c: FAILED reading EDF C:\Data\LivingLab_PD\sub-48-c\eeg\living-lab-tasks\sub-48-c_living_lab_raw.edf: C:\Data\LivingLab_PD\sub-48-c\eeg\living-lab-tasks\sub-48-c_living_lab_raw.edf: the file is not EDF(+) or BDF(+) compliant (Filesize)
+[2026-07-14T11:10:07] [ERROR] Traceback (most recent call last):
+  File "C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\raw_csv_edf_trigger_audit.py", line 574, in process_session
+    edf_info = inspect_edf(edf_p)
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\raw_csv_edf_trigger_audit.py", line 338, in inspect_edf
+    f = pyedflib.EdfReader(str(path))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pyedflib/_extensions/_pyedflib.pyx", line 147, in pyedflib._extensions._pyedflib.CyEdfReader.__init__
+  File "pyedflib/_extensions/_pyedflib.pyx", line 210, in pyedflib._extensions._pyedflib.CyEdfReader.open
+  File "pyedflib/_extensions/_pyedflib.pyx", line 182, in pyedflib._extensions._pyedflib.CyEdfReader.check_open_ok
+OSError: C:\Data\LivingLab_PD\sub-48-c\eeg\living-lab-tasks\sub-48-c_living_lab_raw.edf: the file is not EDF(+) or BDF(+) compliant (Filesize)
+
+[2026-07-14T11:10:07] [INFO] --- [47/92] Processing sub-51-a ---
+[2026-07-14T11:10:10] [INFO] sub-51-a: scanned sub-51-a_raw.csv (222.7 MB, 1246879 rows, 2.13s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:10:10] [INFO] sub-51-a: read EDF header sub_51a_raw.edf (64.8 MB, 1246200 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=None)
+[2026-07-14T11:10:10] [INFO] --- [48/92] Processing sub-51-c ---
+[2026-07-14T11:10:11] [INFO] sub-51-c: scanned sub-51-c_raw.csv (91.1 MB, 493005 rows, 0.85s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:10:11] [INFO] sub-51-c: read EDF header sub-51c_raw.edf (25.6 MB, 492000 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=None)
+[2026-07-14T11:10:11] [INFO] --- [49/92] Processing sub-53-a ---
+[2026-07-14T11:10:12] [INFO] sub-53-a: scanned sub-53-a_raw.csv (145.7 MB, 819837 rows, 1.39s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:10:12] [INFO] sub-53-a: read EDF header sub-53-a_raw.edf (42.6 MB, 819000 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=None)
+[2026-07-14T11:10:12] [INFO] --- [50/92] Processing sub-53-c ---
+[2026-07-14T11:10:13] [INFO] sub-53-c: scanned sub-53-c_raw.csv (80.6 MB, 399306 rows, 0.74s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:10:13] [INFO] sub-53-c: read EDF header sub-53-c_raw.edf (20.7 MB, 398400 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=None)
+[2026-07-14T11:10:13] [INFO] --- [51/92] Processing sub-62-a ---
+[2026-07-14T11:10:14] [INFO] sub-62-a: scanned sub-62-a_raw.csv (111.9 MB, 599337 rows, 1.03s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:10:14] [INFO] --- [52/92] Processing sub-62-c ---
+[2026-07-14T11:10:15] [INFO] sub-62-c: scanned sub-62-c_raw.csv (126.0 MB, 658758 rows, 1.16s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:10:15] [INFO] --- [53/92] Processing sub-69-a ---
+[2026-07-14T11:10:17] [INFO] sub-69-a: scanned sub-69-a_raw.csv (115.2 MB, 619566 rows, 1.07s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:10:17] [INFO] --- [54/92] Processing sub-69-c ---
+[2026-07-14T11:10:18] [INFO] sub-69-c: scanned sub-69-c_raw.csv (95.4 MB, 502907 rows, 0.87s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:10:18] [INFO] --- [55/92] Processing sub-70-a ---
+[2026-07-14T11:10:20] [INFO] sub-70-a: scanned sub-70-a_raw.csv (224.0 MB, 1180891 rows, 2.06s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:10:20] [INFO] --- [56/92] Processing sub-70-c ---
+[2026-07-14T11:10:22] [INFO] sub-70-c: scanned sub-70-a-living-lab_raw.csv (224.0 MB, 1180891 rows, 2.05s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:10:22] [INFO] sub-70-c: read EDF header sub-70-b-living lab_raw.edf (32.1 MB, 616800 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=None)
+[2026-07-14T11:10:23] [INFO] sub-70-c: scanned sub-70-c_raw.csv (117.0 MB, 617449 rows, 1.08s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:10:23] [INFO] --- [57/92] Processing sub-71-a ---
+[2026-07-14T11:10:24] [INFO] sub-71-a: scanned sub-71-a_raw.csv (78.1 MB, 409618 rows, 0.71s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:10:24] [INFO] sub-71-a: read EDF header sub-71-a-livinglab_raw.edf (21.3 MB, 408600 samples @ 300.0 Hz, trigger_unique=[0.0], event_unique=None)
+[2026-07-14T11:10:24] [INFO] --- [58/92] Processing sub-71-c ---
+[2026-07-14T11:10:25] [INFO] sub-71-c: scanned sub-71-c_raw.csv (144.1 MB, 719900 rows, 1.32s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:10:25] [INFO] --- [59/92] Processing sub-72-a ---
+[2026-07-14T11:10:27] [INFO] sub-72-a: scanned sub-72-a_raw.csv (144.6 MB, 800918 rows, 1.37s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:10:27] [INFO] --- [60/92] Processing sub-72-c ---
+[2026-07-14T11:10:28] [INFO] sub-72-c: scanned sub-72-c_raw.csv (174.1 MB, 1002013 rows, 1.72s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:10:29] [INFO] --- [61/92] Processing sub-73-a ---
+[2026-07-14T11:10:30] [INFO] sub-73-a: scanned sub-73-a_raw.csv (123.9 MB, 688320 rows, 1.19s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:10:30] [INFO] --- [62/92] Processing sub-73-c ---
+[2026-07-14T11:10:32] [INFO] sub-73-c: scanned sub-73-c_raw.csv (194.3 MB, 1054498 rows, 1.86s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:10:32] [INFO] --- [63/92] Processing sub-76-a ---
+[2026-07-14T11:10:34] [INFO] sub-76-a: scanned sub-76-a_raw.csv (214.1 MB, 1176511 rows, 2.02s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:10:34] [INFO] --- [64/92] Processing sub-76-c ---
+[2026-07-14T11:10:36] [INFO] sub-76-c: scanned sub-76-c_raw.csv (168.2 MB, 935637 rows, 1.61s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:10:36] [INFO] --- [65/92] Processing sub-77-a ---
+[2026-07-14T11:10:37] [INFO] sub-77-a: scanned sub-77-a_raw.csv (166.3 MB, 920092 rows, 1.58s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:10:37] [INFO] --- [66/92] Processing sub-77-c ---
+[2026-07-14T11:10:38] [INFO] sub-77-c: scanned sub-77-c_raw.csv (114.4 MB, 668453 rows, 1.13s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:10:39] [INFO] --- [67/92] Processing sub-78-a ---
+[2026-07-14T11:10:40] [INFO] sub-78-a: scanned sub-78-a_raw.csv (164.6 MB, 895924 rows, 1.57s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:10:40] [INFO] --- [68/92] Processing sub-78-c ---
+[2026-07-14T11:10:40] [INFO] sub-78-c: scanned sub-78-b2_0001_raw.csv (27.1 MB, 154922 rows, 0.26s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:10:40] [INFO] sub-78-c: scanned sub-78-b2_raw.csv (0.5 MB, 2860 rows, 0.0s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:10:42] [INFO] sub-78-c: scanned sub-78-b_raw.csv (112.3 MB, 628561 rows, 1.1s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:10:42] [WARN] sub-78-c: NO raw CSV filename contains the session id 'sub-78-c'; falling back to largest file (sub-78-b_raw.csv) as primary -- treat alignment result for this session with extra caution
+[2026-07-14T11:10:42] [INFO] --- [69/92] Processing sub-80-a ---
+[2026-07-14T11:10:43] [INFO] sub-80-a: scanned sub-80-a_raw.csv (190.3 MB, 1043541 rows, 1.81s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:10:44] [INFO] --- [70/92] Processing sub-80-c ---
+[2026-07-14T11:10:45] [INFO] sub-80-c: scanned sub-80-c_raw.csv (108.7 MB, 624635 rows, 1.1s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:10:45] [INFO] --- [71/92] Processing sub-81-a ---
+[2026-07-14T11:10:46] [INFO] sub-81-a: scanned sub-81-a_raw.csv (166.2 MB, 865734 rows, 1.55s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:10:46] [INFO] --- [72/92] Processing sub-81-c ---
+[2026-07-14T11:10:48] [INFO] sub-81-c: scanned sub-81-c_raw.csv (164.5 MB, 884140 rows, 1.55s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:10:48] [INFO] --- [73/92] Processing sub-82-a ---
+[2026-07-14T11:10:48] [INFO] sub-82-a: confirmed empty living-lab task folder (matches known list)
+[2026-07-14T11:10:48] [INFO] --- [74/92] Processing sub-82-c ---
+[2026-07-14T11:10:50] [INFO] sub-82-c: scanned sub-82-c_raw.csv (160.8 MB, 887168 rows, 1.53s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:10:50] [INFO] --- [75/92] Processing sub-84-a ---
+[2026-07-14T11:10:52] [INFO] sub-84-a: scanned sub-84-a_raw.csv (246.2 MB, 1390016 rows, 2.39s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:10:52] [INFO] --- [76/92] Processing sub-84-c ---
+[2026-07-14T11:10:54] [INFO] sub-84-c: scanned sub-84-c_raw.csv (127.7 MB, 730629 rows, 1.31s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:10:54] [INFO] --- [77/92] Processing sub-90-a ---
+[2026-07-14T11:10:55] [INFO] sub-90-a: scanned sub-90-a_raw.csv (105.5 MB, 567811 rows, 1.04s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:10:55] [INFO] --- [78/92] Processing sub-90-c ---
+[2026-07-14T11:10:57] [INFO] sub-90-c: scanned sub-90-c_raw.csv (170.9 MB, 957342 rows, 1.73s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:10:57] [INFO] --- [79/92] Processing sub-92-a ---
+[2026-07-14T11:10:58] [INFO] sub-92-a: scanned sub-92-a_raw.csv (130.3 MB, 710702 rows, 1.32s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:10:58] [INFO] --- [80/92] Processing sub-92-c ---
+[2026-07-14T11:10:59] [INFO] sub-92-c: scanned sub-92-c_raw.csv (125.7 MB, 726102 rows, 1.27s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:11:00] [INFO] --- [81/92] Processing sub-93-a ---
+[2026-07-14T11:11:02] [INFO] sub-93-a: scanned sub-93-a_raw.csv (208.8 MB, 1209251 rows, 2.15s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:11:02] [INFO] --- [82/92] Processing sub-93-c ---
+[2026-07-14T11:11:03] [INFO] sub-93-c: scanned sub-93-c_raw.csv (153.3 MB, 895844 rows, 1.57s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:11:04] [INFO] --- [83/92] Processing sub-94-a ---
+[2026-07-14T11:11:05] [INFO] sub-94-a: scanned sub-94-a_raw.csv (149.0 MB, 864862 rows, 1.53s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:11:05] [INFO] --- [84/92] Processing sub-94-c ---
+[2026-07-14T11:11:07] [INFO] sub-94-c: scanned sub-94-c_raw.csv (154.4 MB, 893974 rows, 1.58s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:11:07] [INFO] --- [85/92] Processing sub-96-a ---
+[2026-07-14T11:11:08] [INFO] sub-96-a: scanned sub-96-a_raw.csv (110.8 MB, 632413 rows, 1.13s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:11:08] [INFO] --- [86/92] Processing sub-96-c ---
+[2026-07-14T11:11:09] [INFO] sub-96-c: scanned sub-96-c_raw.csv (103.5 MB, 592086 rows, 1.05s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:11:09] [INFO] --- [87/92] Processing sub-97-a ---
+[2026-07-14T11:11:11] [INFO] sub-97-a: scanned sub-97-a_raw.csv (125.3 MB, 711973 rows, 1.27s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:11:11] [INFO] --- [88/92] Processing sub-97-c ---
+[2026-07-14T11:11:11] [INFO] sub-97-c: scanned sub-97-c_raw.csv (60.4 MB, 342136 rows, 0.61s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:11:11] [INFO] --- [89/92] Processing sub-98-a ---
+[2026-07-14T11:11:13] [INFO] sub-98-a: scanned sub-98-a_raw.csv (124.6 MB, 706929 rows, 1.25s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:11:13] [INFO] --- [90/92] Processing sub-98-c ---
+[2026-07-14T11:11:14] [INFO] sub-98-c: scanned sub-98-c_raw.csv (112.8 MB, 662267 rows, 1.16s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:11:14] [INFO] --- [91/92] Processing sub-99-a ---
+[2026-07-14T11:11:16] [INFO] sub-99-a: scanned sub-99-a_raw.csv (194.0 MB, 1115866 rows, 1.97s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:11:16] [INFO] --- [92/92] Processing sub-99-c ---
+[2026-07-14T11:11:18] [INFO] sub-99-c: scanned sub-99-c_raw.csv (191.2 MB, 1130022 rows, 1.99s) -- trigger_nonzero=0 event_nonzero=0 malformed=0
+[2026-07-14T11:11:18] [INFO] Done processing 92 sessions in 141.8s.
+[2026-07-14T11:11:18] [INFO] Wrote full results to C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\raw_csv_edf_trigger_audit_results.json
+[2026-07-14T11:11:18] [INFO] Wrote flat summary to C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\raw_csv_edf_trigger_audit_sessions.csv

@@ -1,0 +1,571 @@
+[cohort_discovery] sub-121-a: AMBIGUOUS: 2 living-lab EDFs [sub-121-a_raw.edf, sub-121-a_0001_raw.edf] -> picked largest 'sub-121-a_raw.edf'
+[run_cohort] config_hash=1369195d89561183 git_sha=c7f85f4960549b93bb2475746791c91909064a0a
+[run_cohort] ica.enabled=True -> run_dir=C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica
+[run_cohort] found 36/36 recordings under C:\Data\LivingLab_PD
+[stage0] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\_reports\task_durations.csv
+[stage0] task segments: 310 total | 258 usable | 49 zero-duration | 2 corrupt | 1 shorter-than-10s
+[stage0]   DROP sub-34-c 'Sit to Stand': zero_or_negative_duration
+[stage0]   DROP sub-48-c 'Suspine Measure': zero_or_negative_duration
+[stage0]   DROP sub-48-c 'Standing Still': zero_or_negative_duration
+[stage0]   DROP sub-51-a 'Balance': zero_or_negative_duration
+[stage0]   DROP sub-51-c 'Suspine Measure': zero_or_negative_duration
+[stage0]   DROP sub-51-c 'Standing Still': zero_or_negative_duration
+[stage0]   DROP sub-53-c 'Suspine Measure': zero_or_negative_duration
+[stage0]   DROP sub-53-c 'Standing Still': zero_or_negative_duration
+[stage0]   DROP sub-53-c 'Balance': zero_or_negative_duration
+[stage0]   DROP sub-111-a 'Standing Still': zero_or_negative_duration
+[stage0]   DROP sub-111-c 'Suspine Measure': zero_or_negative_duration
+[stage0]   DROP sub-111-c 'Standing Still': zero_or_negative_duration
+[stage0]   DROP sub-114-a 'Suspine Measure': zero_or_negative_duration
+[stage0]   DROP sub-114-a 'Standing Still': zero_or_negative_duration
+[stage0]   DROP sub-115-c 'Suspine Measure': zero_or_negative_duration
+[stage0]   DROP sub-115-c 'Standing Still': zero_or_negative_duration
+[stage0]   DROP sub-116-a 'Suspine Measure': zero_or_negative_duration
+[stage0]   DROP sub-116-a 'Standing Still': zero_or_negative_duration
+[stage0]   DROP sub-116-c 'Suspine Measure': zero_or_negative_duration
+[stage0]   DROP sub-116-c 'Standing Still': zero_or_negative_duration
+[stage0]   DROP sub-116-c 'Balance': zero_or_negative_duration
+[stage0]   DROP sub-117-c 'Suspine Measure': zero_or_negative_duration
+[stage0]   DROP sub-117-c 'Standing Still': zero_or_negative_duration
+[stage0]   DROP sub-117-c 'Sit on Bed': zero_or_negative_duration
+[stage0]   DROP sub-117-c 'Kettel Task': zero_or_negative_duration
+[stage0]   DROP sub-117-c 'Toast Task1': zero_or_negative_duration
+[stage0]   DROP sub-117-c 'Toast Task2': zero_or_negative_duration
+[stage0]   DROP sub-119-a 'Suspine Measure': zero_or_negative_duration
+[stage0]   DROP sub-119-a 'Standing Still': zero_or_negative_duration
+[stage0]   DROP sub-119-c 'Suspine Measure': zero_or_negative_duration
+[stage0]   DROP sub-119-c 'Standing Still': zero_or_negative_duration
+[stage0]   DROP sub-121-c 'Suspine Measure': zero_or_negative_duration
+[stage0]   DROP sub-121-c 'Standing Still': zero_or_negative_duration
+[stage0]   DROP sub-123-a 'Suspine Measure': zero_or_negative_duration
+[stage0]   DROP sub-123-a 'Standing Still': zero_or_negative_duration
+[stage0]   DROP sub-123-c 'Suspine Measure': zero_or_negative_duration
+[stage0]   DROP sub-123-c 'Standing Still': zero_or_negative_duration
+[stage0]   DROP sub-125-c 'Suspine Measure': zero_or_negative_duration
+[stage0]   DROP sub-125-c 'Standing Still': zero_or_negative_duration
+[stage0]   DROP sub-129-a 'Suspine Measure': zero_or_negative_duration
+[stage0]   DROP sub-129-a 'Standing Still': zero_or_negative_duration
+[stage0]   DROP sub-129-c 'Suspine Measure': zero_or_negative_duration
+[stage0]   DROP sub-129-c 'Standing Still': zero_or_negative_duration
+[stage0]   DROP sub-131-c 'Suspine Measure': zero_or_negative_duration
+[stage0]   DROP sub-131-c 'Standing Still': zero_or_negative_duration
+[stage0]   DROP sub-134-c 'Suspine Measure': zero_or_negative_duration
+[stage0]   DROP sub-134-c 'Standing Still': zero_or_negative_duration
+[stage0]   DROP sub-135-a 'Suspine Measure': zero_or_negative_duration
+[stage0]   DROP sub-135-a 'Standing Still': zero_or_negative_duration
+[stage0]   DROP sub-34-c 'Toast Task': duration_exceeds_recording (corrupt timestamp)
+[stage0]   DROP sub-134-c 'UPDRS': duration_exceeds_recording (corrupt timestamp)
+[stage0]   DROP sub-125-a 'Sit to Stand': shorter_than_window (8.9s < 10s)
+[stage0] genuine tasks fitting >= 1 window: 100% (need >= 50%)
+[stage0] pre-flight OK: window length is safe.
+[pipeline] discovered 36 recordings: ['sub-34-a', 'sub-34-c', 'sub-42-a', 'sub-42-c', 'sub-48-a', 'sub-48-c', 'sub-51-a', 'sub-51-c', 'sub-53-a', 'sub-53-c', 'sub-111-a', 'sub-111-c', 'sub-114-a', 'sub-114-c', 'sub-115-a', 'sub-115-c', 'sub-116-a', 'sub-116-c', 'sub-117-a', 'sub-117-c', 'sub-119-a', 'sub-119-c', 'sub-121-a', 'sub-121-c', 'sub-123-a', 'sub-123-c', 'sub-125-a', 'sub-125-c', 'sub-129-a', 'sub-129-c', 'sub-131-a', 'sub-131-c', 'sub-134-a', 'sub-134-c', 'sub-135-a', 'sub-135-c']
+[pipeline] reference scheme='linkedears' (ref_channels=['A1', 'A2']) -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica
+[provenance] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\provenance.json
+
+[pipeline] === sub-34-a (A) ===
+[stage1a] sub-34-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-34-a: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 1/18 total (iclabel=[], eog-frontal-corr=[1])
+[stage1a] sub-34-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-34-a: PSD OK | pass1-40=1.01 low<0.3=0.184 high>75.0=0.0468 notch@50.0=1.02
+[stage5] sub-34-a: meas_date_wholehour corr=+0s fit=4/7 (57%) reconciled=False [cont_valid]
+[stage5]   partial: constant offset (correction=0s) fits 57% but first/last not both inside -> some tasks outside recording, clamped.
+[stage6] sub-34-a: 411 windows (207 non-overlap subset) from 7 tasks, shape (18, 2000)
+[stage7] sub-34-a: y_cond=0 (A), t_cont 5.0..2937.9s, cont_valid=True
+[stage8] sub-34-a: rejection disabled, kept all 411
+[stage9] sub-34-a: wrote 411 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\windows\sub-34
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\_reports\ica_report_sub-34-a.json
+
+[pipeline] === sub-34-c (C) ===
+[stage1a] sub-34-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-34-c: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 5/18 total (iclabel=[1, 4, 5, 13], eog-frontal-corr=[2])
+[stage1a] sub-34-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-34-c: PSD OK | pass1-40=0.74 low<0.3=0.088 high>75.0=0.0454 notch@50.0=0.92
+[stage5] sub-34-c: meas_date_wholehour corr=+0s fit=0/5 (0%) reconciled=False [CONT_MASKED]
+[stage5]   UNRESOLVED: only 0% of usable tasks fit at best whole-hour offset (correction=0s); continuous target masked.
+[stage6] sub-34-c: 0 windows (0 non-overlap subset) from 5 tasks, shape (18, 2000)
+[stage7] sub-34-c: no windows to label
+[stage8] sub-34-c: rejection disabled, kept all 0
+[stage9] sub-34-c: wrote 0 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\windows\sub-34
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\_reports\ica_report_sub-34-c.json
+
+[pipeline] === sub-42-a (A) ===
+[stage1a] sub-42-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-42-a: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 1/18 total (iclabel=[], eog-frontal-corr=[1])
+[stage1a] sub-42-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-42-a: PSD OK | pass1-40=0.98 low<0.3=0.204 high>75.0=0.0516 notch@50.0=1.04
+[stage5] sub-42-a: meas_date_wholehour corr=+0s fit=5/7 (71%) reconciled=False [cont_valid]
+Traceback (most recent call last):
+  File "C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\src\livinglab_prep\pipeline.py", line 60, in run_pipeline
+    labeled = label_windows(cfg, pre, align, windows)  # Stage 7
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\src\livinglab_prep\label.py", line 61, in label_windows
+    raise AssertionError(f"{align.key}: continuous target not monotonic within session")
+AssertionError: sub-53-c: continuous target not monotonic within session
+Traceback (most recent call last):
+  File "C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\src\livinglab_prep\pipeline.py", line 56, in run_pipeline
+    pre = preprocess_recording(cfg, rec)          # Stages 1-3 (+2b ICA)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\src\livinglab_prep\preprocess.py", line 178, in preprocess_recording
+    raw = apply_reference(cfg, raw, rec.key)      # Stage 1a (A1/A2 still present)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\src\livinglab_prep\reference.py", line 105, in apply_reference
+    ref_labels = resolve_ref_labels(cfg, list(raw.ch_names), key)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\src\livinglab_prep\reference.py", line 72, in resolve_ref_labels
+    raise ValueError(
+ValueError: sub-111-a: reference channel(s) ['A1', 'A2'] not found (also tried the 'EEG {name}-Pz' pattern). Re-referencing needs these channels present in the raw recording. Available channels (13): ['EEG LE-Pz', 'EEG F4-Pz', 'EEG C4-Pz', 'EEG P4-Pz', 'EEG P3-Pz', 'EEG C3-Pz', 'EEG F3-Pz', 'Pz', 'Trigger', 'Event', 'Ax', 'Ay', 'Az']
+Traceback (most recent call last):
+  File "C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\src\livinglab_prep\pipeline.py", line 56, in run_pipeline
+    pre = preprocess_recording(cfg, rec)          # Stages 1-3 (+2b ICA)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\src\livinglab_prep\preprocess.py", line 178, in preprocess_recording
+    raw = apply_reference(cfg, raw, rec.key)      # Stage 1a (A1/A2 still present)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\src\livinglab_prep\reference.py", line 105, in apply_reference
+    ref_labels = resolve_ref_labels(cfg, list(raw.ch_names), key)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\src\livinglab_prep\reference.py", line 72, in resolve_ref_labels
+    raise ValueError(
+ValueError: sub-111-c: reference channel(s) ['A1', 'A2'] not found (also tried the 'EEG {name}-Pz' pattern). Re-referencing needs these channels present in the raw recording. Available channels (13): ['EEG LE-Pz', 'EEG F4-Pz', 'EEG C4-Pz', 'EEG P4-Pz', 'EEG P3-Pz', 'EEG C3-Pz', 'EEG F3-Pz', 'Pz', 'Trigger', 'Event', 'Ax', 'Ay', 'Az']
+Traceback (most recent call last):
+  File "C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\src\livinglab_prep\pipeline.py", line 60, in run_pipeline
+    labeled = label_windows(cfg, pre, align, windows)  # Stage 7
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\src\livinglab_prep\label.py", line 61, in label_windows
+    raise AssertionError(f"{align.key}: continuous target not monotonic within session")
+AssertionError: sub-116-a: continuous target not monotonic within session
+[stage5]   partial: constant offset (correction=0s) fits 71% but first/last not both inside -> some tasks outside recording, clamped.
+[stage6] sub-42-a: 156 windows (79 non-overlap subset) from 7 tasks, shape (18, 2000)
+[stage7] sub-42-a: y_cond=0 (A), t_cont 1310.0..2798.8s, cont_valid=True
+[stage8] sub-42-a: rejection disabled, kept all 156
+[stage9] sub-42-a: wrote 156 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\windows\sub-42
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\_reports\ica_report_sub-42-a.json
+
+[pipeline] === sub-42-c (C) ===
+[stage1a] sub-42-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-42-c: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 4/18 total (iclabel=[5], eog-frontal-corr=[0, 2, 4])
+[stage1a] sub-42-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-42-c: PSD WARN | pass1-40=0.50 low<0.3=0.097 high>75.0=0.0415 notch@50.0=1.11
+[stage4] WARNING: sub-42-c PSD fingerprint off expected (check C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\_reports\psd\sub-42-c.png)
+[stage5] sub-42-c: meas_date_wholehour corr=+0s fit=0/7 (0%) reconciled=False [CONT_MASKED]
+[stage5]   UNRESOLVED: only 0% of usable tasks fit at best whole-hour offset (correction=0s); continuous target masked.
+[stage6] sub-42-c: 27 windows (14 non-overlap subset) from 7 tasks, shape (18, 2000)
+[stage7] sub-42-c: y_cond=1 (C), t_cont 5.0..135.0s, cont_valid=False
+[stage8] sub-42-c: rejection disabled, kept all 27
+[stage9] sub-42-c: wrote 27 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\windows\sub-42
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\_reports\ica_report_sub-42-c.json
+
+[pipeline] === sub-48-a (A) ===
+[stage1a] sub-48-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-48-a: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 2/18 total (iclabel=[], eog-frontal-corr=[1, 4])
+[stage1a] sub-48-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-48-a: PSD OK | pass1-40=0.79 low<0.3=0.181 high>75.0=0.0445 notch@50.0=0.93
+[stage5] sub-48-a: meas_date_wholehour corr=+0s fit=2/7 (29%) reconciled=False [CONT_MASKED]
+[stage5]   UNRESOLVED: only 29% of usable tasks fit at best whole-hour offset (correction=0s); continuous target masked.
+[stage6] sub-48-a: 40 windows (21 non-overlap subset) from 7 tasks, shape (18, 2000)
+[stage7] sub-48-a: y_cond=0 (A), t_cont 1284.4..1519.1s, cont_valid=False
+[stage8] sub-48-a: rejection disabled, kept all 40
+[stage9] sub-48-a: wrote 40 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\windows\sub-48
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\_reports\ica_report_sub-48-a.json
+
+[pipeline] === sub-48-c (C) ===
+[stage1a] sub-48-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-48-c: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 2/18 total (iclabel=[11], eog-frontal-corr=[6])
+[stage1a] sub-48-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-48-c: PSD OK | pass1-40=0.74 low<0.3=0.167 high>75.0=0.0376 notch@50.0=1.09
+[stage5] sub-48-c: meas_date_wholehour corr=+0s fit=0/5 (0%) reconciled=False [CONT_MASKED]
+[stage5]   UNRESOLVED: only 0% of usable tasks fit at best whole-hour offset (correction=0s); continuous target masked.
+[stage6] sub-48-c: 0 windows (0 non-overlap subset) from 5 tasks, shape (18, 2000)
+[stage7] sub-48-c: no windows to label
+[stage8] sub-48-c: rejection disabled, kept all 0
+[stage9] sub-48-c: wrote 0 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\windows\sub-48
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\_reports\ica_report_sub-48-c.json
+
+[pipeline] === sub-51-a (A) ===
+[stage1a] sub-51-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-51-a: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 2/18 total (iclabel=[], eog-frontal-corr=[1, 5])
+[stage1a] sub-51-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-51-a: PSD OK | pass1-40=0.51 low<0.3=0.164 high>75.0=0.0248 notch@50.0=0.97
+[stage5] sub-51-a: meas_date_wholehour corr=+0s fit=4/6 (67%) reconciled=False [cont_valid]
+[stage5]   partial: constant offset (correction=0s) fits 67% but first/last not both inside -> some tasks outside recording, clamped.
+[stage6] sub-51-a: 182 windows (92 non-overlap subset) from 6 tasks, shape (18, 2000)
+[stage7] sub-51-a: y_cond=0 (A), t_cont 1296.5..3145.6s, cont_valid=True
+[stage8] sub-51-a: rejection disabled, kept all 182
+[stage9] sub-51-a: wrote 182 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\windows\sub-51
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\_reports\ica_report_sub-51-a.json
+
+[pipeline] === sub-51-c (C) ===
+[stage1a] sub-51-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-51-c: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 2/18 total (iclabel=[8], eog-frontal-corr=[0])
+[stage1a] sub-51-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-51-c: PSD WARN | pass1-40=0.17 low<0.3=0.197 high>75.0=0.0270 notch@50.0=2.39
+[stage4] WARNING: sub-51-c PSD fingerprint off expected (check C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\_reports\psd\sub-51-c.png)
+[stage5] sub-51-c: meas_date_wholehour corr=+0s fit=5/5 (100%) reconciled=True [cont_valid]
+[stage5]   resolved: constant offset via meas_date + 0s correction.
+[stage6] sub-51-c: 168 windows (85 non-overlap subset) from 5 tasks, shape (18, 2000)
+[stage7] sub-51-c: y_cond=1 (C), t_cont 108.1..1312.2s, cont_valid=True
+[stage8] sub-51-c: rejection disabled, kept all 168
+[stage9] sub-51-c: wrote 168 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\windows\sub-51
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\_reports\ica_report_sub-51-c.json
+
+[pipeline] === sub-53-a (A) ===
+[stage1a] sub-53-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-53-a: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 4/18 total (iclabel=[11], eog-frontal-corr=[0, 2, 4])
+[stage1a] sub-53-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-53-a: PSD OK | pass1-40=0.92 low<0.3=0.169 high>75.0=0.0534 notch@50.0=0.92
+[stage5] sub-53-a: meas_date_wholehour corr=+0s fit=5/7 (71%) reconciled=False [cont_valid]
+[stage5]   partial: constant offset (correction=0s) fits 71% but first/last not both inside -> some tasks outside recording, clamped.
+[stage6] sub-53-a: 195 windows (99 non-overlap subset) from 7 tasks, shape (18, 2000)
+[stage7] sub-53-a: y_cond=0 (A), t_cont 905.1..2586.3s, cont_valid=True
+[stage8] sub-53-a: rejection disabled, kept all 195
+[stage9] sub-53-a: wrote 195 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\windows\sub-53
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\_reports\ica_report_sub-53-a.json
+
+[pipeline] === sub-53-c (C) ===
+[stage1a] sub-53-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-53-c: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 3/18 total (iclabel=[], eog-frontal-corr=[0, 1, 4])
+[stage1a] sub-53-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-53-c: PSD WARN | pass1-40=0.19 low<0.3=0.105 high>75.0=0.0053 notch@50.0=1.12
+[stage4] WARNING: sub-53-c PSD fingerprint off expected (check C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\_reports\psd\sub-53-c.png)
+[stage5] sub-53-c: meas_date_wholehour corr=+0s fit=4/4 (100%) reconciled=True [cont_valid]
+[stage5]   resolved: constant offset via meas_date + 0s correction.
+[stage6] sub-53-c: 149 windows (76 non-overlap subset) from 4 tasks, shape (18, 2000)
+[pipeline] FAILED sub-53-c: sub-53-c: continuous target not monotonic within session
+
+[pipeline] === sub-111-a (A) ===
+[pipeline] FAILED sub-111-a: sub-111-a: reference channel(s) ['A1', 'A2'] not found (also tried the 'EEG {name}-Pz' pattern). Re-referencing needs these channels present in the raw recording. Available channels (13): ['EEG LE-Pz', 'EEG F4-Pz', 'EEG C4-Pz', 'EEG P4-Pz', 'EEG P3-Pz', 'EEG C3-Pz', 'EEG F3-Pz', 'Pz', 'Trigger', 'Event', 'Ax', 'Ay', 'Az']
+
+[pipeline] === sub-111-c (C) ===
+[pipeline] FAILED sub-111-c: sub-111-c: reference channel(s) ['A1', 'A2'] not found (also tried the 'EEG {name}-Pz' pattern). Re-referencing needs these channels present in the raw recording. Available channels (13): ['EEG LE-Pz', 'EEG F4-Pz', 'EEG C4-Pz', 'EEG P4-Pz', 'EEG P3-Pz', 'EEG C3-Pz', 'EEG F3-Pz', 'Pz', 'Trigger', 'Event', 'Ax', 'Ay', 'Az']
+
+[pipeline] === sub-114-a (A) ===
+[stage1a] sub-114-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-114-a: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 6/18 total (iclabel=[6, 9, 11, 12, 14], eog-frontal-corr=[7])
+[stage1a] sub-114-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-114-a: PSD WARN | pass1-40=0.45 low<0.3=0.133 high>75.0=0.0200 notch@50.0=1.00
+[stage4] WARNING: sub-114-a PSD fingerprint off expected (check C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\_reports\psd\sub-114-a.png)
+[stage5] sub-114-a: meas_date_wholehour corr=+0s fit=7/7 (100%) reconciled=True [cont_valid]
+[stage5]   resolved: constant offset via meas_date + 0s correction.
+[stage6] sub-114-a: 300 windows (152 non-overlap subset) from 7 tasks, shape (18, 2000)
+[stage7] sub-114-a: y_cond=0 (A), t_cont 230.5..3102.6s, cont_valid=True
+[stage8] sub-114-a: rejection disabled, kept all 300
+[stage9] sub-114-a: wrote 300 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\windows\sub-114
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\_reports\ica_report_sub-114-a.json
+
+[pipeline] === sub-114-c (C) ===
+[stage1a] sub-114-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-114-c: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 2/18 total (iclabel=[], eog-frontal-corr=[0, 15])
+[stage1a] sub-114-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-114-c: PSD OK | pass1-40=1.01 low<0.3=0.203 high>75.0=0.0698 notch@50.0=0.98
+[stage5] sub-114-c: meas_date_wholehour corr=+0s fit=7/9 (78%) reconciled=False [cont_valid]
+[stage5]   partial: constant offset (correction=0s) fits 78% but first/last not both inside -> some tasks outside recording, clamped.
+[stage6] sub-114-c: 274 windows (139 non-overlap subset) from 9 tasks, shape (18, 2000)
+[stage7] sub-114-c: y_cond=1 (C), t_cont 165.7..3653.8s, cont_valid=True
+[stage8] sub-114-c: rejection disabled, kept all 274
+[stage9] sub-114-c: wrote 274 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\windows\sub-114
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\_reports\ica_report_sub-114-c.json
+
+[pipeline] === sub-115-a (A) ===
+[stage1a] sub-115-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-115-a: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 2/18 total (iclabel=[], eog-frontal-corr=[3, 4])
+[stage1a] sub-115-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-115-a: PSD WARN | pass1-40=0.92 low<0.3=0.174 high>75.0=0.0423 notch@50.0=3.00
+[stage4] WARNING: sub-115-a PSD fingerprint off expected (check C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\_reports\psd\sub-115-a.png)
+[stage5] sub-115-a: meas_date_wholehour corr=+0s fit=7/9 (78%) reconciled=False [cont_valid]
+[stage5]   partial: constant offset (correction=0s) fits 78% but first/last not both inside -> some tasks outside recording, clamped.
+[stage6] sub-115-a: 251 windows (128 non-overlap subset) from 9 tasks, shape (18, 2000)
+[stage7] sub-115-a: y_cond=0 (A), t_cont 19.2..3127.0s, cont_valid=True
+[stage8] sub-115-a: rejection disabled, kept all 251
+[stage9] sub-115-a: wrote 251 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\windows\sub-115
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\_reports\ica_report_sub-115-a.json
+
+[pipeline] === sub-115-c (C) ===
+[stage1a] sub-115-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-115-c: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 2/18 total (iclabel=[], eog-frontal-corr=[9, 17])
+[stage1a] sub-115-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-115-c: PSD OK | pass1-40=0.96 low<0.3=0.222 high>75.0=0.0493 notch@50.0=0.99
+[stage5] sub-115-c: meas_date_wholehour corr=+0s fit=7/7 (100%) reconciled=True [cont_valid]
+[stage5]   resolved: constant offset via meas_date + 0s correction.
+[stage6] sub-115-c: 228 windows (116 non-overlap subset) from 7 tasks, shape (18, 2000)
+[stage7] sub-115-c: y_cond=1 (C), t_cont 75.0..2181.7s, cont_valid=True
+[stage8] sub-115-c: rejection disabled, kept all 228
+[stage9] sub-115-c: wrote 228 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\windows\sub-115
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\_reports\ica_report_sub-115-c.json
+
+[pipeline] === sub-116-a (A) ===
+[stage1a] sub-116-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-116-a: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 2/18 total (iclabel=[], eog-frontal-corr=[16, 17])
+[stage1a] sub-116-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-116-a: PSD OK | pass1-40=0.98 low<0.3=0.227 high>75.0=0.0472 notch@50.0=0.94
+[stage5] sub-116-a: meas_date_wholehour corr=+0s fit=7/7 (100%) reconciled=True [cont_valid]
+[stage5]   resolved: constant offset via meas_date + 0s correction.
+[stage6] sub-116-a: 313 windows (158 non-overlap subset) from 7 tasks, shape (18, 2000)
+[pipeline] FAILED sub-116-a: sub-116-a: continuous target not monotonic within session
+
+[pipeline] === sub-116-c (C) ===
+[stage1a] sub-116-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-116-c: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 2/18 total (iclabel=[16], eog-frontal-corr=[16, 17])
+[stage1a] sub-116-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-116-c: PSD OK | pass1-40=1.00 low<0.3=0.211 high>75.0=0.0509 notch@50.0=1.61
+[stage5] sub-116-c: meas_date_wholehour corr=+0s fit=6/6 (100%) reconciled=True [cont_valid]
+[stage5]   resolved: constant offset via meas_date + 0s correction.
+[stage6] sub-116-c: 240 windows (121 non-overlap subset) from 6 tasks, shape (18, 2000)
+[stage7] sub-116-c: y_cond=1 (C), t_cont 92.2..2547.9s, cont_valid=True
+[stage8] sub-116-c: rejection disabled, kept all 240
+[stage9] sub-116-c: wrote 240 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\windows\sub-116
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\_reports\ica_report_sub-116-c.json
+
+[pipeline] === sub-117-a (A) ===
+[stage1a] sub-117-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-117-a: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 1/18 total (iclabel=[], eog-frontal-corr=[6])
+[stage1a] sub-117-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-117-a: PSD OK | pass1-40=1.04 low<0.3=0.249 high>75.0=0.0531 notch@50.0=1.22
+[stage5] sub-117-a: meas_date_wholehour corr=+0s fit=7/9 (78%) reconciled=False [cont_valid]
+[stage5]   partial: constant offset (correction=0s) fits 78% but first/last not both inside -> some tasks outside recording, clamped.
+[stage6] sub-117-a: 261 windows (132 non-overlap subset) from 9 tasks, shape (18, 2000)
+[stage7] sub-117-a: y_cond=0 (A), t_cont 658.3..2389.7s, cont_valid=True
+[stage8] sub-117-a: rejection disabled, kept all 261
+[stage9] sub-117-a: wrote 261 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\windows\sub-117
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\_reports\ica_report_sub-117-a.json
+
+[pipeline] === sub-117-c (C) ===
+[stage1a] sub-117-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-117-c: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 2/18 total (iclabel=[17], eog-frontal-corr=[4])
+[stage1a] sub-117-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-117-c: PSD WARN | pass1-40=0.97 low<0.3=0.268 high>75.0=0.0377 notch@50.0=2.75
+[stage4] WARNING: sub-117-c PSD fingerprint off expected (check C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\_reports\psd\sub-117-c.png)
+[stage5] sub-117-c: meas_date_wholehour corr=+0s fit=1/3 (33%) reconciled=False [CONT_MASKED]
+[stage5]   UNRESOLVED: only 33% of usable tasks fit at best whole-hour offset (correction=0s); continuous target masked.
+[stage6] sub-117-c: 2 windows (1 non-overlap subset) from 3 tasks, shape (18, 2000)
+[stage7] sub-117-c: y_cond=1 (C), t_cont 11.1..16.1s, cont_valid=False
+[stage8] sub-117-c: rejection disabled, kept all 2
+[stage9] sub-117-c: wrote 2 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\windows\sub-117
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\_reports\ica_report_sub-117-c.json
+
+[pipeline] === sub-119-a (A) ===
+[stage1a] sub-119-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-119-a: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 2/18 total (iclabel=[], eog-frontal-corr=[14, 17])
+[stage1a] sub-119-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-119-a: PSD WARN | pass1-40=0.99 low<0.3=0.248 high>75.0=0.0505 notch@50.0=2.30
+[stage4] WARNING: sub-119-a PSD fingerprint off expected (check C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\_reports\psd\sub-119-a.png)
+[stage5] sub-119-a: meas_date_wholehour corr=+0s fit=7/7 (100%) reconciled=True [cont_valid]
+[stage5]   resolved: constant offset via meas_date + 0s correction.
+[stage6] sub-119-a: 261 windows (132 non-overlap subset) from 7 tasks, shape (18, 2000)
+[stage7] sub-119-a: y_cond=0 (A), t_cont 617.7..2331.7s, cont_valid=True
+[stage8] sub-119-a: rejection disabled, kept all 261
+[stage9] sub-119-a: wrote 261 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\windows\sub-119
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\_reports\ica_report_sub-119-a.json
+
+[pipeline] === sub-119-c (C) ===
+[stage1a] sub-119-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-119-c: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 2/18 total (iclabel=[], eog-frontal-corr=[14, 15])
+[stage1a] sub-119-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-119-c: PSD OK | pass1-40=0.94 low<0.3=0.251 high>75.0=0.0478 notch@50.0=1.23
+[stage5] sub-119-c: meas_date_wholehour corr=+0s fit=7/7 (100%) reconciled=True [cont_valid]
+[stage5]   resolved: constant offset via meas_date + 0s correction.
+[stage6] sub-119-c: 306 windows (154 non-overlap subset) from 7 tasks, shape (18, 2000)
+[stage7] sub-119-c: y_cond=1 (C), t_cont 831.6..3017.8s, cont_valid=True
+[stage8] sub-119-c: rejection disabled, kept all 306
+[stage9] sub-119-c: wrote 306 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\windows\sub-119
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\_reports\ica_report_sub-119-c.json
+
+[pipeline] === sub-121-a (A) ===
+[stage1a] sub-121-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-121-a: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 3/18 total (iclabel=[], eog-frontal-corr=[1, 3, 8])
+[stage1a] sub-121-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-121-a: PSD WARN | pass1-40=0.85 low<0.3=0.155 high>75.0=0.0420 notch@50.0=3.03
+[stage4] WARNING: sub-121-a PSD fingerprint off expected (check C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\_reports\psd\sub-121-a.png)
+[stage5] sub-121-a: meas_date_wholehour corr=+0s fit=3/9 (33%) reconciled=False [CONT_MASKED]
+[stage5]   UNRESOLVED: only 33% of usable tasks fit at best whole-hour offset (correction=0s); continuous target masked.
+[stage6] sub-121-a: 32 windows (18 non-overlap subset) from 9 tasks, shape (18, 2000)
+[stage7] sub-121-a: y_cond=0 (A), t_cont 1004.9..1496.3s, cont_valid=False
+[stage8] sub-121-a: rejection disabled, kept all 32
+[stage9] sub-121-a: wrote 32 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\windows\sub-121
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\_reports\ica_report_sub-121-a.json
+
+[pipeline] === sub-121-c (C) ===
+[stage1a] sub-121-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-121-c: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 3/18 total (iclabel=[], eog-frontal-corr=[1, 3, 14])
+[stage1a] sub-121-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-121-c: PSD WARN | pass1-40=0.94 low<0.3=0.195 high>75.0=0.0375 notch@50.0=2.61
+[stage4] WARNING: sub-121-c PSD fingerprint off expected (check C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\_reports\psd\sub-121-c.png)
+[stage5] sub-121-c: meas_date_wholehour corr=+0s fit=7/7 (100%) reconciled=True [cont_valid]
+[stage5]   resolved: constant offset via meas_date + 0s correction.
+[stage6] sub-121-c: 276 windows (140 non-overlap subset) from 7 tasks, shape (18, 2000)
+[stage7] sub-121-c: y_cond=1 (C), t_cont 1032.0..2945.8s, cont_valid=True
+[stage8] sub-121-c: rejection disabled, kept all 276
+[stage9] sub-121-c: wrote 276 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\windows\sub-121
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\_reports\ica_report_sub-121-c.json
+
+[pipeline] === sub-123-a (A) ===
+[stage1a] sub-123-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-123-a: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 2/18 total (iclabel=[], eog-frontal-corr=[9, 12])
+[stage1a] sub-123-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-123-a: PSD WARN | pass1-40=0.95 low<0.3=0.210 high>75.0=0.0490 notch@50.0=2.88
+[stage4] WARNING: sub-123-a PSD fingerprint off expected (check C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\_reports\psd\sub-123-a.png)
+[stage5] sub-123-a: meas_date_wholehour corr=+0s fit=7/7 (100%) reconciled=True [cont_valid]
+[stage5]   resolved: constant offset via meas_date + 0s correction.
+[stage6] sub-123-a: 277 windows (140 non-overlap subset) from 7 tasks, shape (18, 2000)
+[stage7] sub-123-a: y_cond=0 (A), t_cont 94.0..2569.1s, cont_valid=True
+[stage8] sub-123-a: rejection disabled, kept all 277
+[stage9] sub-123-a: wrote 277 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\windows\sub-123
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\_reports\ica_report_sub-123-a.json
+
+[pipeline] === sub-123-c (C) ===
+[stage1a] sub-123-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-123-c: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 1/18 total (iclabel=[], eog-frontal-corr=[14])
+[stage1a] sub-123-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-123-c: PSD OK | pass1-40=0.99 low<0.3=0.209 high>75.0=0.0501 notch@50.0=0.88
+[stage5] sub-123-c: meas_date_wholehour corr=+0s fit=7/7 (100%) reconciled=True [cont_valid]
+[stage5]   resolved: constant offset via meas_date + 0s correction.
+[stage6] sub-123-c: 179 windows (92 non-overlap subset) from 7 tasks, shape (18, 2000)
+[stage7] sub-123-c: y_cond=1 (C), t_cont 762.8..1985.0s, cont_valid=True
+[stage8] sub-123-c: rejection disabled, kept all 179
+[stage9] sub-123-c: wrote 179 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\windows\sub-123
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\_reports\ica_report_sub-123-c.json
+
+[pipeline] === sub-125-a (A) ===
+[stage1a] sub-125-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-125-a: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 1/18 total (iclabel=[], eog-frontal-corr=[2])
+[stage1a] sub-125-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-125-a: PSD OK | pass1-40=0.93 low<0.3=0.257 high>75.0=0.0468 notch@50.0=1.12
+[stage5] sub-125-a: meas_date_wholehour corr=-3600s fit=6/8 (75%) reconciled=False [cont_valid]
+[stage5]   partial: constant offset (correction=-3600s) fits 75% but first/last not both inside -> some tasks outside recording, clamped.
+[stage6] sub-125-a: 285 windows (143 non-overlap subset) from 8 tasks, shape (18, 2000)
+[stage7] sub-125-a: y_cond=0 (A), t_cont 1282.2..3212.4s, cont_valid=True
+[stage8] sub-125-a: rejection disabled, kept all 285
+[stage9] sub-125-a: wrote 285 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\windows\sub-125
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\_reports\ica_report_sub-125-a.json
+
+[pipeline] === sub-125-c (C) ===
+[stage1a] sub-125-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-125-c: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 2/18 total (iclabel=[], eog-frontal-corr=[3, 16])
+[stage1a] sub-125-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-125-c: PSD OK | pass1-40=0.87 low<0.3=0.214 high>75.0=0.0428 notch@50.0=0.98
+[stage5] sub-125-c: meas_date_wholehour corr=-3600s fit=7/7 (100%) reconciled=True [cont_valid]
+[stage5]   resolved: constant offset via meas_date + -3600s correction.
+[stage6] sub-125-c: 235 windows (120 non-overlap subset) from 7 tasks, shape (18, 2000)
+[stage7] sub-125-c: y_cond=1 (C), t_cont 679.2..2366.4s, cont_valid=True
+[stage8] sub-125-c: rejection disabled, kept all 235
+[stage9] sub-125-c: wrote 235 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\windows\sub-125
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\_reports\ica_report_sub-125-c.json
+
+[pipeline] === sub-129-a (A) ===
+[stage1a] sub-129-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-129-a: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 1/18 total (iclabel=[], eog-frontal-corr=[5])
+[stage1a] sub-129-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-129-a: PSD OK | pass1-40=0.90 low<0.3=0.221 high>75.0=0.0498 notch@50.0=0.94
+[stage5] sub-129-a: meas_date_wholehour corr=-3600s fit=7/7 (100%) reconciled=True [cont_valid]
+[stage5]   resolved: constant offset via meas_date + -3600s correction.
+[stage6] sub-129-a: 257 windows (129 non-overlap subset) from 7 tasks, shape (18, 2000)
+[stage7] sub-129-a: y_cond=0 (A), t_cont 205.2..2377.7s, cont_valid=True
+[stage8] sub-129-a: rejection disabled, kept all 257
+[stage9] sub-129-a: wrote 257 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\windows\sub-129
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\_reports\ica_report_sub-129-a.json
+
+[pipeline] === sub-129-c (C) ===
+[stage1a] sub-129-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-129-c: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 1/18 total (iclabel=[], eog-frontal-corr=[12])
+[stage1a] sub-129-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-129-c: PSD OK | pass1-40=0.98 low<0.3=0.214 high>75.0=0.0482 notch@50.0=1.01
+[stage5] sub-129-c: meas_date_wholehour corr=-3600s fit=7/7 (100%) reconciled=True [cont_valid]
+[stage5]   resolved: constant offset via meas_date + -3600s correction.
+[stage6] sub-129-c: 350 windows (177 non-overlap subset) from 7 tasks, shape (18, 2000)
+[stage7] sub-129-c: y_cond=1 (C), t_cont 143.4..2811.1s, cont_valid=True
+[stage8] sub-129-c: rejection disabled, kept all 350
+[stage9] sub-129-c: wrote 350 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\windows\sub-129
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\_reports\ica_report_sub-129-c.json
+
+[pipeline] === sub-131-a (A) ===
+[stage1a] sub-131-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-131-a: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 3/18 total (iclabel=[], eog-frontal-corr=[14, 15, 16])
+[stage1a] sub-131-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-131-a: PSD OK | pass1-40=0.91 low<0.3=0.188 high>75.0=0.0432 notch@50.0=1.00
+[stage5] sub-131-a: meas_date_wholehour corr=-3600s fit=8/10 (80%) reconciled=False [cont_valid]
+[stage5]   partial: constant offset (correction=-3600s) fits 80% but first/last not both inside -> some tasks outside recording, clamped.
+[stage6] sub-131-a: 342 windows (172 non-overlap subset) from 10 tasks, shape (18, 2000)
+[stage7] sub-131-a: y_cond=0 (A), t_cont 100.6..2981.7s, cont_valid=True
+[stage8] sub-131-a: rejection disabled, kept all 342
+[stage9] sub-131-a: wrote 342 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\windows\sub-131
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\_reports\ica_report_sub-131-a.json
+
+[pipeline] === sub-131-c (C) ===
+[stage1a] sub-131-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-131-c: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 2/18 total (iclabel=[], eog-frontal-corr=[13, 14])
+[stage1a] sub-131-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-131-c: PSD OK | pass1-40=0.93 low<0.3=0.206 high>75.0=0.0449 notch@50.0=0.99
+[stage5] sub-131-c: meas_date_wholehour corr=-3600s fit=8/8 (100%) reconciled=True [cont_valid]
+[stage5]   resolved: constant offset via meas_date + -3600s correction.
+[stage6] sub-131-c: 290 windows (148 non-overlap subset) from 8 tasks, shape (18, 2000)
+[stage7] sub-131-c: y_cond=1 (C), t_cont 13.8..2132.9s, cont_valid=True
+[stage8] sub-131-c: rejection disabled, kept all 290
+[stage9] sub-131-c: wrote 290 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\windows\sub-131
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\_reports\ica_report_sub-131-c.json
+
+[pipeline] === sub-134-a (A) ===
+[stage1a] sub-134-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-134-a: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 2/18 total (iclabel=[], eog-frontal-corr=[16, 17])
+[stage1a] sub-134-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-134-a: PSD OK | pass1-40=1.00 low<0.3=0.252 high>75.0=0.0509 notch@50.0=1.02
+[stage5] sub-134-a: meas_date_wholehour corr=+0s fit=7/10 (70%) reconciled=False [cont_valid]
+[stage5]   partial: constant offset (correction=0s) fits 70% but first/last not both inside -> some tasks outside recording, clamped.
+[stage6] sub-134-a: 486 windows (245 non-overlap subset) from 10 tasks, shape (18, 2000)
+[stage7] sub-134-a: y_cond=0 (A), t_cont 5.0..3116.6s, cont_valid=True
+[stage8] sub-134-a: rejection disabled, kept all 486
+[stage9] sub-134-a: wrote 486 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\windows\sub-134
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\_reports\ica_report_sub-134-a.json
+
+[pipeline] === sub-134-c (C) ===
+[stage1a] sub-134-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-134-c: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 2/18 total (iclabel=[], eog-frontal-corr=[16, 17])
+[stage1a] sub-134-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-134-c: PSD OK | pass1-40=1.00 low<0.3=0.252 high>75.0=0.0494 notch@50.0=0.92
+[stage5] sub-134-c: meas_date_wholehour corr=+0s fit=7/7 (100%) reconciled=True [cont_valid]
+[stage5]   resolved: constant offset via meas_date + 0s correction.
+[stage6] sub-134-c: 234 windows (118 non-overlap subset) from 7 tasks, shape (18, 2000)
+[stage7] sub-134-c: y_cond=1 (C), t_cont 1230.6..3144.1s, cont_valid=True
+[stage8] sub-134-c: rejection disabled, kept all 234
+[stage9] sub-134-c: wrote 234 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\windows\sub-134
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\_reports\ica_report_sub-134-c.json
+
+[pipeline] === sub-135-a (A) ===
+[stage1a] sub-135-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-135-a: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 2/18 total (iclabel=[], eog-frontal-corr=[12, 14])
+[stage1a] sub-135-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-135-a: PSD OK | pass1-40=0.99 low<0.3=0.216 high>75.0=0.0479 notch@50.0=1.54
+[stage5] sub-135-a: meas_date_wholehour corr=-3600s fit=8/8 (100%) reconciled=True [cont_valid]
+[stage5]   resolved: constant offset via meas_date + -3600s correction.
+[stage6] sub-135-a: 358 windows (180 non-overlap subset) from 8 tasks, shape (18, 2000)
+[stage7] sub-135-a: y_cond=0 (A), t_cont 87.7..2694.1s, cont_valid=True
+[stage8] sub-135-a: rejection disabled, kept all 358
+[stage9] sub-135-a: wrote 358 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\windows\sub-135
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\_reports\ica_report_sub-135-a.json
+
+[pipeline] === sub-135-c (C) ===
+[stage1a] sub-135-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-135-c: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 2/18 total (iclabel=[], eog-frontal-corr=[13, 14])
+[stage1a] sub-135-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage4] sub-135-c: PSD OK | pass1-40=0.98 low<0.3=0.221 high>75.0=0.0452 notch@50.0=1.94
+[stage5] sub-135-c: meas_date_wholehour corr=-3600s fit=8/10 (80%) reconciled=False [cont_valid]
+[stage5]   partial: constant offset (correction=-3600s) fits 80% but first/last not both inside -> some tasks outside recording, clamped.
+[stage6] sub-135-c: 511 windows (257 non-overlap subset) from 10 tasks, shape (18, 2000)
+[stage7] sub-135-c: y_cond=1 (C), t_cont 173.6..3418.0s, cont_valid=True
+[stage8] sub-135-c: rejection disabled, kept all 511
+[stage9] sub-135-c: wrote 511 window files -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\windows\sub-135
+[pipeline] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\_reports\ica_report_sub-135-c.json
+[stage9] manifest: 7414 rows -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\manifest.parquet
+[report] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\_reports\run_summary.md
+[report] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed\reref-linkedears_ica\_reports\limitations.md
+
+[pipeline] 4/36 recordings FAILED (logged and skipped, others unaffected): [('sub-53-c', 'sub-53-c: continuous target not monotonic within session'), ('sub-111-a', "sub-111-a: reference channel(s) ['A1', 'A2'] not found (also tried the 'EEG {name}-Pz' pattern). Re-referencing needs these channels present in the raw recording. Available channels (13): ['EEG LE-Pz', 'EEG F4-Pz', 'EEG C4-Pz', 'EEG P4-Pz', 'EEG P3-Pz', 'EEG C3-Pz', 'EEG F3-Pz', 'Pz', 'Trigger', 'Event', 'Ax', 'Ay', 'Az']"), ('sub-111-c', "sub-111-c: reference channel(s) ['A1', 'A2'] not found (also tried the 'EEG {name}-Pz' pattern). Re-referencing needs these channels present in the raw recording. Available channels (13): ['EEG LE-Pz', 'EEG F4-Pz', 'EEG C4-Pz', 'EEG P4-Pz', 'EEG P3-Pz', 'EEG C3-Pz', 'EEG F3-Pz', 'Pz', 'Trigger', 'Event', 'Ax', 'Ay', 'Az']"), ('sub-116-a', 'sub-116-a: continuous target not monotonic within session')]
+
+[validate] === STAGE 12 checks ===
+[validate] PASS  shape uniformity (18, len_s, 200)                sampled 200 windows, expected (18, 2000)
+[validate] PASS  scale is uV (not Volts / not /100)               median max|X|=1012.53 uV (rejection disabled; scale-sanity only)
+[validate] PASS  window width == samples_per_window               all widths == 2000
+[validate] PASS  train-stride grid within task                    (start-min) % 1000 == 0
+[validate] PASS  non-overlap subset flag consistent               disjoint residues mod spw
+[validate] PASS  both y_cond classes present overall              present=[np.int64(0), np.int64(1)] expected=[0, 1]
+[validate] PASS  continuous_label_valid windows kept (masked not dropped) 101 masked windows retained in manifest
+[validate] FAIL  determinism (manifest hash)                      hash=865ffa034fe02079 (DIFFERS FROM previous e04d0df884e16201)
+[validate] FAIL: one or more validation checks failed

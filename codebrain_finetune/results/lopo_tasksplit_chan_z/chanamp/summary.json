@@ -1,0 +1,1619 @@
+{
+  "chanamp|tea_to_toast": {
+    "arm": "chanamp",
+    "direction": "tea_to_toast",
+    "n_folds": 27,
+    "n_sessions": 54,
+    "aggregate": {
+      "balanced_accuracy": 0.5555555555555556,
+      "accuracy": 0.5555555555555556,
+      "auc": 0.5582990397805212,
+      "sensitivity": 0.7037037037037037,
+      "specificity": 0.4074074074074074,
+      "macro_f1": 0.5455820476858345,
+      "n": 54,
+      "n_pos": 27,
+      "n_neg": 27
+    },
+    "bootstrap": {
+      "metric": "balanced_accuracy",
+      "point": 0.5555555555555556,
+      "ci_low": 0.4444444444444444,
+      "ci_high": 0.6851851851851851,
+      "ci": 0.95,
+      "n_valid_resamples": 2000
+    },
+    "permutation": {
+      "observed_balanced_accuracy": 0.5555555555555556,
+      "null_mean": 0.5003703703703704,
+      "null_std": 0.060062838607733614,
+      "p_value": 0.23880597014925373,
+      "n_permutations": 200
+    },
+    "per_fold": [
+      {
+        "test_patient": "sub-103",
+        "direction": "tea_to_toast",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.5357270693512304,
+        "prob": [
+          0.448,
+          0.468
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-106",
+        "direction": "tea_to_toast",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.4005787515502274,
+        "prob": [
+          0.499,
+          0.457
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-107",
+        "direction": "tea_to_toast",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.5440115440115441,
+        "prob": [
+          0.471,
+          0.472
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-114",
+        "direction": "tea_to_toast",
+        "session_bal_acc": 1.0,
+        "window_bal_acc": 0.6223864455659698,
+        "prob": [
+          0.499,
+          0.546
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-115",
+        "direction": "tea_to_toast",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.5201298701298701,
+        "prob": [
+          0.525,
+          0.513
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-116",
+        "direction": "tea_to_toast",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.5885047281323876,
+        "prob": [
+          0.521,
+          0.61
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-119",
+        "direction": "tea_to_toast",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.5421052631578948,
+        "prob": [
+          0.516,
+          0.511
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-121",
+        "direction": "tea_to_toast",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.519047619047619,
+        "prob": [
+          0.503,
+          0.514
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-123",
+        "direction": "tea_to_toast",
+        "session_bal_acc": 0.0,
+        "window_bal_acc": 0.4384151593453919,
+        "prob": [
+          0.507,
+          0.483
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-125",
+        "direction": "tea_to_toast",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.4764830508474576,
+        "prob": [
+          0.544,
+          0.539
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-129",
+        "direction": "tea_to_toast",
+        "session_bal_acc": 1.0,
+        "window_bal_acc": 0.5504273504273505,
+        "prob": [
+          0.497,
+          0.511
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-131",
+        "direction": "tea_to_toast",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.5957848837209303,
+        "prob": [
+          0.526,
+          0.548
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-134",
+        "direction": "tea_to_toast",
+        "session_bal_acc": 0.0,
+        "window_bal_acc": 0.30789235639981904,
+        "prob": [
+          0.561,
+          0.489
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-135",
+        "direction": "tea_to_toast",
+        "session_bal_acc": 1.0,
+        "window_bal_acc": 0.5940295169946332,
+        "prob": [
+          0.468,
+          0.502
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-51",
+        "direction": "tea_to_toast",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.5447454844006567,
+        "prob": [
+          0.54,
+          0.559
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-62",
+        "direction": "tea_to_toast",
+        "session_bal_acc": 1.0,
+        "window_bal_acc": 0.5489795918367347,
+        "prob": [
+          0.492,
+          0.52
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-70",
+        "direction": "tea_to_toast",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.513095238095238,
+        "prob": [
+          0.528,
+          0.511
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-71",
+        "direction": "tea_to_toast",
+        "session_bal_acc": 1.0,
+        "window_bal_acc": 0.6702244116037219,
+        "prob": [
+          0.482,
+          0.534
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-72",
+        "direction": "tea_to_toast",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.653061224489796,
+        "prob": [
+          0.503,
+          0.54
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-76",
+        "direction": "tea_to_toast",
+        "session_bal_acc": 0.0,
+        "window_bal_acc": 0.4509920634920635,
+        "prob": [
+          0.528,
+          0.496
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-77",
+        "direction": "tea_to_toast",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.46895424836601307,
+        "prob": [
+          0.529,
+          0.516
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-81",
+        "direction": "tea_to_toast",
+        "session_bal_acc": 1.0,
+        "window_bal_acc": 0.5706399509302802,
+        "prob": [
+          0.473,
+          0.508
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-84",
+        "direction": "tea_to_toast",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.49867957746478875,
+        "prob": [
+          0.511,
+          0.517
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-90",
+        "direction": "tea_to_toast",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.5919732441471572,
+        "prob": [
+          0.54,
+          0.542
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-92",
+        "direction": "tea_to_toast",
+        "session_bal_acc": 0.0,
+        "window_bal_acc": 0.39473684210526316,
+        "prob": [
+          0.501,
+          0.473
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-94",
+        "direction": "tea_to_toast",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.46216216216216216,
+        "prob": [
+          0.47,
+          0.477
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-96",
+        "direction": "tea_to_toast",
+        "session_bal_acc": 1.0,
+        "window_bal_acc": 0.5,
+        "prob": [
+          0.495,
+          0.524
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      }
+    ],
+    "lopo_reference": null
+  },
+  "chanamp|toast_to_tea": {
+    "arm": "chanamp",
+    "direction": "toast_to_tea",
+    "n_folds": 27,
+    "n_sessions": 54,
+    "aggregate": {
+      "balanced_accuracy": 0.6111111111111112,
+      "accuracy": 0.6111111111111112,
+      "auc": 0.6090534979423868,
+      "sensitivity": 0.6666666666666666,
+      "specificity": 0.5555555555555556,
+      "macro_f1": 0.609907120743034,
+      "n": 54,
+      "n_pos": 27,
+      "n_neg": 27
+    },
+    "bootstrap": {
+      "metric": "balanced_accuracy",
+      "point": 0.6111111111111112,
+      "ci_low": 0.5365740740740749,
+      "ci_high": 0.7037037037037037,
+      "ci": 0.95,
+      "n_valid_resamples": 2000
+    },
+    "permutation": {
+      "observed_balanced_accuracy": 0.6111111111111112,
+      "null_mean": 0.4959259259259259,
+      "null_std": 0.0537726249954622,
+      "p_value": 0.029850746268656716,
+      "n_permutations": 200
+    },
+    "per_fold": [
+      {
+        "test_patient": "sub-103",
+        "direction": "toast_to_tea",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.44491525423728817,
+        "prob": [
+          0.487,
+          0.481
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-106",
+        "direction": "toast_to_tea",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.537037037037037,
+        "prob": [
+          0.449,
+          0.452
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-107",
+        "direction": "toast_to_tea",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.4537037037037037,
+        "prob": [
+          0.524,
+          0.519
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-114",
+        "direction": "toast_to_tea",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.5796296296296296,
+        "prob": [
+          0.501,
+          0.519
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-115",
+        "direction": "toast_to_tea",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.49308300395256915,
+        "prob": [
+          0.553,
+          0.576
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-116",
+        "direction": "toast_to_tea",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.4649321266968326,
+        "prob": [
+          0.515,
+          0.522
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-119",
+        "direction": "toast_to_tea",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.5890894819466248,
+        "prob": [
+          0.517,
+          0.557
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-121",
+        "direction": "toast_to_tea",
+        "session_bal_acc": 1.0,
+        "window_bal_acc": 0.5975274725274725,
+        "prob": [
+          0.462,
+          0.506
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-123",
+        "direction": "toast_to_tea",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.4351851851851852,
+        "prob": [
+          0.523,
+          0.528
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-125",
+        "direction": "toast_to_tea",
+        "session_bal_acc": 1.0,
+        "window_bal_acc": 0.5826086956521739,
+        "prob": [
+          0.488,
+          0.515
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-129",
+        "direction": "toast_to_tea",
+        "session_bal_acc": 1.0,
+        "window_bal_acc": 0.501984126984127,
+        "prob": [
+          0.495,
+          0.513
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-131",
+        "direction": "toast_to_tea",
+        "session_bal_acc": 0.0,
+        "window_bal_acc": 0.4476190476190476,
+        "prob": [
+          0.525,
+          0.486
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-134",
+        "direction": "toast_to_tea",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.55316091954023,
+        "prob": [
+          0.438,
+          0.465
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-135",
+        "direction": "toast_to_tea",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.5484848484848485,
+        "prob": [
+          0.443,
+          0.473
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-51",
+        "direction": "toast_to_tea",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.537037037037037,
+        "prob": [
+          0.52,
+          0.539
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-62",
+        "direction": "toast_to_tea",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.5742296918767507,
+        "prob": [
+          0.51,
+          0.509
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-70",
+        "direction": "toast_to_tea",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.4424731182795699,
+        "prob": [
+          0.499,
+          0.479
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-71",
+        "direction": "toast_to_tea",
+        "session_bal_acc": 1.0,
+        "window_bal_acc": 0.6333333333333333,
+        "prob": [
+          0.493,
+          0.552
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-72",
+        "direction": "toast_to_tea",
+        "session_bal_acc": 1.0,
+        "window_bal_acc": 0.6222222222222222,
+        "prob": [
+          0.494,
+          0.56
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-76",
+        "direction": "toast_to_tea",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.6569105691056911,
+        "prob": [
+          0.465,
+          0.492
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-77",
+        "direction": "toast_to_tea",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.4950372208436724,
+        "prob": [
+          0.508,
+          0.511
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-81",
+        "direction": "toast_to_tea",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.582967032967033,
+        "prob": [
+          0.456,
+          0.493
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-84",
+        "direction": "toast_to_tea",
+        "session_bal_acc": 1.0,
+        "window_bal_acc": 0.55,
+        "prob": [
+          0.487,
+          0.501
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-90",
+        "direction": "toast_to_tea",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.3904761904761905,
+        "prob": [
+          0.534,
+          0.501
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-92",
+        "direction": "toast_to_tea",
+        "session_bal_acc": 1.0,
+        "window_bal_acc": 0.5552536231884058,
+        "prob": [
+          0.485,
+          0.504
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-94",
+        "direction": "toast_to_tea",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.503968253968254,
+        "prob": [
+          0.492,
+          0.487
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-96",
+        "direction": "toast_to_tea",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.5006631299734747,
+        "prob": [
+          0.545,
+          0.559
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      }
+    ],
+    "lopo_reference": null
+  },
+  "chanamp|both_directions_pooled": {
+    "arm": "chanamp",
+    "direction": "both_directions_pooled",
+    "n_folds": 54,
+    "n_sessions": 108,
+    "aggregate": {
+      "balanced_accuracy": 0.5833333333333334,
+      "accuracy": 0.5833333333333334,
+      "auc": 0.5823045267489712,
+      "sensitivity": 0.6851851851851852,
+      "specificity": 0.48148148148148145,
+      "macro_f1": 0.5789656068613012,
+      "n": 108,
+      "n_pos": 54,
+      "n_neg": 54
+    },
+    "bootstrap": {
+      "metric": "balanced_accuracy",
+      "point": 0.5833333333333334,
+      "ci_low": 0.5092592592592593,
+      "ci_high": 0.6574074074074074,
+      "ci": 0.95,
+      "n_valid_resamples": 2000
+    },
+    "permutation": {
+      "observed_balanced_accuracy": 0.5833333333333334,
+      "null_mean": 0.5013888888888889,
+      "null_std": 0.04016587264211846,
+      "p_value": 0.01990049751243781,
+      "n_permutations": 200
+    },
+    "per_fold": [
+      {
+        "test_patient": "sub-103",
+        "direction": "tea_to_toast",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.5357270693512304,
+        "prob": [
+          0.448,
+          0.468
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-103",
+        "direction": "toast_to_tea",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.44491525423728817,
+        "prob": [
+          0.487,
+          0.481
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-106",
+        "direction": "tea_to_toast",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.4005787515502274,
+        "prob": [
+          0.499,
+          0.457
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-106",
+        "direction": "toast_to_tea",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.537037037037037,
+        "prob": [
+          0.449,
+          0.452
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-107",
+        "direction": "tea_to_toast",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.5440115440115441,
+        "prob": [
+          0.471,
+          0.472
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-107",
+        "direction": "toast_to_tea",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.4537037037037037,
+        "prob": [
+          0.524,
+          0.519
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-114",
+        "direction": "tea_to_toast",
+        "session_bal_acc": 1.0,
+        "window_bal_acc": 0.6223864455659698,
+        "prob": [
+          0.499,
+          0.546
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-114",
+        "direction": "toast_to_tea",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.5796296296296296,
+        "prob": [
+          0.501,
+          0.519
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-115",
+        "direction": "tea_to_toast",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.5201298701298701,
+        "prob": [
+          0.525,
+          0.513
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-115",
+        "direction": "toast_to_tea",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.49308300395256915,
+        "prob": [
+          0.553,
+          0.576
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-116",
+        "direction": "tea_to_toast",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.5885047281323876,
+        "prob": [
+          0.521,
+          0.61
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-116",
+        "direction": "toast_to_tea",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.4649321266968326,
+        "prob": [
+          0.515,
+          0.522
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-119",
+        "direction": "tea_to_toast",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.5421052631578948,
+        "prob": [
+          0.516,
+          0.511
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-119",
+        "direction": "toast_to_tea",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.5890894819466248,
+        "prob": [
+          0.517,
+          0.557
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-121",
+        "direction": "tea_to_toast",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.519047619047619,
+        "prob": [
+          0.503,
+          0.514
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-121",
+        "direction": "toast_to_tea",
+        "session_bal_acc": 1.0,
+        "window_bal_acc": 0.5975274725274725,
+        "prob": [
+          0.462,
+          0.506
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-123",
+        "direction": "tea_to_toast",
+        "session_bal_acc": 0.0,
+        "window_bal_acc": 0.4384151593453919,
+        "prob": [
+          0.507,
+          0.483
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-123",
+        "direction": "toast_to_tea",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.4351851851851852,
+        "prob": [
+          0.523,
+          0.528
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-125",
+        "direction": "tea_to_toast",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.4764830508474576,
+        "prob": [
+          0.544,
+          0.539
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-125",
+        "direction": "toast_to_tea",
+        "session_bal_acc": 1.0,
+        "window_bal_acc": 0.5826086956521739,
+        "prob": [
+          0.488,
+          0.515
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-129",
+        "direction": "tea_to_toast",
+        "session_bal_acc": 1.0,
+        "window_bal_acc": 0.5504273504273505,
+        "prob": [
+          0.497,
+          0.511
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-129",
+        "direction": "toast_to_tea",
+        "session_bal_acc": 1.0,
+        "window_bal_acc": 0.501984126984127,
+        "prob": [
+          0.495,
+          0.513
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-131",
+        "direction": "tea_to_toast",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.5957848837209303,
+        "prob": [
+          0.526,
+          0.548
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-131",
+        "direction": "toast_to_tea",
+        "session_bal_acc": 0.0,
+        "window_bal_acc": 0.4476190476190476,
+        "prob": [
+          0.525,
+          0.486
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-134",
+        "direction": "tea_to_toast",
+        "session_bal_acc": 0.0,
+        "window_bal_acc": 0.30789235639981904,
+        "prob": [
+          0.561,
+          0.489
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-134",
+        "direction": "toast_to_tea",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.55316091954023,
+        "prob": [
+          0.438,
+          0.465
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-135",
+        "direction": "tea_to_toast",
+        "session_bal_acc": 1.0,
+        "window_bal_acc": 0.5940295169946332,
+        "prob": [
+          0.468,
+          0.502
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-135",
+        "direction": "toast_to_tea",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.5484848484848485,
+        "prob": [
+          0.443,
+          0.473
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-51",
+        "direction": "tea_to_toast",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.5447454844006567,
+        "prob": [
+          0.54,
+          0.559
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-51",
+        "direction": "toast_to_tea",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.537037037037037,
+        "prob": [
+          0.52,
+          0.539
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-62",
+        "direction": "tea_to_toast",
+        "session_bal_acc": 1.0,
+        "window_bal_acc": 0.5489795918367347,
+        "prob": [
+          0.492,
+          0.52
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-62",
+        "direction": "toast_to_tea",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.5742296918767507,
+        "prob": [
+          0.51,
+          0.509
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-70",
+        "direction": "tea_to_toast",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.513095238095238,
+        "prob": [
+          0.528,
+          0.511
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-70",
+        "direction": "toast_to_tea",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.4424731182795699,
+        "prob": [
+          0.499,
+          0.479
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-71",
+        "direction": "tea_to_toast",
+        "session_bal_acc": 1.0,
+        "window_bal_acc": 0.6702244116037219,
+        "prob": [
+          0.482,
+          0.534
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-71",
+        "direction": "toast_to_tea",
+        "session_bal_acc": 1.0,
+        "window_bal_acc": 0.6333333333333333,
+        "prob": [
+          0.493,
+          0.552
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-72",
+        "direction": "tea_to_toast",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.653061224489796,
+        "prob": [
+          0.503,
+          0.54
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-72",
+        "direction": "toast_to_tea",
+        "session_bal_acc": 1.0,
+        "window_bal_acc": 0.6222222222222222,
+        "prob": [
+          0.494,
+          0.56
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-76",
+        "direction": "tea_to_toast",
+        "session_bal_acc": 0.0,
+        "window_bal_acc": 0.4509920634920635,
+        "prob": [
+          0.528,
+          0.496
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-76",
+        "direction": "toast_to_tea",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.6569105691056911,
+        "prob": [
+          0.465,
+          0.492
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-77",
+        "direction": "tea_to_toast",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.46895424836601307,
+        "prob": [
+          0.529,
+          0.516
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-77",
+        "direction": "toast_to_tea",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.4950372208436724,
+        "prob": [
+          0.508,
+          0.511
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-81",
+        "direction": "tea_to_toast",
+        "session_bal_acc": 1.0,
+        "window_bal_acc": 0.5706399509302802,
+        "prob": [
+          0.473,
+          0.508
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-81",
+        "direction": "toast_to_tea",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.582967032967033,
+        "prob": [
+          0.456,
+          0.493
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-84",
+        "direction": "tea_to_toast",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.49867957746478875,
+        "prob": [
+          0.511,
+          0.517
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-84",
+        "direction": "toast_to_tea",
+        "session_bal_acc": 1.0,
+        "window_bal_acc": 0.55,
+        "prob": [
+          0.487,
+          0.501
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-90",
+        "direction": "tea_to_toast",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.5919732441471572,
+        "prob": [
+          0.54,
+          0.542
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-90",
+        "direction": "toast_to_tea",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.3904761904761905,
+        "prob": [
+          0.534,
+          0.501
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-92",
+        "direction": "tea_to_toast",
+        "session_bal_acc": 0.0,
+        "window_bal_acc": 0.39473684210526316,
+        "prob": [
+          0.501,
+          0.473
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-92",
+        "direction": "toast_to_tea",
+        "session_bal_acc": 1.0,
+        "window_bal_acc": 0.5552536231884058,
+        "prob": [
+          0.485,
+          0.504
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-94",
+        "direction": "tea_to_toast",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.46216216216216216,
+        "prob": [
+          0.47,
+          0.477
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-94",
+        "direction": "toast_to_tea",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.503968253968254,
+        "prob": [
+          0.492,
+          0.487
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-96",
+        "direction": "tea_to_toast",
+        "session_bal_acc": 1.0,
+        "window_bal_acc": 0.5,
+        "prob": [
+          0.495,
+          0.524
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      },
+      {
+        "test_patient": "sub-96",
+        "direction": "toast_to_tea",
+        "session_bal_acc": 0.5,
+        "window_bal_acc": 0.5006631299734747,
+        "prob": [
+          0.545,
+          0.559
+        ],
+        "y_true": [
+          0,
+          1
+        ]
+      }
+    ],
+    "lopo_reference": null
+  }
+}

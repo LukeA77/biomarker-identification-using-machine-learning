@@ -1,0 +1,3600 @@
+{
+  "run_tag": "stage4b_bandpower_lopo",
+  "arm": "bandpower",
+  "git_sha": "2a1f9e6980392ab51d447f5853a2278e06d167b2",
+  "env": {
+    "torch": "2.11.0+cu128",
+    "numpy": "2.4.6",
+    "peft": "0.19.1",
+    "transformers": "5.14.1",
+    "sklearn": "1.9.0"
+  },
+  "bands": {
+    "delta": [
+      0.5,
+      4.0
+    ],
+    "theta": [
+      4.0,
+      8.0
+    ],
+    "alpha": [
+      8.0,
+      13.0
+    ],
+    "beta": [
+      13.0,
+      30.0
+    ],
+    "gamma": [
+      30.0,
+      45.0
+    ]
+  },
+  "welch": {
+    "nperseg": 400,
+    "noverlap": 200
+  },
+  "C": 1.0,
+  "results": [
+    {
+      "tag": "logabs",
+      "aggregate": {
+        "balanced_accuracy": 0.5142857142857142,
+        "accuracy": 0.5142857142857142,
+        "auc": 0.5126530612244898,
+        "sensitivity": 0.5142857142857142,
+        "specificity": 0.5142857142857142,
+        "macro_f1": 0.5142857142857142,
+        "n": 70,
+        "n_pos": 35,
+        "n_neg": 35
+      },
+      "bootstrap": {
+        "metric": "balanced_accuracy",
+        "point": 0.5142857142857142,
+        "ci_low": 0.41428571428571426,
+        "ci_high": 0.6142857142857143,
+        "ci": 0.95,
+        "n_valid_resamples": 2000
+      },
+      "permutation": {
+        "observed_balanced_accuracy": 0.5142857142857142,
+        "null_mean": 0.4952857142857143,
+        "null_std": 0.051924395587650864,
+        "p_value": 0.4527363184079602,
+        "n_permutations": 200
+      },
+      "ordering_correct": 17,
+      "n_patients": 35,
+      "per_fold": [
+        {
+          "fold": 0,
+          "test_patient": "sub-103",
+          "sessions": [
+            "sub-103|A",
+            "sub-103|C"
+          ],
+          "prob": [
+            0.466,
+            0.4408
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 1,
+          "test_patient": "sub-106",
+          "sessions": [
+            "sub-106|A",
+            "sub-106|C"
+          ],
+          "prob": [
+            0.3132,
+            0.0051
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 2,
+          "test_patient": "sub-107",
+          "sessions": [
+            "sub-107|A",
+            "sub-107|C"
+          ],
+          "prob": [
+            0.5507,
+            0.3407
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 3,
+          "test_patient": "sub-114",
+          "sessions": [
+            "sub-114|A",
+            "sub-114|C"
+          ],
+          "prob": [
+            0.6633,
+            0.5921
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 4,
+          "test_patient": "sub-115",
+          "sessions": [
+            "sub-115|A",
+            "sub-115|C"
+          ],
+          "prob": [
+            0.5695,
+            0.5499
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 5,
+          "test_patient": "sub-116",
+          "sessions": [
+            "sub-116|A",
+            "sub-116|C"
+          ],
+          "prob": [
+            0.6797,
+            0.6461
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 6,
+          "test_patient": "sub-117",
+          "sessions": [
+            "sub-117|A",
+            "sub-117|C"
+          ],
+          "prob": [
+            0.5715,
+            0.4873
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 7,
+          "test_patient": "sub-119",
+          "sessions": [
+            "sub-119|A",
+            "sub-119|C"
+          ],
+          "prob": [
+            0.6818,
+            0.7706
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 8,
+          "test_patient": "sub-121",
+          "sessions": [
+            "sub-121|A",
+            "sub-121|C"
+          ],
+          "prob": [
+            0.7668,
+            0.6443
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 9,
+          "test_patient": "sub-123",
+          "sessions": [
+            "sub-123|A",
+            "sub-123|C"
+          ],
+          "prob": [
+            0.6078,
+            0.5921
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 10,
+          "test_patient": "sub-125",
+          "sessions": [
+            "sub-125|A",
+            "sub-125|C"
+          ],
+          "prob": [
+            0.4023,
+            0.5893
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 11,
+          "test_patient": "sub-129",
+          "sessions": [
+            "sub-129|A",
+            "sub-129|C"
+          ],
+          "prob": [
+            0.5459,
+            0.4728
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 12,
+          "test_patient": "sub-131",
+          "sessions": [
+            "sub-131|A",
+            "sub-131|C"
+          ],
+          "prob": [
+            0.2479,
+            0.5658
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 13,
+          "test_patient": "sub-134",
+          "sessions": [
+            "sub-134|A",
+            "sub-134|C"
+          ],
+          "prob": [
+            0.7798,
+            0.7895
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 14,
+          "test_patient": "sub-135",
+          "sessions": [
+            "sub-135|A",
+            "sub-135|C"
+          ],
+          "prob": [
+            0.2695,
+            0.1946
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 15,
+          "test_patient": "sub-34",
+          "sessions": [
+            "sub-34|A",
+            "sub-34|C"
+          ],
+          "prob": [
+            0.548,
+            0.4919
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 16,
+          "test_patient": "sub-42",
+          "sessions": [
+            "sub-42|A",
+            "sub-42|C"
+          ],
+          "prob": [
+            0.6561,
+            0.728
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 17,
+          "test_patient": "sub-48",
+          "sessions": [
+            "sub-48|A",
+            "sub-48|C"
+          ],
+          "prob": [
+            0.2222,
+            0.228
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 18,
+          "test_patient": "sub-51",
+          "sessions": [
+            "sub-51|A",
+            "sub-51|C"
+          ],
+          "prob": [
+            0.1947,
+            0.4999
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 19,
+          "test_patient": "sub-53",
+          "sessions": [
+            "sub-53|A",
+            "sub-53|C"
+          ],
+          "prob": [
+            0.4035,
+            0.1743
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 20,
+          "test_patient": "sub-62",
+          "sessions": [
+            "sub-62|A",
+            "sub-62|C"
+          ],
+          "prob": [
+            0.5384,
+            0.568
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 21,
+          "test_patient": "sub-69",
+          "sessions": [
+            "sub-69|A",
+            "sub-69|C"
+          ],
+          "prob": [
+            0.5586,
+            0.5671
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 22,
+          "test_patient": "sub-70",
+          "sessions": [
+            "sub-70|A",
+            "sub-70|C"
+          ],
+          "prob": [
+            0.382,
+            0.2056
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 23,
+          "test_patient": "sub-71",
+          "sessions": [
+            "sub-71|A",
+            "sub-71|C"
+          ],
+          "prob": [
+            0.327,
+            0.2365
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 24,
+          "test_patient": "sub-72",
+          "sessions": [
+            "sub-72|A",
+            "sub-72|C"
+          ],
+          "prob": [
+            0.4897,
+            0.5746
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 25,
+          "test_patient": "sub-73",
+          "sessions": [
+            "sub-73|A",
+            "sub-73|C"
+          ],
+          "prob": [
+            0.5275,
+            0.6676
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 26,
+          "test_patient": "sub-76",
+          "sessions": [
+            "sub-76|A",
+            "sub-76|C"
+          ],
+          "prob": [
+            0.4173,
+            0.4247
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 27,
+          "test_patient": "sub-77",
+          "sessions": [
+            "sub-77|A",
+            "sub-77|C"
+          ],
+          "prob": [
+            0.2606,
+            0.4161
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 28,
+          "test_patient": "sub-81",
+          "sessions": [
+            "sub-81|A",
+            "sub-81|C"
+          ],
+          "prob": [
+            0.3019,
+            0.6107
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 29,
+          "test_patient": "sub-84",
+          "sessions": [
+            "sub-84|A",
+            "sub-84|C"
+          ],
+          "prob": [
+            0.2941,
+            0.6509
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 30,
+          "test_patient": "sub-90",
+          "sessions": [
+            "sub-90|A",
+            "sub-90|C"
+          ],
+          "prob": [
+            0.7067,
+            0.3744
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 31,
+          "test_patient": "sub-92",
+          "sessions": [
+            "sub-92|A",
+            "sub-92|C"
+          ],
+          "prob": [
+            0.6999,
+            0.2886
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 32,
+          "test_patient": "sub-93",
+          "sessions": [
+            "sub-93|A",
+            "sub-93|C"
+          ],
+          "prob": [
+            0.4822,
+            0.814
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 33,
+          "test_patient": "sub-94",
+          "sessions": [
+            "sub-94|A",
+            "sub-94|C"
+          ],
+          "prob": [
+            0.3688,
+            0.5194
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 34,
+          "test_patient": "sub-96",
+          "sessions": [
+            "sub-96|A",
+            "sub-96|C"
+          ],
+          "prob": [
+            0.4756,
+            0.0549
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "logabs+subjnorm",
+      "aggregate": {
+        "balanced_accuracy": 0.4714285714285714,
+        "accuracy": 0.4714285714285714,
+        "auc": 0.5085714285714286,
+        "sensitivity": 0.42857142857142855,
+        "specificity": 0.5142857142857142,
+        "macro_f1": 0.47045593948067876,
+        "n": 70,
+        "n_pos": 35,
+        "n_neg": 35
+      },
+      "bootstrap": {
+        "metric": "balanced_accuracy",
+        "point": 0.4714285714285714,
+        "ci_low": 0.32857142857142857,
+        "ci_high": 0.6285714285714286,
+        "ci": 0.95,
+        "n_valid_resamples": 2000
+      },
+      "permutation": {
+        "observed_balanced_accuracy": 0.4714285714285714,
+        "null_mean": 0.49557142857142855,
+        "null_std": 0.07340675050980096,
+        "p_value": 0.7164179104477612,
+        "n_permutations": 200
+      },
+      "ordering_correct": 16,
+      "n_patients": 35,
+      "per_fold": [
+        {
+          "fold": 0,
+          "test_patient": "sub-103",
+          "sessions": [
+            "sub-103|A",
+            "sub-103|C"
+          ],
+          "prob": [
+            0.5808,
+            0.3636
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 1,
+          "test_patient": "sub-106",
+          "sessions": [
+            "sub-106|A",
+            "sub-106|C"
+          ],
+          "prob": [
+            0.5198,
+            0.371
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 2,
+          "test_patient": "sub-107",
+          "sessions": [
+            "sub-107|A",
+            "sub-107|C"
+          ],
+          "prob": [
+            0.5198,
+            0.4134
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 3,
+          "test_patient": "sub-114",
+          "sessions": [
+            "sub-114|A",
+            "sub-114|C"
+          ],
+          "prob": [
+            0.2092,
+            0.6571
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 4,
+          "test_patient": "sub-115",
+          "sessions": [
+            "sub-115|A",
+            "sub-115|C"
+          ],
+          "prob": [
+            0.5359,
+            0.4302
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 5,
+          "test_patient": "sub-116",
+          "sessions": [
+            "sub-116|A",
+            "sub-116|C"
+          ],
+          "prob": [
+            0.4354,
+            0.5289
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 6,
+          "test_patient": "sub-117",
+          "sessions": [
+            "sub-117|A",
+            "sub-117|C"
+          ],
+          "prob": [
+            0.4998,
+            0.4052
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 7,
+          "test_patient": "sub-119",
+          "sessions": [
+            "sub-119|A",
+            "sub-119|C"
+          ],
+          "prob": [
+            0.4373,
+            0.5435
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 8,
+          "test_patient": "sub-121",
+          "sessions": [
+            "sub-121|A",
+            "sub-121|C"
+          ],
+          "prob": [
+            0.5213,
+            0.4695
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 9,
+          "test_patient": "sub-123",
+          "sessions": [
+            "sub-123|A",
+            "sub-123|C"
+          ],
+          "prob": [
+            0.5392,
+            0.422
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 10,
+          "test_patient": "sub-125",
+          "sessions": [
+            "sub-125|A",
+            "sub-125|C"
+          ],
+          "prob": [
+            0.3607,
+            0.6286
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 11,
+          "test_patient": "sub-129",
+          "sessions": [
+            "sub-129|A",
+            "sub-129|C"
+          ],
+          "prob": [
+            0.4987,
+            0.4621
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 12,
+          "test_patient": "sub-131",
+          "sessions": [
+            "sub-131|A",
+            "sub-131|C"
+          ],
+          "prob": [
+            0.3037,
+            0.7677
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 13,
+          "test_patient": "sub-134",
+          "sessions": [
+            "sub-134|A",
+            "sub-134|C"
+          ],
+          "prob": [
+            0.5003,
+            0.4824
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 14,
+          "test_patient": "sub-135",
+          "sessions": [
+            "sub-135|A",
+            "sub-135|C"
+          ],
+          "prob": [
+            0.6063,
+            0.428
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 15,
+          "test_patient": "sub-34",
+          "sessions": [
+            "sub-34|A",
+            "sub-34|C"
+          ],
+          "prob": [
+            0.4906,
+            0.4952
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 16,
+          "test_patient": "sub-42",
+          "sessions": [
+            "sub-42|A",
+            "sub-42|C"
+          ],
+          "prob": [
+            0.4405,
+            0.6839
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 17,
+          "test_patient": "sub-48",
+          "sessions": [
+            "sub-48|A",
+            "sub-48|C"
+          ],
+          "prob": [
+            0.4176,
+            0.5832
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 18,
+          "test_patient": "sub-51",
+          "sessions": [
+            "sub-51|A",
+            "sub-51|C"
+          ],
+          "prob": [
+            0.4686,
+            0.5212
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 19,
+          "test_patient": "sub-53",
+          "sessions": [
+            "sub-53|A",
+            "sub-53|C"
+          ],
+          "prob": [
+            0.5787,
+            0.3106
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 20,
+          "test_patient": "sub-62",
+          "sessions": [
+            "sub-62|A",
+            "sub-62|C"
+          ],
+          "prob": [
+            0.528,
+            0.4549
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 21,
+          "test_patient": "sub-69",
+          "sessions": [
+            "sub-69|A",
+            "sub-69|C"
+          ],
+          "prob": [
+            0.509,
+            0.4543
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 22,
+          "test_patient": "sub-70",
+          "sessions": [
+            "sub-70|A",
+            "sub-70|C"
+          ],
+          "prob": [
+            0.6595,
+            0.193
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 23,
+          "test_patient": "sub-71",
+          "sessions": [
+            "sub-71|A",
+            "sub-71|C"
+          ],
+          "prob": [
+            0.5147,
+            0.4838
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 24,
+          "test_patient": "sub-72",
+          "sessions": [
+            "sub-72|A",
+            "sub-72|C"
+          ],
+          "prob": [
+            0.2961,
+            0.6485
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 25,
+          "test_patient": "sub-73",
+          "sessions": [
+            "sub-73|A",
+            "sub-73|C"
+          ],
+          "prob": [
+            0.3525,
+            0.5756
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 26,
+          "test_patient": "sub-76",
+          "sessions": [
+            "sub-76|A",
+            "sub-76|C"
+          ],
+          "prob": [
+            0.4235,
+            0.5549
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 27,
+          "test_patient": "sub-77",
+          "sessions": [
+            "sub-77|A",
+            "sub-77|C"
+          ],
+          "prob": [
+            0.46,
+            0.5201
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 28,
+          "test_patient": "sub-81",
+          "sessions": [
+            "sub-81|A",
+            "sub-81|C"
+          ],
+          "prob": [
+            0.3142,
+            0.6633
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 29,
+          "test_patient": "sub-84",
+          "sessions": [
+            "sub-84|A",
+            "sub-84|C"
+          ],
+          "prob": [
+            0.3525,
+            0.7303
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 30,
+          "test_patient": "sub-90",
+          "sessions": [
+            "sub-90|A",
+            "sub-90|C"
+          ],
+          "prob": [
+            0.7172,
+            0.3369
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 31,
+          "test_patient": "sub-92",
+          "sessions": [
+            "sub-92|A",
+            "sub-92|C"
+          ],
+          "prob": [
+            0.5224,
+            0.4531
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 32,
+          "test_patient": "sub-93",
+          "sessions": [
+            "sub-93|A",
+            "sub-93|C"
+          ],
+          "prob": [
+            0.4655,
+            0.5204
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 33,
+          "test_patient": "sub-94",
+          "sessions": [
+            "sub-94|A",
+            "sub-94|C"
+          ],
+          "prob": [
+            0.5817,
+            0.4007
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 34,
+          "test_patient": "sub-96",
+          "sessions": [
+            "sub-96|A",
+            "sub-96|C"
+          ],
+          "prob": [
+            0.6631,
+            0.2799
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "rel",
+      "aggregate": {
+        "balanced_accuracy": 0.6428571428571428,
+        "accuracy": 0.6428571428571429,
+        "auc": 0.64,
+        "sensitivity": 0.6,
+        "specificity": 0.6857142857142857,
+        "macro_f1": 0.6421999591085668,
+        "n": 70,
+        "n_pos": 35,
+        "n_neg": 35
+      },
+      "bootstrap": {
+        "metric": "balanced_accuracy",
+        "point": 0.6428571428571428,
+        "ci_low": 0.5428571428571428,
+        "ci_high": 0.7285714285714286,
+        "ci": 0.95,
+        "n_valid_resamples": 2000
+      },
+      "permutation": {
+        "observed_balanced_accuracy": 0.6428571428571428,
+        "null_mean": 0.4947142857142858,
+        "null_std": 0.05159318891924731,
+        "p_value": 0.004975124378109453,
+        "n_permutations": 200
+      },
+      "ordering_correct": 25,
+      "n_patients": 35,
+      "per_fold": [
+        {
+          "fold": 0,
+          "test_patient": "sub-103",
+          "sessions": [
+            "sub-103|A",
+            "sub-103|C"
+          ],
+          "prob": [
+            0.4601,
+            0.2906
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 1,
+          "test_patient": "sub-106",
+          "sessions": [
+            "sub-106|A",
+            "sub-106|C"
+          ],
+          "prob": [
+            0.3333,
+            0.2171
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 2,
+          "test_patient": "sub-107",
+          "sessions": [
+            "sub-107|A",
+            "sub-107|C"
+          ],
+          "prob": [
+            0.3506,
+            0.5283
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 3,
+          "test_patient": "sub-114",
+          "sessions": [
+            "sub-114|A",
+            "sub-114|C"
+          ],
+          "prob": [
+            0.3263,
+            0.6426
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 4,
+          "test_patient": "sub-115",
+          "sessions": [
+            "sub-115|A",
+            "sub-115|C"
+          ],
+          "prob": [
+            0.4296,
+            0.3734
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 5,
+          "test_patient": "sub-116",
+          "sessions": [
+            "sub-116|A",
+            "sub-116|C"
+          ],
+          "prob": [
+            0.563,
+            0.3941
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 6,
+          "test_patient": "sub-117",
+          "sessions": [
+            "sub-117|A",
+            "sub-117|C"
+          ],
+          "prob": [
+            0.5819,
+            0.4702
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 7,
+          "test_patient": "sub-119",
+          "sessions": [
+            "sub-119|A",
+            "sub-119|C"
+          ],
+          "prob": [
+            0.5725,
+            0.728
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 8,
+          "test_patient": "sub-121",
+          "sessions": [
+            "sub-121|A",
+            "sub-121|C"
+          ],
+          "prob": [
+            0.4231,
+            0.4684
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 9,
+          "test_patient": "sub-123",
+          "sessions": [
+            "sub-123|A",
+            "sub-123|C"
+          ],
+          "prob": [
+            0.3838,
+            0.4343
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 10,
+          "test_patient": "sub-125",
+          "sessions": [
+            "sub-125|A",
+            "sub-125|C"
+          ],
+          "prob": [
+            0.5037,
+            0.5244
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 11,
+          "test_patient": "sub-129",
+          "sessions": [
+            "sub-129|A",
+            "sub-129|C"
+          ],
+          "prob": [
+            0.4745,
+            0.5848
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 12,
+          "test_patient": "sub-131",
+          "sessions": [
+            "sub-131|A",
+            "sub-131|C"
+          ],
+          "prob": [
+            0.4522,
+            0.5106
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 13,
+          "test_patient": "sub-134",
+          "sessions": [
+            "sub-134|A",
+            "sub-134|C"
+          ],
+          "prob": [
+            0.6196,
+            0.6779
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 14,
+          "test_patient": "sub-135",
+          "sessions": [
+            "sub-135|A",
+            "sub-135|C"
+          ],
+          "prob": [
+            0.4216,
+            0.4627
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 15,
+          "test_patient": "sub-34",
+          "sessions": [
+            "sub-34|A",
+            "sub-34|C"
+          ],
+          "prob": [
+            0.4545,
+            0.5681
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 16,
+          "test_patient": "sub-42",
+          "sessions": [
+            "sub-42|A",
+            "sub-42|C"
+          ],
+          "prob": [
+            0.5143,
+            0.8675
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 17,
+          "test_patient": "sub-48",
+          "sessions": [
+            "sub-48|A",
+            "sub-48|C"
+          ],
+          "prob": [
+            0.3904,
+            0.534
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 18,
+          "test_patient": "sub-51",
+          "sessions": [
+            "sub-51|A",
+            "sub-51|C"
+          ],
+          "prob": [
+            0.3673,
+            0.4145
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 19,
+          "test_patient": "sub-53",
+          "sessions": [
+            "sub-53|A",
+            "sub-53|C"
+          ],
+          "prob": [
+            0.4536,
+            0.5172
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 20,
+          "test_patient": "sub-62",
+          "sessions": [
+            "sub-62|A",
+            "sub-62|C"
+          ],
+          "prob": [
+            0.6481,
+            0.5043
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 21,
+          "test_patient": "sub-69",
+          "sessions": [
+            "sub-69|A",
+            "sub-69|C"
+          ],
+          "prob": [
+            0.5318,
+            0.5234
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 22,
+          "test_patient": "sub-70",
+          "sessions": [
+            "sub-70|A",
+            "sub-70|C"
+          ],
+          "prob": [
+            0.441,
+            0.5794
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 23,
+          "test_patient": "sub-71",
+          "sessions": [
+            "sub-71|A",
+            "sub-71|C"
+          ],
+          "prob": [
+            0.5074,
+            0.5626
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 24,
+          "test_patient": "sub-72",
+          "sessions": [
+            "sub-72|A",
+            "sub-72|C"
+          ],
+          "prob": [
+            0.4628,
+            0.4336
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 25,
+          "test_patient": "sub-73",
+          "sessions": [
+            "sub-73|A",
+            "sub-73|C"
+          ],
+          "prob": [
+            0.4465,
+            0.5526
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 26,
+          "test_patient": "sub-76",
+          "sessions": [
+            "sub-76|A",
+            "sub-76|C"
+          ],
+          "prob": [
+            0.2889,
+            0.3813
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 27,
+          "test_patient": "sub-77",
+          "sessions": [
+            "sub-77|A",
+            "sub-77|C"
+          ],
+          "prob": [
+            0.4044,
+            0.5912
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 28,
+          "test_patient": "sub-81",
+          "sessions": [
+            "sub-81|A",
+            "sub-81|C"
+          ],
+          "prob": [
+            0.4544,
+            0.6959
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 29,
+          "test_patient": "sub-84",
+          "sessions": [
+            "sub-84|A",
+            "sub-84|C"
+          ],
+          "prob": [
+            0.4399,
+            0.6432
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 30,
+          "test_patient": "sub-90",
+          "sessions": [
+            "sub-90|A",
+            "sub-90|C"
+          ],
+          "prob": [
+            0.3663,
+            0.288
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 31,
+          "test_patient": "sub-92",
+          "sessions": [
+            "sub-92|A",
+            "sub-92|C"
+          ],
+          "prob": [
+            0.3479,
+            0.3958
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 32,
+          "test_patient": "sub-93",
+          "sessions": [
+            "sub-93|A",
+            "sub-93|C"
+          ],
+          "prob": [
+            0.5953,
+            0.8745
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 33,
+          "test_patient": "sub-94",
+          "sessions": [
+            "sub-94|A",
+            "sub-94|C"
+          ],
+          "prob": [
+            0.5986,
+            0.6077
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 34,
+          "test_patient": "sub-96",
+          "sessions": [
+            "sub-96|A",
+            "sub-96|C"
+          ],
+          "prob": [
+            0.3606,
+            0.2198
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "rel+subjnorm",
+      "aggregate": {
+        "balanced_accuracy": 0.5571428571428572,
+        "accuracy": 0.5571428571428572,
+        "auc": 0.6473469387755102,
+        "sensitivity": 0.5142857142857142,
+        "specificity": 0.6,
+        "macro_f1": 0.5563279492946227,
+        "n": 70,
+        "n_pos": 35,
+        "n_neg": 35
+      },
+      "bootstrap": {
+        "metric": "balanced_accuracy",
+        "point": 0.5571428571428572,
+        "ci_low": 0.4,
+        "ci_high": 0.7142857142857143,
+        "ci": 0.95,
+        "n_valid_resamples": 2000
+      },
+      "permutation": {
+        "observed_balanced_accuracy": 0.5571428571428572,
+        "null_mean": 0.49014285714285705,
+        "null_std": 0.08239266363219581,
+        "p_value": 0.2736318407960199,
+        "n_permutations": 200
+      },
+      "ordering_correct": 20,
+      "n_patients": 35,
+      "per_fold": [
+        {
+          "fold": 0,
+          "test_patient": "sub-103",
+          "sessions": [
+            "sub-103|A",
+            "sub-103|C"
+          ],
+          "prob": [
+            0.5745,
+            0.3677
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 1,
+          "test_patient": "sub-106",
+          "sessions": [
+            "sub-106|A",
+            "sub-106|C"
+          ],
+          "prob": [
+            0.509,
+            0.4668
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 2,
+          "test_patient": "sub-107",
+          "sessions": [
+            "sub-107|A",
+            "sub-107|C"
+          ],
+          "prob": [
+            0.4368,
+            0.5989
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 3,
+          "test_patient": "sub-114",
+          "sessions": [
+            "sub-114|A",
+            "sub-114|C"
+          ],
+          "prob": [
+            0.3548,
+            0.575
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 4,
+          "test_patient": "sub-115",
+          "sessions": [
+            "sub-115|A",
+            "sub-115|C"
+          ],
+          "prob": [
+            0.5305,
+            0.4563
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 5,
+          "test_patient": "sub-116",
+          "sessions": [
+            "sub-116|A",
+            "sub-116|C"
+          ],
+          "prob": [
+            0.561,
+            0.4036
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 6,
+          "test_patient": "sub-117",
+          "sessions": [
+            "sub-117|A",
+            "sub-117|C"
+          ],
+          "prob": [
+            0.5135,
+            0.3931
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 7,
+          "test_patient": "sub-119",
+          "sessions": [
+            "sub-119|A",
+            "sub-119|C"
+          ],
+          "prob": [
+            0.4456,
+            0.5165
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 8,
+          "test_patient": "sub-121",
+          "sessions": [
+            "sub-121|A",
+            "sub-121|C"
+          ],
+          "prob": [
+            0.4487,
+            0.4948
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 9,
+          "test_patient": "sub-123",
+          "sessions": [
+            "sub-123|A",
+            "sub-123|C"
+          ],
+          "prob": [
+            0.5039,
+            0.4845
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 10,
+          "test_patient": "sub-125",
+          "sessions": [
+            "sub-125|A",
+            "sub-125|C"
+          ],
+          "prob": [
+            0.4473,
+            0.5516
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 11,
+          "test_patient": "sub-129",
+          "sessions": [
+            "sub-129|A",
+            "sub-129|C"
+          ],
+          "prob": [
+            0.5079,
+            0.4784
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 12,
+          "test_patient": "sub-131",
+          "sessions": [
+            "sub-131|A",
+            "sub-131|C"
+          ],
+          "prob": [
+            0.5209,
+            0.4557
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 13,
+          "test_patient": "sub-134",
+          "sessions": [
+            "sub-134|A",
+            "sub-134|C"
+          ],
+          "prob": [
+            0.448,
+            0.5373
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 14,
+          "test_patient": "sub-135",
+          "sessions": [
+            "sub-135|A",
+            "sub-135|C"
+          ],
+          "prob": [
+            0.5346,
+            0.4658
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 15,
+          "test_patient": "sub-34",
+          "sessions": [
+            "sub-34|A",
+            "sub-34|C"
+          ],
+          "prob": [
+            0.4961,
+            0.4607
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 16,
+          "test_patient": "sub-42",
+          "sessions": [
+            "sub-42|A",
+            "sub-42|C"
+          ],
+          "prob": [
+            0.523,
+            0.4162
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 17,
+          "test_patient": "sub-48",
+          "sessions": [
+            "sub-48|A",
+            "sub-48|C"
+          ],
+          "prob": [
+            0.4114,
+            0.6017
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 18,
+          "test_patient": "sub-51",
+          "sessions": [
+            "sub-51|A",
+            "sub-51|C"
+          ],
+          "prob": [
+            0.4856,
+            0.5081
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 19,
+          "test_patient": "sub-53",
+          "sessions": [
+            "sub-53|A",
+            "sub-53|C"
+          ],
+          "prob": [
+            0.4806,
+            0.5159
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 20,
+          "test_patient": "sub-62",
+          "sessions": [
+            "sub-62|A",
+            "sub-62|C"
+          ],
+          "prob": [
+            0.5208,
+            0.4637
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 21,
+          "test_patient": "sub-69",
+          "sessions": [
+            "sub-69|A",
+            "sub-69|C"
+          ],
+          "prob": [
+            0.5238,
+            0.4427
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 22,
+          "test_patient": "sub-70",
+          "sessions": [
+            "sub-70|A",
+            "sub-70|C"
+          ],
+          "prob": [
+            0.435,
+            0.6115
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 23,
+          "test_patient": "sub-71",
+          "sessions": [
+            "sub-71|A",
+            "sub-71|C"
+          ],
+          "prob": [
+            0.53,
+            0.486
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 24,
+          "test_patient": "sub-72",
+          "sessions": [
+            "sub-72|A",
+            "sub-72|C"
+          ],
+          "prob": [
+            0.4084,
+            0.5444
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 25,
+          "test_patient": "sub-73",
+          "sessions": [
+            "sub-73|A",
+            "sub-73|C"
+          ],
+          "prob": [
+            0.3607,
+            0.6045
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 26,
+          "test_patient": "sub-76",
+          "sessions": [
+            "sub-76|A",
+            "sub-76|C"
+          ],
+          "prob": [
+            0.4859,
+            0.4932
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 27,
+          "test_patient": "sub-77",
+          "sessions": [
+            "sub-77|A",
+            "sub-77|C"
+          ],
+          "prob": [
+            0.4314,
+            0.5686
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 28,
+          "test_patient": "sub-81",
+          "sessions": [
+            "sub-81|A",
+            "sub-81|C"
+          ],
+          "prob": [
+            0.3848,
+            0.5826
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 29,
+          "test_patient": "sub-84",
+          "sessions": [
+            "sub-84|A",
+            "sub-84|C"
+          ],
+          "prob": [
+            0.3976,
+            0.6671
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 30,
+          "test_patient": "sub-90",
+          "sessions": [
+            "sub-90|A",
+            "sub-90|C"
+          ],
+          "prob": [
+            0.4536,
+            0.5157
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 31,
+          "test_patient": "sub-92",
+          "sessions": [
+            "sub-92|A",
+            "sub-92|C"
+          ],
+          "prob": [
+            0.4503,
+            0.5351
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 32,
+          "test_patient": "sub-93",
+          "sessions": [
+            "sub-93|A",
+            "sub-93|C"
+          ],
+          "prob": [
+            0.4384,
+            0.5655
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 33,
+          "test_patient": "sub-94",
+          "sessions": [
+            "sub-94|A",
+            "sub-94|C"
+          ],
+          "prob": [
+            0.4154,
+            0.5558
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 34,
+          "test_patient": "sub-96",
+          "sessions": [
+            "sub-96|A",
+            "sub-96|C"
+          ],
+          "prob": [
+            0.5901,
+            0.3813
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "beta",
+      "aggregate": {
+        "balanced_accuracy": 0.48571428571428565,
+        "accuracy": 0.4857142857142857,
+        "auc": 0.48000000000000004,
+        "sensitivity": 0.5142857142857142,
+        "specificity": 0.45714285714285713,
+        "macro_f1": 0.4852941176470588,
+        "n": 70,
+        "n_pos": 35,
+        "n_neg": 35
+      },
+      "bootstrap": {
+        "metric": "balanced_accuracy",
+        "point": 0.48571428571428565,
+        "ci_low": 0.37142857142857144,
+        "ci_high": 0.6,
+        "ci": 0.95,
+        "n_valid_resamples": 2000
+      },
+      "permutation": {
+        "observed_balanced_accuracy": 0.48571428571428565,
+        "null_mean": 0.4951428571428572,
+        "null_std": 0.054444129759838394,
+        "p_value": 0.6865671641791045,
+        "n_permutations": 200
+      },
+      "ordering_correct": 16,
+      "n_patients": 35,
+      "per_fold": [
+        {
+          "fold": 0,
+          "test_patient": "sub-103",
+          "sessions": [
+            "sub-103|A",
+            "sub-103|C"
+          ],
+          "prob": [
+            0.5037,
+            0.4278
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 1,
+          "test_patient": "sub-106",
+          "sessions": [
+            "sub-106|A",
+            "sub-106|C"
+          ],
+          "prob": [
+            0.3051,
+            0.0427
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 2,
+          "test_patient": "sub-107",
+          "sessions": [
+            "sub-107|A",
+            "sub-107|C"
+          ],
+          "prob": [
+            0.5194,
+            0.4107
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 3,
+          "test_patient": "sub-114",
+          "sessions": [
+            "sub-114|A",
+            "sub-114|C"
+          ],
+          "prob": [
+            0.6883,
+            0.4849
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 4,
+          "test_patient": "sub-115",
+          "sessions": [
+            "sub-115|A",
+            "sub-115|C"
+          ],
+          "prob": [
+            0.5203,
+            0.5247
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 5,
+          "test_patient": "sub-116",
+          "sessions": [
+            "sub-116|A",
+            "sub-116|C"
+          ],
+          "prob": [
+            0.6629,
+            0.7483
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 6,
+          "test_patient": "sub-117",
+          "sessions": [
+            "sub-117|A",
+            "sub-117|C"
+          ],
+          "prob": [
+            0.5504,
+            0.4106
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 7,
+          "test_patient": "sub-119",
+          "sessions": [
+            "sub-119|A",
+            "sub-119|C"
+          ],
+          "prob": [
+            0.5413,
+            0.7272
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 8,
+          "test_patient": "sub-121",
+          "sessions": [
+            "sub-121|A",
+            "sub-121|C"
+          ],
+          "prob": [
+            0.7309,
+            0.4728
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 9,
+          "test_patient": "sub-123",
+          "sessions": [
+            "sub-123|A",
+            "sub-123|C"
+          ],
+          "prob": [
+            0.5283,
+            0.621
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 10,
+          "test_patient": "sub-125",
+          "sessions": [
+            "sub-125|A",
+            "sub-125|C"
+          ],
+          "prob": [
+            0.3839,
+            0.6474
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 11,
+          "test_patient": "sub-129",
+          "sessions": [
+            "sub-129|A",
+            "sub-129|C"
+          ],
+          "prob": [
+            0.5543,
+            0.5129
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 12,
+          "test_patient": "sub-131",
+          "sessions": [
+            "sub-131|A",
+            "sub-131|C"
+          ],
+          "prob": [
+            0.1687,
+            0.4367
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 13,
+          "test_patient": "sub-134",
+          "sessions": [
+            "sub-134|A",
+            "sub-134|C"
+          ],
+          "prob": [
+            0.7273,
+            0.7093
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 14,
+          "test_patient": "sub-135",
+          "sessions": [
+            "sub-135|A",
+            "sub-135|C"
+          ],
+          "prob": [
+            0.331,
+            0.2691
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 15,
+          "test_patient": "sub-34",
+          "sessions": [
+            "sub-34|A",
+            "sub-34|C"
+          ],
+          "prob": [
+            0.5262,
+            0.4683
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 16,
+          "test_patient": "sub-42",
+          "sessions": [
+            "sub-42|A",
+            "sub-42|C"
+          ],
+          "prob": [
+            0.5432,
+            0.5218
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 17,
+          "test_patient": "sub-48",
+          "sessions": [
+            "sub-48|A",
+            "sub-48|C"
+          ],
+          "prob": [
+            0.3537,
+            0.3792
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 18,
+          "test_patient": "sub-51",
+          "sessions": [
+            "sub-51|A",
+            "sub-51|C"
+          ],
+          "prob": [
+            0.2008,
+            0.5025
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 19,
+          "test_patient": "sub-53",
+          "sessions": [
+            "sub-53|A",
+            "sub-53|C"
+          ],
+          "prob": [
+            0.4721,
+            0.2351
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 20,
+          "test_patient": "sub-62",
+          "sessions": [
+            "sub-62|A",
+            "sub-62|C"
+          ],
+          "prob": [
+            0.579,
+            0.547
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 21,
+          "test_patient": "sub-69",
+          "sessions": [
+            "sub-69|A",
+            "sub-69|C"
+          ],
+          "prob": [
+            0.4543,
+            0.4239
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 22,
+          "test_patient": "sub-70",
+          "sessions": [
+            "sub-70|A",
+            "sub-70|C"
+          ],
+          "prob": [
+            0.4934,
+            0.2553
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 23,
+          "test_patient": "sub-71",
+          "sessions": [
+            "sub-71|A",
+            "sub-71|C"
+          ],
+          "prob": [
+            0.3088,
+            0.3721
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 24,
+          "test_patient": "sub-72",
+          "sessions": [
+            "sub-72|A",
+            "sub-72|C"
+          ],
+          "prob": [
+            0.5522,
+            0.5987
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 25,
+          "test_patient": "sub-73",
+          "sessions": [
+            "sub-73|A",
+            "sub-73|C"
+          ],
+          "prob": [
+            0.6055,
+            0.5219
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 26,
+          "test_patient": "sub-76",
+          "sessions": [
+            "sub-76|A",
+            "sub-76|C"
+          ],
+          "prob": [
+            0.4282,
+            0.526
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 27,
+          "test_patient": "sub-77",
+          "sessions": [
+            "sub-77|A",
+            "sub-77|C"
+          ],
+          "prob": [
+            0.3927,
+            0.5438
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 28,
+          "test_patient": "sub-81",
+          "sessions": [
+            "sub-81|A",
+            "sub-81|C"
+          ],
+          "prob": [
+            0.3082,
+            0.6461
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 29,
+          "test_patient": "sub-84",
+          "sessions": [
+            "sub-84|A",
+            "sub-84|C"
+          ],
+          "prob": [
+            0.4589,
+            0.7006
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 30,
+          "test_patient": "sub-90",
+          "sessions": [
+            "sub-90|A",
+            "sub-90|C"
+          ],
+          "prob": [
+            0.7844,
+            0.3817
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 31,
+          "test_patient": "sub-92",
+          "sessions": [
+            "sub-92|A",
+            "sub-92|C"
+          ],
+          "prob": [
+            0.5672,
+            0.2555
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 32,
+          "test_patient": "sub-93",
+          "sessions": [
+            "sub-93|A",
+            "sub-93|C"
+          ],
+          "prob": [
+            0.5515,
+            0.8187
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 33,
+          "test_patient": "sub-94",
+          "sessions": [
+            "sub-94|A",
+            "sub-94|C"
+          ],
+          "prob": [
+            0.3953,
+            0.5056
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 34,
+          "test_patient": "sub-96",
+          "sessions": [
+            "sub-96|A",
+            "sub-96|C"
+          ],
+          "prob": [
+            0.3571,
+            0.059
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "beta+subjnorm",
+      "aggregate": {
+        "balanced_accuracy": 0.48571428571428565,
+        "accuracy": 0.4857142857142857,
+        "auc": 0.4514285714285714,
+        "sensitivity": 0.42857142857142855,
+        "specificity": 0.5428571428571428,
+        "macro_f1": 0.484029484029484,
+        "n": 70,
+        "n_pos": 35,
+        "n_neg": 35
+      },
+      "bootstrap": {
+        "metric": "balanced_accuracy",
+        "point": 0.48571428571428565,
+        "ci_low": 0.34285714285714286,
+        "ci_high": 0.6428571428571428,
+        "ci": 0.95,
+        "n_valid_resamples": 2000
+      },
+      "permutation": {
+        "observed_balanced_accuracy": 0.48571428571428565,
+        "null_mean": 0.49200000000000005,
+        "null_std": 0.07597851468591334,
+        "p_value": 0.5920398009950248,
+        "n_permutations": 200
+      },
+      "ordering_correct": 17,
+      "n_patients": 35,
+      "per_fold": [
+        {
+          "fold": 0,
+          "test_patient": "sub-103",
+          "sessions": [
+            "sub-103|A",
+            "sub-103|C"
+          ],
+          "prob": [
+            0.6047,
+            0.3534
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 1,
+          "test_patient": "sub-106",
+          "sessions": [
+            "sub-106|A",
+            "sub-106|C"
+          ],
+          "prob": [
+            0.4724,
+            0.5299
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 2,
+          "test_patient": "sub-107",
+          "sessions": [
+            "sub-107|A",
+            "sub-107|C"
+          ],
+          "prob": [
+            0.6144,
+            0.2671
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 3,
+          "test_patient": "sub-114",
+          "sessions": [
+            "sub-114|A",
+            "sub-114|C"
+          ],
+          "prob": [
+            0.385,
+            0.5523
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 4,
+          "test_patient": "sub-115",
+          "sessions": [
+            "sub-115|A",
+            "sub-115|C"
+          ],
+          "prob": [
+            0.5311,
+            0.4617
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 5,
+          "test_patient": "sub-116",
+          "sessions": [
+            "sub-116|A",
+            "sub-116|C"
+          ],
+          "prob": [
+            0.4835,
+            0.5075
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 6,
+          "test_patient": "sub-117",
+          "sessions": [
+            "sub-117|A",
+            "sub-117|C"
+          ],
+          "prob": [
+            0.4874,
+            0.4975
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 7,
+          "test_patient": "sub-119",
+          "sessions": [
+            "sub-119|A",
+            "sub-119|C"
+          ],
+          "prob": [
+            0.5222,
+            0.4758
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 8,
+          "test_patient": "sub-121",
+          "sessions": [
+            "sub-121|A",
+            "sub-121|C"
+          ],
+          "prob": [
+            0.4762,
+            0.4975
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 9,
+          "test_patient": "sub-123",
+          "sessions": [
+            "sub-123|A",
+            "sub-123|C"
+          ],
+          "prob": [
+            0.5189,
+            0.4618
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 10,
+          "test_patient": "sub-125",
+          "sessions": [
+            "sub-125|A",
+            "sub-125|C"
+          ],
+          "prob": [
+            0.3762,
+            0.6205
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 11,
+          "test_patient": "sub-129",
+          "sessions": [
+            "sub-129|A",
+            "sub-129|C"
+          ],
+          "prob": [
+            0.5015,
+            0.4795
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 12,
+          "test_patient": "sub-131",
+          "sessions": [
+            "sub-131|A",
+            "sub-131|C"
+          ],
+          "prob": [
+            0.4338,
+            0.5828
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 13,
+          "test_patient": "sub-134",
+          "sessions": [
+            "sub-134|A",
+            "sub-134|C"
+          ],
+          "prob": [
+            0.4713,
+            0.514
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 14,
+          "test_patient": "sub-135",
+          "sessions": [
+            "sub-135|A",
+            "sub-135|C"
+          ],
+          "prob": [
+            0.6248,
+            0.3989
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 15,
+          "test_patient": "sub-34",
+          "sessions": [
+            "sub-34|A",
+            "sub-34|C"
+          ],
+          "prob": [
+            0.5162,
+            0.3679
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 16,
+          "test_patient": "sub-42",
+          "sessions": [
+            "sub-42|A",
+            "sub-42|C"
+          ],
+          "prob": [
+            0.4902,
+            0.5047
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 17,
+          "test_patient": "sub-48",
+          "sessions": [
+            "sub-48|A",
+            "sub-48|C"
+          ],
+          "prob": [
+            0.4562,
+            0.5497
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 18,
+          "test_patient": "sub-51",
+          "sessions": [
+            "sub-51|A",
+            "sub-51|C"
+          ],
+          "prob": [
+            0.4974,
+            0.463
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 19,
+          "test_patient": "sub-53",
+          "sessions": [
+            "sub-53|A",
+            "sub-53|C"
+          ],
+          "prob": [
+            0.5163,
+            0.4458
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 20,
+          "test_patient": "sub-62",
+          "sessions": [
+            "sub-62|A",
+            "sub-62|C"
+          ],
+          "prob": [
+            0.5051,
+            0.4841
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 21,
+          "test_patient": "sub-69",
+          "sessions": [
+            "sub-69|A",
+            "sub-69|C"
+          ],
+          "prob": [
+            0.5518,
+            0.4111
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 22,
+          "test_patient": "sub-70",
+          "sessions": [
+            "sub-70|A",
+            "sub-70|C"
+          ],
+          "prob": [
+            0.6143,
+            0.2683
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 23,
+          "test_patient": "sub-71",
+          "sessions": [
+            "sub-71|A",
+            "sub-71|C"
+          ],
+          "prob": [
+            0.4982,
+            0.4771
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 24,
+          "test_patient": "sub-72",
+          "sessions": [
+            "sub-72|A",
+            "sub-72|C"
+          ],
+          "prob": [
+            0.3332,
+            0.6062
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 25,
+          "test_patient": "sub-73",
+          "sessions": [
+            "sub-73|A",
+            "sub-73|C"
+          ],
+          "prob": [
+            0.4535,
+            0.52
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 26,
+          "test_patient": "sub-76",
+          "sessions": [
+            "sub-76|A",
+            "sub-76|C"
+          ],
+          "prob": [
+            0.4671,
+            0.5198
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 27,
+          "test_patient": "sub-77",
+          "sessions": [
+            "sub-77|A",
+            "sub-77|C"
+          ],
+          "prob": [
+            0.4364,
+            0.569
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 28,
+          "test_patient": "sub-81",
+          "sessions": [
+            "sub-81|A",
+            "sub-81|C"
+          ],
+          "prob": [
+            0.3817,
+            0.6062
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 29,
+          "test_patient": "sub-84",
+          "sessions": [
+            "sub-84|A",
+            "sub-84|C"
+          ],
+          "prob": [
+            0.4386,
+            0.5987
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 30,
+          "test_patient": "sub-90",
+          "sessions": [
+            "sub-90|A",
+            "sub-90|C"
+          ],
+          "prob": [
+            0.6644,
+            0.3862
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 31,
+          "test_patient": "sub-92",
+          "sessions": [
+            "sub-92|A",
+            "sub-92|C"
+          ],
+          "prob": [
+            0.5341,
+            0.4522
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 32,
+          "test_patient": "sub-93",
+          "sessions": [
+            "sub-93|A",
+            "sub-93|C"
+          ],
+          "prob": [
+            0.4414,
+            0.5669
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 33,
+          "test_patient": "sub-94",
+          "sessions": [
+            "sub-94|A",
+            "sub-94|C"
+          ],
+          "prob": [
+            0.5809,
+            0.4071
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        },
+        {
+          "fold": 34,
+          "test_patient": "sub-96",
+          "sessions": [
+            "sub-96|A",
+            "sub-96|C"
+          ],
+          "prob": [
+            0.6212,
+            0.3483
+          ],
+          "y_true": [
+            0,
+            1
+          ]
+        }
+      ]
+    }
+  ],
+  "note": "subjnorm variants are TRANSDUCTIVE (z-score within subject using both sessions, unsupervised); they answer the paired question."
+}

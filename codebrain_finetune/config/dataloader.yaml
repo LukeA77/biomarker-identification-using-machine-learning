@@ -1,0 +1,66 @@
+# codebrain_finetune/config/dataloader.yaml
+# ---------------------------------------------------------------------------
+# Data-loading configuration for the CodeBrain ON/OFF fine-tuning study.
+#
+# The loader is COHORT-AGNOSTIC: this file is the single place patients are
+# dropped and the only place tunable data parameters live. Changing the cohort
+# (e.g. once Dr Haar rules on sub-80) is a one-line edit here — no code change.
+# ---------------------------------------------------------------------------
+
+cohort:
+  # ---------------------------------------------------------------------------
+  # FINAL COHORT LOCK — CONFIRMED 2026-07-22 against this exact manifest.
+  # This is the SINGLE SOURCE OF TRUTH for patient exclusion. Every downstream
+  # stage (loader, LOPO fold generation, baselines) reads the cohort from here
+  # via CohortManifest; no script re-implements exclusion. Applied loudly
+  # (each drop logged with its window count), never silently.
+  #
+  # The full 38-patient pool was independently listed and split into 32
+  # included + 10 named-excluded; cross-checked programmatically against
+  # manifest.parquet (see logs/pre_finetuning_audit_20260721.md §append
+  # 2026-07-22): every one of the 38 processed patients is accounted for,
+  # and the confirmed included set matches this cohort's 32 patients exactly.
+  #
+  # Of the 10 names given as excluded, only 6 exist in the processed manifest
+  # and are the ones actually dropped below:
+  #     sub-80, sub-97, sub-98, sub-99, sub-105, sub-108
+  # The other 4 — sub-82, sub-100, sub-111, sub-130 — are NOT in the 38-patient
+  # processed pool at all (genuine EEG-acquisition/montage gaps: sub-82 empty
+  # living-lab-tasks folder; sub-100 study notes "Living Lab EEG Data did not
+  # save"; sub-111 incompatible 13-channel montage, never run through the
+  # CSV-continuous pipeline; sub-130 EDF for one condition only). Listed here
+  # anyway so the full agreed decision is recorded and they stay excluded if a
+  # later DSI re-export or montage fix ever adds them. The loader logs all 4 as
+  # "absent from the manifest" (a loud warning, never a silent swallow).
+  #
+  # LOCKED RESULT: pool 38 − 6 present exclusions = 32 patients. Confirmed
+  # correct 2026-07-22 (no further exclusions intended).
+  # ---------------------------------------------------------------------------
+  exclude_patients: [sub-80, sub-82, sub-97, sub-98, sub-99, sub-100, sub-105, sub-108, sub-111, sub-130]
+
+  # No patients remain under review — the cohort is locked. (Kept as an empty
+  # list so the loader's pending-review flagging path stays wired for future use.)
+  pending_review: []
+
+window:
+  # Verified tensor contract (Stage 1 + Stage 2 forward-pass gate). Do NOT change
+  # without re-verifying the cache and the model — these are load-bearing.
+  n_channels: 18            # Fp1 Fp2 F7 F3 Fz F4 F8 T3 C3 Cz C4 T4 T5 P3 P4 T6 O1 O2
+  n_patches: 10             # 10 s window / 1 s patch
+  samples_per_patch: 200    # 1 s @ 200 Hz
+  norm_divisor: 100.0       # ÷100, per CodeBrain Datasets/tuab_dataset.py (plan OQ-1b)
+  expected_sfreq: 200
+
+overlap:
+  # Train on the FULL overlapping (5 s-stride) set — free augmentation.
+  # Evaluate held-out patients on the NON-OVERLAP (10 s-stride) subset only, so
+  # window-level metrics are not inflated by autocorrelated overlapping windows.
+  eval_nonoverlap_only: true
+
+loader:
+  batch_size: 64
+  num_workers: 0            # Windows-safe default; raise if IO-bound (pickling verified)
+  pin_memory: true
+  seed: 1                   # base seed (project convention — ICA determinism used seed=1)
+  min_batch_size: 2         # SSSM.forward()'s trailing squeeze() collapses a size-1
+                            # batch dim, so the loader must NEVER yield a batch of 1.

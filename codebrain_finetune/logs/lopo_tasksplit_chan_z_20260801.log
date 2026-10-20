@@ -1,0 +1,264 @@
+22:05:36 INFO livinglab_codebrain.dataset: Manifest validated: 43822 windows, 41 patients, sfreq=200, label map A=0/C=1 consistent.
+22:05:36 WARNING livinglab_codebrain.dataset: Exclusion list names patients absent from the manifest: ['sub-82', 'sub-100', 'sub-111', 'sub-130']
+22:05:36 INFO livinglab_codebrain.dataset: Applying cohort exclusions (loud):
+22:05:36 INFO livinglab_codebrain.dataset:     EXCLUDE sub-80    ->  1109 windows dropped
+22:05:36 INFO livinglab_codebrain.dataset:     EXCLUDE sub-82    ->     0 windows dropped
+22:05:36 INFO livinglab_codebrain.dataset:     EXCLUDE sub-97    ->   700 windows dropped
+22:05:36 INFO livinglab_codebrain.dataset:     EXCLUDE sub-98    ->   910 windows dropped
+22:05:36 INFO livinglab_codebrain.dataset:     EXCLUDE sub-99    ->  1494 windows dropped
+22:05:36 INFO livinglab_codebrain.dataset:     EXCLUDE sub-100   ->     0 windows dropped
+22:05:36 INFO livinglab_codebrain.dataset:     EXCLUDE sub-105   ->   850 windows dropped
+22:05:36 INFO livinglab_codebrain.dataset:     EXCLUDE sub-108   ->  1585 windows dropped
+22:05:36 INFO livinglab_codebrain.dataset:     EXCLUDE sub-111   ->     0 windows dropped
+22:05:36 INFO livinglab_codebrain.dataset:     EXCLUDE sub-130   ->     0 windows dropped
+22:05:36 INFO livinglab_codebrain.dataset: Cohort after exclusions: 35 patients (was 41), 37174 windows (was 43822).
+22:05:36 INFO lopo_tasksplit: LoRA HPs reused from results/nested_lora/hp_search.json: {'r': 4, 'lr': 0.0005, 'dropout': 0.1} (NOT re-searched).
+22:05:36 INFO lopo_tasksplit: Input normalisation: chan_z (rescaled to cohort-median window std 0.662742)
+22:05:36 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+22:06:00 INFO codebrain_ft.backbone_cache: Wrote backbone feature cache C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\codebrain_finetune\results\within_patient_tasksplit\backbone_features\features_chan_z_cdaffbdd0455.npz ((9963, 200))
+22:06:00 INFO lopo_tasksplit: Frozen-backbone features: (9963, 200) (miss)
+22:06:00 INFO codebrain_ft.control_features: Computing control features ['amp1', 'crude3', 'chanamp', 'relbp', 'aperiodic'] for 9963 windows | norm=chan_z | 24 chunk(s) x 24 job(s) | aperiodic estimator=specparam
+22:07:21 INFO codebrain_ft.control_features: Wrote feature cache C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\codebrain_finetune\results\within_patient_tasksplit\control_features\features_chan_z_a62f3015e631.npz
+22:07:21 INFO lopo_tasksplit: Run 'lopo_tasksplit_chan_z' | arms=['frozen_probe', 'chanamp', 'relbp', 'aperiodic'] | 27 folds x 2 directions | input_norm=chan_z | max_epochs=20
+22:07:23 INFO lopo_tasksplit: frozen_probe sub-103   tea->toast  | window bal-acc 0.471 | session bal-acc 0.000 | train n=2921 (26 patients) test n=299 | 0s
+22:07:24 INFO lopo_tasksplit: frozen_probe sub-103   toast->tea    | window bal-acc 0.384 | session bal-acc 0.500 | train n=6208 (26 patients) test n=119 | 0s
+22:07:24 INFO lopo_tasksplit: frozen_probe sub-106   tea->toast  | window bal-acc 0.590 | session bal-acc 0.500 | train n=3060 (26 patients) test n=100 | 0s
+22:07:25 INFO lopo_tasksplit: frozen_probe sub-106   toast->tea    | window bal-acc 0.500 | session bal-acc 0.500 | train n=6604 (26 patients) test n=48 | 0s
+22:07:25 INFO lopo_tasksplit: frozen_probe sub-107   tea->toast  | window bal-acc 0.493 | session bal-acc 0.500 | train n=3059 (26 patients) test n=96 | 0s
+22:07:25 INFO lopo_tasksplit: frozen_probe sub-107   toast->tea    | window bal-acc 0.561 | session bal-acc 1.000 | train n=6614 (26 patients) test n=49 | 0s
+22:07:26 INFO lopo_tasksplit: frozen_probe sub-114   tea->toast  | window bal-acc 0.339 | session bal-acc 0.500 | train n=3043 (26 patients) test n=149 | 0s
+22:07:26 INFO lopo_tasksplit: frozen_probe sub-114   toast->tea    | window bal-acc 0.357 | session bal-acc 0.500 | train n=6506 (26 patients) test n=57 | 0s
+22:07:26 INFO lopo_tasksplit: frozen_probe sub-115   tea->toast  | window bal-acc 0.510 | session bal-acc 0.500 | train n=3067 (26 patients) test n=114 | 0s
+22:07:27 INFO lopo_tasksplit: frozen_probe sub-115   toast->tea    | window bal-acc 0.516 | session bal-acc 0.500 | train n=6578 (26 patients) test n=45 | 0s
+22:07:27 INFO lopo_tasksplit: frozen_probe sub-116   tea->toast  | window bal-acc 0.499 | session bal-acc 0.500 | train n=3036 (26 patients) test n=119 | 0s
+22:07:27 INFO lopo_tasksplit: frozen_probe sub-116   toast->tea    | window bal-acc 0.481 | session bal-acc 0.500 | train n=6568 (26 patients) test n=60 | 0s
+22:07:28 INFO lopo_tasksplit: frozen_probe sub-119   tea->toast  | window bal-acc 0.308 | session bal-acc 0.000 | train n=3007 (26 patients) test n=156 | 0s
+22:07:28 INFO lopo_tasksplit: frozen_probe sub-119   toast->tea    | window bal-acc 0.407 | session bal-acc 0.000 | train n=6494 (26 patients) test n=75 | 0s
+22:07:28 INFO lopo_tasksplit: frozen_probe sub-121   tea->toast  | window bal-acc 0.553 | session bal-acc 1.000 | train n=2999 (26 patients) test n=93 | 0s
+22:07:29 INFO lopo_tasksplit: frozen_probe sub-121   toast->tea    | window bal-acc 0.501 | session bal-acc 0.500 | train n=6622 (26 patients) test n=80 | 0s
+22:07:29 INFO lopo_tasksplit: frozen_probe sub-123   tea->toast  | window bal-acc 0.432 | session bal-acc 0.500 | train n=3030 (26 patients) test n=124 | 0s
+22:07:30 INFO lopo_tasksplit: frozen_probe sub-123   toast->tea    | window bal-acc 0.463 | session bal-acc 0.500 | train n=6558 (26 patients) test n=63 | 0s
+22:07:30 INFO lopo_tasksplit: frozen_probe sub-125   tea->toast  | window bal-acc 0.677 | session bal-acc 1.000 | train n=3060 (26 patients) test n=139 | 0s
+22:07:30 INFO lopo_tasksplit: frozen_probe sub-125   toast->tea    | window bal-acc 0.710 | session bal-acc 1.000 | train n=6527 (26 patients) test n=48 | 0s
+22:07:31 INFO lopo_tasksplit: frozen_probe sub-129   tea->toast  | window bal-acc 0.432 | session bal-acc 0.500 | train n=3027 (26 patients) test n=168 | 0s
+22:07:31 INFO lopo_tasksplit: frozen_probe sub-129   toast->tea    | window bal-acc 0.401 | session bal-acc 0.500 | train n=6468 (26 patients) test n=64 | 0s
+22:07:31 INFO lopo_tasksplit: frozen_probe sub-131   tea->toast  | window bal-acc 0.543 | session bal-acc 0.500 | train n=3084 (26 patients) test n=166 | 0s
+22:07:32 INFO lopo_tasksplit: frozen_probe sub-131   toast->tea    | window bal-acc 0.510 | session bal-acc 0.500 | train n=6473 (26 patients) test n=36 | 0s
+22:07:32 INFO lopo_tasksplit: frozen_probe sub-134   tea->toast  | window bal-acc 0.285 | session bal-acc 0.000 | train n=3050 (26 patients) test n=133 | 0s
+22:07:32 INFO lopo_tasksplit: frozen_probe sub-134   toast->tea    | window bal-acc 0.471 | session bal-acc 0.500 | train n=6542 (26 patients) test n=53 | 0s
+22:07:33 INFO lopo_tasksplit: frozen_probe sub-135   tea->toast  | window bal-acc 0.537 | session bal-acc 0.500 | train n=3010 (26 patients) test n=190 | 0s
+22:07:33 INFO lopo_tasksplit: frozen_probe sub-135   toast->tea    | window bal-acc 0.212 | session bal-acc 0.000 | train n=6424 (26 patients) test n=74 | 0s
+22:07:33 INFO lopo_tasksplit: frozen_probe sub-51    tea->toast  | window bal-acc 0.590 | session bal-acc 0.500 | train n=3049 (26 patients) test n=100 | 0s
+22:07:34 INFO lopo_tasksplit: frozen_probe sub-51    toast->tea    | window bal-acc 0.648 | session bal-acc 0.500 | train n=6605 (26 patients) test n=54 | 0s
+22:07:34 INFO lopo_tasksplit: frozen_probe sub-62    tea->toast  | window bal-acc 0.557 | session bal-acc 0.500 | train n=3047 (26 patients) test n=84 | 0s
+22:07:35 INFO lopo_tasksplit: frozen_probe sub-62    toast->tea    | window bal-acc 0.604 | session bal-acc 1.000 | train n=6637 (26 patients) test n=55 | 0s
+22:07:35 INFO lopo_tasksplit: frozen_probe sub-70    tea->toast  | window bal-acc 0.305 | session bal-acc 0.000 | train n=3036 (26 patients) test n=82 | 0s
+22:07:35 INFO lopo_tasksplit: frozen_probe sub-70    toast->tea    | window bal-acc 0.408 | session bal-acc 0.500 | train n=6643 (26 patients) test n=61 | 0s
+22:07:36 INFO lopo_tasksplit: frozen_probe sub-71    tea->toast  | window bal-acc 0.532 | session bal-acc 0.500 | train n=3037 (26 patients) test n=121 | 0s
+22:07:36 INFO lopo_tasksplit: frozen_probe sub-71    toast->tea    | window bal-acc 0.517 | session bal-acc 0.500 | train n=6563 (26 patients) test n=60 | 0s
+22:07:36 INFO lopo_tasksplit: frozen_probe sub-72    tea->toast  | window bal-acc 0.561 | session bal-acc 0.500 | train n=3063 (26 patients) test n=98 | 0s
+22:07:37 INFO lopo_tasksplit: frozen_probe sub-72    toast->tea    | window bal-acc 0.471 | session bal-acc 0.500 | train n=6611 (26 patients) test n=47 | 0s
+22:07:37 INFO lopo_tasksplit: frozen_probe sub-76    tea->toast  | window bal-acc 0.583 | session bal-acc 0.500 | train n=3016 (26 patients) test n=142 | 0s
+22:07:38 INFO lopo_tasksplit: frozen_probe sub-76    toast->tea    | window bal-acc 0.524 | session bal-acc 0.500 | train n=6524 (26 patients) test n=71 | 0s
+22:07:38 INFO lopo_tasksplit: frozen_probe sub-77    tea->toast  | window bal-acc 0.604 | session bal-acc 1.000 | train n=3043 (26 patients) test n=140 | 0s
+22:07:38 INFO lopo_tasksplit: frozen_probe sub-77    toast->tea    | window bal-acc 0.739 | session bal-acc 1.000 | train n=6526 (26 patients) test n=57 | 0s
+22:07:39 INFO lopo_tasksplit: frozen_probe sub-81    tea->toast  | window bal-acc 0.795 | session bal-acc 1.000 | train n=3034 (26 patients) test n=140 | 0s
+22:07:39 INFO lopo_tasksplit: frozen_probe sub-81    toast->tea    | window bal-acc 0.636 | session bal-acc 0.500 | train n=6527 (26 patients) test n=61 | 0s
+22:07:39 INFO lopo_tasksplit: frozen_probe sub-84    tea->toast  | window bal-acc 0.204 | session bal-acc 0.000 | train n=3051 (26 patients) test n=135 | 0s
+22:07:40 INFO lopo_tasksplit: frozen_probe sub-84    toast->tea    | window bal-acc 0.249 | session bal-acc 0.000 | train n=6537 (26 patients) test n=53 | 0s
+22:07:40 INFO lopo_tasksplit: frozen_probe sub-90    tea->toast  | window bal-acc 0.442 | session bal-acc 0.000 | train n=3064 (26 patients) test n=72 | 0s
+22:07:40 INFO lopo_tasksplit: frozen_probe sub-90    toast->tea    | window bal-acc 0.478 | session bal-acc 0.500 | train n=6663 (26 patients) test n=46 | 0s
+22:07:41 INFO lopo_tasksplit: frozen_probe sub-92    tea->toast  | window bal-acc 0.569 | session bal-acc 0.500 | train n=3064 (26 patients) test n=86 | 0s
+22:07:41 INFO lopo_tasksplit: frozen_probe sub-92    toast->tea    | window bal-acc 0.576 | session bal-acc 1.000 | train n=6635 (26 patients) test n=47 | 0s
+22:07:41 INFO lopo_tasksplit: frozen_probe sub-94    tea->toast  | window bal-acc 0.517 | session bal-acc 0.500 | train n=3079 (26 patients) test n=97 | 0s
+22:07:42 INFO lopo_tasksplit: frozen_probe sub-94    toast->tea    | window bal-acc 0.452 | session bal-acc 0.500 | train n=6612 (26 patients) test n=39 | 0s
+22:07:42 INFO lopo_tasksplit: frozen_probe sub-96    tea->toast  | window bal-acc 0.333 | session bal-acc 0.000 | train n=3046 (26 patients) test n=60 | 0s
+22:07:42 INFO lopo_tasksplit: frozen_probe sub-96    toast->tea    | window bal-acc 0.192 | session bal-acc 0.000 | train n=6687 (26 patients) test n=55 | 0s
+22:07:50 INFO lopo_tasksplit: ARM frozen_probe tea_to_toast             | 54 sessions | bal-acc 0.444 [0.333, 0.574] | AUC 0.487 | perm p=0.871 (null 0.495)
+22:07:50 INFO codebrain_ft.tracking: Saved run -> lopo_tasksplit_chan_z_20260801T210750Z.json (+ master CSV row)
+22:07:58 INFO lopo_tasksplit: ARM frozen_probe toast_to_tea             | 54 sessions | bal-acc 0.519 [0.407, 0.630] | AUC 0.495 | perm p=0.547 (null 0.501)
+22:07:58 INFO codebrain_ft.tracking: Saved run -> lopo_tasksplit_chan_z_20260801T210758Z.json (+ master CSV row)
+22:08:06 INFO lopo_tasksplit: ARM frozen_probe both_directions_pooled   | 108 sessions | bal-acc 0.481 [0.389, 0.583] | AUC 0.487 | perm p=0.761 (null 0.498)
+22:08:06 INFO codebrain_ft.tracking: Saved run -> lopo_tasksplit_chan_z_20260801T210806Z.json (+ master CSV row)
+22:08:06 INFO lopo_tasksplit: chanamp      sub-103   tea->toast  | window bal-acc 0.536 | session bal-acc 0.500 | train n=2921 (26 patients) test n=299 | 0s
+22:08:06 INFO lopo_tasksplit: chanamp      sub-103   toast->tea    | window bal-acc 0.445 | session bal-acc 0.500 | train n=6208 (26 patients) test n=119 | 0s
+22:08:06 INFO lopo_tasksplit: chanamp      sub-106   tea->toast  | window bal-acc 0.401 | session bal-acc 0.500 | train n=3060 (26 patients) test n=100 | 0s
+22:08:06 INFO lopo_tasksplit: chanamp      sub-106   toast->tea    | window bal-acc 0.537 | session bal-acc 0.500 | train n=6604 (26 patients) test n=48 | 0s
+22:08:06 INFO lopo_tasksplit: chanamp      sub-107   tea->toast  | window bal-acc 0.544 | session bal-acc 0.500 | train n=3059 (26 patients) test n=96 | 0s
+22:08:06 INFO lopo_tasksplit: chanamp      sub-107   toast->tea    | window bal-acc 0.454 | session bal-acc 0.500 | train n=6614 (26 patients) test n=49 | 0s
+22:08:06 INFO lopo_tasksplit: chanamp      sub-114   tea->toast  | window bal-acc 0.622 | session bal-acc 1.000 | train n=3043 (26 patients) test n=149 | 0s
+22:08:06 INFO lopo_tasksplit: chanamp      sub-114   toast->tea    | window bal-acc 0.580 | session bal-acc 0.500 | train n=6506 (26 patients) test n=57 | 0s
+22:08:06 INFO lopo_tasksplit: chanamp      sub-115   tea->toast  | window bal-acc 0.520 | session bal-acc 0.500 | train n=3067 (26 patients) test n=114 | 0s
+22:08:06 INFO lopo_tasksplit: chanamp      sub-115   toast->tea    | window bal-acc 0.493 | session bal-acc 0.500 | train n=6578 (26 patients) test n=45 | 0s
+22:08:06 INFO lopo_tasksplit: chanamp      sub-116   tea->toast  | window bal-acc 0.589 | session bal-acc 0.500 | train n=3036 (26 patients) test n=119 | 0s
+22:08:06 INFO lopo_tasksplit: chanamp      sub-116   toast->tea    | window bal-acc 0.465 | session bal-acc 0.500 | train n=6568 (26 patients) test n=60 | 0s
+22:08:06 INFO lopo_tasksplit: chanamp      sub-119   tea->toast  | window bal-acc 0.542 | session bal-acc 0.500 | train n=3007 (26 patients) test n=156 | 0s
+22:08:06 INFO lopo_tasksplit: chanamp      sub-119   toast->tea    | window bal-acc 0.589 | session bal-acc 0.500 | train n=6494 (26 patients) test n=75 | 0s
+22:08:06 INFO lopo_tasksplit: chanamp      sub-121   tea->toast  | window bal-acc 0.519 | session bal-acc 0.500 | train n=2999 (26 patients) test n=93 | 0s
+22:08:06 INFO lopo_tasksplit: chanamp      sub-121   toast->tea    | window bal-acc 0.598 | session bal-acc 1.000 | train n=6622 (26 patients) test n=80 | 0s
+22:08:06 INFO lopo_tasksplit: chanamp      sub-123   tea->toast  | window bal-acc 0.438 | session bal-acc 0.000 | train n=3030 (26 patients) test n=124 | 0s
+22:08:07 INFO lopo_tasksplit: chanamp      sub-123   toast->tea    | window bal-acc 0.435 | session bal-acc 0.500 | train n=6558 (26 patients) test n=63 | 0s
+22:08:07 INFO lopo_tasksplit: chanamp      sub-125   tea->toast  | window bal-acc 0.476 | session bal-acc 0.500 | train n=3060 (26 patients) test n=139 | 0s
+22:08:07 INFO lopo_tasksplit: chanamp      sub-125   toast->tea    | window bal-acc 0.583 | session bal-acc 1.000 | train n=6527 (26 patients) test n=48 | 0s
+22:08:07 INFO lopo_tasksplit: chanamp      sub-129   tea->toast  | window bal-acc 0.550 | session bal-acc 1.000 | train n=3027 (26 patients) test n=168 | 0s
+22:08:07 INFO lopo_tasksplit: chanamp      sub-129   toast->tea    | window bal-acc 0.502 | session bal-acc 1.000 | train n=6468 (26 patients) test n=64 | 0s
+22:08:07 INFO lopo_tasksplit: chanamp      sub-131   tea->toast  | window bal-acc 0.596 | session bal-acc 0.500 | train n=3084 (26 patients) test n=166 | 0s
+22:08:07 INFO lopo_tasksplit: chanamp      sub-131   toast->tea    | window bal-acc 0.448 | session bal-acc 0.000 | train n=6473 (26 patients) test n=36 | 0s
+22:08:07 INFO lopo_tasksplit: chanamp      sub-134   tea->toast  | window bal-acc 0.308 | session bal-acc 0.000 | train n=3050 (26 patients) test n=133 | 0s
+22:08:07 INFO lopo_tasksplit: chanamp      sub-134   toast->tea    | window bal-acc 0.553 | session bal-acc 0.500 | train n=6542 (26 patients) test n=53 | 0s
+22:08:07 INFO lopo_tasksplit: chanamp      sub-135   tea->toast  | window bal-acc 0.594 | session bal-acc 1.000 | train n=3010 (26 patients) test n=190 | 0s
+22:08:07 INFO lopo_tasksplit: chanamp      sub-135   toast->tea    | window bal-acc 0.548 | session bal-acc 0.500 | train n=6424 (26 patients) test n=74 | 0s
+22:08:07 INFO lopo_tasksplit: chanamp      sub-51    tea->toast  | window bal-acc 0.545 | session bal-acc 0.500 | train n=3049 (26 patients) test n=100 | 0s
+22:08:07 INFO lopo_tasksplit: chanamp      sub-51    toast->tea    | window bal-acc 0.537 | session bal-acc 0.500 | train n=6605 (26 patients) test n=54 | 0s
+22:08:07 INFO lopo_tasksplit: chanamp      sub-62    tea->toast  | window bal-acc 0.549 | session bal-acc 1.000 | train n=3047 (26 patients) test n=84 | 0s
+22:08:07 INFO lopo_tasksplit: chanamp      sub-62    toast->tea    | window bal-acc 0.574 | session bal-acc 0.500 | train n=6637 (26 patients) test n=55 | 0s
+22:08:07 INFO lopo_tasksplit: chanamp      sub-70    tea->toast  | window bal-acc 0.513 | session bal-acc 0.500 | train n=3036 (26 patients) test n=82 | 0s
+22:08:07 INFO lopo_tasksplit: chanamp      sub-70    toast->tea    | window bal-acc 0.442 | session bal-acc 0.500 | train n=6643 (26 patients) test n=61 | 0s
+22:08:07 INFO lopo_tasksplit: chanamp      sub-71    tea->toast  | window bal-acc 0.670 | session bal-acc 1.000 | train n=3037 (26 patients) test n=121 | 0s
+22:08:07 INFO lopo_tasksplit: chanamp      sub-71    toast->tea    | window bal-acc 0.633 | session bal-acc 1.000 | train n=6563 (26 patients) test n=60 | 0s
+22:08:07 INFO lopo_tasksplit: chanamp      sub-72    tea->toast  | window bal-acc 0.653 | session bal-acc 0.500 | train n=3063 (26 patients) test n=98 | 0s
+22:08:07 INFO lopo_tasksplit: chanamp      sub-72    toast->tea    | window bal-acc 0.622 | session bal-acc 1.000 | train n=6611 (26 patients) test n=47 | 0s
+22:08:07 INFO lopo_tasksplit: chanamp      sub-76    tea->toast  | window bal-acc 0.451 | session bal-acc 0.000 | train n=3016 (26 patients) test n=142 | 0s
+22:08:07 INFO lopo_tasksplit: chanamp      sub-76    toast->tea    | window bal-acc 0.657 | session bal-acc 0.500 | train n=6524 (26 patients) test n=71 | 0s
+22:08:07 INFO lopo_tasksplit: chanamp      sub-77    tea->toast  | window bal-acc 0.469 | session bal-acc 0.500 | train n=3043 (26 patients) test n=140 | 0s
+22:08:07 INFO lopo_tasksplit: chanamp      sub-77    toast->tea    | window bal-acc 0.495 | session bal-acc 0.500 | train n=6526 (26 patients) test n=57 | 0s
+22:08:07 INFO lopo_tasksplit: chanamp      sub-81    tea->toast  | window bal-acc 0.571 | session bal-acc 1.000 | train n=3034 (26 patients) test n=140 | 0s
+22:08:07 INFO lopo_tasksplit: chanamp      sub-81    toast->tea    | window bal-acc 0.583 | session bal-acc 0.500 | train n=6527 (26 patients) test n=61 | 0s
+22:08:07 INFO lopo_tasksplit: chanamp      sub-84    tea->toast  | window bal-acc 0.499 | session bal-acc 0.500 | train n=3051 (26 patients) test n=135 | 0s
+22:08:07 INFO lopo_tasksplit: chanamp      sub-84    toast->tea    | window bal-acc 0.550 | session bal-acc 1.000 | train n=6537 (26 patients) test n=53 | 0s
+22:08:08 INFO lopo_tasksplit: chanamp      sub-90    tea->toast  | window bal-acc 0.592 | session bal-acc 0.500 | train n=3064 (26 patients) test n=72 | 0s
+22:08:08 INFO lopo_tasksplit: chanamp      sub-90    toast->tea    | window bal-acc 0.390 | session bal-acc 0.500 | train n=6663 (26 patients) test n=46 | 0s
+22:08:08 INFO lopo_tasksplit: chanamp      sub-92    tea->toast  | window bal-acc 0.395 | session bal-acc 0.000 | train n=3064 (26 patients) test n=86 | 0s
+22:08:08 INFO lopo_tasksplit: chanamp      sub-92    toast->tea    | window bal-acc 0.555 | session bal-acc 1.000 | train n=6635 (26 patients) test n=47 | 0s
+22:08:08 INFO lopo_tasksplit: chanamp      sub-94    tea->toast  | window bal-acc 0.462 | session bal-acc 0.500 | train n=3079 (26 patients) test n=97 | 0s
+22:08:08 INFO lopo_tasksplit: chanamp      sub-94    toast->tea    | window bal-acc 0.504 | session bal-acc 0.500 | train n=6612 (26 patients) test n=39 | 0s
+22:08:08 INFO lopo_tasksplit: chanamp      sub-96    tea->toast  | window bal-acc 0.500 | session bal-acc 1.000 | train n=3046 (26 patients) test n=60 | 0s
+22:08:08 INFO lopo_tasksplit: chanamp      sub-96    toast->tea    | window bal-acc 0.501 | session bal-acc 0.500 | train n=6687 (26 patients) test n=55 | 0s
+22:08:16 INFO lopo_tasksplit: ARM chanamp      tea_to_toast             | 54 sessions | bal-acc 0.556 [0.444, 0.685] | AUC 0.558 | perm p=0.239 (null 0.500)
+22:08:16 INFO codebrain_ft.tracking: Saved run -> lopo_tasksplit_chan_z_20260801T210816Z.json (+ master CSV row)
+22:08:24 INFO lopo_tasksplit: ARM chanamp      toast_to_tea             | 54 sessions | bal-acc 0.611 [0.537, 0.704] | AUC 0.609 | perm p=0.030 (null 0.496)
+22:08:24 INFO codebrain_ft.tracking: Saved run -> lopo_tasksplit_chan_z_20260801T210824Z.json (+ master CSV row)
+22:08:33 INFO lopo_tasksplit: ARM chanamp      both_directions_pooled   | 108 sessions | bal-acc 0.583 [0.509, 0.657] | AUC 0.582 | perm p=0.020 (null 0.501)
+22:08:33 INFO codebrain_ft.tracking: Saved run -> lopo_tasksplit_chan_z_20260801T210833Z.json (+ master CSV row)
+22:08:34 INFO lopo_tasksplit: relbp        sub-103   tea->toast  | window bal-acc 0.295 | session bal-acc 0.000 | train n=2921 (26 patients) test n=299 | 0s
+22:08:34 INFO lopo_tasksplit: relbp        sub-103   toast->tea    | window bal-acc 0.326 | session bal-acc 0.000 | train n=6208 (26 patients) test n=119 | 0s
+22:08:34 INFO lopo_tasksplit: relbp        sub-106   tea->toast  | window bal-acc 0.472 | session bal-acc 0.500 | train n=3060 (26 patients) test n=100 | 0s
+22:08:34 INFO lopo_tasksplit: relbp        sub-106   toast->tea    | window bal-acc 0.500 | session bal-acc 0.500 | train n=6604 (26 patients) test n=48 | 0s
+22:08:34 INFO lopo_tasksplit: relbp        sub-107   tea->toast  | window bal-acc 0.488 | session bal-acc 0.500 | train n=3059 (26 patients) test n=96 | 0s
+22:08:34 INFO lopo_tasksplit: relbp        sub-107   toast->tea    | window bal-acc 0.839 | session bal-acc 1.000 | train n=6614 (26 patients) test n=49 | 0s
+22:08:34 INFO lopo_tasksplit: relbp        sub-114   tea->toast  | window bal-acc 0.688 | session bal-acc 1.000 | train n=3043 (26 patients) test n=149 | 0s
+22:08:34 INFO lopo_tasksplit: relbp        sub-114   toast->tea    | window bal-acc 0.613 | session bal-acc 1.000 | train n=6506 (26 patients) test n=57 | 0s
+22:08:34 INFO lopo_tasksplit: relbp        sub-115   tea->toast  | window bal-acc 0.358 | session bal-acc 0.000 | train n=3067 (26 patients) test n=114 | 0s
+22:08:34 INFO lopo_tasksplit: relbp        sub-115   toast->tea    | window bal-acc 0.735 | session bal-acc 1.000 | train n=6578 (26 patients) test n=45 | 0s
+22:08:35 INFO lopo_tasksplit: relbp        sub-116   tea->toast  | window bal-acc 0.444 | session bal-acc 0.500 | train n=3036 (26 patients) test n=119 | 0s
+22:08:35 INFO lopo_tasksplit: relbp        sub-116   toast->tea    | window bal-acc 0.443 | session bal-acc 0.500 | train n=6568 (26 patients) test n=60 | 0s
+22:08:35 INFO lopo_tasksplit: relbp        sub-119   tea->toast  | window bal-acc 0.706 | session bal-acc 1.000 | train n=3007 (26 patients) test n=156 | 0s
+22:08:35 INFO lopo_tasksplit: relbp        sub-119   toast->tea    | window bal-acc 0.778 | session bal-acc 1.000 | train n=6494 (26 patients) test n=75 | 0s
+22:08:35 INFO lopo_tasksplit: relbp        sub-121   tea->toast  | window bal-acc 0.770 | session bal-acc 1.000 | train n=2999 (26 patients) test n=93 | 0s
+22:08:35 INFO lopo_tasksplit: relbp        sub-121   toast->tea    | window bal-acc 0.573 | session bal-acc 0.500 | train n=6622 (26 patients) test n=80 | 0s
+22:08:35 INFO lopo_tasksplit: relbp        sub-123   tea->toast  | window bal-acc 0.511 | session bal-acc 0.500 | train n=3030 (26 patients) test n=124 | 0s
+22:08:35 INFO lopo_tasksplit: relbp        sub-123   toast->tea    | window bal-acc 0.583 | session bal-acc 1.000 | train n=6558 (26 patients) test n=63 | 0s
+22:08:35 INFO lopo_tasksplit: relbp        sub-125   tea->toast  | window bal-acc 0.616 | session bal-acc 1.000 | train n=3060 (26 patients) test n=139 | 0s
+22:08:35 INFO lopo_tasksplit: relbp        sub-125   toast->tea    | window bal-acc 0.693 | session bal-acc 0.500 | train n=6527 (26 patients) test n=48 | 0s
+22:08:36 INFO lopo_tasksplit: relbp        sub-129   tea->toast  | window bal-acc 0.709 | session bal-acc 1.000 | train n=3027 (26 patients) test n=168 | 0s
+22:08:36 INFO lopo_tasksplit: relbp        sub-129   toast->tea    | window bal-acc 0.554 | session bal-acc 1.000 | train n=6468 (26 patients) test n=64 | 0s
+22:08:36 INFO lopo_tasksplit: relbp        sub-131   tea->toast  | window bal-acc 0.569 | session bal-acc 0.500 | train n=3084 (26 patients) test n=166 | 0s
+22:08:36 INFO lopo_tasksplit: relbp        sub-131   toast->tea    | window bal-acc 0.671 | session bal-acc 0.500 | train n=6473 (26 patients) test n=36 | 0s
+22:08:36 INFO lopo_tasksplit: relbp        sub-134   tea->toast  | window bal-acc 0.256 | session bal-acc 0.000 | train n=3050 (26 patients) test n=133 | 0s
+22:08:36 INFO lopo_tasksplit: relbp        sub-134   toast->tea    | window bal-acc 0.397 | session bal-acc 0.500 | train n=6542 (26 patients) test n=53 | 0s
+22:08:36 INFO lopo_tasksplit: relbp        sub-135   tea->toast  | window bal-acc 0.635 | session bal-acc 1.000 | train n=3010 (26 patients) test n=190 | 0s
+22:08:36 INFO lopo_tasksplit: relbp        sub-135   toast->tea    | window bal-acc 0.401 | session bal-acc 0.500 | train n=6424 (26 patients) test n=74 | 0s
+22:08:36 INFO lopo_tasksplit: relbp        sub-51    tea->toast  | window bal-acc 0.337 | session bal-acc 0.000 | train n=3049 (26 patients) test n=100 | 0s
+22:08:36 INFO lopo_tasksplit: relbp        sub-51    toast->tea    | window bal-acc 0.611 | session bal-acc 0.500 | train n=6605 (26 patients) test n=54 | 0s
+22:08:37 INFO lopo_tasksplit: relbp        sub-62    tea->toast  | window bal-acc 0.502 | session bal-acc 0.500 | train n=3047 (26 patients) test n=84 | 0s
+22:08:37 INFO lopo_tasksplit: relbp        sub-62    toast->tea    | window bal-acc 0.581 | session bal-acc 0.500 | train n=6637 (26 patients) test n=55 | 0s
+22:08:37 INFO lopo_tasksplit: relbp        sub-70    tea->toast  | window bal-acc 0.690 | session bal-acc 0.500 | train n=3036 (26 patients) test n=82 | 0s
+22:08:37 INFO lopo_tasksplit: relbp        sub-70    toast->tea    | window bal-acc 0.469 | session bal-acc 0.500 | train n=6643 (26 patients) test n=61 | 0s
+22:08:37 INFO lopo_tasksplit: relbp        sub-71    tea->toast  | window bal-acc 0.670 | session bal-acc 0.500 | train n=3037 (26 patients) test n=121 | 0s
+22:08:37 INFO lopo_tasksplit: relbp        sub-71    toast->tea    | window bal-acc 0.600 | session bal-acc 0.500 | train n=6563 (26 patients) test n=60 | 0s
+22:08:37 INFO lopo_tasksplit: relbp        sub-72    tea->toast  | window bal-acc 0.714 | session bal-acc 1.000 | train n=3063 (26 patients) test n=98 | 0s
+22:08:37 INFO lopo_tasksplit: relbp        sub-72    toast->tea    | window bal-acc 0.645 | session bal-acc 1.000 | train n=6611 (26 patients) test n=47 | 0s
+22:08:37 INFO lopo_tasksplit: relbp        sub-76    tea->toast  | window bal-acc 0.717 | session bal-acc 1.000 | train n=3016 (26 patients) test n=142 | 0s
+22:08:37 INFO lopo_tasksplit: relbp        sub-76    toast->tea    | window bal-acc 0.464 | session bal-acc 0.500 | train n=6524 (26 patients) test n=71 | 0s
+22:08:38 INFO lopo_tasksplit: relbp        sub-77    tea->toast  | window bal-acc 0.858 | session bal-acc 1.000 | train n=3043 (26 patients) test n=140 | 0s
+22:08:38 INFO lopo_tasksplit: relbp        sub-77    toast->tea    | window bal-acc 0.836 | session bal-acc 1.000 | train n=6526 (26 patients) test n=57 | 0s
+22:08:38 INFO lopo_tasksplit: relbp        sub-81    tea->toast  | window bal-acc 0.551 | session bal-acc 0.500 | train n=3034 (26 patients) test n=140 | 0s
+22:08:38 INFO lopo_tasksplit: relbp        sub-81    toast->tea    | window bal-acc 0.952 | session bal-acc 1.000 | train n=6527 (26 patients) test n=61 | 0s
+22:08:38 INFO lopo_tasksplit: relbp        sub-84    tea->toast  | window bal-acc 0.555 | session bal-acc 0.500 | train n=3051 (26 patients) test n=135 | 0s
+22:08:38 INFO lopo_tasksplit: relbp        sub-84    toast->tea    | window bal-acc 0.444 | session bal-acc 0.500 | train n=6537 (26 patients) test n=53 | 0s
+22:08:38 INFO lopo_tasksplit: relbp        sub-90    tea->toast  | window bal-acc 0.396 | session bal-acc 0.500 | train n=3064 (26 patients) test n=72 | 0s
+22:08:38 INFO lopo_tasksplit: relbp        sub-90    toast->tea    | window bal-acc 0.777 | session bal-acc 1.000 | train n=6663 (26 patients) test n=46 | 0s
+22:08:38 INFO lopo_tasksplit: relbp        sub-92    tea->toast  | window bal-acc 0.338 | session bal-acc 0.000 | train n=3064 (26 patients) test n=86 | 0s
+22:08:39 INFO lopo_tasksplit: relbp        sub-92    toast->tea    | window bal-acc 0.792 | session bal-acc 1.000 | train n=6635 (26 patients) test n=47 | 0s
+22:08:39 INFO lopo_tasksplit: relbp        sub-94    tea->toast  | window bal-acc 0.309 | session bal-acc 0.000 | train n=3079 (26 patients) test n=97 | 0s
+22:08:39 INFO lopo_tasksplit: relbp        sub-94    toast->tea    | window bal-acc 0.627 | session bal-acc 0.500 | train n=6612 (26 patients) test n=39 | 0s
+22:08:39 INFO lopo_tasksplit: relbp        sub-96    tea->toast  | window bal-acc 0.350 | session bal-acc 0.500 | train n=3046 (26 patients) test n=60 | 0s
+22:08:39 INFO lopo_tasksplit: relbp        sub-96    toast->tea    | window bal-acc 0.438 | session bal-acc 0.500 | train n=6687 (26 patients) test n=55 | 0s
+22:08:47 INFO lopo_tasksplit: ARM relbp        tea_to_toast             | 54 sessions | bal-acc 0.556 [0.407, 0.704] | AUC 0.604 | perm p=0.308 (null 0.499)
+22:08:47 INFO codebrain_ft.tracking: Saved run -> lopo_tasksplit_chan_z_20260801T210847Z.json (+ master CSV row)
+22:08:55 INFO lopo_tasksplit: ARM relbp        toast_to_tea             | 54 sessions | bal-acc 0.685 [0.574, 0.778] | AUC 0.701 | perm p=0.010 (null 0.495)
+22:08:55 INFO codebrain_ft.tracking: Saved run -> lopo_tasksplit_chan_z_20260801T210855Z.json (+ master CSV row)
+22:09:03 INFO lopo_tasksplit: ARM relbp        both_directions_pooled   | 108 sessions | bal-acc 0.620 [0.519, 0.713] | AUC 0.645 | perm p=0.005 (null 0.502)
+22:09:03 INFO codebrain_ft.tracking: Saved run -> lopo_tasksplit_chan_z_20260801T210903Z.json (+ master CSV row)
+22:09:03 INFO lopo_tasksplit: aperiodic    sub-103   tea->toast  | window bal-acc 0.275 | session bal-acc 0.500 | train n=2921 (26 patients) test n=299 | 0s
+22:09:03 INFO lopo_tasksplit: aperiodic    sub-103   toast->tea    | window bal-acc 0.434 | session bal-acc 0.500 | train n=6208 (26 patients) test n=119 | 0s
+22:09:03 INFO lopo_tasksplit: aperiodic    sub-106   tea->toast  | window bal-acc 0.415 | session bal-acc 0.000 | train n=3060 (26 patients) test n=100 | 0s
+22:09:03 INFO lopo_tasksplit: aperiodic    sub-106   toast->tea    | window bal-acc 0.450 | session bal-acc 0.500 | train n=6604 (26 patients) test n=48 | 0s
+22:09:03 INFO lopo_tasksplit: aperiodic    sub-107   tea->toast  | window bal-acc 0.541 | session bal-acc 0.500 | train n=3059 (26 patients) test n=96 | 0s
+22:09:03 INFO lopo_tasksplit: aperiodic    sub-107   toast->tea    | window bal-acc 0.556 | session bal-acc 0.500 | train n=6614 (26 patients) test n=49 | 0s
+22:09:03 INFO lopo_tasksplit: aperiodic    sub-114   tea->toast  | window bal-acc 0.589 | session bal-acc 1.000 | train n=3043 (26 patients) test n=149 | 0s
+22:09:03 INFO lopo_tasksplit: aperiodic    sub-114   toast->tea    | window bal-acc 0.520 | session bal-acc 0.500 | train n=6506 (26 patients) test n=57 | 0s
+22:09:03 INFO lopo_tasksplit: aperiodic    sub-115   tea->toast  | window bal-acc 0.525 | session bal-acc 0.500 | train n=3067 (26 patients) test n=114 | 0s
+22:09:03 INFO lopo_tasksplit: aperiodic    sub-115   toast->tea    | window bal-acc 0.607 | session bal-acc 0.500 | train n=6578 (26 patients) test n=45 | 0s
+22:09:04 INFO lopo_tasksplit: aperiodic    sub-116   tea->toast  | window bal-acc 0.366 | session bal-acc 0.000 | train n=3036 (26 patients) test n=119 | 0s
+22:09:04 INFO lopo_tasksplit: aperiodic    sub-116   toast->tea    | window bal-acc 0.316 | session bal-acc 0.000 | train n=6568 (26 patients) test n=60 | 0s
+22:09:04 INFO lopo_tasksplit: aperiodic    sub-119   tea->toast  | window bal-acc 0.476 | session bal-acc 0.500 | train n=3007 (26 patients) test n=156 | 0s
+22:09:04 INFO lopo_tasksplit: aperiodic    sub-119   toast->tea    | window bal-acc 0.576 | session bal-acc 0.500 | train n=6494 (26 patients) test n=75 | 0s
+22:09:04 INFO lopo_tasksplit: aperiodic    sub-121   tea->toast  | window bal-acc 0.711 | session bal-acc 1.000 | train n=2999 (26 patients) test n=93 | 0s
+22:09:04 INFO lopo_tasksplit: aperiodic    sub-121   toast->tea    | window bal-acc 0.435 | session bal-acc 0.500 | train n=6622 (26 patients) test n=80 | 0s
+22:09:04 INFO lopo_tasksplit: aperiodic    sub-123   tea->toast  | window bal-acc 0.287 | session bal-acc 0.000 | train n=3030 (26 patients) test n=124 | 0s
+22:09:04 INFO lopo_tasksplit: aperiodic    sub-123   toast->tea    | window bal-acc 0.528 | session bal-acc 0.500 | train n=6558 (26 patients) test n=63 | 0s
+22:09:04 INFO lopo_tasksplit: aperiodic    sub-125   tea->toast  | window bal-acc 0.744 | session bal-acc 1.000 | train n=3060 (26 patients) test n=139 | 0s
+22:09:04 INFO lopo_tasksplit: aperiodic    sub-125   toast->tea    | window bal-acc 0.466 | session bal-acc 0.500 | train n=6527 (26 patients) test n=48 | 0s
+22:09:04 INFO lopo_tasksplit: aperiodic    sub-129   tea->toast  | window bal-acc 0.428 | session bal-acc 0.500 | train n=3027 (26 patients) test n=168 | 0s
+22:09:04 INFO lopo_tasksplit: aperiodic    sub-129   toast->tea    | window bal-acc 0.440 | session bal-acc 0.500 | train n=6468 (26 patients) test n=64 | 0s
+22:09:04 INFO lopo_tasksplit: aperiodic    sub-131   tea->toast  | window bal-acc 0.304 | session bal-acc 0.000 | train n=3084 (26 patients) test n=166 | 0s
+22:09:04 INFO lopo_tasksplit: aperiodic    sub-131   toast->tea    | window bal-acc 0.605 | session bal-acc 1.000 | train n=6473 (26 patients) test n=36 | 0s
+22:09:04 INFO lopo_tasksplit: aperiodic    sub-134   tea->toast  | window bal-acc 0.591 | session bal-acc 0.500 | train n=3050 (26 patients) test n=133 | 0s
+22:09:04 INFO lopo_tasksplit: aperiodic    sub-134   toast->tea    | window bal-acc 0.486 | session bal-acc 0.500 | train n=6542 (26 patients) test n=53 | 0s
+22:09:04 INFO lopo_tasksplit: aperiodic    sub-135   tea->toast  | window bal-acc 0.449 | session bal-acc 0.500 | train n=3010 (26 patients) test n=190 | 0s
+22:09:04 INFO lopo_tasksplit: aperiodic    sub-135   toast->tea    | window bal-acc 0.319 | session bal-acc 0.000 | train n=6424 (26 patients) test n=74 | 0s
+22:09:04 INFO lopo_tasksplit: aperiodic    sub-51    tea->toast  | window bal-acc 0.433 | session bal-acc 0.500 | train n=3049 (26 patients) test n=100 | 0s
+22:09:04 INFO lopo_tasksplit: aperiodic    sub-51    toast->tea    | window bal-acc 0.704 | session bal-acc 0.500 | train n=6605 (26 patients) test n=54 | 0s
+22:09:04 INFO lopo_tasksplit: aperiodic    sub-62    tea->toast  | window bal-acc 0.645 | session bal-acc 1.000 | train n=3047 (26 patients) test n=84 | 0s
+22:09:04 INFO lopo_tasksplit: aperiodic    sub-62    toast->tea    | window bal-acc 0.625 | session bal-acc 0.500 | train n=6637 (26 patients) test n=55 | 0s
+22:09:04 INFO lopo_tasksplit: aperiodic    sub-70    tea->toast  | window bal-acc 0.714 | session bal-acc 0.500 | train n=3036 (26 patients) test n=82 | 0s
+22:09:04 INFO lopo_tasksplit: aperiodic    sub-70    toast->tea    | window bal-acc 0.454 | session bal-acc 0.500 | train n=6643 (26 patients) test n=61 | 0s
+22:09:05 INFO lopo_tasksplit: aperiodic    sub-71    tea->toast  | window bal-acc 0.544 | session bal-acc 1.000 | train n=3037 (26 patients) test n=121 | 0s
+22:09:05 INFO lopo_tasksplit: aperiodic    sub-71    toast->tea    | window bal-acc 0.700 | session bal-acc 1.000 | train n=6563 (26 patients) test n=60 | 0s
+22:09:05 INFO lopo_tasksplit: aperiodic    sub-72    tea->toast  | window bal-acc 0.694 | session bal-acc 1.000 | train n=3063 (26 patients) test n=98 | 0s
+22:09:05 INFO lopo_tasksplit: aperiodic    sub-72    toast->tea    | window bal-acc 0.641 | session bal-acc 1.000 | train n=6611 (26 patients) test n=47 | 0s
+22:09:05 INFO lopo_tasksplit: aperiodic    sub-76    tea->toast  | window bal-acc 0.503 | session bal-acc 0.500 | train n=3016 (26 patients) test n=142 | 0s
+22:09:05 INFO lopo_tasksplit: aperiodic    sub-76    toast->tea    | window bal-acc 0.617 | session bal-acc 0.500 | train n=6524 (26 patients) test n=71 | 0s
+22:09:05 INFO lopo_tasksplit: aperiodic    sub-77    tea->toast  | window bal-acc 0.791 | session bal-acc 1.000 | train n=3043 (26 patients) test n=140 | 0s
+22:09:05 INFO lopo_tasksplit: aperiodic    sub-77    toast->tea    | window bal-acc 0.720 | session bal-acc 1.000 | train n=6526 (26 patients) test n=57 | 0s
+22:09:05 INFO lopo_tasksplit: aperiodic    sub-81    tea->toast  | window bal-acc 0.515 | session bal-acc 0.500 | train n=3034 (26 patients) test n=140 | 0s
+22:09:05 INFO lopo_tasksplit: aperiodic    sub-81    toast->tea    | window bal-acc 0.560 | session bal-acc 1.000 | train n=6527 (26 patients) test n=61 | 0s
+22:09:05 INFO lopo_tasksplit: aperiodic    sub-84    tea->toast  | window bal-acc 0.883 | session bal-acc 1.000 | train n=3051 (26 patients) test n=135 | 0s
+22:09:05 INFO lopo_tasksplit: aperiodic    sub-84    toast->tea    | window bal-acc 0.630 | session bal-acc 0.500 | train n=6537 (26 patients) test n=53 | 0s
+22:09:05 INFO lopo_tasksplit: aperiodic    sub-90    tea->toast  | window bal-acc 0.443 | session bal-acc 0.500 | train n=3064 (26 patients) test n=72 | 0s
+22:09:05 INFO lopo_tasksplit: aperiodic    sub-90    toast->tea    | window bal-acc 0.836 | session bal-acc 1.000 | train n=6663 (26 patients) test n=46 | 0s
+22:09:05 INFO lopo_tasksplit: aperiodic    sub-92    tea->toast  | window bal-acc 0.300 | session bal-acc 0.000 | train n=3064 (26 patients) test n=86 | 0s
+22:09:05 INFO lopo_tasksplit: aperiodic    sub-92    toast->tea    | window bal-acc 0.641 | session bal-acc 0.500 | train n=6635 (26 patients) test n=47 | 0s
+22:09:05 INFO lopo_tasksplit: aperiodic    sub-94    tea->toast  | window bal-acc 0.539 | session bal-acc 0.500 | train n=3079 (26 patients) test n=97 | 0s
+22:09:05 INFO lopo_tasksplit: aperiodic    sub-94    toast->tea    | window bal-acc 0.492 | session bal-acc 0.500 | train n=6612 (26 patients) test n=39 | 0s
+22:09:05 INFO lopo_tasksplit: aperiodic    sub-96    tea->toast  | window bal-acc 0.217 | session bal-acc 0.000 | train n=3046 (26 patients) test n=60 | 0s
+22:09:05 INFO lopo_tasksplit: aperiodic    sub-96    toast->tea    | window bal-acc 0.286 | session bal-acc 0.500 | train n=6687 (26 patients) test n=55 | 0s
+22:09:14 INFO lopo_tasksplit: ARM aperiodic    tea_to_toast             | 54 sessions | bal-acc 0.537 [0.407, 0.667] | AUC 0.512 | perm p=0.413 (null 0.501)
+22:09:14 INFO codebrain_ft.tracking: Saved run -> lopo_tasksplit_chan_z_20260801T210914Z.json (+ master CSV row)
+22:09:23 INFO lopo_tasksplit: ARM aperiodic    toast_to_tea             | 54 sessions | bal-acc 0.574 [0.481, 0.667] | AUC 0.547 | perm p=0.149 (null 0.497)
+22:09:23 INFO codebrain_ft.tracking: Saved run -> lopo_tasksplit_chan_z_20260801T210923Z.json (+ master CSV row)
+22:09:31 INFO lopo_tasksplit: ARM aperiodic    both_directions_pooled   | 108 sessions | bal-acc 0.556 [0.463, 0.648] | AUC 0.539 | perm p=0.144 (null 0.499)
+22:09:31 INFO codebrain_ft.tracking: Saved run -> lopo_tasksplit_chan_z_20260801T210931Z.json (+ master CSV row)
+22:09:31 INFO lopo_tasksplit: Wrote markdown report -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\codebrain_finetune\logs\lopo_tasksplit_chan_z_report.md
+22:09:31 INFO lopo_tasksplit: Done in 2.1 min. Results under C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\codebrain_finetune\results\lopo_tasksplit_chan_z

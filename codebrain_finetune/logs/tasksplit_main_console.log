@@ -1,0 +1,745 @@
+09:11:10 INFO livinglab_codebrain.dataset: Manifest validated: 43822 windows, 41 patients, sfreq=200, label map A=0/C=1 consistent.
+09:11:10 WARNING livinglab_codebrain.dataset: Exclusion list names patients absent from the manifest: ['sub-82', 'sub-100', 'sub-111', 'sub-130']
+09:11:10 INFO livinglab_codebrain.dataset: Applying cohort exclusions (loud):
+09:11:10 INFO livinglab_codebrain.dataset:     EXCLUDE sub-80    ->  1109 windows dropped
+09:11:10 INFO livinglab_codebrain.dataset:     EXCLUDE sub-82    ->     0 windows dropped
+09:11:10 INFO livinglab_codebrain.dataset:     EXCLUDE sub-97    ->   700 windows dropped
+09:11:10 INFO livinglab_codebrain.dataset:     EXCLUDE sub-98    ->   910 windows dropped
+09:11:10 INFO livinglab_codebrain.dataset:     EXCLUDE sub-99    ->  1494 windows dropped
+09:11:10 INFO livinglab_codebrain.dataset:     EXCLUDE sub-100   ->     0 windows dropped
+09:11:10 INFO livinglab_codebrain.dataset:     EXCLUDE sub-105   ->   850 windows dropped
+09:11:10 INFO livinglab_codebrain.dataset:     EXCLUDE sub-108   ->  1585 windows dropped
+09:11:10 INFO livinglab_codebrain.dataset:     EXCLUDE sub-111   ->     0 windows dropped
+09:11:10 INFO livinglab_codebrain.dataset:     EXCLUDE sub-130   ->     0 windows dropped
+09:11:10 INFO livinglab_codebrain.dataset: Cohort after exclusions: 35 patients (was 41), 37174 windows (was 43822).
+09:11:10 INFO tasksplit: Cohort: 35 patients, 37174 windows
+09:11:10 INFO tasksplit: Pre-flight: 20/35 patients eligible. Ineligible (with reasons) are recorded in preflight_summary.json.
+09:11:10 INFO tasksplit:   SKIP sub-103   | task group 'toast' has NO recoverable eval windows in session(s) A — task type would be confounded with ON/OFF
+09:11:10 INFO tasksplit:   SKIP sub-106   | task group 'toast' has NO recoverable eval windows in session(s) A — task type would be confounded with ON/OFF
+09:11:10 INFO tasksplit:   SKIP sub-117   | task group 'tea' has NO recoverable eval windows in session(s) C — task type would be confounded with ON/OFF ; task group 'toast' has NO recoverable eval windows in session(s) C — task type would be confounded with ON/OFF
+09:11:10 INFO tasksplit:   SKIP sub-34    | task group 'tea' has NO recoverable eval windows in session(s) A/C — task type would be confounded with ON/OFF ; task group 'toast' has NO recoverable eval windows in session(s) A/C — task type would be confounded with ON/OFF
+09:11:10 INFO tasksplit:   SKIP sub-42    | task group 'toast' has NO recoverable eval windows in session(s) C — task type would be confounded with ON/OFF
+09:11:10 INFO tasksplit:   SKIP sub-48    | task group 'toast' has NO recoverable eval windows in session(s) A/C — task type would be confounded with ON/OFF
+09:11:10 INFO tasksplit:   SKIP sub-53    | C: TASK SPANS OVERLAP by 350.1s (tea vs toast) — the annotation CSV logs these as the same/overlapping interval, so a 'task split' here would train and test on the same windows
+09:11:10 INFO tasksplit:   SKIP sub-62    | task group 'tea' has NO recoverable eval windows in session(s) A — task type would be confounded with ON/OFF ; task group 'toast' has NO recoverable eval windows in session(s) A — task type would be confounded with ON/OFF
+09:11:10 INFO tasksplit:   SKIP sub-69    | task group 'toast' has NO recoverable eval windows in session(s) A — task type would be confounded with ON/OFF
+09:11:10 INFO tasksplit:   SKIP sub-70    | task group 'tea' has NO recoverable eval windows in session(s) C — task type would be confounded with ON/OFF ; task group 'toast' has NO recoverable eval windows in session(s) C — task type would be confounded with ON/OFF
+09:11:10 INFO tasksplit:   SKIP sub-72    | task group 'tea' has NO recoverable eval windows in session(s) A — task type would be confounded with ON/OFF ; task group 'toast' has NO recoverable eval windows in session(s) A — task type would be confounded with ON/OFF
+09:11:10 INFO tasksplit:   SKIP sub-73    | task group 'toast' has NO recoverable eval windows in session(s) C — task type would be confounded with ON/OFF
+09:11:10 INFO tasksplit:   SKIP sub-76    | task group 'tea' has NO recoverable eval windows in session(s) A — task type would be confounded with ON/OFF ; task group 'toast' has NO recoverable eval windows in session(s) A — task type would be confounded with ON/OFF
+09:11:10 INFO tasksplit:   SKIP sub-84    | task group 'toast' has NO recoverable eval windows in session(s) A — task type would be confounded with ON/OFF
+09:11:10 INFO tasksplit:   SKIP sub-93    | task group 'tea' has NO recoverable eval windows in session(s) C — task type would be confounded with ON/OFF ; task group 'toast' has NO recoverable eval windows in session(s) A/C — task type would be confounded with ON/OFF
+09:11:10 INFO tasksplit: LoRA HPs reused from results/nested_lora/hp_search.json: {'r': 4, 'lr': 0.0005, 'dropout': 0.1} (NOT re-searched — see module docstring).
+09:11:10 INFO tasksplit: Run 'within_patient_tasksplit' | arms=['frozen_probe', 'lora', 'full_ft'] | 20 patients x 2 directions | max_epochs=20 | match_k=None
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\utils\weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+09:11:13 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:11:18 INFO codebrain_ft.probe: Probe features: train (98, 200), test (97, 200) (pooling=mean)
+09:11:18 INFO tasksplit: frozen_probe sub-107   tea->toast  | window bal-acc 0.749 auc 0.851 | test n=97 (ON 64/OFF 33) | ordering OK | 4s
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\utils\weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+09:11:18 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:11:20 INFO codebrain_ft.probe: Probe features: train (193, 200), test (49, 200) (pooling=mean)
+09:11:20 INFO tasksplit: frozen_probe sub-107   toast->tea    | window bal-acc 0.821 auc 0.933 | test n=49 (ON 27/OFF 22) | ordering OK | 3s
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\utils\weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+09:11:21 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:11:23 INFO codebrain_ft.probe: Probe features: train (115, 200), test (149, 200) (pooling=mean)
+09:11:23 INFO tasksplit: frozen_probe sub-114   tea->toast  | window bal-acc 0.987 auc 0.996 | test n=149 (ON 73/OFF 76) | ordering OK | 3s
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\utils\weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+09:11:23 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:11:26 INFO codebrain_ft.probe: Probe features: train (300, 200), test (57, 200) (pooling=mean)
+09:11:26 INFO tasksplit: frozen_probe sub-114   toast->tea    | window bal-acc 0.926 auc 0.962 | test n=57 (ON 30/OFF 27) | ordering OK | 3s
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\utils\weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+09:11:26 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:11:28 INFO codebrain_ft.probe: Probe features: train (90, 200), test (113, 200) (pooling=mean)
+09:11:28 INFO tasksplit: frozen_probe sub-115   tea->toast  | window bal-acc 0.830 auc 0.902 | test n=113 (ON 42/OFF 71) | ordering OK | 2s
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\utils\weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+09:11:28 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:11:29 INFO codebrain_ft.probe: Probe features: train (226, 200), test (46, 200) (pooling=mean)
+09:11:30 INFO tasksplit: frozen_probe sub-115   toast->tea    | window bal-acc 0.765 auc 0.778 | test n=46 (ON 24/OFF 22) | ordering OK | 2s
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\utils\weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+09:11:30 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:11:32 INFO codebrain_ft.probe: Probe features: train (122, 200), test (118, 200) (pooling=mean)
+09:11:32 INFO tasksplit: frozen_probe sub-116   tea->toast  | window bal-acc 0.925 auc 0.985 | test n=118 (ON 72/OFF 46) | ordering OK | 3s
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\utils\weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+09:11:32 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:11:35 INFO codebrain_ft.probe: Probe features: train (235, 200), test (61, 200) (pooling=mean)
+09:11:35 INFO tasksplit: frozen_probe sub-116   toast->tea    | window bal-acc 0.934 auc 0.981 | test n=61 (ON 34/OFF 27) | ordering OK | 3s
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\utils\weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+09:11:35 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:11:37 INFO codebrain_ft.probe: Probe features: train (149, 200), test (156, 200) (pooling=mean)
+09:11:37 INFO tasksplit: frozen_probe sub-119   tea->toast  | window bal-acc 0.877 auc 0.927 | test n=156 (ON 77/OFF 79) | ordering OK | 2s
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\utils\weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+09:11:37 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:11:39 INFO codebrain_ft.probe: Probe features: train (313, 200), test (75, 200) (pooling=mean)
+09:11:39 INFO tasksplit: frozen_probe sub-119   toast->tea    | window bal-acc 0.932 auc 0.987 | test n=75 (ON 26/OFF 49) | ordering OK | 2s
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\utils\weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+09:11:39 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:11:41 INFO codebrain_ft.probe: Probe features: train (158, 200), test (92, 200) (pooling=mean)
+09:11:41 INFO tasksplit: frozen_probe sub-121   tea->toast  | window bal-acc 0.659 auc 0.732 | test n=92 (ON 30/OFF 62) | ordering OK | 2s
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\utils\weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+09:11:41 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:11:43 INFO codebrain_ft.probe: Probe features: train (183, 200), test (80, 200) (pooling=mean)
+09:11:43 INFO tasksplit: frozen_probe sub-121   toast->tea    | window bal-acc 0.732 auc 0.772 | test n=80 (ON 28/OFF 52) | ordering OK | 3s
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\utils\weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+09:11:43 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:11:46 INFO codebrain_ft.probe: Probe features: train (127, 200), test (124, 200) (pooling=mean)
+09:11:46 INFO tasksplit: frozen_probe sub-123   tea->toast  | window bal-acc 0.792 auc 0.874 | test n=124 (ON 81/OFF 43) | ordering OK | 3s
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\utils\weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+09:11:46 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:11:48 INFO codebrain_ft.probe: Probe features: train (248, 200), test (63, 200) (pooling=mean)
+09:11:48 INFO tasksplit: frozen_probe sub-123   toast->tea    | window bal-acc 0.935 auc 0.975 | test n=63 (ON 36/OFF 27) | ordering OK | 2s
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\utils\weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+09:11:48 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:11:50 INFO codebrain_ft.probe: Probe features: train (96, 200), test (139, 200) (pooling=mean)
+09:11:50 INFO tasksplit: frozen_probe sub-125   tea->toast  | window bal-acc 0.758 auc 0.887 | test n=139 (ON 79/OFF 60) | ordering OK | 2s
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\utils\weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+09:11:50 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:11:52 INFO codebrain_ft.probe: Probe features: train (278, 200), test (47, 200) (pooling=mean)
+09:11:52 INFO tasksplit: frozen_probe sub-125   toast->tea    | window bal-acc 0.896 auc 0.966 | test n=47 (ON 23/OFF 24) | ordering OK | 3s
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\utils\weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+09:11:53 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:11:55 INFO codebrain_ft.probe: Probe features: train (130, 200), test (169, 200) (pooling=mean)
+09:11:55 INFO tasksplit: frozen_probe sub-129   tea->toast  | window bal-acc 0.856 auc 0.942 | test n=169 (ON 78/OFF 91) | ordering OK | 3s
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\utils\weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+09:11:55 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:11:57 INFO codebrain_ft.probe: Probe features: train (337, 200), test (64, 200) (pooling=mean)
+09:11:57 INFO tasksplit: frozen_probe sub-129   toast->tea    | window bal-acc 0.972 auc 0.991 | test n=64 (ON 28/OFF 36) | ordering OK | 2s
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\utils\weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+09:11:57 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:12:00 INFO codebrain_ft.probe: Probe features: train (72, 200), test (167, 200) (pooling=mean)
+09:12:00 INFO tasksplit: frozen_probe sub-131   tea->toast  | window bal-acc 0.863 auc 0.945 | test n=167 (ON 81/OFF 86) | ordering OK | 3s
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\utils\weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+09:12:00 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:12:02 INFO codebrain_ft.probe: Probe features: train (331, 200), test (36, 200) (pooling=mean)
+09:12:02 INFO tasksplit: frozen_probe sub-131   toast->tea    | window bal-acc 0.943 auc 0.997 | test n=36 (ON 21/OFF 15) | ordering OK | 2s
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\utils\weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+09:12:02 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:12:04 INFO codebrain_ft.probe: Probe features: train (108, 200), test (102, 200) (pooling=mean)
+09:12:04 INFO tasksplit: frozen_probe sub-134   tea->toast  | window bal-acc 0.648 auc 0.676 | test n=102 (ON 36/OFF 66) | ordering OK | 2s
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\utils\weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+09:12:04 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:12:05 INFO codebrain_ft.probe: Probe features: train (204, 200), test (54, 200) (pooling=mean)
+09:12:06 INFO tasksplit: frozen_probe sub-134   toast->tea    | window bal-acc 0.688 auc 0.801 | test n=54 (ON 30/OFF 24) | ordering OK | 2s
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\utils\weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+09:12:06 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:12:07 INFO codebrain_ft.probe: Probe features: train (147, 200), test (189, 200) (pooling=mean)
+09:12:07 INFO tasksplit: frozen_probe sub-135   tea->toast  | window bal-acc 0.937 auc 0.995 | test n=189 (ON 86/OFF 103) | ordering OK | 2s
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\utils\weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+09:12:08 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:12:09 INFO codebrain_ft.probe: Probe features: train (380, 200), test (74, 200) (pooling=mean)
+09:12:09 INFO tasksplit: frozen_probe sub-135   toast->tea    | window bal-acc 0.950 auc 0.999 | test n=74 (ON 30/OFF 44) | ordering OK | 2s
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\utils\weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+09:12:10 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:12:11 INFO codebrain_ft.probe: Probe features: train (108, 200), test (99, 200) (pooling=mean)
+09:12:11 INFO tasksplit: frozen_probe sub-51    tea->toast  | window bal-acc 0.461 auc 0.551 | test n=99 (ON 57/OFF 42) | ordering wrong | 2s
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\utils\weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+09:12:11 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:12:13 INFO codebrain_ft.probe: Probe features: train (199, 200), test (55, 200) (pooling=mean)
+09:12:13 INFO tasksplit: frozen_probe sub-51    toast->tea    | window bal-acc 0.749 auc 0.930 | test n=55 (ON 28/OFF 27) | ordering OK | 2s
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\utils\weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+09:12:13 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:12:14 INFO codebrain_ft.probe: Probe features: train (121, 200), test (120, 200) (pooling=mean)
+09:12:14 INFO tasksplit: frozen_probe sub-71    tea->toast  | window bal-acc 0.873 auc 0.922 | test n=120 (ON 63/OFF 57) | ordering OK | 1s
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\utils\weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+09:12:14 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:12:16 INFO codebrain_ft.probe: Probe features: train (242, 200), test (60, 200) (pooling=mean)
+09:12:16 INFO tasksplit: frozen_probe sub-71    toast->tea    | window bal-acc 0.950 auc 0.992 | test n=60 (ON 30/OFF 30) | ordering OK | 2s
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\utils\weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+09:12:16 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:12:17 INFO codebrain_ft.probe: Probe features: train (113, 200), test (139, 200) (pooling=mean)
+09:12:17 INFO tasksplit: frozen_probe sub-77    tea->toast  | window bal-acc 0.971 auc 0.997 | test n=139 (ON 71/OFF 68) | ordering OK | 1s
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\utils\weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+09:12:17 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:12:19 INFO codebrain_ft.probe: Probe features: train (279, 200), test (56, 200) (pooling=mean)
+09:12:19 INFO tasksplit: frozen_probe sub-77    toast->tea    | window bal-acc 0.964 auc 0.991 | test n=56 (ON 31/OFF 25) | ordering OK | 2s
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\utils\weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+09:12:19 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:12:21 INFO codebrain_ft.probe: Probe features: train (123, 200), test (138, 200) (pooling=mean)
+09:12:21 INFO tasksplit: frozen_probe sub-81    tea->toast  | window bal-acc 0.607 auc 0.763 | test n=138 (ON 72/OFF 66) | ordering OK | 2s
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\utils\weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+09:12:21 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:12:22 INFO codebrain_ft.probe: Probe features: train (278, 200), test (61, 200) (pooling=mean)
+09:12:22 INFO tasksplit: frozen_probe sub-81    toast->tea    | window bal-acc 0.929 auc 1.000 | test n=61 (ON 35/OFF 26) | ordering OK | 1s
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\utils\weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+09:12:22 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:12:24 INFO codebrain_ft.probe: Probe features: train (93, 200), test (71, 200) (pooling=mean)
+09:12:24 INFO tasksplit: frozen_probe sub-90    tea->toast  | window bal-acc 0.914 auc 0.978 | test n=71 (ON 26/OFF 45) | ordering OK | 2s
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\utils\weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+09:12:24 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:12:25 INFO codebrain_ft.probe: Probe features: train (142, 200), test (46, 200) (pooling=mean)
+09:12:25 INFO tasksplit: frozen_probe sub-90    toast->tea    | window bal-acc 0.932 auc 0.981 | test n=46 (ON 25/OFF 21) | ordering OK | 2s
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\utils\weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+09:12:26 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:12:26 INFO codebrain_ft.probe: Probe features: train (93, 200), test (83, 200) (pooling=mean)
+09:12:26 INFO tasksplit: frozen_probe sub-92    tea->toast  | window bal-acc 1.000 auc 1.000 | test n=83 (ON 46/OFF 37) | ordering OK | 1s
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\utils\weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+09:12:26 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:12:27 INFO codebrain_ft.probe: Probe features: train (167, 200), test (47, 200) (pooling=mean)
+09:12:27 INFO tasksplit: frozen_probe sub-92    toast->tea    | window bal-acc 1.000 auc 1.000 | test n=47 (ON 23/OFF 24) | ordering OK | 1s
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\utils\weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+09:12:27 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:12:29 INFO codebrain_ft.probe: Probe features: train (77, 200), test (97, 200) (pooling=mean)
+09:12:29 INFO tasksplit: frozen_probe sub-94    tea->toast  | window bal-acc 0.677 auc 0.727 | test n=97 (ON 59/OFF 38) | ordering OK | 2s
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\utils\weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+09:12:29 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:12:30 INFO codebrain_ft.probe: Probe features: train (193, 200), test (38, 200) (pooling=mean)
+09:12:30 INFO tasksplit: frozen_probe sub-94    toast->tea    | window bal-acc 0.678 auc 0.714 | test n=38 (ON 20/OFF 18) | ordering OK | 1s
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\utils\weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+09:12:30 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:12:30 INFO codebrain_ft.probe: Probe features: train (111, 200), test (58, 200) (pooling=mean)
+09:12:30 INFO tasksplit: frozen_probe sub-96    tea->toast  | window bal-acc 1.000 auc 1.000 | test n=58 (ON 29/OFF 29) | ordering OK | 1s
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\utils\weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+09:12:30 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:12:32 INFO codebrain_ft.probe: Probe features: train (117, 200), test (55, 200) (pooling=mean)
+09:12:32 INFO tasksplit: frozen_probe sub-96    toast->tea    | window bal-acc 1.000 auc 1.000 | test n=55 (ON 26/OFF 29) | ordering OK | 2s
+09:12:32 INFO tasksplit: ==========================================================================
+09:12:32 INFO tasksplit: ARM frozen_probe — 20 patients, 40 runs
+09:12:32 INFO tasksplit:   per-patient bal-acc mean = 0.852  (patient bootstrap 95% CI [0.799, 0.900])
+09:12:32 INFO tasksplit:   above chance: 20/20 | Wilcoxon p=4.4224575106059504e-05 | sign p=9.5367431640625e-07
+09:12:32 INFO tasksplit:   ordering: 39/40 correct (0.975), binomial p=0.0000
+09:12:32 INFO tasksplit:   cross-subject LOPO reference for this arm: bal-acc 0.443 (CI [0.357, 0.529])
+09:12:32 INFO tasksplit: ==========================================================================
+09:12:32 INFO codebrain_ft.tracking: Saved run -> within_patient_tasksplit_20260730T081232Z.json (+ master CSV row)
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\utils\weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+09:12:32 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+09:12:32 INFO codebrain_ft.model: LoRA applied: target=attention r=4 alpha=8 dropout=0.1
+09:12:32 INFO codebrain_ft.train: Training: 89729 trainable params, 2 steps/epoch, up to 20 epochs (lr=5.0e-04).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:12:35 INFO codebrain_ft.train: epoch 0 | loss 0.6833 | inner-val bal-acc 0.500 | auc 0.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:12:36 INFO codebrain_ft.train: epoch 1 | loss 0.6906 | inner-val bal-acc 0.500 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:12:36 INFO codebrain_ft.train: epoch 2 | loss 0.6911 | inner-val bal-acc 0.500 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:12:37 INFO codebrain_ft.train: epoch 3 | loss 0.7060 | inner-val bal-acc 0.500 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:12:37 INFO codebrain_ft.train: epoch 4 | loss 0.6851 | inner-val bal-acc 0.500 | auc 1.000
+09:12:37 INFO codebrain_ft.train: Early stopping at epoch 4 (best epoch 0, inner_val_window_balanced_accuracy=0.500).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:12:38 INFO tasksplit: lora         sub-107   tea->toast  | window bal-acc 0.522 auc 0.540 | test n=97 (ON 64/OFF 33) | ordering OK | 5s
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\utils\weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+09:12:38 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+09:12:38 INFO codebrain_ft.model: LoRA applied: target=attention r=4 alpha=8 dropout=0.1
+09:12:38 INFO codebrain_ft.train: Training: 89729 trainable params, 3 steps/epoch, up to 20 epochs (lr=5.0e-04).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:12:40 INFO codebrain_ft.train: epoch 0 | loss 0.7362 | inner-val bal-acc 0.500 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:12:41 INFO codebrain_ft.train: epoch 1 | loss 0.6645 | inner-val bal-acc 0.500 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:12:41 INFO codebrain_ft.train: epoch 2 | loss 0.6354 | inner-val bal-acc 0.500 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:12:42 INFO codebrain_ft.train: epoch 3 | loss 0.6403 | inner-val bal-acc 0.500 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:12:43 INFO codebrain_ft.train: epoch 4 | loss 0.7619 | inner-val bal-acc 0.500 | auc 1.000
+09:12:43 INFO codebrain_ft.train: Early stopping at epoch 4 (best epoch 0, inner_val_window_balanced_accuracy=0.500).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:12:43 INFO tasksplit: lora         sub-107   toast->tea    | window bal-acc 0.481 auc 0.537 | test n=49 (ON 27/OFF 22) | ordering OK | 5s
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\utils\weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+09:12:43 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+09:12:43 INFO codebrain_ft.model: LoRA applied: target=attention r=4 alpha=8 dropout=0.1
+09:12:43 INFO codebrain_ft.train: Training: 89729 trainable params, 2 steps/epoch, up to 20 epochs (lr=5.0e-04).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:12:44 INFO codebrain_ft.train: epoch 0 | loss 0.7327 | inner-val bal-acc 0.500 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:12:44 INFO codebrain_ft.train: epoch 1 | loss 0.6970 | inner-val bal-acc 0.500 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:12:45 INFO codebrain_ft.train: epoch 2 | loss 0.6493 | inner-val bal-acc 0.500 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:12:45 INFO codebrain_ft.train: epoch 3 | loss 0.6300 | inner-val bal-acc 0.500 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:12:46 INFO codebrain_ft.train: epoch 4 | loss 0.6356 | inner-val bal-acc 0.500 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:12:46 INFO codebrain_ft.train: epoch 5 | loss 0.6231 | inner-val bal-acc 1.000 | auc 1.000
+09:12:46 INFO codebrain_ft.train: Early stopping at epoch 5 (best epoch 1, inner_val_window_balanced_accuracy=0.786).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:12:47 INFO tasksplit: lora         sub-114   tea->toast  | window bal-acc 0.513 auc 0.565 | test n=149 (ON 73/OFF 76) | ordering OK | 4s
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\utils\weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+09:12:47 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+09:12:47 INFO codebrain_ft.model: LoRA applied: target=attention r=4 alpha=8 dropout=0.1
+09:12:47 INFO codebrain_ft.train: Training: 89729 trainable params, 4 steps/epoch, up to 20 epochs (lr=5.0e-04).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:12:48 INFO codebrain_ft.train: epoch 0 | loss 0.7018 | inner-val bal-acc 0.500 | auc 0.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:12:49 INFO codebrain_ft.train: epoch 1 | loss 0.6724 | inner-val bal-acc 0.000 | auc 0.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:12:50 INFO codebrain_ft.train: epoch 2 | loss 0.6345 | inner-val bal-acc 0.500 | auc 0.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:12:51 INFO codebrain_ft.train: epoch 3 | loss 0.5617 | inner-val bal-acc 0.500 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:12:52 INFO codebrain_ft.train: epoch 4 | loss 0.5036 | inner-val bal-acc 0.500 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:12:53 INFO codebrain_ft.train: epoch 5 | loss 0.4058 | inner-val bal-acc 1.000 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:12:54 INFO codebrain_ft.train: epoch 6 | loss 0.3192 | inner-val bal-acc 0.500 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:12:55 INFO codebrain_ft.train: epoch 7 | loss 0.2308 | inner-val bal-acc 1.000 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:12:56 INFO codebrain_ft.train: epoch 8 | loss 0.1612 | inner-val bal-acc 1.000 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:12:57 INFO codebrain_ft.train: epoch 9 | loss 0.1057 | inner-val bal-acc 1.000 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:12:58 INFO codebrain_ft.train: epoch 10 | loss 0.0750 | inner-val bal-acc 1.000 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:12:59 INFO codebrain_ft.train: epoch 11 | loss 0.0530 | inner-val bal-acc 1.000 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:00 INFO codebrain_ft.train: epoch 12 | loss 0.0435 | inner-val bal-acc 1.000 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:01 INFO codebrain_ft.train: epoch 13 | loss 0.0343 | inner-val bal-acc 1.000 | auc 1.000
+09:13:01 INFO codebrain_ft.train: Early stopping at epoch 13 (best epoch 9, inner_val_window_balanced_accuracy=1.000).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:01 INFO tasksplit: lora         sub-114   toast->tea    | window bal-acc 1.000 auc 1.000 | test n=57 (ON 30/OFF 27) | ordering OK | 14s
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\utils\weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+09:13:01 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+09:13:01 INFO codebrain_ft.model: LoRA applied: target=attention r=4 alpha=8 dropout=0.1
+09:13:02 INFO codebrain_ft.train: Training: 89729 trainable params, 2 steps/epoch, up to 20 epochs (lr=5.0e-04).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:03 INFO codebrain_ft.train: epoch 0 | loss 0.7461 | inner-val bal-acc 0.500 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:04 INFO codebrain_ft.train: epoch 1 | loss 0.6176 | inner-val bal-acc 0.500 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:04 INFO codebrain_ft.train: epoch 2 | loss 0.6812 | inner-val bal-acc 0.500 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:05 INFO codebrain_ft.train: epoch 3 | loss 0.6247 | inner-val bal-acc 0.500 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:05 INFO codebrain_ft.train: epoch 4 | loss 0.5504 | inner-val bal-acc 0.500 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:06 INFO codebrain_ft.train: epoch 5 | loss 0.5118 | inner-val bal-acc 0.500 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:06 INFO codebrain_ft.train: epoch 6 | loss 0.5086 | inner-val bal-acc 0.500 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:06 INFO codebrain_ft.train: epoch 7 | loss 0.5540 | inner-val bal-acc 0.500 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:07 INFO codebrain_ft.train: epoch 8 | loss 0.5637 | inner-val bal-acc 1.000 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:07 INFO codebrain_ft.train: epoch 9 | loss 0.8071 | inner-val bal-acc 1.000 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:08 INFO codebrain_ft.train: epoch 10 | loss 0.6303 | inner-val bal-acc 1.000 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:08 INFO codebrain_ft.train: epoch 11 | loss 0.4362 | inner-val bal-acc 1.000 | auc 1.000
+09:13:08 INFO codebrain_ft.train: Early stopping at epoch 11 (best epoch 7, inner_val_window_balanced_accuracy=0.777).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:09 INFO tasksplit: lora         sub-115   tea->toast  | window bal-acc 0.337 auc 0.341 | test n=113 (ON 42/OFF 71) | ordering wrong | 8s
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\utils\weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+09:13:09 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+09:13:09 INFO codebrain_ft.model: LoRA applied: target=attention r=4 alpha=8 dropout=0.1
+09:13:09 INFO codebrain_ft.train: Training: 89729 trainable params, 3 steps/epoch, up to 20 epochs (lr=5.0e-04).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:11 INFO codebrain_ft.train: epoch 0 | loss 0.7198 | inner-val bal-acc 0.500 | auc 0.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:12 INFO codebrain_ft.train: epoch 1 | loss 0.6720 | inner-val bal-acc 0.500 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:13 INFO codebrain_ft.train: epoch 2 | loss 0.6136 | inner-val bal-acc 0.500 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:14 INFO codebrain_ft.train: epoch 3 | loss 0.6040 | inner-val bal-acc 0.500 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:14 INFO codebrain_ft.train: epoch 4 | loss 0.5572 | inner-val bal-acc 0.500 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:15 INFO codebrain_ft.train: epoch 5 | loss 0.5345 | inner-val bal-acc 0.500 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:16 INFO codebrain_ft.train: epoch 6 | loss 0.5050 | inner-val bal-acc 0.500 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:17 INFO codebrain_ft.train: epoch 7 | loss 0.4800 | inner-val bal-acc 0.500 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:17 INFO codebrain_ft.train: epoch 8 | loss 0.4609 | inner-val bal-acc 0.500 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:18 INFO codebrain_ft.train: epoch 9 | loss 0.4370 | inner-val bal-acc 0.500 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:19 INFO codebrain_ft.train: epoch 10 | loss 0.4168 | inner-val bal-acc 1.000 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:20 INFO codebrain_ft.train: epoch 11 | loss 0.4100 | inner-val bal-acc 1.000 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:20 INFO codebrain_ft.train: epoch 12 | loss 0.3740 | inner-val bal-acc 1.000 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:21 INFO codebrain_ft.train: epoch 13 | loss 0.3520 | inner-val bal-acc 1.000 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:22 INFO codebrain_ft.train: epoch 14 | loss 0.3364 | inner-val bal-acc 1.000 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:23 INFO codebrain_ft.train: epoch 15 | loss 0.3188 | inner-val bal-acc 1.000 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:23 INFO codebrain_ft.train: epoch 16 | loss 0.3355 | inner-val bal-acc 1.000 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:24 INFO codebrain_ft.train: epoch 17 | loss 0.3110 | inner-val bal-acc 1.000 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:25 INFO codebrain_ft.train: epoch 18 | loss 0.3202 | inner-val bal-acc 1.000 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:25 INFO codebrain_ft.train: epoch 19 | loss 0.3032 | inner-val bal-acc 1.000 | auc 1.000
+09:13:25 INFO codebrain_ft.train: Early stopping at epoch 19 (best epoch 15, inner_val_window_balanced_accuracy=0.795).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:26 INFO tasksplit: lora         sub-115   toast->tea    | window bal-acc 0.600 auc 0.418 | test n=46 (ON 24/OFF 22) | ordering wrong | 17s
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\utils\weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+09:13:26 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+09:13:26 INFO codebrain_ft.model: LoRA applied: target=attention r=4 alpha=8 dropout=0.1
+09:13:26 INFO codebrain_ft.train: Training: 89729 trainable params, 2 steps/epoch, up to 20 epochs (lr=5.0e-04).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:29 INFO codebrain_ft.train: epoch 0 | loss 0.7227 | inner-val bal-acc 0.500 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:30 INFO codebrain_ft.train: epoch 1 | loss 0.6974 | inner-val bal-acc 0.500 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:30 INFO codebrain_ft.train: epoch 2 | loss 0.6075 | inner-val bal-acc 0.500 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:31 INFO codebrain_ft.train: epoch 3 | loss 0.5693 | inner-val bal-acc 0.500 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:31 INFO codebrain_ft.train: epoch 4 | loss 0.5434 | inner-val bal-acc 0.500 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:32 INFO codebrain_ft.train: epoch 5 | loss 0.5015 | inner-val bal-acc 1.000 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:32 INFO codebrain_ft.train: epoch 6 | loss 0.4815 | inner-val bal-acc 1.000 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:33 INFO codebrain_ft.train: epoch 7 | loss 0.4450 | inner-val bal-acc 1.000 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:33 INFO codebrain_ft.train: epoch 8 | loss 0.4195 | inner-val bal-acc 1.000 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:34 INFO codebrain_ft.train: epoch 9 | loss 0.4127 | inner-val bal-acc 1.000 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:34 INFO codebrain_ft.train: epoch 10 | loss 0.3692 | inner-val bal-acc 1.000 | auc 1.000
+09:13:34 INFO codebrain_ft.train: Early stopping at epoch 10 (best epoch 6, inner_val_window_balanced_accuracy=0.964).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:35 INFO tasksplit: lora         sub-116   tea->toast  | window bal-acc 0.784 auc 0.917 | test n=118 (ON 72/OFF 46) | ordering OK | 9s
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\utils\weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+09:13:35 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+09:13:35 INFO codebrain_ft.model: LoRA applied: target=attention r=4 alpha=8 dropout=0.1
+09:13:35 INFO codebrain_ft.train: Training: 89729 trainable params, 3 steps/epoch, up to 20 epochs (lr=5.0e-04).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:36 INFO codebrain_ft.train: epoch 0 | loss 0.6990 | inner-val bal-acc 1.000 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:37 INFO codebrain_ft.train: epoch 1 | loss 0.6235 | inner-val bal-acc 0.500 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:38 INFO codebrain_ft.train: epoch 2 | loss 0.5600 | inner-val bal-acc 0.500 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:38 INFO codebrain_ft.train: epoch 3 | loss 0.4969 | inner-val bal-acc 0.500 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:39 INFO codebrain_ft.train: epoch 4 | loss 0.4288 | inner-val bal-acc 1.000 | auc 1.000
+09:13:39 INFO codebrain_ft.train: Early stopping at epoch 4 (best epoch 0, inner_val_window_balanced_accuracy=0.763).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:39 INFO tasksplit: lora         sub-116   toast->tea    | window bal-acc 0.735 auc 0.836 | test n=61 (ON 34/OFF 27) | ordering OK | 5s
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\utils\weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+09:13:40 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+09:13:40 INFO codebrain_ft.model: LoRA applied: target=attention r=4 alpha=8 dropout=0.1
+09:13:40 INFO codebrain_ft.train: Training: 89729 trainable params, 2 steps/epoch, up to 20 epochs (lr=5.0e-04).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:41 INFO codebrain_ft.train: epoch 0 | loss 0.6389 | inner-val bal-acc 0.500 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:42 INFO codebrain_ft.train: epoch 1 | loss 0.6436 | inner-val bal-acc 0.500 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:43 INFO codebrain_ft.train: epoch 2 | loss 0.6046 | inner-val bal-acc 0.500 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:43 INFO codebrain_ft.train: epoch 3 | loss 0.6158 | inner-val bal-acc 0.500 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:44 INFO codebrain_ft.train: epoch 4 | loss 0.5851 | inner-val bal-acc 0.500 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:44 INFO codebrain_ft.train: epoch 5 | loss 0.5904 | inner-val bal-acc 0.500 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:45 INFO codebrain_ft.train: epoch 6 | loss 0.5561 | inner-val bal-acc 0.500 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:45 INFO codebrain_ft.train: epoch 7 | loss 0.5474 | inner-val bal-acc 0.500 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:46 INFO codebrain_ft.train: epoch 8 | loss 0.5497 | inner-val bal-acc 1.000 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:46 INFO codebrain_ft.train: epoch 9 | loss 0.5235 | inner-val bal-acc 0.500 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:47 INFO codebrain_ft.train: epoch 10 | loss 0.4947 | inner-val bal-acc 0.500 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:47 INFO codebrain_ft.train: epoch 11 | loss 0.5017 | inner-val bal-acc 0.500 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:48 INFO codebrain_ft.train: epoch 12 | loss 0.4830 | inner-val bal-acc 1.000 | auc 1.000
+09:13:48 INFO codebrain_ft.train: Early stopping at epoch 12 (best epoch 8, inner_val_window_balanced_accuracy=0.689).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:48 INFO tasksplit: lora         sub-119   tea->toast  | window bal-acc 0.591 auc 0.806 | test n=156 (ON 77/OFF 79) | ordering OK | 9s
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\utils\weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+09:13:48 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+09:13:48 INFO codebrain_ft.model: LoRA applied: target=attention r=4 alpha=8 dropout=0.1
+09:13:48 INFO codebrain_ft.train: Training: 89729 trainable params, 4 steps/epoch, up to 20 epochs (lr=5.0e-04).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:50 INFO codebrain_ft.train: epoch 0 | loss 0.7069 | inner-val bal-acc 0.500 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:51 INFO codebrain_ft.train: epoch 1 | loss 0.6883 | inner-val bal-acc 0.500 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:52 INFO codebrain_ft.train: epoch 2 | loss 0.6996 | inner-val bal-acc 0.500 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:53 INFO codebrain_ft.train: epoch 3 | loss 0.6546 | inner-val bal-acc 1.000 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:54 INFO codebrain_ft.train: epoch 4 | loss 0.6438 | inner-val bal-acc 1.000 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:55 INFO codebrain_ft.train: epoch 5 | loss 0.6155 | inner-val bal-acc 1.000 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:56 INFO codebrain_ft.train: epoch 6 | loss 0.5734 | inner-val bal-acc 1.000 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:57 INFO codebrain_ft.train: epoch 7 | loss 0.5466 | inner-val bal-acc 1.000 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:58 INFO codebrain_ft.train: epoch 8 | loss 0.5214 | inner-val bal-acc 1.000 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:59 INFO codebrain_ft.train: epoch 9 | loss 0.4630 | inner-val bal-acc 1.000 | auc 1.000
+09:13:59 INFO codebrain_ft.train: Early stopping at epoch 9 (best epoch 5, inner_val_window_balanced_accuracy=0.963).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:13:59 INFO tasksplit: lora         sub-119   toast->tea    | window bal-acc 0.744 auc 0.818 | test n=75 (ON 26/OFF 49) | ordering OK | 11s
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\utils\weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+09:14:00 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+09:14:00 INFO codebrain_ft.model: LoRA applied: target=attention r=4 alpha=8 dropout=0.1
+09:14:00 INFO codebrain_ft.train: Training: 89729 trainable params, 2 steps/epoch, up to 20 epochs (lr=5.0e-04).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:14:02 INFO codebrain_ft.train: epoch 0 | loss 0.6600 | inner-val bal-acc 0.500 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:14:02 INFO codebrain_ft.train: epoch 1 | loss 0.6378 | inner-val bal-acc 0.500 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:14:03 INFO codebrain_ft.train: epoch 2 | loss 0.6191 | inner-val bal-acc 0.500 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:14:04 INFO codebrain_ft.train: epoch 3 | loss 0.6323 | inner-val bal-acc 0.500 | auc 1.000
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:14:04 INFO codebrain_ft.train: epoch 4 | loss 0.6199 | inner-val bal-acc 0.500 | auc 1.000
+09:14:04 INFO codebrain_ft.train: Early stopping at epoch 4 (best epoch 0, inner_val_window_balanced_accuracy=0.500).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)
+09:14:04 INFO tasksplit: lora         sub-121   tea->toast  | window bal-acc 0.517 auc 0.444 | test n=92 (ON 30/OFF 62) | ordering wrong | 5s
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\utils\weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+09:14:05 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+09:14:05 INFO codebrain_ft.model: LoRA applied: target=attention r=4 alpha=8 dropout=0.1
+09:14:05 INFO codebrain_ft.train: Training: 89729 trainable params, 3 steps/epoch, up to 20 epochs (lr=5.0e-04).
+C:\Users\Luke\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\dropout.py:176: UserWarning: dropout2d: Received a 3D input to dropout2d and assuming that channel-wise 1D dropout behavior is desired - input is interpreted as shape (N, C, L), where C is the channel dim. This behavior will change in a future release to interpret the input as one without a batch dimension, i.e. shape (C, H, W). To maintain the 1D channel-wise dropout behavior, please switch to using dropout1d instead.
+  return F.dropout2d(input, self.p, self.training, self.inplace)

@@ -1,0 +1,544 @@
+08:57:58 INFO livinglab_codebrain.dataset: Manifest validated: 43822 windows, 41 patients, sfreq=200, label map A=0/C=1 consistent.
+08:57:58 WARNING livinglab_codebrain.dataset: Exclusion list names patients absent from the manifest: ['sub-82', 'sub-100', 'sub-111', 'sub-130']
+08:57:58 INFO livinglab_codebrain.dataset: Applying cohort exclusions (loud):
+08:57:58 INFO livinglab_codebrain.dataset:     EXCLUDE sub-80    ->  1109 windows dropped
+08:57:58 INFO livinglab_codebrain.dataset:     EXCLUDE sub-82    ->     0 windows dropped
+08:57:58 INFO livinglab_codebrain.dataset:     EXCLUDE sub-97    ->   700 windows dropped
+08:57:58 INFO livinglab_codebrain.dataset:     EXCLUDE sub-98    ->   910 windows dropped
+08:57:58 INFO livinglab_codebrain.dataset:     EXCLUDE sub-99    ->  1494 windows dropped
+08:57:58 INFO livinglab_codebrain.dataset:     EXCLUDE sub-100   ->     0 windows dropped
+08:57:58 INFO livinglab_codebrain.dataset:     EXCLUDE sub-105   ->   850 windows dropped
+08:57:58 INFO livinglab_codebrain.dataset:     EXCLUDE sub-108   ->  1585 windows dropped
+08:57:58 INFO livinglab_codebrain.dataset:     EXCLUDE sub-111   ->     0 windows dropped
+08:57:58 INFO livinglab_codebrain.dataset:     EXCLUDE sub-130   ->     0 windows dropped
+08:57:58 INFO livinglab_codebrain.dataset: Cohort after exclusions: 35 patients (was 41), 37174 windows (was 43822).
+08:57:58 INFO derive_task_windows: Cohort: 35 patients, 37174 windows, balance={'A': 20122, 'C': 17052}
+08:57:58 INFO derive_task_windows: Manifest task_id values: ['continuous']
+08:57:58 INFO codebrain_ft.task_windows: Discovering raw-signal CSVs for 35 cohort patients (production discovery, incl. MANUAL_FILE_OVERRIDES)...
+08:57:59 INFO codebrain_ft.task_windows: sub-103-a   shift= -5504.00s fit=6/8 | tea=118w/59e, toast=0w/0e | OK
+08:57:59 INFO codebrain_ft.task_windows: sub-103-c   shift= -3636.00s fit=7/7 | tea=117w/58e, toast=299w/149e | OK
+08:57:59 INFO codebrain_ft.task_windows: sub-106-a   shift= -5162.00s fit=7/9 | tea=52w/26e, toast=0w/0e | OK
+08:57:59 INFO codebrain_ft.task_windows: sub-106-c   shift= -3608.00s fit=7/7 | tea=43w/22e, toast=82w/41e | OK
+08:57:59 INFO codebrain_ft.task_windows: sub-107-a   shift= -3664.00s fit=7/9 | tea=54w/27e, toast=127w/64e | OK
+08:57:59 INFO codebrain_ft.task_windows: sub-107-c   shift= -3728.00s fit=6/7 | tea=44w/22e, toast=66w/33e | OK
+08:58:00 INFO codebrain_ft.task_windows: sub-114-a   shift=  -192.00s fit=7/7 | tea=61w/30e, toast=147w/73e | OK
+08:58:00 INFO codebrain_ft.task_windows: sub-114-c   shift= -2056.00s fit=9/9 | tea=54w/27e, toast=153w/76e | OK
+08:58:00 INFO codebrain_ft.task_windows: sub-115-a   shift=  -162.00s fit=6/9 | tea=47w/24e, toast=85w/42e | OK
+08:58:00 INFO codebrain_ft.task_windows: sub-115-c   shift=   -16.00s fit=7/7 | tea=43w/22e, toast=141w/71e | OK
+08:58:00 INFO codebrain_ft.task_windows: sub-116-a   shift=   -12.00s fit=7/7 | tea=68w/34e, toast=143w/72e | OK
+08:58:00 INFO codebrain_ft.task_windows: sub-116-c   shift=   -26.00s fit=6/6 | tea=54w/27e, toast=92w/46e | OK
+08:58:00 INFO codebrain_ft.task_windows: sub-117-a   shift=   -16.00s fit=7/9 | tea=60w/30e, toast=151w/75e | OK
+08:58:01 INFO codebrain_ft.task_windows: sub-117-c   shift=  -546.00s fit=3/3 | tea=0w/0e, toast=0w/0e | OK
+08:58:01 INFO codebrain_ft.task_windows: sub-119-a   shift=   -16.00s fit=7/7 | tea=52w/26e, toast=154w/77e | OK
+08:58:01 INFO codebrain_ft.task_windows: sub-119-c   shift=   -24.00s fit=7/7 | tea=97w/49e, toast=159w/79e | OK
+08:58:01 INFO codebrain_ft.task_windows: sub-121-a   shift=   724.00s fit=7/9 | tea=55w/28e, toast=60w/30e | OK
+08:58:01 INFO codebrain_ft.task_windows: sub-121-c   shift=  -710.00s fit=7/7 | tea=103w/52e, toast=123w/62e | OK
+08:58:01 INFO codebrain_ft.task_windows: sub-123-a   shift=    -8.00s fit=7/7 | tea=73w/36e, toast=162w/81e | OK
+08:58:01 INFO codebrain_ft.task_windows: sub-123-c   shift=    -8.00s fit=7/7 | tea=54w/27e, toast=86w/43e | OK
+08:58:01 INFO codebrain_ft.task_windows: sub-125-a   shift= -3610.00s fit=7/9 | tea=47w/23e, toast=159w/79e | OK
+08:58:02 INFO codebrain_ft.task_windows: sub-125-c   shift= -3614.00s fit=7/7 | tea=49w/24e, toast=119w/60e | OK
+08:58:02 INFO codebrain_ft.task_windows: sub-129-a   shift= -3610.00s fit=7/7 | tea=57w/28e, toast=156w/78e | OK
+08:58:02 INFO codebrain_ft.task_windows: sub-129-c   shift= -3668.00s fit=7/7 | tea=73w/36e, toast=181w/91e | OK
+08:58:02 INFO codebrain_ft.task_windows: sub-131-a   shift= -3626.00s fit=8/10 | tea=42w/21e, toast=161w/81e | OK
+08:58:02 INFO codebrain_ft.task_windows: sub-131-c   shift= -3618.00s fit=8/8 | tea=30w/15e, toast=170w/86e | OK
+08:58:02 INFO codebrain_ft.task_windows: sub-134-a   shift=  -346.00s fit=7/10 | tea=60w/30e, toast=72w/36e | OK
+08:58:02 INFO codebrain_ft.task_windows: sub-134-c   shift=   -64.00s fit=7/7 | tea=48w/24e, toast=132w/66e | OK
+08:58:03 INFO codebrain_ft.task_windows: sub-135-a   shift= -3610.00s fit=8/8 | tea=60w/30e, toast=173w/86e | OK
+08:58:03 INFO codebrain_ft.task_windows: sub-135-c   shift= -3620.00s fit=8/10 | tea=87w/44e, toast=207w/103e | OK
+08:58:03 INFO codebrain_ft.task_windows: sub-34-a    shift= -2624.00s fit=5/7 | tea=0w/0e, toast=0w/0e | OK
+08:58:03 INFO codebrain_ft.task_windows: sub-34-c    shift= -3574.00s fit=1/6 | tea=0w/0e, toast=0w/0e | OK
+08:58:03 INFO codebrain_ft.task_windows: sub-42-a    shift=  -584.00s fit=5/7 | tea=36w/18e, toast=96w/48e | OK
+08:58:03 INFO codebrain_ft.task_windows: sub-42-c    shift= -1864.00s fit=4/7 | tea=46w/23e, toast=0w/0e | OK
+08:58:03 INFO codebrain_ft.task_windows: sub-48-a    shift=   730.00s fit=4/7 | tea=74w/37e, toast=0w/0e | OK
+08:58:03 INFO codebrain_ft.task_windows: sub-48-c    shift=  1870.00s fit=4/5 | tea=79w/40e, toast=0w/0e | OK
+08:58:03 INFO codebrain_ft.task_windows: sub-51-a    shift= -1006.00s fit=6/6 | tea=55w/28e, toast=115w/57e | OK
+08:58:03 INFO codebrain_ft.task_windows: sub-51-c    shift=  -330.00s fit=5/5 | tea=53w/27e, toast=84w/42e | OK
+08:58:03 INFO codebrain_ft.task_windows: sub-53-a    shift=  -142.00s fit=5/7 | tea=62w/31e, toast=90w/45e | OK
+08:58:04 INFO codebrain_ft.task_windows: sub-53-c    shift=  -242.00s fit=4/4 | tea=69w/35e, toast=69w/35e | PROBLEMS: TASK SPANS OVERLAP by 350.1s (tea vs toast) — the annotation CSV logs these as the same/overlapping interval, so a 'task split' here would train and test on the same windows
+08:58:04 INFO codebrain_ft.task_windows: sub-62-a    shift= -5148.00s fit=5/7 | tea=0w/0e, toast=0w/0e | OK
+08:58:04 INFO codebrain_ft.task_windows: sub-62-c    shift= -3630.00s fit=5/5 | tea=43w/21e, toast=71w/35e | OK
+08:58:04 INFO codebrain_ft.task_windows: sub-69-a    shift= -4592.00s fit=6/7 | tea=104w/52e, toast=0w/0e | OK
+08:58:04 INFO codebrain_ft.task_windows: sub-69-c    shift= -3772.00s fit=5/5 | tea=57w/29e, toast=133w/66e | OK
+08:58:04 INFO codebrain_ft.task_windows: sub-70-a    shift= -5706.00s fit=7/7 | tea=61w/31e, toast=84w/42e | OK
+08:58:04 INFO codebrain_ft.task_windows: sub-70-c    shift= -5594.00s fit=5/7 | tea=0w/0e, toast=0w/0e | OK
+08:58:04 INFO codebrain_ft.task_windows: sub-71-a    shift= -3612.00s fit=5/7 | tea=60w/30e, toast=127w/63e | OK
+08:58:04 INFO codebrain_ft.task_windows: sub-71-c    shift= -3612.00s fit=4/4 | tea=61w/30e, toast=115w/57e | OK
+08:58:05 INFO codebrain_ft.task_windows: sub-72-a    shift= -5056.00s fit=5/7 | tea=0w/0e, toast=0w/0e | OK
+08:58:05 INFO codebrain_ft.task_windows: sub-72-c    shift= -4220.00s fit=5/5 | tea=39w/20e, toast=97w/49e | OK
+08:58:05 INFO codebrain_ft.task_windows: sub-73-a    shift= -3608.00s fit=5/7 | tea=61w/30e, toast=128w/64e | OK
+08:58:05 INFO codebrain_ft.task_windows: sub-73-c    shift= -5114.00s fit=5/6 | tea=51w/26e, toast=0w/0e | OK
+08:58:05 INFO codebrain_ft.task_windows: sub-76-a    shift= -5444.00s fit=5/7 | tea=0w/0e, toast=0w/0e | OK
+08:58:05 INFO codebrain_ft.task_windows: sub-76-c    shift= -3612.00s fit=5/5 | tea=60w/30e, toast=138w/69e | OK
+08:58:05 INFO codebrain_ft.task_windows: sub-77-a    shift= -3640.00s fit=5/7 | tea=63w/31e, toast=142w/71e | OK
+08:58:05 INFO codebrain_ft.task_windows: sub-77-c    shift= -3612.00s fit=5/5 | tea=50w/25e, toast=137w/68e | OK
+08:58:05 INFO codebrain_ft.task_windows: sub-81-a    shift=   -12.00s fit=7/9 | tea=71w/35e, toast=146w/72e | OK
+08:58:06 INFO codebrain_ft.task_windows: sub-81-c    shift=  -700.00s fit=7/7 | tea=52w/26e, toast=132w/66e | OK
+08:58:06 INFO codebrain_ft.task_windows: sub-84-a    shift= -2466.00s fit=7/9 | tea=48w/24e, toast=0w/0e | OK
+08:58:06 INFO codebrain_ft.task_windows: sub-84-c    shift=  -120.00s fit=7/7 | tea=56w/28e, toast=128w/64e | OK
+08:58:06 INFO codebrain_ft.task_windows: sub-90-a    shift=   928.00s fit=6/9 | tea=50w/25e, toast=51w/26e | OK
+08:58:06 INFO codebrain_ft.task_windows: sub-90-c    shift= -1292.00s fit=7/7 | tea=43w/21e, toast=91w/45e | OK
+08:58:06 INFO codebrain_ft.task_windows: sub-92-a    shift=  -122.00s fit=7/9 | tea=45w/23e, toast=92w/46e | OK
+08:58:06 INFO codebrain_ft.task_windows: sub-92-c    shift=   -48.00s fit=7/7 | tea=48w/24e, toast=75w/37e | OK
+08:58:06 INFO codebrain_ft.task_windows: sub-93-a    shift= -2272.00s fit=7/9 | tea=18w/9e, toast=0w/0e | OK
+08:58:07 INFO codebrain_ft.task_windows: sub-93-c    shift= -1108.00s fit=6/6 | tea=0w/0e, toast=0w/0e | OK
+08:58:07 INFO codebrain_ft.task_windows: sub-94-a    shift=   -16.00s fit=7/9 | tea=41w/20e, toast=118w/59e | OK
+08:58:07 INFO codebrain_ft.task_windows: sub-94-c    shift=   -56.00s fit=7/7 | tea=36w/18e, toast=75w/38e | OK
+08:58:07 INFO codebrain_ft.task_windows: sub-96-a    shift=   -90.00s fit=7/9 | tea=53w/26e, toast=59w/29e | OK
+08:58:07 INFO codebrain_ft.task_windows: sub-96-c    shift=  -126.00s fit=7/7 | tea=58w/29e, toast=58w/29e | OK
+08:58:07 INFO derive_task_windows: Wrote sidecar (10016 labelled windows) -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\codebrain_finetune\results\within_patient_tasksplit\task_windows.parquet
+08:58:07 INFO derive_task_windows: Wrote pre-flight report -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\codebrain_finetune\logs\tasksplit_preflight.md
+08:58:07 INFO derive_task_windows: ==========================================================================
+08:58:07 INFO derive_task_windows: PRE-FLIGHT: 20 / 35 patients eligible
+08:58:07 INFO derive_task_windows:   INELIGIBLE sub-103   | task group 'toast' has NO recoverable eval windows in session(s) A — task type would be confounded with ON/OFF
+08:58:07 INFO derive_task_windows:   INELIGIBLE sub-106   | task group 'toast' has NO recoverable eval windows in session(s) A — task type would be confounded with ON/OFF
+08:58:07 INFO derive_task_windows:   INELIGIBLE sub-117   | task group 'tea' has NO recoverable eval windows in session(s) C — task type would be confounded with ON/OFF ; task group 'toast' has NO recoverable eval windows in session(s) C — task type would be confounded with ON/OFF
+08:58:07 INFO derive_task_windows:   INELIGIBLE sub-34    | task group 'tea' has NO recoverable eval windows in session(s) A/C — task type would be confounded with ON/OFF ; task group 'toast' has NO recoverable eval windows in session(s) A/C — task type would be confounded with ON/OFF
+08:58:07 INFO derive_task_windows:   INELIGIBLE sub-42    | task group 'toast' has NO recoverable eval windows in session(s) C — task type would be confounded with ON/OFF
+08:58:07 INFO derive_task_windows:   INELIGIBLE sub-48    | task group 'toast' has NO recoverable eval windows in session(s) A/C — task type would be confounded with ON/OFF
+08:58:07 INFO derive_task_windows:   INELIGIBLE sub-53    | C: TASK SPANS OVERLAP by 350.1s (tea vs toast) — the annotation CSV logs these as the same/overlapping interval, so a 'task split' here would train and test on the same windows
+08:58:07 INFO derive_task_windows:   INELIGIBLE sub-62    | task group 'tea' has NO recoverable eval windows in session(s) A — task type would be confounded with ON/OFF ; task group 'toast' has NO recoverable eval windows in session(s) A — task type would be confounded with ON/OFF
+08:58:07 INFO derive_task_windows:   INELIGIBLE sub-69    | task group 'toast' has NO recoverable eval windows in session(s) A — task type would be confounded with ON/OFF
+08:58:07 INFO derive_task_windows:   INELIGIBLE sub-70    | task group 'tea' has NO recoverable eval windows in session(s) C — task type would be confounded with ON/OFF ; task group 'toast' has NO recoverable eval windows in session(s) C — task type would be confounded with ON/OFF
+08:58:07 INFO derive_task_windows:   INELIGIBLE sub-72    | task group 'tea' has NO recoverable eval windows in session(s) A — task type would be confounded with ON/OFF ; task group 'toast' has NO recoverable eval windows in session(s) A — task type would be confounded with ON/OFF
+08:58:07 INFO derive_task_windows:   INELIGIBLE sub-73    | task group 'toast' has NO recoverable eval windows in session(s) C — task type would be confounded with ON/OFF
+08:58:07 INFO derive_task_windows:   INELIGIBLE sub-76    | task group 'tea' has NO recoverable eval windows in session(s) A — task type would be confounded with ON/OFF ; task group 'toast' has NO recoverable eval windows in session(s) A — task type would be confounded with ON/OFF
+08:58:07 INFO derive_task_windows:   INELIGIBLE sub-84    | task group 'toast' has NO recoverable eval windows in session(s) A — task type would be confounded with ON/OFF
+08:58:07 INFO derive_task_windows:   INELIGIBLE sub-93    | task group 'tea' has NO recoverable eval windows in session(s) C — task type would be confounded with ON/OFF ; task group 'toast' has NO recoverable eval windows in session(s) A/C — task type would be confounded with ON/OFF
+08:58:07 INFO derive_task_windows: ==========================================================================
+09:34:45 INFO livinglab_codebrain.dataset: Manifest validated: 43822 windows, 41 patients, sfreq=200, label map A=0/C=1 consistent.
+09:34:45 WARNING livinglab_codebrain.dataset: Exclusion list names patients absent from the manifest: ['sub-82', 'sub-100', 'sub-111', 'sub-130']
+09:34:45 INFO livinglab_codebrain.dataset: Applying cohort exclusions (loud):
+09:34:45 INFO livinglab_codebrain.dataset:     EXCLUDE sub-80    ->  1109 windows dropped
+09:34:45 INFO livinglab_codebrain.dataset:     EXCLUDE sub-82    ->     0 windows dropped
+09:34:45 INFO livinglab_codebrain.dataset:     EXCLUDE sub-97    ->   700 windows dropped
+09:34:45 INFO livinglab_codebrain.dataset:     EXCLUDE sub-98    ->   910 windows dropped
+09:34:45 INFO livinglab_codebrain.dataset:     EXCLUDE sub-99    ->  1494 windows dropped
+09:34:45 INFO livinglab_codebrain.dataset:     EXCLUDE sub-100   ->     0 windows dropped
+09:34:45 INFO livinglab_codebrain.dataset:     EXCLUDE sub-105   ->   850 windows dropped
+09:34:45 INFO livinglab_codebrain.dataset:     EXCLUDE sub-108   ->  1585 windows dropped
+09:34:45 INFO livinglab_codebrain.dataset:     EXCLUDE sub-111   ->     0 windows dropped
+09:34:45 INFO livinglab_codebrain.dataset:     EXCLUDE sub-130   ->     0 windows dropped
+09:34:45 INFO livinglab_codebrain.dataset: Cohort after exclusions: 35 patients (was 41), 37174 windows (was 43822).
+09:34:45 INFO derive_task_windows: Cohort: 35 patients, 37174 windows, balance={'A': 20122, 'C': 17052}
+09:34:45 INFO derive_task_windows: Manifest task_id values: ['continuous']
+09:34:45 INFO codebrain_ft.task_windows: Discovering raw-signal CSVs for 35 cohort patients (production discovery, incl. MANUAL_FILE_OVERRIDES)...
+09:34:45 INFO codebrain_ft.task_windows: sub-103-a   shift= -5504.00s fit=6/8 | tea=118w/59e, toast=0w/0e | OK
+09:34:45 INFO codebrain_ft.task_windows: sub-103-c   shift= -3636.00s fit=7/7 | tea=117w/58e, toast=299w/149e | OK
+09:34:45 INFO codebrain_ft.task_windows: sub-106-a   shift= -5162.00s fit=7/9 | tea=52w/26e, toast=0w/0e | OK
+09:34:45 INFO codebrain_ft.task_windows: sub-106-c   shift= -3608.00s fit=7/7 | tea=43w/22e, toast=82w/41e | OK
+09:34:46 INFO codebrain_ft.task_windows: sub-107-a   shift= -3664.00s fit=7/9 | tea=54w/27e, toast=127w/64e | OK
+09:34:46 INFO codebrain_ft.task_windows: sub-107-c   shift= -3728.00s fit=6/7 | tea=44w/22e, toast=66w/33e | OK
+09:34:46 INFO codebrain_ft.task_windows: sub-114-a   shift=  -192.00s fit=7/7 | tea=61w/30e, toast=147w/73e | OK
+09:34:46 INFO codebrain_ft.task_windows: sub-114-c   shift= -2056.00s fit=9/9 | tea=54w/27e, toast=153w/76e | OK
+09:34:46 INFO codebrain_ft.task_windows: sub-115-a   shift=  -162.00s fit=6/9 | tea=47w/24e, toast=85w/42e | OK
+09:34:46 INFO codebrain_ft.task_windows: sub-115-c   shift=   -16.00s fit=7/7 | tea=43w/22e, toast=141w/71e | OK
+09:34:46 INFO codebrain_ft.task_windows: sub-116-a   shift=   -12.00s fit=7/7 | tea=68w/34e, toast=143w/72e | OK
+09:34:46 INFO codebrain_ft.task_windows: sub-116-c   shift=   -26.00s fit=6/6 | tea=54w/27e, toast=92w/46e | OK
+09:34:46 INFO codebrain_ft.task_windows: sub-117-a   shift=   -16.00s fit=7/9 | tea=60w/30e, toast=151w/75e | OK
+09:34:46 INFO codebrain_ft.task_windows: sub-117-c   shift=  -546.00s fit=3/3 | tea=0w/0e, toast=0w/0e | OK
+09:34:47 INFO codebrain_ft.task_windows: sub-119-a   shift=   -16.00s fit=7/7 | tea=52w/26e, toast=154w/77e | OK
+09:34:47 INFO codebrain_ft.task_windows: sub-119-c   shift=   -24.00s fit=7/7 | tea=97w/49e, toast=159w/79e | OK
+09:34:47 INFO codebrain_ft.task_windows: sub-121-a   shift=   724.00s fit=7/9 | tea=55w/28e, toast=60w/30e | OK
+09:34:47 INFO codebrain_ft.task_windows: sub-121-c   shift=  -710.00s fit=7/7 | tea=103w/52e, toast=123w/62e | OK
+09:34:47 INFO codebrain_ft.task_windows: sub-123-a   shift=    -8.00s fit=7/7 | tea=73w/36e, toast=162w/81e | OK
+09:34:47 INFO codebrain_ft.task_windows: sub-123-c   shift=    -8.00s fit=7/7 | tea=54w/27e, toast=86w/43e | OK
+09:34:47 INFO codebrain_ft.task_windows: sub-125-a   shift= -3610.00s fit=7/9 | tea=47w/23e, toast=159w/79e | OK
+09:34:47 INFO codebrain_ft.task_windows: sub-125-c   shift= -3614.00s fit=7/7 | tea=49w/24e, toast=119w/60e | OK
+09:34:47 INFO codebrain_ft.task_windows: sub-129-a   shift= -3610.00s fit=7/7 | tea=57w/28e, toast=156w/78e | OK
+09:34:47 INFO codebrain_ft.task_windows: sub-129-c   shift= -3668.00s fit=7/7 | tea=73w/36e, toast=181w/91e | OK
+09:34:48 INFO codebrain_ft.task_windows: sub-131-a   shift= -3626.00s fit=8/10 | tea=42w/21e, toast=161w/81e | OK
+09:34:48 INFO codebrain_ft.task_windows: sub-131-c   shift= -3618.00s fit=8/8 | tea=30w/15e, toast=170w/86e | OK
+09:34:48 INFO codebrain_ft.task_windows: sub-134-a   shift=  -346.00s fit=7/10 | tea=60w/30e, toast=72w/36e | OK
+09:34:48 INFO codebrain_ft.task_windows: sub-134-c   shift=   -64.00s fit=7/7 | tea=48w/24e, toast=132w/66e | OK
+09:34:48 INFO codebrain_ft.task_windows: sub-135-a   shift= -3610.00s fit=8/8 | tea=60w/30e, toast=173w/86e | OK
+09:34:48 INFO codebrain_ft.task_windows: sub-135-c   shift= -3620.00s fit=8/10 | tea=87w/44e, toast=207w/103e | OK
+09:34:48 INFO codebrain_ft.task_windows: sub-34-a    shift= -2624.00s fit=5/7 | tea=0w/0e, toast=0w/0e | OK
+09:34:48 INFO codebrain_ft.task_windows: sub-34-c    shift= -3574.00s fit=1/6 | tea=0w/0e, toast=0w/0e | OK
+09:34:48 INFO codebrain_ft.task_windows: sub-42-a    shift=  -584.00s fit=5/7 | tea=36w/18e, toast=96w/48e | OK
+09:34:49 INFO codebrain_ft.task_windows: sub-42-c    shift= -1864.00s fit=4/7 | tea=46w/23e, toast=0w/0e | OK
+09:34:49 INFO codebrain_ft.task_windows: sub-48-a    shift=   730.00s fit=4/7 | tea=74w/37e, toast=0w/0e | OK
+09:34:49 INFO codebrain_ft.task_windows: sub-48-c    shift=  1870.00s fit=4/5 | tea=79w/40e, toast=0w/0e | OK
+09:34:49 INFO codebrain_ft.task_windows: sub-51-a    shift= -1006.00s fit=6/6 | tea=55w/28e, toast=115w/57e | OK
+09:34:49 INFO codebrain_ft.task_windows: sub-51-c    shift=  -330.00s fit=5/5 | tea=53w/27e, toast=84w/42e | OK
+09:34:49 INFO codebrain_ft.task_windows: sub-53-a    shift=  -142.00s fit=5/7 | tea=62w/31e, toast=90w/45e | OK
+09:34:49 INFO codebrain_ft.task_windows: sub-53-c    shift=  -242.00s fit=4/4 | tea=69w/35e, toast=69w/35e | PROBLEMS: TASK SPANS OVERLAP by 350.1s (tea vs toast) — the annotation CSV logs these as the same/overlapping interval, so a 'task split' here would train and test on the same windows
+09:34:49 INFO codebrain_ft.task_windows: sub-62-a    shift= -5148.00s fit=5/7 | tea=0w/0e, toast=0w/0e | OK
+09:34:49 INFO codebrain_ft.task_windows: sub-62-c    shift= -3630.00s fit=5/5 | tea=43w/21e, toast=71w/35e | OK
+09:34:49 INFO codebrain_ft.task_windows: sub-69-a    shift= -4592.00s fit=6/7 | tea=104w/52e, toast=0w/0e | OK
+09:34:49 INFO codebrain_ft.task_windows: sub-69-c    shift= -3772.00s fit=5/5 | tea=57w/29e, toast=133w/66e | OK
+09:34:49 INFO codebrain_ft.task_windows: sub-70-a    shift= -5706.00s fit=7/7 | tea=61w/31e, toast=84w/42e | OK
+09:34:49 INFO codebrain_ft.task_windows: sub-70-c    shift= -5594.00s fit=5/7 | tea=0w/0e, toast=0w/0e | OK
+09:34:50 INFO codebrain_ft.task_windows: sub-71-a    shift= -3612.00s fit=5/7 | tea=60w/30e, toast=127w/63e | OK
+09:34:50 INFO codebrain_ft.task_windows: sub-71-c    shift= -3612.00s fit=4/4 | tea=61w/30e, toast=115w/57e | OK
+09:34:50 INFO codebrain_ft.task_windows: sub-72-a    shift= -5056.00s fit=5/7 | tea=0w/0e, toast=0w/0e | OK
+09:34:50 INFO codebrain_ft.task_windows: sub-72-c    shift= -4220.00s fit=5/5 | tea=39w/20e, toast=97w/49e | OK
+09:34:50 INFO codebrain_ft.task_windows: sub-73-a    shift= -3608.00s fit=5/7 | tea=61w/30e, toast=128w/64e | OK
+09:34:50 INFO codebrain_ft.task_windows: sub-73-c    shift= -5114.00s fit=5/6 | tea=51w/26e, toast=0w/0e | OK
+09:34:50 INFO codebrain_ft.task_windows: sub-76-a    shift= -5444.00s fit=5/7 | tea=0w/0e, toast=0w/0e | OK
+09:34:50 INFO codebrain_ft.task_windows: sub-76-c    shift= -3612.00s fit=5/5 | tea=60w/30e, toast=138w/69e | OK
+09:34:50 INFO codebrain_ft.task_windows: sub-77-a    shift= -3640.00s fit=5/7 | tea=63w/31e, toast=142w/71e | OK
+09:34:50 INFO codebrain_ft.task_windows: sub-77-c    shift= -3612.00s fit=5/5 | tea=50w/25e, toast=137w/68e | OK
+09:34:50 INFO codebrain_ft.task_windows: sub-81-a    shift=   -12.00s fit=7/9 | tea=71w/35e, toast=146w/72e | OK
+09:34:51 INFO codebrain_ft.task_windows: sub-81-c    shift=  -700.00s fit=7/7 | tea=52w/26e, toast=132w/66e | OK
+09:34:51 INFO codebrain_ft.task_windows: sub-84-a    shift= -2466.00s fit=7/9 | tea=48w/24e, toast=0w/0e | OK
+09:34:51 INFO codebrain_ft.task_windows: sub-84-c    shift=  -120.00s fit=7/7 | tea=56w/28e, toast=128w/64e | OK
+09:34:51 INFO codebrain_ft.task_windows: sub-90-a    shift=   928.00s fit=6/9 | tea=50w/25e, toast=51w/26e | OK
+09:34:51 INFO codebrain_ft.task_windows: sub-90-c    shift= -1292.00s fit=7/7 | tea=43w/21e, toast=91w/45e | OK
+09:34:51 INFO codebrain_ft.task_windows: sub-92-a    shift=  -122.00s fit=7/9 | tea=45w/23e, toast=92w/46e | OK
+09:34:51 INFO codebrain_ft.task_windows: sub-92-c    shift=   -48.00s fit=7/7 | tea=48w/24e, toast=75w/37e | OK
+09:34:51 INFO codebrain_ft.task_windows: sub-93-a    shift= -2272.00s fit=7/9 | tea=18w/9e, toast=0w/0e | OK
+09:34:51 INFO codebrain_ft.task_windows: sub-93-c    shift= -1108.00s fit=6/6 | tea=0w/0e, toast=0w/0e | OK
+09:34:51 INFO codebrain_ft.task_windows: sub-94-a    shift=   -16.00s fit=7/9 | tea=41w/20e, toast=118w/59e | OK
+09:34:52 INFO codebrain_ft.task_windows: sub-94-c    shift=   -56.00s fit=7/7 | tea=36w/18e, toast=75w/38e | OK
+09:34:52 INFO codebrain_ft.task_windows: sub-96-a    shift=   -90.00s fit=7/9 | tea=53w/26e, toast=59w/29e | OK
+09:34:52 INFO codebrain_ft.task_windows: sub-96-c    shift=  -126.00s fit=7/7 | tea=58w/29e, toast=58w/29e | OK
+09:34:52 INFO derive_task_windows: Wrote sidecar (10016 labelled windows) -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\codebrain_finetune\results\within_patient_tasksplit\task_windows.parquet
+09:34:52 INFO derive_task_windows: Wrote pre-flight report -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\codebrain_finetune\logs\tasksplit_preflight.md
+09:34:52 INFO derive_task_windows: ==========================================================================
+09:34:52 INFO derive_task_windows: PRE-FLIGHT: 20 / 35 patients eligible
+09:34:52 INFO derive_task_windows:   INELIGIBLE sub-103   | task group 'toast' has NO recoverable eval windows in session(s) A — task type would be confounded with ON/OFF
+09:34:52 INFO derive_task_windows:   INELIGIBLE sub-106   | task group 'toast' has NO recoverable eval windows in session(s) A — task type would be confounded with ON/OFF
+09:34:52 INFO derive_task_windows:   INELIGIBLE sub-117   | task group 'tea' has NO recoverable eval windows in session(s) C — task type would be confounded with ON/OFF ; task group 'toast' has NO recoverable eval windows in session(s) C — task type would be confounded with ON/OFF
+09:34:52 INFO derive_task_windows:   INELIGIBLE sub-34    | task group 'tea' has NO recoverable eval windows in session(s) A/C — task type would be confounded with ON/OFF ; task group 'toast' has NO recoverable eval windows in session(s) A/C — task type would be confounded with ON/OFF
+09:34:52 INFO derive_task_windows:   INELIGIBLE sub-42    | task group 'toast' has NO recoverable eval windows in session(s) C — task type would be confounded with ON/OFF
+09:34:52 INFO derive_task_windows:   INELIGIBLE sub-48    | task group 'toast' has NO recoverable eval windows in session(s) A/C — task type would be confounded with ON/OFF
+09:34:52 INFO derive_task_windows:   INELIGIBLE sub-53    | C: TASK SPANS OVERLAP by 350.1s (tea vs toast) — the annotation CSV logs these as the same/overlapping interval, so a 'task split' here would train and test on the same windows
+09:34:52 INFO derive_task_windows:   INELIGIBLE sub-62    | task group 'tea' has NO recoverable eval windows in session(s) A — task type would be confounded with ON/OFF ; task group 'toast' has NO recoverable eval windows in session(s) A — task type would be confounded with ON/OFF
+09:34:52 INFO derive_task_windows:   INELIGIBLE sub-69    | task group 'toast' has NO recoverable eval windows in session(s) A — task type would be confounded with ON/OFF
+09:34:52 INFO derive_task_windows:   INELIGIBLE sub-70    | task group 'tea' has NO recoverable eval windows in session(s) C — task type would be confounded with ON/OFF ; task group 'toast' has NO recoverable eval windows in session(s) C — task type would be confounded with ON/OFF
+09:34:52 INFO derive_task_windows:   INELIGIBLE sub-72    | task group 'tea' has NO recoverable eval windows in session(s) A — task type would be confounded with ON/OFF ; task group 'toast' has NO recoverable eval windows in session(s) A — task type would be confounded with ON/OFF
+09:34:52 INFO derive_task_windows:   INELIGIBLE sub-73    | task group 'toast' has NO recoverable eval windows in session(s) C — task type would be confounded with ON/OFF
+09:34:52 INFO derive_task_windows:   INELIGIBLE sub-76    | task group 'tea' has NO recoverable eval windows in session(s) A — task type would be confounded with ON/OFF ; task group 'toast' has NO recoverable eval windows in session(s) A — task type would be confounded with ON/OFF
+09:34:52 INFO derive_task_windows:   INELIGIBLE sub-84    | task group 'toast' has NO recoverable eval windows in session(s) A — task type would be confounded with ON/OFF
+09:34:52 INFO derive_task_windows:   INELIGIBLE sub-93    | task group 'tea' has NO recoverable eval windows in session(s) C — task type would be confounded with ON/OFF ; task group 'toast' has NO recoverable eval windows in session(s) A/C — task type would be confounded with ON/OFF
+09:34:52 INFO derive_task_windows: ==========================================================================
+13:30:28 INFO livinglab_codebrain.dataset: Manifest validated: 43822 windows, 41 patients, sfreq=200, label map A=0/C=1 consistent.
+13:30:28 WARNING livinglab_codebrain.dataset: Exclusion list names patients absent from the manifest: ['sub-82', 'sub-100', 'sub-111', 'sub-130']
+13:30:28 INFO livinglab_codebrain.dataset: Applying cohort exclusions (loud):
+13:30:28 INFO livinglab_codebrain.dataset:     EXCLUDE sub-80    ->  1109 windows dropped
+13:30:28 INFO livinglab_codebrain.dataset:     EXCLUDE sub-82    ->     0 windows dropped
+13:30:28 INFO livinglab_codebrain.dataset:     EXCLUDE sub-97    ->   700 windows dropped
+13:30:28 INFO livinglab_codebrain.dataset:     EXCLUDE sub-98    ->   910 windows dropped
+13:30:28 INFO livinglab_codebrain.dataset:     EXCLUDE sub-99    ->  1494 windows dropped
+13:30:28 INFO livinglab_codebrain.dataset:     EXCLUDE sub-100   ->     0 windows dropped
+13:30:28 INFO livinglab_codebrain.dataset:     EXCLUDE sub-105   ->   850 windows dropped
+13:30:28 INFO livinglab_codebrain.dataset:     EXCLUDE sub-108   ->  1585 windows dropped
+13:30:28 INFO livinglab_codebrain.dataset:     EXCLUDE sub-111   ->     0 windows dropped
+13:30:28 INFO livinglab_codebrain.dataset:     EXCLUDE sub-130   ->     0 windows dropped
+13:30:28 INFO livinglab_codebrain.dataset: Cohort after exclusions: 35 patients (was 41), 37174 windows (was 43822).
+13:30:28 INFO derive_task_windows: Cohort: 35 patients, 37174 windows, balance={'A': 20122, 'C': 17052}
+13:30:28 INFO derive_task_windows: Manifest task_id values: ['continuous']
+13:30:28 INFO codebrain_ft.task_windows: Discovering raw-signal CSVs for 35 cohort patients (production discovery, incl. MANUAL_FILE_OVERRIDES)...
+13:30:29 INFO codebrain_ft.task_windows: sub-103-a   shift= -3600.00s fit=6/8 | tea=119w/60e, toast=298w/149e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -3600.00s differs from the cohort audit's -5504.00s — task timestamps would map onto a different part of the recording
+13:30:29 INFO codebrain_ft.task_windows: sub-103-c   shift= -3600.00s fit=7/7 | tea=117w/59e, toast=300w/150e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -3600.00s differs from the cohort audit's -3636.00s — task timestamps would map onto a different part of the recording
+13:30:29 INFO codebrain_ft.task_windows: sub-106-a   shift= -3600.00s fit=7/9 | tea=54w/27e, toast=119w/59e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -3600.00s differs from the cohort audit's -5162.00s — task timestamps would map onto a different part of the recording
+13:30:29 INFO codebrain_ft.task_windows: sub-106-c   shift= -3600.00s fit=7/7 | tea=43w/21e, toast=83w/41e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -3600.00s differs from the cohort audit's -3608.00s — task timestamps would map onto a different part of the recording
+13:30:29 INFO codebrain_ft.task_windows: sub-107-a   shift= -3600.00s fit=7/9 | tea=54w/27e, toast=126w/63e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -3600.00s differs from the cohort audit's -3664.00s — task timestamps would map onto a different part of the recording
+13:30:29 INFO codebrain_ft.task_windows: sub-107-c   shift= -3600.00s fit=6/7 | tea=44w/22e, toast=66w/33e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -3600.00s differs from the cohort audit's -3728.00s — task timestamps would map onto a different part of the recording
+13:30:29 INFO codebrain_ft.task_windows: sub-114-a   shift=     0.00s fit=7/7 | tea=60w/30e, toast=147w/73e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 0.00s differs from the cohort audit's -192.00s — task timestamps would map onto a different part of the recording
+13:30:29 INFO codebrain_ft.task_windows: sub-114-c   shift= -2056.00s fit=9/9 | tea=54w/27e, toast=153w/76e | OK
+13:30:29 INFO codebrain_ft.task_windows: sub-115-a   shift=     0.00s fit=6/9 | tea=47w/23e, toast=87w/44e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 0.00s differs from the cohort audit's -162.00s — task timestamps would map onto a different part of the recording
+13:30:30 INFO codebrain_ft.task_windows: sub-115-c   shift=     0.00s fit=7/7 | tea=43w/22e, toast=141w/70e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 0.00s differs from the cohort audit's -16.00s — task timestamps would map onto a different part of the recording
+13:30:30 INFO codebrain_ft.task_windows: sub-116-a   shift=     0.00s fit=7/7 | tea=68w/34e, toast=144w/72e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 0.00s differs from the cohort audit's -12.00s — task timestamps would map onto a different part of the recording
+13:30:30 INFO codebrain_ft.task_windows: sub-116-c   shift=     0.00s fit=6/6 | tea=53w/26e, toast=94w/47e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 0.00s differs from the cohort audit's -26.00s — task timestamps would map onto a different part of the recording
+13:30:30 INFO codebrain_ft.task_windows: sub-117-a   shift=     0.00s fit=7/9 | tea=60w/30e, toast=153w/77e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 0.00s differs from the cohort audit's -16.00s — task timestamps would map onto a different part of the recording
+13:30:30 INFO codebrain_ft.task_windows: sub-117-c   shift=  -198.00s fit=3/3 | tea=0w/0e, toast=0w/0e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -198.00s differs from the cohort audit's -546.00s — task timestamps would map onto a different part of the recording
+13:30:30 INFO codebrain_ft.task_windows: sub-119-a   shift=     0.00s fit=7/7 | tea=52w/26e, toast=153w/76e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 0.00s differs from the cohort audit's -16.00s — task timestamps would map onto a different part of the recording
+13:30:30 INFO codebrain_ft.task_windows: sub-119-c   shift=     0.00s fit=7/7 | tea=98w/49e, toast=159w/80e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 0.00s differs from the cohort audit's -24.00s — task timestamps would map onto a different part of the recording
+13:30:30 INFO codebrain_ft.task_windows: sub-121-a   shift=   724.00s fit=7/9 | tea=55w/28e, toast=60w/30e | OK
+13:30:30 INFO codebrain_ft.task_windows: sub-121-c   shift=     0.00s fit=7/7 | tea=103w/52e, toast=124w/63e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 0.00s differs from the cohort audit's -710.00s — task timestamps would map onto a different part of the recording
+13:30:30 INFO codebrain_ft.task_windows: sub-123-a   shift=     0.00s fit=7/7 | tea=73w/36e, toast=162w/81e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 0.00s differs from the cohort audit's -8.00s — task timestamps would map onto a different part of the recording
+13:30:31 INFO codebrain_ft.task_windows: sub-123-c   shift=     0.00s fit=7/7 | tea=54w/27e, toast=86w/43e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 0.00s differs from the cohort audit's -8.00s — task timestamps would map onto a different part of the recording
+13:30:31 INFO codebrain_ft.task_windows: sub-125-a   shift= -3600.00s fit=7/9 | tea=47w/23e, toast=160w/80e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -3600.00s differs from the cohort audit's -3610.00s — task timestamps would map onto a different part of the recording
+13:30:31 INFO codebrain_ft.task_windows: sub-125-c   shift= -3600.00s fit=7/7 | tea=50w/25e, toast=119w/59e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -3600.00s differs from the cohort audit's -3614.00s — task timestamps would map onto a different part of the recording
+13:30:31 INFO codebrain_ft.task_windows: sub-129-a   shift= -3600.00s fit=7/7 | tea=57w/28e, toast=157w/78e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -3600.00s differs from the cohort audit's -3610.00s — task timestamps would map onto a different part of the recording
+13:30:31 INFO codebrain_ft.task_windows: sub-129-c   shift= -3600.00s fit=7/7 | tea=73w/36e, toast=181w/90e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -3600.00s differs from the cohort audit's -3668.00s — task timestamps would map onto a different part of the recording
+13:30:31 INFO codebrain_ft.task_windows: sub-131-a   shift= -3600.00s fit=8/10 | tea=42w/21e, toast=161w/80e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -3600.00s differs from the cohort audit's -3626.00s — task timestamps would map onto a different part of the recording
+13:30:31 INFO codebrain_ft.task_windows: sub-131-c   shift= -3600.00s fit=8/8 | tea=31w/15e, toast=172w/86e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -3600.00s differs from the cohort audit's -3618.00s — task timestamps would map onto a different part of the recording
+13:30:31 INFO codebrain_ft.task_windows: sub-134-a   shift=     0.00s fit=7/10 | tea=59w/29e, toast=131w/66e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 0.00s differs from the cohort audit's -346.00s — task timestamps would map onto a different part of the recording
+13:30:31 INFO codebrain_ft.task_windows: sub-134-c   shift=     0.00s fit=7/7 | tea=48w/24e, toast=133w/67e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 0.00s differs from the cohort audit's -64.00s — task timestamps would map onto a different part of the recording
+13:30:31 INFO codebrain_ft.task_windows: sub-135-a   shift= -3600.00s fit=8/8 | tea=60w/30e, toast=174w/86e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -3600.00s differs from the cohort audit's -3610.00s — task timestamps would map onto a different part of the recording
+13:30:32 INFO codebrain_ft.task_windows: sub-135-c   shift= -3600.00s fit=8/10 | tea=87w/44e, toast=208w/104e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -3600.00s differs from the cohort audit's -3620.00s — task timestamps would map onto a different part of the recording
+13:30:32 INFO codebrain_ft.task_windows: sub-34-a    shift=    -6.00s fit=5/7 | tea=115w/58e, toast=189w/95e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -6.00s differs from the cohort audit's -2624.00s — task timestamps would map onto a different part of the recording
+13:30:32 INFO codebrain_ft.task_windows: sub-34-c    shift= -3574.00s fit=1/6 | tea=0w/0e, toast=0w/0e | OK
+13:30:32 INFO codebrain_ft.task_windows: sub-42-a    shift=     0.00s fit=5/7 | tea=36w/18e, toast=97w/48e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 0.00s differs from the cohort audit's -584.00s — task timestamps would map onto a different part of the recording
+13:30:32 INFO codebrain_ft.task_windows: sub-42-c    shift= -1584.00s fit=4/7 | tea=47w/23e, toast=0w/0e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -1584.00s differs from the cohort audit's -1864.00s — task timestamps would map onto a different part of the recording
+13:30:32 INFO codebrain_ft.task_windows: sub-48-a    shift=   730.00s fit=4/7 | tea=74w/37e, toast=0w/0e | OK
+13:30:32 INFO codebrain_ft.task_windows: sub-48-c    shift=  1916.00s fit=4/5 | tea=80w/40e, toast=0w/0e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 1916.00s differs from the cohort audit's 1870.00s — task timestamps would map onto a different part of the recording
+13:30:32 INFO codebrain_ft.task_windows: sub-51-a    shift=  -912.00s fit=6/6 | tea=55w/27e, toast=116w/58e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -912.00s differs from the cohort audit's -1006.00s — task timestamps would map onto a different part of the recording
+13:30:32 INFO codebrain_ft.task_windows: sub-51-c    shift=     0.00s fit=5/5 | tea=53w/27e, toast=85w/42e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 0.00s differs from the cohort audit's -330.00s — task timestamps would map onto a different part of the recording
+13:30:32 INFO codebrain_ft.task_windows: sub-53-a    shift=     0.00s fit=5/7 | tea=62w/31e, toast=91w/45e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 0.00s differs from the cohort audit's -142.00s — task timestamps would map onto a different part of the recording
+13:30:32 INFO codebrain_ft.task_windows: sub-53-c    shift=     0.00s fit=4/4 | tea=69w/35e, toast=69w/35e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 0.00s differs from the cohort audit's -242.00s — task timestamps would map onto a different part of the recording
+13:30:33 INFO codebrain_ft.task_windows: sub-62-a    shift= -3600.00s fit=5/7 | tea=67w/34e, toast=98w/49e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -3600.00s differs from the cohort audit's -5148.00s — task timestamps would map onto a different part of the recording
+13:30:33 INFO codebrain_ft.task_windows: sub-62-c    shift= -3600.00s fit=5/5 | tea=43w/21e, toast=71w/35e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -3600.00s differs from the cohort audit's -3630.00s — task timestamps would map onto a different part of the recording
+13:30:33 INFO codebrain_ft.task_windows: sub-69-a    shift= -4360.00s fit=6/7 | tea=104w/52e, toast=0w/0e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -4360.00s differs from the cohort audit's -4592.00s — task timestamps would map onto a different part of the recording
+13:30:33 INFO codebrain_ft.task_windows: sub-69-c    shift= -3600.00s fit=5/5 | tea=56w/28e, toast=134w/67e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -3600.00s differs from the cohort audit's -3772.00s — task timestamps would map onto a different part of the recording
+13:30:33 INFO codebrain_ft.task_windows: sub-70-a    shift= -5706.00s fit=7/7 | tea=61w/31e, toast=84w/42e | OK
+13:30:33 INFO codebrain_ft.task_windows: sub-70-c    shift= -3730.00s fit=5/7 | tea=60w/30e, toast=79w/40e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -3730.00s differs from the cohort audit's -5594.00s — task timestamps would map onto a different part of the recording
+13:30:33 INFO codebrain_ft.task_windows: sub-71-a    shift= -3600.00s fit=5/7 | tea=60w/30e, toast=127w/63e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -3600.00s differs from the cohort audit's -3612.00s — task timestamps would map onto a different part of the recording
+13:30:33 INFO codebrain_ft.task_windows: sub-71-c    shift= -3600.00s fit=4/4 | tea=60w/30e, toast=116w/58e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -3600.00s differs from the cohort audit's -3612.00s — task timestamps would map onto a different part of the recording
+13:30:33 INFO codebrain_ft.task_windows: sub-72-a    shift= -3600.00s fit=5/7 | tea=55w/27e, toast=98w/49e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -3600.00s differs from the cohort audit's -5056.00s — task timestamps would map onto a different part of the recording
+13:30:33 INFO codebrain_ft.task_windows: sub-72-c    shift= -3600.00s fit=5/5 | tea=39w/20e, toast=97w/49e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -3600.00s differs from the cohort audit's -4220.00s — task timestamps would map onto a different part of the recording
+13:30:33 INFO codebrain_ft.task_windows: sub-73-a    shift= -3600.00s fit=5/7 | tea=61w/30e, toast=128w/64e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -3600.00s differs from the cohort audit's -3608.00s — task timestamps would map onto a different part of the recording
+13:30:33 INFO codebrain_ft.task_windows: sub-73-c    shift= -4576.00s fit=5/6 | tea=53w/27e, toast=0w/0e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -4576.00s differs from the cohort audit's -5114.00s — task timestamps would map onto a different part of the recording
+13:30:34 INFO codebrain_ft.task_windows: sub-76-a    shift= -3600.00s fit=5/7 | tea=82w/41e, toast=143w/72e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -3600.00s differs from the cohort audit's -5444.00s — task timestamps would map onto a different part of the recording
+13:30:34 INFO codebrain_ft.task_windows: sub-76-c    shift= -3600.00s fit=5/5 | tea=59w/30e, toast=139w/70e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -3600.00s differs from the cohort audit's -3612.00s — task timestamps would map onto a different part of the recording
+13:30:34 INFO codebrain_ft.task_windows: sub-77-a    shift= -3600.00s fit=5/7 | tea=63w/31e, toast=143w/72e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -3600.00s differs from the cohort audit's -3640.00s — task timestamps would map onto a different part of the recording
+13:30:34 INFO codebrain_ft.task_windows: sub-77-c    shift= -3600.00s fit=5/5 | tea=51w/26e, toast=137w/68e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -3600.00s differs from the cohort audit's -3612.00s — task timestamps would map onto a different part of the recording
+13:30:34 INFO codebrain_ft.task_windows: sub-81-a    shift=     0.00s fit=7/9 | tea=71w/35e, toast=146w/73e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 0.00s differs from the cohort audit's -12.00s — task timestamps would map onto a different part of the recording
+13:30:34 INFO codebrain_ft.task_windows: sub-81-c    shift=     0.00s fit=7/7 | tea=52w/26e, toast=133w/67e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 0.00s differs from the cohort audit's -700.00s — task timestamps would map onto a different part of the recording
+13:30:34 INFO codebrain_ft.task_windows: sub-84-a    shift=     0.00s fit=7/9 | tea=50w/25e, toast=141w/71e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 0.00s differs from the cohort audit's -2466.00s — task timestamps would map onto a different part of the recording
+13:30:34 INFO codebrain_ft.task_windows: sub-84-c    shift=     0.00s fit=7/7 | tea=56w/28e, toast=128w/64e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 0.00s differs from the cohort audit's -120.00s — task timestamps would map onto a different part of the recording
+13:30:34 INFO codebrain_ft.task_windows: sub-90-a    shift=   928.00s fit=6/9 | tea=50w/25e, toast=51w/26e | OK
+13:30:34 INFO codebrain_ft.task_windows: sub-90-c    shift=     0.00s fit=7/7 | tea=43w/21e, toast=92w/46e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 0.00s differs from the cohort audit's -1292.00s — task timestamps would map onto a different part of the recording
+13:30:35 INFO codebrain_ft.task_windows: sub-92-a    shift=     0.00s fit=7/9 | tea=45w/23e, toast=94w/48e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 0.00s differs from the cohort audit's -122.00s — task timestamps would map onto a different part of the recording
+13:30:35 INFO codebrain_ft.task_windows: sub-92-c    shift=     0.00s fit=7/7 | tea=48w/24e, toast=77w/38e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 0.00s differs from the cohort audit's -48.00s — task timestamps would map onto a different part of the recording
+13:30:35 INFO codebrain_ft.task_windows: sub-93-a    shift=     0.00s fit=7/9 | tea=18w/9e, toast=85w/43e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 0.00s differs from the cohort audit's -2272.00s — task timestamps would map onto a different part of the recording
+13:30:35 INFO codebrain_ft.task_windows: sub-93-c    shift=     0.00s fit=6/6 | tea=0w/0e, toast=0w/0e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 0.00s differs from the cohort audit's -1108.00s — task timestamps would map onto a different part of the recording
+13:30:35 INFO codebrain_ft.task_windows: sub-94-a    shift=     0.00s fit=7/9 | tea=42w/21e, toast=119w/60e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 0.00s differs from the cohort audit's -16.00s — task timestamps would map onto a different part of the recording
+13:30:35 INFO codebrain_ft.task_windows: sub-94-c    shift=     0.00s fit=7/7 | tea=36w/18e, toast=75w/37e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 0.00s differs from the cohort audit's -56.00s — task timestamps would map onto a different part of the recording
+13:30:35 INFO codebrain_ft.task_windows: sub-96-a    shift=     0.00s fit=7/9 | tea=53w/26e, toast=60w/30e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 0.00s differs from the cohort audit's -90.00s — task timestamps would map onto a different part of the recording
+13:30:35 INFO codebrain_ft.task_windows: sub-96-c    shift=     0.00s fit=7/7 | tea=58w/29e, toast=59w/30e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 0.00s differs from the cohort audit's -126.00s — task timestamps would map onto a different part of the recording
+13:30:35 INFO derive_task_windows: Wrote sidecar (11744 labelled windows) -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\codebrain_finetune\results\within_patient_tasksplit\task_windows.parquet
+13:30:35 INFO derive_task_windows: Wrote pre-flight report -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\codebrain_finetune\logs\tasksplit_preflight.md
+13:30:35 INFO derive_task_windows: ==========================================================================
+13:30:35 INFO derive_task_windows: PRE-FLIGHT: 0 / 35 patients eligible
+13:30:35 INFO derive_task_windows:   INELIGIBLE sub-103   | A: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -3600.00s differs from the cohort audit's -5504.00s — task timestamps would map onto a different part of the recording ; C: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -3600.00s differs from the cohort audit's -3636.00s — task timestamps would map onto a different part of the recording
+13:30:35 INFO derive_task_windows:   INELIGIBLE sub-106   | A: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -3600.00s differs from the cohort audit's -5162.00s — task timestamps would map onto a different part of the recording ; C: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -3600.00s differs from the cohort audit's -3608.00s — task timestamps would map onto a different part of the recording
+13:30:35 INFO derive_task_windows:   INELIGIBLE sub-107   | A: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -3600.00s differs from the cohort audit's -3664.00s — task timestamps would map onto a different part of the recording ; C: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -3600.00s differs from the cohort audit's -3728.00s — task timestamps would map onto a different part of the recording
+13:30:35 INFO derive_task_windows:   INELIGIBLE sub-114   | A: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 0.00s differs from the cohort audit's -192.00s — task timestamps would map onto a different part of the recording
+13:30:35 INFO derive_task_windows:   INELIGIBLE sub-115   | A: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 0.00s differs from the cohort audit's -162.00s — task timestamps would map onto a different part of the recording ; C: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 0.00s differs from the cohort audit's -16.00s — task timestamps would map onto a different part of the recording
+13:30:35 INFO derive_task_windows:   INELIGIBLE sub-116   | A: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 0.00s differs from the cohort audit's -12.00s — task timestamps would map onto a different part of the recording ; C: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 0.00s differs from the cohort audit's -26.00s — task timestamps would map onto a different part of the recording
+13:30:35 INFO derive_task_windows:   INELIGIBLE sub-117   | A: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 0.00s differs from the cohort audit's -16.00s — task timestamps would map onto a different part of the recording ; C: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -198.00s differs from the cohort audit's -546.00s — task timestamps would map onto a different part of the recording ; task group 'tea' has NO recoverable eval windows in session(s) C — task type would be confounded with ON/OFF ; task group 'toast' has NO recoverable eval windows in session(s) C — task type would be confounded with ON/OFF
+13:30:35 INFO derive_task_windows:   INELIGIBLE sub-119   | A: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 0.00s differs from the cohort audit's -16.00s — task timestamps would map onto a different part of the recording ; C: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 0.00s differs from the cohort audit's -24.00s — task timestamps would map onto a different part of the recording
+13:30:35 INFO derive_task_windows:   INELIGIBLE sub-121   | C: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 0.00s differs from the cohort audit's -710.00s — task timestamps would map onto a different part of the recording
+13:30:35 INFO derive_task_windows:   INELIGIBLE sub-123   | A: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 0.00s differs from the cohort audit's -8.00s — task timestamps would map onto a different part of the recording ; C: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 0.00s differs from the cohort audit's -8.00s — task timestamps would map onto a different part of the recording
+13:30:35 INFO derive_task_windows:   INELIGIBLE sub-125   | A: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -3600.00s differs from the cohort audit's -3610.00s — task timestamps would map onto a different part of the recording ; C: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -3600.00s differs from the cohort audit's -3614.00s — task timestamps would map onto a different part of the recording
+13:30:35 INFO derive_task_windows:   INELIGIBLE sub-129   | A: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -3600.00s differs from the cohort audit's -3610.00s — task timestamps would map onto a different part of the recording ; C: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -3600.00s differs from the cohort audit's -3668.00s — task timestamps would map onto a different part of the recording
+13:30:35 INFO derive_task_windows:   INELIGIBLE sub-131   | A: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -3600.00s differs from the cohort audit's -3626.00s — task timestamps would map onto a different part of the recording ; C: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -3600.00s differs from the cohort audit's -3618.00s — task timestamps would map onto a different part of the recording
+13:30:35 INFO derive_task_windows:   INELIGIBLE sub-134   | A: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 0.00s differs from the cohort audit's -346.00s — task timestamps would map onto a different part of the recording ; C: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 0.00s differs from the cohort audit's -64.00s — task timestamps would map onto a different part of the recording
+13:30:35 INFO derive_task_windows:   INELIGIBLE sub-135   | A: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -3600.00s differs from the cohort audit's -3610.00s — task timestamps would map onto a different part of the recording ; C: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -3600.00s differs from the cohort audit's -3620.00s — task timestamps would map onto a different part of the recording
+13:30:35 INFO derive_task_windows:   INELIGIBLE sub-34    | A: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -6.00s differs from the cohort audit's -2624.00s — task timestamps would map onto a different part of the recording ; task group 'tea' has NO recoverable eval windows in session(s) C — task type would be confounded with ON/OFF ; task group 'toast' has NO recoverable eval windows in session(s) C — task type would be confounded with ON/OFF
+13:30:35 INFO derive_task_windows:   INELIGIBLE sub-42    | A: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 0.00s differs from the cohort audit's -584.00s — task timestamps would map onto a different part of the recording ; C: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -1584.00s differs from the cohort audit's -1864.00s — task timestamps would map onto a different part of the recording ; task group 'toast' has NO recoverable eval windows in session(s) C — task type would be confounded with ON/OFF
+13:30:35 INFO derive_task_windows:   INELIGIBLE sub-48    | C: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 1916.00s differs from the cohort audit's 1870.00s — task timestamps would map onto a different part of the recording ; task group 'toast' has NO recoverable eval windows in session(s) A/C — task type would be confounded with ON/OFF
+13:30:35 INFO derive_task_windows:   INELIGIBLE sub-51    | A: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -912.00s differs from the cohort audit's -1006.00s — task timestamps would map onto a different part of the recording ; C: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 0.00s differs from the cohort audit's -330.00s — task timestamps would map onto a different part of the recording
+13:30:35 INFO derive_task_windows:   INELIGIBLE sub-53    | A: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 0.00s differs from the cohort audit's -142.00s — task timestamps would map onto a different part of the recording ; C: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 0.00s differs from the cohort audit's -242.00s — task timestamps would map onto a different part of the recording ; C: TASK SPANS OVERLAP by 354.7s (tea vs toast) — the annotation CSV logs these as the same/overlapping interval, so a 'task split' here would train and test on the same windows
+13:30:35 INFO derive_task_windows:   INELIGIBLE sub-62    | A: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -3600.00s differs from the cohort audit's -5148.00s — task timestamps would map onto a different part of the recording ; C: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -3600.00s differs from the cohort audit's -3630.00s — task timestamps would map onto a different part of the recording
+13:30:35 INFO derive_task_windows:   INELIGIBLE sub-69    | A: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -4360.00s differs from the cohort audit's -4592.00s — task timestamps would map onto a different part of the recording ; C: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -3600.00s differs from the cohort audit's -3772.00s — task timestamps would map onto a different part of the recording ; task group 'toast' has NO recoverable eval windows in session(s) A — task type would be confounded with ON/OFF
+13:30:35 INFO derive_task_windows:   INELIGIBLE sub-70    | C: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -3730.00s differs from the cohort audit's -5594.00s — task timestamps would map onto a different part of the recording
+13:30:35 INFO derive_task_windows:   INELIGIBLE sub-71    | A: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -3600.00s differs from the cohort audit's -3612.00s — task timestamps would map onto a different part of the recording ; C: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -3600.00s differs from the cohort audit's -3612.00s — task timestamps would map onto a different part of the recording
+13:30:35 INFO derive_task_windows:   INELIGIBLE sub-72    | A: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -3600.00s differs from the cohort audit's -5056.00s — task timestamps would map onto a different part of the recording ; C: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -3600.00s differs from the cohort audit's -4220.00s — task timestamps would map onto a different part of the recording
+13:30:35 INFO derive_task_windows:   INELIGIBLE sub-73    | A: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -3600.00s differs from the cohort audit's -3608.00s — task timestamps would map onto a different part of the recording ; C: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -4576.00s differs from the cohort audit's -5114.00s — task timestamps would map onto a different part of the recording ; task group 'toast' has NO recoverable eval windows in session(s) C — task type would be confounded with ON/OFF
+13:30:35 INFO derive_task_windows:   INELIGIBLE sub-76    | A: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -3600.00s differs from the cohort audit's -5444.00s — task timestamps would map onto a different part of the recording ; C: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -3600.00s differs from the cohort audit's -3612.00s — task timestamps would map onto a different part of the recording
+13:30:35 INFO derive_task_windows:   INELIGIBLE sub-77    | A: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -3600.00s differs from the cohort audit's -3640.00s — task timestamps would map onto a different part of the recording ; C: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift -3600.00s differs from the cohort audit's -3612.00s — task timestamps would map onto a different part of the recording
+13:30:35 INFO derive_task_windows:   INELIGIBLE sub-81    | A: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 0.00s differs from the cohort audit's -12.00s — task timestamps would map onto a different part of the recording ; C: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 0.00s differs from the cohort audit's -700.00s — task timestamps would map onto a different part of the recording
+13:30:35 INFO derive_task_windows:   INELIGIBLE sub-84    | A: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 0.00s differs from the cohort audit's -2466.00s — task timestamps would map onto a different part of the recording ; C: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 0.00s differs from the cohort audit's -120.00s — task timestamps would map onto a different part of the recording
+13:30:35 INFO derive_task_windows:   INELIGIBLE sub-90    | C: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 0.00s differs from the cohort audit's -1292.00s — task timestamps would map onto a different part of the recording
+13:30:35 INFO derive_task_windows:   INELIGIBLE sub-92    | A: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 0.00s differs from the cohort audit's -122.00s — task timestamps would map onto a different part of the recording ; C: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 0.00s differs from the cohort audit's -48.00s — task timestamps would map onto a different part of the recording
+13:30:35 INFO derive_task_windows:   INELIGIBLE sub-93    | A: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 0.00s differs from the cohort audit's -2272.00s — task timestamps would map onto a different part of the recording ; C: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 0.00s differs from the cohort audit's -1108.00s — task timestamps would map onto a different part of the recording ; task group 'tea' has NO recoverable eval windows in session(s) C — task type would be confounded with ON/OFF ; task group 'toast' has NO recoverable eval windows in session(s) C — task type would be confounded with ON/OFF
+13:30:35 INFO derive_task_windows:   INELIGIBLE sub-94    | A: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 0.00s differs from the cohort audit's -16.00s — task timestamps would map onto a different part of the recording ; C: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 0.00s differs from the cohort audit's -56.00s — task timestamps would map onto a different part of the recording
+13:30:35 INFO derive_task_windows:   INELIGIBLE sub-96    | A: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 0.00s differs from the cohort audit's -90.00s — task timestamps would map onto a different part of the recording ; C: ALIGNMENT CROSS-CHECK FAILED: re-derived clock shift 0.00s differs from the cohort audit's -126.00s — task timestamps would map onto a different part of the recording
+13:30:35 INFO derive_task_windows: ==========================================================================
+13:30:35 ERROR derive_task_windows: STOP: no patient has both task groups recoverable in BOTH sessions. Task type is confounded with ON/OFF for this cohort — the within-patient task-split design is NOT valid here. Do not proceed.
+13:31:37 INFO livinglab_codebrain.dataset: Manifest validated: 43822 windows, 41 patients, sfreq=200, label map A=0/C=1 consistent.
+13:31:37 WARNING livinglab_codebrain.dataset: Exclusion list names patients absent from the manifest: ['sub-82', 'sub-100', 'sub-111', 'sub-130']
+13:31:37 INFO livinglab_codebrain.dataset: Applying cohort exclusions (loud):
+13:31:37 INFO livinglab_codebrain.dataset:     EXCLUDE sub-80    ->  1109 windows dropped
+13:31:37 INFO livinglab_codebrain.dataset:     EXCLUDE sub-82    ->     0 windows dropped
+13:31:37 INFO livinglab_codebrain.dataset:     EXCLUDE sub-97    ->   700 windows dropped
+13:31:37 INFO livinglab_codebrain.dataset:     EXCLUDE sub-98    ->   910 windows dropped
+13:31:37 INFO livinglab_codebrain.dataset:     EXCLUDE sub-99    ->  1494 windows dropped
+13:31:37 INFO livinglab_codebrain.dataset:     EXCLUDE sub-100   ->     0 windows dropped
+13:31:37 INFO livinglab_codebrain.dataset:     EXCLUDE sub-105   ->   850 windows dropped
+13:31:37 INFO livinglab_codebrain.dataset:     EXCLUDE sub-108   ->  1585 windows dropped
+13:31:37 INFO livinglab_codebrain.dataset:     EXCLUDE sub-111   ->     0 windows dropped
+13:31:37 INFO livinglab_codebrain.dataset:     EXCLUDE sub-130   ->     0 windows dropped
+13:31:37 INFO livinglab_codebrain.dataset: Cohort after exclusions: 35 patients (was 41), 37174 windows (was 43822).
+13:31:37 INFO derive_task_windows: Cohort: 35 patients, 37174 windows, balance={'A': 20122, 'C': 17052}
+13:31:37 INFO derive_task_windows: Manifest task_id values: ['continuous']
+13:31:37 INFO codebrain_ft.task_windows: Discovering raw-signal CSVs for 35 cohort patients (production discovery, incl. MANUAL_FILE_OVERRIDES)...
+13:31:37 INFO codebrain_ft.task_windows: sub-103-a   shift= -3600.00s fit=6/8 | tea=119w/60e, toast=298w/149e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived alignment recovers 6 tasks, fewer than the cohort audit's 7 — this is a real regression, not a legitimate tie-break choice (which never recovers fewer tasks); the raw CSV selected here may not be the one the audit measured (sub-103-a_raw.csv)
+13:31:37 INFO codebrain_ft.task_windows: sub-103-c   shift= -3600.00s fit=7/7 | tea=117w/59e, toast=300w/150e | OK
+13:31:37 INFO codebrain_ft.task_windows: sub-106-a   shift= -3600.00s fit=7/9 | tea=54w/27e, toast=119w/59e | OK
+13:31:38 INFO codebrain_ft.task_windows: sub-106-c   shift= -3600.00s fit=7/7 | tea=43w/21e, toast=83w/41e | OK
+13:31:38 INFO codebrain_ft.task_windows: sub-107-a   shift= -3600.00s fit=7/9 | tea=54w/27e, toast=126w/63e | OK
+13:31:38 INFO codebrain_ft.task_windows: sub-107-c   shift= -3600.00s fit=6/7 | tea=44w/22e, toast=66w/33e | OK
+13:31:38 INFO codebrain_ft.task_windows: sub-114-a   shift=     0.00s fit=7/7 | tea=60w/30e, toast=147w/73e | OK
+13:31:38 INFO codebrain_ft.task_windows: sub-114-c   shift= -2056.00s fit=9/9 | tea=54w/27e, toast=153w/76e | OK
+13:31:38 INFO codebrain_ft.task_windows: sub-115-a   shift=     0.00s fit=6/9 | tea=47w/23e, toast=87w/44e | OK
+13:31:38 INFO codebrain_ft.task_windows: sub-115-c   shift=     0.00s fit=7/7 | tea=43w/22e, toast=141w/70e | OK
+13:31:38 INFO codebrain_ft.task_windows: sub-116-a   shift=     0.00s fit=7/7 | tea=68w/34e, toast=144w/72e | OK
+13:31:38 INFO codebrain_ft.task_windows: sub-116-c   shift=     0.00s fit=6/6 | tea=53w/26e, toast=94w/47e | OK
+13:31:38 INFO codebrain_ft.task_windows: sub-117-a   shift=     0.00s fit=7/9 | tea=60w/30e, toast=153w/77e | OK
+13:31:39 INFO codebrain_ft.task_windows: sub-117-c   shift=  -198.00s fit=3/3 | tea=0w/0e, toast=0w/0e | OK
+13:31:39 INFO codebrain_ft.task_windows: sub-119-a   shift=     0.00s fit=7/7 | tea=52w/26e, toast=153w/76e | OK
+13:31:39 INFO codebrain_ft.task_windows: sub-119-c   shift=     0.00s fit=7/7 | tea=98w/49e, toast=159w/80e | OK
+13:31:39 INFO codebrain_ft.task_windows: sub-121-a   shift=   724.00s fit=7/9 | tea=55w/28e, toast=60w/30e | OK
+13:31:39 INFO codebrain_ft.task_windows: sub-121-c   shift=     0.00s fit=7/7 | tea=103w/52e, toast=124w/63e | OK
+13:31:39 INFO codebrain_ft.task_windows: sub-123-a   shift=     0.00s fit=7/7 | tea=73w/36e, toast=162w/81e | OK
+13:31:39 INFO codebrain_ft.task_windows: sub-123-c   shift=     0.00s fit=7/7 | tea=54w/27e, toast=86w/43e | OK
+13:31:39 INFO codebrain_ft.task_windows: sub-125-a   shift= -3600.00s fit=7/9 | tea=47w/23e, toast=160w/80e | OK
+13:31:39 INFO codebrain_ft.task_windows: sub-125-c   shift= -3600.00s fit=7/7 | tea=50w/25e, toast=119w/59e | OK
+13:31:39 INFO codebrain_ft.task_windows: sub-129-a   shift= -3600.00s fit=7/7 | tea=57w/28e, toast=157w/78e | OK
+13:31:40 INFO codebrain_ft.task_windows: sub-129-c   shift= -3600.00s fit=7/7 | tea=73w/36e, toast=181w/90e | OK
+13:31:40 INFO codebrain_ft.task_windows: sub-131-a   shift= -3600.00s fit=8/10 | tea=42w/21e, toast=161w/80e | OK
+13:31:40 INFO codebrain_ft.task_windows: sub-131-c   shift= -3600.00s fit=8/8 | tea=31w/15e, toast=172w/86e | OK
+13:31:40 INFO codebrain_ft.task_windows: sub-134-a   shift=     0.00s fit=7/10 | tea=59w/29e, toast=131w/66e | OK
+13:31:40 INFO codebrain_ft.task_windows: sub-134-c   shift=     0.00s fit=7/7 | tea=48w/24e, toast=133w/67e | OK
+13:31:40 INFO codebrain_ft.task_windows: sub-135-a   shift= -3600.00s fit=8/8 | tea=60w/30e, toast=174w/86e | OK
+13:31:40 INFO codebrain_ft.task_windows: sub-135-c   shift= -3600.00s fit=8/10 | tea=87w/44e, toast=208w/104e | OK
+13:31:40 INFO codebrain_ft.task_windows: sub-34-a    shift=    -6.00s fit=5/7 | tea=115w/58e, toast=189w/95e | OK
+13:31:40 INFO codebrain_ft.task_windows: sub-34-c    shift= -3574.00s fit=1/6 | tea=0w/0e, toast=0w/0e | OK
+13:31:40 INFO codebrain_ft.task_windows: sub-42-a    shift=     0.00s fit=5/7 | tea=36w/18e, toast=97w/48e | OK
+13:31:41 INFO codebrain_ft.task_windows: sub-42-c    shift= -1584.00s fit=4/7 | tea=47w/23e, toast=0w/0e | OK
+13:31:41 INFO codebrain_ft.task_windows: sub-48-a    shift=   730.00s fit=4/7 | tea=74w/37e, toast=0w/0e | OK
+13:31:41 INFO codebrain_ft.task_windows: sub-48-c    shift=  1916.00s fit=4/5 | tea=80w/40e, toast=0w/0e | OK
+13:31:41 INFO codebrain_ft.task_windows: sub-51-a    shift=  -912.00s fit=6/6 | tea=55w/27e, toast=116w/58e | OK
+13:31:41 INFO codebrain_ft.task_windows: sub-51-c    shift=     0.00s fit=5/5 | tea=53w/27e, toast=85w/42e | OK
+13:31:41 INFO codebrain_ft.task_windows: sub-53-a    shift=     0.00s fit=5/7 | tea=62w/31e, toast=91w/45e | OK
+13:31:41 INFO codebrain_ft.task_windows: sub-53-c    shift=     0.00s fit=4/4 | tea=69w/35e, toast=69w/35e | PROBLEMS: TASK SPANS OVERLAP by 354.7s (tea vs toast) — the annotation CSV logs these as the same/overlapping interval, so a 'task split' here would train and test on the same windows
+13:31:41 INFO codebrain_ft.task_windows: sub-62-a    shift= -3600.00s fit=5/7 | tea=67w/34e, toast=98w/49e | OK
+13:31:41 INFO codebrain_ft.task_windows: sub-62-c    shift= -3600.00s fit=5/5 | tea=43w/21e, toast=71w/35e | OK
+13:31:41 INFO codebrain_ft.task_windows: sub-69-a    shift= -4360.00s fit=6/7 | tea=104w/52e, toast=0w/0e | OK
+13:31:41 INFO codebrain_ft.task_windows: sub-69-c    shift= -3600.00s fit=5/5 | tea=56w/28e, toast=134w/67e | OK
+13:31:41 INFO codebrain_ft.task_windows: sub-70-a    shift= -5706.00s fit=7/7 | tea=61w/31e, toast=84w/42e | OK
+13:31:42 INFO codebrain_ft.task_windows: sub-70-c    shift= -3730.00s fit=5/7 | tea=60w/30e, toast=79w/40e | OK
+13:31:42 INFO codebrain_ft.task_windows: sub-71-a    shift= -3600.00s fit=5/7 | tea=60w/30e, toast=127w/63e | OK
+13:31:42 INFO codebrain_ft.task_windows: sub-71-c    shift= -3600.00s fit=4/4 | tea=60w/30e, toast=116w/58e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived alignment recovers 4 tasks, fewer than the cohort audit's 5 — this is a real regression, not a legitimate tie-break choice (which never recovers fewer tasks); the raw CSV selected here may not be the one the audit measured (sub-71-c_raw.csv)
+13:31:42 INFO codebrain_ft.task_windows: sub-72-a    shift= -3600.00s fit=5/7 | tea=55w/27e, toast=98w/49e | OK
+13:31:42 INFO codebrain_ft.task_windows: sub-72-c    shift= -3600.00s fit=5/5 | tea=39w/20e, toast=97w/49e | OK
+13:31:42 INFO codebrain_ft.task_windows: sub-73-a    shift= -3600.00s fit=5/7 | tea=61w/30e, toast=128w/64e | OK
+13:31:42 INFO codebrain_ft.task_windows: sub-73-c    shift= -4576.00s fit=5/6 | tea=53w/27e, toast=0w/0e | PROBLEMS: ALIGNMENT CROSS-CHECK FAILED: re-derived alignment recovers 5 tasks, fewer than the cohort audit's 6 — this is a real regression, not a legitimate tie-break choice (which never recovers fewer tasks); the raw CSV selected here may not be the one the audit measured (sub-73-c_raw.csv)
+13:31:42 INFO codebrain_ft.task_windows: sub-76-a    shift= -3600.00s fit=5/7 | tea=82w/41e, toast=143w/72e | OK
+13:31:42 INFO codebrain_ft.task_windows: sub-76-c    shift= -3600.00s fit=5/5 | tea=59w/30e, toast=139w/70e | OK
+13:31:42 INFO codebrain_ft.task_windows: sub-77-a    shift= -3600.00s fit=5/7 | tea=63w/31e, toast=143w/72e | OK
+13:31:42 INFO codebrain_ft.task_windows: sub-77-c    shift= -3600.00s fit=5/5 | tea=51w/26e, toast=137w/68e | OK
+13:31:43 INFO codebrain_ft.task_windows: sub-81-a    shift=     0.00s fit=7/9 | tea=71w/35e, toast=146w/73e | OK
+13:31:43 INFO codebrain_ft.task_windows: sub-81-c    shift=     0.00s fit=7/7 | tea=52w/26e, toast=133w/67e | OK
+13:31:43 INFO codebrain_ft.task_windows: sub-84-a    shift=     0.00s fit=7/9 | tea=50w/25e, toast=141w/71e | OK
+13:31:43 INFO codebrain_ft.task_windows: sub-84-c    shift=     0.00s fit=7/7 | tea=56w/28e, toast=128w/64e | OK
+13:31:43 INFO codebrain_ft.task_windows: sub-90-a    shift=   928.00s fit=6/9 | tea=50w/25e, toast=51w/26e | OK
+13:31:43 INFO codebrain_ft.task_windows: sub-90-c    shift=     0.00s fit=7/7 | tea=43w/21e, toast=92w/46e | OK
+13:31:43 INFO codebrain_ft.task_windows: sub-92-a    shift=     0.00s fit=7/9 | tea=45w/23e, toast=94w/48e | OK
+13:31:43 INFO codebrain_ft.task_windows: sub-92-c    shift=     0.00s fit=7/7 | tea=48w/24e, toast=77w/38e | OK
+13:31:43 INFO codebrain_ft.task_windows: sub-93-a    shift=     0.00s fit=7/9 | tea=18w/9e, toast=85w/43e | OK
+13:31:43 INFO codebrain_ft.task_windows: sub-93-c    shift=     0.00s fit=6/6 | tea=0w/0e, toast=0w/0e | OK
+13:31:44 INFO codebrain_ft.task_windows: sub-94-a    shift=     0.00s fit=7/9 | tea=42w/21e, toast=119w/60e | OK
+13:31:44 INFO codebrain_ft.task_windows: sub-94-c    shift=     0.00s fit=7/7 | tea=36w/18e, toast=75w/37e | OK
+13:31:44 INFO codebrain_ft.task_windows: sub-96-a    shift=     0.00s fit=7/9 | tea=53w/26e, toast=60w/30e | OK
+13:31:44 INFO codebrain_ft.task_windows: sub-96-c    shift=     0.00s fit=7/7 | tea=58w/29e, toast=59w/30e | OK
+13:31:44 INFO derive_task_windows: Wrote sidecar (11744 labelled windows) -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\codebrain_finetune\results\within_patient_tasksplit\task_windows.parquet
+13:31:44 INFO derive_task_windows: Wrote pre-flight report -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\codebrain_finetune\logs\tasksplit_preflight.md
+13:31:44 INFO derive_task_windows: ==========================================================================
+13:31:44 INFO derive_task_windows: PRE-FLIGHT: 25 / 35 patients eligible
+13:31:44 INFO derive_task_windows:   INELIGIBLE sub-103   | A: ALIGNMENT CROSS-CHECK FAILED: re-derived alignment recovers 6 tasks, fewer than the cohort audit's 7 — this is a real regression, not a legitimate tie-break choice (which never recovers fewer tasks); the raw CSV selected here may not be the one the audit measured (sub-103-a_raw.csv)
+13:31:44 INFO derive_task_windows:   INELIGIBLE sub-117   | task group 'tea' has NO recoverable eval windows in session(s) C — task type would be confounded with ON/OFF ; task group 'toast' has NO recoverable eval windows in session(s) C — task type would be confounded with ON/OFF
+13:31:44 INFO derive_task_windows:   INELIGIBLE sub-34    | task group 'tea' has NO recoverable eval windows in session(s) C — task type would be confounded with ON/OFF ; task group 'toast' has NO recoverable eval windows in session(s) C — task type would be confounded with ON/OFF
+13:31:44 INFO derive_task_windows:   INELIGIBLE sub-42    | task group 'toast' has NO recoverable eval windows in session(s) C — task type would be confounded with ON/OFF
+13:31:44 INFO derive_task_windows:   INELIGIBLE sub-48    | task group 'toast' has NO recoverable eval windows in session(s) A/C — task type would be confounded with ON/OFF
+13:31:44 INFO derive_task_windows:   INELIGIBLE sub-53    | C: TASK SPANS OVERLAP by 354.7s (tea vs toast) — the annotation CSV logs these as the same/overlapping interval, so a 'task split' here would train and test on the same windows
+13:31:44 INFO derive_task_windows:   INELIGIBLE sub-69    | task group 'toast' has NO recoverable eval windows in session(s) A — task type would be confounded with ON/OFF
+13:31:44 INFO derive_task_windows:   INELIGIBLE sub-71    | C: ALIGNMENT CROSS-CHECK FAILED: re-derived alignment recovers 4 tasks, fewer than the cohort audit's 5 — this is a real regression, not a legitimate tie-break choice (which never recovers fewer tasks); the raw CSV selected here may not be the one the audit measured (sub-71-c_raw.csv)
+13:31:44 INFO derive_task_windows:   INELIGIBLE sub-73    | C: ALIGNMENT CROSS-CHECK FAILED: re-derived alignment recovers 5 tasks, fewer than the cohort audit's 6 — this is a real regression, not a legitimate tie-break choice (which never recovers fewer tasks); the raw CSV selected here may not be the one the audit measured (sub-73-c_raw.csv) ; task group 'toast' has NO recoverable eval windows in session(s) C — task type would be confounded with ON/OFF
+13:31:44 INFO derive_task_windows:   INELIGIBLE sub-93    | task group 'tea' has NO recoverable eval windows in session(s) C — task type would be confounded with ON/OFF ; task group 'toast' has NO recoverable eval windows in session(s) C — task type would be confounded with ON/OFF
+13:31:44 INFO derive_task_windows: ==========================================================================
+13:35:14 INFO livinglab_codebrain.dataset: Manifest validated: 43822 windows, 41 patients, sfreq=200, label map A=0/C=1 consistent.
+13:35:14 WARNING livinglab_codebrain.dataset: Exclusion list names patients absent from the manifest: ['sub-82', 'sub-100', 'sub-111', 'sub-130']
+13:35:14 INFO livinglab_codebrain.dataset: Applying cohort exclusions (loud):
+13:35:14 INFO livinglab_codebrain.dataset:     EXCLUDE sub-80    ->  1109 windows dropped
+13:35:14 INFO livinglab_codebrain.dataset:     EXCLUDE sub-82    ->     0 windows dropped
+13:35:14 INFO livinglab_codebrain.dataset:     EXCLUDE sub-97    ->   700 windows dropped
+13:35:14 INFO livinglab_codebrain.dataset:     EXCLUDE sub-98    ->   910 windows dropped
+13:35:14 INFO livinglab_codebrain.dataset:     EXCLUDE sub-99    ->  1494 windows dropped
+13:35:14 INFO livinglab_codebrain.dataset:     EXCLUDE sub-100   ->     0 windows dropped
+13:35:14 INFO livinglab_codebrain.dataset:     EXCLUDE sub-105   ->   850 windows dropped
+13:35:14 INFO livinglab_codebrain.dataset:     EXCLUDE sub-108   ->  1585 windows dropped
+13:35:14 INFO livinglab_codebrain.dataset:     EXCLUDE sub-111   ->     0 windows dropped
+13:35:14 INFO livinglab_codebrain.dataset:     EXCLUDE sub-130   ->     0 windows dropped
+13:35:14 INFO livinglab_codebrain.dataset: Cohort after exclusions: 35 patients (was 41), 37174 windows (was 43822).
+13:35:14 INFO derive_task_windows: Cohort: 35 patients, 37174 windows, balance={'A': 20122, 'C': 17052}
+13:35:14 INFO derive_task_windows: Manifest task_id values: ['continuous']
+13:35:14 INFO codebrain_ft.task_windows: Discovering raw-signal CSVs for 35 cohort patients (production discovery, incl. MANUAL_FILE_OVERRIDES)...
+13:35:14 INFO codebrain_ft.task_windows: sub-103-a   shift= -3600.00s fit=6/8 | tea=119w/60e, toast=298w/149e | OK
+13:35:14 INFO codebrain_ft.task_windows: sub-103-c   shift= -3600.00s fit=7/7 | tea=117w/59e, toast=300w/150e | OK
+13:35:14 INFO codebrain_ft.task_windows: sub-106-a   shift= -3600.00s fit=7/9 | tea=54w/27e, toast=119w/59e | OK
+13:35:15 INFO codebrain_ft.task_windows: sub-106-c   shift= -3600.00s fit=7/7 | tea=43w/21e, toast=83w/41e | OK
+13:35:15 INFO codebrain_ft.task_windows: sub-107-a   shift= -3600.00s fit=7/9 | tea=54w/27e, toast=126w/63e | OK
+13:35:15 INFO codebrain_ft.task_windows: sub-107-c   shift= -3600.00s fit=6/7 | tea=44w/22e, toast=66w/33e | OK
+13:35:15 INFO codebrain_ft.task_windows: sub-114-a   shift=     0.00s fit=7/7 | tea=60w/30e, toast=147w/73e | OK
+13:35:15 INFO codebrain_ft.task_windows: sub-114-c   shift= -2056.00s fit=9/9 | tea=54w/27e, toast=153w/76e | OK
+13:35:15 INFO codebrain_ft.task_windows: sub-115-a   shift=     0.00s fit=6/9 | tea=47w/23e, toast=87w/44e | OK
+13:35:15 INFO codebrain_ft.task_windows: sub-115-c   shift=     0.00s fit=7/7 | tea=43w/22e, toast=141w/70e | OK
+13:35:15 INFO codebrain_ft.task_windows: sub-116-a   shift=     0.00s fit=7/7 | tea=68w/34e, toast=144w/72e | OK
+13:35:15 INFO codebrain_ft.task_windows: sub-116-c   shift=     0.00s fit=6/6 | tea=53w/26e, toast=94w/47e | OK
+13:35:16 INFO codebrain_ft.task_windows: sub-117-a   shift=     0.00s fit=7/9 | tea=60w/30e, toast=153w/77e | OK
+13:35:16 INFO codebrain_ft.task_windows: sub-117-c   shift=  -198.00s fit=3/3 | tea=0w/0e, toast=0w/0e | OK
+13:35:16 INFO codebrain_ft.task_windows: sub-119-a   shift=     0.00s fit=7/7 | tea=52w/26e, toast=153w/76e | OK
+13:35:16 INFO codebrain_ft.task_windows: sub-119-c   shift=     0.00s fit=7/7 | tea=98w/49e, toast=159w/80e | OK
+13:35:16 INFO codebrain_ft.task_windows: sub-121-a   shift=   724.00s fit=7/9 | tea=55w/28e, toast=60w/30e | OK
+13:35:16 INFO codebrain_ft.task_windows: sub-121-c   shift=     0.00s fit=7/7 | tea=103w/52e, toast=124w/63e | OK
+13:35:16 INFO codebrain_ft.task_windows: sub-123-a   shift=     0.00s fit=7/7 | tea=73w/36e, toast=162w/81e | OK
+13:35:16 INFO codebrain_ft.task_windows: sub-123-c   shift=     0.00s fit=7/7 | tea=54w/27e, toast=86w/43e | OK
+13:35:16 INFO codebrain_ft.task_windows: sub-125-a   shift= -3600.00s fit=7/9 | tea=47w/23e, toast=160w/80e | OK
+13:35:16 INFO codebrain_ft.task_windows: sub-125-c   shift= -3600.00s fit=7/7 | tea=50w/25e, toast=119w/59e | OK
+13:35:16 INFO codebrain_ft.task_windows: sub-129-a   shift= -3600.00s fit=7/7 | tea=57w/28e, toast=157w/78e | OK
+13:35:17 INFO codebrain_ft.task_windows: sub-129-c   shift= -3600.00s fit=7/7 | tea=73w/36e, toast=181w/90e | OK
+13:35:17 INFO codebrain_ft.task_windows: sub-131-a   shift= -3600.00s fit=8/10 | tea=42w/21e, toast=161w/80e | OK
+13:35:17 INFO codebrain_ft.task_windows: sub-131-c   shift= -3600.00s fit=8/8 | tea=31w/15e, toast=172w/86e | OK
+13:35:17 INFO codebrain_ft.task_windows: sub-134-a   shift=     0.00s fit=7/10 | tea=59w/29e, toast=131w/66e | OK
+13:35:17 INFO codebrain_ft.task_windows: sub-134-c   shift=     0.00s fit=7/7 | tea=48w/24e, toast=133w/67e | OK
+13:35:17 INFO codebrain_ft.task_windows: sub-135-a   shift= -3600.00s fit=8/8 | tea=60w/30e, toast=174w/86e | OK
+13:35:17 INFO codebrain_ft.task_windows: sub-135-c   shift= -3600.00s fit=8/10 | tea=87w/44e, toast=208w/104e | OK
+13:35:17 INFO codebrain_ft.task_windows: sub-34-a    shift=    -6.00s fit=5/7 | tea=115w/58e, toast=189w/95e | OK
+13:35:17 INFO codebrain_ft.task_windows: sub-34-c    shift= -3574.00s fit=1/6 | tea=0w/0e, toast=0w/0e | OK
+13:35:17 INFO codebrain_ft.task_windows: sub-42-a    shift=     0.00s fit=5/7 | tea=36w/18e, toast=97w/48e | OK
+13:35:18 INFO codebrain_ft.task_windows: sub-42-c    shift= -1584.00s fit=4/7 | tea=47w/23e, toast=0w/0e | OK
+13:35:18 INFO codebrain_ft.task_windows: sub-48-a    shift=   730.00s fit=4/7 | tea=74w/37e, toast=0w/0e | OK
+13:35:18 INFO codebrain_ft.task_windows: sub-48-c    shift=  1916.00s fit=4/5 | tea=80w/40e, toast=0w/0e | OK
+13:35:18 INFO codebrain_ft.task_windows: sub-51-a    shift=  -912.00s fit=6/6 | tea=55w/27e, toast=116w/58e | OK
+13:35:18 INFO codebrain_ft.task_windows: sub-51-c    shift=     0.00s fit=5/5 | tea=53w/27e, toast=85w/42e | OK
+13:35:18 INFO codebrain_ft.task_windows: sub-53-a    shift=     0.00s fit=5/7 | tea=62w/31e, toast=91w/45e | OK
+13:35:18 INFO codebrain_ft.task_windows: sub-53-c    shift=     0.00s fit=4/4 | tea=69w/35e, toast=69w/35e | PROBLEMS: TASK SPANS OVERLAP by 354.7s (tea vs toast) — the annotation CSV logs these as the same/overlapping interval, so a 'task split' here would train and test on the same windows
+13:35:18 INFO codebrain_ft.task_windows: sub-62-a    shift= -3600.00s fit=5/7 | tea=67w/34e, toast=98w/49e | OK
+13:35:18 INFO codebrain_ft.task_windows: sub-62-c    shift= -3600.00s fit=5/5 | tea=43w/21e, toast=71w/35e | OK
+13:35:18 INFO codebrain_ft.task_windows: sub-69-a    shift= -4360.00s fit=6/7 | tea=104w/52e, toast=0w/0e | OK
+13:35:18 INFO codebrain_ft.task_windows: sub-69-c    shift= -3600.00s fit=5/5 | tea=56w/28e, toast=134w/67e | OK
+13:35:18 INFO codebrain_ft.task_windows: sub-70-a    shift= -5706.00s fit=7/7 | tea=61w/31e, toast=84w/42e | OK
+13:35:19 INFO codebrain_ft.task_windows: sub-70-c    shift= -3730.00s fit=5/7 | tea=60w/30e, toast=79w/40e | OK
+13:35:19 INFO codebrain_ft.task_windows: sub-71-a    shift= -3600.00s fit=5/7 | tea=60w/30e, toast=127w/63e | OK
+13:35:19 INFO codebrain_ft.task_windows: sub-71-c    shift= -3600.00s fit=4/4 | tea=60w/30e, toast=116w/58e | OK
+13:35:19 INFO codebrain_ft.task_windows: sub-72-a    shift= -3600.00s fit=5/7 | tea=55w/27e, toast=98w/49e | OK
+13:35:19 INFO codebrain_ft.task_windows: sub-72-c    shift= -3600.00s fit=5/5 | tea=39w/20e, toast=97w/49e | OK
+13:35:19 INFO codebrain_ft.task_windows: sub-73-a    shift= -3600.00s fit=5/7 | tea=61w/30e, toast=128w/64e | OK
+13:35:19 INFO codebrain_ft.task_windows: sub-73-c    shift= -4576.00s fit=5/6 | tea=53w/27e, toast=0w/0e | OK
+13:35:19 INFO codebrain_ft.task_windows: sub-76-a    shift= -3600.00s fit=5/7 | tea=82w/41e, toast=143w/72e | OK
+13:35:19 INFO codebrain_ft.task_windows: sub-76-c    shift= -3600.00s fit=5/5 | tea=59w/30e, toast=139w/70e | OK
+13:35:19 INFO codebrain_ft.task_windows: sub-77-a    shift= -3600.00s fit=5/7 | tea=63w/31e, toast=143w/72e | OK
+13:35:19 INFO codebrain_ft.task_windows: sub-77-c    shift= -3600.00s fit=5/5 | tea=51w/26e, toast=137w/68e | OK
+13:35:20 INFO codebrain_ft.task_windows: sub-81-a    shift=     0.00s fit=7/9 | tea=71w/35e, toast=146w/73e | OK
+13:35:20 INFO codebrain_ft.task_windows: sub-81-c    shift=     0.00s fit=7/7 | tea=52w/26e, toast=133w/67e | OK
+13:35:20 INFO codebrain_ft.task_windows: sub-84-a    shift=     0.00s fit=7/9 | tea=50w/25e, toast=141w/71e | OK
+13:35:20 INFO codebrain_ft.task_windows: sub-84-c    shift=     0.00s fit=7/7 | tea=56w/28e, toast=128w/64e | OK
+13:35:20 INFO codebrain_ft.task_windows: sub-90-a    shift=   928.00s fit=6/9 | tea=50w/25e, toast=51w/26e | OK
+13:35:20 INFO codebrain_ft.task_windows: sub-90-c    shift=     0.00s fit=7/7 | tea=43w/21e, toast=92w/46e | OK
+13:35:20 INFO codebrain_ft.task_windows: sub-92-a    shift=     0.00s fit=7/9 | tea=45w/23e, toast=94w/48e | OK
+13:35:20 INFO codebrain_ft.task_windows: sub-92-c    shift=     0.00s fit=7/7 | tea=48w/24e, toast=77w/38e | OK
+13:35:20 INFO codebrain_ft.task_windows: sub-93-a    shift=     0.00s fit=7/9 | tea=18w/9e, toast=85w/43e | OK
+13:35:20 INFO codebrain_ft.task_windows: sub-93-c    shift=     0.00s fit=6/6 | tea=0w/0e, toast=0w/0e | OK
+13:35:21 INFO codebrain_ft.task_windows: sub-94-a    shift=     0.00s fit=7/9 | tea=42w/21e, toast=119w/60e | OK
+13:35:21 INFO codebrain_ft.task_windows: sub-94-c    shift=     0.00s fit=7/7 | tea=36w/18e, toast=75w/37e | OK
+13:35:21 INFO codebrain_ft.task_windows: sub-96-a    shift=     0.00s fit=7/9 | tea=53w/26e, toast=60w/30e | OK
+13:35:21 INFO codebrain_ft.task_windows: sub-96-c    shift=     0.00s fit=7/7 | tea=58w/29e, toast=59w/30e | OK
+13:35:21 INFO derive_task_windows: Wrote sidecar (11744 labelled windows) -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\codebrain_finetune\results\within_patient_tasksplit\task_windows.parquet
+13:35:21 INFO derive_task_windows: Wrote pre-flight report -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\codebrain_finetune\logs\tasksplit_preflight.md
+13:35:21 INFO derive_task_windows: ==========================================================================
+13:35:21 INFO derive_task_windows: PRE-FLIGHT: 27 / 35 patients eligible
+13:35:21 INFO derive_task_windows:   INELIGIBLE sub-117   | task group 'tea' has NO recoverable eval windows in session(s) C — task type would be confounded with ON/OFF ; task group 'toast' has NO recoverable eval windows in session(s) C — task type would be confounded with ON/OFF
+13:35:21 INFO derive_task_windows:   INELIGIBLE sub-34    | task group 'tea' has NO recoverable eval windows in session(s) C — task type would be confounded with ON/OFF ; task group 'toast' has NO recoverable eval windows in session(s) C — task type would be confounded with ON/OFF
+13:35:21 INFO derive_task_windows:   INELIGIBLE sub-42    | task group 'toast' has NO recoverable eval windows in session(s) C — task type would be confounded with ON/OFF
+13:35:21 INFO derive_task_windows:   INELIGIBLE sub-48    | task group 'toast' has NO recoverable eval windows in session(s) A/C — task type would be confounded with ON/OFF
+13:35:21 INFO derive_task_windows:   INELIGIBLE sub-53    | C: TASK SPANS OVERLAP by 354.7s (tea vs toast) — the annotation CSV logs these as the same/overlapping interval, so a 'task split' here would train and test on the same windows
+13:35:21 INFO derive_task_windows:   INELIGIBLE sub-69    | task group 'toast' has NO recoverable eval windows in session(s) A — task type would be confounded with ON/OFF
+13:35:21 INFO derive_task_windows:   INELIGIBLE sub-73    | task group 'toast' has NO recoverable eval windows in session(s) C — task type would be confounded with ON/OFF
+13:35:21 INFO derive_task_windows:   INELIGIBLE sub-93    | task group 'tea' has NO recoverable eval windows in session(s) C — task type would be confounded with ON/OFF ; task group 'toast' has NO recoverable eval windows in session(s) C — task type would be confounded with ON/OFF
+13:35:21 INFO derive_task_windows: ==========================================================================

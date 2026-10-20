@@ -1,0 +1,5398 @@
+{
+  "n_cohort_patients": 35,
+  "n_eligible_patients": 20,
+  "eligible_patients": [
+    "sub-107",
+    "sub-114",
+    "sub-115",
+    "sub-116",
+    "sub-119",
+    "sub-121",
+    "sub-123",
+    "sub-125",
+    "sub-129",
+    "sub-131",
+    "sub-134",
+    "sub-135",
+    "sub-51",
+    "sub-71",
+    "sub-77",
+    "sub-81",
+    "sub-90",
+    "sub-92",
+    "sub-94",
+    "sub-96"
+  ],
+  "ineligible": {
+    "sub-103": [
+      "task group 'toast' has NO recoverable eval windows in session(s) A \u2014 task type would be confounded with ON/OFF"
+    ],
+    "sub-106": [
+      "task group 'toast' has NO recoverable eval windows in session(s) A \u2014 task type would be confounded with ON/OFF"
+    ],
+    "sub-117": [
+      "task group 'tea' has NO recoverable eval windows in session(s) C \u2014 task type would be confounded with ON/OFF",
+      "task group 'toast' has NO recoverable eval windows in session(s) C \u2014 task type would be confounded with ON/OFF"
+    ],
+    "sub-34": [
+      "task group 'tea' has NO recoverable eval windows in session(s) A/C \u2014 task type would be confounded with ON/OFF",
+      "task group 'toast' has NO recoverable eval windows in session(s) A/C \u2014 task type would be confounded with ON/OFF"
+    ],
+    "sub-42": [
+      "task group 'toast' has NO recoverable eval windows in session(s) C \u2014 task type would be confounded with ON/OFF"
+    ],
+    "sub-48": [
+      "task group 'toast' has NO recoverable eval windows in session(s) A/C \u2014 task type would be confounded with ON/OFF"
+    ],
+    "sub-53": [
+      "C: TASK SPANS OVERLAP by 350.1s (tea vs toast) \u2014 the annotation CSV logs these as the same/overlapping interval, so a 'task split' here would train and test on the same windows"
+    ],
+    "sub-62": [
+      "task group 'tea' has NO recoverable eval windows in session(s) A \u2014 task type would be confounded with ON/OFF",
+      "task group 'toast' has NO recoverable eval windows in session(s) A \u2014 task type would be confounded with ON/OFF"
+    ],
+    "sub-69": [
+      "task group 'toast' has NO recoverable eval windows in session(s) A \u2014 task type would be confounded with ON/OFF"
+    ],
+    "sub-70": [
+      "task group 'tea' has NO recoverable eval windows in session(s) C \u2014 task type would be confounded with ON/OFF",
+      "task group 'toast' has NO recoverable eval windows in session(s) C \u2014 task type would be confounded with ON/OFF"
+    ],
+    "sub-72": [
+      "task group 'tea' has NO recoverable eval windows in session(s) A \u2014 task type would be confounded with ON/OFF",
+      "task group 'toast' has NO recoverable eval windows in session(s) A \u2014 task type would be confounded with ON/OFF"
+    ],
+    "sub-73": [
+      "task group 'toast' has NO recoverable eval windows in session(s) C \u2014 task type would be confounded with ON/OFF"
+    ],
+    "sub-76": [
+      "task group 'tea' has NO recoverable eval windows in session(s) A \u2014 task type would be confounded with ON/OFF",
+      "task group 'toast' has NO recoverable eval windows in session(s) A \u2014 task type would be confounded with ON/OFF"
+    ],
+    "sub-84": [
+      "task group 'toast' has NO recoverable eval windows in session(s) A \u2014 task type would be confounded with ON/OFF"
+    ],
+    "sub-93": [
+      "task group 'tea' has NO recoverable eval windows in session(s) C \u2014 task type would be confounded with ON/OFF",
+      "task group 'toast' has NO recoverable eval windows in session(s) A/C \u2014 task type would be confounded with ON/OFF"
+    ]
+  },
+  "n_labelled_windows": 10016,
+  "sessions": [
+    {
+      "session": "sub-103-a",
+      "shift_s": -5504.0,
+      "raw_duration_s": 4102.1095,
+      "window_extent_s": 4100.0,
+      "fitting_tasks": [
+        "Suspine Measure",
+        "Standing Still",
+        "Sit to Stand",
+        "Balance",
+        "4m Walk",
+        "Kettel Task"
+      ],
+      "non_fitting_tasks": [
+        "Toast Task1",
+        "Toast Task2"
+      ],
+      "group_window_counts": {
+        "tea": 118,
+        "toast": 0
+      },
+      "group_eval_window_counts": {
+        "tea": 59,
+        "toast": 0
+      },
+      "group_spans": {
+        "tea": [
+          [
+            3500.362098,
+            4100.0
+          ]
+        ],
+        "toast": []
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -5504.0,
+        "audit_raw_duration_s": 4102.1095,
+        "audit_fit_count": 7
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-103-a\\eeg\\living-lab-tasks\\sub-103-a_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-103-a\\annotation\\sub-103-a_annot.csv"
+    },
+    {
+      "session": "sub-103-c",
+      "shift_s": -3636.0,
+      "raw_duration_s": 3058.025,
+      "window_extent_s": 3055.0,
+      "fitting_tasks": [
+        "Balance",
+        "4m Walk",
+        "Sit to Stand",
+        "Sit on Bed",
+        "Kettel Task",
+        "Toast Task1",
+        "Toast Task2"
+      ],
+      "non_fitting_tasks": [],
+      "group_window_counts": {
+        "tea": 117,
+        "toast": 299
+      },
+      "group_eval_window_counts": {
+        "tea": 58,
+        "toast": 149
+      },
+      "group_spans": {
+        "tea": [
+          [
+            601.563548,
+            1196.093707
+          ]
+        ],
+        "toast": [
+          [
+            1443.412733,
+            2207.905736
+          ],
+          [
+            2308.029213,
+            3055.0
+          ]
+        ]
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -3636.0,
+        "audit_raw_duration_s": 3058.025,
+        "audit_fit_count": 7
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-103-c\\eeg\\living-lab-tasks\\sub-103-c_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-103-c\\annotation\\sub-103-c_annot.csv"
+    },
+    {
+      "session": "sub-106-a",
+      "shift_s": -5162.0,
+      "raw_duration_s": 3194.5017000000003,
+      "window_extent_s": 3190.0,
+      "fitting_tasks": [
+        "Suspine Measure",
+        "Standing Still",
+        "Balance",
+        "4m Walk",
+        "Sit to Stand",
+        "Sit on Bed",
+        "Kettel Task"
+      ],
+      "non_fitting_tasks": [
+        "Toast Task1",
+        "Toast Task2"
+      ],
+      "group_window_counts": {
+        "tea": 52,
+        "toast": 0
+      },
+      "group_eval_window_counts": {
+        "tea": 26,
+        "toast": 0
+      },
+      "group_spans": {
+        "tea": [
+          [
+            2920.7636,
+            3190.0
+          ]
+        ],
+        "toast": []
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -5162.0,
+        "audit_raw_duration_s": 3194.5017000000003,
+        "audit_fit_count": 7
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-106-a\\eeg\\living-lab-tasks\\sub-106-a_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-106-a\\annotation\\sub-106-a_24_05_2024.csv"
+    },
+    {
+      "session": "sub-106-c",
+      "shift_s": -3608.0,
+      "raw_duration_s": 1923.0666999999999,
+      "window_extent_s": 1920.0,
+      "fitting_tasks": [
+        "Balance",
+        "4m Walk",
+        "Sit to Stand",
+        "Sit on Bed",
+        "Kettel Task",
+        "Toast Task1",
+        "Toast Task2"
+      ],
+      "non_fitting_tasks": [],
+      "group_window_counts": {
+        "tea": 43,
+        "toast": 82
+      },
+      "group_eval_window_counts": {
+        "tea": 22,
+        "toast": 41
+      },
+      "group_spans": {
+        "tea": [
+          [
+            1028.574665,
+            1254.728645
+          ]
+        ],
+        "toast": [
+          [
+            1300.045592,
+            1535.583544
+          ],
+          [
+            1726.019627,
+            1920.0
+          ]
+        ]
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -3608.0,
+        "audit_raw_duration_s": 1923.0666999999999,
+        "audit_fit_count": 7
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-106-c\\eeg\\living-lab-tasks\\sub-106-c_0001_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-106-c\\annotation\\sub-106-c_24_05_2024.csv"
+    },
+    {
+      "session": "sub-107-a",
+      "shift_s": -3664.0,
+      "raw_duration_s": 2920.7017,
+      "window_extent_s": 2920.0,
+      "fitting_tasks": [
+        "Balance",
+        "4m Walk",
+        "Sit to Stand",
+        "Sit on Bed",
+        "Kettel Task",
+        "Toast Task1",
+        "Toast Task2"
+      ],
+      "non_fitting_tasks": [
+        "Suspine Measure",
+        "Standing Still"
+      ],
+      "group_window_counts": {
+        "tea": 54,
+        "toast": 127
+      },
+      "group_eval_window_counts": {
+        "tea": 27,
+        "toast": 64
+      },
+      "group_spans": {
+        "tea": [
+          [
+            1606.274547,
+            1888.550043
+          ]
+        ],
+        "toast": [
+          [
+            2159.623444,
+            2492.526272
+          ],
+          [
+            2603.51842,
+            2920.0
+          ]
+        ]
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -3664.0,
+        "audit_raw_duration_s": 2920.7017,
+        "audit_fit_count": 7
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-107-a\\eeg\\living-lab-tasks\\sub-107-a_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-107-a\\annotation\\sub-107-a_14_06_2024.csv"
+    },
+    {
+      "session": "sub-107-c",
+      "shift_s": -3728.0,
+      "raw_duration_s": 1637.7039,
+      "window_extent_s": 1635.0,
+      "fitting_tasks": [
+        "Balance",
+        "4m Walk",
+        "Sit to Stand",
+        "Sit on Bed",
+        "Kettel Task",
+        "Toast Task1"
+      ],
+      "non_fitting_tasks": [
+        "Toast Task2"
+      ],
+      "group_window_counts": {
+        "tea": 44,
+        "toast": 66
+      },
+      "group_eval_window_counts": {
+        "tea": 22,
+        "toast": 33
+      },
+      "group_spans": {
+        "tea": [
+          [
+            714.876703,
+            943.051968
+          ]
+        ],
+        "toast": [
+          [
+            1298.611842,
+            1635.0
+          ]
+        ]
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -3728.0,
+        "audit_raw_duration_s": 1637.7039,
+        "audit_fit_count": 6
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-107-c\\eeg\\living-lab-tasks\\sub-107-c_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-107-c\\annotation\\sub-107-c_annot.csv"
+    },
+    {
+      "session": "sub-114-a",
+      "shift_s": -192.0,
+      "raw_duration_s": 3297.4611,
+      "window_extent_s": 3295.0,
+      "fitting_tasks": [
+        "Balance",
+        "4m Walk",
+        "Sit to Stand",
+        "Sit on Bed",
+        "Kettel Task",
+        "Toast Task1",
+        "Toast Task2"
+      ],
+      "non_fitting_tasks": [],
+      "group_window_counts": {
+        "tea": 61,
+        "toast": 147
+      },
+      "group_eval_window_counts": {
+        "tea": 30,
+        "toast": 73
+      },
+      "group_spans": {
+        "tea": [
+          [
+            2104.448966,
+            2415.193565
+          ]
+        ],
+        "toast": [
+          [
+            2543.84953,
+            2933.210104
+          ],
+          [
+            2934.410132,
+            3295.0
+          ]
+        ]
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -192.0,
+        "audit_raw_duration_s": 3297.4611,
+        "audit_fit_count": 7
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-114-a\\eeg\\living-lab-tasks\\sub-114-a_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-114-a\\annotation\\sub-114-a_29_11_2024.csv"
+    },
+    {
+      "session": "sub-114-c",
+      "shift_s": -2056.0,
+      "raw_duration_s": 5712.4067,
+      "window_extent_s": 5710.0,
+      "fitting_tasks": [
+        "Suspine Measure",
+        "Standing Still",
+        "Balance",
+        "4m Walk",
+        "Sit to Stand",
+        "Sit on Bed",
+        "Kettel Task",
+        "Toast Task1",
+        "Toast Task2"
+      ],
+      "non_fitting_tasks": [],
+      "group_window_counts": {
+        "tea": 54,
+        "toast": 153
+      },
+      "group_eval_window_counts": {
+        "tea": 27,
+        "toast": 76
+      },
+      "group_spans": {
+        "tea": [
+          [
+            4287.831686,
+            4566.015905
+          ]
+        ],
+        "toast": [
+          [
+            4914.873148,
+            5327.209819
+          ],
+          [
+            5344.768591,
+            5710.0
+          ]
+        ]
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -2056.0,
+        "audit_raw_duration_s": 5712.4067,
+        "audit_fit_count": 9
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-114-c\\eeg\\living-lab-tasks\\sub-114-c_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-114-c\\annotation\\sub-114-c_29_11_2024.csv"
+    },
+    {
+      "session": "sub-115-a",
+      "shift_s": -162.0,
+      "raw_duration_s": 3037.9917,
+      "window_extent_s": 3035.0,
+      "fitting_tasks": [
+        "Balance",
+        "4m Walk",
+        "Sit to Stand",
+        "Sit on Bed",
+        "Kettel Task",
+        "Toast Task1"
+      ],
+      "non_fitting_tasks": [
+        "Suspine Measure",
+        "Standing Still",
+        "Toast Task2"
+      ],
+      "group_window_counts": {
+        "tea": 47,
+        "toast": 85
+      },
+      "group_eval_window_counts": {
+        "tea": 24,
+        "toast": 42
+      },
+      "group_spans": {
+        "tea": [
+          [
+            2105.285611,
+            2350.934444
+          ]
+        ],
+        "toast": [
+          [
+            2601.376324,
+            3035.0
+          ]
+        ]
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -162.0,
+        "audit_raw_duration_s": 3037.9884,
+        "audit_fit_count": 6
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-115-a\\eeg\\living-lab-tasks\\sub-115-a_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-115-a\\annotation\\sub-115-a_02_12_2024.csv"
+    },
+    {
+      "session": "sub-115-c",
+      "shift_s": -16.0,
+      "raw_duration_s": 2201.9195,
+      "window_extent_s": 2200.0,
+      "fitting_tasks": [
+        "Balance",
+        "4m Walk",
+        "Sit to Stand",
+        "Sit on Bed",
+        "Kettel Task",
+        "Toast Task1",
+        "Toast Task2"
+      ],
+      "non_fitting_tasks": [],
+      "group_window_counts": {
+        "tea": 43,
+        "toast": 141
+      },
+      "group_eval_window_counts": {
+        "tea": 22,
+        "toast": 71
+      },
+      "group_spans": {
+        "tea": [
+          [
+            1125.387875,
+            1350.498511
+          ]
+        ],
+        "toast": [
+          [
+            1448.831525,
+            1855.806929
+          ],
+          [
+            1887.473376,
+            2200.0
+          ]
+        ]
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -16.0,
+        "audit_raw_duration_s": 2201.9195,
+        "audit_fit_count": 7
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-115-c\\eeg\\living-lab-tasks\\sub-115-c_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-115-c\\annotation\\sub-115-c_02_12_2024.csv"
+    },
+    {
+      "session": "sub-116-a",
+      "shift_s": -12.0,
+      "raw_duration_s": 3591.5667000000003,
+      "window_extent_s": 3590.0,
+      "fitting_tasks": [
+        "4m Walk",
+        "Sit on Bed",
+        "Balance",
+        "Sit to Stand",
+        "Kettel Task",
+        "Toast Task1",
+        "Toast Task2"
+      ],
+      "non_fitting_tasks": [],
+      "group_window_counts": {
+        "tea": 68,
+        "toast": 143
+      },
+      "group_eval_window_counts": {
+        "tea": 34,
+        "toast": 72
+      },
+      "group_spans": {
+        "tea": [
+          [
+            2257.727722,
+            2609.590462
+          ]
+        ],
+        "toast": [
+          [
+            2649.898229,
+            3208.17629
+          ],
+          [
+            3416.865616,
+            3590.0
+          ]
+        ]
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -12.0,
+        "audit_raw_duration_s": 3591.5667000000003,
+        "audit_fit_count": 7
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-116-a\\eeg\\living-lab-tasks\\sub-116-a_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-116-a\\annotation\\sub-116-a_03_12_2024.csv"
+    },
+    {
+      "session": "sub-116-c",
+      "shift_s": -26.0,
+      "raw_duration_s": 2574.4456,
+      "window_extent_s": 2570.0,
+      "fitting_tasks": [
+        "4m Walk",
+        "Sit to Stand",
+        "Sit on Bed",
+        "Kettel Task",
+        "Toast Task1",
+        "Toast Task2"
+      ],
+      "non_fitting_tasks": [],
+      "group_window_counts": {
+        "tea": 54,
+        "toast": 92
+      },
+      "group_eval_window_counts": {
+        "tea": 27,
+        "toast": 46
+      },
+      "group_spans": {
+        "tea": [
+          [
+            1746.791488,
+            2025.054981
+          ]
+        ],
+        "toast": [
+          [
+            2090.921835,
+            2321.961921
+          ],
+          [
+            2323.009731,
+            2570.0
+          ]
+        ]
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -26.0,
+        "audit_raw_duration_s": 2574.4456,
+        "audit_fit_count": 6
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-116-c\\eeg\\living-lab-tasks\\sub-116-c_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-116-c\\annotation\\sub-116-c_03_12_2024.csv"
+    },
+    {
+      "session": "sub-117-a",
+      "shift_s": -16.0,
+      "raw_duration_s": 2407.4795000000004,
+      "window_extent_s": 2405.0,
+      "fitting_tasks": [
+        "Balance",
+        "4m Walk",
+        "Sit to Stand",
+        "Sit on Bed",
+        "Kettel Task",
+        "Toast Task1",
+        "Toast Task2"
+      ],
+      "non_fitting_tasks": [
+        "Suspine Measure",
+        "Standing Still"
+      ],
+      "group_window_counts": {
+        "tea": 60,
+        "toast": 151
+      },
+      "group_eval_window_counts": {
+        "tea": 30,
+        "toast": 75
+      },
+      "group_spans": {
+        "tea": [
+          [
+            1188.94936,
+            1498.832714
+          ]
+        ],
+        "toast": [
+          [
+            1625.714785,
+            1958.794731
+          ],
+          [
+            1960.019649,
+            2405.0
+          ]
+        ]
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -16.0,
+        "audit_raw_duration_s": 2407.4795000000004,
+        "audit_fit_count": 7
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-117-a\\eeg\\living-lab-tasks\\sub-117-a_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-117-a\\annotation\\sub-117-a_10_12_2024.csv"
+    },
+    {
+      "session": "sub-117-c",
+      "shift_s": -546.0,
+      "raw_duration_s": 564.3456,
+      "window_extent_s": 560.0,
+      "fitting_tasks": [
+        "Balance",
+        "4m Walk",
+        "Sit to Stand"
+      ],
+      "non_fitting_tasks": [],
+      "group_window_counts": {
+        "tea": 0,
+        "toast": 0
+      },
+      "group_eval_window_counts": {
+        "tea": 0,
+        "toast": 0
+      },
+      "group_spans": {
+        "tea": [],
+        "toast": []
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -546.0,
+        "audit_raw_duration_s": 564.3456,
+        "audit_fit_count": 3
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-117-c\\eeg\\living-lab-tasks\\sub-117-c_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-117-c\\annotation\\sub-117-c_10_12_2024.csv"
+    },
+    {
+      "session": "sub-119-a",
+      "shift_s": -16.0,
+      "raw_duration_s": 2350.6911,
+      "window_extent_s": 2350.0,
+      "fitting_tasks": [
+        "Balance",
+        "4m Walk",
+        "Sit to Stand",
+        "Sit on Bed",
+        "Kettel Task",
+        "Toast Task1",
+        "Toast Task2"
+      ],
+      "non_fitting_tasks": [],
+      "group_window_counts": {
+        "tea": 52,
+        "toast": 154
+      },
+      "group_eval_window_counts": {
+        "tea": 26,
+        "toast": 77
+      },
+      "group_spans": {
+        "tea": [
+          [
+            1263.002687,
+            1533.856437
+          ]
+        ],
+        "toast": [
+          [
+            1562.241441,
+            1955.657653
+          ],
+          [
+            1957.611002,
+            2350.0
+          ]
+        ]
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -16.0,
+        "audit_raw_duration_s": 2350.6911,
+        "audit_fit_count": 7
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-119-a\\eeg\\living-lab-tasks\\sub-119-a_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-119-a\\annotation\\sub-119-a_20_01_2025.csv"
+    },
+    {
+      "session": "sub-119-c",
+      "shift_s": -24.0,
+      "raw_duration_s": 3045.9245,
+      "window_extent_s": 3045.0,
+      "fitting_tasks": [
+        "Balance",
+        "4m Walk",
+        "Sit to Stand",
+        "Sit on Bed",
+        "Kettel Task",
+        "Toast Task1",
+        "Toast Task2"
+      ],
+      "non_fitting_tasks": [],
+      "group_window_counts": {
+        "tea": 97,
+        "toast": 159
+      },
+      "group_eval_window_counts": {
+        "tea": 49,
+        "toast": 79
+      },
+      "group_spans": {
+        "tea": [
+          [
+            1556.0541,
+            2054.981809
+          ]
+        ],
+        "toast": [
+          [
+            2229.197249,
+            2647.813589
+          ],
+          [
+            2651.589605,
+            3045.0
+          ]
+        ]
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -24.0,
+        "audit_raw_duration_s": 3045.9245,
+        "audit_fit_count": 7
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-119-c\\eeg\\living-lab-tasks\\sub-119-c_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-119-c\\annotation\\sub-119-c_20_01_2025.csv"
+    },
+    {
+      "session": "sub-121-a",
+      "shift_s": 724.0,
+      "raw_duration_s": 1678.7539,
+      "window_extent_s": 1505.0,
+      "fitting_tasks": [
+        "Balance",
+        "4m Walk",
+        "Sit to Stand",
+        "Sit on Bed",
+        "Kettel Task",
+        "Toast Task1",
+        "Toast Task2"
+      ],
+      "non_fitting_tasks": [
+        "Suspine Measure",
+        "Standing Still"
+      ],
+      "group_window_counts": {
+        "tea": 55,
+        "toast": 60
+      },
+      "group_eval_window_counts": {
+        "tea": 28,
+        "toast": 30
+      },
+      "group_spans": {
+        "tea": [
+          [
+            887.540348,
+            1174.24518
+          ]
+        ],
+        "toast": [
+          [
+            1199.032429,
+            1505.0
+          ]
+        ]
+      },
+      "crosscheck": {
+        "audit_best_shift_s": 724.0,
+        "audit_raw_duration_s": 1678.7539,
+        "audit_fit_count": 7
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-121-a\\eeg\\living-lab-tasks\\sub-121-a_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-121-a\\annotation\\sub-121-a_21_01_2025.csv"
+    },
+    {
+      "session": "sub-121-c",
+      "shift_s": -710.0,
+      "raw_duration_s": 3656.9039000000002,
+      "window_extent_s": 3655.0,
+      "fitting_tasks": [
+        "Balance",
+        "4m Walk",
+        "Sit to Stand",
+        "Sit on Bed",
+        "Kettel Task",
+        "Toast Task1",
+        "Toast Task2"
+      ],
+      "non_fitting_tasks": [],
+      "group_window_counts": {
+        "tea": 103,
+        "toast": 123
+      },
+      "group_eval_window_counts": {
+        "tea": 52,
+        "toast": 62
+      },
+      "group_spans": {
+        "tea": [
+          [
+            2335.241704,
+            2862.055431
+          ]
+        ],
+        "toast": [
+          [
+            3019.352417,
+            3353.1327
+          ],
+          [
+            3359.844752,
+            3655.0
+          ]
+        ]
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -710.0,
+        "audit_raw_duration_s": 3656.9039000000002,
+        "audit_fit_count": 7
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-121-c\\eeg\\living-lab-tasks\\sub-121-c_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-121-c\\annotation\\sub-121-c_21_01_2025.csv"
+    },
+    {
+      "session": "sub-123-a",
+      "shift_s": -8.0,
+      "raw_duration_s": 2581.8189,
+      "window_extent_s": 2580.0,
+      "fitting_tasks": [
+        "Balance",
+        "4m Walk",
+        "Sit to Stand",
+        "Sit on Bed",
+        "Kettel Task",
+        "Toast Task1",
+        "Toast Task2"
+      ],
+      "non_fitting_tasks": [],
+      "group_window_counts": {
+        "tea": 73,
+        "toast": 162
+      },
+      "group_eval_window_counts": {
+        "tea": 36,
+        "toast": 81
+      },
+      "group_spans": {
+        "tea": [
+          [
+            1171.752546,
+            1546.459669
+          ]
+        ],
+        "toast": [
+          [
+            1754.964103,
+            2211.11862
+          ],
+          [
+            2211.951995,
+            2580.0
+          ]
+        ]
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -8.0,
+        "audit_raw_duration_s": 2581.8189,
+        "audit_fit_count": 7
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-123-a\\eeg\\livinglab\\sub-123-a_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-123-a\\annotation\\sub-123-a_25_02_2025.csv"
+    },
+    {
+      "session": "sub-123-c",
+      "shift_s": -8.0,
+      "raw_duration_s": 1996.85,
+      "window_extent_s": 1995.0,
+      "fitting_tasks": [
+        "Balance",
+        "4m Walk",
+        "Sit to Stand",
+        "Sit on Bed",
+        "Kettel Task",
+        "Toast Task1",
+        "Toast Task2"
+      ],
+      "non_fitting_tasks": [],
+      "group_window_counts": {
+        "tea": 54,
+        "toast": 86
+      },
+      "group_eval_window_counts": {
+        "tea": 27,
+        "toast": 43
+      },
+      "group_spans": {
+        "tea": [
+          [
+            1252.036882,
+            1532.253042
+          ]
+        ],
+        "toast": [
+          [
+            1549.173814,
+            1861.348562
+          ],
+          [
+            1862.984553,
+            1995.0
+          ]
+        ]
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -8.0,
+        "audit_raw_duration_s": 1996.85,
+        "audit_fit_count": 7
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-123-c\\eeg\\livinglab\\sub-123-c_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-123-c\\annotation\\sub-123-c_25_02_2025.csv"
+    },
+    {
+      "session": "sub-125-a",
+      "shift_s": -3610.0,
+      "raw_duration_s": 3228.1284,
+      "window_extent_s": 3225.0,
+      "fitting_tasks": [
+        "Balance",
+        "4m Walk",
+        "Sit to Stand",
+        "Sit on Bed",
+        "Kettel Task",
+        "Toast Task1",
+        "Toast Task2"
+      ],
+      "non_fitting_tasks": [
+        "Suspine Measure",
+        "Standing Still"
+      ],
+      "group_window_counts": {
+        "tea": 47,
+        "toast": 159
+      },
+      "group_eval_window_counts": {
+        "tea": 23,
+        "toast": 79
+      },
+      "group_spans": {
+        "tea": [
+          [
+            2081.534151,
+            2329.421103
+          ]
+        ],
+        "toast": [
+          [
+            2413.707651,
+            2941.20449
+          ],
+          [
+            2942.284202,
+            3225.0
+          ]
+        ]
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -3610.0,
+        "audit_raw_duration_s": 3228.1284,
+        "audit_fit_count": 7
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-125-a\\eeg\\livinglab\\sub-125-a_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-125-a\\annotation\\sub-125-a_12_05_2025.csv"
+    },
+    {
+      "session": "sub-125-c",
+      "shift_s": -3614.0,
+      "raw_duration_s": 2382.3728,
+      "window_extent_s": 2380.0,
+      "fitting_tasks": [
+        "Balance",
+        "4m Walk",
+        "Sit to Stand",
+        "Sit on Bed",
+        "Kettel Task",
+        "Toast Task1",
+        "Toast Task2"
+      ],
+      "non_fitting_tasks": [],
+      "group_window_counts": {
+        "tea": 49,
+        "toast": 119
+      },
+      "group_eval_window_counts": {
+        "tea": 24,
+        "toast": 60
+      },
+      "group_spans": {
+        "tea": [
+          [
+            1442.187247,
+            1699.516888
+          ]
+        ],
+        "toast": [
+          [
+            1768.107274,
+            2040.503411
+          ],
+          [
+            2044.693676,
+            2380.0
+          ]
+        ]
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -3614.0,
+        "audit_raw_duration_s": 2382.3728,
+        "audit_fit_count": 7
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-125-c\\eeg\\livinglab\\sub-125-c_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-125-c\\annotation\\sub-125-c_12_05_2025.csv"
+    },
+    {
+      "session": "sub-129-a",
+      "shift_s": -3610.0,
+      "raw_duration_s": 2391.5695,
+      "window_extent_s": 2390.0,
+      "fitting_tasks": [
+        "Balance",
+        "4m Walk",
+        "Sit to Stand",
+        "Sit on Bed",
+        "Kettel Task",
+        "Toast Task1",
+        "Toast Task2"
+      ],
+      "non_fitting_tasks": [],
+      "group_window_counts": {
+        "tea": 57,
+        "toast": 156
+      },
+      "group_eval_window_counts": {
+        "tea": 28,
+        "toast": 78
+      },
+      "group_spans": {
+        "tea": [
+          [
+            1030.8267,
+            1327.665027
+          ]
+        ],
+        "toast": [
+          [
+            1582.06344,
+            2008.183814
+          ],
+          [
+            2017.245338,
+            2390.0
+          ]
+        ]
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -3610.0,
+        "audit_raw_duration_s": 2391.5695,
+        "audit_fit_count": 7
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-129-a\\eeg\\livinglab\\sub-129-a_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-129-a\\annotation\\sub-129-a_05_06_2025.csv"
+    },
+    {
+      "session": "sub-129-c",
+      "shift_s": -3668.0,
+      "raw_duration_s": 2881.5556,
+      "window_extent_s": 2880.0,
+      "fitting_tasks": [
+        "Balance",
+        "4m Walk",
+        "Sit to Stand",
+        "Sit on Bed",
+        "Kettel Task",
+        "Toast Task1",
+        "Toast Task2"
+      ],
+      "non_fitting_tasks": [],
+      "group_window_counts": {
+        "tea": 73,
+        "toast": 181
+      },
+      "group_eval_window_counts": {
+        "tea": 36,
+        "toast": 91
+      },
+      "group_spans": {
+        "tea": [
+          [
+            1480.316817,
+            1856.224784
+          ]
+        ],
+        "toast": [
+          [
+            1957.942701,
+            2456.931506
+          ],
+          [
+            2458.67685,
+            2880.0
+          ]
+        ]
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -3668.0,
+        "audit_raw_duration_s": 2881.5556,
+        "audit_fit_count": 7
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-129-c\\eeg\\livinglab\\sub-129-c_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-129-c\\annotation\\sub-129-c_05_06_2025.csv"
+    },
+    {
+      "session": "sub-131-a",
+      "shift_s": -3626.0,
+      "raw_duration_s": 3012.2784,
+      "window_extent_s": 3010.0,
+      "fitting_tasks": [
+        "UPDRS",
+        "Balance",
+        "4m Walk",
+        "Sit to Stand",
+        "Sit on Bed",
+        "Kettel Task",
+        "Toast Task1",
+        "Toast Task2"
+      ],
+      "non_fitting_tasks": [
+        "Suspine Measure",
+        "Standing Still"
+      ],
+      "group_window_counts": {
+        "tea": 42,
+        "toast": 161
+      },
+      "group_eval_window_counts": {
+        "tea": 21,
+        "toast": 81
+      },
+      "group_spans": {
+        "tea": [
+          [
+            1665.350275,
+            1885.027707
+          ]
+        ],
+        "toast": [
+          [
+            2136.922208,
+            2615.514053
+          ],
+          [
+            2666.925594,
+            3010.0
+          ]
+        ]
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -3626.0,
+        "audit_raw_duration_s": 3012.2784,
+        "audit_fit_count": 8
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-131-a\\eeg\\livinglab\\sub-131-a_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-131-a\\annotation\\sub-131-a_07_08_2025.csv"
+    },
+    {
+      "session": "sub-131-c",
+      "shift_s": -3618.0,
+      "raw_duration_s": 2152.3500000000004,
+      "window_extent_s": 2150.0,
+      "fitting_tasks": [
+        "UPDRS",
+        "Balance",
+        "4m Walk",
+        "Sit to Stand",
+        "Sit on Bed",
+        "Kettel Task",
+        "Toast Task1",
+        "Toast Task2"
+      ],
+      "non_fitting_tasks": [],
+      "group_window_counts": {
+        "tea": 30,
+        "toast": 170
+      },
+      "group_eval_window_counts": {
+        "tea": 15,
+        "toast": 86
+      },
+      "group_spans": {
+        "tea": [
+          [
+            800.10324,
+            964.961294
+          ]
+        ],
+        "toast": [
+          [
+            1256.13722,
+            1683.042394
+          ],
+          [
+            1705.304714,
+            2150.0
+          ]
+        ]
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -3618.0,
+        "audit_raw_duration_s": 2152.3500000000004,
+        "audit_fit_count": 8
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-131-c\\eeg\\livinglab\\sub-131-c_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-131-c\\annotation\\sub-131-c_07_08_2025.csv"
+    },
+    {
+      "session": "sub-134-a",
+      "shift_s": -346.0,
+      "raw_duration_s": 3162.4345000000003,
+      "window_extent_s": 3160.0,
+      "fitting_tasks": [
+        "UPDRS",
+        "Balance",
+        "4m Walk",
+        "Sit to Stand",
+        "Sit on Bed",
+        "Kettel Task",
+        "Toast Task1"
+      ],
+      "non_fitting_tasks": [
+        "Suspine Measure",
+        "Standing Still",
+        "Toast Task2"
+      ],
+      "group_window_counts": {
+        "tea": 60,
+        "toast": 72
+      },
+      "group_eval_window_counts": {
+        "tea": 30,
+        "toast": 36
+      },
+      "group_spans": {
+        "tea": [
+          [
+            2356.691312,
+            2665.887874
+          ]
+        ],
+        "toast": [
+          [
+            2793.880933,
+            3160.0
+          ]
+        ]
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -346.0,
+        "audit_raw_duration_s": 3162.4345000000003,
+        "audit_fit_count": 7
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-134-a\\eeg\\livinglab\\sub-134-a_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-134-a\\annotation\\sub-134-a_19_11_2025.csv"
+    },
+    {
+      "session": "sub-134-c",
+      "shift_s": -64.0,
+      "raw_duration_s": 3212.0578,
+      "window_extent_s": 3210.0,
+      "fitting_tasks": [
+        "Balance",
+        "4m Walk",
+        "Sit to Stand",
+        "Sit on Bed",
+        "Kettel Task",
+        "Toast Task1",
+        "Toast Task2"
+      ],
+      "non_fitting_tasks": [],
+      "group_window_counts": {
+        "tea": 48,
+        "toast": 132
+      },
+      "group_eval_window_counts": {
+        "tea": 24,
+        "toast": 66
+      },
+      "group_spans": {
+        "tea": [
+          [
+            2212.873752,
+            2461.775317
+          ]
+        ],
+        "toast": [
+          [
+            2530.611747,
+            2901.126444
+          ],
+          [
+            2902.166709,
+            3210.0
+          ]
+        ]
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -64.0,
+        "audit_raw_duration_s": 3212.0578,
+        "audit_fit_count": 7
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-134-c\\eeg\\livinglab\\sub-134-c_0001_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-134-c\\annotation\\sub-134-c_19_11_2025.csv"
+    },
+    {
+      "session": "sub-135-a",
+      "shift_s": -3610.0,
+      "raw_duration_s": 2704.5350000000003,
+      "window_extent_s": 2700.0,
+      "fitting_tasks": [
+        "UPDRS",
+        "Balance",
+        "4m Walk",
+        "Sit to Stand",
+        "Sit on Bed",
+        "Kettel Task",
+        "Toast Task1",
+        "Toast Task2"
+      ],
+      "non_fitting_tasks": [],
+      "group_window_counts": {
+        "tea": 60,
+        "toast": 173
+      },
+      "group_eval_window_counts": {
+        "tea": 30,
+        "toast": 86
+      },
+      "group_spans": {
+        "tea": [
+          [
+            1400.479846,
+            1710.81598
+          ]
+        ],
+        "toast": [
+          [
+            1782.342202,
+            2257.530073
+          ],
+          [
+            2293.729315,
+            2700.0
+          ]
+        ]
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -3610.0,
+        "audit_raw_duration_s": 2704.5350000000003,
+        "audit_fit_count": 8
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-135-a\\eeg\\livinglab\\sub-135-a_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-135-a\\annotation\\sub-135-a_29_05_2026.csv"
+    },
+    {
+      "session": "sub-135-c",
+      "shift_s": -3620.0,
+      "raw_duration_s": 3439.3678,
+      "window_extent_s": 3435.0,
+      "fitting_tasks": [
+        "UPDRS",
+        "Balance",
+        "4m Walk",
+        "Sit to Stand",
+        "Sit on Bed",
+        "Kettel Task",
+        "Toast Task1",
+        "Toast Task2"
+      ],
+      "non_fitting_tasks": [
+        "Suspine Measure",
+        "Standing Still"
+      ],
+      "group_window_counts": {
+        "tea": 87,
+        "toast": 207
+      },
+      "group_eval_window_counts": {
+        "tea": 44,
+        "toast": 103
+      },
+      "group_spans": {
+        "tea": [
+          [
+            1788.469895,
+            2233.526645
+          ]
+        ],
+        "toast": [
+          [
+            2373.127684,
+            2819.842683
+          ],
+          [
+            2827.703128,
+            3435.0
+          ]
+        ]
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -3620.0,
+        "audit_raw_duration_s": 3439.3678,
+        "audit_fit_count": 8
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-135-c\\eeg\\livinglab\\sub-135-c_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-135-c\\annotation\\sub-135-c_29_05_2026.csv"
+    },
+    {
+      "session": "sub-34-a",
+      "shift_s": -2624.0,
+      "raw_duration_s": 3426.2089,
+      "window_extent_s": 3425.0,
+      "fitting_tasks": [
+        "Suspine Measure",
+        "Standing Still",
+        "Balance",
+        "4m Walk",
+        "Sit to Stand"
+      ],
+      "non_fitting_tasks": [
+        "Kettel Task",
+        "Toast Task"
+      ],
+      "group_window_counts": {
+        "tea": 0,
+        "toast": 0
+      },
+      "group_eval_window_counts": {
+        "tea": 0,
+        "toast": 0
+      },
+      "group_spans": {
+        "tea": [],
+        "toast": []
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -2624.0,
+        "audit_raw_duration_s": 3426.2089,
+        "audit_fit_count": 5
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-34-a\\eeg\\living-lab-tasks\\sub-34_living-lab_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-34-a\\annotation\\sub-34_25_11_2022.csv"
+    },
+    {
+      "session": "sub-34-c",
+      "shift_s": -3574.0,
+      "raw_duration_s": 496.34279999999995,
+      "window_extent_s": 495.0,
+      "fitting_tasks": [
+        "Suspine Measure"
+      ],
+      "non_fitting_tasks": [
+        "Standing Still",
+        "Balance",
+        "4m Walk",
+        "Kettel Task",
+        "Toast Task"
+      ],
+      "group_window_counts": {
+        "tea": 0,
+        "toast": 0
+      },
+      "group_eval_window_counts": {
+        "tea": 0,
+        "toast": 0
+      },
+      "group_spans": {
+        "tea": [],
+        "toast": []
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -3574.0,
+        "audit_raw_duration_s": 496.34279999999995,
+        "audit_fit_count": 1
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-34-c\\eeg\\living-lab-tasks\\sub_34_c_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-34-c\\annotation\\sub-34-c_annot.csv"
+    },
+    {
+      "session": "sub-42-a",
+      "shift_s": -584.0,
+      "raw_duration_s": 3385.0645,
+      "window_extent_s": 3385.0,
+      "fitting_tasks": [
+        "Balance",
+        "4m Walk",
+        "Sit to Stand",
+        "Kettel Task",
+        "Toast Task"
+      ],
+      "non_fitting_tasks": [
+        "Suspine Measure",
+        "Standing Still"
+      ],
+      "group_window_counts": {
+        "tea": 36,
+        "toast": 96
+      },
+      "group_eval_window_counts": {
+        "tea": 18,
+        "toast": 48
+      },
+      "group_spans": {
+        "tea": [
+          [
+            2505.38309,
+            2698.98243
+          ]
+        ],
+        "toast": [
+          [
+            2897.80316,
+            3385.0
+          ]
+        ]
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -584.0,
+        "audit_raw_duration_s": 3385.0645,
+        "audit_fit_count": 5
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-42-a\\eeg\\living-lab-tasks\\sub-42-a_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-42-a\\annotation\\sub-42-a_annot.csv"
+    },
+    {
+      "session": "sub-42-c",
+      "shift_s": -1864.0,
+      "raw_duration_s": 1094.9845,
+      "window_extent_s": 1090.0,
+      "fitting_tasks": [
+        "Balance",
+        "4m Walk",
+        "Sit to Stand",
+        "Kettel Task"
+      ],
+      "non_fitting_tasks": [
+        "Suspine Measure",
+        "Standing Still",
+        "Toast Task"
+      ],
+      "group_window_counts": {
+        "tea": 46,
+        "toast": 0
+      },
+      "group_eval_window_counts": {
+        "tea": 23,
+        "toast": 0
+      },
+      "group_spans": {
+        "tea": [
+          [
+            851.21675,
+            1090.0
+          ]
+        ],
+        "toast": []
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -1864.0,
+        "audit_raw_duration_s": 1094.9845,
+        "audit_fit_count": 4
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-42-c\\eeg\\living-lab-tasks\\sub-42-c_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-42-c\\annotation\\sub-42-c_annot.csv"
+    },
+    {
+      "session": "sub-48-a",
+      "shift_s": 730.0,
+      "raw_duration_s": 1553.8573,
+      "window_extent_s": 1550.0,
+      "fitting_tasks": [
+        "Balance",
+        "4m Walk",
+        "Sit to Stand",
+        "Kettel Task"
+      ],
+      "non_fitting_tasks": [
+        "Suspine Measure",
+        "Standing Still",
+        "Toast Task"
+      ],
+      "group_window_counts": {
+        "tea": 74,
+        "toast": 0
+      },
+      "group_eval_window_counts": {
+        "tea": 37,
+        "toast": 0
+      },
+      "group_spans": {
+        "tea": [
+          [
+            1174.068034,
+            1550.0
+          ]
+        ],
+        "toast": []
+      },
+      "crosscheck": {
+        "audit_best_shift_s": 730.0,
+        "audit_raw_duration_s": 1553.8538999999998,
+        "audit_fit_count": 4
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-48-a\\eeg\\living-lab-tasks\\sub-48-a_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-48-a\\annotation\\sub-48-a_annot.csv"
+    },
+    {
+      "session": "sub-48-c",
+      "shift_s": 1870.0,
+      "raw_duration_s": 1050.86,
+      "window_extent_s": 1050.0,
+      "fitting_tasks": [
+        "Balance",
+        "4m Walk",
+        "Sit to Stand",
+        "Kettel Task"
+      ],
+      "non_fitting_tasks": [
+        "Toast Task"
+      ],
+      "group_window_counts": {
+        "tea": 79,
+        "toast": 0
+      },
+      "group_eval_window_counts": {
+        "tea": 40,
+        "toast": 0
+      },
+      "group_spans": {
+        "tea": [
+          [
+            645.536992,
+            1050.0
+          ]
+        ],
+        "toast": []
+      },
+      "crosscheck": {
+        "audit_best_shift_s": 1870.0,
+        "audit_raw_duration_s": 1050.8566999999998,
+        "audit_fit_count": 4
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-48-c\\eeg\\living-lab-tasks\\sub-48-c_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-48-c\\annotation\\sub-48-c_annot.csv"
+    },
+    {
+      "session": "sub-51-a",
+      "shift_s": -1006.0,
+      "raw_duration_s": 4156.2534,
+      "window_extent_s": 4155.0,
+      "fitting_tasks": [
+        "Suspine Measure",
+        "Standing Still",
+        "4m Walk",
+        "Sit to Stand",
+        "Kettel Task",
+        "Toast Task"
+      ],
+      "non_fitting_tasks": [],
+      "group_window_counts": {
+        "tea": 55,
+        "toast": 115
+      },
+      "group_eval_window_counts": {
+        "tea": 28,
+        "toast": 57
+      },
+      "group_spans": {
+        "tea": [
+          [
+            2876.297432,
+            3161.744511
+          ]
+        ],
+        "toast": [
+          [
+            3571.569882,
+            4155.0
+          ]
+        ]
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -1006.0,
+        "audit_raw_duration_s": 4156.2534,
+        "audit_fit_count": 6
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-51-a\\eeg\\living-lab-tasks\\sub-51-a_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-51-a\\annotation\\sub-51-a_annot.csv"
+    },
+    {
+      "session": "sub-51-c",
+      "shift_s": -330.0,
+      "raw_duration_s": 1643.3438999999998,
+      "window_extent_s": 1640.0,
+      "fitting_tasks": [
+        "Balance",
+        "4m Walk",
+        "Sit to Stand",
+        "Kettel Task",
+        "Toast Task"
+      ],
+      "non_fitting_tasks": [],
+      "group_window_counts": {
+        "tea": 53,
+        "toast": 84
+      },
+      "group_eval_window_counts": {
+        "tea": 27,
+        "toast": 42
+      },
+      "group_spans": {
+        "tea": [
+          [
+            835.32843,
+            1114.065148
+          ]
+        ],
+        "toast": [
+          [
+            1212.169007,
+            1640.0
+          ]
+        ]
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -330.0,
+        "audit_raw_duration_s": 1643.3438999999998,
+        "audit_fit_count": 5
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-51-c\\eeg\\living-lab-tasks\\sub-51-c_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-51-c\\annotation\\sub-51-c_annot.csv"
+    },
+    {
+      "session": "sub-53-a",
+      "shift_s": -142.0,
+      "raw_duration_s": 2732.7823000000003,
+      "window_extent_s": 2730.0,
+      "fitting_tasks": [
+        "Balance",
+        "4m Walk",
+        "Sit to Stand",
+        "Kettel Task",
+        "Toast Task"
+      ],
+      "non_fitting_tasks": [
+        "Suspine Measure",
+        "Standing Still"
+      ],
+      "group_window_counts": {
+        "tea": 62,
+        "toast": 90
+      },
+      "group_eval_window_counts": {
+        "tea": 31,
+        "toast": 45
+      },
+      "group_spans": {
+        "tea": [
+          [
+            1688.055235,
+            2007.73183
+          ]
+        ],
+        "toast": [
+          [
+            2273.306869,
+            2730.0
+          ]
+        ]
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -142.0,
+        "audit_raw_duration_s": 2732.7823000000003,
+        "audit_fit_count": 5
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-53-a\\eeg\\living-lab-tasks\\sub-53-a_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-53-a\\annotation\\sub-53-a_annot.csv"
+    },
+    {
+      "session": "sub-53-c",
+      "shift_s": -242.0,
+      "raw_duration_s": 1331.0145,
+      "window_extent_s": 1330.0,
+      "fitting_tasks": [
+        "4m Walk",
+        "Sit to Stand",
+        "Kettel Task",
+        "Toast Task"
+      ],
+      "non_fitting_tasks": [],
+      "group_window_counts": {
+        "tea": 69,
+        "toast": 69
+      },
+      "group_eval_window_counts": {
+        "tea": 35,
+        "toast": 35
+      },
+      "group_spans": {
+        "tea": [
+          [
+            979.899524,
+            1330.0
+          ]
+        ],
+        "toast": [
+          [
+            979.899524,
+            1330.0
+          ]
+        ]
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -242.0,
+        "audit_raw_duration_s": 1331.0145,
+        "audit_fit_count": 4
+      },
+      "problems": [
+        "TASK SPANS OVERLAP by 350.1s (tea vs toast) \u2014 the annotation CSV logs these as the same/overlapping interval, so a 'task split' here would train and test on the same windows"
+      ],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-53-c\\eeg\\living-lab-tasks\\sub-53-c_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-53-c\\annotation\\sub-53-c_annot.csv"
+    },
+    {
+      "session": "sub-62-a",
+      "shift_s": -5148.0,
+      "raw_duration_s": 1997.7834,
+      "window_extent_s": 1995.0,
+      "fitting_tasks": [
+        "Suspine Measure",
+        "Standing Still",
+        "Balance",
+        "4m Walk",
+        "Sit to Stand"
+      ],
+      "non_fitting_tasks": [
+        "Kettel Task",
+        "Toast Task"
+      ],
+      "group_window_counts": {
+        "tea": 0,
+        "toast": 0
+      },
+      "group_eval_window_counts": {
+        "tea": 0,
+        "toast": 0
+      },
+      "group_spans": {
+        "tea": [],
+        "toast": []
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -5148.0,
+        "audit_raw_duration_s": 1997.7834,
+        "audit_fit_count": 5
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-62-a\\eeg\\living-lab-tasks\\sub-62-a_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-62-a\\annotation\\sub-62-a_annot.csv"
+    },
+    {
+      "session": "sub-62-c",
+      "shift_s": -3630.0,
+      "raw_duration_s": 2195.8528,
+      "window_extent_s": 2195.0,
+      "fitting_tasks": [
+        "Balance",
+        "4m Walk",
+        "Sit to Stand",
+        "Kettel Task",
+        "Toast Task"
+      ],
+      "non_fitting_tasks": [],
+      "group_window_counts": {
+        "tea": 43,
+        "toast": 71
+      },
+      "group_eval_window_counts": {
+        "tea": 21,
+        "toast": 35
+      },
+      "group_spans": {
+        "tea": [
+          [
+            1512.958045,
+            1738.14158
+          ]
+        ],
+        "toast": [
+          [
+            1833.180698,
+            2195.0
+          ]
+        ]
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -3630.0,
+        "audit_raw_duration_s": 2195.8528,
+        "audit_fit_count": 5
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-62-c\\eeg\\living-lab-tasks\\sub-62-c_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-62-c\\annotation\\sub-62-c_annot.csv"
+    },
+    {
+      "session": "sub-69-a",
+      "shift_s": -4592.0,
+      "raw_duration_s": 2065.2134,
+      "window_extent_s": 2065.0,
+      "fitting_tasks": [
+        "Suspine Measure",
+        "Standing Still",
+        "Balance",
+        "4m Walk",
+        "Sit to Stand",
+        "Kettel Task"
+      ],
+      "non_fitting_tasks": [
+        "Toast Task"
+      ],
+      "group_window_counts": {
+        "tea": 104,
+        "toast": 0
+      },
+      "group_eval_window_counts": {
+        "tea": 52,
+        "toast": 0
+      },
+      "group_spans": {
+        "tea": [
+          [
+            1538.619458,
+            2065.0
+          ]
+        ],
+        "toast": []
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -4592.0,
+        "audit_raw_duration_s": 2065.2134,
+        "audit_fit_count": 6
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-69-a\\eeg\\living-lab-tasks\\sub-69-a_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-69-a\\annotation\\sub-69-a_annot.csv"
+    },
+    {
+      "session": "sub-69-c",
+      "shift_s": -3772.0,
+      "raw_duration_s": 1676.3506,
+      "window_extent_s": 1675.0,
+      "fitting_tasks": [
+        "Balance",
+        "4m Walk",
+        "Sit to Stand",
+        "Kettel Task",
+        "Toast Task"
+      ],
+      "non_fitting_tasks": [],
+      "group_window_counts": {
+        "tea": 57,
+        "toast": 133
+      },
+      "group_eval_window_counts": {
+        "tea": 29,
+        "toast": 66
+      },
+      "group_spans": {
+        "tea": [
+          [
+            609.510357,
+            900.161749
+          ]
+        ],
+        "toast": [
+          [
+            1001.120318,
+            1675.0
+          ]
+        ]
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -3772.0,
+        "audit_raw_duration_s": 1676.3506,
+        "audit_fit_count": 5
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-69-c\\eeg\\living-lab-tasks\\sub-69-c_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-69-c\\annotation\\sub-69-c_annot.csv"
+    },
+    {
+      "session": "sub-70-a",
+      "shift_s": -5706.0,
+      "raw_duration_s": 3951.1223,
+      "window_extent_s": 3935.0,
+      "fitting_tasks": [
+        "Suspine Measure",
+        "Standing Still",
+        "Balance",
+        "4m Walk",
+        "Sit to Stand",
+        "Kettel Task",
+        "Toast Task"
+      ],
+      "non_fitting_tasks": [],
+      "group_window_counts": {
+        "tea": 61,
+        "toast": 84
+      },
+      "group_eval_window_counts": {
+        "tea": 31,
+        "toast": 42
+      },
+      "group_spans": {
+        "tea": [
+          [
+            2655.772991,
+            2972.251427
+          ]
+        ],
+        "toast": [
+          [
+            3508.330523,
+            3935.0
+          ]
+        ]
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -5706.0,
+        "audit_raw_duration_s": 3951.1223,
+        "audit_fit_count": 7
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-70-a\\eeg\\living-lab-tasks\\sub-70-a_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-70-a\\annotation\\sub-70-a_annot.csv"
+    },
+    {
+      "session": "sub-70-c",
+      "shift_s": -5594.0,
+      "raw_duration_s": 2058.1567,
+      "window_extent_s": 2055.0,
+      "fitting_tasks": [
+        "Suspine Measure",
+        "Standing Still",
+        "Balance",
+        "4m Walk",
+        "Sit to Stand"
+      ],
+      "non_fitting_tasks": [
+        "Kettel Task",
+        "Toast Task"
+      ],
+      "group_window_counts": {
+        "tea": 0,
+        "toast": 0
+      },
+      "group_eval_window_counts": {
+        "tea": 0,
+        "toast": 0
+      },
+      "group_spans": {
+        "tea": [],
+        "toast": []
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -5594.0,
+        "audit_raw_duration_s": 2058.1567,
+        "audit_fit_count": 5
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-70-c\\eeg\\living-lab-tasks\\sub-70-c_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-70-c\\annotation\\sub-70-c_annot.csv"
+    },
+    {
+      "session": "sub-71-a",
+      "shift_s": -3612.0,
+      "raw_duration_s": 1365.3878,
+      "window_extent_s": 1365.0,
+      "fitting_tasks": [
+        "Balance",
+        "4m Walk",
+        "Sit to Stand",
+        "Kettel Task",
+        "Toast Task"
+      ],
+      "non_fitting_tasks": [
+        "Suspine Measure",
+        "Standing Still"
+      ],
+      "group_window_counts": {
+        "tea": 60,
+        "toast": 127
+      },
+      "group_eval_window_counts": {
+        "tea": 30,
+        "toast": 63
+      },
+      "group_spans": {
+        "tea": [
+          [
+            362.540463,
+            673.905712
+          ]
+        ],
+        "toast": [
+          [
+            722.348816,
+            1365.0
+          ]
+        ]
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -3612.0,
+        "audit_raw_duration_s": 1365.3878,
+        "audit_fit_count": 5
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-71-a\\eeg\\living-lab-tasks\\sub-71-a_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-71-a\\annotation\\sub-71-a_annot.csv"
+    },
+    {
+      "session": "sub-71-c",
+      "shift_s": -3612.0,
+      "raw_duration_s": 2399.6595,
+      "window_extent_s": 2395.0,
+      "fitting_tasks": [
+        "4m Walk",
+        "Sit to Stand",
+        "Kettel Task",
+        "Toast Task"
+      ],
+      "non_fitting_tasks": [],
+      "group_window_counts": {
+        "tea": 61,
+        "toast": 115
+      },
+      "group_eval_window_counts": {
+        "tea": 30,
+        "toast": 57
+      },
+      "group_spans": {
+        "tea": [
+          [
+            1482.39371,
+            1795.066408
+          ]
+        ],
+        "toast": [
+          [
+            1812.331067,
+            2395.0
+          ]
+        ]
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -3612.0,
+        "audit_raw_duration_s": 2399.6595,
+        "audit_fit_count": 5
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-71-c\\eeg\\living-lab-tasks\\sub-71-c_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-71-c\\annotation\\sub-71-c_annot.csv"
+    },
+    {
+      "session": "sub-72-a",
+      "shift_s": -5056.0,
+      "raw_duration_s": 2669.7034000000003,
+      "window_extent_s": 2665.0,
+      "fitting_tasks": [
+        "Suspine Measure",
+        "Standing Still",
+        "Balance",
+        "4m Walk",
+        "Sit to Stand"
+      ],
+      "non_fitting_tasks": [
+        "Kettel Task",
+        "Toast Task"
+      ],
+      "group_window_counts": {
+        "tea": 0,
+        "toast": 0
+      },
+      "group_eval_window_counts": {
+        "tea": 0,
+        "toast": 0
+      },
+      "group_spans": {
+        "tea": [],
+        "toast": []
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -5056.0,
+        "audit_raw_duration_s": 2669.7034000000003,
+        "audit_fit_count": 5
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-72-a\\eeg\\living-lab-tasks\\sub-72-a_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-72-a\\annotation\\sub-72-a_annot.csv"
+    },
+    {
+      "session": "sub-72-c",
+      "shift_s": -4220.0,
+      "raw_duration_s": 3340.03,
+      "window_extent_s": 3340.0,
+      "fitting_tasks": [
+        "Balance",
+        "4m Walk",
+        "Sit to Stand",
+        "Kettel Task",
+        "Toast Task"
+      ],
+      "non_fitting_tasks": [],
+      "group_window_counts": {
+        "tea": 39,
+        "toast": 97
+      },
+      "group_eval_window_counts": {
+        "tea": 20,
+        "toast": 49
+      },
+      "group_spans": {
+        "tea": [
+          [
+            2325.186596,
+            2531.610349
+          ]
+        ],
+        "toast": [
+          [
+            2847.930392,
+            3340.0
+          ]
+        ]
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -4220.0,
+        "audit_raw_duration_s": 3340.03,
+        "audit_fit_count": 5
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-72-c\\eeg\\living-lab-tasks\\sub-72-c_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-72-c\\annotation\\sub-72-c_annot.csv"
+    },
+    {
+      "session": "sub-73-a",
+      "shift_s": -3608.0,
+      "raw_duration_s": 2294.3923,
+      "window_extent_s": 2290.0,
+      "fitting_tasks": [
+        "Balance",
+        "4m Walk",
+        "Sit to Stand",
+        "Kettel Task",
+        "Toast Task"
+      ],
+      "non_fitting_tasks": [
+        "Suspine Measure",
+        "Standing Still"
+      ],
+      "group_window_counts": {
+        "tea": 61,
+        "toast": 128
+      },
+      "group_eval_window_counts": {
+        "tea": 30,
+        "toast": 64
+      },
+      "group_spans": {
+        "tea": [
+          [
+            910.653521,
+            1226.981778
+          ]
+        ],
+        "toast": [
+          [
+            1644.174241,
+            2290.0
+          ]
+        ]
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -3608.0,
+        "audit_raw_duration_s": 2294.3923,
+        "audit_fit_count": 5
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-73-a\\eeg\\living-lab-tasks\\sub-73-a_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-73-a\\annotation\\sub-73-a_annot.csv"
+    },
+    {
+      "session": "sub-73-c",
+      "shift_s": -5114.0,
+      "raw_duration_s": 3514.9834,
+      "window_extent_s": 3510.0,
+      "fitting_tasks": [
+        "Suspine Measure",
+        "Standing Still",
+        "4m Walk",
+        "Sit to Stand",
+        "Kettel Task"
+      ],
+      "non_fitting_tasks": [
+        "Toast Task"
+      ],
+      "group_window_counts": {
+        "tea": 51,
+        "toast": 0
+      },
+      "group_eval_window_counts": {
+        "tea": 26,
+        "toast": 0
+      },
+      "group_spans": {
+        "tea": [
+          [
+            3247.446107,
+            3510.0
+          ]
+        ],
+        "toast": []
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -5114.0,
+        "audit_raw_duration_s": 3514.9834,
+        "audit_fit_count": 6
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-73-c\\eeg\\living-lab-tasks\\sub-73-c_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-73-c\\annotation\\sub-73-c_annot.csv"
+    },
+    {
+      "session": "sub-76-a",
+      "shift_s": -5444.0,
+      "raw_duration_s": 3921.6839,
+      "window_extent_s": 3920.0,
+      "fitting_tasks": [
+        "Suspine Measure",
+        "Standing Still",
+        "Balance",
+        "4m Walk",
+        "Sit to Stand"
+      ],
+      "non_fitting_tasks": [
+        "Kettel Task",
+        "Toast Task"
+      ],
+      "group_window_counts": {
+        "tea": 0,
+        "toast": 0
+      },
+      "group_eval_window_counts": {
+        "tea": 0,
+        "toast": 0
+      },
+      "group_spans": {
+        "tea": [],
+        "toast": []
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -5444.0,
+        "audit_raw_duration_s": 3921.6839,
+        "audit_fit_count": 5
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-76-a\\eeg\\living-lab-tasks\\sub-76-a_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-76-a\\annotation\\sub-76-a_annot.csv"
+    },
+    {
+      "session": "sub-76-c",
+      "shift_s": -3612.0,
+      "raw_duration_s": 3118.7761,
+      "window_extent_s": 3115.0,
+      "fitting_tasks": [
+        "Balance",
+        "4m Walk",
+        "Sit to Stand",
+        "Kettel Task",
+        "Toast Task"
+      ],
+      "non_fitting_tasks": [],
+      "group_window_counts": {
+        "tea": 60,
+        "toast": 138
+      },
+      "group_eval_window_counts": {
+        "tea": 30,
+        "toast": 69
+      },
+      "group_spans": {
+        "tea": [
+          [
+            1638.689677,
+            1946.625833
+          ]
+        ],
+        "toast": [
+          [
+            2418.273721,
+            3115.0
+          ]
+        ]
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -3612.0,
+        "audit_raw_duration_s": 3118.7761,
+        "audit_fit_count": 5
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-76-c\\eeg\\living-lab-tasks\\sub-76-c_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-76-c\\annotation\\sub-76-c_annot.csv"
+    },
+    {
+      "session": "sub-77-a",
+      "shift_s": -3640.0,
+      "raw_duration_s": 3066.9606000000003,
+      "window_extent_s": 3065.0,
+      "fitting_tasks": [
+        "Balance",
+        "4m Walk",
+        "Sit to Stand",
+        "Kettel Task",
+        "Toast Task"
+      ],
+      "non_fitting_tasks": [
+        "Suspine Measure",
+        "Standing Still"
+      ],
+      "group_window_counts": {
+        "tea": 63,
+        "toast": 142
+      },
+      "group_eval_window_counts": {
+        "tea": 31,
+        "toast": 71
+      },
+      "group_spans": {
+        "tea": [
+          [
+            1681.566725,
+            2006.687383
+          ]
+        ],
+        "toast": [
+          [
+            2349.080294,
+            3065.0
+          ]
+        ]
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -3640.0,
+        "audit_raw_duration_s": 3066.9606000000003,
+        "audit_fit_count": 5
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-77-a\\eeg\\living-lab-tasks\\sub-77-a_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-77-a\\annotation\\sub-77-a_annot.csv"
+    },
+    {
+      "session": "sub-77-c",
+      "shift_s": -3612.0,
+      "raw_duration_s": 2228.1695,
+      "window_extent_s": 2225.0,
+      "fitting_tasks": [
+        "Balance",
+        "4m Walk",
+        "Sit to Stand",
+        "Kettel Task",
+        "Toast Task"
+      ],
+      "non_fitting_tasks": [],
+      "group_window_counts": {
+        "tea": 50,
+        "toast": 137
+      },
+      "group_eval_window_counts": {
+        "tea": 25,
+        "toast": 68
+      },
+      "group_spans": {
+        "tea": [
+          [
+            1130.801053,
+            1392.408748
+          ]
+        ],
+        "toast": [
+          [
+            1534.496837,
+            2225.0
+          ]
+        ]
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -3612.0,
+        "audit_raw_duration_s": 2228.1695,
+        "audit_fit_count": 5
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-77-c\\eeg\\living-lab-tasks\\sub-77-c_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-77-c\\annotation\\sub-77-c_annot.csv"
+    },
+    {
+      "session": "sub-81-a",
+      "shift_s": -12.0,
+      "raw_duration_s": 2885.7717000000002,
+      "window_extent_s": 2885.0,
+      "fitting_tasks": [
+        "Balance",
+        "4m Walk",
+        "Sit to Stand",
+        "Sit on Bed",
+        "Kettel Task",
+        "Toast Task1",
+        "Toast Task2"
+      ],
+      "non_fitting_tasks": [
+        "Suspine Measure",
+        "Standing Still"
+      ],
+      "group_window_counts": {
+        "tea": 71,
+        "toast": 146
+      },
+      "group_eval_window_counts": {
+        "tea": 35,
+        "toast": 72
+      },
+      "group_spans": {
+        "tea": [
+          [
+            1473.986769,
+            1839.450571
+          ]
+        ],
+        "toast": [
+          [
+            2132.477671,
+            2506.889743
+          ],
+          [
+            2510.741811,
+            2885.0
+          ]
+        ]
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -12.0,
+        "audit_raw_duration_s": 2885.7717000000002,
+        "audit_fit_count": 7
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-81-a\\eeg\\living-lab-tasks\\sub-81-a_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-81-a\\annotation\\sub-81-a_annot.csv"
+    },
+    {
+      "session": "sub-81-c",
+      "shift_s": -700.0,
+      "raw_duration_s": 2947.1256000000003,
+      "window_extent_s": 2945.0,
+      "fitting_tasks": [
+        "Balance",
+        "4m Walk",
+        "Sit to Stand",
+        "Sit on Bed",
+        "Kettel Task",
+        "Toast Task1",
+        "Toast Task2"
+      ],
+      "non_fitting_tasks": [],
+      "group_window_counts": {
+        "tea": 52,
+        "toast": 132
+      },
+      "group_eval_window_counts": {
+        "tea": 26,
+        "toast": 66
+      },
+      "group_spans": {
+        "tea": [
+          [
+            1886.819974,
+            2158.497352
+          ]
+        ],
+        "toast": [
+          [
+            2258.345816,
+            2520.713014
+          ],
+          [
+            2530.139192,
+            2945.0
+          ]
+        ]
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -700.0,
+        "audit_raw_duration_s": 2947.1256000000003,
+        "audit_fit_count": 7
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-81-c\\eeg\\living-lab-tasks\\sub-81-c_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-81-c\\annotation\\sub-81-c_annot.csv"
+    },
+    {
+      "session": "sub-84-a",
+      "shift_s": -2466.0,
+      "raw_duration_s": 4633.375,
+      "window_extent_s": 4630.0,
+      "fitting_tasks": [
+        "Suspine Measure",
+        "Standing Still",
+        "Balance",
+        "4m Walk",
+        "Sit to Stand",
+        "Sit on Bed",
+        "Kettel Task"
+      ],
+      "non_fitting_tasks": [
+        "Toast Task1",
+        "Toast Task2"
+      ],
+      "group_window_counts": {
+        "tea": 48,
+        "toast": 0
+      },
+      "group_eval_window_counts": {
+        "tea": 24,
+        "toast": 0
+      },
+      "group_spans": {
+        "tea": [
+          [
+            4380.558532,
+            4630.0
+          ]
+        ],
+        "toast": []
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -2466.0,
+        "audit_raw_duration_s": 4633.375,
+        "audit_fit_count": 7
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-84-a\\eeg\\living-lab-tasks\\sub-84-a_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-84-a\\annotation\\sub-84-a_annot.csv"
+    },
+    {
+      "session": "sub-84-c",
+      "shift_s": -120.0,
+      "raw_duration_s": 2435.4256,
+      "window_extent_s": 2435.0,
+      "fitting_tasks": [
+        "Balance",
+        "4m Walk",
+        "Sit to Stand",
+        "Sit on Bed",
+        "Kettel Task",
+        "Toast Task1",
+        "Toast Task2"
+      ],
+      "non_fitting_tasks": [],
+      "group_window_counts": {
+        "tea": 56,
+        "toast": 128
+      },
+      "group_eval_window_counts": {
+        "tea": 28,
+        "toast": 64
+      },
+      "group_spans": {
+        "tea": [
+          [
+            1227.288897,
+            1516.07847
+          ]
+        ],
+        "toast": [
+          [
+            1769.54012,
+            2132.6623
+          ],
+          [
+            2140.109927,
+            2435.0
+          ]
+        ]
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -120.0,
+        "audit_raw_duration_s": 2435.4256,
+        "audit_fit_count": 7
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-84-c\\eeg\\living-lab-tasks\\sub-84-c_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-84-c\\annotation\\sub-84-c_annot.csv"
+    },
+    {
+      "session": "sub-90-a",
+      "shift_s": 928.0,
+      "raw_duration_s": 1892.6972999999998,
+      "window_extent_s": 1890.0,
+      "fitting_tasks": [
+        "Balance",
+        "4m Walk",
+        "Sit to Stand",
+        "Sit on Bed",
+        "Kettel Task",
+        "Toast Task1"
+      ],
+      "non_fitting_tasks": [
+        "Suspine Measure",
+        "Standing Still",
+        "Toast Task2"
+      ],
+      "group_window_counts": {
+        "tea": 50,
+        "toast": 51
+      },
+      "group_eval_window_counts": {
+        "tea": 25,
+        "toast": 26
+      },
+      "group_spans": {
+        "tea": [
+          [
+            926.010682,
+            1189.631469
+          ]
+        ],
+        "toast": [
+          [
+            1627.013248,
+            1890.0
+          ]
+        ]
+      },
+      "crosscheck": {
+        "audit_best_shift_s": 928.0,
+        "audit_raw_duration_s": 1892.6972999999998,
+        "audit_fit_count": 6
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-90-a\\eeg\\living-lab-tasks\\sub-90-a_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-90-a\\annotation\\sub-90-a_annot.csv"
+    },
+    {
+      "session": "sub-90-c",
+      "shift_s": -1292.0,
+      "raw_duration_s": 3191.1306,
+      "window_extent_s": 3190.0,
+      "fitting_tasks": [
+        "Balance",
+        "4m Walk",
+        "Sit to Stand",
+        "Sit on Bed",
+        "Kettel Task",
+        "Toast Task1",
+        "Toast Task2"
+      ],
+      "non_fitting_tasks": [],
+      "group_window_counts": {
+        "tea": 43,
+        "toast": 91
+      },
+      "group_eval_window_counts": {
+        "tea": 21,
+        "toast": 45
+      },
+      "group_spans": {
+        "tea": [
+          [
+            2443.696138,
+            2668.464452
+          ]
+        ],
+        "toast": [
+          [
+            2693.773523,
+            2957.411863
+          ],
+          [
+            2981.775109,
+            3190.0
+          ]
+        ]
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -1292.0,
+        "audit_raw_duration_s": 3191.1306,
+        "audit_fit_count": 7
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-90-c\\eeg\\living-lab-tasks\\sub-90-c_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-90-c\\annotation\\sub-90-c_annot.csv"
+    },
+    {
+      "session": "sub-92-a",
+      "shift_s": -122.0,
+      "raw_duration_s": 2369.0,
+      "window_extent_s": 2365.0,
+      "fitting_tasks": [
+        "Balance",
+        "4m Walk",
+        "Sit to Stand",
+        "Sit on Bed",
+        "Kettel Task",
+        "Toast Task1",
+        "Toast Task2"
+      ],
+      "non_fitting_tasks": [
+        "Suspine Measure",
+        "Standing Still"
+      ],
+      "group_window_counts": {
+        "tea": 45,
+        "toast": 92
+      },
+      "group_eval_window_counts": {
+        "tea": 23,
+        "toast": 46
+      },
+      "group_spans": {
+        "tea": [
+          [
+            1449.757151,
+            1682.505047
+          ]
+        ],
+        "toast": [
+          [
+            1880.504358,
+            2113.379975
+          ],
+          [
+            2119.824151,
+            2365.0
+          ]
+        ]
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -122.0,
+        "audit_raw_duration_s": 2369.0,
+        "audit_fit_count": 7
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-92-a\\eeg\\living-lab-tasks\\sub-92-a_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-92-a\\annotation\\sub-92-a_annot.csv"
+    },
+    {
+      "session": "sub-92-c",
+      "shift_s": -48.0,
+      "raw_duration_s": 2420.3323,
+      "window_extent_s": 2420.0,
+      "fitting_tasks": [
+        "Balance",
+        "4m Walk",
+        "Sit to Stand",
+        "Sit on Bed",
+        "Kettel Task",
+        "Toast Task1",
+        "Toast Task2"
+      ],
+      "non_fitting_tasks": [],
+      "group_window_counts": {
+        "tea": 48,
+        "toast": 75
+      },
+      "group_eval_window_counts": {
+        "tea": 24,
+        "toast": 37
+      },
+      "group_spans": {
+        "tea": [
+          [
+            1552.128751,
+            1802.230242
+          ]
+        ],
+        "toast": [
+          [
+            2020.072131,
+            2269.468554
+          ],
+          [
+            2270.069344,
+            2420.0
+          ]
+        ]
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -48.0,
+        "audit_raw_duration_s": 2420.3323,
+        "audit_fit_count": 7
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-92-c\\eeg\\living-lab-tasks\\sub-92-c_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-92-c\\annotation\\sub-92-c_annot.csv"
+    },
+    {
+      "session": "sub-93-a",
+      "shift_s": -2272.0,
+      "raw_duration_s": 4030.8267,
+      "window_extent_s": 4030.0,
+      "fitting_tasks": [
+        "Suspine Measure",
+        "Standing Still",
+        "Balance",
+        "4m Walk",
+        "Sit to Stand",
+        "Sit on Bed",
+        "Kettel Task"
+      ],
+      "non_fitting_tasks": [
+        "Toast Task1",
+        "Toast Task2"
+      ],
+      "group_window_counts": {
+        "tea": 18,
+        "toast": 0
+      },
+      "group_eval_window_counts": {
+        "tea": 9,
+        "toast": 0
+      },
+      "group_spans": {
+        "tea": [
+          [
+            3932.598179,
+            4030.0
+          ]
+        ],
+        "toast": []
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -2272.0,
+        "audit_raw_duration_s": 4030.8267,
+        "audit_fit_count": 7
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-93-a\\eeg\\living-lab-tasks\\sub-93-a_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-93-a\\annotation\\sub-93-a_annot.csv"
+    },
+    {
+      "session": "sub-93-c",
+      "shift_s": -1108.0,
+      "raw_duration_s": 2986.1384000000003,
+      "window_extent_s": 2985.0,
+      "fitting_tasks": [
+        "Balance",
+        "4m Walk",
+        "Sit to Stand",
+        "Sit on Bed",
+        "Kettel Task",
+        "Toast Task1"
+      ],
+      "non_fitting_tasks": [],
+      "group_window_counts": {
+        "tea": 0,
+        "toast": 0
+      },
+      "group_eval_window_counts": {
+        "tea": 0,
+        "toast": 0
+      },
+      "group_spans": {
+        "tea": [],
+        "toast": []
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -1108.0,
+        "audit_raw_duration_s": 2986.1384000000003,
+        "audit_fit_count": 6
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-93-c\\eeg\\living-lab-tasks\\sub-93-c_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-93-c\\annotation\\sub-93-c_28_02_2024.csv"
+    },
+    {
+      "session": "sub-94-a",
+      "shift_s": -16.0,
+      "raw_duration_s": 2882.8650000000002,
+      "window_extent_s": 2880.0,
+      "fitting_tasks": [
+        "Balance",
+        "4m Walk",
+        "Sit to Stand",
+        "Sit on Bed",
+        "Kettel Task",
+        "Toast Task1",
+        "Toast Task2"
+      ],
+      "non_fitting_tasks": [
+        "Suspine Measure",
+        "Standing Still"
+      ],
+      "group_window_counts": {
+        "tea": 41,
+        "toast": 118
+      },
+      "group_eval_window_counts": {
+        "tea": 20,
+        "toast": 59
+      },
+      "group_spans": {
+        "tea": [
+          [
+            1580.459031,
+            1798.535921
+          ]
+        ],
+        "toast": [
+          [
+            2263.918611,
+            2594.42542
+          ],
+          [
+            2601.230913,
+            2880.0
+          ]
+        ]
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -16.0,
+        "audit_raw_duration_s": 2882.8650000000002,
+        "audit_fit_count": 7
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-94-a\\eeg\\living-lab-tasks\\sub-94-a_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-94-a\\annotation\\sub-94-a_annot.csv"
+    },
+    {
+      "session": "sub-94-c",
+      "shift_s": -56.0,
+      "raw_duration_s": 2979.9056,
+      "window_extent_s": 2975.0,
+      "fitting_tasks": [
+        "Balance",
+        "4m Walk",
+        "Sit to Stand",
+        "Sit on Bed",
+        "Kettel Task",
+        "Toast Task1",
+        "Toast Task2"
+      ],
+      "non_fitting_tasks": [],
+      "group_window_counts": {
+        "tea": 36,
+        "toast": 75
+      },
+      "group_eval_window_counts": {
+        "tea": 18,
+        "toast": 38
+      },
+      "group_spans": {
+        "tea": [
+          [
+            2291.285553,
+            2482.949358
+          ]
+        ],
+        "toast": [
+          [
+            2549.867256,
+            2750.605224
+          ],
+          [
+            2786.19812,
+            2975.0
+          ]
+        ]
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -56.0,
+        "audit_raw_duration_s": 2979.9056,
+        "audit_fit_count": 7
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-94-c\\eeg\\living-lab-tasks\\sub-94-c_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-94-c\\annotation\\sub-94-c_annot.csv"
+    },
+    {
+      "session": "sub-96-a",
+      "shift_s": -90.0,
+      "raw_duration_s": 2108.0361000000003,
+      "window_extent_s": 2105.0,
+      "fitting_tasks": [
+        "Balance",
+        "4m Walk",
+        "Sit to Stand",
+        "Sit on Bed",
+        "Kettel Task",
+        "Toast Task1",
+        "Toast Task2"
+      ],
+      "non_fitting_tasks": [
+        "Suspine Measure",
+        "Standing Still"
+      ],
+      "group_window_counts": {
+        "tea": 53,
+        "toast": 59
+      },
+      "group_eval_window_counts": {
+        "tea": 26,
+        "toast": 29
+      },
+      "group_spans": {
+        "tea": [
+          [
+            1334.360871,
+            1609.889156
+          ]
+        ],
+        "toast": [
+          [
+            1793.080998,
+            1965.160684
+          ],
+          [
+            1968.632653,
+            2105.0
+          ]
+        ]
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -90.0,
+        "audit_raw_duration_s": 2108.0361000000003,
+        "audit_fit_count": 7
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-96-a\\eeg\\living-lab-tasks\\sub-96-a_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-96-a\\annotation\\sub-96-a_annot.csv"
+    },
+    {
+      "session": "sub-96-c",
+      "shift_s": -126.0,
+      "raw_duration_s": 1973.6134,
+      "window_extent_s": 1970.0,
+      "fitting_tasks": [
+        "Balance",
+        "4m Walk",
+        "Sit to Stand",
+        "Sit on Bed",
+        "Kettel Task",
+        "Toast Task1",
+        "Toast Task2"
+      ],
+      "non_fitting_tasks": [],
+      "group_window_counts": {
+        "tea": 58,
+        "toast": 58
+      },
+      "group_eval_window_counts": {
+        "tea": 29,
+        "toast": 29
+      },
+      "group_spans": {
+        "tea": [
+          [
+            1231.865349,
+            1531.265325
+          ]
+        ],
+        "toast": [
+          [
+            1661.449009,
+            1832.048674
+          ],
+          [
+            1834.697643,
+            1970.0
+          ]
+        ]
+      },
+      "crosscheck": {
+        "audit_best_shift_s": -126.0,
+        "audit_raw_duration_s": 1973.6134,
+        "audit_fit_count": 7
+      },
+      "problems": [],
+      "csv": "C:\\Data\\LivingLab_PD\\sub-96-c\\eeg\\living-lab-tasks\\sub-96-c_raw.csv",
+      "annotation": "C:\\Data\\LivingLab_PD\\sub-96-c\\annotation\\sub-96-c_annot.csv"
+    }
+  ],
+  "verdicts": [
+    {
+      "patient": "sub-103",
+      "eligible": false,
+      "reasons": [
+        "task group 'toast' has NO recoverable eval windows in session(s) A \u2014 task type would be confounded with ON/OFF"
+      ],
+      "per_session": {
+        "A": {
+          "shift_s": -5504.0,
+          "windows": {
+            "tea": 118,
+            "toast": 0
+          },
+          "eval_windows": {
+            "tea": 59,
+            "toast": 0
+          },
+          "spans": {
+            "tea": [
+              [
+                3500.362098,
+                4100.0
+              ]
+            ],
+            "toast": []
+          }
+        },
+        "C": {
+          "shift_s": -3636.0,
+          "windows": {
+            "tea": 117,
+            "toast": 299
+          },
+          "eval_windows": {
+            "tea": 58,
+            "toast": 149
+          },
+          "spans": {
+            "tea": [
+              [
+                601.563548,
+                1196.093707
+              ]
+            ],
+            "toast": [
+              [
+                1443.412733,
+                2207.905736
+              ],
+              [
+                2308.029213,
+                3055.0
+              ]
+            ]
+          }
+        }
+      }
+    },
+    {
+      "patient": "sub-106",
+      "eligible": false,
+      "reasons": [
+        "task group 'toast' has NO recoverable eval windows in session(s) A \u2014 task type would be confounded with ON/OFF"
+      ],
+      "per_session": {
+        "A": {
+          "shift_s": -5162.0,
+          "windows": {
+            "tea": 52,
+            "toast": 0
+          },
+          "eval_windows": {
+            "tea": 26,
+            "toast": 0
+          },
+          "spans": {
+            "tea": [
+              [
+                2920.7636,
+                3190.0
+              ]
+            ],
+            "toast": []
+          }
+        },
+        "C": {
+          "shift_s": -3608.0,
+          "windows": {
+            "tea": 43,
+            "toast": 82
+          },
+          "eval_windows": {
+            "tea": 22,
+            "toast": 41
+          },
+          "spans": {
+            "tea": [
+              [
+                1028.574665,
+                1254.728645
+              ]
+            ],
+            "toast": [
+              [
+                1300.045592,
+                1535.583544
+              ],
+              [
+                1726.019627,
+                1920.0
+              ]
+            ]
+          }
+        }
+      }
+    },
+    {
+      "patient": "sub-107",
+      "eligible": true,
+      "reasons": [],
+      "per_session": {
+        "A": {
+          "shift_s": -3664.0,
+          "windows": {
+            "tea": 54,
+            "toast": 127
+          },
+          "eval_windows": {
+            "tea": 27,
+            "toast": 64
+          },
+          "spans": {
+            "tea": [
+              [
+                1606.274547,
+                1888.550043
+              ]
+            ],
+            "toast": [
+              [
+                2159.623444,
+                2492.526272
+              ],
+              [
+                2603.51842,
+                2920.0
+              ]
+            ]
+          }
+        },
+        "C": {
+          "shift_s": -3728.0,
+          "windows": {
+            "tea": 44,
+            "toast": 66
+          },
+          "eval_windows": {
+            "tea": 22,
+            "toast": 33
+          },
+          "spans": {
+            "tea": [
+              [
+                714.876703,
+                943.051968
+              ]
+            ],
+            "toast": [
+              [
+                1298.611842,
+                1635.0
+              ]
+            ]
+          }
+        }
+      }
+    },
+    {
+      "patient": "sub-114",
+      "eligible": true,
+      "reasons": [],
+      "per_session": {
+        "A": {
+          "shift_s": -192.0,
+          "windows": {
+            "tea": 61,
+            "toast": 147
+          },
+          "eval_windows": {
+            "tea": 30,
+            "toast": 73
+          },
+          "spans": {
+            "tea": [
+              [
+                2104.448966,
+                2415.193565
+              ]
+            ],
+            "toast": [
+              [
+                2543.84953,
+                2933.210104
+              ],
+              [
+                2934.410132,
+                3295.0
+              ]
+            ]
+          }
+        },
+        "C": {
+          "shift_s": -2056.0,
+          "windows": {
+            "tea": 54,
+            "toast": 153
+          },
+          "eval_windows": {
+            "tea": 27,
+            "toast": 76
+          },
+          "spans": {
+            "tea": [
+              [
+                4287.831686,
+                4566.015905
+              ]
+            ],
+            "toast": [
+              [
+                4914.873148,
+                5327.209819
+              ],
+              [
+                5344.768591,
+                5710.0
+              ]
+            ]
+          }
+        }
+      }
+    },
+    {
+      "patient": "sub-115",
+      "eligible": true,
+      "reasons": [],
+      "per_session": {
+        "A": {
+          "shift_s": -162.0,
+          "windows": {
+            "tea": 47,
+            "toast": 85
+          },
+          "eval_windows": {
+            "tea": 24,
+            "toast": 42
+          },
+          "spans": {
+            "tea": [
+              [
+                2105.285611,
+                2350.934444
+              ]
+            ],
+            "toast": [
+              [
+                2601.376324,
+                3035.0
+              ]
+            ]
+          }
+        },
+        "C": {
+          "shift_s": -16.0,
+          "windows": {
+            "tea": 43,
+            "toast": 141
+          },
+          "eval_windows": {
+            "tea": 22,
+            "toast": 71
+          },
+          "spans": {
+            "tea": [
+              [
+                1125.387875,
+                1350.498511
+              ]
+            ],
+            "toast": [
+              [
+                1448.831525,
+                1855.806929
+              ],
+              [
+                1887.473376,
+                2200.0
+              ]
+            ]
+          }
+        }
+      }
+    },
+    {
+      "patient": "sub-116",
+      "eligible": true,
+      "reasons": [],
+      "per_session": {
+        "A": {
+          "shift_s": -12.0,
+          "windows": {
+            "tea": 68,
+            "toast": 143
+          },
+          "eval_windows": {
+            "tea": 34,
+            "toast": 72
+          },
+          "spans": {
+            "tea": [
+              [
+                2257.727722,
+                2609.590462
+              ]
+            ],
+            "toast": [
+              [
+                2649.898229,
+                3208.17629
+              ],
+              [
+                3416.865616,
+                3590.0
+              ]
+            ]
+          }
+        },
+        "C": {
+          "shift_s": -26.0,
+          "windows": {
+            "tea": 54,
+            "toast": 92
+          },
+          "eval_windows": {
+            "tea": 27,
+            "toast": 46
+          },
+          "spans": {
+            "tea": [
+              [
+                1746.791488,
+                2025.054981
+              ]
+            ],
+            "toast": [
+              [
+                2090.921835,
+                2321.961921
+              ],
+              [
+                2323.009731,
+                2570.0
+              ]
+            ]
+          }
+        }
+      }
+    },
+    {
+      "patient": "sub-117",
+      "eligible": false,
+      "reasons": [
+        "task group 'tea' has NO recoverable eval windows in session(s) C \u2014 task type would be confounded with ON/OFF",
+        "task group 'toast' has NO recoverable eval windows in session(s) C \u2014 task type would be confounded with ON/OFF"
+      ],
+      "per_session": {
+        "A": {
+          "shift_s": -16.0,
+          "windows": {
+            "tea": 60,
+            "toast": 151
+          },
+          "eval_windows": {
+            "tea": 30,
+            "toast": 75
+          },
+          "spans": {
+            "tea": [
+              [
+                1188.94936,
+                1498.832714
+              ]
+            ],
+            "toast": [
+              [
+                1625.714785,
+                1958.794731
+              ],
+              [
+                1960.019649,
+                2405.0
+              ]
+            ]
+          }
+        },
+        "C": {
+          "shift_s": -546.0,
+          "windows": {
+            "tea": 0,
+            "toast": 0
+          },
+          "eval_windows": {
+            "tea": 0,
+            "toast": 0
+          },
+          "spans": {
+            "tea": [],
+            "toast": []
+          }
+        }
+      }
+    },
+    {
+      "patient": "sub-119",
+      "eligible": true,
+      "reasons": [],
+      "per_session": {
+        "A": {
+          "shift_s": -16.0,
+          "windows": {
+            "tea": 52,
+            "toast": 154
+          },
+          "eval_windows": {
+            "tea": 26,
+            "toast": 77
+          },
+          "spans": {
+            "tea": [
+              [
+                1263.002687,
+                1533.856437
+              ]
+            ],
+            "toast": [
+              [
+                1562.241441,
+                1955.657653
+              ],
+              [
+                1957.611002,
+                2350.0
+              ]
+            ]
+          }
+        },
+        "C": {
+          "shift_s": -24.0,
+          "windows": {
+            "tea": 97,
+            "toast": 159
+          },
+          "eval_windows": {
+            "tea": 49,
+            "toast": 79
+          },
+          "spans": {
+            "tea": [
+              [
+                1556.0541,
+                2054.981809
+              ]
+            ],
+            "toast": [
+              [
+                2229.197249,
+                2647.813589
+              ],
+              [
+                2651.589605,
+                3045.0
+              ]
+            ]
+          }
+        }
+      }
+    },
+    {
+      "patient": "sub-121",
+      "eligible": true,
+      "reasons": [],
+      "per_session": {
+        "A": {
+          "shift_s": 724.0,
+          "windows": {
+            "tea": 55,
+            "toast": 60
+          },
+          "eval_windows": {
+            "tea": 28,
+            "toast": 30
+          },
+          "spans": {
+            "tea": [
+              [
+                887.540348,
+                1174.24518
+              ]
+            ],
+            "toast": [
+              [
+                1199.032429,
+                1505.0
+              ]
+            ]
+          }
+        },
+        "C": {
+          "shift_s": -710.0,
+          "windows": {
+            "tea": 103,
+            "toast": 123
+          },
+          "eval_windows": {
+            "tea": 52,
+            "toast": 62
+          },
+          "spans": {
+            "tea": [
+              [
+                2335.241704,
+                2862.055431
+              ]
+            ],
+            "toast": [
+              [
+                3019.352417,
+                3353.1327
+              ],
+              [
+                3359.844752,
+                3655.0
+              ]
+            ]
+          }
+        }
+      }
+    },
+    {
+      "patient": "sub-123",
+      "eligible": true,
+      "reasons": [],
+      "per_session": {
+        "A": {
+          "shift_s": -8.0,
+          "windows": {
+            "tea": 73,
+            "toast": 162
+          },
+          "eval_windows": {
+            "tea": 36,
+            "toast": 81
+          },
+          "spans": {
+            "tea": [
+              [
+                1171.752546,
+                1546.459669
+              ]
+            ],
+            "toast": [
+              [
+                1754.964103,
+                2211.11862
+              ],
+              [
+                2211.951995,
+                2580.0
+              ]
+            ]
+          }
+        },
+        "C": {
+          "shift_s": -8.0,
+          "windows": {
+            "tea": 54,
+            "toast": 86
+          },
+          "eval_windows": {
+            "tea": 27,
+            "toast": 43
+          },
+          "spans": {
+            "tea": [
+              [
+                1252.036882,
+                1532.253042
+              ]
+            ],
+            "toast": [
+              [
+                1549.173814,
+                1861.348562
+              ],
+              [
+                1862.984553,
+                1995.0
+              ]
+            ]
+          }
+        }
+      }
+    },
+    {
+      "patient": "sub-125",
+      "eligible": true,
+      "reasons": [],
+      "per_session": {
+        "A": {
+          "shift_s": -3610.0,
+          "windows": {
+            "tea": 47,
+            "toast": 159
+          },
+          "eval_windows": {
+            "tea": 23,
+            "toast": 79
+          },
+          "spans": {
+            "tea": [
+              [
+                2081.534151,
+                2329.421103
+              ]
+            ],
+            "toast": [
+              [
+                2413.707651,
+                2941.20449
+              ],
+              [
+                2942.284202,
+                3225.0
+              ]
+            ]
+          }
+        },
+        "C": {
+          "shift_s": -3614.0,
+          "windows": {
+            "tea": 49,
+            "toast": 119
+          },
+          "eval_windows": {
+            "tea": 24,
+            "toast": 60
+          },
+          "spans": {
+            "tea": [
+              [
+                1442.187247,
+                1699.516888
+              ]
+            ],
+            "toast": [
+              [
+                1768.107274,
+                2040.503411
+              ],
+              [
+                2044.693676,
+                2380.0
+              ]
+            ]
+          }
+        }
+      }
+    },
+    {
+      "patient": "sub-129",
+      "eligible": true,
+      "reasons": [],
+      "per_session": {
+        "A": {
+          "shift_s": -3610.0,
+          "windows": {
+            "tea": 57,
+            "toast": 156
+          },
+          "eval_windows": {
+            "tea": 28,
+            "toast": 78
+          },
+          "spans": {
+            "tea": [
+              [
+                1030.8267,
+                1327.665027
+              ]
+            ],
+            "toast": [
+              [
+                1582.06344,
+                2008.183814
+              ],
+              [
+                2017.245338,
+                2390.0
+              ]
+            ]
+          }
+        },
+        "C": {
+          "shift_s": -3668.0,
+          "windows": {
+            "tea": 73,
+            "toast": 181
+          },
+          "eval_windows": {
+            "tea": 36,
+            "toast": 91
+          },
+          "spans": {
+            "tea": [
+              [
+                1480.316817,
+                1856.224784
+              ]
+            ],
+            "toast": [
+              [
+                1957.942701,
+                2456.931506
+              ],
+              [
+                2458.67685,
+                2880.0
+              ]
+            ]
+          }
+        }
+      }
+    },
+    {
+      "patient": "sub-131",
+      "eligible": true,
+      "reasons": [],
+      "per_session": {
+        "A": {
+          "shift_s": -3626.0,
+          "windows": {
+            "tea": 42,
+            "toast": 161
+          },
+          "eval_windows": {
+            "tea": 21,
+            "toast": 81
+          },
+          "spans": {
+            "tea": [
+              [
+                1665.350275,
+                1885.027707
+              ]
+            ],
+            "toast": [
+              [
+                2136.922208,
+                2615.514053
+              ],
+              [
+                2666.925594,
+                3010.0
+              ]
+            ]
+          }
+        },
+        "C": {
+          "shift_s": -3618.0,
+          "windows": {
+            "tea": 30,
+            "toast": 170
+          },
+          "eval_windows": {
+            "tea": 15,
+            "toast": 86
+          },
+          "spans": {
+            "tea": [
+              [
+                800.10324,
+                964.961294
+              ]
+            ],
+            "toast": [
+              [
+                1256.13722,
+                1683.042394
+              ],
+              [
+                1705.304714,
+                2150.0
+              ]
+            ]
+          }
+        }
+      }
+    },
+    {
+      "patient": "sub-134",
+      "eligible": true,
+      "reasons": [],
+      "per_session": {
+        "A": {
+          "shift_s": -346.0,
+          "windows": {
+            "tea": 60,
+            "toast": 72
+          },
+          "eval_windows": {
+            "tea": 30,
+            "toast": 36
+          },
+          "spans": {
+            "tea": [
+              [
+                2356.691312,
+                2665.887874
+              ]
+            ],
+            "toast": [
+              [
+                2793.880933,
+                3160.0
+              ]
+            ]
+          }
+        },
+        "C": {
+          "shift_s": -64.0,
+          "windows": {
+            "tea": 48,
+            "toast": 132
+          },
+          "eval_windows": {
+            "tea": 24,
+            "toast": 66
+          },
+          "spans": {
+            "tea": [
+              [
+                2212.873752,
+                2461.775317
+              ]
+            ],
+            "toast": [
+              [
+                2530.611747,
+                2901.126444
+              ],
+              [
+                2902.166709,
+                3210.0
+              ]
+            ]
+          }
+        }
+      }
+    },
+    {
+      "patient": "sub-135",
+      "eligible": true,
+      "reasons": [],
+      "per_session": {
+        "A": {
+          "shift_s": -3610.0,
+          "windows": {
+            "tea": 60,
+            "toast": 173
+          },
+          "eval_windows": {
+            "tea": 30,
+            "toast": 86
+          },
+          "spans": {
+            "tea": [
+              [
+                1400.479846,
+                1710.81598
+              ]
+            ],
+            "toast": [
+              [
+                1782.342202,
+                2257.530073
+              ],
+              [
+                2293.729315,
+                2700.0
+              ]
+            ]
+          }
+        },
+        "C": {
+          "shift_s": -3620.0,
+          "windows": {
+            "tea": 87,
+            "toast": 207
+          },
+          "eval_windows": {
+            "tea": 44,
+            "toast": 103
+          },
+          "spans": {
+            "tea": [
+              [
+                1788.469895,
+                2233.526645
+              ]
+            ],
+            "toast": [
+              [
+                2373.127684,
+                2819.842683
+              ],
+              [
+                2827.703128,
+                3435.0
+              ]
+            ]
+          }
+        }
+      }
+    },
+    {
+      "patient": "sub-34",
+      "eligible": false,
+      "reasons": [
+        "task group 'tea' has NO recoverable eval windows in session(s) A/C \u2014 task type would be confounded with ON/OFF",
+        "task group 'toast' has NO recoverable eval windows in session(s) A/C \u2014 task type would be confounded with ON/OFF"
+      ],
+      "per_session": {
+        "A": {
+          "shift_s": -2624.0,
+          "windows": {
+            "tea": 0,
+            "toast": 0
+          },
+          "eval_windows": {
+            "tea": 0,
+            "toast": 0
+          },
+          "spans": {
+            "tea": [],
+            "toast": []
+          }
+        },
+        "C": {
+          "shift_s": -3574.0,
+          "windows": {
+            "tea": 0,
+            "toast": 0
+          },
+          "eval_windows": {
+            "tea": 0,
+            "toast": 0
+          },
+          "spans": {
+            "tea": [],
+            "toast": []
+          }
+        }
+      }
+    },
+    {
+      "patient": "sub-42",
+      "eligible": false,
+      "reasons": [
+        "task group 'toast' has NO recoverable eval windows in session(s) C \u2014 task type would be confounded with ON/OFF"
+      ],
+      "per_session": {
+        "A": {
+          "shift_s": -584.0,
+          "windows": {
+            "tea": 36,
+            "toast": 96
+          },
+          "eval_windows": {
+            "tea": 18,
+            "toast": 48
+          },
+          "spans": {
+            "tea": [
+              [
+                2505.38309,
+                2698.98243
+              ]
+            ],
+            "toast": [
+              [
+                2897.80316,
+                3385.0
+              ]
+            ]
+          }
+        },
+        "C": {
+          "shift_s": -1864.0,
+          "windows": {
+            "tea": 46,
+            "toast": 0
+          },
+          "eval_windows": {
+            "tea": 23,
+            "toast": 0
+          },
+          "spans": {
+            "tea": [
+              [
+                851.21675,
+                1090.0
+              ]
+            ],
+            "toast": []
+          }
+        }
+      }
+    },
+    {
+      "patient": "sub-48",
+      "eligible": false,
+      "reasons": [
+        "task group 'toast' has NO recoverable eval windows in session(s) A/C \u2014 task type would be confounded with ON/OFF"
+      ],
+      "per_session": {
+        "A": {
+          "shift_s": 730.0,
+          "windows": {
+            "tea": 74,
+            "toast": 0
+          },
+          "eval_windows": {
+            "tea": 37,
+            "toast": 0
+          },
+          "spans": {
+            "tea": [
+              [
+                1174.068034,
+                1550.0
+              ]
+            ],
+            "toast": []
+          }
+        },
+        "C": {
+          "shift_s": 1870.0,
+          "windows": {
+            "tea": 79,
+            "toast": 0
+          },
+          "eval_windows": {
+            "tea": 40,
+            "toast": 0
+          },
+          "spans": {
+            "tea": [
+              [
+                645.536992,
+                1050.0
+              ]
+            ],
+            "toast": []
+          }
+        }
+      }
+    },
+    {
+      "patient": "sub-51",
+      "eligible": true,
+      "reasons": [],
+      "per_session": {
+        "A": {
+          "shift_s": -1006.0,
+          "windows": {
+            "tea": 55,
+            "toast": 115
+          },
+          "eval_windows": {
+            "tea": 28,
+            "toast": 57
+          },
+          "spans": {
+            "tea": [
+              [
+                2876.297432,
+                3161.744511
+              ]
+            ],
+            "toast": [
+              [
+                3571.569882,
+                4155.0
+              ]
+            ]
+          }
+        },
+        "C": {
+          "shift_s": -330.0,
+          "windows": {
+            "tea": 53,
+            "toast": 84
+          },
+          "eval_windows": {
+            "tea": 27,
+            "toast": 42
+          },
+          "spans": {
+            "tea": [
+              [
+                835.32843,
+                1114.065148
+              ]
+            ],
+            "toast": [
+              [
+                1212.169007,
+                1640.0
+              ]
+            ]
+          }
+        }
+      }
+    },
+    {
+      "patient": "sub-53",
+      "eligible": false,
+      "reasons": [
+        "C: TASK SPANS OVERLAP by 350.1s (tea vs toast) \u2014 the annotation CSV logs these as the same/overlapping interval, so a 'task split' here would train and test on the same windows"
+      ],
+      "per_session": {
+        "A": {
+          "shift_s": -142.0,
+          "windows": {
+            "tea": 62,
+            "toast": 90
+          },
+          "eval_windows": {
+            "tea": 31,
+            "toast": 45
+          },
+          "spans": {
+            "tea": [
+              [
+                1688.055235,
+                2007.73183
+              ]
+            ],
+            "toast": [
+              [
+                2273.306869,
+                2730.0
+              ]
+            ]
+          }
+        },
+        "C": {
+          "shift_s": -242.0,
+          "windows": {
+            "tea": 69,
+            "toast": 69
+          },
+          "eval_windows": {
+            "tea": 35,
+            "toast": 35
+          },
+          "spans": {
+            "tea": [
+              [
+                979.899524,
+                1330.0
+              ]
+            ],
+            "toast": [
+              [
+                979.899524,
+                1330.0
+              ]
+            ]
+          }
+        }
+      }
+    },
+    {
+      "patient": "sub-62",
+      "eligible": false,
+      "reasons": [
+        "task group 'tea' has NO recoverable eval windows in session(s) A \u2014 task type would be confounded with ON/OFF",
+        "task group 'toast' has NO recoverable eval windows in session(s) A \u2014 task type would be confounded with ON/OFF"
+      ],
+      "per_session": {
+        "A": {
+          "shift_s": -5148.0,
+          "windows": {
+            "tea": 0,
+            "toast": 0
+          },
+          "eval_windows": {
+            "tea": 0,
+            "toast": 0
+          },
+          "spans": {
+            "tea": [],
+            "toast": []
+          }
+        },
+        "C": {
+          "shift_s": -3630.0,
+          "windows": {
+            "tea": 43,
+            "toast": 71
+          },
+          "eval_windows": {
+            "tea": 21,
+            "toast": 35
+          },
+          "spans": {
+            "tea": [
+              [
+                1512.958045,
+                1738.14158
+              ]
+            ],
+            "toast": [
+              [
+                1833.180698,
+                2195.0
+              ]
+            ]
+          }
+        }
+      }
+    },
+    {
+      "patient": "sub-69",
+      "eligible": false,
+      "reasons": [
+        "task group 'toast' has NO recoverable eval windows in session(s) A \u2014 task type would be confounded with ON/OFF"
+      ],
+      "per_session": {
+        "A": {
+          "shift_s": -4592.0,
+          "windows": {
+            "tea": 104,
+            "toast": 0
+          },
+          "eval_windows": {
+            "tea": 52,
+            "toast": 0
+          },
+          "spans": {
+            "tea": [
+              [
+                1538.619458,
+                2065.0
+              ]
+            ],
+            "toast": []
+          }
+        },
+        "C": {
+          "shift_s": -3772.0,
+          "windows": {
+            "tea": 57,
+            "toast": 133
+          },
+          "eval_windows": {
+            "tea": 29,
+            "toast": 66
+          },
+          "spans": {
+            "tea": [
+              [
+                609.510357,
+                900.161749
+              ]
+            ],
+            "toast": [
+              [
+                1001.120318,
+                1675.0
+              ]
+            ]
+          }
+        }
+      }
+    },
+    {
+      "patient": "sub-70",
+      "eligible": false,
+      "reasons": [
+        "task group 'tea' has NO recoverable eval windows in session(s) C \u2014 task type would be confounded with ON/OFF",
+        "task group 'toast' has NO recoverable eval windows in session(s) C \u2014 task type would be confounded with ON/OFF"
+      ],
+      "per_session": {
+        "A": {
+          "shift_s": -5706.0,
+          "windows": {
+            "tea": 61,
+            "toast": 84
+          },
+          "eval_windows": {
+            "tea": 31,
+            "toast": 42
+          },
+          "spans": {
+            "tea": [
+              [
+                2655.772991,
+                2972.251427
+              ]
+            ],
+            "toast": [
+              [
+                3508.330523,
+                3935.0
+              ]
+            ]
+          }
+        },
+        "C": {
+          "shift_s": -5594.0,
+          "windows": {
+            "tea": 0,
+            "toast": 0
+          },
+          "eval_windows": {
+            "tea": 0,
+            "toast": 0
+          },
+          "spans": {
+            "tea": [],
+            "toast": []
+          }
+        }
+      }
+    },
+    {
+      "patient": "sub-71",
+      "eligible": true,
+      "reasons": [],
+      "per_session": {
+        "A": {
+          "shift_s": -3612.0,
+          "windows": {
+            "tea": 60,
+            "toast": 127
+          },
+          "eval_windows": {
+            "tea": 30,
+            "toast": 63
+          },
+          "spans": {
+            "tea": [
+              [
+                362.540463,
+                673.905712
+              ]
+            ],
+            "toast": [
+              [
+                722.348816,
+                1365.0
+              ]
+            ]
+          }
+        },
+        "C": {
+          "shift_s": -3612.0,
+          "windows": {
+            "tea": 61,
+            "toast": 115
+          },
+          "eval_windows": {
+            "tea": 30,
+            "toast": 57
+          },
+          "spans": {
+            "tea": [
+              [
+                1482.39371,
+                1795.066408
+              ]
+            ],
+            "toast": [
+              [
+                1812.331067,
+                2395.0
+              ]
+            ]
+          }
+        }
+      }
+    },
+    {
+      "patient": "sub-72",
+      "eligible": false,
+      "reasons": [
+        "task group 'tea' has NO recoverable eval windows in session(s) A \u2014 task type would be confounded with ON/OFF",
+        "task group 'toast' has NO recoverable eval windows in session(s) A \u2014 task type would be confounded with ON/OFF"
+      ],
+      "per_session": {
+        "A": {
+          "shift_s": -5056.0,
+          "windows": {
+            "tea": 0,
+            "toast": 0
+          },
+          "eval_windows": {
+            "tea": 0,
+            "toast": 0
+          },
+          "spans": {
+            "tea": [],
+            "toast": []
+          }
+        },
+        "C": {
+          "shift_s": -4220.0,
+          "windows": {
+            "tea": 39,
+            "toast": 97
+          },
+          "eval_windows": {
+            "tea": 20,
+            "toast": 49
+          },
+          "spans": {
+            "tea": [
+              [
+                2325.186596,
+                2531.610349
+              ]
+            ],
+            "toast": [
+              [
+                2847.930392,
+                3340.0
+              ]
+            ]
+          }
+        }
+      }
+    },
+    {
+      "patient": "sub-73",
+      "eligible": false,
+      "reasons": [
+        "task group 'toast' has NO recoverable eval windows in session(s) C \u2014 task type would be confounded with ON/OFF"
+      ],
+      "per_session": {
+        "A": {
+          "shift_s": -3608.0,
+          "windows": {
+            "tea": 61,
+            "toast": 128
+          },
+          "eval_windows": {
+            "tea": 30,
+            "toast": 64
+          },
+          "spans": {
+            "tea": [
+              [
+                910.653521,
+                1226.981778
+              ]
+            ],
+            "toast": [
+              [
+                1644.174241,
+                2290.0
+              ]
+            ]
+          }
+        },
+        "C": {
+          "shift_s": -5114.0,
+          "windows": {
+            "tea": 51,
+            "toast": 0
+          },
+          "eval_windows": {
+            "tea": 26,
+            "toast": 0
+          },
+          "spans": {
+            "tea": [
+              [
+                3247.446107,
+                3510.0
+              ]
+            ],
+            "toast": []
+          }
+        }
+      }
+    },
+    {
+      "patient": "sub-76",
+      "eligible": false,
+      "reasons": [
+        "task group 'tea' has NO recoverable eval windows in session(s) A \u2014 task type would be confounded with ON/OFF",
+        "task group 'toast' has NO recoverable eval windows in session(s) A \u2014 task type would be confounded with ON/OFF"
+      ],
+      "per_session": {
+        "A": {
+          "shift_s": -5444.0,
+          "windows": {
+            "tea": 0,
+            "toast": 0
+          },
+          "eval_windows": {
+            "tea": 0,
+            "toast": 0
+          },
+          "spans": {
+            "tea": [],
+            "toast": []
+          }
+        },
+        "C": {
+          "shift_s": -3612.0,
+          "windows": {
+            "tea": 60,
+            "toast": 138
+          },
+          "eval_windows": {
+            "tea": 30,
+            "toast": 69
+          },
+          "spans": {
+            "tea": [
+              [
+                1638.689677,
+                1946.625833
+              ]
+            ],
+            "toast": [
+              [
+                2418.273721,
+                3115.0
+              ]
+            ]
+          }
+        }
+      }
+    },
+    {
+      "patient": "sub-77",
+      "eligible": true,
+      "reasons": [],
+      "per_session": {
+        "A": {
+          "shift_s": -3640.0,
+          "windows": {
+            "tea": 63,
+            "toast": 142
+          },
+          "eval_windows": {
+            "tea": 31,
+            "toast": 71
+          },
+          "spans": {
+            "tea": [
+              [
+                1681.566725,
+                2006.687383
+              ]
+            ],
+            "toast": [
+              [
+                2349.080294,
+                3065.0
+              ]
+            ]
+          }
+        },
+        "C": {
+          "shift_s": -3612.0,
+          "windows": {
+            "tea": 50,
+            "toast": 137
+          },
+          "eval_windows": {
+            "tea": 25,
+            "toast": 68
+          },
+          "spans": {
+            "tea": [
+              [
+                1130.801053,
+                1392.408748
+              ]
+            ],
+            "toast": [
+              [
+                1534.496837,
+                2225.0
+              ]
+            ]
+          }
+        }
+      }
+    },
+    {
+      "patient": "sub-81",
+      "eligible": true,
+      "reasons": [],
+      "per_session": {
+        "A": {
+          "shift_s": -12.0,
+          "windows": {
+            "tea": 71,
+            "toast": 146
+          },
+          "eval_windows": {
+            "tea": 35,
+            "toast": 72
+          },
+          "spans": {
+            "tea": [
+              [
+                1473.986769,
+                1839.450571
+              ]
+            ],
+            "toast": [
+              [
+                2132.477671,
+                2506.889743
+              ],
+              [
+                2510.741811,
+                2885.0
+              ]
+            ]
+          }
+        },
+        "C": {
+          "shift_s": -700.0,
+          "windows": {
+            "tea": 52,
+            "toast": 132
+          },
+          "eval_windows": {
+            "tea": 26,
+            "toast": 66
+          },
+          "spans": {
+            "tea": [
+              [
+                1886.819974,
+                2158.497352
+              ]
+            ],
+            "toast": [
+              [
+                2258.345816,
+                2520.713014
+              ],
+              [
+                2530.139192,
+                2945.0
+              ]
+            ]
+          }
+        }
+      }
+    },
+    {
+      "patient": "sub-84",
+      "eligible": false,
+      "reasons": [
+        "task group 'toast' has NO recoverable eval windows in session(s) A \u2014 task type would be confounded with ON/OFF"
+      ],
+      "per_session": {
+        "A": {
+          "shift_s": -2466.0,
+          "windows": {
+            "tea": 48,
+            "toast": 0
+          },
+          "eval_windows": {
+            "tea": 24,
+            "toast": 0
+          },
+          "spans": {
+            "tea": [
+              [
+                4380.558532,
+                4630.0
+              ]
+            ],
+            "toast": []
+          }
+        },
+        "C": {
+          "shift_s": -120.0,
+          "windows": {
+            "tea": 56,
+            "toast": 128
+          },
+          "eval_windows": {
+            "tea": 28,
+            "toast": 64
+          },
+          "spans": {
+            "tea": [
+              [
+                1227.288897,
+                1516.07847
+              ]
+            ],
+            "toast": [
+              [
+                1769.54012,
+                2132.6623
+              ],
+              [
+                2140.109927,
+                2435.0
+              ]
+            ]
+          }
+        }
+      }
+    },
+    {
+      "patient": "sub-90",
+      "eligible": true,
+      "reasons": [],
+      "per_session": {
+        "A": {
+          "shift_s": 928.0,
+          "windows": {
+            "tea": 50,
+            "toast": 51
+          },
+          "eval_windows": {
+            "tea": 25,
+            "toast": 26
+          },
+          "spans": {
+            "tea": [
+              [
+                926.010682,
+                1189.631469
+              ]
+            ],
+            "toast": [
+              [
+                1627.013248,
+                1890.0
+              ]
+            ]
+          }
+        },
+        "C": {
+          "shift_s": -1292.0,
+          "windows": {
+            "tea": 43,
+            "toast": 91
+          },
+          "eval_windows": {
+            "tea": 21,
+            "toast": 45
+          },
+          "spans": {
+            "tea": [
+              [
+                2443.696138,
+                2668.464452
+              ]
+            ],
+            "toast": [
+              [
+                2693.773523,
+                2957.411863
+              ],
+              [
+                2981.775109,
+                3190.0
+              ]
+            ]
+          }
+        }
+      }
+    },
+    {
+      "patient": "sub-92",
+      "eligible": true,
+      "reasons": [],
+      "per_session": {
+        "A": {
+          "shift_s": -122.0,
+          "windows": {
+            "tea": 45,
+            "toast": 92
+          },
+          "eval_windows": {
+            "tea": 23,
+            "toast": 46
+          },
+          "spans": {
+            "tea": [
+              [
+                1449.757151,
+                1682.505047
+              ]
+            ],
+            "toast": [
+              [
+                1880.504358,
+                2113.379975
+              ],
+              [
+                2119.824151,
+                2365.0
+              ]
+            ]
+          }
+        },
+        "C": {
+          "shift_s": -48.0,
+          "windows": {
+            "tea": 48,
+            "toast": 75
+          },
+          "eval_windows": {
+            "tea": 24,
+            "toast": 37
+          },
+          "spans": {
+            "tea": [
+              [
+                1552.128751,
+                1802.230242
+              ]
+            ],
+            "toast": [
+              [
+                2020.072131,
+                2269.468554
+              ],
+              [
+                2270.069344,
+                2420.0
+              ]
+            ]
+          }
+        }
+      }
+    },
+    {
+      "patient": "sub-93",
+      "eligible": false,
+      "reasons": [
+        "task group 'tea' has NO recoverable eval windows in session(s) C \u2014 task type would be confounded with ON/OFF",
+        "task group 'toast' has NO recoverable eval windows in session(s) A/C \u2014 task type would be confounded with ON/OFF"
+      ],
+      "per_session": {
+        "A": {
+          "shift_s": -2272.0,
+          "windows": {
+            "tea": 18,
+            "toast": 0
+          },
+          "eval_windows": {
+            "tea": 9,
+            "toast": 0
+          },
+          "spans": {
+            "tea": [
+              [
+                3932.598179,
+                4030.0
+              ]
+            ],
+            "toast": []
+          }
+        },
+        "C": {
+          "shift_s": -1108.0,
+          "windows": {
+            "tea": 0,
+            "toast": 0
+          },
+          "eval_windows": {
+            "tea": 0,
+            "toast": 0
+          },
+          "spans": {
+            "tea": [],
+            "toast": []
+          }
+        }
+      }
+    },
+    {
+      "patient": "sub-94",
+      "eligible": true,
+      "reasons": [],
+      "per_session": {
+        "A": {
+          "shift_s": -16.0,
+          "windows": {
+            "tea": 41,
+            "toast": 118
+          },
+          "eval_windows": {
+            "tea": 20,
+            "toast": 59
+          },
+          "spans": {
+            "tea": [
+              [
+                1580.459031,
+                1798.535921
+              ]
+            ],
+            "toast": [
+              [
+                2263.918611,
+                2594.42542
+              ],
+              [
+                2601.230913,
+                2880.0
+              ]
+            ]
+          }
+        },
+        "C": {
+          "shift_s": -56.0,
+          "windows": {
+            "tea": 36,
+            "toast": 75
+          },
+          "eval_windows": {
+            "tea": 18,
+            "toast": 38
+          },
+          "spans": {
+            "tea": [
+              [
+                2291.285553,
+                2482.949358
+              ]
+            ],
+            "toast": [
+              [
+                2549.867256,
+                2750.605224
+              ],
+              [
+                2786.19812,
+                2975.0
+              ]
+            ]
+          }
+        }
+      }
+    },
+    {
+      "patient": "sub-96",
+      "eligible": true,
+      "reasons": [],
+      "per_session": {
+        "A": {
+          "shift_s": -90.0,
+          "windows": {
+            "tea": 53,
+            "toast": 59
+          },
+          "eval_windows": {
+            "tea": 26,
+            "toast": 29
+          },
+          "spans": {
+            "tea": [
+              [
+                1334.360871,
+                1609.889156
+              ]
+            ],
+            "toast": [
+              [
+                1793.080998,
+                1965.160684
+              ],
+              [
+                1968.632653,
+                2105.0
+              ]
+            ]
+          }
+        },
+        "C": {
+          "shift_s": -126.0,
+          "windows": {
+            "tea": 58,
+            "toast": 58
+          },
+          "eval_windows": {
+            "tea": 29,
+            "toast": 29
+          },
+          "spans": {
+            "tea": [
+              [
+                1231.865349,
+                1531.265325
+              ]
+            ],
+            "toast": [
+              [
+                1661.449009,
+                1832.048674
+              ],
+              [
+                1834.697643,
+                1970.0
+              ]
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

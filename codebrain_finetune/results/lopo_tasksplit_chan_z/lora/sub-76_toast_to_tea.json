@@ -1,0 +1,91 @@
+{
+  "run_tag": "lopo_tasksplit_chan_z",
+  "git_sha": "2a1f9e6980392ab51d447f5853a2278e06d167b2",
+  "checkpoint_sha256": "d9714b8732c9883a04d022ee66254cd578ae1fa27f5458e6ab7f1aa96e9a7352",
+  "env": {
+    "torch": "2.11.0+cu128",
+    "numpy": "2.4.6",
+    "peft": "0.19.1",
+    "transformers": "5.14.1",
+    "sklearn": "1.9.0"
+  },
+  "cohort": {
+    "patients": 35,
+    "windows": 37174
+  },
+  "experiment": "lopo_tasksplit",
+  "lora_target": "attention",
+  "lora_hp": {
+    "r": 4,
+    "lr": 0.0005,
+    "dropout": 0.1
+  },
+  "preflight": {
+    "n_eligible": 27,
+    "n_cohort": 35
+  },
+  "arm": "lora",
+  "test_patient": "sub-76",
+  "n_train_patients": 26,
+  "train_task": "toast",
+  "test_task": "tea",
+  "direction": "toast_to_tea",
+  "seed": 5883,
+  "n_train_windows": 4893,
+  "n_val_windows": 1631,
+  "n_test_windows": 71,
+  "window": {
+    "balanced_accuracy": 0.4735772357723577,
+    "accuracy": 0.5211267605633803,
+    "auc": 0.5613821138211382,
+    "sensitivity": 0.16666666666666666,
+    "specificity": 0.7804878048780488,
+    "macro_f1": 0.4401669758812616,
+    "n": 71,
+    "n_pos": 30,
+    "n_neg": 41
+  },
+  "session": {
+    "balanced_accuracy": 0.5,
+    "accuracy": 0.5,
+    "auc": 1.0,
+    "sensitivity": 0.0,
+    "specificity": 1.0,
+    "macro_f1": 0.3333333333333333,
+    "n": 2,
+    "n_pos": 1,
+    "n_neg": 1
+  },
+  "session_scores": {
+    "sessions": [
+      "sub-76|A",
+      "sub-76|C"
+    ],
+    "patients": [
+      "sub-76",
+      "sub-76"
+    ],
+    "prob": [
+      0.2940415451075973,
+      0.316363662481308
+    ],
+    "y_true": [
+      0,
+      1
+    ],
+    "n_windows": [
+      41,
+      30
+    ]
+  },
+  "input_norm": "chan_z",
+  "norm_scale": 0.6627418398857117,
+  "wall_seconds": 350.02629685401917,
+  "peak_vram_bytes": 2689097216,
+  "best_epoch": 17,
+  "best_val_monitor": 0.7489826753831521,
+  "monitor": "inner_val_window_balanced_accuracy",
+  "trainable_params": 89729,
+  "lr": 0.0005,
+  "train_seconds": 348.59148478507996
+}

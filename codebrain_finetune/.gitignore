@@ -1,0 +1,2 @@
+# Everything for this folder is covered by the repository-root .gitignore:
+#   checkpoints/  external/  *.npz  __pycache__/

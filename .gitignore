@@ -1,0 +1,58 @@
+# ---------------------------------------------------------------------------
+# Data. None of this is redistributable and none of it belongs in git.
+# ---------------------------------------------------------------------------
+
+# Raw recordings live on a read-only shared drive and are never copied in.
+LivingLabData/
+
+# Preprocessed window caches produced by the Stage-0 pipeline (several GB).
+# Regenerate with scripts/preprocessing/run_cohort_continuous_csv.py.
+preprocessed/
+processed/
+processed_csv_continuous/
+
+# ---------------------------------------------------------------------------
+# Model weights and feature caches. Large, binary, and regeneratable.
+# ---------------------------------------------------------------------------
+
+# Pretrained CodeBrain weights (re-download from HuggingFace: YjMajy/CodeBrain)
+# and every per-run checkpoint written during fine-tuning.
+codebrain_finetune/checkpoints/
+
+# Cached backbone activations and control features written alongside results.
+*.npz
+
+# The upstream CodeBrain clone is third-party code; it is a dependency, not
+# part of this project's history. Clone it from github.com/jingyingma01/CodeBrain
+# into codebrain_finetune/external/ before running anything that needs it.
+codebrain_finetune/external/
+
+# ---------------------------------------------------------------------------
+# Working directories
+# ---------------------------------------------------------------------------
+
+scratch/
+backups/
+
+# ---------------------------------------------------------------------------
+# Python
+# ---------------------------------------------------------------------------
+
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.ipynb_checkpoints/
+*.egg-info/
+.venv/
+venv/
+
+# ---------------------------------------------------------------------------
+# Editor and OS
+# ---------------------------------------------------------------------------
+
+.vscode/
+.idea/
+.claude/
+.DS_Store
+Thumbs.db

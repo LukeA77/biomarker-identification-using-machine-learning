@@ -1,0 +1,2406 @@
+{
+  "run_tag": "tasksplit_controls_norm_none",
+  "arm": "chanamp",
+  "mode": "control_none",
+  "git_sha": "2a1f9e6980392ab51d447f5853a2278e06d167b2",
+  "n_patients": 27,
+  "n_directions": 2,
+  "patient_mean_balanced_accuracy": 0.9343625677330556,
+  "ci_low": 0.9010940678347209,
+  "ci_high": 0.9609044589474071,
+  "wilcoxon_p": 2.7943572738294682e-06,
+  "sign_test_p": 7.450580596923828e-09,
+  "ordering_frac": 1.0,
+  "ordering_p": 5.551115123125783e-17,
+  "control": "chanamp",
+  "description": "per-channel mean|x| (18 \u2014 electrode-contact fingerprint)",
+  "input_norm": "none",
+  "n_features": 18,
+  "n_records": 54,
+  "per_patient": {
+    "sub-103": 0.9832214765100671,
+    "sub-106": 1.0,
+    "sub-107": 0.9810606060606061,
+    "sub-114": 0.9931506849315068,
+    "sub-115": 0.8858766233766234,
+    "sub-116": 0.9212774648866638,
+    "sub-119": 0.9434009129967776,
+    "sub-121": 0.9489621489621489,
+    "sub-123": 0.9697997416020672,
+    "sub-125": 0.9735054347826086,
+    "sub-129": 0.9327991452991453,
+    "sub-131": 0.9939680232558139,
+    "sub-134": 0.8360348531636488,
+    "sub-135": 0.9781468531468531,
+    "sub-51": 0.8595602992154716,
+    "sub-62": 0.8060324129651861,
+    "sub-70": 0.8898233486943163,
+    "sub-71": 0.9874110563765737,
+    "sub-72": 0.923469387755102,
+    "sub-76": 0.9820968834688347,
+    "sub-77": 0.9353561523865129,
+    "sub-81": 0.6356032946811929,
+    "sub-84": 0.9180583501006037,
+    "sub-90": 1.0,
+    "sub-92": 1.0,
+    "sub-94": 0.9575075075075075,
+    "sub-96": 0.9916666666666667
+  },
+  "pooled_patient_level": {
+    "n_patients": 27,
+    "patients": [
+      "sub-103",
+      "sub-106",
+      "sub-107",
+      "sub-114",
+      "sub-115",
+      "sub-116",
+      "sub-119",
+      "sub-121",
+      "sub-123",
+      "sub-125",
+      "sub-129",
+      "sub-131",
+      "sub-134",
+      "sub-135",
+      "sub-51",
+      "sub-62",
+      "sub-70",
+      "sub-71",
+      "sub-72",
+      "sub-76",
+      "sub-77",
+      "sub-81",
+      "sub-84",
+      "sub-90",
+      "sub-92",
+      "sub-94",
+      "sub-96"
+    ],
+    "per_patient": {
+      "sub-103": 0.9832214765100671,
+      "sub-106": 1.0,
+      "sub-107": 0.9810606060606061,
+      "sub-114": 0.9931506849315068,
+      "sub-115": 0.8858766233766234,
+      "sub-116": 0.9212774648866638,
+      "sub-119": 0.9434009129967776,
+      "sub-121": 0.9489621489621489,
+      "sub-123": 0.9697997416020672,
+      "sub-125": 0.9735054347826086,
+      "sub-129": 0.9327991452991453,
+      "sub-131": 0.9939680232558139,
+      "sub-134": 0.8360348531636488,
+      "sub-135": 0.9781468531468531,
+      "sub-51": 0.8595602992154716,
+      "sub-62": 0.8060324129651861,
+      "sub-70": 0.8898233486943163,
+      "sub-71": 0.9874110563765737,
+      "sub-72": 0.923469387755102,
+      "sub-76": 0.9820968834688347,
+      "sub-77": 0.9353561523865129,
+      "sub-81": 0.6356032946811929,
+      "sub-84": 0.9180583501006037,
+      "sub-90": 1.0,
+      "sub-92": 1.0,
+      "sub-94": 0.9575075075075075,
+      "sub-96": 0.9916666666666667
+    },
+    "mean": 0.9343625677330556,
+    "median": 0.9575075075075075,
+    "std": 0.07949281671469224,
+    "ci_low": 0.9010940678347209,
+    "ci_high": 0.9609044589474071,
+    "ci": 0.95,
+    "n_resamples": 5000,
+    "chance": 0.5,
+    "n_above_chance": 27,
+    "n_below_chance": 0,
+    "n_ties": 0,
+    "wilcoxon": {
+      "statistic": 378.0,
+      "p_value": 2.7943572738294682e-06,
+      "alternative": "greater",
+      "n_nonzero": 27
+    },
+    "sign_test": {
+      "n_above": 27,
+      "n_effective": 27,
+      "p_value": 7.450580596923828e-09
+    }
+  },
+  "ordering": {
+    "n_direction_level": 54,
+    "n_correct_direction_level": 54,
+    "frac_correct": 1.0,
+    "binomial_p": 5.551115123125783e-17,
+    "per_patient_frac": {
+      "sub-103": 1.0,
+      "sub-106": 1.0,
+      "sub-107": 1.0,
+      "sub-114": 1.0,
+      "sub-115": 1.0,
+      "sub-116": 1.0,
+      "sub-119": 1.0,
+      "sub-121": 1.0,
+      "sub-123": 1.0,
+      "sub-125": 1.0,
+      "sub-129": 1.0,
+      "sub-131": 1.0,
+      "sub-134": 1.0,
+      "sub-135": 1.0,
+      "sub-51": 1.0,
+      "sub-62": 1.0,
+      "sub-70": 1.0,
+      "sub-71": 1.0,
+      "sub-72": 1.0,
+      "sub-76": 1.0,
+      "sub-77": 1.0,
+      "sub-81": 1.0,
+      "sub-84": 1.0,
+      "sub-90": 1.0,
+      "sub-92": 1.0,
+      "sub-94": 1.0,
+      "sub-96": 1.0
+    },
+    "n_patients_both_directions_correct": 27,
+    "n_patients_neither_direction_correct": 0,
+    "n_patients": 27
+  },
+  "auc_max": 1.0,
+  "auc_mean": 0.9564144601231737,
+  "n_runs_auc_above_0_95": 42,
+  "records": [
+    {
+      "patient": "sub-103",
+      "control": "chanamp",
+      "train_task": "tea",
+      "test_task": "toast",
+      "direction": "tea_to_toast",
+      "n_train_windows": 236,
+      "n_test_windows": 299,
+      "n_features": 18,
+      "window": {
+        "balanced_accuracy": 0.9664429530201342,
+        "accuracy": 0.9665551839464883,
+        "auc": 0.9774496644295302,
+        "sensitivity": 1.0,
+        "specificity": 0.9328859060402684,
+        "macro_f1": 0.9665098566308243,
+        "n": 299,
+        "n_pos": 150,
+        "n_neg": 149
+      },
+      "session_scores": {
+        "sessions": [
+          "sub-103|A",
+          "sub-103|C"
+        ],
+        "prob": [
+          0.10350204477482343,
+          0.9727145523167765
+        ],
+        "y_true": [
+          0,
+          1
+        ],
+        "n_windows": [
+          149,
+          150
+        ]
+      },
+      "ordering_correct": true
+    },
+    {
+      "patient": "sub-103",
+      "control": "chanamp",
+      "train_task": "toast",
+      "test_task": "tea",
+      "direction": "toast_to_tea",
+      "n_train_windows": 598,
+      "n_test_windows": 119,
+      "n_features": 18,
+      "window": {
+        "balanced_accuracy": 1.0,
+        "accuracy": 1.0,
+        "auc": 1.0,
+        "sensitivity": 1.0,
+        "specificity": 1.0,
+        "macro_f1": 1.0,
+        "n": 119,
+        "n_pos": 59,
+        "n_neg": 60
+      },
+      "session_scores": {
+        "sessions": [
+          "sub-103|A",
+          "sub-103|C"
+        ],
+        "prob": [
+          0.03301178121532999,
+          0.9568684885571888
+        ],
+        "y_true": [
+          0,
+          1
+        ],
+        "n_windows": [
+          60,
+          59
+        ]
+      },
+      "ordering_correct": true
+    },
+    {
+      "patient": "sub-106",
+      "control": "chanamp",
+      "train_task": "tea",
+      "test_task": "toast",
+      "direction": "tea_to_toast",
+      "n_train_windows": 97,
+      "n_test_windows": 100,
+      "n_features": 18,
+      "window": {
+        "balanced_accuracy": 1.0,
+        "accuracy": 1.0,
+        "auc": 1.0,
+        "sensitivity": 1.0,
+        "specificity": 1.0,
+        "macro_f1": 1.0,
+        "n": 100,
+        "n_pos": 41,
+        "n_neg": 59
+      },
+      "session_scores": {
+        "sessions": [
+          "sub-106|A",
+          "sub-106|C"
+        ],
+        "prob": [
+          0.02202006395367539,
+          0.989226965691696
+        ],
+        "y_true": [
+          0,
+          1
+        ],
+        "n_windows": [
+          59,
+          41
+        ]
+      },
+      "ordering_correct": true
+    },
+    {
+      "patient": "sub-106",
+      "control": "chanamp",
+      "train_task": "toast",
+      "test_task": "tea",
+      "direction": "toast_to_tea",
+      "n_train_windows": 202,
+      "n_test_windows": 48,
+      "n_features": 18,
+      "window": {
+        "balanced_accuracy": 1.0,
+        "accuracy": 1.0,
+        "auc": 1.0,
+        "sensitivity": 1.0,
+        "specificity": 1.0,
+        "macro_f1": 1.0,
+        "n": 48,
+        "n_pos": 21,
+        "n_neg": 27
+      },
+      "session_scores": {
+        "sessions": [
+          "sub-106|A",
+          "sub-106|C"
+        ],
+        "prob": [
+          0.01703789237800215,
+          0.9730175009626116
+        ],
+        "y_true": [
+          0,
+          1
+        ],
+        "n_windows": [
+          27,
+          21
+        ]
+      },
+      "ordering_correct": true
+    },
+    {
+      "patient": "sub-107",
+      "control": "chanamp",
+      "train_task": "tea",
+      "test_task": "toast",
+      "direction": "tea_to_toast",
+      "n_train_windows": 98,
+      "n_test_windows": 96,
+      "n_features": 18,
+      "window": {
+        "balanced_accuracy": 0.9848484848484849,
+        "accuracy": 0.9895833333333334,
+        "auc": 0.9985569985569985,
+        "sensitivity": 0.9696969696969697,
+        "specificity": 1.0,
+        "macro_f1": 0.9883706844336766,
+        "n": 96,
+        "n_pos": 33,
+        "n_neg": 63
+      },
+      "session_scores": {
+        "sessions": [
+          "sub-107|A",
+          "sub-107|C"
+        ],
+        "prob": [
+          0.14192434618195818,
+          0.8442287150649
+        ],
+        "y_true": [
+          0,
+          1
+        ],
+        "n_windows": [
+          63,
+          33
+        ]
+      },
+      "ordering_correct": true
+    },
+    {
+      "patient": "sub-107",
+      "control": "chanamp",
+      "train_task": "toast",
+      "test_task": "tea",
+      "direction": "toast_to_tea",
+      "n_train_windows": 192,
+      "n_test_windows": 49,
+      "n_features": 18,
+      "window": {
+        "balanced_accuracy": 0.9772727272727273,
+        "accuracy": 0.9795918367346939,
+        "auc": 0.9949494949494949,
+        "sensitivity": 0.9545454545454546,
+        "specificity": 1.0,
+        "macro_f1": 0.9792811839323468,
+        "n": 49,
+        "n_pos": 22,
+        "n_neg": 27
+      },
+      "session_scores": {
+        "sessions": [
+          "sub-107|A",
+          "sub-107|C"
+        ],
+        "prob": [
+          0.07569839612473005,
+          0.9290659136523302
+        ],
+        "y_true": [
+          0,
+          1
+        ],
+        "n_windows": [
+          27,
+          22
+        ]
+      },
+      "ordering_correct": true
+    },
+    {
+      "patient": "sub-114",
+      "control": "chanamp",
+      "train_task": "tea",
+      "test_task": "toast",
+      "direction": "tea_to_toast",
+      "n_train_windows": 114,
+      "n_test_windows": 149,
+      "n_features": 18,
+      "window": {
+        "balanced_accuracy": 0.9863013698630136,
+        "accuracy": 0.9865771812080537,
+        "auc": 0.9881038211968277,
+        "sensitivity": 1.0,
+        "specificity": 0.9726027397260274,
+        "macro_f1": 0.986562049062049,
+        "n": 149,
+        "n_pos": 76,
+        "n_neg": 73
+      },
+      "session_scores": {
+        "sessions": [
+          "sub-114|A",
+          "sub-114|C"
+        ],
+        "prob": [
+          0.11156215047877334,
+          0.9191540440183209
+        ],
+        "y_true": [
+          0,
+          1
+        ],
+        "n_windows": [
+          73,
+          76
+        ]
+      },
+      "ordering_correct": true
+    },
+    {
+      "patient": "sub-114",
+      "control": "chanamp",
+      "train_task": "toast",
+      "test_task": "tea",
+      "direction": "toast_to_tea",
+      "n_train_windows": 300,
+      "n_test_windows": 57,
+      "n_features": 18,
+      "window": {
+        "balanced_accuracy": 1.0,
+        "accuracy": 1.0,
+        "auc": 1.0,
+        "sensitivity": 1.0,
+        "specificity": 1.0,
+        "macro_f1": 1.0,
+        "n": 57,
+        "n_pos": 27,
+        "n_neg": 30
+      },
+      "session_scores": {
+        "sessions": [
+          "sub-114|A",
+          "sub-114|C"
+        ],
+        "prob": [
+          0.03553892511899245,
+          0.9650406952750599
+        ],
+        "y_true": [
+          0,
+          1
+        ],
+        "n_windows": [
+          30,
+          27
+        ]
+      },
+      "ordering_correct": true
+    },
+    {
+      "patient": "sub-115",
+      "control": "chanamp",
+      "train_task": "tea",
+      "test_task": "toast",
+      "direction": "tea_to_toast",
+      "n_train_windows": 90,
+      "n_test_windows": 114,
+      "n_features": 18,
+      "window": {
+        "balanced_accuracy": 0.8172077922077923,
+        "accuracy": 0.7807017543859649,
+        "auc": 0.7685064935064934,
+        "sensitivity": 0.6571428571428571,
+        "specificity": 0.9772727272727273,
+        "macro_f1": 0.7805497805497805,
+        "n": 114,
+        "n_pos": 70,
+        "n_neg": 44
+      },
+      "session_scores": {
+        "sessions": [
+          "sub-115|A",
+          "sub-115|C"
+        ],
+        "prob": [
+          0.1478389656223139,
+          0.5482312901057748
+        ],
+        "y_true": [
+          0,
+          1
+        ],
+        "n_windows": [
+          44,
+          70
+        ]
+      },
+      "ordering_correct": true
+    },
+    {
+      "patient": "sub-115",
+      "control": "chanamp",
+      "train_task": "toast",
+      "test_task": "tea",
+      "direction": "toast_to_tea",
+      "n_train_windows": 228,
+      "n_test_windows": 45,
+      "n_features": 18,
+      "window": {
+        "balanced_accuracy": 0.9545454545454546,
+        "accuracy": 0.9555555555555556,
+        "auc": 0.950592885375494,
+        "sensitivity": 0.9090909090909091,
+        "specificity": 1.0,
+        "macro_f1": 0.9553571428571428,
+        "n": 45,
+        "n_pos": 22,
+        "n_neg": 23
+      },
+      "session_scores": {
+        "sessions": [
+          "sub-115|A",
+          "sub-115|C"
+        ],
+        "prob": [
+          0.07827108124261918,
+          0.7755741019549227
+        ],
+        "y_true": [
+          0,
+          1
+        ],
+        "n_windows": [
+          23,
+          22
+        ]
+      },
+      "ordering_correct": true
+    },
+    {
+      "patient": "sub-116",
+      "control": "chanamp",
+      "train_task": "tea",
+      "test_task": "toast",
+      "direction": "tea_to_toast",
+      "n_train_windows": 121,
+      "n_test_windows": 119,
+      "n_features": 18,
+      "window": {
+        "balanced_accuracy": 0.8866725768321513,
+        "accuracy": 0.907563025210084,
+        "auc": 0.9657210401891253,
+        "sensitivity": 0.7872340425531915,
+        "specificity": 0.9861111111111112,
+        "macro_f1": 0.8993464052287582,
+        "n": 119,
+        "n_pos": 47,
+        "n_neg": 72
+      },
+      "session_scores": {
+        "sessions": [
+          "sub-116|A",
+          "sub-116|C"
+        ],
+        "prob": [
+          0.1116999385224984,
+          0.732200126624797
+        ],
+        "y_true": [
+          0,
+          1
+        ],
+        "n_windows": [
+          72,
+          47
+        ]
+      },
+      "ordering_correct": true
+    },
+    {
+      "patient": "sub-116",
+      "control": "chanamp",
+      "train_task": "toast",
+      "test_task": "tea",
+      "direction": "toast_to_tea",
+      "n_train_windows": 238,
+      "n_test_windows": 60,
+      "n_features": 18,
+      "window": {
+        "balanced_accuracy": 0.9558823529411764,
+        "accuracy": 0.95,
+        "auc": 1.0,
+        "sensitivity": 1.0,
+        "specificity": 0.9117647058823529,
+        "macro_f1": 0.9496503496503497,
+        "n": 60,
+        "n_pos": 26,
+        "n_neg": 34
+      },
+      "session_scores": {
+        "sessions": [
+          "sub-116|A",
+          "sub-116|C"
+        ],
+        "prob": [
+          0.11565794121692384,
+          0.9219407788852295
+        ],
+        "y_true": [
+          0,
+          1
+        ],
+        "n_windows": [
+          34,
+          26
+        ]
+      },
+      "ordering_correct": true
+    },
+    {
+      "patient": "sub-119",
+      "control": "chanamp",
+      "train_task": "tea",
+      "test_task": "toast",
+      "direction": "tea_to_toast",
+      "n_train_windows": 150,
+      "n_test_windows": 156,
+      "n_features": 18,
+      "window": {
+        "balanced_accuracy": 0.9480263157894737,
+        "accuracy": 0.9487179487179487,
+        "auc": 0.965625,
+        "sensitivity": 0.975,
+        "specificity": 0.9210526315789473,
+        "macro_f1": 0.948582729070534,
+        "n": 156,
+        "n_pos": 80,
+        "n_neg": 76
+      },
+      "session_scores": {
+        "sessions": [
+          "sub-119|A",
+          "sub-119|C"
+        ],
+        "prob": [
+          0.12364806063286277,
+          0.8604956393824612
+        ],
+        "y_true": [
+          0,
+          1
+        ],
+        "n_windows": [
+          76,
+          80
+        ]
+      },
+      "ordering_correct": true
+    },
+    {
+      "patient": "sub-119",
+      "control": "chanamp",
+      "train_task": "toast",
+      "test_task": "tea",
+      "direction": "toast_to_tea",
+      "n_train_windows": 312,
+      "n_test_windows": 75,
+      "n_features": 18,
+      "window": {
+        "balanced_accuracy": 0.9387755102040816,
+        "accuracy": 0.92,
+        "auc": 0.9591836734693877,
+        "sensitivity": 0.8775510204081632,
+        "specificity": 1.0,
+        "macro_f1": 0.9156671664167917,
+        "n": 75,
+        "n_pos": 49,
+        "n_neg": 26
+      },
+      "session_scores": {
+        "sessions": [
+          "sub-119|A",
+          "sub-119|C"
+        ],
+        "prob": [
+          0.04816287724829909,
+          0.855030423380823
+        ],
+        "y_true": [
+          0,
+          1
+        ],
+        "n_windows": [
+          26,
+          49
+        ]
+      },
+      "ordering_correct": true
+    },
+    {
+      "patient": "sub-121",
+      "control": "chanamp",
+      "train_task": "tea",
+      "test_task": "toast",
+      "direction": "tea_to_toast",
+      "n_train_windows": 158,
+      "n_test_windows": 93,
+      "n_features": 18,
+      "window": {
+        "balanced_accuracy": 0.9253968253968254,
+        "accuracy": 0.946236559139785,
+        "auc": 0.8687830687830688,
+        "sensitivity": 0.9841269841269841,
+        "specificity": 0.8666666666666667,
+        "macro_f1": 0.9367605059159527,
+        "n": 93,
+        "n_pos": 63,
+        "n_neg": 30
+      },
+      "session_scores": {
+        "sessions": [
+          "sub-121|A",
+          "sub-121|C"
+        ],
+        "prob": [
+          0.213353065399513,
+          0.952418253310245
+        ],
+        "y_true": [
+          0,
+          1
+        ],
+        "n_windows": [
+          30,
+          63
+        ]
+      },
+      "ordering_correct": true
+    },
+    {
+      "patient": "sub-121",
+      "control": "chanamp",
+      "train_task": "toast",
+      "test_task": "tea",
+      "direction": "toast_to_tea",
+      "n_train_windows": 184,
+      "n_test_windows": 80,
+      "n_features": 18,
+      "window": {
+        "balanced_accuracy": 0.9725274725274725,
+        "accuracy": 0.975,
+        "auc": 0.9951923076923077,
+        "sensitivity": 0.9807692307692307,
+        "specificity": 0.9642857142857143,
+        "macro_f1": 0.9725274725274725,
+        "n": 80,
+        "n_pos": 52,
+        "n_neg": 28
+      },
+      "session_scores": {
+        "sessions": [
+          "sub-121|A",
+          "sub-121|C"
+        ],
+        "prob": [
+          0.09205321673010074,
+          0.888117838290076
+        ],
+        "y_true": [
+          0,
+          1
+        ],
+        "n_windows": [
+          28,
+          52
+        ]
+      },
+      "ordering_correct": true
+    },
+    {
+      "patient": "sub-123",
+      "control": "chanamp",
+      "train_task": "tea",
+      "test_task": "toast",
+      "direction": "tea_to_toast",
+      "n_train_windows": 127,
+      "n_test_windows": 124,
+      "n_features": 18,
+      "window": {
+        "balanced_accuracy": 0.9534883720930232,
+        "accuracy": 0.967741935483871,
+        "auc": 0.9819121447028424,
+        "sensitivity": 0.9069767441860465,
+        "specificity": 1.0,
+        "macro_f1": 0.9635615633264767,
+        "n": 124,
+        "n_pos": 43,
+        "n_neg": 81
+      },
+      "session_scores": {
+        "sessions": [
+          "sub-123|A",
+          "sub-123|C"
+        ],
+        "prob": [
+          0.05209627160123222,
+          0.8326931825780821
+        ],
+        "y_true": [
+          0,
+          1
+        ],
+        "n_windows": [
+          81,
+          43
+        ]
+      },
+      "ordering_correct": true
+    },
+    {
+      "patient": "sub-123",
+      "control": "chanamp",
+      "train_task": "toast",
+      "test_task": "tea",
+      "direction": "toast_to_tea",
+      "n_train_windows": 248,
+      "n_test_windows": 63,
+      "n_features": 18,
+      "window": {
+        "balanced_accuracy": 0.9861111111111112,
+        "accuracy": 0.9841269841269841,
+        "auc": 1.0,
+        "sensitivity": 1.0,
+        "specificity": 0.9722222222222222,
+        "macro_f1": 0.9838668373879642,
+        "n": 63,
+        "n_pos": 27,
+        "n_neg": 36
+      },
+      "session_scores": {
+        "sessions": [
+          "sub-123|A",
+          "sub-123|C"
+        ],
+        "prob": [
+          0.188701136680868,
+          0.9360349091577936
+        ],
+        "y_true": [
+          0,
+          1
+        ],
+        "n_windows": [
+          36,
+          27
+        ]
+      },
+      "ordering_correct": true
+    },
+    {
+      "patient": "sub-125",
+      "control": "chanamp",
+      "train_task": "tea",
+      "test_task": "toast",
+      "direction": "tea_to_toast",
+      "n_train_windows": 97,
+      "n_test_windows": 139,
+      "n_features": 18,
+      "window": {
+        "balanced_accuracy": 0.96875,
+        "accuracy": 0.9640287769784173,
+        "auc": 0.9891949152542373,
+        "sensitivity": 1.0,
+        "specificity": 0.9375,
+        "macro_f1": 0.963545764489903,
+        "n": 139,
+        "n_pos": 59,
+        "n_neg": 80
+      },
+      "session_scores": {
+        "sessions": [
+          "sub-125|A",
+          "sub-125|C"
+        ],
+        "prob": [
+          0.10790705698639291,
+          0.9497961652097746
+        ],
+        "y_true": [
+          0,
+          1
+        ],
+        "n_windows": [
+          80,
+          59
+        ]
+      },
+      "ordering_correct": true
+    },
+    {
+      "patient": "sub-125",
+      "control": "chanamp",
+      "train_task": "toast",
+      "test_task": "tea",
+      "direction": "toast_to_tea",
+      "n_train_windows": 279,
+      "n_test_windows": 48,
+      "n_features": 18,
+      "window": {
+        "balanced_accuracy": 0.9782608695652174,
+        "accuracy": 0.9791666666666666,
+        "auc": 0.9721739130434783,
+        "sensitivity": 1.0,
+        "specificity": 0.9565217391304348,
+        "macro_f1": 0.9790849673202614,
+        "n": 48,
+        "n_pos": 25,
+        "n_neg": 23
+      },
+      "session_scores": {
+        "sessions": [
+          "sub-125|A",
+          "sub-125|C"
+        ],
+        "prob": [
+          0.08762774651176994,
+          0.9257209037966976
+        ],
+        "y_true": [
+          0,
+          1
+        ],
+        "n_windows": [
+          23,
+          25
+        ]
+      },
+      "ordering_correct": true
+    },
+    {
+      "patient": "sub-129",
+      "control": "chanamp",
+      "train_task": "tea",
+      "test_task": "toast",
+      "direction": "tea_to_toast",
+      "n_train_windows": 130,
+      "n_test_windows": 168,
+      "n_features": 18,
+      "window": {
+        "balanced_accuracy": 0.9072649572649573,
+        "accuracy": 0.9107142857142857,
+        "auc": 0.9358974358974358,
+        "sensitivity": 0.9555555555555556,
+        "specificity": 0.8589743589743589,
+        "macro_f1": 0.9095574776585436,
+        "n": 168,
+        "n_pos": 90,
+        "n_neg": 78
+      },
+      "session_scores": {
+        "sessions": [
+          "sub-129|A",
+          "sub-129|C"
+        ],
+        "prob": [
+          0.3178422449942163,
+          0.8934856380726431
+        ],
+        "y_true": [
+          0,
+          1
+        ],
+        "n_windows": [
+          78,
+          90
+        ]
+      },
+      "ordering_correct": true
+    },
+    {
+      "patient": "sub-129",
+      "control": "chanamp",
+      "train_task": "toast",
+      "test_task": "tea",
+      "direction": "toast_to_tea",
+      "n_train_windows": 338,
+      "n_test_windows": 64,
+      "n_features": 18,
+      "window": {
+        "balanced_accuracy": 0.9583333333333333,
+        "accuracy": 0.953125,
+        "auc": 0.9454365079365079,
+        "sensitivity": 0.9166666666666666,
+        "specificity": 1.0,
+        "macro_f1": 0.952837140751658,
+        "n": 64,
+        "n_pos": 36,
+        "n_neg": 28
+      },
+      "session_scores": {
+        "sessions": [
+          "sub-129|A",
+          "sub-129|C"
+        ],
+        "prob": [
+          0.16470097162484626,
+          0.8278612519877444
+        ],
+        "y_true": [
+          0,
+          1
+        ],
+        "n_windows": [
+          28,
+          36
+        ]
+      },
+      "ordering_correct": true
+    },
+    {
+      "patient": "sub-131",
+      "control": "chanamp",
+      "train_task": "tea",
+      "test_task": "toast",
+      "direction": "tea_to_toast",
+      "n_train_windows": 73,
+      "n_test_windows": 166,
+      "n_features": 18,
+      "window": {
+        "balanced_accuracy": 0.9879360465116279,
+        "accuracy": 0.9879518072289156,
+        "auc": 0.9795058139534885,
+        "sensitivity": 0.9883720930232558,
+        "specificity": 0.9875,
+        "macro_f1": 0.9879360465116279,
+        "n": 166,
+        "n_pos": 86,
+        "n_neg": 80
+      },
+      "session_scores": {
+        "sessions": [
+          "sub-131|A",
+          "sub-131|C"
+        ],
+        "prob": [
+          0.09759191297243638,
+          0.8651715330877847
+        ],
+        "y_true": [
+          0,
+          1
+        ],
+        "n_windows": [
+          80,
+          86
+        ]
+      },
+      "ordering_correct": true
+    },
+    {
+      "patient": "sub-131",
+      "control": "chanamp",
+      "train_task": "toast",
+      "test_task": "tea",
+      "direction": "toast_to_tea",
+      "n_train_windows": 333,
+      "n_test_windows": 36,
+      "n_features": 18,
+      "window": {
+        "balanced_accuracy": 1.0,
+        "accuracy": 1.0,
+        "auc": 1.0,
+        "sensitivity": 1.0,
+        "specificity": 1.0,
+        "macro_f1": 1.0,
+        "n": 36,
+        "n_pos": 15,
+        "n_neg": 21
+      },
+      "session_scores": {
+        "sessions": [
+          "sub-131|A",
+          "sub-131|C"
+        ],
+        "prob": [
+          0.0720553942918624,
+          0.9418767480203994
+        ],
+        "y_true": [
+          0,
+          1
+        ],
+        "n_windows": [
+          21,
+          15
+        ]
+      },
+      "ordering_correct": true
+    },
+    {
+      "patient": "sub-134",
+      "control": "chanamp",
+      "train_task": "tea",
+      "test_task": "toast",
+      "direction": "tea_to_toast",
+      "n_train_windows": 107,
+      "n_test_windows": 133,
+      "n_features": 18,
+      "window": {
+        "balanced_accuracy": 0.810719131614654,
+        "accuracy": 0.8120300751879699,
+        "auc": 0.844640434192673,
+        "sensitivity": 0.9850746268656716,
+        "specificity": 0.6363636363636364,
+        "macro_f1": 0.8057032665225268,
+        "n": 133,
+        "n_pos": 67,
+        "n_neg": 66
+      },
+      "session_scores": {
+        "sessions": [
+          "sub-134|A",
+          "sub-134|C"
+        ],
+        "prob": [
+          0.38573533398326537,
+          0.8773034326136325
+        ],
+        "y_true": [
+          0,
+          1
+        ],
+        "n_windows": [
+          66,
+          67
+        ]
+      },
+      "ordering_correct": true
+    },
+    {
+      "patient": "sub-134",
+      "control": "chanamp",
+      "train_task": "toast",
+      "test_task": "tea",
+      "direction": "toast_to_tea",
+      "n_train_windows": 264,
+      "n_test_windows": 53,
+      "n_features": 18,
+      "window": {
+        "balanced_accuracy": 0.8613505747126436,
+        "accuracy": 0.8679245283018868,
+        "auc": 0.9770114942528735,
+        "sensitivity": 0.7916666666666666,
+        "specificity": 0.9310344827586207,
+        "macro_f1": 0.8648451730418943,
+        "n": 53,
+        "n_pos": 24,
+        "n_neg": 29
+      },
+      "session_scores": {
+        "sessions": [
+          "sub-134|A",
+          "sub-134|C"
+        ],
+        "prob": [
+          0.08214519484873352,
+          0.7385629854458964
+        ],
+        "y_true": [
+          0,
+          1
+        ],
+        "n_windows": [
+          29,
+          24
+        ]
+      },
+      "ordering_correct": true
+    },
+    {
+      "patient": "sub-135",
+      "control": "chanamp",
+      "train_task": "tea",
+      "test_task": "toast",
+      "direction": "tea_to_toast",
+      "n_train_windows": 147,
+      "n_test_windows": 190,
+      "n_features": 18,
+      "window": {
+        "balanced_accuracy": 0.9903846153846154,
+        "accuracy": 0.9894736842105263,
+        "auc": 1.0,
+        "sensitivity": 0.9807692307692307,
+        "specificity": 1.0,
+        "macro_f1": 0.9893985046311795,
+        "n": 190,
+        "n_pos": 104,
+        "n_neg": 86
+      },
+      "session_scores": {
+        "sessions": [
+          "sub-135|A",
+          "sub-135|C"
+        ],
+        "prob": [
+          0.04622204505384986,
+          0.8774105154794853
+        ],
+        "y_true": [
+          0,
+          1
+        ],
+        "n_windows": [
+          86,
+          104
+        ]
+      },
+      "ordering_correct": true
+    },
+    {
+      "patient": "sub-135",
+      "control": "chanamp",
+      "train_task": "toast",
+      "test_task": "tea",
+      "direction": "toast_to_tea",
+      "n_train_windows": 382,
+      "n_test_windows": 74,
+      "n_features": 18,
+      "window": {
+        "balanced_accuracy": 0.9659090909090908,
+        "accuracy": 0.9594594594594594,
+        "auc": 0.9977272727272727,
+        "sensitivity": 0.9318181818181818,
+        "specificity": 1.0,
+        "macro_f1": 0.9585434173669467,
+        "n": 74,
+        "n_pos": 44,
+        "n_neg": 30
+      },
+      "session_scores": {
+        "sessions": [
+          "sub-135|A",
+          "sub-135|C"
+        ],
+        "prob": [
+          0.05865793920706599,
+          0.9283022751056328
+        ],
+        "y_true": [
+          0,
+          1
+        ],
+        "n_windows": [
+          30,
+          44
+        ]
+      },
+      "ordering_correct": true
+    },
+    {
+      "patient": "sub-51",
+      "control": "chanamp",
+      "train_task": "tea",
+      "test_task": "toast",
+      "direction": "tea_to_toast",
+      "n_train_windows": 108,
+      "n_test_windows": 100,
+      "n_features": 18,
+      "window": {
+        "balanced_accuracy": 0.7561576354679802,
+        "accuracy": 0.74,
+        "auc": 0.717159277504105,
+        "sensitivity": 0.8571428571428571,
+        "specificity": 0.6551724137931034,
+        "macro_f1": 0.7398959583833533,
+        "n": 100,
+        "n_pos": 42,
+        "n_neg": 58
+      },
+      "session_scores": {
+        "sessions": [
+          "sub-51|A",
+          "sub-51|C"
+        ],
+        "prob": [
+          0.3870492565316649,
+          0.820038006917265
+        ],
+        "y_true": [
+          0,
+          1
+        ],
+        "n_windows": [
+          58,
+          42
+        ]
+      },
+      "ordering_correct": true
+    },
+    {
+      "patient": "sub-51",
+      "control": "chanamp",
+      "train_task": "toast",
+      "test_task": "tea",
+      "direction": "toast_to_tea",
+      "n_train_windows": 201,
+      "n_test_windows": 54,
+      "n_features": 18,
+      "window": {
+        "balanced_accuracy": 0.962962962962963,
+        "accuracy": 0.9629629629629629,
+        "auc": 1.0,
+        "sensitivity": 1.0,
+        "specificity": 0.9259259259259259,
+        "macro_f1": 0.9629120879120879,
+        "n": 54,
+        "n_pos": 27,
+        "n_neg": 27
+      },
+      "session_scores": {
+        "sessions": [
+          "sub-51|A",
+          "sub-51|C"
+        ],
+        "prob": [
+          0.32154888453346053,
+          0.9660040143624573
+        ],
+        "y_true": [
+          0,
+          1
+        ],
+        "n_windows": [
+          27,
+          27
+        ]
+      },
+      "ordering_correct": true
+    },
+    {
+      "patient": "sub-62",
+      "control": "chanamp",
+      "train_task": "tea",
+      "test_task": "toast",
+      "direction": "tea_to_toast",
+      "n_train_windows": 110,
+      "n_test_windows": 84,
+      "n_features": 18,
+      "window": {
+        "balanced_accuracy": 0.8326530612244898,
+        "accuracy": 0.8571428571428571,
+        "auc": 0.8110787172011662,
+        "sensitivity": 0.6857142857142857,
+        "specificity": 0.9795918367346939,
+        "macro_f1": 0.8444444444444444,
+        "n": 84,
+        "n_pos": 35,
+        "n_neg": 49
+      },
+      "session_scores": {
+        "sessions": [
+          "sub-62|A",
+          "sub-62|C"
+        ],
+        "prob": [
+          0.14658462903923808,
+          0.565265308767113
+        ],
+        "y_true": [
+          0,
+          1
+        ],
+        "n_windows": [
+          49,
+          35
+        ]
+      },
+      "ordering_correct": true
+    },
+    {
+      "patient": "sub-62",
+      "control": "chanamp",
+      "train_task": "toast",
+      "test_task": "tea",
+      "direction": "toast_to_tea",
+      "n_train_windows": 169,
+      "n_test_windows": 55,
+      "n_features": 18,
+      "window": {
+        "balanced_accuracy": 0.7794117647058824,
+        "accuracy": 0.7272727272727273,
+        "auc": 1.0,
+        "sensitivity": 1.0,
+        "specificity": 0.5588235294117647,
+        "macro_f1": 0.7269116186693148,
+        "n": 55,
+        "n_pos": 21,
+        "n_neg": 34
+      },
+      "session_scores": {
+        "sessions": [
+          "sub-62|A",
+          "sub-62|C"
+        ],
+        "prob": [
+          0.3904621674973724,
+          0.8437975413060034
+        ],
+        "y_true": [
+          0,
+          1
+        ],
+        "n_windows": [
+          34,
+          21
+        ]
+      },
+      "ordering_correct": true
+    },
+    {
+      "patient": "sub-70",
+      "control": "chanamp",
+      "train_task": "tea",
+      "test_task": "toast",
+      "direction": "tea_to_toast",
+      "n_train_windows": 121,
+      "n_test_windows": 82,
+      "n_features": 18,
+      "window": {
+        "balanced_accuracy": 0.8452380952380952,
+        "accuracy": 0.8414634146341463,
+        "auc": 0.9226190476190477,
+        "sensitivity": 1.0,
+        "specificity": 0.6904761904761905,
+        "macro_f1": 0.8385582311070725,
+        "n": 82,
+        "n_pos": 40,
+        "n_neg": 42
+      },
+      "session_scores": {
+        "sessions": [
+          "sub-70|A",
+          "sub-70|C"
+        ],
+        "prob": [
+          0.4074460271662258,
+          0.9176204239067545
+        ],
+        "y_true": [
+          0,
+          1
+        ],
+        "n_windows": [
+          42,
+          40
+        ]
+      },
+      "ordering_correct": true
+    },
+    {
+      "patient": "sub-70",
+      "control": "chanamp",
+      "train_task": "toast",
+      "test_task": "tea",
+      "direction": "toast_to_tea",
+      "n_train_windows": 163,
+      "n_test_windows": 61,
+      "n_features": 18,
+      "window": {
+        "balanced_accuracy": 0.9344086021505376,
+        "accuracy": 0.9344262295081968,
+        "auc": 0.9741935483870968,
+        "sensitivity": 0.9333333333333333,
+        "specificity": 0.9354838709677419,
+        "macro_f1": 0.9344086021505376,
+        "n": 61,
+        "n_pos": 30,
+        "n_neg": 31
+      },
+      "session_scores": {
+        "sessions": [
+          "sub-70|A",
+          "sub-70|C"
+        ],
+        "prob": [
+          0.1388866622989006,
+          0.7999843792576651
+        ],
+        "y_true": [
+          0,
+          1
+        ],
+        "n_windows": [
+          31,
+          30
+        ]
+      },
+      "ordering_correct": true
+    },
+    {
+      "patient": "sub-71",
+      "control": "chanamp",
+      "train_task": "tea",
+      "test_task": "toast",
+      "direction": "tea_to_toast",
+      "n_train_windows": 120,
+      "n_test_windows": 121,
+      "n_features": 18,
+      "window": {
+        "balanced_accuracy": 0.9748221127531472,
+        "accuracy": 0.9752066115702479,
+        "auc": 0.9994526546250685,
+        "sensitivity": 0.9655172413793104,
+        "specificity": 0.9841269841269841,
+        "macro_f1": 0.9751454981170833,
+        "n": 121,
+        "n_pos": 58,
+        "n_neg": 63
+      },
+      "session_scores": {
+        "sessions": [
+          "sub-71|A",
+          "sub-71|C"
+        ],
+        "prob": [
+          0.0440984692612491,
+          0.9310898116464239
+        ],
+        "y_true": [
+          0,
+          1
+        ],
+        "n_windows": [
+          63,
+          58
+        ]
+      },
+      "ordering_correct": true
+    },
+    {
+      "patient": "sub-71",
+      "control": "chanamp",
+      "train_task": "toast",
+      "test_task": "tea",
+      "direction": "toast_to_tea",
+      "n_train_windows": 243,
+      "n_test_windows": 60,
+      "n_features": 18,
+      "window": {
+        "balanced_accuracy": 1.0,
+        "accuracy": 1.0,
+        "auc": 1.0,
+        "sensitivity": 1.0,
+        "specificity": 1.0,
+        "macro_f1": 1.0,
+        "n": 60,
+        "n_pos": 30,
+        "n_neg": 30
+      },
+      "session_scores": {
+        "sessions": [
+          "sub-71|A",
+          "sub-71|C"
+        ],
+        "prob": [
+          0.0792092921964148,
+          0.9059186379188705
+        ],
+        "y_true": [
+          0,
+          1
+        ],
+        "n_windows": [
+          30,
+          30
+        ]
+      },
+      "ordering_correct": true
+    },
+    {
+      "patient": "sub-72",
+      "control": "chanamp",
+      "train_task": "tea",
+      "test_task": "toast",
+      "direction": "tea_to_toast",
+      "n_train_windows": 94,
+      "n_test_windows": 98,
+      "n_features": 18,
+      "window": {
+        "balanced_accuracy": 0.846938775510204,
+        "accuracy": 0.8469387755102041,
+        "auc": 0.899625156184923,
+        "sensitivity": 0.8367346938775511,
+        "specificity": 0.8571428571428571,
+        "macro_f1": 0.8469228366135583,
+        "n": 98,
+        "n_pos": 49,
+        "n_neg": 49
+      },
+      "session_scores": {
+        "sessions": [
+          "sub-72|A",
+          "sub-72|C"
+        ],
+        "prob": [
+          0.23624797148379187,
+          0.7451494533195857
+        ],
+        "y_true": [
+          0,
+          1
+        ],
+        "n_windows": [
+          49,
+          49
+        ]
+      },
+      "ordering_correct": true
+    },
+    {
+      "patient": "sub-72",
+      "control": "chanamp",
+      "train_task": "toast",
+      "test_task": "tea",
+      "direction": "toast_to_tea",
+      "n_train_windows": 195,
+      "n_test_windows": 47,
+      "n_features": 18,
+      "window": {
+        "balanced_accuracy": 1.0,
+        "accuracy": 1.0,
+        "auc": 1.0,
+        "sensitivity": 1.0,
+        "specificity": 1.0,
+        "macro_f1": 1.0,
+        "n": 47,
+        "n_pos": 20,
+        "n_neg": 27
+      },
+      "session_scores": {
+        "sessions": [
+          "sub-72|A",
+          "sub-72|C"
+        ],
+        "prob": [
+          0.043135050555578945,
+          0.9057451089918158
+        ],
+        "y_true": [
+          0,
+          1
+        ],
+        "n_windows": [
+          27,
+          20
+        ]
+      },
+      "ordering_correct": true
+    },
+    {
+      "patient": "sub-76",
+      "control": "chanamp",
+      "train_task": "tea",
+      "test_task": "toast",
+      "direction": "tea_to_toast",
+      "n_train_windows": 141,
+      "n_test_windows": 142,
+      "n_features": 18,
+      "window": {
+        "balanced_accuracy": 0.9930555555555556,
+        "accuracy": 0.9929577464788732,
+        "auc": 0.9871031746031746,
+        "sensitivity": 1.0,
+        "specificity": 0.9861111111111112,
+        "macro_f1": 0.9929573972127164,
+        "n": 142,
+        "n_pos": 70,
+        "n_neg": 72
+      },
+      "session_scores": {
+        "sessions": [
+          "sub-76|A",
+          "sub-76|C"
+        ],
+        "prob": [
+          0.05025646442044884,
+          0.9474818290982627
+        ],
+        "y_true": [
+          0,
+          1
+        ],
+        "n_windows": [
+          72,
+          70
+        ]
+      },
+      "ordering_correct": true
+    },
+    {
+      "patient": "sub-76",
+      "control": "chanamp",
+      "train_task": "toast",
+      "test_task": "tea",
+      "direction": "toast_to_tea",
+      "n_train_windows": 282,
+      "n_test_windows": 71,
+      "n_features": 18,
+      "window": {
+        "balanced_accuracy": 0.9711382113821139,
+        "accuracy": 0.971830985915493,
+        "auc": 0.9983739837398373,
+        "sensitivity": 0.9666666666666667,
+        "specificity": 0.975609756097561,
+        "macro_f1": 0.9711382113821139,
+        "n": 71,
+        "n_pos": 30,
+        "n_neg": 41
+      },
+      "session_scores": {
+        "sessions": [
+          "sub-76|A",
+          "sub-76|C"
+        ],
+        "prob": [
+          0.10430783941812345,
+          0.8885089637063653
+        ],
+        "y_true": [
+          0,
+          1
+        ],
+        "n_windows": [
+          41,
+          30
+        ]
+      },
+      "ordering_correct": true
+    },
+    {
+      "patient": "sub-77",
+      "control": "chanamp",
+      "train_task": "tea",
+      "test_task": "toast",
+      "direction": "tea_to_toast",
+      "n_train_windows": 114,
+      "n_test_windows": 140,
+      "n_features": 18,
+      "window": {
+        "balanced_accuracy": 0.9705882352941176,
+        "accuracy": 0.9714285714285714,
+        "auc": 0.982638888888889,
+        "sensitivity": 0.9411764705882353,
+        "specificity": 1.0,
+        "macro_f1": 0.9713349713349714,
+        "n": 140,
+        "n_pos": 68,
+        "n_neg": 72
+      },
+      "session_scores": {
+        "sessions": [
+          "sub-77|A",
+          "sub-77|C"
+        ],
+        "prob": [
+          0.012374525981447766,
+          0.9016086862501304
+        ],
+        "y_true": [
+          0,
+          1
+        ],
+        "n_windows": [
+          72,
+          68
+        ]
+      },
+      "ordering_correct": true
+    },
+    {
+      "patient": "sub-77",
+      "control": "chanamp",
+      "train_task": "toast",
+      "test_task": "tea",
+      "direction": "toast_to_tea",
+      "n_train_windows": 280,
+      "n_test_windows": 57,
+      "n_features": 18,
+      "window": {
+        "balanced_accuracy": 0.9001240694789082,
+        "accuracy": 0.8947368421052632,
+        "auc": 0.9764267990074442,
+        "sensitivity": 0.9615384615384616,
+        "specificity": 0.8387096774193549,
+        "macro_f1": 0.8947044334975369,
+        "n": 57,
+        "n_pos": 26,
+        "n_neg": 31
+      },
+      "session_scores": {
+        "sessions": [
+          "sub-77|A",
+          "sub-77|C"
+        ],
+        "prob": [
+          0.17343704836105017,
+          0.9246414241725103
+        ],
+        "y_true": [
+          0,
+          1
+        ],
+        "n_windows": [
+          31,
+          26
+        ]
+      },
+      "ordering_correct": true
+    },
+    {
+      "patient": "sub-81",
+      "control": "chanamp",
+      "train_task": "tea",
+      "test_task": "toast",
+      "direction": "tea_to_toast",
+      "n_train_windows": 123,
+      "n_test_windows": 140,
+      "n_features": 18,
+      "window": {
+        "balanced_accuracy": 0.6569208750766714,
+        "accuracy": 0.6428571428571429,
+        "auc": 0.6276835003066857,
+        "sensitivity": 0.9850746268656716,
+        "specificity": 0.3287671232876712,
+        "macro_f1": 0.6075353218210361,
+        "n": 140,
+        "n_pos": 67,
+        "n_neg": 73
+      },
+      "session_scores": {
+        "sessions": [
+          "sub-81|A",
+          "sub-81|C"
+        ],
+        "prob": [
+          0.6589547791948769,
+          0.9699190361237604
+        ],
+        "y_true": [
+          0,
+          1
+        ],
+        "n_windows": [
+          73,
+          67
+        ]
+      },
+      "ordering_correct": true
+    },
+    {
+      "patient": "sub-81",
+      "control": "chanamp",
+      "train_task": "toast",
+      "test_task": "tea",
+      "direction": "toast_to_tea",
+      "n_train_windows": 279,
+      "n_test_windows": 61,
+      "n_features": 18,
+      "window": {
+        "balanced_accuracy": 0.6142857142857143,
+        "accuracy": 0.5573770491803278,
+        "auc": 0.798901098901099,
+        "sensitivity": 1.0,
+        "specificity": 0.22857142857142856,
+        "macro_f1": 0.5151604356785399,
+        "n": 61,
+        "n_pos": 26,
+        "n_neg": 35
+      },
+      "session_scores": {
+        "sessions": [
+          "sub-81|A",
+          "sub-81|C"
+        ],
+        "prob": [
+          0.7256535857932473,
+          0.9643245952537935
+        ],
+        "y_true": [
+          0,
+          1
+        ],
+        "n_windows": [
+          35,
+          26
+        ]
+      },
+      "ordering_correct": true
+    },
+    {
+      "patient": "sub-84",
+      "control": "chanamp",
+      "train_task": "tea",
+      "test_task": "toast",
+      "direction": "tea_to_toast",
+      "n_train_windows": 106,
+      "n_test_windows": 135,
+      "n_features": 18,
+      "window": {
+        "balanced_accuracy": 0.971830985915493,
+        "accuracy": 0.9703703703703703,
+        "auc": 0.983274647887324,
+        "sensitivity": 1.0,
+        "specificity": 0.9436619718309859,
+        "macro_f1": 0.9703557312252964,
+        "n": 135,
+        "n_pos": 64,
+        "n_neg": 71
+      },
+      "session_scores": {
+        "sessions": [
+          "sub-84|A",
+          "sub-84|C"
+        ],
+        "prob": [
+          0.12996102673416643,
+          0.8477661929254794
+        ],
+        "y_true": [
+          0,
+          1
+        ],
+        "n_windows": [
+          71,
+          64
+        ]
+      },
+      "ordering_correct": true
+    },
+    {
+      "patient": "sub-84",
+      "control": "chanamp",
+      "train_task": "toast",
+      "test_task": "tea",
+      "direction": "toast_to_tea",
+      "n_train_windows": 269,
+      "n_test_windows": 53,
+      "n_features": 18,
+      "window": {
+        "balanced_accuracy": 0.8642857142857143,
+        "accuracy": 0.8679245283018868,
+        "auc": 0.9328571428571428,
+        "sensitivity": 0.9285714285714286,
+        "specificity": 0.8,
+        "macro_f1": 0.8662098809953119,
+        "n": 53,
+        "n_pos": 28,
+        "n_neg": 25
+      },
+      "session_scores": {
+        "sessions": [
+          "sub-84|A",
+          "sub-84|C"
+        ],
+        "prob": [
+          0.25432045044829693,
+          0.8668726029869323
+        ],
+        "y_true": [
+          0,
+          1
+        ],
+        "n_windows": [
+          25,
+          28
+        ]
+      },
+      "ordering_correct": true
+    },
+    {
+      "patient": "sub-90",
+      "control": "chanamp",
+      "train_task": "tea",
+      "test_task": "toast",
+      "direction": "tea_to_toast",
+      "n_train_windows": 93,
+      "n_test_windows": 72,
+      "n_features": 18,
+      "window": {
+        "balanced_accuracy": 1.0,
+        "accuracy": 1.0,
+        "auc": 1.0,
+        "sensitivity": 1.0,
+        "specificity": 1.0,
+        "macro_f1": 1.0,
+        "n": 72,
+        "n_pos": 46,
+        "n_neg": 26
+      },
+      "session_scores": {
+        "sessions": [
+          "sub-90|A",
+          "sub-90|C"
+        ],
+        "prob": [
+          0.029960864074351015,
+          0.9579308694901781
+        ],
+        "y_true": [
+          0,
+          1
+        ],
+        "n_windows": [
+          26,
+          46
+        ]
+      },
+      "ordering_correct": true
+    },
+    {
+      "patient": "sub-90",
+      "control": "chanamp",
+      "train_task": "toast",
+      "test_task": "tea",
+      "direction": "toast_to_tea",
+      "n_train_windows": 143,
+      "n_test_windows": 46,
+      "n_features": 18,
+      "window": {
+        "balanced_accuracy": 1.0,
+        "accuracy": 1.0,
+        "auc": 1.0,
+        "sensitivity": 1.0,
+        "specificity": 1.0,
+        "macro_f1": 1.0,
+        "n": 46,
+        "n_pos": 21,
+        "n_neg": 25
+      },
+      "session_scores": {
+        "sessions": [
+          "sub-90|A",
+          "sub-90|C"
+        ],
+        "prob": [
+          0.1704341770768686,
+          0.8940290456191595
+        ],
+        "y_true": [
+          0,
+          1
+        ],
+        "n_windows": [
+          25,
+          21
+        ]
+      },
+      "ordering_correct": true
+    },
+    {
+      "patient": "sub-92",
+      "control": "chanamp",
+      "train_task": "tea",
+      "test_task": "toast",
+      "direction": "tea_to_toast",
+      "n_train_windows": 93,
+      "n_test_windows": 86,
+      "n_features": 18,
+      "window": {
+        "balanced_accuracy": 1.0,
+        "accuracy": 1.0,
+        "auc": 1.0,
+        "sensitivity": 1.0,
+        "specificity": 1.0,
+        "macro_f1": 1.0,
+        "n": 86,
+        "n_pos": 38,
+        "n_neg": 48
+      },
+      "session_scores": {
+        "sessions": [
+          "sub-92|A",
+          "sub-92|C"
+        ],
+        "prob": [
+          0.0785545932831079,
+          0.9631892499495687
+        ],
+        "y_true": [
+          0,
+          1
+        ],
+        "n_windows": [
+          48,
+          38
+        ]
+      },
+      "ordering_correct": true
+    },
+    {
+      "patient": "sub-92",
+      "control": "chanamp",
+      "train_task": "toast",
+      "test_task": "tea",
+      "direction": "toast_to_tea",
+      "n_train_windows": 171,
+      "n_test_windows": 47,
+      "n_features": 18,
+      "window": {
+        "balanced_accuracy": 1.0,
+        "accuracy": 1.0,
+        "auc": 1.0,
+        "sensitivity": 1.0,
+        "specificity": 1.0,
+        "macro_f1": 1.0,
+        "n": 47,
+        "n_pos": 24,
+        "n_neg": 23
+      },
+      "session_scores": {
+        "sessions": [
+          "sub-92|A",
+          "sub-92|C"
+        ],
+        "prob": [
+          3.306949734641181e-07,
+          0.9887150589032919
+        ],
+        "y_true": [
+          0,
+          1
+        ],
+        "n_windows": [
+          23,
+          24
+        ]
+      },
+      "ordering_correct": true
+    },
+    {
+      "patient": "sub-94",
+      "control": "chanamp",
+      "train_task": "tea",
+      "test_task": "toast",
+      "direction": "tea_to_toast",
+      "n_train_windows": 78,
+      "n_test_windows": 97,
+      "n_features": 18,
+      "window": {
+        "balanced_accuracy": 0.9427927927927928,
+        "accuracy": 0.9484536082474226,
+        "auc": 0.9788288288288289,
+        "sensitivity": 0.918918918918919,
+        "specificity": 0.9666666666666667,
+        "macro_f1": 0.9450922676327409,
+        "n": 97,
+        "n_pos": 37,
+        "n_neg": 60
+      },
+      "session_scores": {
+        "sessions": [
+          "sub-94|A",
+          "sub-94|C"
+        ],
+        "prob": [
+          0.07716105464067298,
+          0.8335851815206023
+        ],
+        "y_true": [
+          0,
+          1
+        ],
+        "n_windows": [
+          60,
+          37
+        ]
+      },
+      "ordering_correct": true
+    },
+    {
+      "patient": "sub-94",
+      "control": "chanamp",
+      "train_task": "toast",
+      "test_task": "tea",
+      "direction": "toast_to_tea",
+      "n_train_windows": 194,
+      "n_test_windows": 39,
+      "n_features": 18,
+      "window": {
+        "balanced_accuracy": 0.9722222222222222,
+        "accuracy": 0.9743589743589743,
+        "auc": 1.0,
+        "sensitivity": 0.9444444444444444,
+        "specificity": 1.0,
+        "macro_f1": 0.9740863787375416,
+        "n": 39,
+        "n_pos": 18,
+        "n_neg": 21
+      },
+      "session_scores": {
+        "sessions": [
+          "sub-94|A",
+          "sub-94|C"
+        ],
+        "prob": [
+          0.04422265989458015,
+          0.8974135817782296
+        ],
+        "y_true": [
+          0,
+          1
+        ],
+        "n_windows": [
+          21,
+          18
+        ]
+      },
+      "ordering_correct": true
+    },
+    {
+      "patient": "sub-96",
+      "control": "chanamp",
+      "train_task": "tea",
+      "test_task": "toast",
+      "direction": "tea_to_toast",
+      "n_train_windows": 111,
+      "n_test_windows": 60,
+      "n_features": 18,
+      "window": {
+        "balanced_accuracy": 0.9833333333333334,
+        "accuracy": 0.9833333333333333,
+        "auc": 1.0,
+        "sensitivity": 1.0,
+        "specificity": 0.9666666666666667,
+        "macro_f1": 0.9833287024173382,
+        "n": 60,
+        "n_pos": 30,
+        "n_neg": 30
+      },
+      "session_scores": {
+        "sessions": [
+          "sub-96|A",
+          "sub-96|C"
+        ],
+        "prob": [
+          0.09045137605368576,
+          0.8835743642775419
+        ],
+        "y_true": [
+          0,
+          1
+        ],
+        "n_windows": [
+          30,
+          30
+        ]
+      },
+      "ordering_correct": true
+    },
+    {
+      "patient": "sub-96",
+      "control": "chanamp",
+      "train_task": "toast",
+      "test_task": "tea",
+      "direction": "toast_to_tea",
+      "n_train_windows": 119,
+      "n_test_windows": 55,
+      "n_features": 18,
+      "window": {
+        "balanced_accuracy": 1.0,
+        "accuracy": 1.0,
+        "auc": 1.0,
+        "sensitivity": 1.0,
+        "specificity": 1.0,
+        "macro_f1": 1.0,
+        "n": 55,
+        "n_pos": 29,
+        "n_neg": 26
+      },
+      "session_scores": {
+        "sessions": [
+          "sub-96|A",
+          "sub-96|C"
+        ],
+        "prob": [
+          0.046014781928321355,
+          0.9911265820627817
+        ],
+        "y_true": [
+          0,
+          1
+        ],
+        "n_windows": [
+          26,
+          29
+        ]
+      },
+      "ordering_correct": true
+    }
+  ],
+  "transfer_test": {
+    "control": "chanamp",
+    "n_features": 18,
+    "within_patient_mean": 0.9343625677330556,
+    "within_patient_above_chance": 27,
+    "cross_patient_lopo_mean": 0.49453860059311033,
+    "cross_patient_above_chance": 14,
+    "cross_patient_session_balanced_accuracy": 0.5185185185185185,
+    "cross_patient_session_auc": 0.5267489711934157,
+    "n_patients": 27,
+    "drop": 0.43982396713994526,
+    "per_patient_within": {
+      "sub-103": 0.9832214765100671,
+      "sub-106": 1.0,
+      "sub-107": 0.9810606060606061,
+      "sub-114": 0.9931506849315068,
+      "sub-115": 0.8858766233766234,
+      "sub-116": 0.9212774648866638,
+      "sub-119": 0.9434009129967776,
+      "sub-121": 0.9489621489621489,
+      "sub-123": 0.9697997416020672,
+      "sub-125": 0.9735054347826086,
+      "sub-129": 0.9327991452991453,
+      "sub-131": 0.9939680232558139,
+      "sub-134": 0.8360348531636488,
+      "sub-135": 0.9781468531468531,
+      "sub-51": 0.8595602992154716,
+      "sub-62": 0.8060324129651861,
+      "sub-70": 0.8898233486943163,
+      "sub-71": 0.9874110563765737,
+      "sub-72": 0.923469387755102,
+      "sub-76": 0.9820968834688347,
+      "sub-77": 0.9353561523865129,
+      "sub-81": 0.6356032946811929,
+      "sub-84": 0.9180583501006037,
+      "sub-90": 1.0,
+      "sub-92": 1.0,
+      "sub-94": 0.9575075075075075,
+      "sub-96": 0.9916666666666667
+    },
+    "per_patient_cross": {
+      "sub-103": 0.5,
+      "sub-106": 0.18548387096774194,
+      "sub-107": 0.5,
+      "sub-114": 0.2669902912621359,
+      "sub-115": 0.8649415963659961,
+      "sub-116": 0.6072628586197983,
+      "sub-119": 0.5786593707250343,
+      "sub-121": 0.5946026986506746,
+      "sub-123": 0.5677655677655677,
+      "sub-125": 0.6190476190476191,
+      "sub-129": 0.6054207846660677,
+      "sub-131": 0.48019801980198024,
+      "sub-134": 0.3914401388085599,
+      "sub-135": 0.3934063373718546,
+      "sub-51": 0.5119352088661552,
+      "sub-62": 0.4397590361445783,
+      "sub-70": 0.4170254403131115,
+      "sub-71": 0.5402003910068426,
+      "sub-72": 0.6186117467581999,
+      "sub-76": 0.5,
+      "sub-77": 0.5904255319148937,
+      "sub-81": 0.5374850657108722,
+      "sub-84": 0.5058876811594203,
+      "sub-90": 0.0392156862745098,
+      "sub-92": 0.6408450704225352,
+      "sub-94": 0.5,
+      "sub-96": 0.3559322033898305
+    },
+    "verdict": "per-recording FINGERPRINT: the feature works only when the test recording was already seen in training, so it is not a neural levodopa effect"
+  }
+}

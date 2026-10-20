@@ -1,0 +1,151 @@
+# codebrain_finetune/config/controls.yaml
+# ---------------------------------------------------------------------------
+# SHAPE-BASED negative controls for the task-split experiment, and the settings
+# for running every control under input normalisation (2026-08-01).
+#
+# WHY THIS FILE EXISTS
+# --------------------
+# Experiment 12c established the task-split leak with AMPLITUDE controls
+# (`amp1`, `crude3`, `chanamp`). The supervisor's proposed fix is `chan_z` —
+# per-window, per-channel z-scoring. `chan_z` removes exactly what those
+# controls were built to measure: a channel's absolute amplitude. Whatever they
+# read afterwards is no longer an electrode-contact amplitude fingerprint (at
+# most a residual waveform-shape statistic, e.g. mean|z| reflects kurtosis), so
+# they can no longer serve as the headline evidence for or against the leak.
+#
+# The controls defined here are chosen to SURVIVE amplitude normalisation:
+# they describe the SHAPE of a channel's spectrum, not its scale. If they still
+# decode the ON/OFF label under `chan_z`, the leak is still open.
+#
+# Nothing here touches the window cache, the manifest, the cohort definition,
+# config/pipeline.yaml, or any preprocessing. Additive diagnostics only.
+# ---------------------------------------------------------------------------
+
+# ---- Which normalisations to run the control matrix under -----------------
+# Must be a subset of codebrain_ft.data.INPUT_NORM_SCHEMES. The normalisation
+# maths is NOT reimplemented here: features are computed from windows drawn
+# through the real `NormalizedWindowDataset`, wrapping the real `WindowDataset`,
+# so a control sees byte-identical input to what the model arms see (including
+# the `target_scale` rescale to the cohort-median window std).
+input_norm:
+  schemes: [none, chan_z]
+
+# ---- Per-window PSD --------------------------------------------------------
+# NOT the same Welch settings as config/qc.yaml, and the difference is forced,
+# not stylistic. qc.yaml fits ONE spectrum per (session, channel) over a whole
+# multi-minute recording and can afford 4 s segments. Here the unit is a single
+# 10 s window (2000 samples @ 200 Hz): 4 s segments at 50% overlap would give
+# only 4 averaged segments. 2 s segments give 0.5 Hz resolution and 9 averaged
+# segments — the shortest segment that still resolves the delta band edge at
+# 1 Hz while keeping the estimate stable enough to fit.
+psd:
+  welch_segment_s: 2.0
+  welch_overlap_frac: 0.5
+  # Detrending is what makes the PSD blind to the DC offset that `chan_z`
+  # removes; without it `none` and `chan_z` would differ in the 0-1 Hz bin for
+  # a reason that has nothing to do with the leak. Outside the fit range anyway.
+  detrend: constant
+
+# ---- `relbp` — per-channel RELATIVE band power -----------------------------
+# Each channel's five band powers are normalised to sum to 1 WITHIN that
+# channel. Two consequences, both deliberate:
+#   * it is scale-free, so `chan_z` cannot remove it (see the report note);
+#   * it carries no absolute amplitude, so it cannot be the electrode-contact
+#     amplitude fingerprint `chanamp` measures — it is a different, spectral-
+#     shape route to the same recording.
+# Band edges are the conventional clinical bands; the beta edges match
+# config/qc.yaml `aperiodic.beta_band_hz` so the two analyses agree.
+bands:
+  delta: [1.0, 4.0]
+  theta: [4.0, 8.0]
+  alpha: [8.0, 13.0]
+  beta: [13.0, 30.0]
+  gamma: [30.0, 45.0]
+
+# ---- `aperiodic` — per-channel 1/f exponent + offset -----------------------
+# There is NO impedance data anywhere in this dataset: the QC audit checked
+# raw-CSV metadata/columns, EDF channels/annotations and the .dsi byte stream
+# across 31-33 files each and found none (qc_signal_quality/qc_summary_report.md
+# §C). The 1/f aperiodic exponent is the only available proxy for contact
+# quality, so it stands in for the impedance control we cannot run.
+aperiodic:
+  # The existing cohort fits in qc_signal_quality/aperiodic_fit_results.csv are
+  # ONE fit per (patient, condition, channel) — i.e. per SESSION. They cannot be
+  # reused as a per-window feature: a session-constant feature is, within a
+  # patient, perfectly collinear with the ON/OFF label by construction and would
+  # score 1.000 for a reason that has nothing to do with EEG. So we refit per
+  # window. `reuse_session_fits: false` records that decision explicitly rather
+  # than leaving it implicit in the code.
+  reuse_session_fits: false
+  # Fit range and shape settings are INHERITED from config/qc.yaml so the
+  # per-window fit is the same model as the cohort fit; only the estimation
+  # method differs (below). Path is relative to the project root.
+  inherit_from: config/qc.yaml
+  inherit_keys: [fit_freq_range_hz, peak_width_limits_hz, max_n_peaks,
+                 min_peak_height, peak_threshold]
+  # Estimator. `specparam` is the same library qc_aperiodic.py uses and is the
+  # default; `loglog_robust` is a fast fallback (iterative peak-masked log-log
+  # least squares) kept for smoke tests. specparam costs ~0.1 s per window
+  # (18 channels), which is ~35 min serial over the 9,963 eligible windows, so
+  # the per-window fits are parallelised across processes and cached.
+  estimator: specparam
+  n_jobs: 24
+  # Windows whose fit fails outright get NaN and are imputed with that
+  # (patient, channel) block's median before the classifier sees them, which is
+  # recorded in the output. Failing silently to 0.0 would invent a signal.
+  impute: median
+
+# ---- `recid` — the direct "which recording is this?" classifier ------------
+# The decisive control. Instead of INFERRING the leak from a proxy feature, it
+# asks the leak's own question: given a window, which of this patient's two
+# recordings did it come from? Trained on the train task, tested on the test
+# task, identical protocol to every other control.
+#
+# READ THIS BEFORE READING ITS NUMBER. Within a patient the answer is, by
+# construction, the same variable as the ON/OFF label — the patient has exactly
+# one ON recording and one OFF recording. That is not a flaw in the control, it
+# IS the finding: "decode levodopa state" and "decode which recording" are the
+# same classification problem in this design, so no ON/OFF number from it can
+# ever be more than an alias for recording identity. Its score is therefore the
+# ceiling that any task-split arm is measuring against, and if it stays high
+# under `chan_z`, normalisation has not closed the design.
+recid:
+  # The strongest recording fingerprint we can assemble from features with no
+  # neural levodopa content: contact amplitude + spectral shape + 1/f slope.
+  feature_blocks: [chanamp, relbp, aperiodic]
+  target: recording_id
+
+# ---- Classifier shared by every control -----------------------------------
+# Same as the existing controls in run_tasksplit_controls.py (a standardised,
+# class-balanced logistic regression) so the new numbers are directly comparable
+# to the published 0.598 / 0.624 / 0.934.
+classifier:
+  standardize: true
+  max_iter: 2000
+  class_weight: balanced
+
+# ---- Transfer test ---------------------------------------------------------
+# The within-patient -> cross-patient LOPO contrast that produced 0.934 -> 0.495
+# for `chanamp`. Run for EVERY control under BOTH normalisations: the DROP is
+# the evidence, not the absolute value.
+transfer_test:
+  enabled: true
+  # A cross-patient mean below this reads as "fingerprint, does not transfer".
+  # Same threshold the original chanamp transfer test used.
+  fingerprint_threshold: 0.55
+
+# ---- Feature cache ---------------------------------------------------------
+# One .npz per normalisation scheme holding every feature block for every
+# eligible window, so the control matrix and the transfer tests are pure numpy
+# afterwards. Skip-if-exists; delete the file to force a recompute.
+cache:
+  dir: results/within_patient_tasksplit/control_features
+  # Guards against a stale cache silently being reused if the sidecar changes.
+  key_columns: [path, patient_id, condition, task_group, is_nonoverlap_subset]
+
+# ---- Output ----------------------------------------------------------------
+output:
+  results_subdir: within_patient_tasksplit
+  summary: controls_norm_summary.json
+  master_csv: results/runs_master_tasksplit.csv
+  report: logs/tasksplit_controls_norm_report.md

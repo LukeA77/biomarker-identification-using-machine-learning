@@ -1,0 +1,27 @@
+
+[spectral_before_after] === sub-131-a ===
+[stage1a] sub-131-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-131-a: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 3/18 total (iclabel=[], eog-frontal-corr=[14, 15, 16])
+[spectral_before_after] sub-131-a: ICA removed 3/18 components (iclabel=[], eog-frontal-corr=[14, 15, 16])
+[spectral_before_after] wrote spectral_before_after_sub-131-a.png
+
+[spectral_before_after] === sub-131-c ===
+[stage1a] sub-131-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-131-c: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 2/18 total (iclabel=[], eog-frontal-corr=[13, 14])
+[spectral_before_after] sub-131-c: ICA removed 2/18 components (iclabel=[], eog-frontal-corr=[13, 14])
+[spectral_before_after] wrote spectral_before_after_sub-131-c.png
+
+[spectral_before_after] === sub-134-a ===
+[stage1a] sub-134-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-134-a: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 2/18 total (iclabel=[], eog-frontal-corr=[16, 17])
+[spectral_before_after] sub-134-a: ICA removed 2/18 components (iclabel=[], eog-frontal-corr=[16, 17])
+[spectral_before_after] wrote spectral_before_after_sub-134-a.png
+
+[spectral_before_after] === sub-134-c ===
+[stage1a] sub-134-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[stage2b] sub-134-c: ICA infomax(extended=True) n_comp=18 seed=1 -> removed 2/18 total (iclabel=[], eog-frontal-corr=[16, 17])
+[spectral_before_after] sub-134-c: ICA removed 2/18 components (iclabel=[], eog-frontal-corr=[16, 17])
+[spectral_before_after] wrote spectral_before_after_sub-134-c.png
+[spectral_before_after] wrote spectral_before_after_data.csv
+
+[spectral_before_after] done

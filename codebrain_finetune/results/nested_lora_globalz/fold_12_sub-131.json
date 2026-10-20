@@ -1,0 +1,169 @@
+{
+  "run_tag": "nested_lora_globalz",
+  "git_sha": "2a1f9e6980392ab51d447f5853a2278e06d167b2",
+  "checkpoint_sha256": "d9714b8732c9883a04d022ee66254cd578ae1fa27f5458e6ab7f1aa96e9a7352",
+  "env": {
+    "torch": "2.11.0+cu128",
+    "numpy": "2.4.6",
+    "peft": "0.19.1",
+    "transformers": "5.14.1",
+    "sklearn": "1.9.0"
+  },
+  "cohort": {
+    "patients": 35,
+    "windows": 37174
+  },
+  "lora_target": "attention",
+  "input_norm": "global_z",
+  "norm_scale": 0.6627418398857117,
+  "stage": "outer_fold",
+  "fold_index": 12,
+  "test_patient": "sub-131",
+  "mode": "lora",
+  "config": {
+    "r": 16,
+    "lr": 0.002,
+    "dropout": 0.0
+  },
+  "lr": 0.002,
+  "seed": 13,
+  "inner_train_patients": [
+    "sub-106",
+    "sub-117",
+    "sub-69",
+    "sub-51",
+    "sub-103",
+    "sub-34",
+    "sub-134",
+    "sub-48",
+    "sub-125",
+    "sub-90",
+    "sub-107",
+    "sub-92",
+    "sub-76",
+    "sub-71",
+    "sub-116",
+    "sub-42",
+    "sub-115",
+    "sub-81",
+    "sub-73",
+    "sub-119",
+    "sub-70",
+    "sub-93",
+    "sub-94",
+    "sub-129",
+    "sub-62",
+    "sub-77",
+    "sub-123"
+  ],
+  "inner_val_patients": [
+    "sub-114",
+    "sub-72",
+    "sub-135",
+    "sub-84",
+    "sub-96",
+    "sub-53",
+    "sub-121"
+  ],
+  "best_epoch": 2,
+  "best_inner_val_monitor": 0.5714285714285714,
+  "history": [
+    {
+      "epoch": 0,
+      "train_loss": 0.6491112724766819,
+      "inner_val_balanced_accuracy": 0.3571428571428571,
+      "inner_val_auc": 0.3469387755102041,
+      "lr": 0.0010022935779816513
+    },
+    {
+      "epoch": 1,
+      "train_loss": 0.4616682469639756,
+      "inner_val_balanced_accuracy": 0.5,
+      "inner_val_auc": 0.5306122448979591,
+      "lr": 0.002
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.3528831437264287,
+      "inner_val_balanced_accuracy": 0.5714285714285714,
+      "inner_val_auc": 0.4489795918367347,
+      "lr": 0.001984807753012208
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.2828806111708694,
+      "inner_val_balanced_accuracy": 0.5714285714285714,
+      "inner_val_auc": 0.46938775510204084,
+      "lr": 0.0019396926207859084
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.2628420037601929,
+      "inner_val_balanced_accuracy": 0.5714285714285714,
+      "inner_val_auc": 0.5306122448979591,
+      "lr": 0.001866025403784439
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.28079924648713084,
+      "inner_val_balanced_accuracy": 0.2857142857142857,
+      "inner_val_auc": 0.5102040816326531,
+      "lr": 0.001766044443118978
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.2964898761054245,
+      "inner_val_balanced_accuracy": 0.5714285714285714,
+      "inner_val_auc": 0.5714285714285714,
+      "lr": 0.0016427876096865393
+    }
+  ],
+  "train_seconds": 622.7214431762695,
+  "trainable_params": 320129,
+  "wall_seconds": 624.1351871490479,
+  "peak_vram_bytes": 2692231680,
+  "window": {
+    "balanced_accuracy": 0.32425249169435216,
+    "accuracy": 0.2713178294573643,
+    "auc": 0.08928378273970486,
+    "sensitivity": 0.641860465116279,
+    "specificity": 0.006644518272425249,
+    "macro_f1": 0.21691959961252824,
+    "n": 516,
+    "n_pos": 215,
+    "n_neg": 301
+  },
+  "session": {
+    "balanced_accuracy": 0.5,
+    "accuracy": 0.5,
+    "auc": 0.0,
+    "sensitivity": 1.0,
+    "specificity": 0.0,
+    "macro_f1": 0.3333333333333333,
+    "n": 2,
+    "n_pos": 1,
+    "n_neg": 1
+  },
+  "session_scores": {
+    "sessions": [
+      "sub-131|A",
+      "sub-131|C"
+    ],
+    "patients": [
+      "sub-131",
+      "sub-131"
+    ],
+    "prob": [
+      0.9482333777948867,
+      0.61226059229568
+    ],
+    "y_true": [
+      0,
+      1
+    ],
+    "n_windows": [
+      301,
+      215
+    ]
+  }
+}

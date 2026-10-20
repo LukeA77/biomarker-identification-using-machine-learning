@@ -1,0 +1,40 @@
+# codebrain_finetune/config/paths.yaml
+# ---------------------------------------------------------------------------
+# Single source of truth for every path used by the CodeBrain fine-tuning run.
+# No script in this folder should hardcode a path; import from here instead.
+#
+# NOTE: an earlier plan placed the code directory under Real_data_run/. The project
+#   actually lives under livinglab_run/, which is where the Stage-0 cache was built,
+#   so every path below points there. See logs/stage1_env_setup_*.md.
+# ---------------------------------------------------------------------------
+
+project_root: "C:/Users/Luke/Documents/Luke_Dissertation/livinglab_run/Luke_Dissertation"
+
+# Stage 0 (preprocessing) outputs — read-only inputs to fine-tuning.
+stage0:
+  cache_dir:  "processed_csv_continuous/reref-linkedears_ica"
+  manifest:   "processed_csv_continuous/reref-linkedears_ica/manifest.parquet"
+  windows_dir: "processed_csv_continuous/reref-linkedears_ica/windows"
+  # Window tensor contract (verified Stage 1, Part A):
+  #   X shape (18, 2000) float32, units uV, sfreq 200 Hz
+  #   channels (order fixed): Fp1 Fp2 F7 F3 Fz F4 F8 T3 C3 Cz C4 T4 T5 P3 P4 T6 O1 O2
+  #   label map: condition A = ON = y_cond 0 ; condition C = OFF = y_cond 1
+
+# Stage 1+ (fine-tuning) run folder — everything new lives under here.
+run:
+  root:         "codebrain_finetune"
+  external:     "codebrain_finetune/external"          # third-party clones
+  codebrain:    "codebrain_finetune/external/CodeBrain" # the cloned repo
+  checkpoints:  "codebrain_finetune/checkpoints"        # downloaded pretrained weights
+  config:       "codebrain_finetune/config"
+  logs:         "codebrain_finetune/logs"
+  src:          "codebrain_finetune/src"                # our stage scripts (later)
+
+# Raw source data (per prompt; not needed for Stage 1, recorded for reference).
+raw_data: "C:/Data/LivingLab_PD"
+
+model:
+  name: "CodeBrain"
+  reference: "Ma et al., arXiv 2506.09110 (ICLR 2026)"
+  repo: "https://github.com/jingyingma01/CodeBrain"
+  note: "NOT CBraMod — do not substitute CBraMod code/checkpoints."

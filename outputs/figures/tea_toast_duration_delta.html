@@ -1,0 +1,241 @@
+<title>Tea vs Toast Window-Duration Gap per Patient</title>
+<style>
+.viz-root {
+  color-scheme: light;
+  --surface-1:      #fcfcfb;
+  --page:           #f9f9f7;
+  --text-primary:   #0b0b0b;
+  --text-secondary: #52514e;
+  --text-muted:     #898781;
+  --gridline:       #e1e0d9;
+  --baseline:       #c3c2b7;
+  --border:         rgba(11,11,11,0.10);
+  --neg:            #2a78d6; /* diverging: tea longer */
+  --pos:            #e34948; /* diverging: toast longer */
+  --zero:           #f0efec;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: var(--page);
+  color: var(--text-primary);
+}
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) .viz-root {
+    color-scheme: dark;
+    --surface-1:      #1a1a19;
+    --page:           #0d0d0d;
+    --text-primary:   #ffffff;
+    --text-secondary: #c3c2b7;
+    --text-muted:     #898781;
+    --gridline:       #2c2c2a;
+    --baseline:       #383835;
+    --border:         rgba(255,255,255,0.10);
+    --neg:            #3987e5;
+    --pos:            #e66767;
+    --zero:           #383835;
+  }
+}
+:root[data-theme="dark"] .viz-root {
+  color-scheme: dark;
+  --surface-1:      #1a1a19;
+  --page:           #0d0d0d;
+  --text-primary:   #ffffff;
+  --text-secondary: #c3c2b7;
+  --text-muted:     #898781;
+  --gridline:       #2c2c2a;
+  --baseline:       #383835;
+  --border:         rgba(255,255,255,0.10);
+  --neg:            #3987e5;
+  --pos:            #e66767;
+  --zero:           #383835;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; }
+.wrap { max-width: 880px; margin: 0 auto; padding: 32px 20px 60px; }
+h1 { font-size: 19px; font-weight: 650; margin: 0 0 4px; letter-spacing: -0.01em; }
+.subtitle { font-size: 13px; color: var(--text-secondary); margin: 0 0 24px; line-height: 1.5; }
+
+.card {
+  background: var(--surface-1);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px 20px 12px;
+}
+
+.legend { display: flex; gap: 18px; align-items: center; margin-bottom: 14px; font-size: 12px; color: var(--text-secondary); }
+.legend-item { display: flex; align-items: center; gap: 6px; }
+.swatch { width: 10px; height: 10px; border-radius: 2px; flex-shrink: 0; }
+
+.chart-scroll { overflow-x: auto; }
+.chart { min-width: 620px; }
+
+.row { display: grid; grid-template-columns: 56px 1fr 64px; align-items: center; height: 20px; margin-bottom: 3px; position: relative; }
+.pid { font-size: 11px; color: var(--text-secondary); text-align: right; padding-right: 10px; font-variant-numeric: tabular-nums; }
+.track { position: relative; height: 14px; background: linear-gradient(to right, transparent calc(50% - 1px), var(--gridline) calc(50% - 1px), var(--gridline) calc(50% + 1px), transparent calc(50% + 1px)); border-radius: 3px; cursor: default; }
+.bar { position: absolute; top: 1px; bottom: 1px; border-radius: 3px; }
+.bar.neg { background: var(--neg); right: 50%; }
+.bar.pos { background: var(--pos); left: 50%; }
+.val { font-size: 11px; color: var(--text-muted); padding-left: 10px; font-variant-numeric: tabular-nums; }
+
+.axis { display: grid; grid-template-columns: 56px 1fr 64px; margin-top: 6px; margin-bottom: 18px; }
+.axis-track { position: relative; height: 14px; font-size: 10px; color: var(--text-muted); }
+.axis-track span { position: absolute; transform: translateX(-50%); }
+
+.tooltip {
+  position: fixed;
+  pointer-events: none;
+  background: var(--surface-1);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 11.5px;
+  color: var(--text-primary);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+  opacity: 0;
+  transition: opacity 0.08s;
+  z-index: 10;
+  line-height: 1.55;
+  white-space: nowrap;
+}
+.tooltip.show { opacity: 1; }
+.tooltip .t-pid { font-weight: 650; margin-bottom: 2px; }
+.tooltip .t-row { display: flex; justify-content: space-between; gap: 14px; }
+.tooltip .t-row .k { color: var(--text-secondary); }
+
+.foot { display: flex; justify-content: space-between; align-items: center; margin-top: 4px; padding-top: 12px; border-top: 1px solid var(--gridline); }
+.note { font-size: 11.5px; color: var(--text-muted); line-height: 1.5; max-width: 560px; }
+button.tbl-toggle {
+  font-size: 11.5px;
+  color: var(--text-secondary);
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 5px 10px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+button.tbl-toggle:hover { color: var(--text-primary); border-color: var(--baseline); }
+
+table { width: 100%; border-collapse: collapse; margin-top: 16px; font-size: 12px; display: none; }
+table.show { display: table; }
+th, td { text-align: right; padding: 5px 8px; font-variant-numeric: tabular-nums; }
+th:first-child, td:first-child { text-align: left; }
+th { color: var(--text-muted); font-weight: 550; border-bottom: 1px solid var(--gridline); }
+td { border-bottom: 1px solid var(--gridline); color: var(--text-secondary); }
+td:first-child { color: var(--text-primary); font-weight: 550; }
+tr:last-child td { border-bottom: none; }
+</style>
+
+<div class="viz-root">
+<div class="wrap">
+  <h1>Tea vs. toast: matched-window duration gap, per patient</h1>
+  <p class="subtitle">pooled_tasksplit_chanz_matched &middot; post-match window count &times; 10s, toast &minus; tea, sorted ascending &middot; n = 27 patients</p>
+
+  <div class="card">
+    <div class="legend">
+      <div class="legend-item"><span class="swatch" style="background:var(--neg)"></span>tea longer</div>
+      <div class="legend-item"><span class="swatch" style="background:var(--pos)"></span>toast longer</div>
+    </div>
+    <div class="chart-scroll">
+      <div class="chart" id="chart"></div>
+      <div class="axis">
+        <div></div>
+        <div class="axis-track" id="axisTrack"></div>
+        <div></div>
+      </div>
+    </div>
+    <div class="foot">
+      <div class="note">Matching is per-patient, per-task (ON vs OFF only) &mdash; tea and toast totals are never equalized to each other or across patients. This chart shows how unevenly that leaves the two tasks per patient.</div>
+      <button class="tbl-toggle" id="tblToggle">Show data table</button>
+    </div>
+    <table id="dataTable">
+      <thead><tr><th>Patient</th><th>Tea (s)</th><th>Toast (s)</th><th>&Delta; (toast&minus;tea, s)</th></tr></thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+  </div>
+</div>
+</div>
+
+<div class="tooltip" id="tooltip"></div>
+
+<script>
+// window counts post-match (K per patient-task cell), *10s = duration
+const raw = [
+  ["sub-103",117,149],["sub-106",43,41],["sub-107",44,33],["sub-114",54,73],
+  ["sub-115",43,44],["sub-116",53,47],["sub-119",52,76],["sub-121",55,30],
+  ["sub-123",54,43],["sub-125",47,59],["sub-129",57,78],["sub-131",31,80],
+  ["sub-134",48,66],["sub-135",60,86],["sub-51",53,42],["sub-62",43,35],
+  ["sub-70",60,40],["sub-71",60,58],["sub-72",39,49],["sub-76",59,70],
+  ["sub-77",51,68],["sub-81",52,67],["sub-84",50,64],["sub-90",43,26],
+  ["sub-92",45,38],["sub-94",36,37],["sub-96",53,30]
+];
+
+const data = raw.map(([pid, teaW, toastW]) => {
+  const teaS = teaW * 10, toastS = toastW * 10;
+  return { pid, teaS, toastS, delta: toastS - teaS };
+}).sort((a, b) => a.delta - b.delta);
+
+const maxAbs = Math.max(...data.map(d => Math.abs(d.delta)));
+const scaleMax = Math.ceil(maxAbs / 50) * 50; // round to nearest 50s
+
+const chart = document.getElementById('chart');
+const tooltip = document.getElementById('tooltip');
+const tableBody = document.getElementById('tableBody');
+
+data.forEach(d => {
+  const row = document.createElement('div');
+  row.className = 'row';
+
+  const pidEl = document.createElement('div');
+  pidEl.className = 'pid';
+  pidEl.textContent = d.pid.replace('sub-', '');
+
+  const track = document.createElement('div');
+  track.className = 'track';
+
+  const bar = document.createElement('div');
+  bar.className = 'bar ' + (d.delta < 0 ? 'neg' : 'pos');
+  const pct = (Math.abs(d.delta) / scaleMax) * 50;
+  bar.style.width = pct + '%';
+  track.appendChild(bar);
+
+  track.addEventListener('mousemove', (e) => {
+    tooltip.innerHTML =
+      '<div class="t-pid">' + d.pid + '</div>' +
+      '<div class="t-row"><span class="k">tea</span><span>' + d.teaS + 's</span></div>' +
+      '<div class="t-row"><span class="k">toast</span><span>' + d.toastS + 's</span></div>' +
+      '<div class="t-row"><span class="k">&Delta;</span><span>' + (d.delta > 0 ? '+' : '') + d.delta + 's</span></div>';
+    tooltip.style.left = (e.clientX + 14) + 'px';
+    tooltip.style.top = (e.clientY + 14) + 'px';
+    tooltip.classList.add('show');
+  });
+  track.addEventListener('mouseleave', () => tooltip.classList.remove('show'));
+
+  const valEl = document.createElement('div');
+  valEl.className = 'val';
+  valEl.textContent = (d.delta > 0 ? '+' : '') + d.delta + 's';
+
+  row.appendChild(pidEl);
+  row.appendChild(track);
+  row.appendChild(valEl);
+  chart.appendChild(row);
+
+  const tr = document.createElement('tr');
+  tr.innerHTML = '<td>' + d.pid + '</td><td>' + d.teaS + '</td><td>' + d.toastS + '</td><td>' + (d.delta > 0 ? '+' : '') + d.delta + '</td>';
+  tableBody.appendChild(tr);
+});
+
+const axisTrack = document.getElementById('axisTrack');
+[-scaleMax, -scaleMax/2, 0, scaleMax/2, scaleMax].forEach(v => {
+  const pct = 50 + (v / scaleMax) * 50;
+  const s = document.createElement('span');
+  s.style.left = pct + '%';
+  s.textContent = (v > 0 ? '+' : '') + v + 's';
+  axisTrack.appendChild(s);
+});
+
+document.getElementById('tblToggle').addEventListener('click', (e) => {
+  const t = document.getElementById('dataTable');
+  t.classList.toggle('show');
+  e.target.textContent = t.classList.contains('show') ? 'Hide data table' : 'Show data table';
+});
+</script>

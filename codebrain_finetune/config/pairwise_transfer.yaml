@@ -1,0 +1,110 @@
+# codebrain_finetune/config/pairwise_transfer.yaml
+# ---------------------------------------------------------------------------
+# PAIRWISE TRANSFER MATRIX with a MAX-STATISTIC null (supervisor's idea,
+# 2026-08-01): take each patient's task-split model, test it on every other
+# patient, and see whether any pair transfers.
+#
+# THE CATCH THIS CONFIG EXISTS TO HANDLE. "Best of 702 ordered pairs" is a
+# MAXIMUM statistic. With 702 draws, individual pairs at 0.8+ appear by chance
+# alone, so the observed best is meaningless without the null distribution OF
+# THE MAXIMUM — not of a single pair. Everything below is set up so the observed
+# max is compared against a max recomputed the same way under permuted labels.
+# ---------------------------------------------------------------------------
+
+# ---- Which arm the matrix is built from ------------------------------------
+# NOTE ON PROVENANCE (read before interpreting this experiment). The brief asked
+# for "pure inference over the models already trained in
+# results/within_patient_tasksplit/". Those runs persisted metrics JSONs only —
+# no model weights were ever written to disk (see results/within_patient_tasksplit/
+# */*.json and checkpoints/, which holds only the pretrained CodeBrain backbone).
+# So a weights-only pairwise matrix was not possible and the source models are
+# REBUILT here instead.
+#
+# `frozen_probe` is the arm this can be done for exactly and cheaply: the
+# backbone never receives a gradient, so a patient's "model" is just a
+# standardiser + logistic regression on frozen features. Rebuilding it is
+# deterministic, and the diagonal of the matrix must reproduce the stored
+# per-patient numbers — which is checked, and recorded in the output, as proof
+# that the rebuild is faithful. It is also the STRONGEST per-patient arm (0.883
+# vs 0.805 full-FT and 0.704 LoRA), so it is the fairest target for a "does any
+# patient's model transfer at all" question.
+arm: frozen_probe
+source_model:
+  # Rebuilt from cached frozen-backbone features rather than loaded from disk.
+  rebuild: true
+  # The diagonal (source == target) is exactly the within-patient task-split
+  # protocol, so it must match the stored run JSONs. Abort if it does not: a
+  # mismatch beyond the tolerances below would mean the rebuilt models are not
+  # the ones that produced the published 0.883, and no off-diagonal number from
+  # them could be trusted.
+  verify_diagonal_against: results/within_patient_tasksplit/frozen_probe
+  # The tolerances are NOT bit-equality, and the reason is measured rather than
+  # assumed. Feature extraction runs under bfloat16 autocast, and cuBLAS selects
+  # kernels by batch shape, so a window batched with different neighbours
+  # accumulates slightly differently. Measured here: re-extracting with the SAME
+  # loader is exactly reproducible (max abs difference 0.0); extracting the same
+  # windows inside the whole-cohort frame moves features ~0.4% relative, which
+  # moves a per-patient balanced accuracy by up to ~0.011 (a couple of windows
+  # crossing the 0.5 threshold on the smallest held-out task sets) and the cohort
+  # mean by ~0.002. These caps sit just above the measured effect, so a real
+  # rebuild error — which would be far larger — still aborts the run.
+  diagonal_max_abs_delta: 0.03
+  diagonal_mean_abs_delta: 0.005
+
+# ---- Normalisation ---------------------------------------------------------
+# Run under both, for the same reason as everything else this round.
+input_norm:
+  schemes: [none, chan_z]
+
+# ---- The matrix ------------------------------------------------------------
+matrix:
+  # Each cell = the source patient's model applied to the target patient's
+  # held-out-task windows, averaged over the two directions (tea->toast,
+  # toast->tea), which are taken from config/tasksplit.yaml.
+  direction_aggregate: mean
+  metrics: [balanced_accuracy, auc]
+  # The max statistic is taken over the OFF-DIAGONAL ordered pairs only. The
+  # diagonal is the within-patient number, which is already known to be
+  # dominated by the recording-identity leak (Exp. 12c/13) and would otherwise
+  # trivially win the maximum.
+  max_over: off_diagonal
+
+# ---- The null distribution of the MAXIMUM ----------------------------------
+permutation:
+  # Within-subject permutation, the same scheme as
+  # codebrain_ft.metrics.permutation_test_balanced_accuracy: each patient's two
+  # sessions independently exchange their ON/OFF labels (a per-patient sign
+  # flip). It respects the paired structure and never permutes window labels
+  # (which would leak).
+  scheme: within_patient_sign_flip
+  # >= 200 gives a resolution of ~0.005 on the empirical p-value, which is
+  # enough to separate "the best pair is unremarkable" from "p < 0.01".
+  n_permutations: 200
+  seed_base: 20260801
+  # Each permutation REFITS every source model on the permuted labels and
+  # rebuilds the whole matrix, rather than exploiting the algebraic shortcut
+  # that flipping a logistic regression's training labels negates its decision
+  # function. The shortcut is exact here, but refitting is what the brief asked
+  # for and costs a few minutes.
+  refit_source_models: true
+
+# ---- Figure ----------------------------------------------------------------
+# Same conventions as logs/figures/fig_roc and fig_ordering: PNG (200 dpi) +
+# vector PDF, thin recessive axes, direct labelling, white facecolor.
+figure:
+  dir: logs/figures
+  basename: fig_pairwise_transfer
+  dpi: 200
+  # Diverging around the 0.5 chance line, so "above chance" and "below chance"
+  # are visually distinct rather than two shades of the same ramp.
+  cmap: RdBu_r
+  vmin: 0.2
+  vmax: 0.8
+  center: 0.5
+
+# ---- Output ----------------------------------------------------------------
+output:
+  results_subdir: pairwise_transfer
+  matrix_csv: "transfer_matrix_{metric}_{norm}.csv"
+  summary: pairwise_transfer_summary.json
+  report: logs/pairwise_transfer_report.md

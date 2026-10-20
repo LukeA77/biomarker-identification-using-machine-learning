@@ -1,0 +1,56 @@
+09:03:08 INFO livinglab_codebrain.dataset: Manifest validated: 43822 windows, 41 patients, sfreq=200, label map A=0/C=1 consistent.
+09:03:08 WARNING livinglab_codebrain.dataset: Exclusion list names patients absent from the manifest: ['sub-82', 'sub-100', 'sub-111', 'sub-130']
+09:03:08 INFO livinglab_codebrain.dataset: Applying cohort exclusions (loud):
+09:03:08 INFO livinglab_codebrain.dataset:     EXCLUDE sub-80    ->  1109 windows dropped
+09:03:08 INFO livinglab_codebrain.dataset:     EXCLUDE sub-82    ->     0 windows dropped
+09:03:08 INFO livinglab_codebrain.dataset:     EXCLUDE sub-97    ->   700 windows dropped
+09:03:08 INFO livinglab_codebrain.dataset:     EXCLUDE sub-98    ->   910 windows dropped
+09:03:08 INFO livinglab_codebrain.dataset:     EXCLUDE sub-99    ->  1494 windows dropped
+09:03:08 INFO livinglab_codebrain.dataset:     EXCLUDE sub-100   ->     0 windows dropped
+09:03:08 INFO livinglab_codebrain.dataset:     EXCLUDE sub-105   ->   850 windows dropped
+09:03:08 INFO livinglab_codebrain.dataset:     EXCLUDE sub-108   ->  1585 windows dropped
+09:03:08 INFO livinglab_codebrain.dataset:     EXCLUDE sub-111   ->     0 windows dropped
+09:03:08 INFO livinglab_codebrain.dataset:     EXCLUDE sub-130   ->     0 windows dropped
+09:03:08 INFO livinglab_codebrain.dataset: Cohort after exclusions: 35 patients (was 41), 37174 windows (was 43822).
+09:03:08 INFO tasksplit: Cohort: 35 patients, 37174 windows
+09:03:08 INFO tasksplit: Pre-flight: 20/35 patients eligible. Ineligible (with reasons) are recorded in preflight_summary.json.
+09:03:08 INFO tasksplit:   SKIP sub-103   | task group 'toast' has NO recoverable eval windows in session(s) A — task type would be confounded with ON/OFF
+09:03:08 INFO tasksplit:   SKIP sub-106   | task group 'toast' has NO recoverable eval windows in session(s) A — task type would be confounded with ON/OFF
+09:03:08 INFO tasksplit:   SKIP sub-117   | task group 'tea' has NO recoverable eval windows in session(s) C — task type would be confounded with ON/OFF ; task group 'toast' has NO recoverable eval windows in session(s) C — task type would be confounded with ON/OFF
+09:03:08 INFO tasksplit:   SKIP sub-34    | task group 'tea' has NO recoverable eval windows in session(s) A/C — task type would be confounded with ON/OFF ; task group 'toast' has NO recoverable eval windows in session(s) A/C — task type would be confounded with ON/OFF
+09:03:08 INFO tasksplit:   SKIP sub-42    | task group 'toast' has NO recoverable eval windows in session(s) C — task type would be confounded with ON/OFF
+09:03:08 INFO tasksplit:   SKIP sub-48    | task group 'toast' has NO recoverable eval windows in session(s) A/C — task type would be confounded with ON/OFF
+09:03:08 INFO tasksplit:   SKIP sub-53    | C: TASK SPANS OVERLAP by 350.1s (tea vs toast) — the annotation CSV logs these as the same/overlapping interval, so a 'task split' here would train and test on the same windows
+09:03:08 INFO tasksplit:   SKIP sub-62    | task group 'tea' has NO recoverable eval windows in session(s) A — task type would be confounded with ON/OFF ; task group 'toast' has NO recoverable eval windows in session(s) A — task type would be confounded with ON/OFF
+09:03:08 INFO tasksplit:   SKIP sub-69    | task group 'toast' has NO recoverable eval windows in session(s) A — task type would be confounded with ON/OFF
+09:03:08 INFO tasksplit:   SKIP sub-70    | task group 'tea' has NO recoverable eval windows in session(s) C — task type would be confounded with ON/OFF ; task group 'toast' has NO recoverable eval windows in session(s) C — task type would be confounded with ON/OFF
+09:03:08 INFO tasksplit:   SKIP sub-72    | task group 'tea' has NO recoverable eval windows in session(s) A — task type would be confounded with ON/OFF ; task group 'toast' has NO recoverable eval windows in session(s) A — task type would be confounded with ON/OFF
+09:03:08 INFO tasksplit:   SKIP sub-73    | task group 'toast' has NO recoverable eval windows in session(s) C — task type would be confounded with ON/OFF
+09:03:08 INFO tasksplit:   SKIP sub-76    | task group 'tea' has NO recoverable eval windows in session(s) A — task type would be confounded with ON/OFF ; task group 'toast' has NO recoverable eval windows in session(s) A — task type would be confounded with ON/OFF
+09:03:08 INFO tasksplit:   SKIP sub-84    | task group 'toast' has NO recoverable eval windows in session(s) A — task type would be confounded with ON/OFF
+09:03:08 INFO tasksplit:   SKIP sub-93    | task group 'tea' has NO recoverable eval windows in session(s) C — task type would be confounded with ON/OFF ; task group 'toast' has NO recoverable eval windows in session(s) A/C — task type would be confounded with ON/OFF
+09:03:08 WARNING tasksplit: SMOKE TEST: restricted to 2 patient(s): ['sub-107', 'sub-114']
+09:03:08 INFO tasksplit: LoRA HPs reused from results/nested_lora/hp_search.json: {'r': 4, 'lr': 0.0005, 'dropout': 0.1} (NOT re-searched — see module docstring).
+09:03:08 INFO tasksplit: Run 'smoke_probe' | arms=['frozen_probe'] | 2 patients x 2 directions | max_epochs=20 | match_k=None
+09:03:29 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+09:03:37 INFO codebrain_ft.probe: Probe features: train (98, 200), test (97, 200) (pooling=mean)
+09:03:37 INFO tasksplit: frozen_probe sub-107   tea->toast  | window bal-acc 0.757 auc 0.851 | test n=97 (ON 64/OFF 33) | ordering OK | 8s
+09:03:37 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+09:03:41 INFO codebrain_ft.probe: Probe features: train (193, 200), test (49, 200) (pooling=mean)
+09:03:41 INFO tasksplit: frozen_probe sub-107   toast->tea    | window bal-acc 0.821 auc 0.933 | test n=49 (ON 27/OFF 22) | ordering OK | 4s
+09:03:41 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+09:03:48 INFO codebrain_ft.probe: Probe features: train (115, 200), test (149, 200) (pooling=mean)
+09:03:48 INFO tasksplit: frozen_probe sub-114   tea->toast  | window bal-acc 0.987 auc 0.996 | test n=149 (ON 73/OFF 76) | ordering OK | 7s
+09:03:48 INFO codebrain_ft.model: CodeBrain backbone checkpoint loaded (0 missing / 0 unexpected).
+09:03:53 INFO codebrain_ft.probe: Probe features: train (300, 200), test (57, 200) (pooling=mean)
+09:03:53 INFO tasksplit: frozen_probe sub-114   toast->tea    | window bal-acc 0.926 auc 0.962 | test n=57 (ON 30/OFF 27) | ordering OK | 5s
+09:03:53 INFO tasksplit: ==========================================================================
+09:03:53 INFO tasksplit: ARM frozen_probe — 2 patients, 4 runs
+09:03:53 INFO tasksplit:   per-patient bal-acc mean = 0.873  (patient bootstrap 95% CI [0.789, 0.956])
+09:03:53 INFO tasksplit:   above chance: 2/2 | Wilcoxon p=0.25 | sign p=0.25
+09:03:53 INFO tasksplit:   ordering: 4/4 correct (1.000), binomial p=0.0625
+09:03:53 INFO tasksplit:   cross-subject LOPO reference for this arm: bal-acc 0.443 (CI [0.357, 0.529])
+09:03:53 INFO tasksplit: ==========================================================================
+09:03:53 INFO codebrain_ft.tracking: Saved run -> smoke_probe_20260730T080353Z.json (+ master CSV row)
+09:03:53 INFO tasksplit: Wrote markdown report -> C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\codebrain_finetune\logs\smoke_probe_report.md
+09:03:53 INFO tasksplit: Done in 0.4 min. Results under C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\codebrain_finetune\results\within_patient_tasksplit

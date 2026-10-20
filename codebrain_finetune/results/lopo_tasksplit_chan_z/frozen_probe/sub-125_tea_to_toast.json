@@ -1,0 +1,86 @@
+{
+  "run_tag": "lopo_tasksplit_chan_z",
+  "git_sha": "2a1f9e6980392ab51d447f5853a2278e06d167b2",
+  "checkpoint_sha256": "d9714b8732c9883a04d022ee66254cd578ae1fa27f5458e6ab7f1aa96e9a7352",
+  "env": {
+    "torch": "2.11.0+cu128",
+    "numpy": "2.4.6",
+    "peft": "0.19.1",
+    "transformers": "5.14.1",
+    "sklearn": "1.9.0"
+  },
+  "cohort": {
+    "patients": 35,
+    "windows": 37174
+  },
+  "experiment": "lopo_tasksplit",
+  "lora_target": "attention",
+  "lora_hp": {
+    "r": 4,
+    "lr": 0.0005,
+    "dropout": 0.1
+  },
+  "preflight": {
+    "n_eligible": 27,
+    "n_cohort": 35
+  },
+  "arm": "frozen_probe",
+  "test_patient": "sub-125",
+  "n_train_patients": 26,
+  "train_task": "tea",
+  "test_task": "toast",
+  "direction": "tea_to_toast",
+  "seed": 5807,
+  "n_train_windows": 3060,
+  "n_val_windows": 0,
+  "n_test_windows": 139,
+  "window": {
+    "balanced_accuracy": 0.677436440677966,
+    "accuracy": 0.697841726618705,
+    "auc": 0.7673728813559322,
+    "sensitivity": 0.5423728813559322,
+    "specificity": 0.8125,
+    "macro_f1": 0.6797937691970162,
+    "n": 139,
+    "n_pos": 59,
+    "n_neg": 80
+  },
+  "session": {
+    "balanced_accuracy": 1.0,
+    "accuracy": 1.0,
+    "auc": 1.0,
+    "sensitivity": 1.0,
+    "specificity": 1.0,
+    "macro_f1": 1.0,
+    "n": 2,
+    "n_pos": 1,
+    "n_neg": 1
+  },
+  "session_scores": {
+    "sessions": [
+      "sub-125|A",
+      "sub-125|C"
+    ],
+    "patients": [
+      "sub-125",
+      "sub-125"
+    ],
+    "prob": [
+      0.3120736705837771,
+      0.5164447180547956
+    ],
+    "y_true": [
+      0,
+      1
+    ],
+    "n_windows": [
+      80,
+      59
+    ]
+  },
+  "input_norm": "chan_z",
+  "norm_scale": 0.6627418398857117,
+  "wall_seconds": 0.25899553298950195,
+  "peak_vram_bytes": 0,
+  "n_features": 200
+}

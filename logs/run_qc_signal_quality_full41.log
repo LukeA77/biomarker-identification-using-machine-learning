@@ -1,0 +1,318 @@
+[qc] reading production run at C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\processed_csv_continuous\reref-linkedears_ica
+[qc] 82 sessions found in manifest
+
+[qc] === (1/82) sub-103-a (ON) ===
+[qc] sub-103-a: done in 1.1s
+
+[qc] === (2/82) sub-103-c (OFF) ===
+[qc] sub-103-c: done in 0.8s
+
+[qc] === (3/82) sub-105-a (ON) ===
+[qc] sub-105-a: done in 3.3s
+
+[qc] === (4/82) sub-105-c (OFF) ===
+[qc] sub-105-c: done in 3.3s
+
+[qc] === (5/82) sub-106-a (ON) ===
+[qc] sub-106-a: done in 4.6s
+
+[qc] === (6/82) sub-106-c (OFF) ===
+[qc] sub-106-c: done in 2.9s
+
+[qc] === (7/82) sub-107-a (ON) ===
+[qc] sub-107-a: done in 4.3s
+
+[qc] === (8/82) sub-107-c (OFF) ===
+[qc] sub-107-c: done in 2.5s
+
+[qc] === (9/82) sub-108-a (ON) ===
+[qc] sub-108-a: done in 6.8s
+
+[qc] === (10/82) sub-108-c (OFF) ===
+[qc] sub-108-c: done in 4.8s
+
+[qc] === (11/82) sub-114-a (ON) ===
+[qc] sub-114-a: done in 4.9s
+
+[qc] === (12/82) sub-114-c (OFF) ===
+[qc] sub-114-c: done in 8.1s
+
+[qc] === (13/82) sub-115-a (ON) ===
+[qc] sub-115-a: done in 4.5s
+
+[qc] === (14/82) sub-115-c (OFF) ===
+[qc] sub-115-c: done in 3.3s
+
+[qc] === (15/82) sub-116-a (ON) ===
+[qc] sub-116-a: done in 5.5s
+
+[qc] === (16/82) sub-116-c (OFF) ===
+[qc] sub-116-c: done in 3.7s
+
+[qc] === (17/82) sub-117-a (ON) ===
+[qc] sub-117-a: done in 3.8s
+
+[qc] === (18/82) sub-117-c (OFF) ===
+[qc] sub-117-c: done in 1.0s
+
+[qc] === (19/82) sub-119-a (ON) ===
+[qc] sub-119-a: done in 3.8s
+
+[qc] === (20/82) sub-119-c (OFF) ===
+[qc] sub-119-c: done in 4.9s
+
+[qc] === (21/82) sub-121-a (ON) ===
+[qc] sub-121-a: done in 0.5s
+
+[qc] === (22/82) sub-121-c (OFF) ===
+[qc] sub-121-c: done in 1.0s
+
+[qc] === (23/82) sub-123-a (ON) ===
+[qc] sub-123-a: done in 4.0s
+
+[qc] === (24/82) sub-123-c (OFF) ===
+[qc] sub-123-c: done in 3.2s
+
+[qc] === (25/82) sub-125-a (ON) ===
+[qc] sub-125-a: done in 4.9s
+
+[qc] === (26/82) sub-125-c (OFF) ===
+[qc] sub-125-c: done in 3.7s
+
+[qc] === (27/82) sub-129-a (ON) ===
+[qc] sub-129-a: done in 3.9s
+
+[qc] === (28/82) sub-129-c (OFF) ===
+[qc] sub-129-c: done in 4.5s
+
+[qc] === (29/82) sub-131-a (ON) ===
+[qc] sub-131-a: wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\qc_signal_quality\psd_examples\sub-131-a.png
+[stage1a] sub-131-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[qc] sub-131-a: wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\qc_signal_quality\psd_before_after_examples\sub-131-a.png
+[qc] sub-131-a: done in 9.7s
+
+[qc] === (30/82) sub-131-c (OFF) ===
+[qc] sub-131-c: wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\qc_signal_quality\psd_examples\sub-131-c.png
+[stage1a] sub-131-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[qc] sub-131-c: wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\qc_signal_quality\psd_before_after_examples\sub-131-c.png
+[qc] sub-131-c: done in 7.9s
+
+[qc] === (31/82) sub-134-a (ON) ===
+[qc] sub-134-a: wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\qc_signal_quality\psd_examples\sub-134-a.png
+[stage1a] sub-134-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[qc] sub-134-a: wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\qc_signal_quality\psd_before_after_examples\sub-134-a.png
+[qc] sub-134-a: done in 10.1s
+
+[qc] === (32/82) sub-134-c (OFF) ===
+[qc] sub-134-c: wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\qc_signal_quality\psd_examples\sub-134-c.png
+[stage1a] sub-134-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[qc] sub-134-c: wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\qc_signal_quality\psd_before_after_examples\sub-134-c.png
+[qc] sub-134-c: done in 10.0s
+
+[qc] === (33/82) sub-135-a (ON) ===
+[qc] sub-135-a: done in 4.3s
+
+[qc] === (34/82) sub-135-c (OFF) ===
+[qc] sub-135-c: done in 5.1s
+
+[qc] === (35/82) sub-34-a (ON) ===
+[qc] sub-34-a: wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\qc_signal_quality\psd_examples\sub-34-a.png
+[stage1a] sub-34-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[qc] sub-34-a: wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\qc_signal_quality\psd_before_after_examples\sub-34-a.png
+[qc] sub-34-a: done in 10.3s
+
+[qc] === (36/82) sub-34-c (OFF) ===
+[qc] sub-34-c: wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\qc_signal_quality\psd_examples\sub-34-c.png
+[stage1a] sub-34-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[qc] sub-34-c: wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\qc_signal_quality\psd_before_after_examples\sub-34-c.png
+[qc] sub-34-c: done in 4.4s
+
+[qc] === (37/82) sub-42-a (ON) ===
+[qc] sub-42-a: done in 0.9s
+
+[qc] === (38/82) sub-42-c (OFF) ===
+[qc] sub-42-c: done in 0.4s
+
+[qc] === (39/82) sub-48-a (ON) ===
+[qc] sub-48-a: done in 2.4s
+
+[qc] === (40/82) sub-48-c (OFF) ===
+[qc] sub-48-c: done in 1.8s
+
+[qc] === (41/82) sub-51-a (ON) ===
+[qc] sub-51-a: wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\qc_signal_quality\psd_examples\sub-51-a.png
+[stage1a] sub-51-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[qc] sub-51-a: wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\qc_signal_quality\psd_before_after_examples\sub-51-a.png
+[qc] sub-51-a: done in 12.0s
+
+[qc] === (42/82) sub-51-c (OFF) ===
+[qc] sub-51-c: wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\qc_signal_quality\psd_examples\sub-51-c.png
+[stage1a] sub-51-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[qc] sub-51-c: wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\qc_signal_quality\psd_before_after_examples\sub-51-c.png
+[qc] sub-51-c: done in 6.9s
+
+[qc] === (43/82) sub-53-a (ON) ===
+[qc] sub-53-a: done in 4.3s
+
+[qc] === (44/82) sub-53-c (OFF) ===
+[qc] sub-53-c: done in 2.1s
+
+[qc] === (45/82) sub-62-a (ON) ===
+[qc] sub-62-a: done in 3.2s
+
+[qc] === (46/82) sub-62-c (OFF) ===
+[qc] sub-62-c: done in 3.4s
+
+[qc] === (47/82) sub-69-a (ON) ===
+[qc] sub-69-a: done in 3.2s
+
+[qc] === (48/82) sub-69-c (OFF) ===
+[qc] sub-69-c: done in 2.6s
+
+[qc] === (49/82) sub-70-a (ON) ===
+[qc] sub-70-a: done in 1.0s
+
+[qc] === (50/82) sub-70-c (OFF) ===
+[qc] sub-70-c: done in 0.6s
+
+[qc] === (51/82) sub-71-a (ON) ===
+[qc] sub-71-a: done in 2.1s
+
+[qc] === (52/82) sub-71-c (OFF) ===
+[qc] sub-71-c: done in 3.7s
+
+[qc] === (53/82) sub-72-a (ON) ===
+[qc] sub-72-a: done in 4.1s
+
+[qc] === (54/82) sub-72-c (OFF) ===
+[qc] sub-72-c: done in 5.2s
+
+[qc] === (55/82) sub-73-a (ON) ===
+[qc] sub-73-a: done in 3.7s
+
+[qc] === (56/82) sub-73-c (OFF) ===
+[qc] sub-73-c: done in 5.5s
+
+[qc] === (57/82) sub-76-a (ON) ===
+[qc] sub-76-a: done in 6.0s
+
+[qc] === (58/82) sub-76-c (OFF) ===
+[qc] sub-76-c: done in 4.8s
+
+[qc] === (59/82) sub-77-a (ON) ===
+[qc] sub-77-a: done in 4.7s
+
+[qc] === (60/82) sub-77-c (OFF) ===
+[qc] sub-77-c: done in 5.3s
+
+[qc] === (61/82) sub-80-a (ON) ===
+[qc] sub-80-a: done in 5.1s
+
+[qc] === (62/82) sub-80-c (OFF) ===
+[qc] sub-80-c: done in 3.1s
+
+[qc] === (63/82) sub-81-a (ON) ===
+[qc] sub-81-a: done in 4.3s
+
+[qc] === (64/82) sub-81-c (OFF) ===
+[qc] sub-81-c: done in 4.4s
+
+[qc] === (65/82) sub-84-a (ON) ===
+[qc] sub-84-a: done in 7.2s
+
+[qc] === (66/82) sub-84-c (OFF) ===
+[qc] sub-84-c: done in 3.7s
+
+[qc] === (67/82) sub-90-a (ON) ===
+[qc] sub-90-a: done in 3.1s
+
+[qc] === (68/82) sub-90-c (OFF) ===
+[qc] sub-90-c: done in 5.0s
+
+[qc] === (69/82) sub-92-a (ON) ===
+[qc] sub-92-a: done in 3.6s
+
+[qc] === (70/82) sub-92-c (OFF) ===
+[qc] sub-92-c: done in 3.8s
+
+[qc] === (71/82) sub-93-a (ON) ===
+[qc] sub-93-a: wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\qc_signal_quality\psd_examples\sub-93-a.png
+[stage1a] sub-93-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[qc] sub-93-a: wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\qc_signal_quality\psd_before_after_examples\sub-93-a.png
+[qc] sub-93-a: done in 11.6s
+
+[qc] === (72/82) sub-93-c (OFF) ===
+[qc] sub-93-c: wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\qc_signal_quality\psd_examples\sub-93-c.png
+[stage1a] sub-93-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[qc] sub-93-c: wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\qc_signal_quality\psd_before_after_examples\sub-93-c.png
+[qc] sub-93-c: done in 9.8s
+
+[qc] === (73/82) sub-94-a (ON) ===
+[qc] sub-94-a: done in 4.5s
+
+[qc] === (74/82) sub-94-c (OFF) ===
+[qc] sub-94-c: done in 4.6s
+
+[qc] === (75/82) sub-96-a (ON) ===
+[qc] sub-96-a: done in 3.3s
+
+[qc] === (76/82) sub-96-c (OFF) ===
+[qc] sub-96-c: done in 3.1s
+
+[qc] === (77/82) sub-97-a (ON) ===
+[qc] sub-97-a: done in 3.5s
+
+[qc] === (78/82) sub-97-c (OFF) ===
+[qc] sub-97-c: done in 1.8s
+
+[qc] === (79/82) sub-98-a (ON) ===
+[qc] sub-98-a: done in 3.6s
+
+[qc] === (80/82) sub-98-c (OFF) ===
+[qc] sub-98-c: done in 3.4s
+
+[qc] === (81/82) sub-99-a (ON) ===
+[qc] sub-99-a: done in 5.6s
+
+[qc] === (82/82) sub-99-c (OFF) ===
+[qc] sub-99-c: done in 5.5s
+
+[qc] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\qc_signal_quality\aperiodic_fit_results.csv (1476 rows)
+
+[qc] running impedance inventory ...
+[qc-impedance] checking sub-34-a ...
+[qc-impedance] checking sub-48-a ...
+[qc-impedance] checking sub-51-c ...
+[qc-impedance] checking sub-131-a ...
+[qc-impedance] checking sub-111-c ...
+[qc] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\qc_signal_quality\impedance_results.csv (95 rows)
+
+[qc] checking for cross-session persistent low-exponent patients ...
+[qc] 6 patient(s) flagged: ['sub-105', 'sub-108', 'sub-80', 'sub-97', 'sub-98', 'sub-99']
+[stage1a] sub-105-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[qc] sub-105-a: wrote flagged-patient plot(s)
+[stage1a] sub-105-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[qc] sub-105-c: wrote flagged-patient plot(s)
+[stage1a] sub-108-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[qc] sub-108-a: wrote flagged-patient plot(s)
+[stage1a] sub-108-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[qc] sub-108-c: wrote flagged-patient plot(s)
+[stage1a] sub-80-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[qc] sub-80-a: wrote flagged-patient plot(s)
+[stage1a] sub-80-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[qc] sub-80-c: wrote flagged-patient plot(s)
+[stage1a] sub-97-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[qc] sub-97-a: wrote flagged-patient plot(s)
+[stage1a] sub-97-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[qc] sub-97-c: wrote flagged-patient plot(s)
+[stage1a] sub-98-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[qc] sub-98-a: wrote flagged-patient plot(s)
+[stage1a] sub-98-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[qc] sub-98-c: wrote flagged-patient plot(s)
+[stage1a] sub-99-a: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[qc] sub-99-a: wrote flagged-patient plot(s)
+[stage1a] sub-99-c: re-referenced to scheme='linkedears' using ['EEG A1-Pz', 'EEG A2-Pz']
+[qc] sub-99-c: wrote flagged-patient plot(s)
+[qc-report] wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\qc_signal_quality\qc_summary_report.md
+
+[qc] done in 433.0s: 82/82 sessions processed, 1476 channel-session rows, 0 session failure(s)

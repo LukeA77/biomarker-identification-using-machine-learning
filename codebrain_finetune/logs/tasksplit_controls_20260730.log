@@ -1,0 +1,546 @@
+09:10:21 INFO tasksplit_controls: Controls ['amp1', 'crude3', 'chanamp'] over 20 eligible patients x 2 directions (CPU, no model).
+09:10:21 INFO tasksplit_controls: amp1     sub-107   tea->toast  | bal-acc 0.483 auc 0.504 | ordering wrong
+09:10:21 INFO tasksplit_controls: amp1     sub-107   toast->tea    | bal-acc 0.427 auc 0.397 | ordering wrong
+09:10:21 INFO tasksplit_controls: amp1     sub-114   tea->toast  | bal-acc 0.621 auc 0.726 | ordering OK
+09:10:21 INFO tasksplit_controls: amp1     sub-114   toast->tea    | bal-acc 0.537 auc 0.637 | ordering OK
+09:10:21 INFO tasksplit_controls: amp1     sub-115   tea->toast  | bal-acc 0.398 auc 0.393 | ordering wrong
+09:10:21 INFO tasksplit_controls: amp1     sub-115   toast->tea    | bal-acc 0.258 auc 0.212 | ordering wrong
+09:10:21 INFO tasksplit_controls: amp1     sub-116   tea->toast  | bal-acc 0.614 auc 0.613 | ordering OK
+09:10:21 INFO tasksplit_controls: amp1     sub-116   toast->tea    | bal-acc 0.716 auc 0.722 | ordering OK
+09:10:22 INFO tasksplit_controls: amp1     sub-119   tea->toast  | bal-acc 0.509 auc 0.707 | ordering OK
+09:10:22 INFO tasksplit_controls: amp1     sub-119   toast->tea    | bal-acc 0.577 auc 0.654 | ordering OK
+09:10:22 INFO tasksplit_controls: amp1     sub-121   tea->toast  | bal-acc 0.281 auc 0.180 | ordering wrong
+09:10:22 INFO tasksplit_controls: amp1     sub-121   toast->tea    | bal-acc 0.462 auc 0.348 | ordering wrong
+09:10:22 INFO tasksplit_controls: amp1     sub-123   tea->toast  | bal-acc 0.513 auc 0.498 | ordering OK
+09:10:22 INFO tasksplit_controls: amp1     sub-123   toast->tea    | bal-acc 0.472 auc 0.497 | ordering OK
+09:10:22 INFO tasksplit_controls: amp1     sub-125   tea->toast  | bal-acc 0.612 auc 0.644 | ordering OK
+09:10:22 INFO tasksplit_controls: amp1     sub-125   toast->tea    | bal-acc 0.548 auc 0.520 | ordering OK
+09:10:22 INFO tasksplit_controls: amp1     sub-129   tea->toast  | bal-acc 0.414 auc 0.357 | ordering wrong
+09:10:22 INFO tasksplit_controls: amp1     sub-129   toast->tea    | bal-acc 0.450 auc 0.382 | ordering wrong
+09:10:22 INFO tasksplit_controls: amp1     sub-131   tea->toast  | bal-acc 0.608 auc 0.597 | ordering OK
+09:10:22 INFO tasksplit_controls: amp1     sub-131   toast->tea    | bal-acc 0.562 auc 0.587 | ordering OK
+09:10:22 INFO tasksplit_controls: amp1     sub-134   tea->toast  | bal-acc 0.591 auc 0.708 | ordering OK
+09:10:22 INFO tasksplit_controls: amp1     sub-134   toast->tea    | bal-acc 0.642 auc 0.657 | ordering OK
+09:10:22 INFO tasksplit_controls: amp1     sub-135   tea->toast  | bal-acc 0.654 auc 0.805 | ordering OK
+09:10:22 INFO tasksplit_controls: amp1     sub-135   toast->tea    | bal-acc 0.770 auc 0.827 | ordering OK
+09:10:23 INFO tasksplit_controls: amp1     sub-51    tea->toast  | bal-acc 0.528 auc 0.501 | ordering OK
+09:10:23 INFO tasksplit_controls: amp1     sub-51    toast->tea    | bal-acc 0.556 auc 0.758 | ordering OK
+09:10:23 INFO tasksplit_controls: amp1     sub-71    tea->toast  | bal-acc 0.822 auc 0.902 | ordering OK
+09:10:23 INFO tasksplit_controls: amp1     sub-71    toast->tea    | bal-acc 0.750 auc 0.823 | ordering OK
+09:10:23 INFO tasksplit_controls: amp1     sub-77    tea->toast  | bal-acc 0.900 auc 0.919 | ordering OK
+09:10:23 INFO tasksplit_controls: amp1     sub-77    toast->tea    | bal-acc 0.718 auc 0.911 | ordering OK
+09:10:23 INFO tasksplit_controls: amp1     sub-81    tea->toast  | bal-acc 0.561 auc 0.824 | ordering OK
+09:10:23 INFO tasksplit_controls: amp1     sub-81    toast->tea    | bal-acc 0.495 auc 0.545 | ordering OK
+09:10:23 INFO tasksplit_controls: amp1     sub-90    tea->toast  | bal-acc 0.571 auc 0.621 | ordering OK
+09:10:23 INFO tasksplit_controls: amp1     sub-90    toast->tea    | bal-acc 0.592 auc 0.514 | ordering OK
+09:10:23 INFO tasksplit_controls: amp1     sub-92    tea->toast  | bal-acc 0.500 auc 1.000 | ordering OK
+09:10:23 INFO tasksplit_controls: amp1     sub-92    toast->tea    | bal-acc 0.958 auc 0.998 | ordering OK
+09:10:23 INFO tasksplit_controls: amp1     sub-94    tea->toast  | bal-acc 0.494 auc 0.391 | ordering wrong
+09:10:23 INFO tasksplit_controls: amp1     sub-94    toast->tea    | bal-acc 0.453 auc 0.442 | ordering wrong
+09:10:23 INFO tasksplit_controls: amp1     sub-96    tea->toast  | bal-acc 0.552 auc 0.659 | ordering OK
+09:10:23 INFO tasksplit_controls: amp1     sub-96    toast->tea    | bal-acc 0.755 auc 0.908 | ordering OK
+09:10:23 INFO tasksplit_controls: ==========================================================================
+09:10:23 INFO tasksplit_controls: CONTROL amp1 (mean|x| only (1 feature))
+09:10:23 INFO tasksplit_controls:   per-patient bal-acc mean = 0.573  (95% CI [0.518, 0.627]) | above chance 14/20
+09:10:23 INFO tasksplit_controls:   AUC mean 0.622 / max 1.000 | 2 run(s) with AUC > 0.95
+09:10:23 INFO tasksplit_controls:   ordering 30/40 (p=0.0011)
+09:10:23 INFO tasksplit_controls: ==========================================================================
+09:10:23 INFO tasksplit_controls: crude3   sub-107   tea->toast  | bal-acc 0.498 auc 0.451 | ordering wrong
+09:10:24 INFO tasksplit_controls: crude3   sub-107   toast->tea    | bal-acc 0.439 auc 0.397 | ordering wrong
+09:10:24 INFO tasksplit_controls: crude3   sub-114   tea->toast  | bal-acc 0.653 auc 0.696 | ordering OK
+09:10:24 INFO tasksplit_controls: crude3   sub-114   toast->tea    | bal-acc 0.587 auc 0.733 | ordering OK
+09:10:24 INFO tasksplit_controls: crude3   sub-115   tea->toast  | bal-acc 0.344 auc 0.346 | ordering wrong
+09:10:24 INFO tasksplit_controls: crude3   sub-115   toast->tea    | bal-acc 0.343 auc 0.273 | ordering wrong
+09:10:24 INFO tasksplit_controls: crude3   sub-116   tea->toast  | bal-acc 0.721 auc 0.860 | ordering OK
+09:10:24 INFO tasksplit_controls: crude3   sub-116   toast->tea    | bal-acc 0.859 auc 0.917 | ordering OK
+09:10:24 INFO tasksplit_controls: crude3   sub-119   tea->toast  | bal-acc 0.502 auc 0.598 | ordering OK
+09:10:24 INFO tasksplit_controls: crude3   sub-119   toast->tea    | bal-acc 0.468 auc 0.500 | ordering OK
+09:10:24 INFO tasksplit_controls: crude3   sub-121   tea->toast  | bal-acc 0.316 auc 0.167 | ordering wrong
+09:10:24 INFO tasksplit_controls: crude3   sub-121   toast->tea    | bal-acc 0.444 auc 0.386 | ordering wrong
+09:10:24 INFO tasksplit_controls: crude3   sub-123   tea->toast  | bal-acc 0.499 auc 0.473 | ordering wrong
+09:10:24 INFO tasksplit_controls: crude3   sub-123   toast->tea    | bal-acc 0.509 auc 0.576 | ordering OK
+09:10:25 INFO tasksplit_controls: crude3   sub-125   tea->toast  | bal-acc 0.725 auc 0.799 | ordering OK
+09:10:25 INFO tasksplit_controls: crude3   sub-125   toast->tea    | bal-acc 0.697 auc 0.627 | ordering OK
+09:10:25 INFO tasksplit_controls: crude3   sub-129   tea->toast  | bal-acc 0.409 auc 0.365 | ordering wrong
+09:10:25 INFO tasksplit_controls: crude3   sub-129   toast->tea    | bal-acc 0.450 auc 0.382 | ordering wrong
+09:10:25 INFO tasksplit_controls: crude3   sub-131   tea->toast  | bal-acc 0.615 auc 0.612 | ordering OK
+09:10:25 INFO tasksplit_controls: crude3   sub-131   toast->tea    | bal-acc 0.595 auc 0.613 | ordering OK
+09:10:25 INFO tasksplit_controls: crude3   sub-134   tea->toast  | bal-acc 0.577 auc 0.737 | ordering OK
+09:10:25 INFO tasksplit_controls: crude3   sub-134   toast->tea    | bal-acc 0.642 auc 0.656 | ordering OK
+09:10:25 INFO tasksplit_controls: crude3   sub-135   tea->toast  | bal-acc 0.754 auc 0.908 | ordering OK
+09:10:25 INFO tasksplit_controls: crude3   sub-135   toast->tea    | bal-acc 0.826 auc 0.881 | ordering OK
+09:10:25 INFO tasksplit_controls: crude3   sub-51    tea->toast  | bal-acc 0.540 auc 0.437 | ordering OK
+09:10:25 INFO tasksplit_controls: crude3   sub-51    toast->tea    | bal-acc 0.278 auc 0.249 | ordering wrong
+09:10:25 INFO tasksplit_controls: crude3   sub-71    tea->toast  | bal-acc 0.873 auc 0.952 | ordering OK
+09:10:26 INFO tasksplit_controls: crude3   sub-71    toast->tea    | bal-acc 0.783 auc 0.856 | ordering OK
+09:10:26 INFO tasksplit_controls: crude3   sub-77    tea->toast  | bal-acc 0.892 auc 0.916 | ordering OK
+09:10:26 INFO tasksplit_controls: crude3   sub-77    toast->tea    | bal-acc 0.738 auc 0.917 | ordering OK
+09:10:26 INFO tasksplit_controls: crude3   sub-81    tea->toast  | bal-acc 0.509 auc 0.493 | ordering wrong
+09:10:26 INFO tasksplit_controls: crude3   sub-81    toast->tea    | bal-acc 0.524 auc 0.567 | ordering OK
+09:10:26 INFO tasksplit_controls: crude3   sub-90    tea->toast  | bal-acc 0.619 auc 0.660 | ordering OK
+09:10:26 INFO tasksplit_controls: crude3   sub-90    toast->tea    | bal-acc 0.616 auc 0.560 | ordering OK
+09:10:26 INFO tasksplit_controls: crude3   sub-92    tea->toast  | bal-acc 0.500 auc 1.000 | ordering OK
+09:10:26 INFO tasksplit_controls: crude3   sub-92    toast->tea    | bal-acc 0.958 auc 0.998 | ordering OK
+09:10:26 INFO tasksplit_controls: crude3   sub-94    tea->toast  | bal-acc 0.462 auc 0.491 | ordering OK
+09:10:26 INFO tasksplit_controls: crude3   sub-94    toast->tea    | bal-acc 0.486 auc 0.600 | ordering OK
+09:10:26 INFO tasksplit_controls: crude3   sub-96    tea->toast  | bal-acc 0.724 auc 0.892 | ordering OK
+09:10:26 INFO tasksplit_controls: crude3   sub-96    toast->tea    | bal-acc 0.983 auc 1.000 | ordering OK
+09:10:26 INFO tasksplit_controls: ==========================================================================
+09:10:26 INFO tasksplit_controls: CONTROL crude3 (mean|x|, std, max|x| (3 features))
+09:10:26 INFO tasksplit_controls:   per-patient bal-acc mean = 0.599  (95% CI [0.530, 0.668]) | above chance 13/20
+09:10:26 INFO tasksplit_controls:   AUC mean 0.638 / max 1.000 | 4 run(s) with AUC > 0.95
+09:10:26 INFO tasksplit_controls:   ordering 29/40 (p=0.0032)
+09:10:26 INFO tasksplit_controls: ==========================================================================
+09:10:26 INFO tasksplit_controls: chanamp  sub-107   tea->toast  | bal-acc 0.939 auc 0.994 | ordering OK
+09:10:26 INFO tasksplit_controls: chanamp  sub-107   toast->tea    | bal-acc 0.977 auc 0.998 | ordering OK
+09:10:27 INFO tasksplit_controls: chanamp  sub-114   tea->toast  | bal-acc 1.000 auc 1.000 | ordering OK
+09:10:27 INFO tasksplit_controls: chanamp  sub-114   toast->tea    | bal-acc 1.000 auc 1.000 | ordering OK
+09:10:27 INFO tasksplit_controls: chanamp  sub-115   tea->toast  | bal-acc 0.723 auc 0.781 | ordering OK
+09:10:27 INFO tasksplit_controls: chanamp  sub-115   toast->tea    | bal-acc 0.845 auc 0.894 | ordering OK
+09:10:27 INFO tasksplit_controls: chanamp  sub-116   tea->toast  | bal-acc 0.870 auc 0.976 | ordering OK
+09:10:27 INFO tasksplit_controls: chanamp  sub-116   toast->tea    | bal-acc 0.956 auc 1.000 | ordering OK
+09:10:27 INFO tasksplit_controls: chanamp  sub-119   tea->toast  | bal-acc 0.961 auc 0.966 | ordering OK
+09:10:27 INFO tasksplit_controls: chanamp  sub-119   toast->tea    | bal-acc 0.949 auc 0.957 | ordering OK
+09:10:27 INFO tasksplit_controls: chanamp  sub-121   tea->toast  | bal-acc 0.730 auc 0.719 | ordering OK
+09:10:27 INFO tasksplit_controls: chanamp  sub-121   toast->tea    | bal-acc 0.743 auc 0.917 | ordering OK
+09:10:27 INFO tasksplit_controls: chanamp  sub-123   tea->toast  | bal-acc 0.977 auc 0.995 | ordering OK
+09:10:27 INFO tasksplit_controls: chanamp  sub-123   toast->tea    | bal-acc 0.986 auc 1.000 | ordering OK
+09:10:27 INFO tasksplit_controls: chanamp  sub-125   tea->toast  | bal-acc 0.968 auc 0.989 | ordering OK
+09:10:27 INFO tasksplit_controls: chanamp  sub-125   toast->tea    | bal-acc 0.957 auc 0.960 | ordering OK
+09:10:27 INFO tasksplit_controls: chanamp  sub-129   tea->toast  | bal-acc 0.947 auc 0.959 | ordering OK
+09:10:28 INFO tasksplit_controls: chanamp  sub-129   toast->tea    | bal-acc 0.863 auc 0.835 | ordering OK
+09:10:28 INFO tasksplit_controls: chanamp  sub-131   tea->toast  | bal-acc 0.983 auc 0.984 | ordering OK
+09:10:28 INFO tasksplit_controls: chanamp  sub-131   toast->tea    | bal-acc 1.000 auc 1.000 | ordering OK
+09:10:28 INFO tasksplit_controls: chanamp  sub-134   tea->toast  | bal-acc 0.937 auc 0.967 | ordering OK
+09:10:28 INFO tasksplit_controls: chanamp  sub-134   toast->tea    | bal-acc 0.758 auc 0.762 | ordering OK
+09:10:28 INFO tasksplit_controls: chanamp  sub-135   tea->toast  | bal-acc 0.995 auc 1.000 | ordering OK
+09:10:28 INFO tasksplit_controls: chanamp  sub-135   toast->tea    | bal-acc 0.966 auc 0.998 | ordering OK
+09:10:28 INFO tasksplit_controls: chanamp  sub-51    tea->toast  | bal-acc 0.927 auc 0.970 | ordering OK
+09:10:28 INFO tasksplit_controls: chanamp  sub-51    toast->tea    | bal-acc 0.892 auc 0.921 | ordering OK
+09:10:28 INFO tasksplit_controls: chanamp  sub-71    tea->toast  | bal-acc 0.982 auc 1.000 | ordering OK
+09:10:28 INFO tasksplit_controls: chanamp  sub-71    toast->tea    | bal-acc 0.983 auc 0.999 | ordering OK
+09:10:28 INFO tasksplit_controls: chanamp  sub-77    tea->toast  | bal-acc 0.978 auc 0.994 | ordering OK
+09:10:28 INFO tasksplit_controls: chanamp  sub-77    toast->tea    | bal-acc 0.899 auc 0.977 | ordering OK
+09:10:28 INFO tasksplit_controls: chanamp  sub-81    tea->toast  | bal-acc 0.529 auc 0.330 | ordering wrong
+09:10:28 INFO tasksplit_controls: chanamp  sub-81    toast->tea    | bal-acc 0.624 auc 0.734 | ordering OK
+09:10:28 INFO tasksplit_controls: chanamp  sub-90    tea->toast  | bal-acc 1.000 auc 1.000 | ordering OK
+09:10:29 INFO tasksplit_controls: chanamp  sub-90    toast->tea    | bal-acc 0.980 auc 0.975 | ordering OK
+09:10:29 INFO tasksplit_controls: chanamp  sub-92    tea->toast  | bal-acc 1.000 auc 1.000 | ordering OK
+09:10:29 INFO tasksplit_controls: chanamp  sub-92    toast->tea    | bal-acc 1.000 auc 1.000 | ordering OK
+09:10:29 INFO tasksplit_controls: chanamp  sub-94    tea->toast  | bal-acc 0.944 auc 0.992 | ordering OK
+09:10:29 INFO tasksplit_controls: chanamp  sub-94    toast->tea    | bal-acc 0.972 auc 0.997 | ordering OK
+09:10:29 INFO tasksplit_controls: chanamp  sub-96    tea->toast  | bal-acc 1.000 auc 1.000 | ordering OK
+09:10:29 INFO tasksplit_controls: chanamp  sub-96    toast->tea    | bal-acc 1.000 auc 1.000 | ordering OK
+09:10:29 INFO tasksplit_controls: ==========================================================================
+09:10:29 INFO tasksplit_controls: CONTROL chanamp (per-channel mean|x| (18 features — electrode-contact fingerprint))
+09:10:29 INFO tasksplit_controls:   per-patient bal-acc mean = 0.919  (95% CI [0.867, 0.959]) | above chance 20/20
+09:10:29 INFO tasksplit_controls:   AUC mean 0.939 / max 1.000 | 31 run(s) with AUC > 0.95
+09:10:29 INFO tasksplit_controls:   ordering 39/40 (p=0.0000)
+09:10:29 INFO tasksplit_controls: ==========================================================================
+09:10:32 INFO tasksplit_controls: Wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\codebrain_finetune\results\within_patient_tasksplit\controls_summary.json
+09:10:32 INFO tasksplit_controls: 
+09:10:32 INFO tasksplit_controls: VERDICT: the strongest non-neural control (chanamp) reaches 0.919 mean per-patient balanced accuracy on this split.
+09:10:32 WARNING tasksplit_controls: This design LEAKS RECORDING IDENTITY: features with no neural content decode the ON/OFF label well above chance, because within a patient the label IS the recording. Treat every within-patient task-split number as an UPPER BOUND that includes this leak, NOT as evidence of levodopa decoding, and do not compare it directly to the cross-subject LOPO numbers.
+09:49:44 INFO tasksplit_controls: Controls ['chanamp'] over 20 eligible patients x 2 directions (CPU, no model).
+09:49:44 INFO tasksplit_controls: chanamp  sub-107   tea->toast  | bal-acc 0.939 auc 0.994 | ordering OK
+09:49:45 INFO tasksplit_controls: chanamp  sub-107   toast->tea    | bal-acc 0.977 auc 0.998 | ordering OK
+09:49:45 INFO tasksplit_controls: chanamp  sub-114   tea->toast  | bal-acc 1.000 auc 1.000 | ordering OK
+09:49:45 INFO tasksplit_controls: chanamp  sub-114   toast->tea    | bal-acc 1.000 auc 1.000 | ordering OK
+09:49:45 INFO tasksplit_controls: chanamp  sub-115   tea->toast  | bal-acc 0.723 auc 0.781 | ordering OK
+09:49:45 INFO tasksplit_controls: chanamp  sub-115   toast->tea    | bal-acc 0.845 auc 0.894 | ordering OK
+09:49:45 INFO tasksplit_controls: chanamp  sub-116   tea->toast  | bal-acc 0.870 auc 0.976 | ordering OK
+09:49:45 INFO tasksplit_controls: chanamp  sub-116   toast->tea    | bal-acc 0.956 auc 1.000 | ordering OK
+09:49:45 INFO tasksplit_controls: chanamp  sub-119   tea->toast  | bal-acc 0.961 auc 0.966 | ordering OK
+09:49:45 INFO tasksplit_controls: chanamp  sub-119   toast->tea    | bal-acc 0.949 auc 0.957 | ordering OK
+09:49:45 INFO tasksplit_controls: chanamp  sub-121   tea->toast  | bal-acc 0.730 auc 0.719 | ordering OK
+09:49:45 INFO tasksplit_controls: chanamp  sub-121   toast->tea    | bal-acc 0.743 auc 0.917 | ordering OK
+09:49:45 INFO tasksplit_controls: chanamp  sub-123   tea->toast  | bal-acc 0.977 auc 0.995 | ordering OK
+09:49:45 INFO tasksplit_controls: chanamp  sub-123   toast->tea    | bal-acc 0.986 auc 1.000 | ordering OK
+09:49:45 INFO tasksplit_controls: chanamp  sub-125   tea->toast  | bal-acc 0.968 auc 0.989 | ordering OK
+09:49:45 INFO tasksplit_controls: chanamp  sub-125   toast->tea    | bal-acc 0.957 auc 0.960 | ordering OK
+09:49:45 INFO tasksplit_controls: chanamp  sub-129   tea->toast  | bal-acc 0.947 auc 0.959 | ordering OK
+09:49:46 INFO tasksplit_controls: chanamp  sub-129   toast->tea    | bal-acc 0.863 auc 0.835 | ordering OK
+09:49:46 INFO tasksplit_controls: chanamp  sub-131   tea->toast  | bal-acc 0.983 auc 0.984 | ordering OK
+09:49:46 INFO tasksplit_controls: chanamp  sub-131   toast->tea    | bal-acc 1.000 auc 1.000 | ordering OK
+09:49:46 INFO tasksplit_controls: chanamp  sub-134   tea->toast  | bal-acc 0.937 auc 0.967 | ordering OK
+09:49:46 INFO tasksplit_controls: chanamp  sub-134   toast->tea    | bal-acc 0.758 auc 0.762 | ordering OK
+09:49:46 INFO tasksplit_controls: chanamp  sub-135   tea->toast  | bal-acc 0.995 auc 1.000 | ordering OK
+09:49:46 INFO tasksplit_controls: chanamp  sub-135   toast->tea    | bal-acc 0.966 auc 0.998 | ordering OK
+09:49:46 INFO tasksplit_controls: chanamp  sub-51    tea->toast  | bal-acc 0.927 auc 0.970 | ordering OK
+09:49:46 INFO tasksplit_controls: chanamp  sub-51    toast->tea    | bal-acc 0.892 auc 0.921 | ordering OK
+09:49:46 INFO tasksplit_controls: chanamp  sub-71    tea->toast  | bal-acc 0.982 auc 1.000 | ordering OK
+09:49:46 INFO tasksplit_controls: chanamp  sub-71    toast->tea    | bal-acc 0.983 auc 0.999 | ordering OK
+09:49:46 INFO tasksplit_controls: chanamp  sub-77    tea->toast  | bal-acc 0.978 auc 0.994 | ordering OK
+09:49:46 INFO tasksplit_controls: chanamp  sub-77    toast->tea    | bal-acc 0.899 auc 0.977 | ordering OK
+09:49:46 INFO tasksplit_controls: chanamp  sub-81    tea->toast  | bal-acc 0.529 auc 0.330 | ordering wrong
+09:49:46 INFO tasksplit_controls: chanamp  sub-81    toast->tea    | bal-acc 0.624 auc 0.734 | ordering OK
+09:49:46 INFO tasksplit_controls: chanamp  sub-90    tea->toast  | bal-acc 1.000 auc 1.000 | ordering OK
+09:49:46 INFO tasksplit_controls: chanamp  sub-90    toast->tea    | bal-acc 0.980 auc 0.975 | ordering OK
+09:49:46 INFO tasksplit_controls: chanamp  sub-92    tea->toast  | bal-acc 1.000 auc 1.000 | ordering OK
+09:49:47 INFO tasksplit_controls: chanamp  sub-92    toast->tea    | bal-acc 1.000 auc 1.000 | ordering OK
+09:49:47 INFO tasksplit_controls: chanamp  sub-94    tea->toast  | bal-acc 0.944 auc 0.992 | ordering OK
+09:49:47 INFO tasksplit_controls: chanamp  sub-94    toast->tea    | bal-acc 0.972 auc 0.997 | ordering OK
+09:49:47 INFO tasksplit_controls: chanamp  sub-96    tea->toast  | bal-acc 1.000 auc 1.000 | ordering OK
+09:49:47 INFO tasksplit_controls: chanamp  sub-96    toast->tea    | bal-acc 1.000 auc 1.000 | ordering OK
+09:49:47 INFO tasksplit_controls: ==========================================================================
+09:49:47 INFO tasksplit_controls: CONTROL chanamp (per-channel mean|x| (18 features — electrode-contact fingerprint))
+09:49:47 INFO tasksplit_controls:   per-patient bal-acc mean = 0.919  (95% CI [0.867, 0.959]) | above chance 20/20
+09:49:47 INFO tasksplit_controls:   AUC mean 0.939 / max 1.000 | 31 run(s) with AUC > 0.95
+09:49:47 INFO tasksplit_controls:   ordering 39/40 (p=0.0000)
+09:49:47 INFO tasksplit_controls: ==========================================================================
+09:49:47 INFO tasksplit_controls: Transfer test: computing chanamp features for 7096 windows...
+09:49:49 INFO tasksplit_controls: ==========================================================================
+09:49:49 INFO tasksplit_controls: TRANSFER TEST — same 18 features, same windows, only the split changes
+09:49:49 INFO tasksplit_controls:   within-patient (shares the 2 recordings) : 0.919  (20/20 above chance)
+09:49:49 INFO tasksplit_controls:   cross-patient LOPO (unseen recordings)   : 0.460  (6/20 above chance)
+09:49:49 INFO tasksplit_controls:   cross-patient session-level: bal-acc 0.425  AUC 0.412
+09:49:49 INFO tasksplit_controls:   DROP 0.459 -> VERDICT: per-recording FINGERPRINT: the feature works only when the test recording was already seen in training, so it is not a neural levodopa effect
+09:49:49 INFO tasksplit_controls: ==========================================================================
+09:49:52 INFO tasksplit_controls: Wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\codebrain_finetune\results\within_patient_tasksplit\controls_summary.json
+09:49:52 INFO tasksplit_controls: 
+09:49:52 INFO tasksplit_controls: VERDICT: the strongest non-neural control (chanamp) reaches 0.919 mean per-patient balanced accuracy on this split.
+09:49:52 WARNING tasksplit_controls: This design LEAKS RECORDING IDENTITY: features with no neural content decode the ON/OFF label well above chance, because within a patient the label IS the recording. Treat every within-patient task-split number as an UPPER BOUND that includes this leak, NOT as evidence of levodopa decoding, and do not compare it directly to the cross-subject LOPO numbers.
+09:50:08 INFO tasksplit_controls: Controls ['amp1', 'crude3', 'chanamp'] over 20 eligible patients x 2 directions (CPU, no model).
+09:50:08 INFO tasksplit_controls: amp1     sub-107   tea->toast  | bal-acc 0.483 auc 0.504 | ordering wrong
+09:50:08 INFO tasksplit_controls: amp1     sub-107   toast->tea    | bal-acc 0.427 auc 0.397 | ordering wrong
+09:50:08 INFO tasksplit_controls: amp1     sub-114   tea->toast  | bal-acc 0.621 auc 0.726 | ordering OK
+09:50:08 INFO tasksplit_controls: amp1     sub-114   toast->tea    | bal-acc 0.537 auc 0.637 | ordering OK
+09:50:08 INFO tasksplit_controls: amp1     sub-115   tea->toast  | bal-acc 0.398 auc 0.393 | ordering wrong
+09:50:08 INFO tasksplit_controls: amp1     sub-115   toast->tea    | bal-acc 0.258 auc 0.212 | ordering wrong
+09:50:08 INFO tasksplit_controls: amp1     sub-116   tea->toast  | bal-acc 0.614 auc 0.613 | ordering OK
+09:50:08 INFO tasksplit_controls: amp1     sub-116   toast->tea    | bal-acc 0.716 auc 0.722 | ordering OK
+09:50:08 INFO tasksplit_controls: amp1     sub-119   tea->toast  | bal-acc 0.509 auc 0.707 | ordering OK
+09:50:08 INFO tasksplit_controls: amp1     sub-119   toast->tea    | bal-acc 0.577 auc 0.654 | ordering OK
+09:50:08 INFO tasksplit_controls: amp1     sub-121   tea->toast  | bal-acc 0.281 auc 0.180 | ordering wrong
+09:50:09 INFO tasksplit_controls: amp1     sub-121   toast->tea    | bal-acc 0.462 auc 0.348 | ordering wrong
+09:50:09 INFO tasksplit_controls: amp1     sub-123   tea->toast  | bal-acc 0.513 auc 0.498 | ordering OK
+09:50:09 INFO tasksplit_controls: amp1     sub-123   toast->tea    | bal-acc 0.472 auc 0.497 | ordering OK
+09:50:09 INFO tasksplit_controls: amp1     sub-125   tea->toast  | bal-acc 0.612 auc 0.644 | ordering OK
+09:50:09 INFO tasksplit_controls: amp1     sub-125   toast->tea    | bal-acc 0.548 auc 0.520 | ordering OK
+09:50:09 INFO tasksplit_controls: amp1     sub-129   tea->toast  | bal-acc 0.414 auc 0.357 | ordering wrong
+09:50:09 INFO tasksplit_controls: amp1     sub-129   toast->tea    | bal-acc 0.450 auc 0.382 | ordering wrong
+09:50:09 INFO tasksplit_controls: amp1     sub-131   tea->toast  | bal-acc 0.608 auc 0.597 | ordering OK
+09:50:09 INFO tasksplit_controls: amp1     sub-131   toast->tea    | bal-acc 0.562 auc 0.587 | ordering OK
+09:50:09 INFO tasksplit_controls: amp1     sub-134   tea->toast  | bal-acc 0.591 auc 0.708 | ordering OK
+09:50:09 INFO tasksplit_controls: amp1     sub-134   toast->tea    | bal-acc 0.642 auc 0.657 | ordering OK
+09:50:09 INFO tasksplit_controls: amp1     sub-135   tea->toast  | bal-acc 0.654 auc 0.805 | ordering OK
+09:50:09 INFO tasksplit_controls: amp1     sub-135   toast->tea    | bal-acc 0.770 auc 0.827 | ordering OK
+09:50:09 INFO tasksplit_controls: amp1     sub-51    tea->toast  | bal-acc 0.528 auc 0.501 | ordering OK
+09:50:09 INFO tasksplit_controls: amp1     sub-51    toast->tea    | bal-acc 0.556 auc 0.758 | ordering OK
+09:50:09 INFO tasksplit_controls: amp1     sub-71    tea->toast  | bal-acc 0.822 auc 0.902 | ordering OK
+09:50:09 INFO tasksplit_controls: amp1     sub-71    toast->tea    | bal-acc 0.750 auc 0.823 | ordering OK
+09:50:09 INFO tasksplit_controls: amp1     sub-77    tea->toast  | bal-acc 0.900 auc 0.919 | ordering OK
+09:50:09 INFO tasksplit_controls: amp1     sub-77    toast->tea    | bal-acc 0.718 auc 0.911 | ordering OK
+09:50:10 INFO tasksplit_controls: amp1     sub-81    tea->toast  | bal-acc 0.561 auc 0.824 | ordering OK
+09:50:10 INFO tasksplit_controls: amp1     sub-81    toast->tea    | bal-acc 0.495 auc 0.545 | ordering OK
+09:50:10 INFO tasksplit_controls: amp1     sub-90    tea->toast  | bal-acc 0.571 auc 0.621 | ordering OK
+09:50:10 INFO tasksplit_controls: amp1     sub-90    toast->tea    | bal-acc 0.592 auc 0.514 | ordering OK
+09:50:10 INFO tasksplit_controls: amp1     sub-92    tea->toast  | bal-acc 0.500 auc 1.000 | ordering OK
+09:50:10 INFO tasksplit_controls: amp1     sub-92    toast->tea    | bal-acc 0.958 auc 0.998 | ordering OK
+09:50:10 INFO tasksplit_controls: amp1     sub-94    tea->toast  | bal-acc 0.494 auc 0.391 | ordering wrong
+09:50:10 INFO tasksplit_controls: amp1     sub-94    toast->tea    | bal-acc 0.453 auc 0.442 | ordering wrong
+09:50:10 INFO tasksplit_controls: amp1     sub-96    tea->toast  | bal-acc 0.552 auc 0.659 | ordering OK
+09:50:10 INFO tasksplit_controls: amp1     sub-96    toast->tea    | bal-acc 0.755 auc 0.908 | ordering OK
+09:50:10 INFO tasksplit_controls: ==========================================================================
+09:50:10 INFO tasksplit_controls: CONTROL amp1 (mean|x| only (1 feature))
+09:50:10 INFO tasksplit_controls:   per-patient bal-acc mean = 0.573  (95% CI [0.518, 0.627]) | above chance 14/20
+09:50:10 INFO tasksplit_controls:   AUC mean 0.622 / max 1.000 | 2 run(s) with AUC > 0.95
+09:50:10 INFO tasksplit_controls:   ordering 30/40 (p=0.0011)
+09:50:10 INFO tasksplit_controls: ==========================================================================
+09:50:10 INFO tasksplit_controls: crude3   sub-107   tea->toast  | bal-acc 0.498 auc 0.451 | ordering wrong
+09:50:10 INFO tasksplit_controls: crude3   sub-107   toast->tea    | bal-acc 0.439 auc 0.397 | ordering wrong
+09:50:10 INFO tasksplit_controls: crude3   sub-114   tea->toast  | bal-acc 0.653 auc 0.696 | ordering OK
+09:50:10 INFO tasksplit_controls: crude3   sub-114   toast->tea    | bal-acc 0.587 auc 0.733 | ordering OK
+09:50:10 INFO tasksplit_controls: crude3   sub-115   tea->toast  | bal-acc 0.344 auc 0.346 | ordering wrong
+09:50:10 INFO tasksplit_controls: crude3   sub-115   toast->tea    | bal-acc 0.343 auc 0.273 | ordering wrong
+09:50:10 INFO tasksplit_controls: crude3   sub-116   tea->toast  | bal-acc 0.721 auc 0.860 | ordering OK
+09:50:10 INFO tasksplit_controls: crude3   sub-116   toast->tea    | bal-acc 0.859 auc 0.917 | ordering OK
+09:50:10 INFO tasksplit_controls: crude3   sub-119   tea->toast  | bal-acc 0.502 auc 0.598 | ordering OK
+09:50:11 INFO tasksplit_controls: crude3   sub-119   toast->tea    | bal-acc 0.468 auc 0.500 | ordering OK
+09:50:11 INFO tasksplit_controls: crude3   sub-121   tea->toast  | bal-acc 0.316 auc 0.167 | ordering wrong
+09:50:11 INFO tasksplit_controls: crude3   sub-121   toast->tea    | bal-acc 0.444 auc 0.386 | ordering wrong
+09:50:11 INFO tasksplit_controls: crude3   sub-123   tea->toast  | bal-acc 0.499 auc 0.473 | ordering wrong
+09:50:11 INFO tasksplit_controls: crude3   sub-123   toast->tea    | bal-acc 0.509 auc 0.576 | ordering OK
+09:50:11 INFO tasksplit_controls: crude3   sub-125   tea->toast  | bal-acc 0.725 auc 0.799 | ordering OK
+09:50:11 INFO tasksplit_controls: crude3   sub-125   toast->tea    | bal-acc 0.697 auc 0.627 | ordering OK
+09:50:11 INFO tasksplit_controls: crude3   sub-129   tea->toast  | bal-acc 0.409 auc 0.365 | ordering wrong
+09:50:11 INFO tasksplit_controls: crude3   sub-129   toast->tea    | bal-acc 0.450 auc 0.382 | ordering wrong
+09:50:11 INFO tasksplit_controls: crude3   sub-131   tea->toast  | bal-acc 0.615 auc 0.612 | ordering OK
+09:50:11 INFO tasksplit_controls: crude3   sub-131   toast->tea    | bal-acc 0.595 auc 0.613 | ordering OK
+09:50:11 INFO tasksplit_controls: crude3   sub-134   tea->toast  | bal-acc 0.577 auc 0.737 | ordering OK
+09:50:11 INFO tasksplit_controls: crude3   sub-134   toast->tea    | bal-acc 0.642 auc 0.656 | ordering OK
+09:50:11 INFO tasksplit_controls: crude3   sub-135   tea->toast  | bal-acc 0.754 auc 0.908 | ordering OK
+09:50:12 INFO tasksplit_controls: crude3   sub-135   toast->tea    | bal-acc 0.826 auc 0.881 | ordering OK
+09:50:12 INFO tasksplit_controls: crude3   sub-51    tea->toast  | bal-acc 0.540 auc 0.437 | ordering OK
+09:50:12 INFO tasksplit_controls: crude3   sub-51    toast->tea    | bal-acc 0.278 auc 0.249 | ordering wrong
+09:50:12 INFO tasksplit_controls: crude3   sub-71    tea->toast  | bal-acc 0.873 auc 0.952 | ordering OK
+09:50:12 INFO tasksplit_controls: crude3   sub-71    toast->tea    | bal-acc 0.783 auc 0.856 | ordering OK
+09:50:12 INFO tasksplit_controls: crude3   sub-77    tea->toast  | bal-acc 0.892 auc 0.916 | ordering OK
+09:50:12 INFO tasksplit_controls: crude3   sub-77    toast->tea    | bal-acc 0.738 auc 0.917 | ordering OK
+09:50:12 INFO tasksplit_controls: crude3   sub-81    tea->toast  | bal-acc 0.509 auc 0.493 | ordering wrong
+09:50:12 INFO tasksplit_controls: crude3   sub-81    toast->tea    | bal-acc 0.524 auc 0.567 | ordering OK
+09:50:12 INFO tasksplit_controls: crude3   sub-90    tea->toast  | bal-acc 0.619 auc 0.660 | ordering OK
+09:50:12 INFO tasksplit_controls: crude3   sub-90    toast->tea    | bal-acc 0.616 auc 0.560 | ordering OK
+09:50:12 INFO tasksplit_controls: crude3   sub-92    tea->toast  | bal-acc 0.500 auc 1.000 | ordering OK
+09:50:12 INFO tasksplit_controls: crude3   sub-92    toast->tea    | bal-acc 0.958 auc 0.998 | ordering OK
+09:50:12 INFO tasksplit_controls: crude3   sub-94    tea->toast  | bal-acc 0.462 auc 0.491 | ordering OK
+09:50:12 INFO tasksplit_controls: crude3   sub-94    toast->tea    | bal-acc 0.486 auc 0.600 | ordering OK
+09:50:12 INFO tasksplit_controls: crude3   sub-96    tea->toast  | bal-acc 0.724 auc 0.892 | ordering OK
+09:50:12 INFO tasksplit_controls: crude3   sub-96    toast->tea    | bal-acc 0.983 auc 1.000 | ordering OK
+09:50:13 INFO tasksplit_controls: ==========================================================================
+09:50:13 INFO tasksplit_controls: CONTROL crude3 (mean|x|, std, max|x| (3 features))
+09:50:13 INFO tasksplit_controls:   per-patient bal-acc mean = 0.599  (95% CI [0.530, 0.668]) | above chance 13/20
+09:50:13 INFO tasksplit_controls:   AUC mean 0.638 / max 1.000 | 4 run(s) with AUC > 0.95
+09:50:13 INFO tasksplit_controls:   ordering 29/40 (p=0.0032)
+09:50:13 INFO tasksplit_controls: ==========================================================================
+09:50:13 INFO tasksplit_controls: chanamp  sub-107   tea->toast  | bal-acc 0.939 auc 0.994 | ordering OK
+09:50:13 INFO tasksplit_controls: chanamp  sub-107   toast->tea    | bal-acc 0.977 auc 0.998 | ordering OK
+09:50:13 INFO tasksplit_controls: chanamp  sub-114   tea->toast  | bal-acc 1.000 auc 1.000 | ordering OK
+09:50:13 INFO tasksplit_controls: chanamp  sub-114   toast->tea    | bal-acc 1.000 auc 1.000 | ordering OK
+09:50:13 INFO tasksplit_controls: chanamp  sub-115   tea->toast  | bal-acc 0.723 auc 0.781 | ordering OK
+09:50:13 INFO tasksplit_controls: chanamp  sub-115   toast->tea    | bal-acc 0.845 auc 0.894 | ordering OK
+09:50:13 INFO tasksplit_controls: chanamp  sub-116   tea->toast  | bal-acc 0.870 auc 0.976 | ordering OK
+09:50:13 INFO tasksplit_controls: chanamp  sub-116   toast->tea    | bal-acc 0.956 auc 1.000 | ordering OK
+09:50:13 INFO tasksplit_controls: chanamp  sub-119   tea->toast  | bal-acc 0.961 auc 0.966 | ordering OK
+09:50:13 INFO tasksplit_controls: chanamp  sub-119   toast->tea    | bal-acc 0.949 auc 0.957 | ordering OK
+09:50:13 INFO tasksplit_controls: chanamp  sub-121   tea->toast  | bal-acc 0.730 auc 0.719 | ordering OK
+09:50:13 INFO tasksplit_controls: chanamp  sub-121   toast->tea    | bal-acc 0.743 auc 0.917 | ordering OK
+09:50:13 INFO tasksplit_controls: chanamp  sub-123   tea->toast  | bal-acc 0.977 auc 0.995 | ordering OK
+09:50:13 INFO tasksplit_controls: chanamp  sub-123   toast->tea    | bal-acc 0.986 auc 1.000 | ordering OK
+09:50:13 INFO tasksplit_controls: chanamp  sub-125   tea->toast  | bal-acc 0.968 auc 0.989 | ordering OK
+09:50:13 INFO tasksplit_controls: chanamp  sub-125   toast->tea    | bal-acc 0.957 auc 0.960 | ordering OK
+09:50:13 INFO tasksplit_controls: chanamp  sub-129   tea->toast  | bal-acc 0.947 auc 0.959 | ordering OK
+09:50:13 INFO tasksplit_controls: chanamp  sub-129   toast->tea    | bal-acc 0.863 auc 0.835 | ordering OK
+09:50:14 INFO tasksplit_controls: chanamp  sub-131   tea->toast  | bal-acc 0.983 auc 0.984 | ordering OK
+09:50:14 INFO tasksplit_controls: chanamp  sub-131   toast->tea    | bal-acc 1.000 auc 1.000 | ordering OK
+09:50:14 INFO tasksplit_controls: chanamp  sub-134   tea->toast  | bal-acc 0.937 auc 0.967 | ordering OK
+09:50:14 INFO tasksplit_controls: chanamp  sub-134   toast->tea    | bal-acc 0.758 auc 0.762 | ordering OK
+09:50:14 INFO tasksplit_controls: chanamp  sub-135   tea->toast  | bal-acc 0.995 auc 1.000 | ordering OK
+09:50:14 INFO tasksplit_controls: chanamp  sub-135   toast->tea    | bal-acc 0.966 auc 0.998 | ordering OK
+09:50:14 INFO tasksplit_controls: chanamp  sub-51    tea->toast  | bal-acc 0.927 auc 0.970 | ordering OK
+09:50:14 INFO tasksplit_controls: chanamp  sub-51    toast->tea    | bal-acc 0.892 auc 0.921 | ordering OK
+09:50:14 INFO tasksplit_controls: chanamp  sub-71    tea->toast  | bal-acc 0.982 auc 1.000 | ordering OK
+09:50:14 INFO tasksplit_controls: chanamp  sub-71    toast->tea    | bal-acc 0.983 auc 0.999 | ordering OK
+09:50:14 INFO tasksplit_controls: chanamp  sub-77    tea->toast  | bal-acc 0.978 auc 0.994 | ordering OK
+09:50:14 INFO tasksplit_controls: chanamp  sub-77    toast->tea    | bal-acc 0.899 auc 0.977 | ordering OK
+09:50:14 INFO tasksplit_controls: chanamp  sub-81    tea->toast  | bal-acc 0.529 auc 0.330 | ordering wrong
+09:50:14 INFO tasksplit_controls: chanamp  sub-81    toast->tea    | bal-acc 0.624 auc 0.734 | ordering OK
+09:50:14 INFO tasksplit_controls: chanamp  sub-90    tea->toast  | bal-acc 1.000 auc 1.000 | ordering OK
+09:50:14 INFO tasksplit_controls: chanamp  sub-90    toast->tea    | bal-acc 0.980 auc 0.975 | ordering OK
+09:50:14 INFO tasksplit_controls: chanamp  sub-92    tea->toast  | bal-acc 1.000 auc 1.000 | ordering OK
+09:50:14 INFO tasksplit_controls: chanamp  sub-92    toast->tea    | bal-acc 1.000 auc 1.000 | ordering OK
+09:50:14 INFO tasksplit_controls: chanamp  sub-94    tea->toast  | bal-acc 0.944 auc 0.992 | ordering OK
+09:50:14 INFO tasksplit_controls: chanamp  sub-94    toast->tea    | bal-acc 0.972 auc 0.997 | ordering OK
+09:50:14 INFO tasksplit_controls: chanamp  sub-96    tea->toast  | bal-acc 1.000 auc 1.000 | ordering OK
+09:50:15 INFO tasksplit_controls: chanamp  sub-96    toast->tea    | bal-acc 1.000 auc 1.000 | ordering OK
+09:50:15 INFO tasksplit_controls: ==========================================================================
+09:50:15 INFO tasksplit_controls: CONTROL chanamp (per-channel mean|x| (18 features — electrode-contact fingerprint))
+09:50:15 INFO tasksplit_controls:   per-patient bal-acc mean = 0.919  (95% CI [0.867, 0.959]) | above chance 20/20
+09:50:15 INFO tasksplit_controls:   AUC mean 0.939 / max 1.000 | 31 run(s) with AUC > 0.95
+09:50:15 INFO tasksplit_controls:   ordering 39/40 (p=0.0000)
+09:50:15 INFO tasksplit_controls: ==========================================================================
+09:50:15 INFO tasksplit_controls: Transfer test: computing chanamp features for 7096 windows...
+09:50:16 INFO tasksplit_controls: ==========================================================================
+09:50:16 INFO tasksplit_controls: TRANSFER TEST — same 18 features, same windows, only the split changes
+09:50:16 INFO tasksplit_controls:   within-patient (shares the 2 recordings) : 0.919  (20/20 above chance)
+09:50:16 INFO tasksplit_controls:   cross-patient LOPO (unseen recordings)   : 0.460  (6/20 above chance)
+09:50:16 INFO tasksplit_controls:   cross-patient session-level: bal-acc 0.425  AUC 0.412
+09:50:16 INFO tasksplit_controls:   DROP 0.459 -> VERDICT: per-recording FINGERPRINT: the feature works only when the test recording was already seen in training, so it is not a neural levodopa effect
+09:50:16 INFO tasksplit_controls: ==========================================================================
+09:50:19 INFO tasksplit_controls: Wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\codebrain_finetune\results\within_patient_tasksplit\controls_summary.json
+09:50:19 INFO tasksplit_controls: 
+09:50:19 INFO tasksplit_controls: VERDICT: the strongest non-neural control (chanamp) reaches 0.919 mean per-patient balanced accuracy on this split.
+09:50:19 WARNING tasksplit_controls: This design LEAKS RECORDING IDENTITY: features with no neural content decode the ON/OFF label well above chance, because within a patient the label IS the recording. Treat every within-patient task-split number as an UPPER BOUND that includes this leak, NOT as evidence of levodopa decoding, and do not compare it directly to the cross-subject LOPO numbers.
+13:52:54 INFO tasksplit_controls: Controls ['amp1', 'crude3', 'chanamp'] over 27 eligible patients x 2 directions (CPU, no model).
+13:52:54 INFO tasksplit_controls: amp1     sub-103   tea->toast  | bal-acc 0.569 auc 0.605 | ordering OK
+13:52:54 INFO tasksplit_controls: amp1     sub-103   toast->tea    | bal-acc 0.579 auc 0.618 | ordering OK
+13:52:54 INFO tasksplit_controls: amp1     sub-106   tea->toast  | bal-acc 0.902 auc 0.989 | ordering OK
+13:52:54 INFO tasksplit_controls: amp1     sub-106   toast->tea    | bal-acc 0.929 auc 1.000 | ordering OK
+13:52:54 INFO tasksplit_controls: amp1     sub-107   tea->toast  | bal-acc 0.531 auc 0.510 | ordering OK
+13:52:54 INFO tasksplit_controls: amp1     sub-107   toast->tea    | bal-acc 0.631 auc 0.571 | ordering OK
+13:52:54 INFO tasksplit_controls: amp1     sub-114   tea->toast  | bal-acc 0.660 auc 0.797 | ordering OK
+13:52:54 INFO tasksplit_controls: amp1     sub-114   toast->tea    | bal-acc 0.637 auc 0.760 | ordering OK
+13:52:54 INFO tasksplit_controls: amp1     sub-115   tea->toast  | bal-acc 0.416 auc 0.418 | ordering wrong
+13:52:54 INFO tasksplit_controls: amp1     sub-115   toast->tea    | bal-acc 0.286 auc 0.300 | ordering wrong
+13:52:55 INFO tasksplit_controls: amp1     sub-116   tea->toast  | bal-acc 0.627 auc 0.617 | ordering OK
+13:52:55 INFO tasksplit_controls: amp1     sub-116   toast->tea    | bal-acc 0.695 auc 0.704 | ordering OK
+13:52:55 INFO tasksplit_controls: amp1     sub-119   tea->toast  | bal-acc 0.504 auc 0.700 | ordering OK
+13:52:55 INFO tasksplit_controls: amp1     sub-119   toast->tea    | bal-acc 0.556 auc 0.643 | ordering OK
+13:52:55 INFO tasksplit_controls: amp1     sub-121   tea->toast  | bal-acc 0.461 auc 0.425 | ordering wrong
+13:52:55 INFO tasksplit_controls: amp1     sub-121   toast->tea    | bal-acc 0.467 auc 0.413 | ordering wrong
+13:52:55 INFO tasksplit_controls: amp1     sub-123   tea->toast  | bal-acc 0.525 auc 0.500 | ordering OK
+13:52:55 INFO tasksplit_controls: amp1     sub-123   toast->tea    | bal-acc 0.472 auc 0.494 | ordering OK
+13:52:55 INFO tasksplit_controls: amp1     sub-125   tea->toast  | bal-acc 0.628 auc 0.661 | ordering OK
+13:52:55 INFO tasksplit_controls: amp1     sub-125   toast->tea    | bal-acc 0.552 auc 0.536 | ordering OK
+13:52:55 INFO tasksplit_controls: amp1     sub-129   tea->toast  | bal-acc 0.392 auc 0.365 | ordering wrong
+13:52:55 INFO tasksplit_controls: amp1     sub-129   toast->tea    | bal-acc 0.427 auc 0.369 | ordering wrong
+13:52:55 INFO tasksplit_controls: amp1     sub-131   tea->toast  | bal-acc 0.599 auc 0.584 | ordering OK
+13:52:55 INFO tasksplit_controls: amp1     sub-131   toast->tea    | bal-acc 0.529 auc 0.524 | ordering OK
+13:52:55 INFO tasksplit_controls: amp1     sub-134   tea->toast  | bal-acc 0.622 auc 0.738 | ordering OK
+13:52:55 INFO tasksplit_controls: amp1     sub-134   toast->tea    | bal-acc 0.591 auc 0.614 | ordering OK
+13:52:55 INFO tasksplit_controls: amp1     sub-135   tea->toast  | bal-acc 0.652 auc 0.810 | ordering OK
+13:52:56 INFO tasksplit_controls: amp1     sub-135   toast->tea    | bal-acc 0.781 auc 0.829 | ordering OK
+13:52:56 INFO tasksplit_controls: amp1     sub-51    tea->toast  | bal-acc 0.450 auc 0.339 | ordering wrong
+13:52:56 INFO tasksplit_controls: amp1     sub-51    toast->tea    | bal-acc 0.407 auc 0.214 | ordering wrong
+13:52:56 INFO tasksplit_controls: amp1     sub-62    tea->toast  | bal-acc 0.402 auc 0.331 | ordering wrong
+13:52:56 INFO tasksplit_controls: amp1     sub-62    toast->tea    | bal-acc 0.454 auc 0.473 | ordering wrong
+13:52:56 INFO tasksplit_controls: amp1     sub-70    tea->toast  | bal-acc 0.754 auc 0.839 | ordering OK
+13:52:56 INFO tasksplit_controls: amp1     sub-70    toast->tea    | bal-acc 0.569 auc 0.625 | ordering OK
+13:52:56 INFO tasksplit_controls: amp1     sub-71    tea->toast  | bal-acc 0.832 auc 0.902 | ordering OK
+13:52:56 INFO tasksplit_controls: amp1     sub-71    toast->tea    | bal-acc 0.733 auc 0.794 | ordering OK
+13:52:56 INFO tasksplit_controls: amp1     sub-72    tea->toast  | bal-acc 0.500 auc 0.595 | ordering OK
+13:52:56 INFO tasksplit_controls: amp1     sub-72    toast->tea    | bal-acc 0.579 auc 0.709 | ordering OK
+13:52:56 INFO tasksplit_controls: amp1     sub-76    tea->toast  | bal-acc 0.839 auc 0.889 | ordering OK
+13:52:56 INFO tasksplit_controls: amp1     sub-76    toast->tea    | bal-acc 0.505 auc 0.600 | ordering OK
+13:52:56 INFO tasksplit_controls: amp1     sub-77    tea->toast  | bal-acc 0.885 auc 0.916 | ordering OK
+13:52:56 INFO tasksplit_controls: amp1     sub-77    toast->tea    | bal-acc 0.703 auc 0.886 | ordering OK
+13:52:56 INFO tasksplit_controls: amp1     sub-81    tea->toast  | bal-acc 0.709 auc 0.915 | ordering OK
+13:52:56 INFO tasksplit_controls: amp1     sub-81    toast->tea    | bal-acc 0.509 auc 0.747 | ordering OK
+13:52:56 INFO tasksplit_controls: amp1     sub-84    tea->toast  | bal-acc 0.446 auc 0.378 | ordering wrong
+13:52:56 INFO tasksplit_controls: amp1     sub-84    toast->tea    | bal-acc 0.386 auc 0.397 | ordering wrong
+13:52:57 INFO tasksplit_controls: amp1     sub-90    tea->toast  | bal-acc 0.798 auc 0.849 | ordering OK
+13:52:57 INFO tasksplit_controls: amp1     sub-90    toast->tea    | bal-acc 0.696 auc 0.808 | ordering OK
+13:52:57 INFO tasksplit_controls: amp1     sub-92    tea->toast  | bal-acc 0.500 auc 1.000 | ordering OK
+13:52:57 INFO tasksplit_controls: amp1     sub-92    toast->tea    | bal-acc 0.979 auc 1.000 | ordering OK
+13:52:57 INFO tasksplit_controls: amp1     sub-94    tea->toast  | bal-acc 0.489 auc 0.355 | ordering wrong
+13:52:57 INFO tasksplit_controls: amp1     sub-94    toast->tea    | bal-acc 0.417 auc 0.410 | ordering wrong
+13:52:57 INFO tasksplit_controls: amp1     sub-96    tea->toast  | bal-acc 0.633 auc 0.640 | ordering OK
+13:52:57 INFO tasksplit_controls: amp1     sub-96    toast->tea    | bal-acc 0.897 auc 0.936 | ordering OK
+13:52:57 INFO tasksplit_controls: ==========================================================================
+13:52:57 INFO tasksplit_controls: CONTROL amp1 (mean|x| only (1 feature))
+13:52:57 INFO tasksplit_controls:   per-patient bal-acc mean = 0.598  (95% CI [0.547, 0.651]) | above chance 19/27
+13:52:57 INFO tasksplit_controls:   AUC mean 0.641 / max 1.000 | 4 run(s) with AUC > 0.95
+13:52:57 INFO tasksplit_controls:   ordering 40/54 (p=0.0003)
+13:52:57 INFO tasksplit_controls: ==========================================================================
+13:52:57 INFO tasksplit_controls: crude3   sub-103   tea->toast  | bal-acc 0.579 auc 0.606 | ordering OK
+13:52:57 INFO tasksplit_controls: crude3   sub-103   toast->tea    | bal-acc 0.562 auc 0.605 | ordering OK
+13:52:57 INFO tasksplit_controls: crude3   sub-106   tea->toast  | bal-acc 0.902 auc 0.991 | ordering OK
+13:52:57 INFO tasksplit_controls: crude3   sub-106   toast->tea    | bal-acc 0.952 auc 1.000 | ordering OK
+13:52:57 INFO tasksplit_controls: crude3   sub-107   tea->toast  | bal-acc 0.526 auc 0.527 | ordering OK
+13:52:57 INFO tasksplit_controls: crude3   sub-107   toast->tea    | bal-acc 0.448 auc 0.534 | ordering OK
+13:52:58 INFO tasksplit_controls: crude3   sub-114   tea->toast  | bal-acc 0.706 auc 0.796 | ordering OK
+13:52:58 INFO tasksplit_controls: crude3   sub-114   toast->tea    | bal-acc 0.637 auc 0.811 | ordering OK
+13:52:58 INFO tasksplit_controls: crude3   sub-115   tea->toast  | bal-acc 0.348 auc 0.342 | ordering wrong
+13:52:58 INFO tasksplit_controls: crude3   sub-115   toast->tea    | bal-acc 0.265 auc 0.229 | ordering wrong
+13:52:58 INFO tasksplit_controls: crude3   sub-116   tea->toast  | bal-acc 0.721 auc 0.859 | ordering OK
+13:52:58 INFO tasksplit_controls: crude3   sub-116   toast->tea    | bal-acc 0.874 auc 0.913 | ordering OK
+13:52:58 INFO tasksplit_controls: crude3   sub-119   tea->toast  | bal-acc 0.497 auc 0.549 | ordering OK
+13:52:58 INFO tasksplit_controls: crude3   sub-119   toast->tea    | bal-acc 0.438 auc 0.429 | ordering OK
+13:52:58 INFO tasksplit_controls: crude3   sub-121   tea->toast  | bal-acc 0.642 auc 0.670 | ordering OK
+13:52:58 INFO tasksplit_controls: crude3   sub-121   toast->tea    | bal-acc 0.644 auc 0.751 | ordering OK
+13:52:58 INFO tasksplit_controls: crude3   sub-123   tea->toast  | bal-acc 0.519 auc 0.497 | ordering wrong
+13:52:58 INFO tasksplit_controls: crude3   sub-123   toast->tea    | bal-acc 0.509 auc 0.607 | ordering OK
+13:52:58 INFO tasksplit_controls: crude3   sub-125   tea->toast  | bal-acc 0.740 auc 0.819 | ordering OK
+13:52:59 INFO tasksplit_controls: crude3   sub-125   toast->tea    | bal-acc 0.697 auc 0.617 | ordering OK
+13:52:59 INFO tasksplit_controls: crude3   sub-129   tea->toast  | bal-acc 0.394 auc 0.293 | ordering wrong
+13:52:59 INFO tasksplit_controls: crude3   sub-129   toast->tea    | bal-acc 0.468 auc 0.377 | ordering wrong
+13:52:59 INFO tasksplit_controls: crude3   sub-131   tea->toast  | bal-acc 0.604 auc 0.590 | ordering OK
+13:52:59 INFO tasksplit_controls: crude3   sub-131   toast->tea    | bal-acc 0.548 auc 0.511 | ordering OK
+13:52:59 INFO tasksplit_controls: crude3   sub-134   tea->toast  | bal-acc 0.584 auc 0.807 | ordering OK
+13:52:59 INFO tasksplit_controls: crude3   sub-134   toast->tea    | bal-acc 0.695 auc 0.754 | ordering OK
+13:52:59 INFO tasksplit_controls: crude3   sub-135   tea->toast  | bal-acc 0.767 auc 0.920 | ordering OK
+13:52:59 INFO tasksplit_controls: crude3   sub-135   toast->tea    | bal-acc 0.837 auc 0.883 | ordering OK
+13:52:59 INFO tasksplit_controls: crude3   sub-51    tea->toast  | bal-acc 0.541 auc 0.394 | ordering wrong
+13:52:59 INFO tasksplit_controls: crude3   sub-51    toast->tea    | bal-acc 0.389 auc 0.222 | ordering wrong
+13:52:59 INFO tasksplit_controls: crude3   sub-62    tea->toast  | bal-acc 0.469 auc 0.530 | ordering wrong
+13:53:00 INFO tasksplit_controls: crude3   sub-62    toast->tea    | bal-acc 0.460 auc 0.380 | ordering wrong
+13:53:00 INFO tasksplit_controls: crude3   sub-70    tea->toast  | bal-acc 0.803 auc 0.813 | ordering OK
+13:53:00 INFO tasksplit_controls: crude3   sub-70    toast->tea    | bal-acc 0.602 auc 0.681 | ordering OK
+13:53:00 INFO tasksplit_controls: crude3   sub-71    tea->toast  | bal-acc 0.883 auc 0.952 | ordering OK
+13:53:00 INFO tasksplit_controls: crude3   sub-71    toast->tea    | bal-acc 0.800 auc 0.833 | ordering OK
+13:53:00 INFO tasksplit_controls: crude3   sub-72    tea->toast  | bal-acc 0.541 auc 0.531 | ordering OK
+13:53:00 INFO tasksplit_controls: crude3   sub-72    toast->tea    | bal-acc 0.610 auc 0.683 | ordering OK
+13:53:00 INFO tasksplit_controls: crude3   sub-76    tea->toast  | bal-acc 0.684 auc 0.723 | ordering OK
+13:53:00 INFO tasksplit_controls: crude3   sub-76    toast->tea    | bal-acc 0.505 auc 0.679 | ordering OK
+13:53:00 INFO tasksplit_controls: crude3   sub-77    tea->toast  | bal-acc 0.878 auc 0.914 | ordering OK
+13:53:00 INFO tasksplit_controls: crude3   sub-77    toast->tea    | bal-acc 0.707 auc 0.902 | ordering OK
+13:53:00 INFO tasksplit_controls: crude3   sub-81    tea->toast  | bal-acc 0.666 auc 0.867 | ordering OK
+13:53:00 INFO tasksplit_controls: crude3   sub-81    toast->tea    | bal-acc 0.519 auc 0.630 | ordering OK
+13:53:00 INFO tasksplit_controls: crude3   sub-84    tea->toast  | bal-acc 0.464 auc 0.414 | ordering wrong
+13:53:01 INFO tasksplit_controls: crude3   sub-84    toast->tea    | bal-acc 0.515 auc 0.456 | ordering OK
+13:53:01 INFO tasksplit_controls: crude3   sub-90    tea->toast  | bal-acc 0.789 auc 0.857 | ordering OK
+13:53:01 INFO tasksplit_controls: crude3   sub-90    toast->tea    | bal-acc 0.696 auc 0.832 | ordering OK
+13:53:01 INFO tasksplit_controls: crude3   sub-92    tea->toast  | bal-acc 0.500 auc 1.000 | ordering OK
+13:53:01 INFO tasksplit_controls: crude3   sub-92    toast->tea    | bal-acc 0.979 auc 1.000 | ordering OK
+13:53:01 INFO tasksplit_controls: crude3   sub-94    tea->toast  | bal-acc 0.489 auc 0.387 | ordering wrong
+13:53:01 INFO tasksplit_controls: crude3   sub-94    toast->tea    | bal-acc 0.500 auc 0.529 | ordering wrong
+13:53:01 INFO tasksplit_controls: crude3   sub-96    tea->toast  | bal-acc 0.683 auc 0.808 | ordering OK
+13:53:01 INFO tasksplit_controls: crude3   sub-96    toast->tea    | bal-acc 0.910 auc 0.912 | ordering OK
+13:53:01 INFO tasksplit_controls: ==========================================================================
+13:53:01 INFO tasksplit_controls: CONTROL crude3 (mean|x|, std, max|x| (3 features))
+13:53:01 INFO tasksplit_controls:   per-patient bal-acc mean = 0.624  (95% CI [0.569, 0.680]) | above chance 19/27
+13:53:01 INFO tasksplit_controls:   AUC mean 0.671 / max 1.000 | 5 run(s) with AUC > 0.95
+13:53:01 INFO tasksplit_controls:   ordering 42/54 (p=0.0000)
+13:53:01 INFO tasksplit_controls: ==========================================================================
+13:53:01 INFO tasksplit_controls: chanamp  sub-103   tea->toast  | bal-acc 0.966 auc 0.977 | ordering OK
+13:53:01 INFO tasksplit_controls: chanamp  sub-103   toast->tea    | bal-acc 1.000 auc 1.000 | ordering OK
+13:53:01 INFO tasksplit_controls: chanamp  sub-106   tea->toast  | bal-acc 1.000 auc 1.000 | ordering OK
+13:53:01 INFO tasksplit_controls: chanamp  sub-106   toast->tea    | bal-acc 1.000 auc 1.000 | ordering OK
+13:53:01 INFO tasksplit_controls: chanamp  sub-107   tea->toast  | bal-acc 0.985 auc 0.999 | ordering OK
+13:53:01 INFO tasksplit_controls: chanamp  sub-107   toast->tea    | bal-acc 0.977 auc 0.995 | ordering OK
+13:53:02 INFO tasksplit_controls: chanamp  sub-114   tea->toast  | bal-acc 0.986 auc 0.988 | ordering OK
+13:53:02 INFO tasksplit_controls: chanamp  sub-114   toast->tea    | bal-acc 1.000 auc 1.000 | ordering OK
+13:53:02 INFO tasksplit_controls: chanamp  sub-115   tea->toast  | bal-acc 0.817 auc 0.769 | ordering OK
+13:53:02 INFO tasksplit_controls: chanamp  sub-115   toast->tea    | bal-acc 0.955 auc 0.951 | ordering OK
+13:53:02 INFO tasksplit_controls: chanamp  sub-116   tea->toast  | bal-acc 0.887 auc 0.966 | ordering OK
+13:53:02 INFO tasksplit_controls: chanamp  sub-116   toast->tea    | bal-acc 0.956 auc 1.000 | ordering OK
+13:53:02 INFO tasksplit_controls: chanamp  sub-119   tea->toast  | bal-acc 0.948 auc 0.966 | ordering OK
+13:53:02 INFO tasksplit_controls: chanamp  sub-119   toast->tea    | bal-acc 0.939 auc 0.959 | ordering OK
+13:53:02 INFO tasksplit_controls: chanamp  sub-121   tea->toast  | bal-acc 0.925 auc 0.869 | ordering OK
+13:53:02 INFO tasksplit_controls: chanamp  sub-121   toast->tea    | bal-acc 0.973 auc 0.995 | ordering OK
+13:53:02 INFO tasksplit_controls: chanamp  sub-123   tea->toast  | bal-acc 0.953 auc 0.982 | ordering OK
+13:53:02 INFO tasksplit_controls: chanamp  sub-123   toast->tea    | bal-acc 0.986 auc 1.000 | ordering OK
+13:53:02 INFO tasksplit_controls: chanamp  sub-125   tea->toast  | bal-acc 0.969 auc 0.989 | ordering OK
+13:53:02 INFO tasksplit_controls: chanamp  sub-125   toast->tea    | bal-acc 0.978 auc 0.972 | ordering OK
+13:53:02 INFO tasksplit_controls: chanamp  sub-129   tea->toast  | bal-acc 0.907 auc 0.936 | ordering OK
+13:53:02 INFO tasksplit_controls: chanamp  sub-129   toast->tea    | bal-acc 0.958 auc 0.945 | ordering OK
+13:53:03 INFO tasksplit_controls: chanamp  sub-131   tea->toast  | bal-acc 0.988 auc 0.980 | ordering OK
+13:53:03 INFO tasksplit_controls: chanamp  sub-131   toast->tea    | bal-acc 1.000 auc 1.000 | ordering OK
+13:53:03 INFO tasksplit_controls: chanamp  sub-134   tea->toast  | bal-acc 0.811 auc 0.845 | ordering OK
+13:53:03 INFO tasksplit_controls: chanamp  sub-134   toast->tea    | bal-acc 0.861 auc 0.977 | ordering OK
+13:53:03 INFO tasksplit_controls: chanamp  sub-135   tea->toast  | bal-acc 0.990 auc 1.000 | ordering OK
+13:53:03 INFO tasksplit_controls: chanamp  sub-135   toast->tea    | bal-acc 0.966 auc 0.998 | ordering OK
+13:53:03 INFO tasksplit_controls: chanamp  sub-51    tea->toast  | bal-acc 0.756 auc 0.717 | ordering OK
+13:53:03 INFO tasksplit_controls: chanamp  sub-51    toast->tea    | bal-acc 0.963 auc 1.000 | ordering OK
+13:53:03 INFO tasksplit_controls: chanamp  sub-62    tea->toast  | bal-acc 0.833 auc 0.811 | ordering OK
+13:53:03 INFO tasksplit_controls: chanamp  sub-62    toast->tea    | bal-acc 0.779 auc 1.000 | ordering OK
+13:53:03 INFO tasksplit_controls: chanamp  sub-70    tea->toast  | bal-acc 0.845 auc 0.923 | ordering OK
+13:53:03 INFO tasksplit_controls: chanamp  sub-70    toast->tea    | bal-acc 0.934 auc 0.974 | ordering OK
+13:53:03 INFO tasksplit_controls: chanamp  sub-71    tea->toast  | bal-acc 0.975 auc 0.999 | ordering OK
+13:53:03 INFO tasksplit_controls: chanamp  sub-71    toast->tea    | bal-acc 1.000 auc 1.000 | ordering OK
+13:53:03 INFO tasksplit_controls: chanamp  sub-72    tea->toast  | bal-acc 0.847 auc 0.900 | ordering OK
+13:53:03 INFO tasksplit_controls: chanamp  sub-72    toast->tea    | bal-acc 1.000 auc 1.000 | ordering OK
+13:53:03 INFO tasksplit_controls: chanamp  sub-76    tea->toast  | bal-acc 0.993 auc 0.987 | ordering OK
+13:53:03 INFO tasksplit_controls: chanamp  sub-76    toast->tea    | bal-acc 0.971 auc 0.998 | ordering OK
+13:53:04 INFO tasksplit_controls: chanamp  sub-77    tea->toast  | bal-acc 0.971 auc 0.983 | ordering OK
+13:53:04 INFO tasksplit_controls: chanamp  sub-77    toast->tea    | bal-acc 0.900 auc 0.976 | ordering OK
+13:53:04 INFO tasksplit_controls: chanamp  sub-81    tea->toast  | bal-acc 0.657 auc 0.628 | ordering OK
+13:53:04 INFO tasksplit_controls: chanamp  sub-81    toast->tea    | bal-acc 0.614 auc 0.799 | ordering OK
+13:53:04 INFO tasksplit_controls: chanamp  sub-84    tea->toast  | bal-acc 0.972 auc 0.983 | ordering OK
+13:53:04 INFO tasksplit_controls: chanamp  sub-84    toast->tea    | bal-acc 0.864 auc 0.933 | ordering OK
+13:53:04 INFO tasksplit_controls: chanamp  sub-90    tea->toast  | bal-acc 1.000 auc 1.000 | ordering OK
+13:53:04 INFO tasksplit_controls: chanamp  sub-90    toast->tea    | bal-acc 1.000 auc 1.000 | ordering OK
+13:53:04 INFO tasksplit_controls: chanamp  sub-92    tea->toast  | bal-acc 1.000 auc 1.000 | ordering OK
+13:53:04 INFO tasksplit_controls: chanamp  sub-92    toast->tea    | bal-acc 1.000 auc 1.000 | ordering OK
+13:53:04 INFO tasksplit_controls: chanamp  sub-94    tea->toast  | bal-acc 0.943 auc 0.979 | ordering OK
+13:53:04 INFO tasksplit_controls: chanamp  sub-94    toast->tea    | bal-acc 0.972 auc 1.000 | ordering OK
+13:53:04 INFO tasksplit_controls: chanamp  sub-96    tea->toast  | bal-acc 0.983 auc 1.000 | ordering OK
+13:53:04 INFO tasksplit_controls: chanamp  sub-96    toast->tea    | bal-acc 1.000 auc 1.000 | ordering OK
+13:53:04 INFO tasksplit_controls: ==========================================================================
+13:53:04 INFO tasksplit_controls: CONTROL chanamp (per-channel mean|x| (18 features — electrode-contact fingerprint))
+13:53:04 INFO tasksplit_controls:   per-patient bal-acc mean = 0.934  (95% CI [0.901, 0.961]) | above chance 27/27
+13:53:04 INFO tasksplit_controls:   AUC mean 0.956 / max 1.000 | 42 run(s) with AUC > 0.95
+13:53:04 INFO tasksplit_controls:   ordering 54/54 (p=0.0000)
+13:53:04 INFO tasksplit_controls: ==========================================================================
+13:53:04 INFO tasksplit_controls: Transfer test: computing chanamp features for 9963 windows...
+13:53:07 INFO tasksplit_controls: ==========================================================================
+13:53:07 INFO tasksplit_controls: TRANSFER TEST — same 18 features, same windows, only the split changes
+13:53:07 INFO tasksplit_controls:   within-patient (shares the 2 recordings) : 0.934  (27/27 above chance)
+13:53:07 INFO tasksplit_controls:   cross-patient LOPO (unseen recordings)   : 0.495  (14/27 above chance)
+13:53:07 INFO tasksplit_controls:   cross-patient session-level: bal-acc 0.519  AUC 0.527
+13:53:07 INFO tasksplit_controls:   DROP 0.440 -> VERDICT: per-recording FINGERPRINT: the feature works only when the test recording was already seen in training, so it is not a neural levodopa effect
+13:53:07 INFO tasksplit_controls: ==========================================================================
+13:53:10 INFO tasksplit_controls: Wrote C:\Users\Luke\Documents\Luke_Dissertation\livinglab_run\Luke_Dissertation\codebrain_finetune\results\within_patient_tasksplit\controls_summary.json
+13:53:10 INFO tasksplit_controls: 
+13:53:10 INFO tasksplit_controls: VERDICT: the strongest non-neural control (chanamp) reaches 0.934 mean per-patient balanced accuracy on this split.
+13:53:10 WARNING tasksplit_controls: This design LEAKS RECORDING IDENTITY: features with no neural content decode the ON/OFF label well above chance, because within a patient the label IS the recording. Treat every within-patient task-split number as an UPPER BOUND that includes this leak, NOT as evidence of levodopa decoding, and do not compare it directly to the cross-subject LOPO numbers.

@@ -1,0 +1,737 @@
+{
+  "run_tag": "nested_lora_summary",
+  "git_sha": "2a1f9e6980392ab51d447f5853a2278e06d167b2",
+  "checkpoint_sha256": "d9714b8732c9883a04d022ee66254cd578ae1fa27f5458e6ab7f1aa96e9a7352",
+  "env": {
+    "torch": "2.11.0+cu128",
+    "numpy": "2.4.6",
+    "peft": "0.19.1",
+    "transformers": "5.14.1",
+    "sklearn": "1.9.0"
+  },
+  "cohort": {
+    "patients": 35,
+    "windows": 37174
+  },
+  "lora_target": "attention",
+  "arm": "nested_lora",
+  "mode": "lora",
+  "lora_r": 4,
+  "lora_alpha": 8,
+  "lr": 0.0005,
+  "lora_dropout": 0.1,
+  "n_sessions": 70,
+  "session_balanced_accuracy": 0.5571428571428572,
+  "session_auc": 0.5412244897959184,
+  "ci_low": 0.45714285714285713,
+  "ci_high": 0.6428571428571428,
+  "permutation_p": 0.19402985074626866,
+  "best_config": {
+    "r": 4,
+    "lr": 0.0005,
+    "dropout": 0.1
+  },
+  "n_folds": 35,
+  "aggregate": {
+    "balanced_accuracy": 0.5571428571428572,
+    "accuracy": 0.5571428571428572,
+    "auc": 0.5412244897959184,
+    "sensitivity": 0.5714285714285714,
+    "specificity": 0.5428571428571428,
+    "macro_f1": 0.5570524596856501,
+    "n": 70,
+    "n_pos": 35,
+    "n_neg": 35
+  },
+  "bootstrap": {
+    "metric": "balanced_accuracy",
+    "point": 0.5571428571428572,
+    "ci_low": 0.45714285714285713,
+    "ci_high": 0.6428571428571428,
+    "ci": 0.95,
+    "n_valid_resamples": 2000
+  },
+  "permutation": {
+    "observed_balanced_accuracy": 0.5571428571428572,
+    "null_mean": 0.49685714285714283,
+    "null_std": 0.04979877877365004,
+    "p_value": 0.19402985074626866,
+    "n_permutations": 200
+  },
+  "frozen_probe_reference": {
+    "balanced_accuracy": 0.443,
+    "ci": [
+      0.357,
+      0.529
+    ],
+    "auc": 0.482,
+    "perm_p": 0.95
+  },
+  "per_fold": [
+    {
+      "fold": 0,
+      "test_patient": "sub-103",
+      "session_bal_acc": 0.0,
+      "session_auc": 0.0,
+      "sessions": [
+        "sub-103|A",
+        "sub-103|C"
+      ],
+      "prob": [
+        0.627,
+        0.445
+      ],
+      "y_true": [
+        0,
+        1
+      ],
+      "best_epoch": 0
+    },
+    {
+      "fold": 1,
+      "test_patient": "sub-106",
+      "session_bal_acc": 0.5,
+      "session_auc": 0.0,
+      "sessions": [
+        "sub-106|A",
+        "sub-106|C"
+      ],
+      "prob": [
+        0.355,
+        0.247
+      ],
+      "y_true": [
+        0,
+        1
+      ],
+      "best_epoch": 0
+    },
+    {
+      "fold": 2,
+      "test_patient": "sub-107",
+      "session_bal_acc": 0.5,
+      "session_auc": 1.0,
+      "sessions": [
+        "sub-107|A",
+        "sub-107|C"
+      ],
+      "prob": [
+        0.014,
+        0.024
+      ],
+      "y_true": [
+        0,
+        1
+      ],
+      "best_epoch": 2
+    },
+    {
+      "fold": 3,
+      "test_patient": "sub-114",
+      "session_bal_acc": 0.0,
+      "session_auc": 0.0,
+      "sessions": [
+        "sub-114|A",
+        "sub-114|C"
+      ],
+      "prob": [
+        0.539,
+        0.409
+      ],
+      "y_true": [
+        0,
+        1
+      ],
+      "best_epoch": 0
+    },
+    {
+      "fold": 4,
+      "test_patient": "sub-115",
+      "session_bal_acc": 1.0,
+      "session_auc": 1.0,
+      "sessions": [
+        "sub-115|A",
+        "sub-115|C"
+      ],
+      "prob": [
+        0.452,
+        0.561
+      ],
+      "y_true": [
+        0,
+        1
+      ],
+      "best_epoch": 2
+    },
+    {
+      "fold": 5,
+      "test_patient": "sub-116",
+      "session_bal_acc": 1.0,
+      "session_auc": 1.0,
+      "sessions": [
+        "sub-116|A",
+        "sub-116|C"
+      ],
+      "prob": [
+        0.452,
+        0.543
+      ],
+      "y_true": [
+        0,
+        1
+      ],
+      "best_epoch": 0
+    },
+    {
+      "fold": 6,
+      "test_patient": "sub-117",
+      "session_bal_acc": 0.5,
+      "session_auc": 0.0,
+      "sessions": [
+        "sub-117|A",
+        "sub-117|C"
+      ],
+      "prob": [
+        0.362,
+        0.335
+      ],
+      "y_true": [
+        0,
+        1
+      ],
+      "best_epoch": 0
+    },
+    {
+      "fold": 7,
+      "test_patient": "sub-119",
+      "session_bal_acc": 0.5,
+      "session_auc": 1.0,
+      "sessions": [
+        "sub-119|A",
+        "sub-119|C"
+      ],
+      "prob": [
+        0.698,
+        0.818
+      ],
+      "y_true": [
+        0,
+        1
+      ],
+      "best_epoch": 4
+    },
+    {
+      "fold": 8,
+      "test_patient": "sub-121",
+      "session_bal_acc": 0.5,
+      "session_auc": 0.0,
+      "sessions": [
+        "sub-121|A",
+        "sub-121|C"
+      ],
+      "prob": [
+        0.425,
+        0.41
+      ],
+      "y_true": [
+        0,
+        1
+      ],
+      "best_epoch": 0
+    },
+    {
+      "fold": 9,
+      "test_patient": "sub-123",
+      "session_bal_acc": 0.0,
+      "session_auc": 0.0,
+      "sessions": [
+        "sub-123|A",
+        "sub-123|C"
+      ],
+      "prob": [
+        0.57,
+        0.349
+      ],
+      "y_true": [
+        0,
+        1
+      ],
+      "best_epoch": 3
+    },
+    {
+      "fold": 10,
+      "test_patient": "sub-125",
+      "session_bal_acc": 0.5,
+      "session_auc": 1.0,
+      "sessions": [
+        "sub-125|A",
+        "sub-125|C"
+      ],
+      "prob": [
+        0.3,
+        0.396
+      ],
+      "y_true": [
+        0,
+        1
+      ],
+      "best_epoch": 2
+    },
+    {
+      "fold": 11,
+      "test_patient": "sub-129",
+      "session_bal_acc": 0.5,
+      "session_auc": 0.0,
+      "sessions": [
+        "sub-129|A",
+        "sub-129|C"
+      ],
+      "prob": [
+        0.917,
+        0.696
+      ],
+      "y_true": [
+        0,
+        1
+      ],
+      "best_epoch": 2
+    },
+    {
+      "fold": 12,
+      "test_patient": "sub-131",
+      "session_bal_acc": 0.5,
+      "session_auc": 0.0,
+      "sessions": [
+        "sub-131|A",
+        "sub-131|C"
+      ],
+      "prob": [
+        0.826,
+        0.617
+      ],
+      "y_true": [
+        0,
+        1
+      ],
+      "best_epoch": 5
+    },
+    {
+      "fold": 13,
+      "test_patient": "sub-134",
+      "session_bal_acc": 0.5,
+      "session_auc": 0.0,
+      "sessions": [
+        "sub-134|A",
+        "sub-134|C"
+      ],
+      "prob": [
+        0.662,
+        0.58
+      ],
+      "y_true": [
+        0,
+        1
+      ],
+      "best_epoch": 2
+    },
+    {
+      "fold": 14,
+      "test_patient": "sub-135",
+      "session_bal_acc": 0.5,
+      "session_auc": 0.0,
+      "sessions": [
+        "sub-135|A",
+        "sub-135|C"
+      ],
+      "prob": [
+        0.633,
+        0.604
+      ],
+      "y_true": [
+        0,
+        1
+      ],
+      "best_epoch": 2
+    },
+    {
+      "fold": 15,
+      "test_patient": "sub-34",
+      "session_bal_acc": 0.5,
+      "session_auc": 1.0,
+      "sessions": [
+        "sub-34|A",
+        "sub-34|C"
+      ],
+      "prob": [
+        0.647,
+        0.743
+      ],
+      "y_true": [
+        0,
+        1
+      ],
+      "best_epoch": 3
+    },
+    {
+      "fold": 16,
+      "test_patient": "sub-42",
+      "session_bal_acc": 0.5,
+      "session_auc": 0.0,
+      "sessions": [
+        "sub-42|A",
+        "sub-42|C"
+      ],
+      "prob": [
+        0.667,
+        0.581
+      ],
+      "y_true": [
+        0,
+        1
+      ],
+      "best_epoch": 3
+    },
+    {
+      "fold": 17,
+      "test_patient": "sub-48",
+      "session_bal_acc": 1.0,
+      "session_auc": 1.0,
+      "sessions": [
+        "sub-48|A",
+        "sub-48|C"
+      ],
+      "prob": [
+        0.222,
+        0.567
+      ],
+      "y_true": [
+        0,
+        1
+      ],
+      "best_epoch": 1
+    },
+    {
+      "fold": 18,
+      "test_patient": "sub-51",
+      "session_bal_acc": 0.5,
+      "session_auc": 0.0,
+      "sessions": [
+        "sub-51|A",
+        "sub-51|C"
+      ],
+      "prob": [
+        0.664,
+        0.607
+      ],
+      "y_true": [
+        0,
+        1
+      ],
+      "best_epoch": 5
+    },
+    {
+      "fold": 19,
+      "test_patient": "sub-53",
+      "session_bal_acc": 0.5,
+      "session_auc": 0.0,
+      "sessions": [
+        "sub-53|A",
+        "sub-53|C"
+      ],
+      "prob": [
+        0.447,
+        0.373
+      ],
+      "y_true": [
+        0,
+        1
+      ],
+      "best_epoch": 0
+    },
+    {
+      "fold": 20,
+      "test_patient": "sub-62",
+      "session_bal_acc": 0.5,
+      "session_auc": 1.0,
+      "sessions": [
+        "sub-62|A",
+        "sub-62|C"
+      ],
+      "prob": [
+        0.233,
+        0.261
+      ],
+      "y_true": [
+        0,
+        1
+      ],
+      "best_epoch": 4
+    },
+    {
+      "fold": 21,
+      "test_patient": "sub-69",
+      "session_bal_acc": 0.5,
+      "session_auc": 0.0,
+      "sessions": [
+        "sub-69|A",
+        "sub-69|C"
+      ],
+      "prob": [
+        0.379,
+        0.31
+      ],
+      "y_true": [
+        0,
+        1
+      ],
+      "best_epoch": 0
+    },
+    {
+      "fold": 22,
+      "test_patient": "sub-70",
+      "session_bal_acc": 0.5,
+      "session_auc": 1.0,
+      "sessions": [
+        "sub-70|A",
+        "sub-70|C"
+      ],
+      "prob": [
+        0.418,
+        0.419
+      ],
+      "y_true": [
+        0,
+        1
+      ],
+      "best_epoch": 2
+    },
+    {
+      "fold": 23,
+      "test_patient": "sub-71",
+      "session_bal_acc": 0.5,
+      "session_auc": 1.0,
+      "sessions": [
+        "sub-71|A",
+        "sub-71|C"
+      ],
+      "prob": [
+        0.295,
+        0.365
+      ],
+      "y_true": [
+        0,
+        1
+      ],
+      "best_epoch": 1
+    },
+    {
+      "fold": 24,
+      "test_patient": "sub-72",
+      "session_bal_acc": 0.5,
+      "session_auc": 1.0,
+      "sessions": [
+        "sub-72|A",
+        "sub-72|C"
+      ],
+      "prob": [
+        0.304,
+        0.413
+      ],
+      "y_true": [
+        0,
+        1
+      ],
+      "best_epoch": 0
+    },
+    {
+      "fold": 25,
+      "test_patient": "sub-73",
+      "session_bal_acc": 1.0,
+      "session_auc": 1.0,
+      "sessions": [
+        "sub-73|A",
+        "sub-73|C"
+      ],
+      "prob": [
+        0.454,
+        0.779
+      ],
+      "y_true": [
+        0,
+        1
+      ],
+      "best_epoch": 3
+    },
+    {
+      "fold": 26,
+      "test_patient": "sub-76",
+      "session_bal_acc": 1.0,
+      "session_auc": 1.0,
+      "sessions": [
+        "sub-76|A",
+        "sub-76|C"
+      ],
+      "prob": [
+        0.248,
+        0.639
+      ],
+      "y_true": [
+        0,
+        1
+      ],
+      "best_epoch": 1
+    },
+    {
+      "fold": 27,
+      "test_patient": "sub-77",
+      "session_bal_acc": 1.0,
+      "session_auc": 1.0,
+      "sessions": [
+        "sub-77|A",
+        "sub-77|C"
+      ],
+      "prob": [
+        0.492,
+        0.551
+      ],
+      "y_true": [
+        0,
+        1
+      ],
+      "best_epoch": 5
+    },
+    {
+      "fold": 28,
+      "test_patient": "sub-81",
+      "session_bal_acc": 1.0,
+      "session_auc": 1.0,
+      "sessions": [
+        "sub-81|A",
+        "sub-81|C"
+      ],
+      "prob": [
+        0.394,
+        0.773
+      ],
+      "y_true": [
+        0,
+        1
+      ],
+      "best_epoch": 4
+    },
+    {
+      "fold": 29,
+      "test_patient": "sub-84",
+      "session_bal_acc": 1.0,
+      "session_auc": 1.0,
+      "sessions": [
+        "sub-84|A",
+        "sub-84|C"
+      ],
+      "prob": [
+        0.116,
+        0.603
+      ],
+      "y_true": [
+        0,
+        1
+      ],
+      "best_epoch": 5
+    },
+    {
+      "fold": 30,
+      "test_patient": "sub-90",
+      "session_bal_acc": 0.0,
+      "session_auc": 0.0,
+      "sessions": [
+        "sub-90|A",
+        "sub-90|C"
+      ],
+      "prob": [
+        0.685,
+        0.268
+      ],
+      "y_true": [
+        0,
+        1
+      ],
+      "best_epoch": 1
+    },
+    {
+      "fold": 31,
+      "test_patient": "sub-92",
+      "session_bal_acc": 0.5,
+      "session_auc": 1.0,
+      "sessions": [
+        "sub-92|A",
+        "sub-92|C"
+      ],
+      "prob": [
+        0.932,
+        0.952
+      ],
+      "y_true": [
+        0,
+        1
+      ],
+      "best_epoch": 4
+    },
+    {
+      "fold": 32,
+      "test_patient": "sub-93",
+      "session_bal_acc": 0.5,
+      "session_auc": 1.0,
+      "sessions": [
+        "sub-93|A",
+        "sub-93|C"
+      ],
+      "prob": [
+        0.981,
+        0.985
+      ],
+      "y_true": [
+        0,
+        1
+      ],
+      "best_epoch": 3
+    },
+    {
+      "fold": 33,
+      "test_patient": "sub-94",
+      "session_bal_acc": 0.5,
+      "session_auc": 1.0,
+      "sessions": [
+        "sub-94|A",
+        "sub-94|C"
+      ],
+      "prob": [
+        0.514,
+        0.834
+      ],
+      "y_true": [
+        0,
+        1
+      ],
+      "best_epoch": 2
+    },
+    {
+      "fold": 34,
+      "test_patient": "sub-96",
+      "session_bal_acc": 0.5,
+      "session_auc": 1.0,
+      "sessions": [
+        "sub-96|A",
+        "sub-96|C"
+      ],
+      "prob": [
+        0.695,
+        0.962
+      ],
+      "y_true": [
+        0,
+        1
+      ],
+      "best_epoch": 1
+    }
+  ]
+}

@@ -1,0 +1,294 @@
+{
+  "pass_thresholds": {
+    "top1_pass": 0.4,
+    "ambiguous_top1": 0.1,
+    "chance": 0.02857142857142857
+  },
+  "arms": {
+    "our_order": {
+      "final": {
+        "subject_id_top1": 0.39567920070742285,
+        "subject_id_top5": 0.6567558057705841,
+        "per_subject_auc_median": 0.5408951148436245,
+        "per_subject_auc_mean": 0.5147166419073326,
+        "n_above_half": 19,
+        "n_subjects": 35,
+        "wilcoxon_p": 0.28821350799989887,
+        "session_bal_acc": 0.44285714285714284
+      },
+      "block0": {
+        "subject_id_top1": 0.4331231771936785,
+        "subject_id_top5": 0.6969270466807412,
+        "per_subject_auc_median": 0.5249514220102456,
+        "per_subject_auc_mean": 0.526513334736288,
+        "n_above_half": 19,
+        "n_subjects": 35,
+        "wilcoxon_p": 0.1711636543041095,
+        "session_bal_acc": 0.5142857142857142
+      },
+      "block1": {
+        "subject_id_top1": 0.43545040915910427,
+        "subject_id_top5": 0.6986277269528501,
+        "per_subject_auc_median": 0.5607987339415379,
+        "per_subject_auc_mean": 0.5460756015183335,
+        "n_above_half": 21,
+        "n_subjects": 35,
+        "wilcoxon_p": 0.065477392898174,
+        "session_bal_acc": 0.5714285714285714
+      },
+      "block2": {
+        "subject_id_top1": 0.44040417998456544,
+        "subject_id_top5": 0.7061341778090546,
+        "per_subject_auc_median": 0.5422640104263639,
+        "per_subject_auc_mean": 0.545091908699621,
+        "n_above_half": 21,
+        "n_subjects": 35,
+        "wilcoxon_p": 0.06337947436259128,
+        "session_bal_acc": 0.5571428571428572
+      },
+      "block3": {
+        "subject_id_top1": 0.4344865056023638,
+        "subject_id_top5": 0.7026741731175229,
+        "per_subject_auc_median": 0.5240608255314139,
+        "per_subject_auc_mean": 0.5414211722447972,
+        "n_above_half": 19,
+        "n_subjects": 35,
+        "wilcoxon_p": 0.08165497533627786,
+        "session_bal_acc": 0.5571428571428572
+      },
+      "block4": {
+        "subject_id_top1": 0.44185166676564874,
+        "subject_id_top5": 0.708714520290875,
+        "per_subject_auc_median": 0.523901679457235,
+        "per_subject_auc_mean": 0.5417603882308231,
+        "n_above_half": 22,
+        "n_subjects": 35,
+        "wilcoxon_p": 0.10653097275644541,
+        "session_bal_acc": 0.5142857142857142
+      },
+      "block5": {
+        "subject_id_top1": 0.43736839366123015,
+        "subject_id_top5": 0.7008562045507858,
+        "per_subject_auc_median": 0.5349968112244898,
+        "per_subject_auc_mean": 0.5394943229067913,
+        "n_above_half": 20,
+        "n_subjects": 35,
+        "wilcoxon_p": 0.1224512540793512,
+        "session_bal_acc": 0.5714285714285714
+      },
+      "block6": {
+        "subject_id_top1": 0.43097834072928015,
+        "subject_id_top5": 0.6819727891156463,
+        "per_subject_auc_median": 0.5264603436845594,
+        "per_subject_auc_mean": 0.5450195616756789,
+        "n_above_half": 21,
+        "n_subjects": 35,
+        "wilcoxon_p": 0.0948875934118405,
+        "session_bal_acc": 0.5428571428571428
+      },
+      "block7": {
+        "subject_id_top1": 0.43023037197509295,
+        "subject_id_top5": 0.6898897490030494,
+        "per_subject_auc_median": 0.5264609315948602,
+        "per_subject_auc_mean": 0.5434716161873067,
+        "n_above_half": 19,
+        "n_subjects": 35,
+        "wilcoxon_p": 0.15116547854267992,
+        "session_bal_acc": 0.5428571428571428
+      }
+    },
+    "codebrain_order": {
+      "final": {
+        "subject_id_top1": 0.41853657618619916,
+        "subject_id_top5": 0.6722965048088201,
+        "per_subject_auc_median": 0.4929944426283099,
+        "per_subject_auc_mean": 0.4955515702333515,
+        "n_above_half": 17,
+        "n_subjects": 35,
+        "wilcoxon_p": 0.5161233236722182,
+        "session_bal_acc": 0.4857142857142857
+      },
+      "block0": {
+        "subject_id_top1": 0.43021921174330513,
+        "subject_id_top5": 0.6897138165611072,
+        "per_subject_auc_median": 0.5237537305184039,
+        "per_subject_auc_mean": 0.5045439198528713,
+        "n_above_half": 19,
+        "n_subjects": 35,
+        "wilcoxon_p": 0.44533399210195057,
+        "session_bal_acc": 0.5142857142857142
+      },
+      "block1": {
+        "subject_id_top1": 0.437568329992549,
+        "subject_id_top5": 0.7036124794745484,
+        "per_subject_auc_median": 0.5700128520772363,
+        "per_subject_auc_mean": 0.5267467299930689,
+        "n_above_half": 21,
+        "n_subjects": 35,
+        "wilcoxon_p": 0.23540524978307076,
+        "session_bal_acc": 0.4285714285714286
+      },
+      "block2": {
+        "subject_id_top1": 0.4520908059408577,
+        "subject_id_top5": 0.7220267417311752,
+        "per_subject_auc_median": 0.582586209566281,
+        "per_subject_auc_mean": 0.5301387322811103,
+        "n_above_half": 21,
+        "n_subjects": 35,
+        "wilcoxon_p": 0.21109964163042605,
+        "session_bal_acc": 0.5
+      },
+      "block3": {
+        "subject_id_top1": 0.4426644650736582,
+        "subject_id_top5": 0.6999765423410743,
+        "per_subject_auc_median": 0.5379193070170339,
+        "per_subject_auc_mean": 0.525115592078377,
+        "n_above_half": 21,
+        "n_subjects": 35,
+        "wilcoxon_p": 0.25068043888313696,
+        "session_bal_acc": 0.45714285714285713
+      },
+      "block4": {
+        "subject_id_top1": 0.45077701212873533,
+        "subject_id_top5": 0.6954609429978889,
+        "per_subject_auc_median": 0.5393394199785178,
+        "per_subject_auc_mean": 0.5287128367952768,
+        "n_above_half": 18,
+        "n_subjects": 35,
+        "wilcoxon_p": 0.17960401996970177,
+        "session_bal_acc": 0.4714285714285714
+      },
+      "block5": {
+        "subject_id_top1": 0.45158983977367945,
+        "subject_id_top5": 0.6880717804363125,
+        "per_subject_auc_median": 0.5318718718718718,
+        "per_subject_auc_mean": 0.5205294293573999,
+        "n_above_half": 19,
+        "n_subjects": 35,
+        "wilcoxon_p": 0.29377879356616177,
+        "session_bal_acc": 0.5142857142857142
+      },
+      "block6": {
+        "subject_id_top1": 0.44899079601809416,
+        "subject_id_top5": 0.6813277034951912,
+        "per_subject_auc_median": 0.5402956223475379,
+        "per_subject_auc_mean": 0.5250157729657415,
+        "n_above_half": 18,
+        "n_subjects": 35,
+        "wilcoxon_p": 0.24553258236846887,
+        "session_bal_acc": 0.48571428571428565
+      },
+      "block7": {
+        "subject_id_top1": 0.4504654968646789,
+        "subject_id_top5": 0.6832629603565564,
+        "per_subject_auc_median": 0.5790056608417425,
+        "per_subject_auc_mean": 0.529674562014033,
+        "n_above_half": 20,
+        "n_subjects": 35,
+        "wilcoxon_p": 0.2158426594978664,
+        "session_bal_acc": 0.5
+      }
+    },
+    "random_perm": {
+      "final": {
+        "subject_id_top1": 0.39010343965776856,
+        "subject_id_top5": 0.6732934553131598,
+        "per_subject_auc_median": 0.4798896231391854,
+        "per_subject_auc_mean": 0.4826259101062279,
+        "n_above_half": 16,
+        "n_subjects": 35,
+        "wilcoxon_p": 0.6949478277820162,
+        "session_bal_acc": 0.48571428571428565
+      },
+      "block0": {
+        "subject_id_top1": 0.4250254597129359,
+        "subject_id_top5": 0.6748182031433263,
+        "per_subject_auc_median": 0.5295994328252392,
+        "per_subject_auc_mean": 0.5091533005942434,
+        "n_above_half": 19,
+        "n_subjects": 35,
+        "wilcoxon_p": 0.3762084269837942,
+        "session_bal_acc": 0.5571428571428572
+      },
+      "block1": {
+        "subject_id_top1": 0.41612054542533317,
+        "subject_id_top5": 0.6586324184846353,
+        "per_subject_auc_median": 0.49613893674624654,
+        "per_subject_auc_mean": 0.5284013297807004,
+        "n_above_half": 17,
+        "n_subjects": 35,
+        "wilcoxon_p": 0.25588344209245406,
+        "session_bal_acc": 0.5142857142857142
+      },
+      "block2": {
+        "subject_id_top1": 0.410214826878742,
+        "subject_id_top5": 0.6544100398780202,
+        "per_subject_auc_median": 0.5151132986120579,
+        "per_subject_auc_mean": 0.5025304465287842,
+        "n_above_half": 18,
+        "n_subjects": 35,
+        "wilcoxon_p": 0.5032254869583994,
+        "session_bal_acc": 0.5
+      },
+      "block3": {
+        "subject_id_top1": 0.41724813462119126,
+        "subject_id_top5": 0.6564039408866995,
+        "per_subject_auc_median": 0.5341940937474436,
+        "per_subject_auc_mean": 0.5125317220928151,
+        "n_above_half": 20,
+        "n_subjects": 35,
+        "wilcoxon_p": 0.3700783204403706,
+        "session_bal_acc": 0.5142857142857142
+      },
+      "block4": {
+        "subject_id_top1": 0.42009013498618947,
+        "subject_id_top5": 0.6654351395730707,
+        "per_subject_auc_median": 0.5081278538812786,
+        "per_subject_auc_mean": 0.4999029568204139,
+        "n_above_half": 19,
+        "n_subjects": 35,
+        "wilcoxon_p": 0.45814336897456087,
+        "session_bal_acc": 0.4714285714285714
+      },
+      "block5": {
+        "subject_id_top1": 0.41821867540526486,
+        "subject_id_top5": 0.6640276800375322,
+        "per_subject_auc_median": 0.4857705622165272,
+        "per_subject_auc_mean": 0.4835037916790257,
+        "n_above_half": 14,
+        "n_subjects": 35,
+        "wilcoxon_p": 0.7227691699517891,
+        "session_bal_acc": 0.4
+      },
+      "block6": {
+        "subject_id_top1": 0.4144139840618082,
+        "subject_id_top5": 0.6568730940652123,
+        "per_subject_auc_median": 0.48006707932266246,
+        "per_subject_auc_mean": 0.4742645154509567,
+        "n_above_half": 16,
+        "n_subjects": 35,
+        "wilcoxon_p": 0.8072671610862017,
+        "session_bal_acc": 0.4285714285714286
+      },
+      "block7": {
+        "subject_id_top1": 0.4191557311045247,
+        "subject_id_top5": 0.6558174994135585,
+        "per_subject_auc_median": 0.44689845673452233,
+        "per_subject_auc_mean": 0.4760878913982475,
+        "n_above_half": 13,
+        "n_subjects": 35,
+        "wilcoxon_p": 0.844961300259456,
+        "session_bal_acc": 0.4714285714285714
+      }
+    }
+  },
+  "raw_bandpower_subject_id": {
+    "top1": 0.32817984163211295,
+    "top5": 0.6901243255923059
+  },
+  "verdict": {
+    "best_layer": "block4",
+    "top1": 0.44185166676564874,
+    "verdict": "PASS \u2014 representation is alive"
+  }
+}
