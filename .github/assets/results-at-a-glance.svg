@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 210" width="1280" height="210" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+<defs><linearGradient id="c" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#16263f"/><stop offset="1" stop-color="#0d1728"/></linearGradient></defs>
+<rect x="1.0" y="1" width="303.0" height="208" rx="14" fill="url(#c)" stroke="#ffffff" stroke-opacity="0.08"/>
+<rect x="1.0" y="1" width="303.0" height="5" rx="2" fill="#f2a93b"/>
+<text x="28.0" y="92" fill="#f2a93b" font-size="52" font-weight="700">27 · 54</text>
+<text x="28.0" y="134" fill="#f3f6fb" font-size="18" font-weight="600">participants · recordings</text>
+<text x="28.0" y="166" fill="#9fb0c8" font-size="16">Ambulatory dry-electrode EEG</text>
+<rect x="326.0" y="1" width="303.0" height="208" rx="14" fill="url(#c)" stroke="#ffffff" stroke-opacity="0.08"/>
+<rect x="326.0" y="1" width="303.0" height="5" rx="2" fill="#2ec4a0"/>
+<text x="353.0" y="92" fill="#2ec4a0" font-size="52" font-weight="700">0.832</text>
+<text x="353.0" y="134" fill="#f3f6fb" font-size="18" font-weight="600">pooled cross-task decoding</text>
+<text x="353.0" y="166" fill="#9fb0c8" font-size="16">Full fine-tune, balanced accuracy</text>
+<rect x="651.0" y="1" width="303.0" height="208" rx="14" fill="url(#c)" stroke="#ffffff" stroke-opacity="0.08"/>
+<rect x="651.0" y="1" width="303.0" height="5" rx="2" fill="#9fb0c8"/>
+<text x="678.0" y="92" fill="#9fb0c8" font-size="52" font-weight="700">0.525</text>
+<text x="678.0" y="134" fill="#f3f6fb" font-size="18" font-weight="600">amplitude-only control</text>
+<text x="678.0" y="166" fill="#9fb0c8" font-size="16">Same split: at chance</text>
+<rect x="976.0" y="1" width="303.0" height="208" rx="14" fill="url(#c)" stroke="#ffffff" stroke-opacity="0.08"/>
+<rect x="976.0" y="1" width="303.0" height="5" rx="2" fill="#6cb4ff"/>
+<text x="1003.0" y="92" fill="#6cb4ff" font-size="52" font-weight="700">4–10 Hz</text>
+<text x="1003.0" y="134" fill="#f3f6fb" font-size="18" font-weight="600">located dependence</text>
+<text x="1003.0" y="166" fill="#9fb0c8" font-size="16">Band-stop sweep, one direction</text>
+</svg>
